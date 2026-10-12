@@ -58,3 +58,5 @@ RuntimeError: Failed to resolve Python.Runtime.Loader.Initialize from C:\Documen
 
 2026-10-11 20:56:14,519 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
 2026-10-11 20:59:56,723 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-11 21:35:31,993 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-11 21:53:32,829 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}

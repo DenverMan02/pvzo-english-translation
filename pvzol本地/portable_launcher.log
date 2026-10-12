@@ -27151,3 +27151,1674 @@ Traceback (most recent call last):
 ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
 ----------------------------------------
 2026-10-12 09:05:51 服务已停止
+2026-10-12 09:35:31 启动器已就绪，选择角色后开始游戏。
+2026-10-12 09:36:00 开始初始化游戏 · 账号 700000204
+2026-10-12 09:36:01 21:36:01  INFO   local guild adapter ready (30 core routes)
+2026-10-12 09:36:02 >>> PvZ PoC launcher: starting web + admin + game servers in ONE window.
+2026-10-12 09:36:02 >>> Ctrl+C to stop all services.
+2026-10-12 09:36:02 ============================================================
+2026-10-12 09:36:02 Serving: webroot (assembled)
+2026-10-12 09:36:02   C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\webroot
+2026-10-12 09:36:02 Verify in a browser:
+2026-10-12 09:36:02   http://127.0.0.1:8080/swf/resource_64c342244c3d8f16b3c815e5ee133cf8.swf
+2026-10-12 09:36:02   (should download a ~286 KB file AND print a 200 line below)
+2026-10-12 09:36:02 Load in the Flash projector:
+2026-10-12 09:36:02   http://127.0.0.1:8080/loader_n.swf
+2026-10-12 09:36:02 ============================================================
+2026-10-12 09:36:02 (Ctrl+C to stop)
+2026-10-12 09:36:02 21:36:02  DEBUG  Using selector: SelectSelector
+2026-10-12 09:36:02 [admin] 本地 GM 后台: http://127.0.0.1:8081
+2026-10-12 09:36:02 [admin] 数据库: C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\PvZ-Server-PoC\players.db
+2026-10-12 09:36:02 21:36:02  INFO   player store: C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\PvZ-Server-PoC\players.db
+2026-10-12 09:36:02 21:36:02  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+2026-10-12 09:36:02 21:36:02  INFO   loaded 40 lab bottles
+2026-10-12 09:36:02 21:36:02  INFO   loaded 999 world-tree levels
+2026-10-12 09:36:02 21:36:02  INFO   loaded 3 VIP tiers
+2026-10-12 09:36:02 21:36:02  INFO   loaded 傀儡 config: 50 puppets, 120 stages, 225 skill levels
+2026-10-12 09:36:02 21:36:02  INFO   loaded 44 card puzzle stages
+2026-10-12 09:36:02 21:36:02  INFO   loaded 1975 card forge templates
+2026-10-12 09:36:02 21:36:02  INFO   loaded 1960 card-fruit templates
+2026-10-12 09:36:02 21:36:02  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+2026-10-12 09:36:02 21:36:02  INFO   loaded prestige evolution: 200 levels, 7 plant types
+2026-10-12 09:36:02 21:36:02  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+2026-10-12 09:36:02 21:36:02  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+2026-10-12 09:36:02 21:36:02  INFO   loaded 617 card avatar templates
+2026-10-12 09:36:02 正在等待：资源服务 (8080)、GM 后台 (8081)、游戏服务 (9001)、Flash 策略 (843)
+2026-10-12 09:36:02   GET /loader_p.swf HTTP/1.0 -> 200
+2026-10-12 09:36:02 [admin] 127.0.0.1 - "GET /healthz HTTP/1.0" 200 -
+2026-10-12 09:36:03 正在等待：游戏服务 (9001)、Flash 策略 (843)
+2026-10-12 09:36:03   GET /loader_p.swf HTTP/1.0 -> 200
+2026-10-12 09:36:03 [admin] 127.0.0.1 - "GET /healthz HTTP/1.0" 200 -
+2026-10-12 09:36:04 21:36:04  INFO   bots: 50 slots, 0 opponents generated
+2026-10-12 09:36:04 21:36:04  INFO   bot autonomy loop started (interval=120s)
+2026-10-12 09:36:04 21:36:04  INFO   loaded 254 TD level reward templates from clientDB
+2026-10-12 09:36:04 21:36:04  INFO   loaded 25 usable TD laboratory material ids: (40001, 40003, 40004, 40005, 40006, 40007, 40009, 40010, 40011, 40012, 40013, 40015, 40016, 40017, 40018, 40019, 40021, 40022, 40023, 40024, 40025, 40027, 40028, 40029, 40030)
+2026-10-12 09:36:04 21:36:04  INFO   loaded 200 role-level exp thresholds
+2026-10-12 09:36:04 21:36:04  INFO   loaded 2023 item sell templates
+2026-10-12 09:36:04 21:36:04  INFO   loaded 23 town buildings
+2026-10-12 09:36:04 21:36:04  INFO   loaded 32 fuben chapters
+2026-10-12 09:36:04 21:36:04  INFO   loaded fuben stages for 92 chapter/mode combos
+2026-10-12 09:36:04 21:36:04  INFO   loaded 10 energy-buy tiers
+2026-10-12 09:36:04 21:36:04  INFO   loaded energyMax for 200 role levels
+2026-10-12 09:36:04 21:36:04  INFO   loaded 35 card forge chance entries
+2026-10-12 09:36:04 21:36:04  INFO   loaded 78 card recruit recipes
+2026-10-12 09:36:04 21:36:04  INFO   loaded 12 card avatar forge types
+2026-10-12 09:36:04 21:36:04  INFO   loaded 112 plant talents across 4 stages
+2026-10-12 09:36:04 21:36:04  INFO   loaded 41 nutrition reagent bases
+2026-10-12 09:36:04 21:36:04  INFO   loaded 3 baptize action costs + 10 baptize cap rows
+2026-10-12 09:36:04 21:36:04  INFO   loaded 200 zombie-island levels
+2026-10-12 09:36:04 21:36:04  INFO   loaded 12 zombie-island stages
+2026-10-12 09:36:04 21:36:04  INFO   loaded 22 activity-fuben templates
+2026-10-12 09:36:04 21:36:04  INFO   loaded 390 awake transition rules
+2026-10-12 09:36:04 21:36:04  INFO   loaded 390 awake config rows
+2026-10-12 09:36:04 21:36:04  INFO   template warm-up done (32 tables preloaded)
+2026-10-12 09:36:04 21:36:04  INFO   game server listening on 0.0.0.0:9001
+2026-10-12 09:36:04 21:36:04  INFO   game server listening on 0.0.0.0:8001
+2026-10-12 09:36:04 21:36:04  INFO   game server listening on 0.0.0.0:443
+2026-10-12 09:36:04 21:36:04  WARNING  could not bind game port 80 ([Errno 13] error while attempting to bind on address ('0.0.0.0', 80): [winerror 10013] an attempt was made to access a socket in a way forbidden by its access permissions) - skipping (another program may own it; not fatal)
+2026-10-12 09:36:04 21:36:04  INFO   socket-policy server listening on 0.0.0.0:843
+2026-10-12 09:36:04   GET /loader_p.swf HTTP/1.0 -> 200
+2026-10-12 09:36:04 [admin] 127.0.0.1 - "GET /healthz HTTP/1.0" 200 -
+2026-10-12 09:36:04 21:36:04  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62264) ===
+2026-10-12 09:36:04 21:36:04  INFO   === client disconnected: ('127.0.0.1', 62264) ===
+2026-10-12 09:36:04 21:36:04  INFO   [policy] served policy to ('127.0.0.1', 62265) (req=b'<policy-file-request/>\x00')
+2026-10-12 09:36:04 四项服务已就绪。
+2026-10-12 09:36:05   GET /loader_p.swf?server=127.0.0.1:9001&zoneID=&uin=700000204&skey=ABCDEFGHIJ HTTP/1.1 -> 200
+2026-10-12 09:36:05   GET /fileVer.xml?0.750889450777322 HTTP/1.1 -> 200
+2026-10-12 09:36:05   GET /config.xml?0.3704671855084598 HTTP/1.1 -> 200
+2026-10-12 09:36:05   GET /image/logo.jpg HTTP/1.1 -> 200
+2026-10-12 09:36:05   GET /Game_p_ff6c4bac65e9900e16a61c1c932690b4.swf HTTP/1.1 -> 200
+2026-10-12 09:36:05   GET /Msgcheck_321d6c79802af718b4d60f0da39ba7e4.swf HTTP/1.1 -> 200
+2026-10-12 09:36:05   GET /image/loadingbg.jpg HTTP/1.1 -> 200
+2026-10-12 09:36:05   GET /image/loadingbg2.jpg HTTP/1.1 -> 200
+2026-10-12 09:36:05 21:36:05  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62277) ===
+2026-10-12 09:36:05 21:36:05  INFO   === client disconnected: ('127.0.0.1', 62277) ===
+2026-10-12 09:36:05 21:36:05  INFO   [policy] served policy to ('127.0.0.1', 62278) (req=b'')
+2026-10-12 09:36:05 21:36:05  INFO   === client connected on PORT 9001 from ('127.0.0.1', 61760) ===
+2026-10-12 09:36:05 21:36:05  INFO   === client disconnected: ('127.0.0.1', 61760) ===
+2026-10-12 09:36:05 21:36:05  INFO   [policy] served policy to ('127.0.0.1', 61761) (req=b'')
+2026-10-12 09:36:06 游戏窗口已居中显示。
+2026-10-12 09:36:07   GET /init.xml?v=1791768966997 HTTP/1.1 -> 200
+2026-10-12 09:36:07   GET /asgui.xml?0.7169946562498808?v=0 HTTP/1.1 -> 200
+2026-10-12 09:36:07   GET /swf/guide/guide_res_6391930dd1a5c645f77387239198f93d.swf?v=0 HTTP/1.1 -> 200
+2026-10-12 09:36:07   GET /swf/resource_64c342244c3d8f16b3c815e5ee133cf8.swf?v=0 HTTP/1.1 -> 200
+2026-10-12 09:36:07   GET /swf/td/loading_4540519d0f4d22fbf0a1e277b3b20812.swf?v=0 HTTP/1.1 -> 200
+2026-10-12 09:36:07 21:36:07  INFO   === client connected on PORT 9001 from ('127.0.0.1', 58515) ===
+2026-10-12 09:36:07 21:36:07  INFO   === client disconnected: ('127.0.0.1', 58515) ===
+2026-10-12 09:36:07 21:36:07  INFO   [policy] served policy to ('127.0.0.1', 58516) (req=b'')
+2026-10-12 09:36:07   GET /clientDB.txt HTTP/1.1 -> 200
+2026-10-12 09:36:07   GET /swf/loading/time_tunnel.jpg HTTP/1.1 -> 200
+2026-10-12 09:36:07   GET /ModuleAvatarConfig_ceede5b498631ea2c8f56594a9bb8b49.swf HTTP/1.1 -> 200
+2026-10-12 09:36:07   GET /ModuleFont_3643d416703e6f2ef5af884db9645b19.swf HTTP/1.1 -> 200
+2026-10-12 09:36:08 21:36:08  INFO   [policy] served policy to ('127.0.0.1', 58521) (req=b'<policy-file-request/>\x00')
+2026-10-12 09:36:08 21:36:08  INFO   === client connected on PORT 9001 from ('127.0.0.1', 58522) ===
+2026-10-12 09:36:08 21:36:08  INFO     (stripped TGW preamble: 'tgw_l7_forward\r\nHost: 127.0.0.1:9001')
+2026-10-12 09:36:08 21:36:08  INFO   === client connected on PORT 9001 from ('127.0.0.1', 58526) ===
+2026-10-12 09:36:08 21:36:08  INFO   === client disconnected: ('127.0.0.1', 58526) ===
+2026-10-12 09:36:08 21:36:08  INFO   [policy] served policy to ('127.0.0.1', 58527) (req=b'')
+2026-10-12 09:36:08 21:36:08  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62704) ===
+2026-10-12 09:36:08 21:36:08  INFO   === client disconnected: ('127.0.0.1', 62704) ===
+2026-10-12 09:36:08 21:36:08  INFO   [policy] served policy to ('127.0.0.1', 62705) (req=b'')
+2026-10-12 09:36:09 21:36:09  INFO       loaded existing player uin=700000204 name='Denver' level=12 coin=1157117 plants=[1100, 1200, 1300, 1500, 1600, 1800, 3100, 3200, 3300, 3400, 3500, 3600, 4700]
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_CheckOldUser_CS
+2026-10-12 09:36:09 21:36:09  INFO       step 1 -> Cmd_CheckOldUser_SC (new=False, name='Denver')
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_CheckOldUser_SC                    (10 body bytes, 53 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=69 cmdName=PVZ.Cmd.Cmd_Init_CS
+2026-10-12 09:36:09 21:36:09  INFO       step 2 -> Cmd_Init_SC (from save)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Init_SC                            (5470 body bytes, 5506 total)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Mail_NewMessage_SC                 (4 body bytes, 50 total)
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_PVZPrivilege_SC (12 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_PVZPrivilege_SC                    (12 body bytes, 55 total)
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_VipInfo_SC (6 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_VipInfo_SC                         (6 body bytes, 44 total)
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_Vip_SyncVipInfo_SC (4 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Vip_SyncVipInfo_SC                 (4 body bytes, 50 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Card_GetPackage_CS
+2026-10-12 09:36:09 21:36:09  INFO       card package: 13 card(s) in collection [(1101, 'Sunflower'), (1201, 'Peashooter'), (1301, 'Wall-nut'), (1501, 'Potato Mine'), (1601, 'Bloomerang'), (1801, 'Bonk Choy'), (3101, 'Bruce Bamboo'), (3201, 'Carrocket'), (3301, 'Explodelion'), (3601, 'Venus Flytrap'), (4701, 'Pomegranate-pult'), (6101, 'Lightning Reed'), (9102, 'Sap-fling')]
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_Card_GetPackage_SC (1415 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Card_GetPackage_SC                 (1415 body bytes, 1462 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (652 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (652 body bytes, 703 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=28 cmdName=PVZ.Cmd.Cmd_VipInfo_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_VipInfo_SC (6 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_VipInfo_SC                         (6 body bytes, 44 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Arena_GetMyInfo_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_Arena_GetMyInfo_SC (51 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Arena_GetMyInfo_SC                 (51 body bytes, 97 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Item_GetBagInfo_CS
+2026-10-12 09:36:09 21:36:09  INFO       bag info: 67 item stack(s), 0 equipment object(s)
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_Item_GetBagInfo_SC (775 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Item_GetBagInfo_SC                 (775 body bytes, 822 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_Quest_GetList_CS
+2026-10-12 09:36:09   GET /swf/guide/guideUI_b1b4995897dfe1e6b878c9a10e8a570b.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /ModuleSecondaryPassword_1647ae7c2a1220dfe3170a6164c92fb8.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /ModuleGuide_6c1fea95614b0ad8441b123c46fd9bf6.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /swf/secondaryPassword/secondaryPasswordUI_c923ad958c15df6f1ba027ecfbefa27d.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /ModuleSignIn_c959b576cc6fad6a6ee8a6eda9e65c69.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /ModuleOfflineReward_863190f12738f85541846534d446fe60.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /swf/offlineReward/offlineRewardUI_ec5da62ec67fd83419bff0c13277ddc1.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09 21:36:09  INFO       main quests: uin=700000204 listed=275
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_Quest_GetList_SC (2571 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_GetList_SC                   (2571 body bytes, 2616 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_DailyQuest_GetInfo_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_DailyQuest_GetInfo_SC (24 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_DailyQuest_GetInfo_SC              (24 body bytes, 73 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_DailyActivity_GetInfo_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_DailyActivity_GetInfo_SC (128 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_DailyActivity_GetInfo_SC           (128 body bytes, 181 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_City_GetBuildingInfo_CS
+2026-10-12 09:36:09 21:36:09  INFO       town buildings: level=12 -> 13 unlocked [10, 20, 30, 80, 110, 130, 140, 150, 190, 230, 240, 250, 280]
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_City_GetBuildingInfo_SC (60 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetBuildingInfo_SC            (60 body bytes, 111 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Flag_GetList_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_Flag_GetList_SC (0 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Flag_GetList_SC                    (0 body bytes, 43 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=37 cmdName=PVZ.Cmd.Cmd_Lab_GetLabInfo_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_Lab_GetLabInfo_SC (322 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Lab_GetLabInfo_SC                  (322 body bytes, 368 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_RoleGuildInfo_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_RoleGuildInfo_SC (6 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_RoleGuildInfo_SC                   (6 body bytes, 50 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=30 cmdName=PVZ.Cmd.Cmd_City_Init_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_City_Init_SC (12 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_City_Init_SC                       (12 body bytes, 52 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_War_GetDeclareWarStat_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_War_GetDeclareWarStat_SC (4 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_War_GetDeclareWarStat_SC           (4 body bytes, 56 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=44 cmdName=PVZ.Cmd.Cmd_Setout_GetSetoutTimes_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_Setout_GetSetoutTimes_SC (10 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Setout_GetSetoutTimes_SC           (10 body bytes, 62 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Chat_GetHistory_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_Chat_GetHistory_SC (3 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Chat_GetHistory_SC                 (3 body bytes, 49 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=40 cmdName=PVZ.Cmd.Cmd_Friend_GetBlackList_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_Friend_GetBlackList_SC (0 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Friend_GetBlackList_SC             (0 body bytes, 50 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=53 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC (624 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC  (624 body bytes, 688 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_OnlineReward_GetInfo_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_OnlineReward_GetInfo_SC (150 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_GetInfo_SC            (150 body bytes, 202 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=40 cmdName=PVZ.Cmd.Cmd_PayShop_GetFlagList_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_PayShop_GetFlagList_SC (0 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetFlagList_SC             (0 body bytes, 50 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_PVZPrivilege_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_PVZPrivilege_SC (12 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_PVZPrivilege_SC                    (12 body bytes, 55 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_Fuben_GetChapterInfo_CS
+2026-10-12 09:36:09 21:36:09  INFO       fuben chapters: level=12 -> 3 unlocked (progress-gated)
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_Fuben_GetChapterInfo_SC (30 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Fuben_GetChapterInfo_SC            (30 body bytes, 81 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_GetLevelRewardInfo_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_GetLevelRewardInfo_SC (2 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_GetLevelRewardInfo_SC              (2 body bytes, 51 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_City_MergeServerFlag_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_City_MergeServerFlag_SC (0 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_City_MergeServerFlag_SC            (0 body bytes, 51 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=37 cmdName=PVZ.Cmd.Cmd_Talent_GetList_CS
+2026-10-12 09:36:09 21:36:09  INFO       talent list stage 1: 35 talents, 11 plants, 11 studied, 0 studiable-now
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_Talent_GetList_SC (464 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Talent_GetList_SC                  (464 body bytes, 510 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_Puppet_GetInfo_CS
+2026-10-12 09:36:09 21:36:09  INFO       <= Cmd_Puppet_GetInfo_CS data=
+2026-10-12 09:36:09 21:36:09  INFO       傀儡: 0 owned, answering (none)
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_Puppet_GetInfo_SC (0 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Puppet_GetInfo_SC                  (0 body bytes, 45 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=40 cmdName=PVZ.Cmd.Cmd_Puppet_GetFormation_CS
+2026-10-12 09:36:09 21:36:09  INFO       <= Cmd_Puppet_GetFormation_CS data=
+2026-10-12 09:36:09 21:36:09  INFO       傀儡上阵: (empty)
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_Puppet_GetFormation_SC (12 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Puppet_GetFormation_SC             (12 body bytes, 62 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=45 cmdName=PVZ.Cmd.Cmd_PayShop_GetDayTicketList_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_PayShop_GetDayTicketList_SC (2 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetDayTicketList_SC        (2 body bytes, 57 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_SC (2 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_SC       (2 body bytes, 58 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=53 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC (624 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC  (624 body bytes, 688 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_SignIn_GetInfo_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_SignIn_GetInfo_SC (12 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_SignIn_GetInfo_SC                  (12 body bytes, 57 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_OfflineReward_GetInfo_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_OfflineReward_GetInfo_SC (4 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_OfflineReward_GetInfo_SC           (4 body bytes, 56 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_Guide_GetKeys_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_Guide_GetKeys_SC (0 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Guide_GetKeys_SC                   (0 body bytes, 44 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_SecondPwd_Info_CS
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_SecondPwd_Info_SC (0 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_SecondPwd_Info_SC                  (0 body bytes, 45 total)
+2026-10-12 09:36:09 21:36:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+2026-10-12 09:36:09   GET /swf/notice/noticeUI_cdacafdb9dba9b417ae71773769ac22e.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /ModuleCity_6ae7f58df69b0219d32cace8e9ebce1a.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /ModuleNotice_dc3bf3ae7d1226d4a6447bbfef3761aa.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /swf/city/cityMap_4e3c58894799c010271de762916a9f12.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /swf/city/cityRes_35bca513e884e3abc6bf53326f4c3035.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /ModuleRoleInfo_6c20d310f9de72f424f071fe0c7d3add.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /swf/entryIcon/entryIconUI_b50e6195726029792251be930078b346.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /swf/roleInfo/roleInfoUI_5ca6b31482a1febd3279465061a0ae60.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /ModuleEntryIcon_cea4251d4d4d42928537cb66d5b17bc5.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /swf/chat/chatRes_0261482a2672d733f7d47f153618bc64.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /ModuleChat_a4c202dcdf4bfd9bbbf32575e7fa35eb.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /ModuleQuest_8cf13ef918706d8e94627576116af94c.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /ModuleFriend_d9537b842cb86a0512b574a0255bfacb.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /swf/friend/friend_res_06b8a39e4bd0db17ded74e1b1f989ede.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09   GET /swf/quest/questUIRes_bed4cac830125a04750fd3d64d44d058.swf HTTP/1.1 -> 200
+2026-10-12 09:36:09 21:36:09  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (652 body bytes)
+2026-10-12 09:36:09 21:36:09  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (652 body bytes, 703 total)
+2026-10-12 09:36:10 21:36:10  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55793) ===
+2026-10-12 09:36:10 21:36:10  INFO   === client disconnected: ('127.0.0.1', 55793) ===
+2026-10-12 09:36:10 21:36:10  INFO   [policy] served policy to ('127.0.0.1', 55794) (req=b'')
+2026-10-12 09:36:10 21:36:10  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55798) ===
+2026-10-12 09:36:10 21:36:10  INFO   === client disconnected: ('127.0.0.1', 55798) ===
+2026-10-12 09:36:10 21:36:10  INFO   [policy] served policy to ('127.0.0.1', 55799) (req=b'')
+2026-10-12 09:36:11 21:36:11  INFO   === client connected on PORT 9001 from ('127.0.0.1', 49732) ===
+2026-10-12 09:36:11 21:36:11  INFO   === client disconnected: ('127.0.0.1', 49732) ===
+2026-10-12 09:36:11 21:36:11  INFO   [policy] served policy to ('127.0.0.1', 49733) (req=b'')
+2026-10-12 09:36:13 21:36:13  INFO   === client connected on PORT 9001 from ('127.0.0.1', 63776) ===
+2026-10-12 09:36:13 21:36:13  INFO   === client disconnected: ('127.0.0.1', 63776) ===
+2026-10-12 09:36:13 21:36:13  INFO   [policy] served policy to ('127.0.0.1', 63777) (req=b'')
+2026-10-12 09:36:13 21:36:13  INFO   === client connected on PORT 9001 from ('127.0.0.1', 51079) ===
+2026-10-12 09:36:13 21:36:13  INFO   === client disconnected: ('127.0.0.1', 51079) ===
+2026-10-12 09:36:13 21:36:13  INFO   [policy] served policy to ('127.0.0.1', 51080) (req=b'')
+2026-10-12 09:36:14 21:36:14  INFO   === client connected on PORT 9001 from ('127.0.0.1', 50685) ===
+2026-10-12 09:36:14 21:36:14  INFO   === client disconnected: ('127.0.0.1', 50685) ===
+2026-10-12 09:36:14 21:36:14  INFO   [policy] served policy to ('127.0.0.1', 50686) (req=b'')
+2026-10-12 09:36:15 21:36:15  INFO   === client connected on PORT 9001 from ('127.0.0.1', 53802) ===
+2026-10-12 09:36:15 21:36:15  INFO   === client disconnected: ('127.0.0.1', 53802) ===
+2026-10-12 09:36:15 21:36:15  INFO   [policy] served policy to ('127.0.0.1', 53803) (req=b'')
+2026-10-12 09:36:16 21:36:16  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_City_GetTownDurability_CS
+2026-10-12 09:36:16 21:36:16  INFO       -> PVZ.Cmd.Cmd_City_GetTownDurability_SC (6 body bytes)
+2026-10-12 09:36:16 21:36:16  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetTownDurability_SC          (6 body bytes, 59 total)
+2026-10-12 09:36:16 21:36:16  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=38 cmdName=PVZ.Cmd.Cmd_TD_GetStageInfo_CS
+2026-10-12 09:36:16 21:36:16  INFO       TD stage info: stage=2 passed=[(1, 1, 1, [10]), (2, 1, 1, [10])] gates=[] totalStars=2
+2026-10-12 09:36:16 21:36:16  INFO       -> PVZ.Cmd.Cmd_TD_GetStageInfo_SC (20 body bytes)
+2026-10-12 09:36:16 21:36:16  INFO     -> S2C  PVZ.Cmd.Cmd_TD_GetStageInfo_SC                 (20 body bytes, 66 total)
+2026-10-12 09:36:16 21:36:16  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55278) ===
+2026-10-12 09:36:16 21:36:16  INFO   === client disconnected: ('127.0.0.1', 55278) ===
+2026-10-12 09:36:16 21:36:16  INFO   [policy] served policy to ('127.0.0.1', 55279) (req=b'')
+2026-10-12 09:36:16 21:36:16  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Notice_GetRollList_CS
+2026-10-12 09:36:16 21:36:16  INFO       -> PVZ.Cmd.Cmd_Notice_GetRollList_SC (79 body bytes)
+2026-10-12 09:36:16 21:36:16  INFO     -> S2C  PVZ.Cmd.Cmd_Notice_GetRollList_SC              (79 body bytes, 128 total)
+2026-10-12 09:36:16 21:36:16  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=38 cmdName=PVZ.Cmd.Cmd_Notice_GetSysList_CS
+2026-10-12 09:36:16 21:36:16  INFO       -> PVZ.Cmd.Cmd_Notice_GetSysList_SC (139 body bytes)
+2026-10-12 09:36:16 21:36:16  INFO     -> S2C  PVZ.Cmd.Cmd_Notice_GetSysList_SC               (139 body bytes, 188 total)
+2026-10-12 09:36:16 21:36:16  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_War_GetSimpleHistory_CS
+2026-10-12 09:36:16 21:36:16  INFO       -> PVZ.Cmd.Cmd_War_GetSimpleHistory_SC (0 body bytes)
+2026-10-12 09:36:16 21:36:16  INFO     -> S2C  PVZ.Cmd.Cmd_War_GetSimpleHistory_SC            (0 body bytes, 51 total)
+2026-10-12 09:36:16 21:36:16  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=57 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+2026-10-12 09:36:16 21:36:16  INFO       -> PVZ.Cmd.FlexibleActivity_1001 (111 body bytes)
+2026-10-12 09:36:16 21:36:16  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1001                  (111 body bytes, 156 total)
+2026-10-12 09:36:16 21:36:16  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=57 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+2026-10-12 09:36:16 21:36:16  INFO       -> PVZ.Cmd.FlexibleActivity_1001 (111 body bytes)
+2026-10-12 09:36:16 21:36:16  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1001                  (111 body bytes, 156 total)
+2026-10-12 09:36:16 21:36:16  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+2026-10-12 09:36:16 21:36:16  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+2026-10-12 09:36:16 21:36:16  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+2026-10-12 09:36:16 21:36:16  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+2026-10-12 09:36:16 21:36:16  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+2026-10-12 09:36:16 21:36:16  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+2026-10-12 09:36:16 21:36:16  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+2026-10-12 09:36:16 21:36:16  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+2026-10-12 09:36:16 21:36:16  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+2026-10-12 09:36:16 21:36:16  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+2026-10-12 09:36:16 21:36:16  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+2026-10-12 09:36:16 21:36:16  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+2026-10-12 09:36:16 21:36:16  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_GetClientData_CS
+2026-10-12 09:36:16 21:36:16  INFO       -> PVZ.Cmd.Cmd_GetClientData_SC (4 body bytes)
+2026-10-12 09:36:16 21:36:16  INFO     -> S2C  PVZ.Cmd.Cmd_GetClientData_SC                   (4 body bytes, 48 total)
+2026-10-12 09:36:16   GET /ModuleLuckyStar_f4c62b83a11f78ce43e00d68c92d6889.swf HTTP/1.1 -> 200
+2026-10-12 09:36:16   GET /ModuleSound_53f2087668722600f61190a7ef42fb88.swf HTTP/1.1 -> 200
+2026-10-12 09:36:16   GET /swf/shop/shopUI_1f931bc2ebc1bd9b849d96a02a735b21.swf HTTP/1.1 -> 200
+2026-10-12 09:36:16   GET /swf/luckystar/luckystarUI_2d226ea31060b2e33021996b9c7f72ac.swf HTTP/1.1 -> 200
+2026-10-12 09:36:16   GET /ModuleDodgeAndCat_84f4869a8856cbe38429e1a012fc6299.swf HTTP/1.1 -> 200
+2026-10-12 09:36:16   GET /image/head/custom/700000204_05b7b2334336f4562e5bd763063c83a951a478eed81b415a9ed48441e4c6b544.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/welfareHall/welfareHallUI_ed790eb8512674add4bf50ab3ccdb0bf.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/activity/dodgeAndCat_6901d4eca3ccf7e9785dca243698529c.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/chat/btnBBS_up.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /ModuleWelfareHall_a087401d4b3414aa911050e89685a336.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/chat/btnBBS_down.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/chat/btnChooseChannel_over.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/friend/friend_list_bg.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/chat/btnChooseChannel_down.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/activity/everyDayIcons/11_36a823ac33169a3ccf869dd3a7d4e9b7.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/activity/everyDayIcons/1012_6d64ada23a179f4e50d7c494c689f475.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17 21:36:17  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Welfare_DailyActivity_CS
+2026-10-12 09:36:17 21:36:17  INFO       -> PVZ.Cmd.Cmd_Welfare_DailyActivity_SC (4605 body bytes)
+2026-10-12 09:36:17 21:36:17  INFO     -> S2C  PVZ.Cmd.Cmd_Welfare_DailyActivity_SC           (4605 body bytes, 4658 total)
+2026-10-12 09:36:17   GET /swf/activity/everyDayIcons/1017_1c187acc3647fa56f1461c67f2c7efad.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/activity/icons/13_ddac7c0995bfb8d6c6f292a66469a794.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/activity/everyDayIcons/1009_c54cc38832cc8414a1bbea9305298e92.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/activity/icons/11_2ad5ea776194d63827c1dfd22c309089.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/friend/friend_newMsg_icon.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/friend/friend_alert_off.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/friend/icon_my_line_rect1.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/friend/lv_back.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/friend/page_bg.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/friend/search_back.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/chat/btn_down_42e229e4908f545000d32be1ddc59224.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/friend/icon_friend_line_rect1.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/chat/chatWorldBg.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/chat/chatHornBg.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/mapinfo/minict_cell.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/chat/btn_enter_48404201c72e25f82434a41f39349e88.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/chat/btnChooseChannel_up.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/chat/inputBg.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/chat/btn_face_b3022e712c88129597ff3523a574c9eb.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/chat/channelAlertFlag.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/chat/chatBgBig.png HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/city/building250_b4c640e866b08e65d6317962baee79bd.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/city/building280_1cb474186c868c1cd00df12714b35f0f.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/city/building240_5673c0a499dd0bc101178f0efa9c922b.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17 21:36:17  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_TopFight_TopN_CS
+2026-10-12 09:36:17 21:36:17  INFO       -> PVZ.Cmd.Cmd_TopFight_TopN_SC (4 body bytes)
+2026-10-12 09:36:17 21:36:17  INFO     -> S2C  PVZ.Cmd.Cmd_TopFight_TopN_SC                   (4 body bytes, 48 total)
+2026-10-12 09:36:17   GET /swf/city/building230_791b4f7ccc839acc7ae71db7ee405caf.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/city/building140_d3927856eca969011e369760f92f8407.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/city/building150_5673c0a499dd0bc101178f0efa9c922b.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/city/building190_4db2aa4b7d4f7883d44c82b988b3a49d.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17 21:36:17  INFO   === client connected on PORT 9001 from ('127.0.0.1', 58497) ===
+2026-10-12 09:36:17 21:36:17  INFO   === client disconnected: ('127.0.0.1', 58497) ===
+2026-10-12 09:36:17 21:36:17  INFO   [policy] served policy to ('127.0.0.1', 58498) (req=b'')
+2026-10-12 09:36:17   GET /swf/city/building110_132f3fb31c696a2dd50c9f1a6f26838b.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/city/building80_80612d3ecf28a1d7c677118ca4f90717.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/city/building30_8523afc14ddb08dcbbefe557ca2e8878.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/city/building130_ee5d759565b0f76105e109ec3a0dd997.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/city/building10_81d7d232d0d93d09749dc25677bab738.swf HTTP/1.1 -> 200
+2026-10-12 09:36:17   GET /swf/city/new_btn_to_illustrations_f6a7da0d530eecb0c6fd9a0ed152f37a.swf HTTP/1.1 -> 200
+2026-10-12 09:36:18   GET /swf/city/new_btn_to_shop_72b442432829c293d3590bd75505baf4.swf HTTP/1.1 -> 200
+2026-10-12 09:36:18   GET /swf/activity/promotionFlag_7e7a0845408a825dfe2d2c92871e2834.swf HTTP/1.1 -> 200
+2026-10-12 09:36:18   GET /swf/city/new_btn_to_quest_e0007549d1a31148cd28555306f198c4.swf HTTP/1.1 -> 200
+2026-10-12 09:36:18   GET /swf/city/new_btn_to_bag_61fec0d7eab99bb4cc6376a87a00591d.swf HTTP/1.1 -> 200
+2026-10-12 09:36:18   GET /swf/city/new_btn_to_friend_1339545b32d70ece45912dc8393c491b.swf HTTP/1.1 -> 200
+2026-10-12 09:36:18   GET /swf/city/new_btn_to_fuben_a38509dcee8f6a48abdd42bba44d4a95.swf HTTP/1.1 -> 200
+2026-10-12 09:36:18   GET /swf/city/new_btn_to_mail_b1b26579fa7c1a03fe339095855b3aaf.swf HTTP/1.1 -> 200
+2026-10-12 09:36:18   GET /swf/roleInfo/month_can_and_ungot_7df0f075aa5617765593f107129673da.swf HTTP/1.1 -> 200
+2026-10-12 09:36:18   GET /swf/roleInfo/castle2.png HTTP/1.1 -> 200
+2026-10-12 09:36:18   GET /swf/roleInfo/secondary_password.png HTTP/1.1 -> 200
+2026-10-12 09:36:18   GET /image/notice/rollNoticeBg.png HTTP/1.1 -> 200
+2026-10-12 09:36:18   GET /image/arena/s1001.png HTTP/1.1 -> 200
+2026-10-12 09:36:18   GET /swf/activity/icons/10002_e9bbc678781efbc95f5414f78d36fd8a.swf HTTP/1.1 -> 200
+2026-10-12 09:36:18   GET /swf/welfareHall/npc/highWallnut_7ee6a9ecb862e706ddeddc11c883e4fd.bbone HTTP/1.1 -> 200
+2026-10-12 09:36:18 21:36:18  INFO   === client connected on PORT 9001 from ('127.0.0.1', 58533) ===
+2026-10-12 09:36:18 21:36:18  INFO   === client disconnected: ('127.0.0.1', 58533) ===
+2026-10-12 09:36:18 21:36:18  INFO   [policy] served policy to ('127.0.0.1', 58534) (req=b'')
+2026-10-12 09:36:18   GET /ModuleEmbattle_b6d756e73b063e4402dafc6cab66f75d.swf HTTP/1.1 -> 200
+2026-10-12 09:36:18   GET /image/head/unknow.png HTTP/1.1 -> 200
+2026-10-12 09:36:19 21:36:19  INFO   === client connected on PORT 9001 from ('127.0.0.1', 52042) ===
+2026-10-12 09:36:19 21:36:19  INFO   === client disconnected: ('127.0.0.1', 52042) ===
+2026-10-12 09:36:19 21:36:19  INFO   [policy] served policy to ('127.0.0.1', 52043) (req=b'')
+2026-10-12 09:36:19 21:36:19  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+2026-10-12 09:36:19   GET /swf/battle/animation/unit/peashooter_26d19d93d0695d0f7276cb43ae891a91.bbone HTTP/1.1 -> 200
+2026-10-12 09:36:19   GET /swf/battle/animation/unit/wallnut_6046f670bd6bb152c3f6de9260df2417.bbone HTTP/1.1 -> 200
+2026-10-12 09:36:19   GET /swf/battle/animation/unit/electricGrass_61214d48b878fdda182994c9c428c04a.bbone HTTP/1.1 -> 200
+2026-10-12 09:36:19   GET /swf/battle/animation/effect/dummyBase_f81c274695d88aa05ce62b26b4951936.bbone HTTP/1.1 -> 200
+2026-10-12 09:36:19 21:36:19  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (652 body bytes)
+2026-10-12 09:36:19 21:36:19  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (652 body bytes, 703 total)
+2026-10-12 09:36:19 21:36:19  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:36:19 21:36:19  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:36:19 21:36:19  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:36:19 21:36:19  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_City_GetBuildingEvent_CS
+2026-10-12 09:36:19 21:36:19  INFO       -> PVZ.Cmd.Cmd_City_GetBuildingEvent_SC (0 body bytes)
+2026-10-12 09:36:19 21:36:19  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetBuildingEvent_SC           (0 body bytes, 52 total)
+2026-10-12 09:36:19   GET /swf/battle/animation/unit/sunflower_137be76fe85aa0ca5e22fd4f3f92f070.bbone HTTP/1.1 -> 200
+2026-10-12 09:36:19   GET /swf/battle/animation/unit/sapling_ffbea5d361f27b22a7fcd6ff9bc56e68.bbone HTTP/1.1 -> 200
+2026-10-12 09:36:19   GET /swf/battle/animation/unit/flycatcher_d45a3df72390609081d734e4cd20411f.bbone HTTP/1.1 -> 200
+2026-10-12 09:36:20   GET /sound/city/bg1.mp3 HTTP/1.1 -> 200
+2026-10-12 09:36:20 21:36:20  INFO   === client connected on PORT 9001 from ('127.0.0.1', 52056) ===
+2026-10-12 09:36:20 21:36:20  INFO   === client disconnected: ('127.0.0.1', 52056) ===
+2026-10-12 09:36:20 21:36:20  INFO   [policy] served policy to ('127.0.0.1', 52057) (req=b'')
+2026-10-12 09:36:20 21:36:20  INFO   === client connected on PORT 9001 from ('127.0.0.1', 57664) ===
+2026-10-12 09:36:20 21:36:20  INFO   === client disconnected: ('127.0.0.1', 57664) ===
+2026-10-12 09:36:20 21:36:20  INFO   [policy] served policy to ('127.0.0.1', 57665) (req=b'')
+2026-10-12 09:36:21   GET /ModuleBattleCardMarket_21b9ede042fd511eae74dc5b9cbb5db2.swf HTTP/1.1 -> 200
+2026-10-12 09:36:21   GET /swf/roleInfo/secondary_password.png HTTP/1.1 -> 200
+2026-10-12 09:36:21   GET /swf/roleInfo/month_can_and_ungot_7df0f075aa5617765593f107129673da.swf HTTP/1.1 -> 200
+2026-10-12 09:36:21   GET /swf/cardMarket/battleCardMarketUI_c68204f8735d50c9b8581b1f80df4e59.swf HTTP/1.1 -> 200
+2026-10-12 09:36:21   GET /swf/roleInfo/castle2.png HTTP/1.1 -> 200
+2026-10-12 09:36:21   GET /image/head/custom/700000204_05b7b2334336f4562e5bd763063c83a951a478eed81b415a9ed48441e4c6b544.png HTTP/1.1 -> 200
+2026-10-12 09:36:21   GET /image/arena/s1001.png HTTP/1.1 -> 200
+2026-10-12 09:36:21   GET /swf/chat/chatBgSmall.png HTTP/1.1 -> 200
+2026-10-12 09:36:21   GET /swf/chat/btn_up_879e2a070812fad8d9e604983f313d05.swf HTTP/1.1 -> 200
+2026-10-12 09:36:21 21:36:21  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Card_GetMarketInfo_CS
+2026-10-12 09:36:21 21:36:21  INFO       -> PVZ.Cmd.Cmd_Card_GetMarketInfo_SC (28 body bytes)
+2026-10-12 09:36:21 21:36:21  INFO     -> S2C  PVZ.Cmd.Cmd_Card_GetMarketInfo_SC              (28 body bytes, 77 total)
+2026-10-12 09:36:21   GET /swf/cardMarket/battleCardMarket_ad34c0af8ef43ba822e54cfdbf861f5d.swf HTTP/1.1 -> 200
+2026-10-12 09:36:21   GET /swf/city/btn_to_exchangeCard_22b56938e3ccf786db798a66b84ab968.swf HTTP/1.1 -> 200
+2026-10-12 09:36:21   GET /swf/city/btn_to_card_lib_d861cadb36c6970caa855de6640a749f.swf HTTP/1.1 -> 200
+2026-10-12 09:36:21   GET /swf/city/btn_to_city_232fb10a43a095dcda6489e1882b0a18.swf HTTP/1.1 -> 200
+2026-10-12 09:36:22 21:36:22  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62004) ===
+2026-10-12 09:36:22 21:36:22  INFO   === client disconnected: ('127.0.0.1', 62004) ===
+2026-10-12 09:36:22 21:36:22  INFO   [policy] served policy to ('127.0.0.1', 62005) (req=b'')
+2026-10-12 09:36:22 21:36:22  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:36:22 21:36:22  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:36:22 21:36:22  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:36:22   GET /image/battleCard/luckygrass.png HTTP/1.1 -> 200
+2026-10-12 09:36:22   GET /image/item/2003.png HTTP/1.1 -> 200
+2026-10-12 09:36:22   GET /image/battleCard/clock.png HTTP/1.1 -> 200
+2026-10-12 09:36:23 21:36:23  INFO   === client connected on PORT 9001 from ('127.0.0.1', 49171) ===
+2026-10-12 09:36:23 21:36:23  INFO   === client disconnected: ('127.0.0.1', 49171) ===
+2026-10-12 09:36:23 21:36:23  INFO   [policy] served policy to ('127.0.0.1', 49172) (req=b'')
+2026-10-12 09:36:23 21:36:23  INFO   === client connected on PORT 9001 from ('127.0.0.1', 57990) ===
+2026-10-12 09:36:23 21:36:23  INFO   === client disconnected: ('127.0.0.1', 57990) ===
+2026-10-12 09:36:23 21:36:23  INFO   [policy] served policy to ('127.0.0.1', 57991) (req=b'')
+2026-10-12 09:36:24 21:36:24  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_Card_Extract_CS
+2026-10-12 09:36:24 21:36:24  ERROR  handler PVZ.Cmd.Cmd_Card_Extract_CS crashed; sending generic PVZ.Cmd.Cmd_Card_Extract_SC
+2026-10-12 09:36:24 Traceback (most recent call last):
+2026-10-12 09:36:24   File "C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\PvZ-Server-PoC\pvz_poc_server.py", line 23095, in handle_client
+2026-10-12 09:36:24     result = REQUEST_HANDLERS[name](cmd_data, player or {})
+2026-10-12 09:36:24   File "C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\PvZ-Server-PoC\pvz_poc_server.py", line 4196, in handle_card_extract
+2026-10-12 09:36:24     rewards = _card_market_roll_rewards(gid, player)
+2026-10-12 09:36:24   File "C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\PvZ-Server-PoC\pvz_poc_server.py", line 4057, in _card_market_roll_rewards
+2026-10-12 09:36:24     return card_market_rules.roll_rewards(_activity_server_api(), gid, player)
+2026-10-12 09:36:24            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-12 09:36:24   File "C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\PvZ-Server-PoC\card_market_rules.py", line 72, in roll_rewards
+2026-10-12 09:36:24     data = reward_data(g)
+2026-10-12 09:36:24   File "C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\PvZ-Server-PoC\card_market_rules.py", line 55, in reward_data
+2026-10-12 09:36:24     raise RuntimeError('Incomplete original market reward templates')
+2026-10-12 09:36:24 RuntimeError: Incomplete original market reward templates
+2026-10-12 09:36:24 21:36:24  INFO       -> PVZ.Cmd.Cmd_Card_Extract_SC (6 body bytes)
+2026-10-12 09:36:24 21:36:24  INFO     -> S2C  PVZ.Cmd.Cmd_Card_Extract_SC                    (6 body bytes, 49 total)
+2026-10-12 09:36:25 21:36:25  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55849) ===
+2026-10-12 09:36:25 21:36:25  INFO   === client disconnected: ('127.0.0.1', 55849) ===
+2026-10-12 09:36:25 21:36:25  INFO   [policy] served policy to ('127.0.0.1', 55850) (req=b'')
+2026-10-12 09:36:25 21:36:25  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55854) ===
+2026-10-12 09:36:25 21:36:25  INFO   === client disconnected: ('127.0.0.1', 55854) ===
+2026-10-12 09:36:25 21:36:25  INFO   [policy] served policy to ('127.0.0.1', 55855) (req=b'')
+2026-10-12 09:36:26 21:36:26  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:36:26 21:36:26  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:36:26 21:36:26  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:36:26 21:36:26  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=478 cmdName=PVZ.Cmd.Cmd_ClientDownLog_CS
+2026-10-12 09:36:26 21:36:26  WARNING    CLIENT ERROR uin=700000204: Uncaught Error,TypeError,TypeError: Error #1009: Cannot access a property or method of a null object reference.,TypeError: Error #1009: Cannot access a property or method of a null object reference.
+2026-10-12 09:36:26 21:36:26  WARNING    CLIENT ERROR uin=700000204: at com.qq.display::CardItemFactory$/updateCardItemByBagItemId()
+2026-10-12 09:36:26 21:36:26  WARNING    CLIENT ERROR uin=700000204: at com.qq.modules.battleCardMarket.view::BattleCardBoxViewMediator/setCardDataHandler()
+2026-10-12 09:36:26 21:36:26  WARNING    CLIENT ERROR uin=700000204: at com.qq.modules.battleCardMarket.view::BattleCardBoxViewMediator/enterFrameHandler()
+2026-10-12 09:36:26 21:36:26  INFO       -> PVZ.Cmd.Cmd_ClientDownLog_SC (0 body bytes)
+2026-10-12 09:36:26 21:36:26  INFO     -> S2C  PVZ.Cmd.Cmd_ClientDownLog_SC                   (0 body bytes, 44 total)
+2026-10-12 09:36:26 21:36:26  INFO   === client connected on PORT 9001 from ('127.0.0.1', 59812) ===
+2026-10-12 09:36:26 21:36:26  INFO   === client disconnected: ('127.0.0.1', 59812) ===
+2026-10-12 09:36:26 21:36:26  INFO   [policy] served policy to ('127.0.0.1', 59813) (req=b'')
+2026-10-12 09:36:28 21:36:28  INFO   === client connected on PORT 9001 from ('127.0.0.1', 59817) ===
+2026-10-12 09:36:28 21:36:28  INFO   === client disconnected: ('127.0.0.1', 59817) ===
+2026-10-12 09:36:28 21:36:28  INFO   [policy] served policy to ('127.0.0.1', 59818) (req=b'')
+2026-10-12 09:36:28 21:36:28  INFO   === client connected on PORT 9001 from ('127.0.0.1', 58989) ===
+2026-10-12 09:36:28 21:36:28  INFO   === client disconnected: ('127.0.0.1', 58989) ===
+2026-10-12 09:36:28 21:36:28  INFO   [policy] served policy to ('127.0.0.1', 58990) (req=b'')
+2026-10-12 09:36:29 21:36:29  INFO   === client connected on PORT 9001 from ('127.0.0.1', 59205) ===
+2026-10-12 09:36:29 21:36:29  INFO   === client disconnected: ('127.0.0.1', 59205) ===
+2026-10-12 09:36:29 21:36:29  INFO   [policy] served policy to ('127.0.0.1', 59206) (req=b'')
+2026-10-12 09:36:30 21:36:30  INFO   === client connected on PORT 9001 from ('127.0.0.1', 64560) ===
+2026-10-12 09:36:30 21:36:30  INFO   === client disconnected: ('127.0.0.1', 64560) ===
+2026-10-12 09:36:30 21:36:30  INFO   [policy] served policy to ('127.0.0.1', 64561) (req=b'')
+2026-10-12 09:36:31 21:36:31  INFO   === client connected on PORT 9001 from ('127.0.0.1', 49265) ===
+2026-10-12 09:36:31 21:36:31  INFO   === client disconnected: ('127.0.0.1', 49265) ===
+2026-10-12 09:36:31 21:36:31  INFO   [policy] served policy to ('127.0.0.1', 49266) (req=b'')
+2026-10-12 09:36:32 21:36:32  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55987) ===
+2026-10-12 09:36:32 21:36:32  INFO   === client disconnected: ('127.0.0.1', 55987) ===
+2026-10-12 09:36:32 21:36:32  INFO   [policy] served policy to ('127.0.0.1', 55988) (req=b'')
+2026-10-12 09:36:33 21:36:33  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55992) ===
+2026-10-12 09:36:33 21:36:33  INFO   === client disconnected: ('127.0.0.1', 55992) ===
+2026-10-12 09:36:33 21:36:33  INFO   [policy] served policy to ('127.0.0.1', 55993) (req=b'')
+2026-10-12 09:36:34 21:36:34  INFO   === client connected on PORT 9001 from ('127.0.0.1', 52531) ===
+2026-10-12 09:36:34 21:36:34  INFO   === client disconnected: ('127.0.0.1', 52531) ===
+2026-10-12 09:36:34 21:36:34  INFO   [policy] served policy to ('127.0.0.1', 52532) (req=b'')
+2026-10-12 09:36:35 21:36:35  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55172) ===
+2026-10-12 09:36:35 21:36:35  INFO   === client disconnected: ('127.0.0.1', 55172) ===
+2026-10-12 09:36:35 21:36:35  INFO   [policy] served policy to ('127.0.0.1', 55173) (req=b'')
+2026-10-12 09:36:35 21:36:35  INFO   === client connected on PORT 9001 from ('127.0.0.1', 54099) ===
+2026-10-12 09:36:35 21:36:35  INFO   === client disconnected: ('127.0.0.1', 54099) ===
+2026-10-12 09:36:35 21:36:35  INFO   [policy] served policy to ('127.0.0.1', 54100) (req=b'')
+2026-10-12 09:36:37 21:36:37  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62901) ===
+2026-10-12 09:36:37 21:36:37  INFO   === client disconnected: ('127.0.0.1', 62901) ===
+2026-10-12 09:36:37 21:36:37  INFO   [policy] served policy to ('127.0.0.1', 62902) (req=b'')
+2026-10-12 09:36:38 21:36:38  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62907) ===
+2026-10-12 09:36:38 21:36:38  INFO   === client disconnected: ('127.0.0.1', 62907) ===
+2026-10-12 09:36:38 21:36:38  INFO   [policy] served policy to ('127.0.0.1', 62908) (req=b'')
+2026-10-12 09:36:38 21:36:38  INFO   === client connected on PORT 9001 from ('127.0.0.1', 51971) ===
+2026-10-12 09:36:38 21:36:38  INFO   === client disconnected: ('127.0.0.1', 51971) ===
+2026-10-12 09:36:38 21:36:38  INFO   [policy] served policy to ('127.0.0.1', 51972) (req=b'')
+2026-10-12 09:36:40 21:36:40  INFO   === client connected on PORT 9001 from ('127.0.0.1', 61164) ===
+2026-10-12 09:36:40 21:36:40  INFO   === client disconnected: ('127.0.0.1', 61164) ===
+2026-10-12 09:36:40 21:36:40  INFO   [policy] served policy to ('127.0.0.1', 61165) (req=b'')
+2026-10-12 09:36:40 21:36:40  INFO   === client connected on PORT 9001 from ('127.0.0.1', 61169) ===
+2026-10-12 09:36:40 21:36:40  INFO   === client disconnected: ('127.0.0.1', 61169) ===
+2026-10-12 09:36:40 21:36:40  INFO   [policy] served policy to ('127.0.0.1', 61170) (req=b'')
+2026-10-12 09:36:41 21:36:41  INFO   === client connected on PORT 9001 from ('127.0.0.1', 50187) ===
+2026-10-12 09:36:41 21:36:41  INFO   === client disconnected: ('127.0.0.1', 50187) ===
+2026-10-12 09:36:41 21:36:41  INFO   [policy] served policy to ('127.0.0.1', 50188) (req=b'')
+2026-10-12 09:36:43 21:36:43  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55717) ===
+2026-10-12 09:36:43 21:36:43  INFO   === client disconnected: ('127.0.0.1', 55717) ===
+2026-10-12 09:36:43 21:36:43  INFO   [policy] served policy to ('127.0.0.1', 55718) (req=b'')
+2026-10-12 09:36:43 21:36:43  INFO   === client connected on PORT 9001 from ('127.0.0.1', 52410) ===
+2026-10-12 09:36:43 21:36:43  INFO   === client disconnected: ('127.0.0.1', 52410) ===
+2026-10-12 09:36:43 21:36:43  INFO   [policy] served policy to ('127.0.0.1', 52411) (req=b'')
+2026-10-12 09:36:44 21:36:44  INFO   === client connected on PORT 9001 from ('127.0.0.1', 50758) ===
+2026-10-12 09:36:44 21:36:44  INFO   === client disconnected: ('127.0.0.1', 50758) ===
+2026-10-12 09:36:44 21:36:44  INFO   [policy] served policy to ('127.0.0.1', 50759) (req=b'')
+2026-10-12 09:36:45 21:36:45  INFO   === client connected on PORT 9001 from ('127.0.0.1', 50763) ===
+2026-10-12 09:36:45 21:36:45  INFO   === client disconnected: ('127.0.0.1', 50763) ===
+2026-10-12 09:36:45 21:36:45  INFO   [policy] served policy to ('127.0.0.1', 50764) (req=b'')
+2026-10-12 09:36:46 21:36:46  INFO   === client connected on PORT 9001 from ('127.0.0.1', 49168) ===
+2026-10-12 09:36:46 21:36:46  INFO   === client disconnected: ('127.0.0.1', 49168) ===
+2026-10-12 09:36:46 21:36:46  INFO   [policy] served policy to ('127.0.0.1', 49172) (req=b'')
+2026-10-12 09:36:47 21:36:47  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55303) ===
+2026-10-12 09:36:47 21:36:47  INFO   === client disconnected: ('127.0.0.1', 55303) ===
+2026-10-12 09:36:47 21:36:47  INFO   [policy] served policy to ('127.0.0.1', 55304) (req=b'')
+2026-10-12 09:36:48 21:36:48  INFO   === client connected on PORT 9001 from ('127.0.0.1', 57357) ===
+2026-10-12 09:36:48 21:36:48  INFO   === client disconnected: ('127.0.0.1', 57357) ===
+2026-10-12 09:36:48 21:36:48  INFO   [policy] served policy to ('127.0.0.1', 57358) (req=b'')
+2026-10-12 09:36:49 21:36:49  INFO   === client connected on PORT 9001 from ('127.0.0.1', 50584) ===
+2026-10-12 09:36:49 21:36:49  INFO   === client disconnected: ('127.0.0.1', 50584) ===
+2026-10-12 09:36:49 21:36:49  INFO   [policy] served policy to ('127.0.0.1', 50585) (req=b'')
+2026-10-12 09:36:50 21:36:50  INFO   === client connected on PORT 9001 from ('127.0.0.1', 53614) ===
+2026-10-12 09:36:50 21:36:50  INFO   === client disconnected: ('127.0.0.1', 53614) ===
+2026-10-12 09:36:50 21:36:50  INFO   [policy] served policy to ('127.0.0.1', 53615) (req=b'')
+2026-10-12 09:36:50 21:36:50  INFO   === client connected on PORT 9001 from ('127.0.0.1', 53618) ===
+2026-10-12 09:36:50 21:36:50  INFO   === client disconnected: ('127.0.0.1', 53618) ===
+2026-10-12 09:36:50 21:36:50  INFO   [policy] served policy to ('127.0.0.1', 53619) (req=b'')
+2026-10-12 09:36:52 21:36:52  INFO   === client connected on PORT 9001 from ('127.0.0.1', 56241) ===
+2026-10-12 09:36:52 21:36:52  INFO   === client disconnected: ('127.0.0.1', 56241) ===
+2026-10-12 09:36:52 21:36:52  INFO   [policy] served policy to ('127.0.0.1', 56242) (req=b'')
+2026-10-12 09:36:53 21:36:53  INFO   === client connected on PORT 9001 from ('127.0.0.1', 56246) ===
+2026-10-12 09:36:53 21:36:53  INFO   === client disconnected: ('127.0.0.1', 56246) ===
+2026-10-12 09:36:53 21:36:53  INFO   [policy] served policy to ('127.0.0.1', 56247) (req=b'')
+2026-10-12 09:36:53 21:36:53  INFO   === client connected on PORT 9001 from ('127.0.0.1', 54144) ===
+2026-10-12 09:36:53 21:36:53  INFO   === client disconnected: ('127.0.0.1', 54144) ===
+2026-10-12 09:36:53 21:36:53  INFO   [policy] served policy to ('127.0.0.1', 54145) (req=b'')
+2026-10-12 09:36:55 21:36:55  INFO   === client connected on PORT 9001 from ('127.0.0.1', 60060) ===
+2026-10-12 09:36:55 21:36:55  INFO   === client disconnected: ('127.0.0.1', 60060) ===
+2026-10-12 09:36:55 21:36:55  INFO   [policy] served policy to ('127.0.0.1', 60061) (req=b'')
+2026-10-12 09:36:55 21:36:55  INFO   === client connected on PORT 9001 from ('127.0.0.1', 60065) ===
+2026-10-12 09:36:55 21:36:55  INFO   === client disconnected: ('127.0.0.1', 60065) ===
+2026-10-12 09:36:55 21:36:55  INFO   [policy] served policy to ('127.0.0.1', 60066) (req=b'')
+2026-10-12 09:36:56 21:36:56  INFO   === client connected on PORT 9001 from ('127.0.0.1', 50435) ===
+2026-10-12 09:36:56 21:36:56  INFO   === client disconnected: ('127.0.0.1', 50435) ===
+2026-10-12 09:36:56 21:36:56  INFO   [policy] served policy to ('127.0.0.1', 50436) (req=b'')
+2026-10-12 09:36:58 21:36:58  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62189) ===
+2026-10-12 09:36:58 21:36:58  INFO   === client disconnected: ('127.0.0.1', 62189) ===
+2026-10-12 09:36:58 21:36:58  INFO   [policy] served policy to ('127.0.0.1', 62190) (req=b'')
+2026-10-12 09:36:58 21:36:58  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62193) ===
+2026-10-12 09:36:58 21:36:58  INFO   === client disconnected: ('127.0.0.1', 62193) ===
+2026-10-12 09:36:58 21:36:58  INFO   [policy] served policy to ('127.0.0.1', 62194) (req=b'')
+2026-10-12 09:36:59 21:36:59  INFO   === client connected on PORT 9001 from ('127.0.0.1', 63241) ===
+2026-10-12 09:36:59 21:36:59  INFO   === client disconnected: ('127.0.0.1', 63241) ===
+2026-10-12 09:36:59 21:36:59  INFO   [policy] served policy to ('127.0.0.1', 63242) (req=b'')
+2026-10-12 09:37:00 21:37:00  INFO   === client connected on PORT 9001 from ('127.0.0.1', 63273) ===
+2026-10-12 09:37:00 21:37:00  INFO   === client disconnected: ('127.0.0.1', 63273) ===
+2026-10-12 09:37:00 21:37:00  INFO   [policy] served policy to ('127.0.0.1', 63274) (req=b'')
+2026-10-12 09:37:01 21:37:01  INFO   === client connected on PORT 9001 from ('127.0.0.1', 56035) ===
+2026-10-12 09:37:01 21:37:01  INFO   === client disconnected: ('127.0.0.1', 56035) ===
+2026-10-12 09:37:01 21:37:01  INFO   [policy] served policy to ('127.0.0.1', 56036) (req=b'')
+2026-10-12 09:37:02 21:37:02  INFO   === client connected on PORT 9001 from ('127.0.0.1', 60151) ===
+2026-10-12 09:37:02 21:37:02  INFO   === client disconnected: ('127.0.0.1', 60151) ===
+2026-10-12 09:37:02 21:37:02  INFO   [policy] served policy to ('127.0.0.1', 60152) (req=b'')
+2026-10-12 09:37:03 21:37:03  INFO   === client connected on PORT 9001 from ('127.0.0.1', 60156) ===
+2026-10-12 09:37:03 21:37:03  INFO   === client disconnected: ('127.0.0.1', 60156) ===
+2026-10-12 09:37:03 21:37:03  INFO   [policy] served policy to ('127.0.0.1', 60157) (req=b'')
+2026-10-12 09:37:04 21:37:04  INFO   === client connected on PORT 9001 from ('127.0.0.1', 60793) ===
+2026-10-12 09:37:04 21:37:04  INFO   === client disconnected: ('127.0.0.1', 60793) ===
+2026-10-12 09:37:04 21:37:04  INFO   [policy] served policy to ('127.0.0.1', 60794) (req=b'')
+2026-10-12 09:37:05 21:37:05  INFO   === client connected on PORT 9001 from ('127.0.0.1', 63146) ===
+2026-10-12 09:37:05 21:37:05  INFO   === client disconnected: ('127.0.0.1', 63146) ===
+2026-10-12 09:37:05 21:37:05  INFO   [policy] served policy to ('127.0.0.1', 63147) (req=b'')
+2026-10-12 09:37:05 21:37:05  INFO   === client connected on PORT 9001 from ('127.0.0.1', 63151) ===
+2026-10-12 09:37:05 21:37:05  INFO   === client disconnected: ('127.0.0.1', 63151) ===
+2026-10-12 09:37:05 21:37:05  INFO   [policy] served policy to ('127.0.0.1', 63152) (req=b'')
+2026-10-12 09:37:07 21:37:07  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:37:07 21:37:07  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:37:07 21:37:07  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:37:07 21:37:07  INFO   === client connected on PORT 9001 from ('127.0.0.1', 58538) ===
+2026-10-12 09:37:07 21:37:07  INFO   === client disconnected: ('127.0.0.1', 58538) ===
+2026-10-12 09:37:07 21:37:07  INFO   [policy] served policy to ('127.0.0.1', 58539) (req=b'')
+2026-10-12 09:37:08 21:37:08  INFO   === client connected on PORT 9001 from ('127.0.0.1', 52951) ===
+2026-10-12 09:37:08 21:37:08  INFO   === client disconnected: ('127.0.0.1', 52951) ===
+2026-10-12 09:37:08 21:37:08  INFO   [policy] served policy to ('127.0.0.1', 52952) (req=b'')
+2026-10-12 09:37:08 21:37:08  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62731) ===
+2026-10-12 09:37:08 21:37:08  INFO   === client disconnected: ('127.0.0.1', 62731) ===
+2026-10-12 09:37:08 21:37:08  INFO   [policy] served policy to ('127.0.0.1', 62732) (req=b'')
+2026-10-12 09:37:10 21:37:10  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:37:10 21:37:10  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:37:10 21:37:10  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:37:10 21:37:10  INFO   === client connected on PORT 9001 from ('127.0.0.1', 51714) ===
+2026-10-12 09:37:10 21:37:10  INFO   === client disconnected: ('127.0.0.1', 51714) ===
+2026-10-12 09:37:10 21:37:10  INFO   [policy] served policy to ('127.0.0.1', 51715) (req=b'')
+2026-10-12 09:37:10 21:37:10  INFO   === client connected on PORT 9001 from ('127.0.0.1', 51719) ===
+2026-10-12 09:37:10 21:37:10  INFO   === client disconnected: ('127.0.0.1', 51719) ===
+2026-10-12 09:37:10 21:37:10  INFO   [policy] served policy to ('127.0.0.1', 51720) (req=b'')
+2026-10-12 09:37:11 21:37:11  INFO   === client connected on PORT 9001 from ('127.0.0.1', 54104) ===
+2026-10-12 09:37:11 21:37:11  INFO   === client disconnected: ('127.0.0.1', 54104) ===
+2026-10-12 09:37:11 21:37:11  INFO   [policy] served policy to ('127.0.0.1', 54105) (req=b'')
+2026-10-12 09:37:12 21:37:12  INFO   === client disconnected: ('127.0.0.1', 58522) ===
+2026-10-12 09:37:13 游戏窗口已关闭，正在停止本次游戏服务。
+2026-10-12 09:37:13 服务已停止
+2026-10-12 09:37:17 服务已停止
+2026-10-12 09:53:32 启动器已就绪，选择角色后开始游戏。
+2026-10-12 09:53:45 开始初始化游戏 · 账号 700000204
+2026-10-12 09:53:46 21:53:46  INFO   local guild adapter ready (30 core routes)
+2026-10-12 09:53:46 >>> PvZ PoC launcher: starting web + admin + game servers in ONE window.
+2026-10-12 09:53:46 >>> Ctrl+C to stop all services.
+2026-10-12 09:53:46 ============================================================
+2026-10-12 09:53:46 Serving: webroot (assembled)
+2026-10-12 09:53:46   C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\webroot
+2026-10-12 09:53:46 Verify in a browser:
+2026-10-12 09:53:46   http://127.0.0.1:8080/swf/resource_64c342244c3d8f16b3c815e5ee133cf8.swf
+2026-10-12 09:53:46   (should download a ~286 KB file AND print a 200 line below)
+2026-10-12 09:53:46 Load in the Flash projector:
+2026-10-12 09:53:46   http://127.0.0.1:8080/loader_n.swf
+2026-10-12 09:53:46 ============================================================
+2026-10-12 09:53:46 (Ctrl+C to stop)
+2026-10-12 09:53:46 21:53:46  DEBUG  Using selector: SelectSelector
+2026-10-12 09:53:46 正在等待：资源服务 (8080)、GM 后台 (8081)、游戏服务 (9001)、Flash 策略 (843)
+2026-10-12 09:53:46 21:53:46  INFO   player store: C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\PvZ-Server-PoC\players.db
+2026-10-12 09:53:46 [admin] 本地 GM 后台: http://127.0.0.1:8081
+2026-10-12 09:53:46 [admin] 数据库: C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\PvZ-Server-PoC\players.db
+2026-10-12 09:53:47 21:53:47  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+2026-10-12 09:53:47 21:53:47  INFO   loaded 40 lab bottles
+2026-10-12 09:53:47 21:53:47  INFO   loaded 999 world-tree levels
+2026-10-12 09:53:47 21:53:47  INFO   loaded 3 VIP tiers
+2026-10-12 09:53:47 21:53:47  INFO   loaded 傀儡 config: 50 puppets, 120 stages, 225 skill levels
+2026-10-12 09:53:47 21:53:47  INFO   loaded 44 card puzzle stages
+2026-10-12 09:53:47 21:53:47  INFO   loaded 1975 card forge templates
+2026-10-12 09:53:47 21:53:47  INFO   loaded 1960 card-fruit templates
+2026-10-12 09:53:47   GET /loader_p.swf HTTP/1.0 -> 200
+2026-10-12 09:53:47 [admin] 127.0.0.1 - "GET /healthz HTTP/1.0" 200 -
+2026-10-12 09:53:47 21:53:47  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+2026-10-12 09:53:47 21:53:47  INFO   loaded prestige evolution: 200 levels, 7 plant types
+2026-10-12 09:53:47 21:53:47  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+2026-10-12 09:53:47 21:53:47  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+2026-10-12 09:53:47 21:53:47  INFO   loaded 617 card avatar templates
+2026-10-12 09:53:48 正在等待：游戏服务 (9001)、Flash 策略 (843)
+2026-10-12 09:53:48   GET /loader_p.swf HTTP/1.0 -> 200
+2026-10-12 09:53:48 [admin] 127.0.0.1 - "GET /healthz HTTP/1.0" 200 -
+2026-10-12 09:53:49   GET /loader_p.swf HTTP/1.0 -> 200
+2026-10-12 09:53:49 [admin] 127.0.0.1 - "GET /healthz HTTP/1.0" 200 -
+2026-10-12 09:53:50   GET /loader_p.swf HTTP/1.0 -> 200
+2026-10-12 09:53:50 [admin] 127.0.0.1 - "GET /healthz HTTP/1.0" 200 -
+2026-10-12 09:53:51   GET /loader_p.swf HTTP/1.0 -> 200
+2026-10-12 09:53:51 [admin] 127.0.0.1 - "GET /healthz HTTP/1.0" 200 -
+2026-10-12 09:53:52 21:53:52  INFO   bots: 50 slots, 0 opponents generated
+2026-10-12 09:53:52 21:53:52  INFO   bot autonomy loop started (interval=120s)
+2026-10-12 09:53:52 21:53:52  INFO   loaded 254 TD level reward templates from clientDB
+2026-10-12 09:53:52 21:53:52  INFO   loaded 25 usable TD laboratory material ids: (40001, 40003, 40004, 40005, 40006, 40007, 40009, 40010, 40011, 40012, 40013, 40015, 40016, 40017, 40018, 40019, 40021, 40022, 40023, 40024, 40025, 40027, 40028, 40029, 40030)
+2026-10-12 09:53:52 21:53:52  INFO   loaded 200 role-level exp thresholds
+2026-10-12 09:53:52 21:53:52  INFO   loaded 2023 item sell templates
+2026-10-12 09:53:52 21:53:52  INFO   loaded 23 town buildings
+2026-10-12 09:53:52 21:53:52  INFO   loaded 32 fuben chapters
+2026-10-12 09:53:52 21:53:52  INFO   loaded fuben stages for 92 chapter/mode combos
+2026-10-12 09:53:52 21:53:52  INFO   loaded 10 energy-buy tiers
+2026-10-12 09:53:52 21:53:52  INFO   loaded energyMax for 200 role levels
+2026-10-12 09:53:52 21:53:52  INFO   loaded 35 card forge chance entries
+2026-10-12 09:53:52 21:53:52  INFO   loaded 78 card recruit recipes
+2026-10-12 09:53:52 21:53:52  INFO   loaded 12 card avatar forge types
+2026-10-12 09:53:52 21:53:52  INFO   loaded 112 plant talents across 4 stages
+2026-10-12 09:53:52 21:53:52  INFO   loaded 41 nutrition reagent bases
+2026-10-12 09:53:52 21:53:52  INFO   loaded 3 baptize action costs + 10 baptize cap rows
+2026-10-12 09:53:52 21:53:52  INFO   loaded 200 zombie-island levels
+2026-10-12 09:53:52 21:53:52  INFO   loaded 12 zombie-island stages
+2026-10-12 09:53:52 21:53:52  INFO   loaded 22 activity-fuben templates
+2026-10-12 09:53:52 21:53:52  INFO   loaded 390 awake transition rules
+2026-10-12 09:53:52 21:53:52  INFO   loaded 390 awake config rows
+2026-10-12 09:53:52 21:53:52  INFO   template warm-up done (32 tables preloaded)
+2026-10-12 09:53:52 21:53:52  INFO   game server listening on 0.0.0.0:9001
+2026-10-12 09:53:52 21:53:52  INFO   game server listening on 0.0.0.0:8001
+2026-10-12 09:53:52 21:53:52  INFO   game server listening on 0.0.0.0:443
+2026-10-12 09:53:52 21:53:52  WARNING  could not bind game port 80 ([Errno 13] error while attempting to bind on address ('0.0.0.0', 80): [winerror 10013] an attempt was made to access a socket in a way forbidden by its access permissions) - skipping (another program may own it; not fatal)
+2026-10-12 09:53:52 21:53:52  INFO   socket-policy server listening on 0.0.0.0:843
+2026-10-12 09:53:52   GET /loader_p.swf HTTP/1.0 -> 200
+2026-10-12 09:53:52 [admin] 127.0.0.1 - "GET /healthz HTTP/1.0" 200 -
+2026-10-12 09:53:52 21:53:52  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62254) ===
+2026-10-12 09:53:52 21:53:52  INFO   === client disconnected: ('127.0.0.1', 62254) ===
+2026-10-12 09:53:52 21:53:52  INFO   [policy] served policy to ('127.0.0.1', 62255) (req=b'<policy-file-request/>\x00')
+2026-10-12 09:53:52 四项服务已就绪。
+2026-10-12 09:53:52   GET /loader_p.swf?server=127.0.0.1:9001&zoneID=&uin=700000204&skey=ABCDEFGHIJ HTTP/1.1 -> 200
+2026-10-12 09:53:53   GET /config.xml?0.5301990057341754 HTTP/1.1 -> 200
+2026-10-12 09:53:53   GET /fileVer.xml?0.589711963199079 HTTP/1.1 -> 200
+2026-10-12 09:53:53   GET /image/logo.jpg HTTP/1.1 -> 200
+2026-10-12 09:53:53   GET /image/loadingbg.jpg HTTP/1.1 -> 200
+2026-10-12 09:53:53   GET /Game_p_ff6c4bac65e9900e16a61c1c932690b4.swf HTTP/1.1 -> 200
+2026-10-12 09:53:53   GET /Msgcheck_321d6c79802af718b4d60f0da39ba7e4.swf HTTP/1.1 -> 200
+2026-10-12 09:53:53   GET /image/loadingbg2.jpg HTTP/1.1 -> 200
+2026-10-12 09:53:53 21:53:53  INFO   === client connected on PORT 9001 from ('127.0.0.1', 54029) ===
+2026-10-12 09:53:53 21:53:53  INFO   === client disconnected: ('127.0.0.1', 54029) ===
+2026-10-12 09:53:53 21:53:53  INFO   [policy] served policy to ('127.0.0.1', 54030) (req=b'')
+2026-10-12 09:53:53 游戏窗口已居中显示。
+2026-10-12 09:53:54 21:53:54  INFO   === client connected on PORT 9001 from ('127.0.0.1', 54034) ===
+2026-10-12 09:53:54 21:53:54  INFO   === client disconnected: ('127.0.0.1', 54034) ===
+2026-10-12 09:53:54 21:53:54  INFO   [policy] served policy to ('127.0.0.1', 54035) (req=b'')
+2026-10-12 09:53:54   GET /init.xml?v=1791770034890 HTTP/1.1 -> 200
+2026-10-12 09:53:55   GET /asgui.xml?0.9343428760766983?v=0 HTTP/1.1 -> 200
+2026-10-12 09:53:55   GET /swf/resource_64c342244c3d8f16b3c815e5ee133cf8.swf?v=0 HTTP/1.1 -> 200
+2026-10-12 09:53:55   GET /swf/td/loading_4540519d0f4d22fbf0a1e277b3b20812.swf?v=0 HTTP/1.1 -> 200
+2026-10-12 09:53:55   GET /swf/guide/guide_res_6391930dd1a5c645f77387239198f93d.swf?v=0 HTTP/1.1 -> 200
+2026-10-12 09:53:55 21:53:55  INFO   === client connected on PORT 9001 from ('127.0.0.1', 60285) ===
+2026-10-12 09:53:55 21:53:55  INFO   === client disconnected: ('127.0.0.1', 60285) ===
+2026-10-12 09:53:55 21:53:55  INFO   [policy] served policy to ('127.0.0.1', 60286) (req=b'')
+2026-10-12 09:53:56   GET /clientDB.txt HTTP/1.1 -> 200
+2026-10-12 09:53:56   GET /swf/loading/time_tunnel.jpg HTTP/1.1 -> 200
+2026-10-12 09:53:56 21:53:56  INFO   === client connected on PORT 9001 from ('127.0.0.1', 60846) ===
+2026-10-12 09:53:56 21:53:56  INFO   === client disconnected: ('127.0.0.1', 60846) ===
+2026-10-12 09:53:56 21:53:56  INFO   [policy] served policy to ('127.0.0.1', 60847) (req=b'')
+2026-10-12 09:53:56   GET /ModuleAvatarConfig_ceede5b498631ea2c8f56594a9bb8b49.swf HTTP/1.1 -> 200
+2026-10-12 09:53:56   GET /ModuleFont_3643d416703e6f2ef5af884db9645b19.swf HTTP/1.1 -> 200
+2026-10-12 09:53:57 21:53:57  INFO   === client connected on PORT 9001 from ('127.0.0.1', 60853) ===
+2026-10-12 09:53:57 21:53:57  INFO   === client disconnected: ('127.0.0.1', 60853) ===
+2026-10-12 09:53:57 21:53:57  INFO   [policy] served policy to ('127.0.0.1', 60854) (req=b'')
+2026-10-12 09:53:57 21:53:57  INFO   [policy] served policy to ('127.0.0.1', 60855) (req=b'<policy-file-request/>\x00')
+2026-10-12 09:53:57 21:53:57  INFO   === client connected on PORT 9001 from ('127.0.0.1', 60856) ===
+2026-10-12 09:53:57 21:53:57  INFO     (stripped TGW preamble: 'tgw_l7_forward\r\nHost: 127.0.0.1:9001')
+2026-10-12 09:53:58 21:53:58  INFO   === client connected on PORT 9001 from ('127.0.0.1', 56780) ===
+2026-10-12 09:53:58 21:53:58  INFO   === client disconnected: ('127.0.0.1', 56780) ===
+2026-10-12 09:53:58 21:53:58  INFO   [policy] served policy to ('127.0.0.1', 56781) (req=b'')
+2026-10-12 09:53:58 21:53:58  INFO       loaded existing player uin=700000204 name='Denver' level=12 coin=1157117 plants=[1100, 1200, 1300, 1500, 1600, 1800, 3100, 3200, 3300, 3400, 3500, 3600, 4700]
+2026-10-12 09:53:58 21:53:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_CheckOldUser_CS
+2026-10-12 09:53:58 21:53:58  INFO       step 1 -> Cmd_CheckOldUser_SC (new=False, name='Denver')
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_CheckOldUser_SC                    (10 body bytes, 53 total)
+2026-10-12 09:53:58 21:53:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=69 cmdName=PVZ.Cmd.Cmd_Init_CS
+2026-10-12 09:53:58 21:53:58  INFO       step 2 -> Cmd_Init_SC (from save)
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_Init_SC                            (5470 body bytes, 5506 total)
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_Mail_NewMessage_SC                 (4 body bytes, 50 total)
+2026-10-12 09:53:58 21:53:58  INFO       -> PVZ.Cmd.Cmd_PVZPrivilege_SC (12 body bytes)
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_PVZPrivilege_SC                    (12 body bytes, 55 total)
+2026-10-12 09:53:58 21:53:58  INFO       -> PVZ.Cmd.Cmd_VipInfo_SC (6 body bytes)
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_VipInfo_SC                         (6 body bytes, 44 total)
+2026-10-12 09:53:58 21:53:58  INFO       -> PVZ.Cmd.Cmd_Vip_SyncVipInfo_SC (4 body bytes)
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_Vip_SyncVipInfo_SC                 (4 body bytes, 50 total)
+2026-10-12 09:53:58 21:53:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Card_GetPackage_CS
+2026-10-12 09:53:58 21:53:58  INFO       card package: 13 card(s) in collection [(1101, 'Sunflower'), (1201, 'Peashooter'), (1301, 'Wall-nut'), (1501, 'Potato Mine'), (1601, 'Bloomerang'), (1801, 'Bonk Choy'), (3101, 'Bruce Bamboo'), (3201, 'Carrocket'), (3301, 'Explodelion'), (3601, 'Venus Flytrap'), (4701, 'Pomegranate-pult'), (6101, 'Lightning Reed'), (9102, 'Sap-fling')]
+2026-10-12 09:53:58 21:53:58  INFO       -> PVZ.Cmd.Cmd_Card_GetPackage_SC (1415 body bytes)
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_Card_GetPackage_SC                 (1415 body bytes, 1462 total)
+2026-10-12 09:53:58 21:53:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+2026-10-12 09:53:58   GET /swf/guide/guideUI_b1b4995897dfe1e6b878c9a10e8a570b.swf HTTP/1.1 -> 200
+2026-10-12 09:53:58   GET /ModuleGuide_6c1fea95614b0ad8441b123c46fd9bf6.swf HTTP/1.1 -> 200
+2026-10-12 09:53:58   GET /ModuleSecondaryPassword_1647ae7c2a1220dfe3170a6164c92fb8.swf HTTP/1.1 -> 200
+2026-10-12 09:53:58   GET /swf/secondaryPassword/secondaryPasswordUI_c923ad958c15df6f1ba027ecfbefa27d.swf HTTP/1.1 -> 200
+2026-10-12 09:53:58   GET /ModuleSignIn_c959b576cc6fad6a6ee8a6eda9e65c69.swf HTTP/1.1 -> 200
+2026-10-12 09:53:58 21:53:58  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (652 body bytes)
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (652 body bytes, 703 total)
+2026-10-12 09:53:58 21:53:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=28 cmdName=PVZ.Cmd.Cmd_VipInfo_CS
+2026-10-12 09:53:58 21:53:58  INFO       -> PVZ.Cmd.Cmd_VipInfo_SC (6 body bytes)
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_VipInfo_SC                         (6 body bytes, 44 total)
+2026-10-12 09:53:58 21:53:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Arena_GetMyInfo_CS
+2026-10-12 09:53:58 21:53:58  INFO       -> PVZ.Cmd.Cmd_Arena_GetMyInfo_SC (51 body bytes)
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_Arena_GetMyInfo_SC                 (51 body bytes, 97 total)
+2026-10-12 09:53:58 21:53:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Item_GetBagInfo_CS
+2026-10-12 09:53:58   GET /ModuleOfflineReward_863190f12738f85541846534d446fe60.swf HTTP/1.1 -> 200
+2026-10-12 09:53:58   GET /swf/offlineReward/offlineRewardUI_ec5da62ec67fd83419bff0c13277ddc1.swf HTTP/1.1 -> 200
+2026-10-12 09:53:58 21:53:58  INFO       bag info: 67 item stack(s), 0 equipment object(s)
+2026-10-12 09:53:58 21:53:58  INFO       -> PVZ.Cmd.Cmd_Item_GetBagInfo_SC (775 body bytes)
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_Item_GetBagInfo_SC                 (775 body bytes, 822 total)
+2026-10-12 09:53:58 21:53:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_Quest_GetList_CS
+2026-10-12 09:53:58 21:53:58  INFO       main quests: uin=700000204 listed=275
+2026-10-12 09:53:58 21:53:58  INFO       -> PVZ.Cmd.Cmd_Quest_GetList_SC (2571 body bytes)
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_GetList_SC                   (2571 body bytes, 2616 total)
+2026-10-12 09:53:58 21:53:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_DailyQuest_GetInfo_CS
+2026-10-12 09:53:58 21:53:58  INFO       -> PVZ.Cmd.Cmd_DailyQuest_GetInfo_SC (24 body bytes)
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_DailyQuest_GetInfo_SC              (24 body bytes, 73 total)
+2026-10-12 09:53:58 21:53:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_DailyActivity_GetInfo_CS
+2026-10-12 09:53:58 21:53:58  INFO       -> PVZ.Cmd.Cmd_DailyActivity_GetInfo_SC (128 body bytes)
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_DailyActivity_GetInfo_SC           (128 body bytes, 181 total)
+2026-10-12 09:53:58 21:53:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_City_GetBuildingInfo_CS
+2026-10-12 09:53:58 21:53:58  INFO       town buildings: level=12 -> 13 unlocked [10, 20, 30, 80, 110, 130, 140, 150, 190, 230, 240, 250, 280]
+2026-10-12 09:53:58 21:53:58  INFO       -> PVZ.Cmd.Cmd_City_GetBuildingInfo_SC (60 body bytes)
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetBuildingInfo_SC            (60 body bytes, 111 total)
+2026-10-12 09:53:58 21:53:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Flag_GetList_CS
+2026-10-12 09:53:58 21:53:58  INFO       -> PVZ.Cmd.Cmd_Flag_GetList_SC (0 body bytes)
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_Flag_GetList_SC                    (0 body bytes, 43 total)
+2026-10-12 09:53:58 21:53:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=37 cmdName=PVZ.Cmd.Cmd_Lab_GetLabInfo_CS
+2026-10-12 09:53:58 21:53:58  INFO       -> PVZ.Cmd.Cmd_Lab_GetLabInfo_SC (322 body bytes)
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_Lab_GetLabInfo_SC                  (322 body bytes, 368 total)
+2026-10-12 09:53:58 21:53:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_RoleGuildInfo_CS
+2026-10-12 09:53:58 21:53:58  INFO       -> PVZ.Cmd.Cmd_RoleGuildInfo_SC (6 body bytes)
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_RoleGuildInfo_SC                   (6 body bytes, 50 total)
+2026-10-12 09:53:58 21:53:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=30 cmdName=PVZ.Cmd.Cmd_City_Init_CS
+2026-10-12 09:53:58 21:53:58  INFO       -> PVZ.Cmd.Cmd_City_Init_SC (12 body bytes)
+2026-10-12 09:53:58 21:53:58  INFO     -> S2C  PVZ.Cmd.Cmd_City_Init_SC                       (12 body bytes, 52 total)
+2026-10-12 09:53:58 21:53:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_War_GetDeclareWarStat_CS
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_War_GetDeclareWarStat_SC (4 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_War_GetDeclareWarStat_SC           (4 body bytes, 56 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=44 cmdName=PVZ.Cmd.Cmd_Setout_GetSetoutTimes_CS
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_Setout_GetSetoutTimes_SC (10 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_Setout_GetSetoutTimes_SC           (10 body bytes, 62 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Chat_GetHistory_CS
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_Chat_GetHistory_SC (3 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_Chat_GetHistory_SC                 (3 body bytes, 49 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=40 cmdName=PVZ.Cmd.Cmd_Friend_GetBlackList_CS
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_Friend_GetBlackList_SC (0 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_Friend_GetBlackList_SC             (0 body bytes, 50 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=53 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_CS
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC (624 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC  (624 body bytes, 688 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_OnlineReward_GetInfo_CS
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_OnlineReward_GetInfo_SC (150 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_GetInfo_SC            (150 body bytes, 202 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=40 cmdName=PVZ.Cmd.Cmd_PayShop_GetFlagList_CS
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_PayShop_GetFlagList_SC (0 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetFlagList_SC             (0 body bytes, 50 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_PVZPrivilege_CS
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_PVZPrivilege_SC (12 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_PVZPrivilege_SC                    (12 body bytes, 55 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_Fuben_GetChapterInfo_CS
+2026-10-12 09:53:59 21:53:59  INFO       fuben chapters: level=12 -> 3 unlocked (progress-gated)
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_Fuben_GetChapterInfo_SC (30 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_Fuben_GetChapterInfo_SC            (30 body bytes, 81 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_GetLevelRewardInfo_CS
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_GetLevelRewardInfo_SC (2 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_GetLevelRewardInfo_SC              (2 body bytes, 51 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_City_MergeServerFlag_CS
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_City_MergeServerFlag_SC (0 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_City_MergeServerFlag_SC            (0 body bytes, 51 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=37 cmdName=PVZ.Cmd.Cmd_Talent_GetList_CS
+2026-10-12 09:53:59 21:53:59  INFO       talent list stage 1: 35 talents, 11 plants, 11 studied, 0 studiable-now
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_Talent_GetList_SC (464 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_Talent_GetList_SC                  (464 body bytes, 510 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_Puppet_GetInfo_CS
+2026-10-12 09:53:59 21:53:59  INFO       <= Cmd_Puppet_GetInfo_CS data=
+2026-10-12 09:53:59 21:53:59  INFO       傀儡: 0 owned, answering (none)
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_Puppet_GetInfo_SC (0 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_Puppet_GetInfo_SC                  (0 body bytes, 45 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=40 cmdName=PVZ.Cmd.Cmd_Puppet_GetFormation_CS
+2026-10-12 09:53:59 21:53:59  INFO       <= Cmd_Puppet_GetFormation_CS data=
+2026-10-12 09:53:59 21:53:59  INFO       傀儡上阵: (empty)
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_Puppet_GetFormation_SC (12 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_Puppet_GetFormation_SC             (12 body bytes, 62 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=45 cmdName=PVZ.Cmd.Cmd_PayShop_GetDayTicketList_CS
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_PayShop_GetDayTicketList_SC (2 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetDayTicketList_SC        (2 body bytes, 57 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_CS
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_SC (2 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_SC       (2 body bytes, 58 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=53 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_CS
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC (624 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC  (624 body bytes, 688 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_SignIn_GetInfo_CS
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_SignIn_GetInfo_SC (12 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_SignIn_GetInfo_SC                  (12 body bytes, 57 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_OfflineReward_GetInfo_CS
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_OfflineReward_GetInfo_SC (4 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_OfflineReward_GetInfo_SC           (4 body bytes, 56 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_Guide_GetKeys_CS
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_Guide_GetKeys_SC (0 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_Guide_GetKeys_SC                   (0 body bytes, 44 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_SecondPwd_Info_CS
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_SecondPwd_Info_SC (0 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_SecondPwd_Info_SC                  (0 body bytes, 45 total)
+2026-10-12 09:53:59 21:53:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+2026-10-12 09:53:59   GET /swf/city/cityMap_4e3c58894799c010271de762916a9f12.swf HTTP/1.1 -> 200
+2026-10-12 09:53:59   GET /swf/notice/noticeUI_cdacafdb9dba9b417ae71773769ac22e.swf HTTP/1.1 -> 200
+2026-10-12 09:53:59   GET /ModuleCity_6ae7f58df69b0219d32cace8e9ebce1a.swf HTTP/1.1 -> 200
+2026-10-12 09:53:59   GET /ModuleNotice_dc3bf3ae7d1226d4a6447bbfef3761aa.swf HTTP/1.1 -> 200
+2026-10-12 09:53:59   GET /swf/city/cityRes_35bca513e884e3abc6bf53326f4c3035.swf HTTP/1.1 -> 200
+2026-10-12 09:53:59   GET /swf/roleInfo/roleInfoUI_5ca6b31482a1febd3279465061a0ae60.swf HTTP/1.1 -> 200
+2026-10-12 09:53:59   GET /ModuleRoleInfo_6c20d310f9de72f424f071fe0c7d3add.swf HTTP/1.1 -> 200
+2026-10-12 09:53:59   GET /ModuleEntryIcon_cea4251d4d4d42928537cb66d5b17bc5.swf HTTP/1.1 -> 200
+2026-10-12 09:53:59   GET /swf/entryIcon/entryIconUI_b50e6195726029792251be930078b346.swf HTTP/1.1 -> 200
+2026-10-12 09:53:59   GET /ModuleChat_a4c202dcdf4bfd9bbbf32575e7fa35eb.swf HTTP/1.1 -> 200
+2026-10-12 09:53:59   GET /swf/friend/friend_res_06b8a39e4bd0db17ded74e1b1f989ede.swf HTTP/1.1 -> 200
+2026-10-12 09:53:59   GET /ModuleFriend_d9537b842cb86a0512b574a0255bfacb.swf HTTP/1.1 -> 200
+2026-10-12 09:53:59   GET /ModuleQuest_8cf13ef918706d8e94627576116af94c.swf HTTP/1.1 -> 200
+2026-10-12 09:53:59   GET /swf/chat/chatRes_0261482a2672d733f7d47f153618bc64.swf HTTP/1.1 -> 200
+2026-10-12 09:53:59   GET /swf/quest/questUIRes_bed4cac830125a04750fd3d64d44d058.swf HTTP/1.1 -> 200
+2026-10-12 09:53:59 21:53:59  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (652 body bytes)
+2026-10-12 09:53:59 21:53:59  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (652 body bytes, 703 total)
+2026-10-12 09:53:59 21:53:59  INFO   === client connected on PORT 9001 from ('127.0.0.1', 63332) ===
+2026-10-12 09:53:59 21:53:59  INFO   === client disconnected: ('127.0.0.1', 63332) ===
+2026-10-12 09:53:59 21:53:59  INFO   [policy] served policy to ('127.0.0.1', 63333) (req=b'')
+2026-10-12 09:53:59 21:53:59  INFO   === client connected on PORT 9001 from ('127.0.0.1', 52040) ===
+2026-10-12 09:53:59 21:53:59  INFO   === client disconnected: ('127.0.0.1', 52040) ===
+2026-10-12 09:53:59 21:53:59  INFO   [policy] served policy to ('127.0.0.1', 52041) (req=b'')
+2026-10-12 09:54:01 21:54:01  INFO   === client connected on PORT 9001 from ('127.0.0.1', 60921) ===
+2026-10-12 09:54:01 21:54:01  INFO   === client disconnected: ('127.0.0.1', 60921) ===
+2026-10-12 09:54:01 21:54:01  INFO   [policy] served policy to ('127.0.0.1', 60922) (req=b'')
+2026-10-12 09:54:02 21:54:02  INFO   === client connected on PORT 9001 from ('127.0.0.1', 60927) ===
+2026-10-12 09:54:02 21:54:02  INFO   === client disconnected: ('127.0.0.1', 60927) ===
+2026-10-12 09:54:02 21:54:02  INFO   [policy] served policy to ('127.0.0.1', 60928) (req=b'')
+2026-10-12 09:54:02 21:54:02  INFO   === client connected on PORT 9001 from ('127.0.0.1', 63560) ===
+2026-10-12 09:54:02 21:54:02  INFO   === client disconnected: ('127.0.0.1', 63560) ===
+2026-10-12 09:54:02 21:54:02  INFO   [policy] served policy to ('127.0.0.1', 63561) (req=b'')
+2026-10-12 09:54:04 21:54:04  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55908) ===
+2026-10-12 09:54:04 21:54:04  INFO   === client disconnected: ('127.0.0.1', 55908) ===
+2026-10-12 09:54:04 21:54:04  INFO   [policy] served policy to ('127.0.0.1', 55909) (req=b'')
+2026-10-12 09:54:04 21:54:04  INFO   === client connected on PORT 9001 from ('127.0.0.1', 53939) ===
+2026-10-12 09:54:04 21:54:04  INFO   === client disconnected: ('127.0.0.1', 53939) ===
+2026-10-12 09:54:04 21:54:04  INFO   [policy] served policy to ('127.0.0.1', 53940) (req=b'')
+2026-10-12 09:54:05 21:54:05  INFO   === client connected on PORT 9001 from ('127.0.0.1', 60457) ===
+2026-10-12 09:54:05 21:54:05  INFO   === client disconnected: ('127.0.0.1', 60457) ===
+2026-10-12 09:54:05 21:54:05  INFO   [policy] served policy to ('127.0.0.1', 60458) (req=b'')
+2026-10-12 09:54:06 21:54:06  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Notice_GetRollList_CS
+2026-10-12 09:54:06 21:54:06  INFO       -> PVZ.Cmd.Cmd_Notice_GetRollList_SC (79 body bytes)
+2026-10-12 09:54:06 21:54:06  INFO     -> S2C  PVZ.Cmd.Cmd_Notice_GetRollList_SC              (79 body bytes, 128 total)
+2026-10-12 09:54:06 21:54:06  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=38 cmdName=PVZ.Cmd.Cmd_Notice_GetSysList_CS
+2026-10-12 09:54:06 21:54:06  INFO       -> PVZ.Cmd.Cmd_Notice_GetSysList_SC (139 body bytes)
+2026-10-12 09:54:06 21:54:06  INFO     -> S2C  PVZ.Cmd.Cmd_Notice_GetSysList_SC               (139 body bytes, 188 total)
+2026-10-12 09:54:06 21:54:06  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=57 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+2026-10-12 09:54:06 21:54:06  INFO       -> PVZ.Cmd.FlexibleActivity_1001 (111 body bytes)
+2026-10-12 09:54:06 21:54:06  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1001                  (111 body bytes, 156 total)
+2026-10-12 09:54:06 21:54:06  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=57 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+2026-10-12 09:54:06 21:54:06  INFO       -> PVZ.Cmd.FlexibleActivity_1001 (111 body bytes)
+2026-10-12 09:54:06 21:54:06  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1001                  (111 body bytes, 156 total)
+2026-10-12 09:54:06 21:54:06  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+2026-10-12 09:54:06 21:54:06  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+2026-10-12 09:54:06 21:54:06  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+2026-10-12 09:54:06 21:54:06  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+2026-10-12 09:54:06 21:54:06  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+2026-10-12 09:54:06 21:54:06  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+2026-10-12 09:54:06 21:54:06  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+2026-10-12 09:54:06 21:54:06  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+2026-10-12 09:54:06 21:54:06  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+2026-10-12 09:54:06 21:54:06  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+2026-10-12 09:54:06 21:54:06  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+2026-10-12 09:54:06 21:54:06  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+2026-10-12 09:54:06 21:54:06  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_GetClientData_CS
+2026-10-12 09:54:06 21:54:06  INFO       -> PVZ.Cmd.Cmd_GetClientData_SC (4 body bytes)
+2026-10-12 09:54:06 21:54:06  INFO     -> S2C  PVZ.Cmd.Cmd_GetClientData_SC                   (4 body bytes, 48 total)
+2026-10-12 09:54:06 21:54:06  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_City_GetTownDurability_CS
+2026-10-12 09:54:06 21:54:06  INFO       -> PVZ.Cmd.Cmd_City_GetTownDurability_SC (6 body bytes)
+2026-10-12 09:54:06 21:54:06  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetTownDurability_SC          (6 body bytes, 59 total)
+2026-10-12 09:54:06 21:54:06  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=38 cmdName=PVZ.Cmd.Cmd_TD_GetStageInfo_CS
+2026-10-12 09:54:06 21:54:06  INFO       TD stage info: stage=2 passed=[(1, 1, 1, [10]), (2, 1, 1, [10])] gates=[] totalStars=2
+2026-10-12 09:54:06 21:54:06  INFO       -> PVZ.Cmd.Cmd_TD_GetStageInfo_SC (20 body bytes)
+2026-10-12 09:54:06 21:54:06  INFO     -> S2C  PVZ.Cmd.Cmd_TD_GetStageInfo_SC                 (20 body bytes, 66 total)
+2026-10-12 09:54:06 21:54:06  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_War_GetSimpleHistory_CS
+2026-10-12 09:54:06 21:54:06  INFO       -> PVZ.Cmd.Cmd_War_GetSimpleHistory_SC (0 body bytes)
+2026-10-12 09:54:06 21:54:06  INFO     -> S2C  PVZ.Cmd.Cmd_War_GetSimpleHistory_SC            (0 body bytes, 51 total)
+2026-10-12 09:54:06   GET /swf/luckystar/luckystarUI_2d226ea31060b2e33021996b9c7f72ac.swf HTTP/1.1 -> 200
+2026-10-12 09:54:06   GET /swf/shop/shopUI_1f931bc2ebc1bd9b849d96a02a735b21.swf HTTP/1.1 -> 200
+2026-10-12 09:54:06   GET /ModuleLuckyStar_f4c62b83a11f78ce43e00d68c92d6889.swf HTTP/1.1 -> 200
+2026-10-12 09:54:06   GET /swf/friend/friend_list_bg.png HTTP/1.1 -> 200
+2026-10-12 09:54:06   GET /image/head/custom/700000204_05b7b2334336f4562e5bd763063c83a951a478eed81b415a9ed48441e4c6b544.png HTTP/1.1 -> 200
+2026-10-12 09:54:06   GET /ModuleSound_53f2087668722600f61190a7ef42fb88.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07 21:54:07  INFO   === client connected on PORT 9001 from ('127.0.0.1', 49708) ===
+2026-10-12 09:54:07 21:54:07  INFO   === client disconnected: ('127.0.0.1', 49708) ===
+2026-10-12 09:54:07 21:54:07  INFO   [policy] served policy to ('127.0.0.1', 49709) (req=b'')
+2026-10-12 09:54:07   GET /swf/activity/dodgeAndCat_6901d4eca3ccf7e9785dca243698529c.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /ModuleWelfareHall_a087401d4b3414aa911050e89685a336.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/welfareHall/welfareHallUI_ed790eb8512674add4bf50ab3ccdb0bf.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /ModuleDodgeAndCat_84f4869a8856cbe38429e1a012fc6299.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/chat/btnBBS_up.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/chat/btnChooseChannel_over.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/chat/btnChooseChannel_down.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/chat/btnBBS_down.png HTTP/1.1 -> 200
+2026-10-12 09:54:07 21:54:07  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Welfare_DailyActivity_CS
+2026-10-12 09:54:07 21:54:07  INFO       -> PVZ.Cmd.Cmd_Welfare_DailyActivity_SC (4605 body bytes)
+2026-10-12 09:54:07 21:54:07  INFO     -> S2C  PVZ.Cmd.Cmd_Welfare_DailyActivity_SC           (4605 body bytes, 4658 total)
+2026-10-12 09:54:07   GET /swf/mapinfo/minict_cell.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/chat/btn_down_42e229e4908f545000d32be1ddc59224.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07 21:54:07  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55911) ===
+2026-10-12 09:54:07 21:54:07  INFO   === client disconnected: ('127.0.0.1', 55911) ===
+2026-10-12 09:54:07 21:54:07  INFO   [policy] served policy to ('127.0.0.1', 55912) (req=b'')
+2026-10-12 09:54:07   GET /swf/chat/btn_enter_48404201c72e25f82434a41f39349e88.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/chat/chatHornBg.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/chat/chatWorldBg.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/chat/inputBg.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/chat/btn_face_b3022e712c88129597ff3523a574c9eb.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/chat/channelAlertFlag.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/chat/chatBgBig.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/chat/btnChooseChannel_up.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/city/building240_5673c0a499dd0bc101178f0efa9c922b.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/city/building280_1cb474186c868c1cd00df12714b35f0f.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/city/building250_b4c640e866b08e65d6317962baee79bd.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07 21:54:07  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_TopFight_TopN_CS
+2026-10-12 09:54:07 21:54:07  INFO       -> PVZ.Cmd.Cmd_TopFight_TopN_SC (4 body bytes)
+2026-10-12 09:54:07 21:54:07  INFO     -> S2C  PVZ.Cmd.Cmd_TopFight_TopN_SC                   (4 body bytes, 48 total)
+2026-10-12 09:54:07   GET /swf/city/building190_4db2aa4b7d4f7883d44c82b988b3a49d.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/city/building130_ee5d759565b0f76105e109ec3a0dd997.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/city/building140_d3927856eca969011e369760f92f8407.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/city/building230_791b4f7ccc839acc7ae71db7ee405caf.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/city/building150_5673c0a499dd0bc101178f0efa9c922b.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/city/building110_132f3fb31c696a2dd50c9f1a6f26838b.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/city/building10_81d7d232d0d93d09749dc25677bab738.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/city/building80_80612d3ecf28a1d7c677118ca4f90717.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/city/building30_8523afc14ddb08dcbbefe557ca2e8878.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/city/new_btn_to_illustrations_f6a7da0d530eecb0c6fd9a0ed152f37a.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/city/new_btn_to_friend_1339545b32d70ece45912dc8393c491b.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/activity/promotionFlag_7e7a0845408a825dfe2d2c92871e2834.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/city/new_btn_to_fuben_a38509dcee8f6a48abdd42bba44d4a95.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/city/new_btn_to_shop_72b442432829c293d3590bd75505baf4.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/city/new_btn_to_quest_e0007549d1a31148cd28555306f198c4.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/city/new_btn_to_bag_61fec0d7eab99bb4cc6376a87a00591d.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/activity/everyDayIcons/11_36a823ac33169a3ccf869dd3a7d4e9b7.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/activity/everyDayIcons/1009_c54cc38832cc8414a1bbea9305298e92.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/city/new_btn_to_mail_b1b26579fa7c1a03fe339095855b3aaf.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/activity/everyDayIcons/1012_6d64ada23a179f4e50d7c494c689f475.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/activity/icons/13_ddac7c0995bfb8d6c6f292a66469a794.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/activity/everyDayIcons/1017_1c187acc3647fa56f1461c67f2c7efad.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/friend/icon_my_line_rect1.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/activity/icons/11_2ad5ea776194d63827c1dfd22c309089.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/friend/icon_friend_line_rect1.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/friend/lv_back.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/friend/friend_newMsg_icon.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/friend/friend_alert_off.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/roleInfo/month_can_and_ungot_7df0f075aa5617765593f107129673da.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/friend/page_bg.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/friend/search_back.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/roleInfo/secondary_password.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/roleInfo/castle2.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /image/arena/s1001.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/activity/icons/10002_e9bbc678781efbc95f5414f78d36fd8a.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /image/notice/rollNoticeBg.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /ModuleEmbattle_b6d756e73b063e4402dafc6cab66f75d.swf HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /image/head/unknow.png HTTP/1.1 -> 200
+2026-10-12 09:54:07   GET /swf/welfareHall/npc/highWallnut_7ee6a9ecb862e706ddeddc11c883e4fd.bbone HTTP/1.1 -> 200
+2026-10-12 09:54:08 21:54:08  INFO   === client connected on PORT 9001 from ('127.0.0.1', 61480) ===
+2026-10-12 09:54:08 21:54:08  INFO   === client disconnected: ('127.0.0.1', 61480) ===
+2026-10-12 09:54:08 21:54:08  INFO   [policy] served policy to ('127.0.0.1', 61481) (req=b'')
+2026-10-12 09:54:09 21:54:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+2026-10-12 09:54:09   GET /swf/battle/animation/unit/peashooter_26d19d93d0695d0f7276cb43ae891a91.bbone HTTP/1.1 -> 200
+2026-10-12 09:54:09   GET /swf/battle/animation/unit/electricGrass_61214d48b878fdda182994c9c428c04a.bbone HTTP/1.1 -> 200
+2026-10-12 09:54:09   GET /swf/battle/animation/unit/wallnut_6046f670bd6bb152c3f6de9260df2417.bbone HTTP/1.1 -> 200
+2026-10-12 09:54:09   GET /swf/battle/animation/effect/dummyBase_f81c274695d88aa05ce62b26b4951936.bbone HTTP/1.1 -> 200
+2026-10-12 09:54:09 21:54:09  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (652 body bytes)
+2026-10-12 09:54:09 21:54:09  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (652 body bytes, 703 total)
+2026-10-12 09:54:09 21:54:09  INFO   === client connected on PORT 9001 from ('127.0.0.1', 61489) ===
+2026-10-12 09:54:09 21:54:09  INFO   === client disconnected: ('127.0.0.1', 61489) ===
+2026-10-12 09:54:09 21:54:09  INFO   [policy] served policy to ('127.0.0.1', 61490) (req=b'')
+2026-10-12 09:54:09 21:54:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:54:09 21:54:09  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:54:09 21:54:09  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:54:09 21:54:09  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_City_GetBuildingEvent_CS
+2026-10-12 09:54:09 21:54:09  INFO       -> PVZ.Cmd.Cmd_City_GetBuildingEvent_SC (0 body bytes)
+2026-10-12 09:54:09 21:54:09  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetBuildingEvent_SC           (0 body bytes, 52 total)
+2026-10-12 09:54:09   GET /swf/battle/animation/unit/flycatcher_d45a3df72390609081d734e4cd20411f.bbone HTTP/1.1 -> 200
+2026-10-12 09:54:09   GET /swf/battle/animation/unit/sunflower_137be76fe85aa0ca5e22fd4f3f92f070.bbone HTTP/1.1 -> 200
+2026-10-12 09:54:09   GET /swf/battle/animation/unit/sapling_ffbea5d361f27b22a7fcd6ff9bc56e68.bbone HTTP/1.1 -> 200
+2026-10-12 09:54:10   GET /sound/city/bg4.mp3 HTTP/1.1 -> 200
+2026-10-12 09:54:10 21:54:10  INFO   === client connected on PORT 9001 from ('127.0.0.1', 60796) ===
+2026-10-12 09:54:10 21:54:10  INFO   === client disconnected: ('127.0.0.1', 60796) ===
+2026-10-12 09:54:10 21:54:10  INFO   [policy] served policy to ('127.0.0.1', 60797) (req=b'')
+2026-10-12 09:54:11 21:54:11  INFO   === client connected on PORT 9001 from ('127.0.0.1', 49211) ===
+2026-10-12 09:54:11 21:54:11  INFO   === client disconnected: ('127.0.0.1', 49211) ===
+2026-10-12 09:54:11 21:54:11  INFO   [policy] served policy to ('127.0.0.1', 49212) (req=b'')
+2026-10-12 09:54:11   GET /swf/roleInfo/month_can_and_ungot_7df0f075aa5617765593f107129673da.swf HTTP/1.1 -> 200
+2026-10-12 09:54:11   GET /ModuleBattleCardMarket_21b9ede042fd511eae74dc5b9cbb5db2.swf HTTP/1.1 -> 200
+2026-10-12 09:54:11   GET /swf/roleInfo/secondary_password.png HTTP/1.1 -> 200
+2026-10-12 09:54:11   GET /swf/cardMarket/battleCardMarketUI_c68204f8735d50c9b8581b1f80df4e59.swf HTTP/1.1 -> 200
+2026-10-12 09:54:11   GET /image/head/custom/700000204_05b7b2334336f4562e5bd763063c83a951a478eed81b415a9ed48441e4c6b544.png HTTP/1.1 -> 200
+2026-10-12 09:54:11   GET /swf/roleInfo/castle2.png HTTP/1.1 -> 200
+2026-10-12 09:54:11   GET /swf/chat/chatBgSmall.png HTTP/1.1 -> 200
+2026-10-12 09:54:11   GET /image/arena/s1001.png HTTP/1.1 -> 200
+2026-10-12 09:54:11   GET /swf/chat/btn_up_879e2a070812fad8d9e604983f313d05.swf HTTP/1.1 -> 200
+2026-10-12 09:54:12 21:54:12  INFO   === client connected on PORT 9001 from ('127.0.0.1', 49225) ===
+2026-10-12 09:54:12 21:54:12  INFO   === client disconnected: ('127.0.0.1', 49225) ===
+2026-10-12 09:54:12 21:54:12  INFO   [policy] served policy to ('127.0.0.1', 49226) (req=b'')
+2026-10-12 09:54:12 21:54:12  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Card_GetMarketInfo_CS
+2026-10-12 09:54:12 21:54:12  INFO       -> PVZ.Cmd.Cmd_Card_GetMarketInfo_SC (28 body bytes)
+2026-10-12 09:54:12 21:54:12  INFO     -> S2C  PVZ.Cmd.Cmd_Card_GetMarketInfo_SC              (28 body bytes, 77 total)
+2026-10-12 09:54:12   GET /swf/city/btn_to_city_232fb10a43a095dcda6489e1882b0a18.swf HTTP/1.1 -> 200
+2026-10-12 09:54:12   GET /swf/city/btn_to_exchangeCard_22b56938e3ccf786db798a66b84ab968.swf HTTP/1.1 -> 200
+2026-10-12 09:54:12   GET /swf/city/btn_to_card_lib_d861cadb36c6970caa855de6640a749f.swf HTTP/1.1 -> 200
+2026-10-12 09:54:12   GET /swf/cardMarket/battleCardMarket_ad34c0af8ef43ba822e54cfdbf861f5d.swf HTTP/1.1 -> 200
+2026-10-12 09:54:12 21:54:12  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:54:12 21:54:12  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:54:12 21:54:12  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:54:13 21:54:13  INFO   === client connected on PORT 9001 from ('127.0.0.1', 51918) ===
+2026-10-12 09:54:13 21:54:13  INFO   === client disconnected: ('127.0.0.1', 51918) ===
+2026-10-12 09:54:13 21:54:13  INFO   [policy] served policy to ('127.0.0.1', 51919) (req=b'')
+2026-10-12 09:54:13   GET /image/battleCard/luckygrass.png HTTP/1.1 -> 200
+2026-10-12 09:54:13   GET /image/item/2003.png HTTP/1.1 -> 200
+2026-10-12 09:54:13   GET /image/battleCard/clock.png HTTP/1.1 -> 200
+2026-10-12 09:54:14 21:54:14  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_Card_Extract_CS
+2026-10-12 09:54:14 21:54:14  INFO       card extract group 1: 1 rewards, 1 plants, 1 purchased beans
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Item_Update_SC (10 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Item_Update_SC                     (10 body bytes, 52 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Card_SyncFullInfo_SC (93 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Card_SyncFullInfo_SC               (93 body bytes, 141 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Card_Extract_SC (29 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Card_Extract_SC                    (29 body bytes, 72 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:14 21:54:14  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:14 21:54:14  INFO   === client connected on PORT 9001 from ('127.0.0.1', 64425) ===
+2026-10-12 09:54:14 21:54:14  INFO   === client disconnected: ('127.0.0.1', 64425) ===
+2026-10-12 09:54:14 21:54:14  INFO   [policy] served policy to ('127.0.0.1', 64426) (req=b'')
+2026-10-12 09:54:14 21:54:14  INFO   === client connected on PORT 9001 from ('127.0.0.1', 50180) ===
+2026-10-12 09:54:14 21:54:14  INFO   === client disconnected: ('127.0.0.1', 50180) ===
+2026-10-12 09:54:14 21:54:14  INFO   [policy] served policy to ('127.0.0.1', 50181) (req=b'')
+2026-10-12 09:54:15 21:54:15  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:54:15 21:54:15  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:54:15 21:54:15  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:54:16 21:54:16  INFO   === client connected on PORT 9001 from ('127.0.0.1', 52716) ===
+2026-10-12 09:54:16 21:54:16  INFO   === client disconnected: ('127.0.0.1', 52716) ===
+2026-10-12 09:54:16 21:54:16  INFO   [policy] served policy to ('127.0.0.1', 52717) (req=b'')
+2026-10-12 09:54:16   GET /swf/icons/card/card_icon_620_005094b96296d611b0b743567b866952.swf HTTP/1.1 -> 200
+2026-10-12 09:54:17 21:54:17  INFO   === client connected on PORT 9001 from ('127.0.0.1', 52722) ===
+2026-10-12 09:54:17 21:54:17  INFO   === client disconnected: ('127.0.0.1', 52722) ===
+2026-10-12 09:54:17 21:54:17  INFO   [policy] served policy to ('127.0.0.1', 52723) (req=b'')
+2026-10-12 09:54:17 21:54:17  INFO   === client connected on PORT 9001 from ('127.0.0.1', 60411) ===
+2026-10-12 09:54:17 21:54:17  INFO   === client disconnected: ('127.0.0.1', 60411) ===
+2026-10-12 09:54:17 21:54:17  INFO   [policy] served policy to ('127.0.0.1', 60412) (req=b'')
+2026-10-12 09:54:18 21:54:18  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:54:18 21:54:18  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:54:18 21:54:18  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:54:19 21:54:19  INFO   === client connected on PORT 9001 from ('127.0.0.1', 56993) ===
+2026-10-12 09:54:19 21:54:19  INFO   === client disconnected: ('127.0.0.1', 56993) ===
+2026-10-12 09:54:19 21:54:19  INFO   [policy] served policy to ('127.0.0.1', 56994) (req=b'')
+2026-10-12 09:54:19 21:54:19  INFO   === client connected on PORT 9001 from ('127.0.0.1', 56998) ===
+2026-10-12 09:54:19 21:54:19  INFO   === client disconnected: ('127.0.0.1', 56998) ===
+2026-10-12 09:54:19 21:54:19  INFO   [policy] served policy to ('127.0.0.1', 56999) (req=b'')
+2026-10-12 09:54:20 21:54:20  INFO   === client connected on PORT 9001 from ('127.0.0.1', 64618) ===
+2026-10-12 09:54:20 21:54:20  INFO   === client disconnected: ('127.0.0.1', 64618) ===
+2026-10-12 09:54:20 21:54:20  INFO   [policy] served policy to ('127.0.0.1', 64619) (req=b'')
+2026-10-12 09:54:21 21:54:21  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:54:22 21:54:21  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:54:22 21:54:22  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:54:22 21:54:22  INFO   === client connected on PORT 9001 from ('127.0.0.1', 64623) ===
+2026-10-12 09:54:22 21:54:22  INFO   === client disconnected: ('127.0.0.1', 64623) ===
+2026-10-12 09:54:22 21:54:22  INFO   [policy] served policy to ('127.0.0.1', 64624) (req=b'')
+2026-10-12 09:54:22 21:54:22  INFO   === client connected on PORT 9001 from ('127.0.0.1', 63932) ===
+2026-10-12 09:54:22 21:54:22  INFO   === client disconnected: ('127.0.0.1', 63932) ===
+2026-10-12 09:54:22 21:54:22  INFO   [policy] served policy to ('127.0.0.1', 63933) (req=b'')
+2026-10-12 09:54:23 21:54:23  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62848) ===
+2026-10-12 09:54:23 21:54:23  INFO   === client disconnected: ('127.0.0.1', 62848) ===
+2026-10-12 09:54:23 21:54:23  INFO   [policy] served policy to ('127.0.0.1', 62849) (req=b'')
+2026-10-12 09:54:24 21:54:24  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55864) ===
+2026-10-12 09:54:24 21:54:24  INFO   === client disconnected: ('127.0.0.1', 55864) ===
+2026-10-12 09:54:24 21:54:24  INFO   [policy] served policy to ('127.0.0.1', 55865) (req=b'')
+2026-10-12 09:54:25 21:54:25  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:54:25 21:54:25  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:54:25 21:54:25  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:54:25 21:54:25  INFO   === client connected on PORT 9001 from ('127.0.0.1', 59915) ===
+2026-10-12 09:54:25 21:54:25  INFO   === client disconnected: ('127.0.0.1', 59915) ===
+2026-10-12 09:54:25 21:54:25  INFO   [policy] served policy to ('127.0.0.1', 59916) (req=b'')
+2026-10-12 09:54:26 21:54:26  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62004) ===
+2026-10-12 09:54:26 21:54:26  INFO   === client disconnected: ('127.0.0.1', 62004) ===
+2026-10-12 09:54:26 21:54:26  INFO   [policy] served policy to ('127.0.0.1', 62005) (req=b'')
+2026-10-12 09:54:27 21:54:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_Card_Extract_CS
+2026-10-12 09:54:27 21:54:27  INFO       card extract group 3: 5 rewards, 1 plants, 0 purchased beans
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Item_Update_SC (32 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Item_Update_SC                     (32 body bytes, 74 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Card_SyncFullInfo_SC (91 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Card_SyncFullInfo_SC               (91 body bytes, 139 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Card_Extract_SC (50 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Card_Extract_SC                    (50 body bytes, 93 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO       -> PVZ.Cmd.Cmd_Quest_SyncState_SC (11 body bytes)
+2026-10-12 09:54:27 21:54:27  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_SyncState_SC                 (11 body bytes, 57 total)
+2026-10-12 09:54:27 21:54:27  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62009) ===
+2026-10-12 09:54:27 21:54:27  INFO   === client disconnected: ('127.0.0.1', 62009) ===
+2026-10-12 09:54:27 21:54:27  INFO   [policy] served policy to ('127.0.0.1', 62010) (req=b'')
+2026-10-12 09:54:28 21:54:28  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62947) ===
+2026-10-12 09:54:28 21:54:28  INFO   === client disconnected: ('127.0.0.1', 62947) ===
+2026-10-12 09:54:28 21:54:28  INFO   [policy] served policy to ('127.0.0.1', 62948) (req=b'')
+2026-10-12 09:54:28 21:54:28  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:54:28 21:54:28  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:54:28 21:54:28  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:54:29   GET /image/item/55800.png HTTP/1.1 -> 200
+2026-10-12 09:54:29   GET /image/item/2131.png HTTP/1.1 -> 200
+2026-10-12 09:54:29   GET /image/item/2016.png HTTP/1.1 -> 200
+2026-10-12 09:54:29   GET /swf/icons/card/card_icon_70_2ed1eb9d08cbf2a4879bc0b8b7501def.swf HTTP/1.1 -> 200
+2026-10-12 09:54:29 21:54:29  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62956) ===
+2026-10-12 09:54:29 21:54:29  INFO   === client disconnected: ('127.0.0.1', 62956) ===
+2026-10-12 09:54:29 21:54:29  INFO   [policy] served policy to ('127.0.0.1', 62957) (req=b'')
+2026-10-12 09:54:29 21:54:29  INFO   === client connected on PORT 9001 from ('127.0.0.1', 58092) ===
+2026-10-12 09:54:29 21:54:29  INFO   === client disconnected: ('127.0.0.1', 58092) ===
+2026-10-12 09:54:29 21:54:29  INFO   [policy] served policy to ('127.0.0.1', 58093) (req=b'')
+2026-10-12 09:54:31 21:54:31  INFO   === client connected on PORT 9001 from ('127.0.0.1', 65239) ===
+2026-10-12 09:54:31 21:54:31  INFO   === client disconnected: ('127.0.0.1', 65239) ===
+2026-10-12 09:54:31 21:54:31  INFO   [policy] served policy to ('127.0.0.1', 65240) (req=b'')
+2026-10-12 09:54:31 21:54:31  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:54:31 21:54:31  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:54:31 21:54:31  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:54:32 21:54:32  INFO   === client connected on PORT 9001 from ('127.0.0.1', 56329) ===
+2026-10-12 09:54:32 21:54:32  INFO   === client disconnected: ('127.0.0.1', 56329) ===
+2026-10-12 09:54:32 21:54:32  INFO   [policy] served policy to ('127.0.0.1', 56330) (req=b'')
+2026-10-12 09:54:32 21:54:32  INFO   === client connected on PORT 9001 from ('127.0.0.1', 65508) ===
+2026-10-12 09:54:32 21:54:32  INFO   === client disconnected: ('127.0.0.1', 65508) ===
+2026-10-12 09:54:32 21:54:32  INFO   [policy] served policy to ('127.0.0.1', 65509) (req=b'')
+2026-10-12 09:54:34 21:54:34  INFO   === client connected on PORT 9001 from ('127.0.0.1', 50919) ===
+2026-10-12 09:54:34 21:54:34  INFO   === client disconnected: ('127.0.0.1', 50919) ===
+2026-10-12 09:54:34 21:54:34  INFO   [policy] served policy to ('127.0.0.1', 50920) (req=b'')
+2026-10-12 09:54:34 21:54:34  INFO   === client connected on PORT 9001 from ('127.0.0.1', 50924) ===
+2026-10-12 09:54:34 21:54:34  INFO   === client disconnected: ('127.0.0.1', 50924) ===
+2026-10-12 09:54:34 21:54:34  INFO   [policy] served policy to ('127.0.0.1', 50925) (req=b'')
+2026-10-12 09:54:34 21:54:34  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:54:34 21:54:34  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:54:34 21:54:34  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:54:35 21:54:35  INFO   === client connected on PORT 9001 from ('127.0.0.1', 50002) ===
+2026-10-12 09:54:35 21:54:35  INFO   === client disconnected: ('127.0.0.1', 50002) ===
+2026-10-12 09:54:35 21:54:35  INFO   [policy] served policy to ('127.0.0.1', 50003) (req=b'')
+2026-10-12 09:54:37 21:54:37  INFO   === client connected on PORT 9001 from ('127.0.0.1', 52320) ===
+2026-10-12 09:54:37 21:54:37  INFO   === client disconnected: ('127.0.0.1', 52320) ===
+2026-10-12 09:54:37 21:54:37  INFO   [policy] served policy to ('127.0.0.1', 52321) (req=b'')
+2026-10-12 09:54:37 21:54:37  INFO   === client connected on PORT 9001 from ('127.0.0.1', 53956) ===
+2026-10-12 09:54:37 21:54:37  INFO   === client disconnected: ('127.0.0.1', 53956) ===
+2026-10-12 09:54:37 21:54:37  INFO   [policy] served policy to ('127.0.0.1', 53957) (req=b'')
+2026-10-12 09:54:37 21:54:37  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:54:37 21:54:37  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:54:37 21:54:37  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:54:38 21:54:38  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62379) ===
+2026-10-12 09:54:38 21:54:38  INFO   === client disconnected: ('127.0.0.1', 62379) ===
+2026-10-12 09:54:38 21:54:38  INFO   [policy] served policy to ('127.0.0.1', 62380) (req=b'')
+2026-10-12 09:54:39 21:54:39  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62385) ===
+2026-10-12 09:54:39 21:54:39  INFO   === client disconnected: ('127.0.0.1', 62385) ===
+2026-10-12 09:54:39 21:54:39  INFO   [policy] served policy to ('127.0.0.1', 62386) (req=b'')
+2026-10-12 09:54:40 21:54:40  INFO   === client connected on PORT 9001 from ('127.0.0.1', 59638) ===
+2026-10-12 09:54:40 21:54:40  INFO   === client disconnected: ('127.0.0.1', 59638) ===
+2026-10-12 09:54:40 21:54:40  INFO   [policy] served policy to ('127.0.0.1', 59639) (req=b'')
+2026-10-12 09:54:40 21:54:40  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:54:40 21:54:40  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:54:40 21:54:40  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:54:41 21:54:41  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55697) ===
+2026-10-12 09:54:41 21:54:41  INFO   === client disconnected: ('127.0.0.1', 55697) ===
+2026-10-12 09:54:41 21:54:41  INFO   [policy] served policy to ('127.0.0.1', 55698) (req=b'')
+2026-10-12 09:54:42 21:54:42  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55702) ===
+2026-10-12 09:54:42 21:54:42  INFO   === client disconnected: ('127.0.0.1', 55702) ===
+2026-10-12 09:54:42 21:54:42  INFO   [policy] served policy to ('127.0.0.1', 55703) (req=b'')
+2026-10-12 09:54:43 21:54:43  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55772) ===
+2026-10-12 09:54:43 21:54:43  INFO   === client disconnected: ('127.0.0.1', 55772) ===
+2026-10-12 09:54:43 21:54:43  INFO   [policy] served policy to ('127.0.0.1', 55773) (req=b'')
+2026-10-12 09:54:43 21:54:43  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:54:43 21:54:43  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:54:43 21:54:43  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:54:44 21:54:44  INFO   === client connected on PORT 9001 from ('127.0.0.1', 54461) ===
+2026-10-12 09:54:44 21:54:44  INFO   === client disconnected: ('127.0.0.1', 54461) ===
+2026-10-12 09:54:44 21:54:44  INFO   [policy] served policy to ('127.0.0.1', 54462) (req=b'')
+2026-10-12 09:54:44 21:54:44  INFO   === client connected on PORT 9001 from ('127.0.0.1', 63054) ===
+2026-10-12 09:54:44 21:54:44  INFO   === client disconnected: ('127.0.0.1', 63054) ===
+2026-10-12 09:54:44 21:54:44  INFO   [policy] served policy to ('127.0.0.1', 63055) (req=b'')
+2026-10-12 09:54:46 21:54:46  INFO   === client connected on PORT 9001 from ('127.0.0.1', 53857) ===
+2026-10-12 09:54:46 21:54:46  INFO   === client disconnected: ('127.0.0.1', 53857) ===
+2026-10-12 09:54:46 21:54:46  INFO   [policy] served policy to ('127.0.0.1', 53858) (req=b'')
+2026-10-12 09:54:46 21:54:46  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:54:46 21:54:46  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:54:46 21:54:46  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:54:47 21:54:47  INFO   === client connected on PORT 9001 from ('127.0.0.1', 53862) ===
+2026-10-12 09:54:47 21:54:47  INFO   === client disconnected: ('127.0.0.1', 53862) ===
+2026-10-12 09:54:47 21:54:47  INFO   [policy] served policy to ('127.0.0.1', 53863) (req=b'')
+2026-10-12 09:54:47 21:54:47  INFO   === client connected on PORT 9001 from ('127.0.0.1', 57030) ===
+2026-10-12 09:54:47 21:54:47  INFO   === client disconnected: ('127.0.0.1', 57030) ===
+2026-10-12 09:54:47 21:54:47  INFO   [policy] served policy to ('127.0.0.1', 57031) (req=b'')
+2026-10-12 09:54:49 21:54:49  INFO   === client connected on PORT 9001 from ('127.0.0.1', 58851) ===
+2026-10-12 09:54:49 21:54:49  INFO   === client disconnected: ('127.0.0.1', 58851) ===
+2026-10-12 09:54:49 21:54:49  INFO   [policy] served policy to ('127.0.0.1', 58852) (req=b'')
+2026-10-12 09:54:49 21:54:49  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55745) ===
+2026-10-12 09:54:49 21:54:49  INFO   === client disconnected: ('127.0.0.1', 55745) ===
+2026-10-12 09:54:49 21:54:49  INFO   [policy] served policy to ('127.0.0.1', 55746) (req=b'')
+2026-10-12 09:54:49 21:54:49  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:54:49 21:54:49  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:54:49 21:54:49  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:54:50 21:54:50  INFO   === client connected on PORT 9001 from ('127.0.0.1', 63854) ===
+2026-10-12 09:54:50 21:54:50  INFO   === client disconnected: ('127.0.0.1', 63854) ===
+2026-10-12 09:54:50 21:54:50  INFO   [policy] served policy to ('127.0.0.1', 63855) (req=b'')
+2026-10-12 09:54:52 21:54:52  INFO   === client connected on PORT 9001 from ('127.0.0.1', 52090) ===
+2026-10-12 09:54:52 21:54:52  INFO   === client disconnected: ('127.0.0.1', 52090) ===
+2026-10-12 09:54:52 21:54:52  INFO   [policy] served policy to ('127.0.0.1', 52091) (req=b'')
+2026-10-12 09:54:52 21:54:52  INFO   === client connected on PORT 9001 from ('127.0.0.1', 63279) ===
+2026-10-12 09:54:52 21:54:52  INFO   === client disconnected: ('127.0.0.1', 63279) ===
+2026-10-12 09:54:52 21:54:52  INFO   [policy] served policy to ('127.0.0.1', 63280) (req=b'')
+2026-10-12 09:54:53 21:54:53  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:54:53 21:54:53  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:54:53 21:54:53  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:54:53 21:54:53  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+2026-10-12 09:54:53 21:54:53  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (652 body bytes)
+2026-10-12 09:54:53 21:54:53  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (652 body bytes, 703 total)
+2026-10-12 09:54:53 21:54:53  INFO   === client connected on PORT 9001 from ('127.0.0.1', 57689) ===
+2026-10-12 09:54:53 21:54:53  INFO   === client disconnected: ('127.0.0.1', 57689) ===
+2026-10-12 09:54:53 21:54:53  INFO   [policy] served policy to ('127.0.0.1', 57690) (req=b'')
+2026-10-12 09:54:53 21:54:53  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+2026-10-12 09:54:53 21:54:53  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+2026-10-12 09:54:53 21:54:53  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+2026-10-12 09:54:53 21:54:53  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+2026-10-12 09:54:53 21:54:53  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+2026-10-12 09:54:53 21:54:53  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+2026-10-12 09:54:53 21:54:53  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_City_GetTownDurability_CS
+2026-10-12 09:54:53 21:54:53  INFO       -> PVZ.Cmd.Cmd_City_GetTownDurability_SC (6 body bytes)
+2026-10-12 09:54:53 21:54:53  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetTownDurability_SC          (6 body bytes, 59 total)
+2026-10-12 09:54:53 21:54:53  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=38 cmdName=PVZ.Cmd.Cmd_TD_GetStageInfo_CS
+2026-10-12 09:54:53 21:54:53  INFO       TD stage info: stage=2 passed=[(1, 1, 1, [10]), (2, 1, 1, [10])] gates=[] totalStars=2
+2026-10-12 09:54:53 21:54:53  INFO       -> PVZ.Cmd.Cmd_TD_GetStageInfo_SC (20 body bytes)
+2026-10-12 09:54:53 21:54:53  INFO     -> S2C  PVZ.Cmd.Cmd_TD_GetStageInfo_SC                 (20 body bytes, 66 total)
+2026-10-12 09:54:54 21:54:54  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Welfare_DailyActivity_CS
+2026-10-12 09:54:54 21:54:54  INFO       -> PVZ.Cmd.Cmd_Welfare_DailyActivity_SC (4605 body bytes)
+2026-10-12 09:54:54 21:54:54  INFO     -> S2C  PVZ.Cmd.Cmd_Welfare_DailyActivity_SC           (4605 body bytes, 4658 total)
+2026-10-12 09:54:54 21:54:54  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_GetClientData_CS
+2026-10-12 09:54:54   GET /swf/friend/icon_my_line_rect1.png HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/friend/friend_newMsg_icon.png HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/friend/lv_back.png HTTP/1.1 -> 200
+2026-10-12 09:54:54 21:54:54  INFO       -> PVZ.Cmd.Cmd_GetClientData_SC (4 body bytes)
+2026-10-12 09:54:54 21:54:54  INFO     -> S2C  PVZ.Cmd.Cmd_GetClientData_SC                   (4 body bytes, 48 total)
+2026-10-12 09:54:54   GET /swf/friend/friend_alert_off.png HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/friend/icon_friend_line_rect1.png HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/activity/everyDayIcons/11_36a823ac33169a3ccf869dd3a7d4e9b7.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/chat/btn_down_42e229e4908f545000d32be1ddc59224.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/friend/page_bg.png HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/friend/search_back.png HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/chat/chatBgBig.png HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/activity/icons/10002_e9bbc678781efbc95f5414f78d36fd8a.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/activity/everyDayIcons/1012_6d64ada23a179f4e50d7c494c689f475.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/activity/everyDayIcons/1009_c54cc38832cc8414a1bbea9305298e92.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/activity/icons/13_ddac7c0995bfb8d6c6f292a66469a794.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/activity/everyDayIcons/1017_1c187acc3647fa56f1461c67f2c7efad.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/activity/icons/11_2ad5ea776194d63827c1dfd22c309089.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/city/building280_1cb474186c868c1cd00df12714b35f0f.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/city/building250_b4c640e866b08e65d6317962baee79bd.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54 21:54:54  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_TopFight_TopN_CS
+2026-10-12 09:54:54 21:54:54  INFO       -> PVZ.Cmd.Cmd_TopFight_TopN_SC (4 body bytes)
+2026-10-12 09:54:54 21:54:54  INFO     -> S2C  PVZ.Cmd.Cmd_TopFight_TopN_SC                   (4 body bytes, 48 total)
+2026-10-12 09:54:54   GET /swf/city/building190_4db2aa4b7d4f7883d44c82b988b3a49d.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/city/building230_791b4f7ccc839acc7ae71db7ee405caf.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/city/building240_5673c0a499dd0bc101178f0efa9c922b.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/city/building140_d3927856eca969011e369760f92f8407.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/city/building150_5673c0a499dd0bc101178f0efa9c922b.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/city/building30_8523afc14ddb08dcbbefe557ca2e8878.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/city/building110_132f3fb31c696a2dd50c9f1a6f26838b.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/city/building80_80612d3ecf28a1d7c677118ca4f90717.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/city/building130_ee5d759565b0f76105e109ec3a0dd997.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/city/building10_81d7d232d0d93d09749dc25677bab738.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/city/new_btn_to_illustrations_f6a7da0d530eecb0c6fd9a0ed152f37a.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/city/new_btn_to_shop_72b442432829c293d3590bd75505baf4.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/city/new_btn_to_fuben_a38509dcee8f6a48abdd42bba44d4a95.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/activity/promotionFlag_7e7a0845408a825dfe2d2c92871e2834.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/city/new_btn_to_quest_e0007549d1a31148cd28555306f198c4.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54 21:54:54  INFO   === client connected on PORT 9001 from ('127.0.0.1', 57728) ===
+2026-10-12 09:54:54 21:54:54  INFO   === client disconnected: ('127.0.0.1', 57728) ===
+2026-10-12 09:54:54 21:54:54  INFO   [policy] served policy to ('127.0.0.1', 57729) (req=b'')
+2026-10-12 09:54:54 21:54:54  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+2026-10-12 09:54:54   GET /swf/city/new_btn_to_friend_1339545b32d70ece45912dc8393c491b.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /image/head/unknow.png HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/city/new_btn_to_mail_b1b26579fa7c1a03fe339095855b3aaf.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54   GET /swf/city/new_btn_to_bag_61fec0d7eab99bb4cc6376a87a00591d.swf HTTP/1.1 -> 200
+2026-10-12 09:54:54 21:54:54  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (652 body bytes)
+2026-10-12 09:54:54 21:54:54  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (652 body bytes, 703 total)
+2026-10-12 09:54:55   GET /sound/city/bg1.mp3 HTTP/1.1 -> 200
+2026-10-12 09:54:55 21:54:55  INFO   === client connected on PORT 9001 from ('127.0.0.1', 52682) ===
+2026-10-12 09:54:55 21:54:55  INFO   === client disconnected: ('127.0.0.1', 52682) ===
+2026-10-12 09:54:55 21:54:55  INFO   [policy] served policy to ('127.0.0.1', 52683) (req=b'')
+2026-10-12 09:54:56 21:54:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:54:56 21:54:56  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:54:56 21:54:56  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:54:56 21:54:56  INFO   === client connected on PORT 9001 from ('127.0.0.1', 57795) ===
+2026-10-12 09:54:56 21:54:56  INFO   === client disconnected: ('127.0.0.1', 57795) ===
+2026-10-12 09:54:56 21:54:56  INFO   [policy] served policy to ('127.0.0.1', 57796) (req=b'')
+2026-10-12 09:54:57 21:54:57  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_City_GetBuildingEvent_CS
+2026-10-12 09:54:57 21:54:57  INFO       -> PVZ.Cmd.Cmd_City_GetBuildingEvent_SC (0 body bytes)
+2026-10-12 09:54:57 21:54:57  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetBuildingEvent_SC           (0 body bytes, 52 total)
+2026-10-12 09:54:57   GET /image/item/2006.png HTTP/1.1 -> 200
+2026-10-12 09:54:57   GET /image/item/2012.png HTTP/1.1 -> 200
+2026-10-12 09:54:57   GET /image/item/2002.png HTTP/1.1 -> 200
+2026-10-12 09:54:57 21:54:57  INFO   === client connected on PORT 9001 from ('127.0.0.1', 57803) ===
+2026-10-12 09:54:57 21:54:57  INFO   === client disconnected: ('127.0.0.1', 57803) ===
+2026-10-12 09:54:57 21:54:57  INFO   [policy] served policy to ('127.0.0.1', 57804) (req=b'')
+2026-10-12 09:54:57 21:54:57  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=44 cmdName=PVZ.Cmd.Cmd_DailyQuest_TakeReward_CS
+2026-10-12 09:54:57 21:54:57  INFO       -> PVZ.Cmd.Cmd_Item_Update_SC (30 body bytes)
+2026-10-12 09:54:57 21:54:57  INFO     -> S2C  PVZ.Cmd.Cmd_Item_Update_SC                     (30 body bytes, 72 total)
+2026-10-12 09:54:57 21:54:57  INFO       -> PVZ.Cmd.Cmd_DailyQuest_Sync_SC (8 body bytes)
+2026-10-12 09:54:57 21:54:57  INFO     -> S2C  PVZ.Cmd.Cmd_DailyQuest_Sync_SC                 (8 body bytes, 54 total)
+2026-10-12 09:54:57 21:54:57  INFO       -> PVZ.Cmd.Cmd_DailyQuest_TakeReward_SC (23 body bytes)
+2026-10-12 09:54:57 21:54:57  INFO     -> S2C  PVZ.Cmd.Cmd_DailyQuest_TakeReward_SC           (23 body bytes, 75 total)
+2026-10-12 09:54:58 21:54:58  INFO   === client connected on PORT 9001 from ('127.0.0.1', 56246) ===
+2026-10-12 09:54:58 21:54:58  INFO   === client disconnected: ('127.0.0.1', 56246) ===
+2026-10-12 09:54:58 21:54:58  INFO   [policy] served policy to ('127.0.0.1', 56247) (req=b'')
+2026-10-12 09:54:59 21:54:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:54:59 21:54:59  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:54:59 21:54:59  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:54:59 21:54:59  INFO   === client connected on PORT 9001 from ('127.0.0.1', 57127) ===
+2026-10-12 09:54:59 21:54:59  INFO   === client disconnected: ('127.0.0.1', 57127) ===
+2026-10-12 09:54:59 21:54:59  INFO   [policy] served policy to ('127.0.0.1', 57128) (req=b'')
+2026-10-12 09:54:59 21:54:59  INFO   === client connected on PORT 9001 from ('127.0.0.1', 54125) ===
+2026-10-12 09:54:59 21:54:59  INFO   === client disconnected: ('127.0.0.1', 54125) ===
+2026-10-12 09:54:59 21:54:59  INFO   [policy] served policy to ('127.0.0.1', 54126) (req=b'')
+2026-10-12 09:55:00   GET /swf/bag/bag_res_76399fcd446b459aa4cfeca7219e7b89.swf HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /ModuleBag_7fa3305508527661a70579e4999903f4.swf HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /swf/bag/bagUseEffect_cd7859573c606441f1325de463295de9.swf HTTP/1.1 -> 200
+2026-10-12 09:55:00   ASSET FALLBACK /swf/bag/tabBtnDown.png -> 1x1 placeholder (source missing)
+2026-10-12 09:55:00   ASSET FALLBACK /swf/bag/tabBtnOver.png -> 1x1 placeholder (source missing)
+2026-10-12 09:55:00   GET /swf/bag/tabBtnDown.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /swf/bag/tabBtnOver.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   ASSET FALLBACK /image/item/ui/borderWhite.png -> 1x1 placeholder (source missing)
+2026-10-12 09:55:00   GET /swf/roleInfo/secondary_password.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/ui/borderWhite.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/51300.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/51200.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/51110.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/ui/qualityNormal_bg.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/51100.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/40003.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/ui/qualityEpic_bg.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/ui/qualityUncommon_bg.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   ITEM ICON FALLBACK /image/item/40004.png -> /image/item/40003.png
+2026-10-12 09:55:00   GET /image/item/40004.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   ITEM ICON FALLBACK /image/item/40002.png -> /image/item/40001.png
+2026-10-12 09:55:00   GET /image/item/40002.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/ui/qualityLegendary.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/ui/qualityRare_bg.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/2131.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/95542.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/40001.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/95537.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/95538.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   ITEM ICON FALLBACK /image/item/95535.png -> /image/item/95537.png
+2026-10-12 09:55:00   ITEM ICON FALLBACK /image/item/95534.png -> /image/item/95532.png
+2026-10-12 09:55:00   GET /image/item/95535.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   ITEM ICON FALLBACK /image/item/95533.png -> /image/item/95532.png
+2026-10-12 09:55:00   GET /image/item/95534.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/95533.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/2016.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/3500.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/2025.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/5112.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/3207.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/2003.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/1045.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/1041.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/211.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/1025.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /swf/bag/tabBtnUp.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /image/item/210.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /swf/bag/tabBtnSelectedDown.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /swf/bag/tabBtnSelectedUp.png HTTP/1.1 -> 200
+2026-10-12 09:55:00   GET /swf/bag/tabBtnSelectedOver.png HTTP/1.1 -> 200
+2026-10-12 09:55:01 21:55:01  INFO   === client connected on PORT 9001 from ('127.0.0.1', 58404) ===
+2026-10-12 09:55:01 21:55:01  INFO   === client disconnected: ('127.0.0.1', 58404) ===
+2026-10-12 09:55:01 21:55:01  INFO   [policy] served policy to ('127.0.0.1', 58405) (req=b'')
+2026-10-12 09:55:02 21:55:02  INFO   === client connected on PORT 9001 from ('127.0.0.1', 58409) ===
+2026-10-12 09:55:02 21:55:02  INFO   === client disconnected: ('127.0.0.1', 58409) ===
+2026-10-12 09:55:02 21:55:02  INFO   [policy] served policy to ('127.0.0.1', 58410) (req=b'')
+2026-10-12 09:55:02 21:55:02  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=37 cmdName=PVZ.Cmd.Cmd_Item_SeeNewItems_CS
+2026-10-12 09:55:02 21:55:02  INFO       -> PVZ.Cmd.Cmd_Item_SeeNewItems_SC (0 body bytes)
+2026-10-12 09:55:02 21:55:02  INFO     -> S2C  PVZ.Cmd.Cmd_Item_SeeNewItems_SC                (0 body bytes, 47 total)
+2026-10-12 09:55:02 21:55:02  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+2026-10-12 09:55:02 21:55:02  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+2026-10-12 09:55:02 21:55:02  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+2026-10-12 09:55:02 21:55:02  INFO   === client connected on PORT 9001 from ('127.0.0.1', 57588) ===
+2026-10-12 09:55:02 21:55:02  INFO   === client disconnected: ('127.0.0.1', 57588) ===
+2026-10-12 09:55:02 21:55:02  INFO   [policy] served policy to ('127.0.0.1', 57589) (req=b'')
+2026-10-12 09:55:03 21:55:03  INFO   === client disconnected: ('127.0.0.1', 60856) ===
+2026-10-12 09:55:03 游戏窗口已关闭，正在停止本次游戏服务。
+2026-10-12 09:55:03 服务已停止
+2026-10-12 09:57:17 服务已停止
