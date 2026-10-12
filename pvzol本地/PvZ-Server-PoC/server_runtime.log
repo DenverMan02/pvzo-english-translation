@@ -404664,3 +404664,668 @@ TypeError: 'tuple' object cannot be interpreted as an integer
 01:05:28  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
 01:05:28  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
 01:05:30  INFO   === client disconnected: ('127.0.0.1', 49220) ===
+05:10:56  INFO   local guild adapter ready (30 core routes)
+05:10:56  INFO   local guild adapter ready (30 core routes)
+05:10:57  INFO   local guild adapter ready (30 core routes)
+05:10:58  INFO   local guild adapter ready (30 core routes)
+05:10:58  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+05:10:58  INFO   loaded skill info for 762 skills
+05:10:58  INFO   local guild adapter ready (30 core routes)
+05:10:58  INFO   loaded 4 garden fertilizer templates
+05:10:58  INFO   loaded 3 VIP tiers
+05:10:58  INFO       garden fertilizer buy: id=1025 item=1025 x1 price=1000
+05:10:58  INFO   loaded 14 garden seeds
+05:10:58  INFO   loaded 10 garden pot upgrade templates
+05:10:58  INFO       garden fertilize: field=1 fertilizer=1025
+05:10:58  INFO       shop buy: shopId=210 item=1009 x1 price=20 gold_only=False
+05:10:58  INFO       garden water: field=1 remaining=9
+05:10:58  INFO       garden pot upgraded: field=1 level=1->2 coin=50000 diamond=0
+05:10:58  INFO       garden harvest: field 1 sunflower +3640 exp (pool=3640, goodwill=0)
+05:10:58  INFO       garden buy pet: uin=700009991 pet=2 forever=True cost=1000 (discount 0%) -> goodwill=51000
+05:10:58  INFO       garden use pet: uin=700009991 pet=2
+05:10:58  INFO   local guild adapter ready (30 core routes)
+05:10:59  INFO   local guild adapter ready (30 core routes)
+05:10:59  INFO   loaded 6 nutrition dieticians
+05:10:59  INFO   loaded 41 nutrition reagent bases
+05:10:59  INFO       nutrition merge: reagent(s) missing src=70000002 dst=70000001 found=1 (uin=899001)
+05:10:59  INFO       nutrition supertrade: costType=1 changeType=3 rolls=20 kept=7 exp=+520 gold=+2
+05:10:59  INFO   local guild adapter ready (30 core routes)
+05:10:59  INFO   loaded 41 nutrition reagent bases
+05:10:59  INFO   loaded 6 nutrition dieticians
+05:10:59  INFO       nutrition supertrade: costType=1 changeType=3 rolls=20 kept=6 exp=+560 gold=+2
+05:10:59  INFO   local guild adapter ready (30 core routes)
+05:11:02  DEBUG  Using selector: EpollSelector
+05:11:02  DEBUG  Using selector: EpollSelector
+05:11:02  DEBUG  Using selector: EpollSelector
+05:11:02  DEBUG  Using selector: EpollSelector
+05:11:19  WARNING      fuben SET formation rejected: duplicate/invalid slot or card
+05:11:19  WARNING      fuben SET formation rejected: duplicate/invalid slot or card
+05:11:19  WARNING      fuben SET formation rejected: duplicate/invalid slot or card
+05:11:19  ERROR  worldmap database operation rolled back
+Traceback (most recent call last):
+  File "/app/pvzol本地/PvZ-Server-PoC/worldmap_local.py", line 1433, in wrapped
+    result = fn(data,player)
+             ^^^^^^^^^^^^^^^
+  File "/app/pvzol本地/PvZ-Server-PoC/worldmap_local.py", line 1272, in fight
+    return self.original_fight(data,player)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/pvzol本地/PvZ-Server-PoC/pvz_poc_server.py", line 8504, in handle_battle_fight
+    if not consume_energy(player, energy_cost):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/pvzol本地/PvZ-Server-PoC/guild_cohesion_repairs.py", line 15, in consume
+    with guild._db() as con:
+         ^^^^^^^^^^^
+  File "/home/jules/.pyenv/versions/3.12.13/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/app/pvzol本地/PvZ-Server-PoC/guild_local.py", line 140, in _db
+    con = sqlite3.connect(_DB_PATH, timeout=10)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: unable to open database file
+05:11:19  ERROR  worldmap database operation rolled back
+Traceback (most recent call last):
+  File "/app/pvzol本地/PvZ-Server-PoC/worldmap_local.py", line 1433, in wrapped
+    result = fn(data,player)
+             ^^^^^^^^^^^^^^^
+  File "/app/pvzol本地/PvZ-Server-PoC/worldmap_local.py", line 1272, in fight
+    return self.original_fight(data,player)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/pvzol本地/PvZ-Server-PoC/pvz_poc_server.py", line 8504, in handle_battle_fight
+    if not consume_energy(player, energy_cost):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/pvzol本地/PvZ-Server-PoC/guild_cohesion_repairs.py", line 15, in consume
+    with guild._db() as con:
+         ^^^^^^^^^^^
+  File "/home/jules/.pyenv/versions/3.12.13/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/app/pvzol本地/PvZ-Server-PoC/guild_local.py", line 140, in _db
+    con = sqlite3.connect(_DB_PATH, timeout=10)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: unable to open database file
+05:11:19  ERROR  worldmap database operation rolled back
+Traceback (most recent call last):
+  File "/app/pvzol本地/PvZ-Server-PoC/worldmap_local.py", line 1433, in wrapped
+    result = fn(data,player)
+             ^^^^^^^^^^^^^^^
+  File "/app/pvzol本地/PvZ-Server-PoC/worldmap_local.py", line 1272, in fight
+    return self.original_fight(data,player)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/pvzol本地/PvZ-Server-PoC/pvz_poc_server.py", line 8504, in handle_battle_fight
+    if not consume_energy(player, energy_cost):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/pvzol本地/PvZ-Server-PoC/guild_cohesion_repairs.py", line 15, in consume
+    with guild._db() as con:
+         ^^^^^^^^^^^
+  File "/home/jules/.pyenv/versions/3.12.13/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/app/pvzol本地/PvZ-Server-PoC/guild_local.py", line 140, in _db
+    con = sqlite3.connect(_DB_PATH, timeout=10)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: unable to open database file
+05:11:19  DEBUG  Using selector: EpollSelector
+05:11:19  DEBUG  Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+05:11:39  WARNING  chest retained: item=3001 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3002 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3003 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3004 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3005 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3006 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3007 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3008 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3009 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3010 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3014 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3015 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3016 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3017 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3018 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3019 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3022 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3023 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3024 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:39  WARNING  chest retained: item=3108 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3320 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3321 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3322 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3323 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3324 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3325 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3326 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3335 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3349 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3350 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3365 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3369 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3384 status=blocked reason=giftPackage and current ItemInfo conflict; original quantities/pool missing
+05:11:40  WARNING  chest retained: item=3385 status=blocked reason=giftPackage and current ItemInfo conflict; original quantities/pool missing
+05:11:40  WARNING  chest retained: item=3386 status=blocked reason=giftPackage and current ItemInfo conflict; original quantities/pool missing
+05:11:40  WARNING  chest retained: item=3387 status=blocked reason=giftPackage and current ItemInfo conflict; original quantities/pool missing
+05:11:40  WARNING  chest retained: item=3388 status=blocked reason=giftPackage and current ItemInfo conflict; original quantities/pool missing
+05:11:40  WARNING  chest retained: item=3389 status=blocked reason=giftPackage and current ItemInfo conflict; original quantities/pool missing
+05:11:40  WARNING  chest retained: item=3390 status=blocked reason=giftPackage and current ItemInfo conflict; original quantities/pool missing
+05:11:40  WARNING  chest retained: item=3400 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3420 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3421 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3422 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3423 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3424 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3425 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3426 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3427 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3429 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:40  WARNING  chest retained: item=3430 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3439 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:40  WARNING  chest retained: item=3440 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3442 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3444 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3445 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3447 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3641 status=probability reason=exact probability and amount from original ItemInfo.txt
+05:11:40  WARNING  chest retained: item=3642 status=probability reason=exact probability and amount from original ItemInfo.txt
+05:11:40  WARNING  chest retained: item=3643 status=probability reason=exact probability and amount from original ItemInfo.txt
+05:11:40  WARNING  chest retained: item=3644 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3645 status=probability reason=exact probability and amount from original ItemInfo.txt
+05:11:40  WARNING  chest retained: item=3646 status=probability reason=exact probability and amount from original ItemInfo.txt
+05:11:40  WARNING  chest retained: item=3647 status=probability reason=exact probability and amount from original ItemInfo.txt
+05:11:40  WARNING  chest retained: item=3648 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3649 status=probability reason=exact probability and amount from original ItemInfo.txt
+05:11:40  WARNING  chest retained: item=3650 status=probability reason=exact probability and amount from original ItemInfo.txt
+05:11:40  WARNING  chest retained: item=3651 status=probability reason=exact probability and amount from original ItemInfo.txt
+05:11:40  WARNING  chest retained: item=3652 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3653 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3654 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3655 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3656 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3657 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:40  WARNING  chest retained: item=3659 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3666 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3681 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3688 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3689 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3691 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3692 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3694 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3695 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3696 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3697 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3698 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3699 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3700 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3721 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3722 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3724 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3725 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3730 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3731 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3732 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3733 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3735 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3736 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3737 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3738 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3739 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3750 status=blocked reason=extra plant probability is unspecified in the original resources
+05:11:41  WARNING  chest retained: item=3751 status=blocked reason=extra plant probability is unspecified in the original resources
+05:11:41  WARNING  chest retained: item=3752 status=blocked reason=extra plant probability is unspecified in the original resources
+05:11:41  WARNING  chest retained: item=3753 status=blocked reason=extra plant probability is unspecified in the original resources
+05:11:41  WARNING  chest retained: item=3754 status=blocked reason=extra plant probability is unspecified in the original resources
+05:11:41  WARNING  chest retained: item=3755 status=blocked reason=extra plant probability is unspecified in the original resources
+05:11:41  WARNING  chest retained: item=3756 status=blocked reason=extra plant probability is unspecified in the original resources
+05:11:41  WARNING  chest retained: item=3757 status=blocked reason=extra plant probability is unspecified in the original resources
+05:11:41  WARNING  chest retained: item=3758 status=blocked reason=extra plant probability is unspecified in the original resources
+05:11:41  WARNING  chest retained: item=3759 status=blocked reason=extra plant probability is unspecified in the original resources
+05:11:41  WARNING  chest retained: item=3760 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3763 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3772 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3773 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3774 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3775 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3776 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3777 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3778 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3779 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3780 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3781 status=blocked reason=giftPackage and current ItemInfo conflict; original quantities/pool missing
+05:11:41  WARNING  chest retained: item=3782 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3783 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3784 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3785 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3786 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3787 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3788 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3789 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3790 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3791 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3792 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3793 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3794 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3795 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3796 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3797 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3798 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3799 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3800 status=fixed reason=giftPackage.txt, or unique exact current ItemInfo correction
+05:11:41  WARNING  chest retained: item=3801 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3802 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3803 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3804 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3805 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3806 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3807 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3808 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3809 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3810 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3811 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3812 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3813 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3814 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3815 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3816 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3817 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3818 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3819 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3820 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3821 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3822 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3823 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3824 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3825 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3826 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3827 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3828 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3829 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3830 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3831 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3832 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3833 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3834 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3835 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3836 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3837 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3838 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3839 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3840 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3841 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3842 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3843 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3844 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3845 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3846 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3847 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3848 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3849 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3850 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3851 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3852 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3853 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3854 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3855 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3856 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3857 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:41  WARNING  chest retained: item=3858 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4003 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4004 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4005 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4006 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4007 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4008 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4010 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4011 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4012 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4013 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4014 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4015 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4016 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4017 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4018 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4019 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4020 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4021 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4025 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4026 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4027 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4028 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4029 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4030 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4031 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4032 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4033 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4034 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4035 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4036 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4037 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4038 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4040 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4041 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4042 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4043 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4044 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4045 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4046 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4048 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4050 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4051 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4052 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4053 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4061 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4062 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4063 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4064 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4065 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4067 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4068 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4069 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4070 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4076 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4078 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4080 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4081 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4082 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4084 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4085 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4086 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4088 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4089 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4090 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4091 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4092 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4093 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4094 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4095 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4097 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4098 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4099 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4100 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4101 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4102 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4103 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4104 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4105 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4106 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4107 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4108 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4109 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4110 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4111 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4112 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4113 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4114 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4115 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4116 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4117 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4118 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4119 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4120 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4121 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4122 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4123 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4124 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4125 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4126 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:42  WARNING  chest retained: item=4127 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=4129 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:11:42  WARNING  chest retained: item=3781 status=blocked reason=giftPackage and current ItemInfo conflict; original quantities/pool missing
+05:11:43  WARNING  chest retained: item=4115 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:43  WARNING  chest retained: item=3447 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:43  WARNING  chest retained: item=3447 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:43  WARNING  chest retained: item=3447 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:43  WARNING  chest retained: item=3447 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:11:43  WARNING  chest retained: item=3754 status=blocked reason=extra plant probability is unspecified in the original resources
+05:11:43  WARNING  chest retained: item=4102 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:12:12  DEBUG  Using selector: EpollSelector
+05:12:14  WARNING      battle SET formation rejected: invalid slot/card/count
+05:12:14  WARNING      battle SET formation rejected: invalid slot/card/count
+05:12:14  WARNING      battle SET formation rejected: invalid slot/card/count
+05:12:14  WARNING      battle SET formation rejected: invalid slot/card/count
+05:12:14  WARNING      battle SET formation rejected: invalid slot/card/count
+05:12:14  WARNING      battle SET formation rejected: invalid slot/card/count
+05:12:14  WARNING  chest retained: item=3447 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:12:14  WARNING  chest retained: item=3447 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:12:14  WARNING  chest retained: item=3447 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:12:14  WARNING  chest retained: item=3447 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:12:14  WARNING  chest retained: item=3447 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:12:15  WARNING  chest retained: item=3641 status=probability reason=exact probability and amount from original ItemInfo.txt
+05:12:19  WARNING  chest retained: item=3105 status=fixed reason=giftPackage.txt, or unique exact current ItemInfo correction
+05:12:19  WARNING  chest retained: item=3105 status=fixed reason=giftPackage.txt, or unique exact current ItemInfo correction
+05:12:19  WARNING  chest retained: item=4091 status=select reason=fourFrameBag.txt: select exactly one authored reward
+05:12:19  WARNING  chest retained: item=3384 status=blocked reason=giftPackage and current ItemInfo conflict; original quantities/pool missing
+05:12:19  WARNING  chest retained: item=3001 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:12:19  WARNING  chest retained: item=3848 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:12:19  WARNING  chest retained: item=4124 status=blocked reason=online reward pool, quantities or probability are absent from original resources
+05:12:22  DEBUG  Using selector: EpollSelector
+05:12:22  DEBUG  Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+05:12:31  INFO   local guild adapter ready (30 core routes)
+05:12:33  DEBUG  Using selector: EpollSelector
+05:12:33  DEBUG  Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+05:12:47  DEBUG  Using selector: EpollSelector
+05:12:47  DEBUG  Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+05:12:54  WARNING  chest retained: item=3336 status=fixed reason=giftPackage.txt, or unique exact current ItemInfo correction
+05:12:56  DEBUG  Using selector: EpollSelector
+05:12:56  DEBUG  Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+05:12:56  DEBUG  Using selector: EpollSelector
+05:12:56  DEBUG  Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+05:12:56  DEBUG  Using selector: EpollSelector
+05:12:56  DEBUG  Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+05:12:56  DEBUG  Using selector: EpollSelector
+05:12:56  DEBUG  Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+05:12:56  DEBUG  Using selector: EpollSelector
+05:12:56  DEBUG  Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+05:13:04  INFO   local guild adapter ready (30 core routes)
+05:13:04  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+05:13:04  INFO   loaded 44 card puzzle stages
+05:13:04  INFO   loaded 1975 card forge templates
+05:13:04  INFO   loaded 1960 card-fruit templates
+05:13:04  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+05:13:04  INFO   loaded prestige evolution: 200 levels, 7 plant types
+05:13:04  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+05:13:04  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+05:13:04  INFO   loaded 617 card avatar templates
+05:13:04  INFO       granted 4 new battle card(s) from owned plants (uin=700009511)
+05:13:04  INFO   loaded 40 lab bottles
+05:13:04  INFO   loaded 999 world-tree levels
+05:13:04  INFO   loaded 3 VIP tiers
+05:13:04  INFO   loaded 傀儡 config: 50 puppets, 120 stages, 225 skill levels
+05:13:04  INFO       fuben GET formation: 1 cards {3: 900001001141} owner_roles={3: 900001}
+05:13:04  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 6/50 friend(s)
+05:13:04  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 6/50 friend(s)
+05:13:04  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 6/50 friend(s)
+05:13:04  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 6/50 friend(s)
+05:44:41  INFO   local guild adapter ready (30 core routes)
+05:44:41  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+05:44:41  INFO   loaded 44 card puzzle stages
+05:44:41  INFO   loaded 1975 card forge templates
+05:44:41  INFO   loaded 1960 card-fruit templates
+05:44:41  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+05:44:41  INFO   loaded prestige evolution: 200 levels, 7 plant types
+05:44:41  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+05:44:41  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+05:44:41  INFO   loaded 617 card avatar templates
+05:44:41  INFO       granted 4 new battle card(s) from owned plants (uin=700009511)
+05:44:41  INFO   loaded 40 lab bottles
+05:44:41  INFO   loaded 999 world-tree levels
+05:44:41  INFO   loaded 3 VIP tiers
+05:44:41  INFO   loaded 傀儡 config: 50 puppets, 120 stages, 225 skill levels
+05:44:41  INFO       fuben GET formation: 1 cards {3: 900001001141} owner_roles={3: 900001}
+05:44:41  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 0/0 friend(s)
+05:44:41  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 0/0 friend(s)
+05:44:41  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 0/0 friend(s)
+05:44:41  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 0/0 friend(s)
+05:47:53  INFO   local guild adapter ready (30 core routes)
+05:47:53  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+05:47:53  INFO   loaded 44 card puzzle stages
+05:47:53  INFO   loaded 1975 card forge templates
+05:47:53  INFO   loaded 1960 card-fruit templates
+05:47:53  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+05:47:53  INFO   loaded prestige evolution: 200 levels, 7 plant types
+05:47:53  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+05:47:53  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+05:47:53  INFO   loaded 617 card avatar templates
+05:47:53  INFO       granted 4 new battle card(s) from owned plants (uin=700009511)
+05:47:53  INFO   loaded 40 lab bottles
+05:47:53  INFO   loaded 999 world-tree levels
+05:47:53  INFO   loaded 3 VIP tiers
+05:47:53  INFO   loaded 傀儡 config: 50 puppets, 120 stages, 225 skill levels
+05:47:53  INFO       fuben GET formation: 1 cards {3: 900001001141} owner_roles={3: 900001}
+05:47:53  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:47:53  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:47:53  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:47:53  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:49:47  INFO   local guild adapter ready (30 core routes)
+05:49:47  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+05:49:47  INFO   loaded 44 card puzzle stages
+05:49:47  INFO   loaded 1975 card forge templates
+05:49:47  INFO   loaded 1960 card-fruit templates
+05:49:47  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+05:49:47  INFO   loaded prestige evolution: 200 levels, 7 plant types
+05:49:47  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+05:49:47  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+05:49:47  INFO   loaded 617 card avatar templates
+05:49:47  INFO       granted 4 new battle card(s) from owned plants (uin=700009511)
+05:49:47  INFO   loaded 40 lab bottles
+05:49:47  INFO   loaded 999 world-tree levels
+05:49:47  INFO   loaded 3 VIP tiers
+05:49:47  INFO   loaded 傀儡 config: 50 puppets, 120 stages, 225 skill levels
+05:49:47  INFO       fuben GET formation: 1 cards {3: 900001001141} owner_roles={3: 900001}
+05:49:47  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:49:47  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:49:47  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:49:47  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:53:11  INFO   local guild adapter ready (30 core routes)
+05:53:11  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+05:53:11  INFO   loaded 44 card puzzle stages
+05:53:11  INFO   loaded 1975 card forge templates
+05:53:11  INFO   loaded 1960 card-fruit templates
+05:53:11  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+05:53:11  INFO   loaded prestige evolution: 200 levels, 7 plant types
+05:53:11  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+05:53:11  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+05:53:11  INFO   loaded 617 card avatar templates
+05:53:11  INFO       granted 4 new battle card(s) from owned plants (uin=700009511)
+05:53:11  INFO   loaded 40 lab bottles
+05:53:11  INFO   loaded 999 world-tree levels
+05:53:11  INFO   loaded 3 VIP tiers
+05:53:11  INFO   loaded 傀儡 config: 50 puppets, 120 stages, 225 skill levels
+05:53:11  INFO       fuben GET formation: 1 cards {3: 900001001141} owner_roles={3: 900001}
+05:53:11  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:53:11  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:53:11  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:53:11  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:54:52  INFO   local guild adapter ready (30 core routes)
+05:54:52  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+05:54:52  INFO   loaded 44 card puzzle stages
+05:54:52  INFO   loaded 1975 card forge templates
+05:54:52  INFO   loaded 1960 card-fruit templates
+05:54:52  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+05:54:52  INFO   loaded prestige evolution: 200 levels, 7 plant types
+05:54:52  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+05:54:52  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+05:54:52  INFO   loaded 617 card avatar templates
+05:54:52  INFO       granted 4 new battle card(s) from owned plants (uin=700009511)
+05:54:52  INFO   loaded 40 lab bottles
+05:54:52  INFO   loaded 999 world-tree levels
+05:54:52  INFO   loaded 3 VIP tiers
+05:54:52  INFO   loaded 傀儡 config: 50 puppets, 120 stages, 225 skill levels
+05:54:52  INFO       fuben GET formation: 1 cards {3: 900001001141} owner_roles={3: 900001}
+05:54:52  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:54:52  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:54:52  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:54:52  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:59:31  INFO   local guild adapter ready (30 core routes)
+05:59:31  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+05:59:31  INFO   loaded 44 card puzzle stages
+05:59:31  INFO   loaded 1975 card forge templates
+05:59:31  INFO   loaded 1960 card-fruit templates
+05:59:31  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+05:59:31  INFO   loaded prestige evolution: 200 levels, 7 plant types
+05:59:31  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+05:59:32  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+05:59:32  INFO   loaded 617 card avatar templates
+05:59:32  INFO       granted 4 new battle card(s) from owned plants (uin=700009511)
+05:59:32  INFO   loaded 40 lab bottles
+05:59:32  INFO   loaded 999 world-tree levels
+05:59:32  INFO   loaded 3 VIP tiers
+05:59:32  INFO   loaded 傀儡 config: 50 puppets, 120 stages, 225 skill levels
+05:59:32  INFO       fuben GET formation: 1 cards {3: 900001001141} owner_roles={3: 900001}
+05:59:32  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:59:32  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:59:32  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+05:59:32  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+06:01:03  INFO   local guild adapter ready (30 core routes)
+06:14:03  INFO   local guild adapter ready (30 core routes)
+06:17:29  INFO   local guild adapter ready (30 core routes)
+06:19:13  INFO   local guild adapter ready (30 core routes)
+06:19:13  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 0/0 friend(s)
+06:27:29  INFO   local guild adapter ready (30 core routes)
+06:29:13  INFO   local guild adapter ready (30 core routes)
+06:29:13  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 0/0 friend(s)
+06:30:47  INFO   local guild adapter ready (30 core routes)
+06:30:47  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+06:30:47  INFO   loaded 44 card puzzle stages
+06:30:47  INFO   loaded 1975 card forge templates
+06:30:47  INFO   loaded 1960 card-fruit templates
+06:30:47  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+06:30:47  INFO   loaded prestige evolution: 200 levels, 7 plant types
+06:30:47  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+06:30:47  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+06:30:47  INFO   loaded 617 card avatar templates
+06:30:47  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 0/0 friend(s)
+06:30:47  INFO       granted 4 new battle card(s) from owned plants (uin=700009511)
+06:30:47  INFO   loaded 40 lab bottles
+06:30:47  INFO   loaded 999 world-tree levels
+06:30:47  INFO   loaded 3 VIP tiers
+06:30:47  INFO   loaded 傀儡 config: 50 puppets, 120 stages, 225 skill levels
+06:30:47  INFO       fuben GET formation: 1 cards {3: 900001001141} owner_roles={3: 900001}
+06:30:47  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+06:30:47  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+06:30:47  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+06:30:47  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+06:34:24  INFO   local guild adapter ready (30 core routes)
+06:34:24  INFO   local guild adapter ready (30 core routes)
+06:34:24  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+06:34:24  INFO   loaded 44 card puzzle stages
+06:34:24  INFO   loaded 1975 card forge templates
+06:34:24  INFO   loaded 1960 card-fruit templates
+06:34:25  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+06:34:25  INFO   loaded prestige evolution: 200 levels, 7 plant types
+06:34:25  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+06:34:25  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+06:34:25  INFO   loaded 617 card avatar templates
+06:34:25  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 0/0 friend(s)
+06:34:25  INFO       granted 4 new battle card(s) from owned plants (uin=700009511)
+06:34:25  INFO   loaded 40 lab bottles
+06:34:25  INFO   loaded 999 world-tree levels
+06:34:25  INFO   loaded 3 VIP tiers
+06:34:25  INFO   loaded 傀儡 config: 50 puppets, 120 stages, 225 skill levels
+06:34:25  INFO       fuben GET formation: 1 cards {3: 900001001141} owner_roles={3: 900001}
+06:34:25  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+06:34:25  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+06:34:25  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+06:34:25  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+06:34:25  INFO   loaded card level curve (300 levels)
+06:35:54  INFO   local guild adapter ready (30 core routes)
+06:40:38  INFO   local guild adapter ready (30 core routes)
+06:42:18  INFO   local guild adapter ready (30 core routes)
+06:42:18  INFO   local guild adapter ready (30 core routes)
+06:42:18  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+06:42:18  INFO   loaded 44 card puzzle stages
+06:42:18  INFO   loaded 1975 card forge templates
+06:42:18  INFO   loaded 1960 card-fruit templates
+06:42:18  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+06:42:18  INFO   loaded prestige evolution: 200 levels, 7 plant types
+06:42:18  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+06:42:18  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+06:42:18  INFO   loaded 617 card avatar templates
+06:42:18  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 0/0 friend(s)
+06:42:18  INFO       granted 4 new battle card(s) from owned plants (uin=700009511)
+06:42:18  INFO   loaded 40 lab bottles
+06:42:18  INFO   loaded 999 world-tree levels
+06:42:18  INFO   loaded 3 VIP tiers
+06:42:18  INFO   loaded 傀儡 config: 50 puppets, 120 stages, 225 skill levels
+06:42:18  INFO       fuben GET formation: 1 cards {3: 900001001141} owner_roles={3: 900001}
+06:42:18  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+06:42:18  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+06:42:18  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+06:42:18  INFO       friend list: moduleType=5 friendType=0 page=0 (size=6) -> 1/1 friend(s)
+06:42:19  INFO   loaded card level curve (300 levels)

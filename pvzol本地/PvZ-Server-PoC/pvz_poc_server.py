@@ -11641,26 +11641,6 @@ def handle_friend_getlist(cmd_data, player):
     raw_page_size = int(f.get(4) or 0)
     page_size = raw_page_size if 0 < raw_page_size <= FRIEND_WIDGET_MAX else FRIEND_WIDGET_MAX
     friends = list(store.get_friends(player["uin"]))
-    # 注入人机好友：让每位玩家的好友列表里都出现 AI 同伴（永远在线、可借卡）。
-    # 借出的卡就是该人机在用的最强植物（真实等级 + 它的养成投入），而不是固定的豌豆射手 Lv.1：
-    # 之前每个人机都塞 help_plant_id=1200/level=1，所以"冒险好友卡植物太弱且普通"。
-    try:
-        for _b in bots_local.bots():
-            _card_id, _card_level, _owner_uin = friend_best_card(_b["uin"]) or (0, 1, 0)
-            _td_id = int((_BATTLE_CARDS.get(_card_id) or {}).get("tdId") or 0) if _card_id else 0
-            friends.append({
-                "friend_role_id": _b["uin"],
-                "friend_name": _b["name"],
-                "help_plant_id": _td_id or 1200,      # 借用卡的 TD 植物（= 该人机最强卡）
-                "help_plant_level": max(1, int(_card_level or 1)),
-                "friend_level": int(_b.get("level") or 1),
-                "diamond_flag": 1,
-                "diamond_blue_lvl": 0,
-                "diamond_yellow_lvl": 0,
-                "diamond_xinyue_lvl": 0,
-            })
-    except Exception:
-        log.exception("injecting bot friends failed")
     friends = social_repairs.visible_friends(player["uin"], friends)
     total = len(friends)
     start = page * page_size
@@ -11908,7 +11888,17 @@ def build_friend_info_dto(fr, index=1):
     if not plant_id:
         plant_id = int((_BATTLE_CARDS.get(cid) or {}).get("tdId") or 0) or 1200
     # roleLevel is cosmetic here; prefer the friend's account level when the row carries one.
-    role_level = int(fr.get("friend_level") or 0) or plant_level
+    role_level = int(fr.get("friend_level") or 0)
+    if not role_level and 'bots_local' in globals():
+        bot = next((b for b in bots_local.bots() if int(b["uin"]) == role_id), None)
+        if bot:
+            role_level = int(bot.get("level") or 0)
+    if not role_level:
+        target = store.get_player_by_role_id(role_id)
+        if target:
+            role_level = int(target.get("level") or 0)
+    if not role_level:
+        role_level = plant_level
     # The same help_uid is echoed by Cmd_Fuben_GetFormation_SC for a borrowed
     # position; BattleLineupModel indexes friends by helpPlant.base.uid.
     help_plant = build_card_full_info(help_uid, cid, plant_level, st)

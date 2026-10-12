@@ -93,7 +93,8 @@ class FriendshipFreeClaimTests(unittest.TestCase):
         self.assertEqual(self.free_info(self.now + 300, logged_in_again), (2, 0))
 
     def test_midnight_resets_exhausted_count_and_previous_day_cooldown(self):
-        midnight = int(time.mktime(time.strptime("20261011", "%Y%m%d")))
+        # 2026-10-11 00:00:00 UTC+8 = 1791648000
+        midnight = 1791648000
         store.save_player(
             self.uin, card_market_friend_day="20261010",
             card_market_friend_free_used=3,

@@ -105,7 +105,14 @@ def install(g):
     route('DeleteEnergyInfo',delete)
     old=g.REQUEST_HANDLERS['PVZ.Cmd.Cmd_Friend_GetList_CS']
     def friend_list(data,p):
-        body=old(data,p);st=counters(p);fields=mf._fields(body);out=b''
+        raw=old(data,p)
+        if isinstance(raw, list) and raw:
+            body = raw[0][1] if isinstance(raw[0], (tuple, list)) else raw[0]
+        elif isinstance(raw, tuple) and raw:
+            body = raw[1]
+        else:
+            body = raw
+        st=counters(p);fields=mf._fields(body);out=b''
         for key,values in fields.items():
             if key in (9,12):continue
             for wire,value in values:
@@ -118,7 +125,12 @@ def install(g):
                     status=3|(8 if t and st['present']<20 and role not in st['sent'] and giftable(p,t) else 0)
                     value=dto+v(10,status)
                 out+=v(key,value) if wire==0 else m(key,value)
-        return out+v(9,20-st['present'])+v(12,10-st['take'])
+        out += v(9,20-st['present'])+v(12,10-st['take'])
+        if isinstance(raw, list):
+            return [('PVZ.Cmd.Cmd_Friend_GetList_SC', out)] + raw[1:]
+        elif isinstance(raw, tuple):
+            return ('PVZ.Cmd.Cmd_Friend_GetList_SC', out)
+        return out
     route('GetList',friend_list)
     g.REQUEST_HANDLERS.update(routes)
     return routes
