@@ -413357,3 +413357,452 @@ sqlite3.OperationalError: unable to open database file
 18:28:06  INFO   === client disconnected: ('127.0.0.1', 61747) ===
 18:28:06  INFO   [policy] served policy to ('127.0.0.1', 61748) (req=b'')
 18:28:07  INFO   === client disconnected: ('127.0.0.1', 61530) ===
+18:34:41  INFO   local guild adapter ready (30 core routes)
+18:34:41  DEBUG  Using selector: SelectSelector
+18:34:41  INFO   player store: C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\PvZ-Server-PoC\players.db
+18:34:41  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+18:34:41  INFO   loaded 40 lab bottles
+18:34:41  INFO   loaded 999 world-tree levels
+18:34:41  INFO   loaded 3 VIP tiers
+18:34:41  INFO   loaded 傀儡 config: 50 puppets, 120 stages, 225 skill levels
+18:34:41  INFO   loaded 44 card puzzle stages
+18:34:41  INFO   loaded 1960 card-fruit templates
+18:34:41  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+18:34:41  INFO   loaded prestige evolution: 200 levels, 7 plant types
+18:34:41  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+18:34:41  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+18:34:41  INFO   loaded 617 card avatar templates
+18:34:41  INFO   loaded 1975 card forge templates
+18:34:43  INFO   bots: 50 slots, 0 opponents generated
+18:34:43  INFO   bot autonomy loop started (interval=120s)
+18:34:43  INFO   loaded 254 TD level reward templates from clientDB
+18:34:43  INFO   loaded 25 usable TD laboratory material ids: (40001, 40003, 40004, 40005, 40006, 40007, 40009, 40010, 40011, 40012, 40013, 40015, 40016, 40017, 40018, 40019, 40021, 40022, 40023, 40024, 40025, 40027, 40028, 40029, 40030)
+18:34:43  INFO   loaded 200 role-level exp thresholds
+18:34:43  INFO   loaded 2023 item sell templates
+18:34:43  INFO   loaded 23 town buildings
+18:34:43  INFO   loaded 32 fuben chapters
+18:34:43  INFO   loaded fuben stages for 92 chapter/mode combos
+18:34:43  INFO   loaded 10 energy-buy tiers
+18:34:43  INFO   loaded energyMax for 200 role levels
+18:34:43  INFO   loaded 35 card forge chance entries
+18:34:43  INFO   loaded 78 card recruit recipes
+18:34:43  INFO   loaded 12 card avatar forge types
+18:34:43  INFO   loaded 112 plant talents across 4 stages
+18:34:43  INFO   loaded 41 nutrition reagent bases
+18:34:43  INFO   loaded 3 baptize action costs + 10 baptize cap rows
+18:34:43  INFO   loaded 200 zombie-island levels
+18:34:43  INFO   loaded 12 zombie-island stages
+18:34:43  INFO   loaded 22 activity-fuben templates
+18:34:43  INFO   loaded 390 awake transition rules
+18:34:43  INFO   loaded 390 awake config rows
+18:34:43  INFO   template warm-up done (32 tables preloaded)
+18:34:43  INFO   game server listening on 0.0.0.0:9001
+18:34:43  INFO   game server listening on 0.0.0.0:8001
+18:34:43  INFO   game server listening on 0.0.0.0:443
+18:34:43  WARNING  could not bind game port 80 ([Errno 13] error while attempting to bind on address ('0.0.0.0', 80): [winerror 10013] an attempt was made to access a socket in a way forbidden by its access permissions) - skipping (another program may own it; not fatal)
+18:34:43  INFO   socket-policy server listening on 0.0.0.0:843
+18:34:44  INFO   [policy] served policy to ('127.0.0.1', 50220) (req=b'<policy-file-request/>\x00')
+18:34:44  INFO   === client connected on PORT 9001 from ('127.0.0.1', 50223) ===
+18:34:44  INFO   === client disconnected: ('127.0.0.1', 50223) ===
+18:34:44  INFO   [policy] served policy to ('127.0.0.1', 50224) (req=b'<policy-file-request/>\x00')
+18:34:44  INFO   === client connected on PORT 9001 from ('127.0.0.1', 49210) ===
+18:34:44  INFO   === client disconnected: ('127.0.0.1', 49210) ===
+18:34:44  INFO   [policy] served policy to ('127.0.0.1', 49211) (req=b'')
+18:34:45  INFO   === client connected on PORT 9001 from ('127.0.0.1', 49227) ===
+18:34:45  INFO   === client disconnected: ('127.0.0.1', 49227) ===
+18:34:45  INFO   [policy] served policy to ('127.0.0.1', 49228) (req=b'')
+18:34:46  INFO   === client connected on PORT 9001 from ('127.0.0.1', 63203) ===
+18:34:46  INFO   === client disconnected: ('127.0.0.1', 63203) ===
+18:34:46  INFO   [policy] served policy to ('127.0.0.1', 63204) (req=b'')
+18:34:47  INFO   === client connected on PORT 9001 from ('127.0.0.1', 53365) ===
+18:34:47  INFO   === client disconnected: ('127.0.0.1', 53365) ===
+18:34:47  INFO   [policy] served policy to ('127.0.0.1', 53366) (req=b'')
+18:34:47  INFO   === client connected on PORT 9001 from ('127.0.0.1', 53370) ===
+18:34:47  INFO   === client disconnected: ('127.0.0.1', 53370) ===
+18:34:47  INFO   [policy] served policy to ('127.0.0.1', 53371) (req=b'')
+18:34:49  INFO   === client connected on PORT 9001 from ('127.0.0.1', 60532) ===
+18:34:49  INFO   === client disconnected: ('127.0.0.1', 60532) ===
+18:34:49  INFO   [policy] served policy to ('127.0.0.1', 60533) (req=b'')
+18:34:50  INFO   === client connected on PORT 9001 from ('127.0.0.1', 61653) ===
+18:34:50  INFO   === client disconnected: ('127.0.0.1', 61653) ===
+18:34:50  INFO   [policy] served policy to ('127.0.0.1', 61654) (req=b'')
+18:34:50  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55825) ===
+18:34:50  INFO   === client disconnected: ('127.0.0.1', 55825) ===
+18:34:50  INFO   [policy] served policy to ('127.0.0.1', 55826) (req=b'')
+18:34:52  INFO   === client connected on PORT 9001 from ('127.0.0.1', 53909) ===
+18:34:52  INFO   === client disconnected: ('127.0.0.1', 53909) ===
+18:34:52  INFO   [policy] served policy to ('127.0.0.1', 53910) (req=b'')
+18:34:52  INFO   === client connected on PORT 9001 from ('127.0.0.1', 53914) ===
+18:34:52  INFO   === client disconnected: ('127.0.0.1', 53914) ===
+18:34:52  INFO   [policy] served policy to ('127.0.0.1', 53915) (req=b'')
+18:34:53  INFO   === client connected on PORT 9001 from ('127.0.0.1', 59603) ===
+18:34:53  INFO   === client disconnected: ('127.0.0.1', 59603) ===
+18:34:53  INFO   [policy] served policy to ('127.0.0.1', 59604) (req=b'')
+18:34:55  INFO   === client connected on PORT 9001 from ('127.0.0.1', 59125) ===
+18:34:55  INFO   === client disconnected: ('127.0.0.1', 59125) ===
+18:34:55  INFO   [policy] served policy to ('127.0.0.1', 59126) (req=b'')
+18:34:55  INFO   === client connected on PORT 9001 from ('127.0.0.1', 59130) ===
+18:34:55  INFO   === client disconnected: ('127.0.0.1', 59130) ===
+18:34:55  INFO   [policy] served policy to ('127.0.0.1', 59131) (req=b'')
+18:34:56  INFO   === client connected on PORT 9001 from ('127.0.0.1', 53703) ===
+18:34:56  INFO   === client disconnected: ('127.0.0.1', 53703) ===
+18:34:56  INFO   [policy] served policy to ('127.0.0.1', 53704) (req=b'')
+18:34:57  INFO   === client connected on PORT 9001 from ('127.0.0.1', 53708) ===
+18:34:57  INFO   === client disconnected: ('127.0.0.1', 53708) ===
+18:34:57  INFO   [policy] served policy to ('127.0.0.1', 53709) (req=b'')
+18:34:58  INFO   === client connected on PORT 9001 from ('127.0.0.1', 51556) ===
+18:34:58  INFO   === client disconnected: ('127.0.0.1', 51556) ===
+18:34:58  INFO   [policy] served policy to ('127.0.0.1', 51557) (req=b'')
+18:34:59  INFO   === client connected on PORT 9001 from ('127.0.0.1', 58226) ===
+18:34:59  INFO   === client disconnected: ('127.0.0.1', 58226) ===
+18:34:59  INFO   [policy] served policy to ('127.0.0.1', 58227) (req=b'')
+18:35:00  INFO   === client connected on PORT 9001 from ('127.0.0.1', 58231) ===
+18:35:00  INFO   === client disconnected: ('127.0.0.1', 58231) ===
+18:35:00  INFO   [policy] served policy to ('127.0.0.1', 58232) (req=b'')
+18:35:01  INFO   === client connected on PORT 9001 from ('127.0.0.1', 50890) ===
+18:35:01  INFO   === client disconnected: ('127.0.0.1', 50890) ===
+18:35:01  INFO   [policy] served policy to ('127.0.0.1', 50891) (req=b'')
+18:35:02  INFO   === client connected on PORT 9001 from ('127.0.0.1', 52427) ===
+18:35:02  INFO   === client disconnected: ('127.0.0.1', 52427) ===
+18:35:02  INFO   [policy] served policy to ('127.0.0.1', 52428) (req=b'')
+18:35:02  INFO   === client connected on PORT 9001 from ('127.0.0.1', 52432) ===
+18:35:02  INFO   === client disconnected: ('127.0.0.1', 52432) ===
+18:35:02  INFO   [policy] served policy to ('127.0.0.1', 52433) (req=b'')
+18:35:04  INFO   === client connected on PORT 9001 from ('127.0.0.1', 64668) ===
+18:35:04  INFO   === client disconnected: ('127.0.0.1', 64668) ===
+18:35:04  INFO   [policy] served policy to ('127.0.0.1', 64669) (req=b'')
+18:35:05  INFO   === client connected on PORT 9001 from ('127.0.0.1', 64673) ===
+18:35:05  INFO   === client disconnected: ('127.0.0.1', 64673) ===
+18:35:05  INFO   [policy] served policy to ('127.0.0.1', 64674) (req=b'')
+18:35:05  INFO   === client connected on PORT 9001 from ('127.0.0.1', 57369) ===
+18:35:05  INFO   === client disconnected: ('127.0.0.1', 57369) ===
+18:35:05  INFO   [policy] served policy to ('127.0.0.1', 57370) (req=b'')
+18:35:07  INFO   === client connected on PORT 9001 from ('127.0.0.1', 51168) ===
+18:35:07  INFO   === client disconnected: ('127.0.0.1', 51168) ===
+18:35:07  INFO   [policy] served policy to ('127.0.0.1', 51169) (req=b'')
+18:35:07  INFO   === client connected on PORT 9001 from ('127.0.0.1', 53310) ===
+18:35:07  INFO   === client disconnected: ('127.0.0.1', 53310) ===
+18:35:07  INFO   [policy] served policy to ('127.0.0.1', 53311) (req=b'')
+18:35:08  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55101) ===
+18:35:08  INFO   === client disconnected: ('127.0.0.1', 55101) ===
+18:35:08  INFO   [policy] served policy to ('127.0.0.1', 55102) (req=b'')
+18:35:10  INFO   === client connected on PORT 9001 from ('127.0.0.1', 50235) ===
+18:35:10  INFO   === client disconnected: ('127.0.0.1', 50235) ===
+18:35:10  INFO   [policy] served policy to ('127.0.0.1', 50236) (req=b'')
+18:35:10  INFO   === client connected on PORT 9001 from ('127.0.0.1', 50240) ===
+18:35:10  INFO   === client disconnected: ('127.0.0.1', 50240) ===
+18:35:10  INFO   [policy] served policy to ('127.0.0.1', 50241) (req=b'')
+18:35:11  INFO   === client connected on PORT 9001 from ('127.0.0.1', 63437) ===
+18:35:11  INFO   === client disconnected: ('127.0.0.1', 63437) ===
+18:35:11  INFO   [policy] served policy to ('127.0.0.1', 63438) (req=b'')
+18:35:12  INFO   === client connected on PORT 9001 from ('127.0.0.1', 63442) ===
+18:35:12  INFO   === client disconnected: ('127.0.0.1', 63442) ===
+18:35:12  INFO   [policy] served policy to ('127.0.0.1', 63443) (req=b'')
+18:35:13  INFO   === client connected on PORT 9001 from ('127.0.0.1', 63322) ===
+18:35:13  INFO   === client disconnected: ('127.0.0.1', 63322) ===
+18:35:13  INFO   [policy] served policy to ('127.0.0.1', 63323) (req=b'')
+18:35:14  INFO   === client connected on PORT 9001 from ('127.0.0.1', 58496) ===
+18:35:14  INFO   === client disconnected: ('127.0.0.1', 58496) ===
+18:35:14  INFO   [policy] served policy to ('127.0.0.1', 58497) (req=b'')
+18:35:15  INFO   === client connected on PORT 9001 from ('127.0.0.1', 58501) ===
+18:35:15  INFO   === client disconnected: ('127.0.0.1', 58501) ===
+18:35:15  INFO   [policy] served policy to ('127.0.0.1', 58502) (req=b'')
+18:35:16  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62948) ===
+18:35:16  INFO   === client disconnected: ('127.0.0.1', 62948) ===
+18:35:16  INFO   [policy] served policy to ('127.0.0.1', 62949) (req=b'')
+18:35:17  INFO   === client connected on PORT 9001 from ('127.0.0.1', 59236) ===
+18:35:17  INFO   === client disconnected: ('127.0.0.1', 59236) ===
+18:35:17  INFO   [policy] served policy to ('127.0.0.1', 59237) (req=b'')
+18:35:17  INFO   === client connected on PORT 9001 from ('127.0.0.1', 59241) ===
+18:35:17  INFO   === client disconnected: ('127.0.0.1', 59241) ===
+18:35:17  INFO   [policy] served policy to ('127.0.0.1', 59242) (req=b'')
+18:35:19  INFO   === client connected on PORT 9001 from ('127.0.0.1', 56878) ===
+18:35:19  INFO   === client disconnected: ('127.0.0.1', 56878) ===
+18:35:19  INFO   [policy] served policy to ('127.0.0.1', 56879) (req=b'')
+18:35:20  INFO   === client connected on PORT 9001 from ('127.0.0.1', 58108) ===
+18:35:20  INFO   === client disconnected: ('127.0.0.1', 58108) ===
+18:35:20  INFO   [policy] served policy to ('127.0.0.1', 58109) (req=b'')
+18:35:20  INFO   === client connected on PORT 9001 from ('127.0.0.1', 54502) ===
+18:35:20  INFO   === client disconnected: ('127.0.0.1', 54502) ===
+18:35:20  INFO   [policy] served policy to ('127.0.0.1', 54503) (req=b'')
+18:35:22  INFO   === client connected on PORT 9001 from ('127.0.0.1', 53869) ===
+18:35:22  INFO   === client disconnected: ('127.0.0.1', 53869) ===
+18:35:22  INFO   [policy] served policy to ('127.0.0.1', 53870) (req=b'')
+18:35:22  INFO   === client connected on PORT 9001 from ('127.0.0.1', 53874) ===
+18:35:22  INFO   === client disconnected: ('127.0.0.1', 53874) ===
+18:35:22  INFO   [policy] served policy to ('127.0.0.1', 53875) (req=b'')
+18:35:23  INFO   === client connected on PORT 9001 from ('127.0.0.1', 59166) ===
+18:35:23  INFO   === client disconnected: ('127.0.0.1', 59166) ===
+18:35:23  INFO   [policy] served policy to ('127.0.0.1', 59167) (req=b'')
+18:35:25  INFO   === client connected on PORT 9001 from ('127.0.0.1', 60829) ===
+18:35:25  INFO   === client disconnected: ('127.0.0.1', 60829) ===
+18:35:25  INFO   [policy] served policy to ('127.0.0.1', 60830) (req=b'')
+18:35:25  INFO   === client connected on PORT 9001 from ('127.0.0.1', 60834) ===
+18:35:25  INFO   === client disconnected: ('127.0.0.1', 60834) ===
+18:35:25  INFO   [policy] served policy to ('127.0.0.1', 60835) (req=b'')
+18:35:26  INFO   === client connected on PORT 9001 from ('127.0.0.1', 64505) ===
+18:35:26  INFO   === client disconnected: ('127.0.0.1', 64505) ===
+18:35:26  INFO   [policy] served policy to ('127.0.0.1', 64506) (req=b'')
+18:35:27  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62537) ===
+18:35:27  INFO   === client disconnected: ('127.0.0.1', 62537) ===
+18:35:27  INFO   [policy] served policy to ('127.0.0.1', 62538) (req=b'')
+18:35:49  INFO   local guild adapter ready (30 core routes)
+18:35:49  DEBUG  Using selector: SelectSelector
+18:35:49  INFO   player store: C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\PvZ-Server-PoC\players.db
+18:35:49  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+18:35:49  INFO   loaded 40 lab bottles
+18:35:49  INFO   loaded 999 world-tree levels
+18:35:49  INFO   loaded 3 VIP tiers
+18:35:49  INFO   loaded 傀儡 config: 50 puppets, 120 stages, 225 skill levels
+18:35:49  INFO   loaded 44 card puzzle stages
+18:35:49  INFO   loaded 1960 card-fruit templates
+18:35:50  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+18:35:50  INFO   loaded prestige evolution: 200 levels, 7 plant types
+18:35:50  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+18:35:50  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+18:35:50  INFO   loaded 617 card avatar templates
+18:35:50  INFO   loaded 1975 card forge templates
+18:35:52  INFO   bots: 50 slots, 0 opponents generated
+18:35:52  INFO   bot autonomy loop started (interval=120s)
+18:35:52  INFO   loaded 254 TD level reward templates from clientDB
+18:35:52  INFO   loaded 25 usable TD laboratory material ids: (40001, 40003, 40004, 40005, 40006, 40007, 40009, 40010, 40011, 40012, 40013, 40015, 40016, 40017, 40018, 40019, 40021, 40022, 40023, 40024, 40025, 40027, 40028, 40029, 40030)
+18:35:52  INFO   loaded 200 role-level exp thresholds
+18:35:52  INFO   loaded 2023 item sell templates
+18:35:52  INFO   loaded 23 town buildings
+18:35:52  INFO   loaded 32 fuben chapters
+18:35:52  INFO   loaded fuben stages for 92 chapter/mode combos
+18:35:52  INFO   loaded 10 energy-buy tiers
+18:35:52  INFO   loaded energyMax for 200 role levels
+18:35:52  INFO   loaded 35 card forge chance entries
+18:35:52  INFO   loaded 78 card recruit recipes
+18:35:52  INFO   loaded 12 card avatar forge types
+18:35:52  INFO   loaded 112 plant talents across 4 stages
+18:35:52  INFO   loaded 41 nutrition reagent bases
+18:35:52  INFO   loaded 3 baptize action costs + 10 baptize cap rows
+18:35:52  INFO   loaded 200 zombie-island levels
+18:35:52  INFO   loaded 12 zombie-island stages
+18:35:52  INFO   loaded 22 activity-fuben templates
+18:35:52  INFO   loaded 390 awake transition rules
+18:35:52  INFO   loaded 390 awake config rows
+18:35:52  INFO   template warm-up done (32 tables preloaded)
+18:35:52  INFO   game server listening on 0.0.0.0:9001
+18:35:52  INFO   game server listening on 0.0.0.0:8001
+18:35:52  INFO   game server listening on 0.0.0.0:443
+18:35:52  WARNING  could not bind game port 80 ([Errno 13] error while attempting to bind on address ('0.0.0.0', 80): [winerror 10013] an attempt was made to access a socket in a way forbidden by its access permissions) - skipping (another program may own it; not fatal)
+18:35:52  INFO   socket-policy server listening on 0.0.0.0:843
+18:35:52  INFO   [policy] served policy to ('127.0.0.1', 59713) (req=b'<policy-file-request/>\x00')
+18:35:52  INFO   === client connected on PORT 9001 from ('127.0.0.1', 51523) ===
+18:35:52  INFO   === client disconnected: ('127.0.0.1', 51523) ===
+18:35:52  INFO   [policy] served policy to ('127.0.0.1', 51524) (req=b'<policy-file-request/>\x00')
+18:35:52  INFO   === client connected on PORT 9001 from ('127.0.0.1', 51529) ===
+18:35:52  INFO   === client disconnected: ('127.0.0.1', 51529) ===
+18:35:52  INFO   [policy] served policy to ('127.0.0.1', 51530) (req=b'')
+18:35:53  INFO   === client connected on PORT 9001 from ('127.0.0.1', 53200) ===
+18:35:53  INFO   === client disconnected: ('127.0.0.1', 53200) ===
+18:35:53  INFO   [policy] served policy to ('127.0.0.1', 53201) (req=b'')
+18:35:55  INFO   === client connected on PORT 9001 from ('127.0.0.1', 54014) ===
+18:35:55  INFO   === client disconnected: ('127.0.0.1', 54014) ===
+18:35:55  INFO   [policy] served policy to ('127.0.0.1', 54015) (req=b'')
+18:35:55  INFO   === client connected on PORT 9001 from ('127.0.0.1', 54019) ===
+18:35:55  INFO   === client disconnected: ('127.0.0.1', 54019) ===
+18:35:55  INFO   [policy] served policy to ('127.0.0.1', 54020) (req=b'')
+18:35:55  INFO   [policy] served policy to ('127.0.0.1', 54025) (req=b'<policy-file-request/>\x00')
+18:35:55  INFO   === client connected on PORT 9001 from ('127.0.0.1', 54026) ===
+18:35:55  INFO     (stripped TGW preamble: 'tgw_l7_forward\r\nHost: 127.0.0.1:9001')
+18:35:56  INFO       loaded existing player uin=700000204 name='Denver' level=12 coin=1245373 plants=[1100, 1200, 1300, 1500, 1600, 1700, 1800, 1900, 3100, 3200, 3300, 3400, 3500, 3600, 4700]
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_CheckOldUser_CS
+18:35:56  INFO       step 1 -> Cmd_CheckOldUser_SC (new=False, name='Denver')
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_CheckOldUser_SC                    (10 body bytes, 53 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=69 cmdName=PVZ.Cmd.Cmd_Init_CS
+18:35:56  INFO       step 2 -> Cmd_Init_SC (from save)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Init_SC                            (5484 body bytes, 5520 total)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Mail_NewMessage_SC                 (4 body bytes, 50 total)
+18:35:56  INFO       -> PVZ.Cmd.Cmd_PVZPrivilege_SC (12 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_PVZPrivilege_SC                    (12 body bytes, 55 total)
+18:35:56  INFO       -> PVZ.Cmd.Cmd_VipInfo_SC (6 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_VipInfo_SC                         (6 body bytes, 44 total)
+18:35:56  INFO       -> PVZ.Cmd.Cmd_Vip_SyncVipInfo_SC (4 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Vip_SyncVipInfo_SC                 (4 body bytes, 50 total)
+18:35:56  INFO   === client connected on PORT 9001 from ('127.0.0.1', 52593) ===
+18:35:56  INFO   === client disconnected: ('127.0.0.1', 52593) ===
+18:35:56  INFO   [policy] served policy to ('127.0.0.1', 52594) (req=b'')
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Card_GetPackage_CS
+18:35:56  INFO       card package: 24 card(s) in collection [(1101, 'Sunflower'), (1201, 'Peashooter'), (1301, 'Wall-nut'), (1501, 'Potato Mine'), (1601, 'Bloomerang'), (1602, 'Bloomerang'), (1701, 'Iceberg Lettuce'), (1801, 'Bonk Choy'), (1901, 'Grave Buster'), (3101, 'Bruce Bamboo'), (3201, 'Carrocket'), (3301, 'Explodelion'), (3601, 'Venus Flytrap'), (3903, 'Snapdragon'), (4101, 'Spikeweed'), (4101, 'Spikeweed'), (4202, 'Spikeweed'), (4701, 'Pomegranate-pult'), (6101, 'Lightning Reed'), (6203, 'Starfruit'), (6302, 'Laser Bean'), (7402, 'Nitro-shroom'), (7703, 'Melon-pult'), (9102, 'Sap-fling')]
+18:35:56  INFO       -> PVZ.Cmd.Cmd_Card_GetPackage_SC (2530 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Card_GetPackage_SC                 (2530 body bytes, 2577 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (628 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (628 body bytes, 679 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=28 cmdName=PVZ.Cmd.Cmd_VipInfo_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_VipInfo_SC (6 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_VipInfo_SC                         (6 body bytes, 44 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Arena_GetMyInfo_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_Arena_GetMyInfo_SC (51 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Arena_GetMyInfo_SC                 (51 body bytes, 97 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Item_GetBagInfo_CS
+18:35:56  INFO       bag info: 80 item stack(s), 0 equipment object(s)
+18:35:56  INFO       -> PVZ.Cmd.Cmd_Item_GetBagInfo_SC (921 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Item_GetBagInfo_SC                 (921 body bytes, 968 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_Quest_GetList_CS
+18:35:56  INFO       main quests: uin=700000204 listed=273
+18:35:56  INFO       -> PVZ.Cmd.Cmd_Quest_GetList_SC (2549 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_GetList_SC                   (2549 body bytes, 2594 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_DailyQuest_GetInfo_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_DailyQuest_GetInfo_SC (24 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_DailyQuest_GetInfo_SC              (24 body bytes, 73 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_DailyActivity_GetInfo_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_DailyActivity_GetInfo_SC (128 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_DailyActivity_GetInfo_SC           (128 body bytes, 181 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_City_GetBuildingInfo_CS
+18:35:56  INFO       town buildings: level=12 -> 13 unlocked [10, 20, 30, 80, 110, 130, 140, 150, 190, 230, 240, 250, 280]
+18:35:56  INFO       -> PVZ.Cmd.Cmd_City_GetBuildingInfo_SC (60 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetBuildingInfo_SC            (60 body bytes, 111 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Flag_GetList_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_Flag_GetList_SC (0 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Flag_GetList_SC                    (0 body bytes, 43 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=37 cmdName=PVZ.Cmd.Cmd_Lab_GetLabInfo_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_Lab_GetLabInfo_SC (322 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Lab_GetLabInfo_SC                  (322 body bytes, 368 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_RoleGuildInfo_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_RoleGuildInfo_SC (35 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_RoleGuildInfo_SC                   (35 body bytes, 79 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=30 cmdName=PVZ.Cmd.Cmd_City_Init_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_City_Init_SC (12 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_City_Init_SC                       (12 body bytes, 52 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_War_GetDeclareWarStat_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_War_GetDeclareWarStat_SC (4 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_War_GetDeclareWarStat_SC           (4 body bytes, 56 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=44 cmdName=PVZ.Cmd.Cmd_Setout_GetSetoutTimes_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_Setout_GetSetoutTimes_SC (10 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Setout_GetSetoutTimes_SC           (10 body bytes, 62 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Chat_GetHistory_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_Chat_GetHistory_SC (3 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Chat_GetHistory_SC                 (3 body bytes, 49 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=40 cmdName=PVZ.Cmd.Cmd_Friend_GetBlackList_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_Friend_GetBlackList_SC (25 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Friend_GetBlackList_SC             (25 body bytes, 75 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=53 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC (624 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC  (624 body bytes, 688 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_OnlineReward_GetInfo_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_OnlineReward_GetInfo_SC (156 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_GetInfo_SC            (156 body bytes, 208 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=40 cmdName=PVZ.Cmd.Cmd_PayShop_GetFlagList_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_PayShop_GetFlagList_SC (0 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetFlagList_SC             (0 body bytes, 50 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_PVZPrivilege_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_PVZPrivilege_SC (12 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_PVZPrivilege_SC                    (12 body bytes, 55 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_Fuben_GetChapterInfo_CS
+18:35:56  INFO       fuben chapters: level=12 -> 3 unlocked (progress-gated)
+18:35:56  INFO       -> PVZ.Cmd.Cmd_Fuben_GetChapterInfo_SC (30 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Fuben_GetChapterInfo_SC            (30 body bytes, 81 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_GetLevelRewardInfo_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_GetLevelRewardInfo_SC (2 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_GetLevelRewardInfo_SC              (2 body bytes, 51 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_City_MergeServerFlag_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_City_MergeServerFlag_SC (0 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_City_MergeServerFlag_SC            (0 body bytes, 51 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=37 cmdName=PVZ.Cmd.Cmd_Talent_GetList_CS
+18:35:56  INFO       talent list stage 1: 35 talents, 11 plants, 11 studied, 0 studiable-now
+18:35:56  INFO       -> PVZ.Cmd.Cmd_Talent_GetList_SC (464 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Talent_GetList_SC                  (464 body bytes, 510 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_Puppet_GetInfo_CS
+18:35:56  INFO       <= Cmd_Puppet_GetInfo_CS data=
+18:35:56  INFO       傀儡: 0 owned, answering (none)
+18:35:56  INFO       -> PVZ.Cmd.Cmd_Puppet_GetInfo_SC (0 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Puppet_GetInfo_SC                  (0 body bytes, 45 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=40 cmdName=PVZ.Cmd.Cmd_Puppet_GetFormation_CS
+18:35:56  INFO       <= Cmd_Puppet_GetFormation_CS data=
+18:35:56  INFO       傀儡上阵: (empty)
+18:35:56  INFO       -> PVZ.Cmd.Cmd_Puppet_GetFormation_SC (12 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Puppet_GetFormation_SC             (12 body bytes, 62 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=45 cmdName=PVZ.Cmd.Cmd_PayShop_GetDayTicketList_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_PayShop_GetDayTicketList_SC (2 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetDayTicketList_SC        (2 body bytes, 57 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_SC (2 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_SC       (2 body bytes, 58 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=53 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC (624 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC  (624 body bytes, 688 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_SignIn_GetInfo_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_SignIn_GetInfo_SC (12 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_SignIn_GetInfo_SC                  (12 body bytes, 57 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_OfflineReward_GetInfo_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_OfflineReward_GetInfo_SC (4 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_OfflineReward_GetInfo_SC           (4 body bytes, 56 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_Guide_GetKeys_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_Guide_GetKeys_SC (0 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_Guide_GetKeys_SC                   (0 body bytes, 44 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_SecondPwd_Info_CS
+18:35:56  INFO       -> PVZ.Cmd.Cmd_SecondPwd_Info_SC (0 body bytes)
+18:35:56  INFO     -> S2C  PVZ.Cmd.Cmd_SecondPwd_Info_SC                  (0 body bytes, 45 total)
+18:35:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+18:35:57  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (628 body bytes)
+18:35:57  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (628 body bytes, 679 total)
+18:35:57  INFO   === client connected on PORT 9001 from ('127.0.0.1', 52621) ===
+18:35:57  INFO   === client disconnected: ('127.0.0.1', 52621) ===
+18:35:57  INFO   [policy] served policy to ('127.0.0.1', 52622) (req=b'')
+18:35:58  INFO   === client connected on PORT 9001 from ('127.0.0.1', 50067) ===
+18:35:58  INFO   === client disconnected: ('127.0.0.1', 50067) ===
+18:35:58  INFO   [policy] served policy to ('127.0.0.1', 50068) (req=b'')
+18:35:59  INFO   === client connected on PORT 9001 from ('127.0.0.1', 65234) ===
+18:35:59  INFO   === client disconnected: ('127.0.0.1', 65234) ===
+18:35:59  INFO   [policy] served policy to ('127.0.0.1', 65235) (req=b'')
+18:36:00  INFO   === client connected on PORT 9001 from ('127.0.0.1', 65239) ===
+18:36:00  INFO   === client disconnected: ('127.0.0.1', 65239) ===
+18:36:00  INFO   [policy] served policy to ('127.0.0.1', 65240) (req=b'')
+18:36:01  INFO   === client connected on PORT 9001 from ('127.0.0.1', 53081) ===
+18:36:01  INFO   === client disconnected: ('127.0.0.1', 53081) ===
+18:36:01  INFO   [policy] served policy to ('127.0.0.1', 53082) (req=b'')
+18:36:02  INFO   === client connected on PORT 9001 from ('127.0.0.1', 63198) ===
+18:36:02  INFO   === client disconnected: ('127.0.0.1', 63198) ===
+18:36:02  INFO   [policy] served policy to ('127.0.0.1', 63199) (req=b'')
+18:36:02  INFO   === client connected on PORT 9001 from ('127.0.0.1', 63206) ===
+18:36:02  INFO   === client disconnected: ('127.0.0.1', 63206) ===
+18:36:02  INFO   [policy] served policy to ('127.0.0.1', 63207) (req=b'')
+18:36:03  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Notice_GetRollList_CS
+18:36:03  INFO       -> PVZ.Cmd.Cmd_Notice_GetRollList_SC (79 body bytes)
+18:36:03  INFO     -> S2C  PVZ.Cmd.Cmd_Notice_GetRollList_SC              (79 body bytes, 128 total)
+18:36:03  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=38 cmdName=PVZ.Cmd.Cmd_Notice_GetSysList_CS
+18:36:03  INFO       -> PVZ.Cmd.Cmd_Notice_GetSysList_SC (139 body bytes)
+18:36:03  INFO     -> S2C  PVZ.Cmd.Cmd_Notice_GetSysList_SC               (139 body bytes, 188 total)
+18:36:03  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=57 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+18:36:03  INFO       -> PVZ.Cmd.FlexibleActivity_1001 (111 body bytes)
+18:36:03  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1001                  (111 body bytes, 156 total)
+18:36:03  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=57 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+18:36:03  INFO       -> PVZ.Cmd.FlexibleActivity_1001 (111 body bytes)
+18:36:03  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1001                  (111 body bytes, 156 total)
+18:36:03  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+18:36:03  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+18:36:03  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+18:36:03  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+18:36:03  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+18:36:03  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+18:36:03  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+18:36:03  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+18:36:03  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+18:36:03  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+18:36:03  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+18:36:03  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+18:36:03  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_GetClientData_CS
+18:36:03  INFO       -> PVZ.Cmd.Cmd_GetClientData_SC (4 body bytes)
+18:36:03  INFO     -> S2C  PVZ.Cmd.Cmd_GetClientData_SC                   (4 body bytes, 48 total)
+18:36:03  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_City_GetTownDurability_CS
+18:36:03  INFO       -> PVZ.Cmd.Cmd_City_GetTownDurability_SC (6 body bytes)
+18:36:03  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetTownDurability_SC          (6 body bytes, 59 total)
+18:36:03  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=38 cmdName=PVZ.Cmd.Cmd_TD_GetStageInfo_CS
+18:36:03  INFO       TD stage info: stage=2 passed=[(1, 1, 1, [10]), (2, 1, 1, [10]), (3, 1, 1, [10]), (4, 1, 1, [10])] gates=[4] totalStars=4
+18:36:03  INFO       -> PVZ.Cmd.Cmd_TD_GetStageInfo_SC (38 body bytes)
+18:36:03  INFO     -> S2C  PVZ.Cmd.Cmd_TD_GetStageInfo_SC                 (38 body bytes, 84 total)
+18:36:03  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_War_GetSimpleHistory_CS
+18:36:03  INFO       -> PVZ.Cmd.Cmd_War_GetSimpleHistory_SC (0 body bytes)
+18:36:03  INFO     -> S2C  PVZ.Cmd.Cmd_War_GetSimpleHistory_SC            (0 body bytes, 51 total)
+18:36:03  INFO   === client disconnected: ('127.0.0.1', 54026) ===
+18:36:04  INFO   === client connected on PORT 9001 from ('127.0.0.1', 61832) ===
+18:36:04  INFO   === client disconnected: ('127.0.0.1', 61832) ===
+18:36:04  INFO   [policy] served policy to ('127.0.0.1', 61833) (req=b'')
