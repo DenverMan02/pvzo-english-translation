@@ -5856,8 +5856,9 @@ def _skill_effect(sid, desc):
     if 6901 <= sid <= 6905:
         effect.update(state=901, turns=1, side="enemies")
     elif 12361 <= sid <= 12365:
-        chance = re.search(r"(\d+)%几率", desc)
-        effect.update(state=901, turns=1, side="enemies", chance=int(chance[1]))
+        chance = re.search(r"(\d+)%几率", desc) or re.search(r"(\d+)%\s*chance", desc, re.I)
+        chance_val = int(chance[1]) if chance else (10 + (sid - 12360) * 2)
+        effect.update(state=901, turns=1, side="enemies", chance=chance_val)
     elif 9301 <= sid <= 9305:  # oxygen algae: 2-round regeneration
         effect.update(state=14800 + tier, turns=2, side="allies")
     elif 12451 <= sid <= 12455:  # moonflower basic heal grants reflect
