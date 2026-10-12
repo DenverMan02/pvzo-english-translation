@@ -1,8 +1,8 @@
 id	name	desc
-1	植物大作战	联盟4级可争夺马戏团，5级可争夺游乐场，占领后联盟全体成员领取奖励
-2	联盟争霸赛	每周举办一届，奖励丰厚，成为联盟争霸赛冠军是每一个联盟的目标
-3	联盟副本	由盟主或副盟主开启副本。击杀僵尸获取奖励，通关章节可获得排名奖励
-4	联盟支援	联盟成员之间可以互相支援小镇，共同御敌
-5	矿区加成	联盟成员开采同一矿区将获得加成（每增加一人，矿区金币产量＋5%）
-6	联盟技能	加入联盟可激活和升级联盟技能，退出联盟后无效
-7	联盟花园	联盟成员每天可以在联盟花园中施肥，增加联盟经验并获取个人贡献和体力
+1	Plant Battle	Alliances can fight for the Circus at Level 4 and the Playground at Level 5. Once occupied, all alliance members can claim rewards.
+2	Alliance Championship	Held weekly with generous rewards, becoming the champion of the Alliance Tournament is the goal of every alliance.
+3	Alliance Raid	Initiated by the Alliance Leader or Co-Leader. Defeat zombies for rewards, and clear chapters to earn ranking rewards.
+4	Alliance Support	Alliance members can support each other's towns and fend off zombies together.
+5	Mine Bonus	Alliance members mining the same mine will receive a bonus (+5% coin production per additional member).
+6	Alliance Skills	Join an alliance to activate and upgrade alliance skills. They become inactive upon leaving the alliance.
+7	Alliance Garden	Alliance members can fertilize in the Alliance Garden every day to increase Alliance EXP and earn personal contribution and stamina.

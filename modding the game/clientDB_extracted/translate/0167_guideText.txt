@@ -299,7 +299,7 @@ id	text
 1600001	Enter my house
 1600002	Select plant
 1600003	Tap the Upgrade button
-1600004	消耗经验豆给植物增加经验
+1600004	Consume EXP Beans to give plants EXP
 1600005	Select plant
 1600006	Enter Enhancement Screen
 1600007	Insert the corresponding level of Plant Food
@@ -396,9 +396,9 @@ id	text
 3800001	Return to the stage to unlock the main tower defense storyline
 3800002	Unlock Gate
 3800003	Keys are required to unlock main Tower Defense stages
-3700003	"Clear "Ancient Egypt" up to 10-1"
+3700003	Clear "Ancient Egypt" up to 10-1
 3900001	Complete regular Adventure to unlock Elite Adventure
-3900002	"Select "Elite"
+3900002	Select "Elite"
 4000001	Enter Tavern
 4000002	Recruit plants in the Almanac
 4000003	Select Peashooter
@@ -423,7 +423,7 @@ id	text
 5000001	View free plants
 5100001	View Beginner Rewards
 5200001	Set Garrison Troops
-5300001	"Switch to "My Cards"
+5300001	Switch to "My Cards"
 5300002	Choose powerful plants and set up your formation wisely
 5400001	Return to Town
 5500001	Completing activity goals is a crucial way to level up

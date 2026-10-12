@@ -1,13 +1,13 @@
 id	name	tips
-1	神奇植物币*10	10个神奇植物币
-2	高级洗炼药水*10	10个高级洗炼药水
-3	2级生命结晶*1	1个2级生命结晶
-4	钻石*100	100钻石
-5	高级洗炼药水*30	30个高级洗炼药水
-6	3级防御结晶*1	1个3级防御结晶
-7	神奇植物币*30	30个神奇植物币
-8	钻石*50	50钻石
-9	4级攻击结晶*1	1个4级攻击结晶
-10	傀儡原石*1	1个傀儡原石
-11	钻石*10	10钻石
-12	神秘抽奖券*1	1个神秘抽奖券
+1	Magic Plant Coin x10	10 Magic Plant Coins
+2	Advanced Refinement Potion x10	10 Advanced Refinement Potions
+3	Level 2 Life Crystal x1	1 Level 2 Life Crystal
+4	Diamond x100	100 Diamonds
+5	Advanced Refinement Potion x30	30 Advanced Refinement Potions
+6	Level 3 Defense Crystal x1	1 Level 3 Defense Crystal
+7	Magic Plant Coin x30	30 Magic Plant Coins
+8	Diamond x50	50 Diamonds
+9	Level 4 Attack Crystal x1	1 Level 4 Attack Crystal
+10	Puppet Raw Stone x1	1 Puppet Raw Stone
+11	Diamond x10	10 Diamonds
+12	Mystery Lottery Ticket x1	1 Mystery Lottery Ticket

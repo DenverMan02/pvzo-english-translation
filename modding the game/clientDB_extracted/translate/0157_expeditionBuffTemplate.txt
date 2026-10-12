@@ -1,4 +1,4 @@
 id	desc
-1	每次掠夺资源增加{0}，持续{1}秒
-2	每次被抢资源减少{0}，持续{1}秒
-3	每次战斗伤害增加{0}，持续{1}秒
+1	Increases resources plundered by {0} each time, lasting for {1} seconds
+2	Reduces resources plundered by {0} each time, lasting for {1} seconds
+3	Increases battle damage by {0} each time, lasting for {1} seconds

@@ -1,29 +1,29 @@
 id	title	summary	desc	winTitle	rightDesc
-1001	关卡	解锁新植物	我在植物大战僵尸中获得了一个新的植物竹小龙，你见过吗？	关卡	解锁新植物
-1005	关卡	解锁新植物	我在植物大战僵尸中获得了一个新的植物蒲公英，以前没见过呢	关卡	解锁新植物
-1006	关卡	解锁新植物	我在植物大战僵尸中获得了一个新的植物捕蝇草，看看这能拿来干嘛？	关卡	解锁新植物
-1007	关卡	解锁新植物	我在植物大涨僵尸中获得了一个新的植物冬瓜先生，很傲娇的样子~	关卡	解锁新植物
-1008	关卡	酷炫小游戏	这么有节奏感的游戏，我还是第一次遇到，真带劲！	关卡	游戏分享
-1010	关卡	酷炫小游戏	测试结果，我大脑记忆力属于S级别，来测下你的吧！	关卡	游戏分享
-1011	关卡	酷炫小游戏	你能分得出真假僵尸吗？敢和我比比眼力不？	关卡	游戏分享
-1012	关卡	通关顺利	刚刚干掉了《植物大战僵尸online》的大BOSS尸身人！爽！你也来试试吧！	关卡	塔防通关
-1013	关卡	通关顺利	刚刚干掉了《植物大战僵尸online》的新地图大BOSS秦尸皇！爽！你也来试试吧！	关卡	塔防通关
-1014	关卡	解锁新植物	我在植物大战僵尸中获得了一个新的植物火龙草，你知道他长什么样吗？	关卡	解锁新植物
-1015	关卡	解锁新植物	我在植物大战僵尸中获得了一个新的植物地刺，身上长满刺，他能干嘛？	关卡	解锁新植物
-1016	关卡	解锁新植物	我在植物大战僵尸中获得了一个新的植物弹簧豆，哈哈哈，小心他把你弹走！	关卡	解锁新植物
-1017	关卡	解锁新植物	我在植物大战僵尸中获得了一个新的植物玉米投手，糊你一脸！	关卡	解锁新植物
-1018	关卡	解锁新植物	我在植物大战僵尸中获得了一个新的植物椰子加农炮，超级厉害，你也试试吧	关卡	解锁新植物
-1019	关卡	解锁新植物	我在植物大战僵尸中获得了一个新的植物水仙花，好像很特别的样子	关卡	解锁新植物
-1020	关卡	解锁新植物	我在植物大战僵尸中获得了一个新的植物榴莲，很不错，赶快来试试	关卡	解锁新植物
-1021	关卡	解锁新植物	我在植物大战僵尸中获得了一个新的植物地刺王，好像比地刺还厉害！你有吗！	关卡	解锁新植物
-1022	关卡	解锁新植物	我在植物大战僵尸中获得了一个新的植物菠萝投手，怎么长得这么酷？！	关卡	解锁新植物
-1023	关卡	解锁新植物	我在植物大战僵尸中获得了一个新的植物三发豌豆，原来豌豆还带三头的！	关卡	解锁新植物
-2001		暂不使用	纳尼！僵尸身上居然还有这种玩意儿？想知道是啥的进！		暂不使用
-3001	好友切磋	好友切磋获得胜利	我在植物大战僵尸online里面所向披靡，战胜了{0}，快来挑战我吧！	好友切磋	好友切磋获得胜利
-4001	天赋	向日葵天赋	直至今日，我的向日葵这么牛逼，都是我精心培养的结果，与他人无关，哇哈哈	天赋	向日葵天赋
-5001	获得三星卡	酒馆首次获得三星卡	我获得了一个来自星星的植物，而且还是三星的，猴赛雷啊！	获得三星卡	酒馆首次获得三星卡
-5002	获得四星卡	酒馆首次获得四星卡	我在植物大战僵尸中获得了一个稀有植物，快来看看吧！	获得四星卡	酒馆首次获得四星卡
-5003			我的植物升星了，战力更强了，有本事你来挑战我吧！		暂不使用
-6001	实验瓶	制作实验瓶	我在实验室里研究出了一种新玩意儿，给向日葵服用后，一个意想不到的情况发生了。。。	实验瓶	制作实验瓶
-7001	签到	每日签到	标题：《植物大战僵尸online》火了！内容：我发现了一个特别好玩的游戏《植物大战僵尸online》，和以前的植物大战僵尸不一样。好多朋友都在玩，你也一起来玩吧！	签到	每日签到
-8001	无尽挑战	无尽挑战胜利	快来给我点个赞！我在无尽挑战中获得了{0}分！还有谁比我强！	无尽挑战	无尽挑战胜利
+1001	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Bamboo Shoot. Have you seen it?	Stage	Unlock New Plant
+1005	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Dandelion. I've never seen it before!	Stage	Unlock New Plant
+1006	Stage	Unlock New Plant	I got a new plant, Venus Flytrap, in Plants vs. Zombies. Let's see what this can be used for!	Stage	Unlock New Plant
+1007	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, Mr. Winter Melon, looking all proud and snooty~	Stage	Unlock New Plant
+1008	Stage	Cool Mini-Game	This is the first time I've played a tower defense game with such great rhythm. It's awesome!	Stage	Game Share
+1010	Stage	Cool Mini-Game	Test result: my brain memory is S-tier. Come test yours!	Stage	Game Share
+1011	Stage	Cool Mini-Game	Can you tell the real zombies from the fake ones? Dare to test your eyes against mine?	Stage	Game Share
+1012	Stage	Smooth Victory	Just took down the big boss in Plants vs. Zombies Online! Awesome! Come try it yourself!	Stage	Clear Tower Defense
+1013	Stage	Smooth Victory	Just defeated the new map boss, First Emperor of Qin, in Plants vs. Zombies Online! So satisfying! Come try it out too!	Stage	Clear Tower Defense
+1014	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Snapdragon. Do you know what he looks like?	Stage	Unlock New Plant
+1015	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Spikeweed, covered in spikes. What can he do?	Stage	Unlock New Plant
+1016	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Spring Bean. Hahaha, watch out or he'll bounce you away!	Stage	Unlock New Plant
+1017	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Kernel-pult. Right in the face!	Stage	Unlock New Plant
+1018	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Coconut Cannon. Super powerful, you should try it too!	Stage	Unlock New Plant
+1019	Stage	Unlock New Plant	I got a new plant, Daffodil, in Plants vs. Zombies. It looks pretty special.	Stage	Unlock New Plant
+1020	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Durian. It's pretty good, come try it out!	Stage	Unlock New Plant
+1021	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Spikerock! It seems even stronger than Spikeweed. Do you have it?!	Stage	Unlock New Plant
+1022	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Pineapple Pult. Why does it look so cool?!	Stage	Unlock New Plant
+1023	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Threepeater. Turns out peas can come with three heads!	Stage	Unlock New Plant
+2001		Not in use	What the heck! Zombies actually carry this kind of stuff? Enter if you want to know what it is!		Not in use
+3001	Friendly Duel	Won a friend duel	I am unstoppable in Plants vs. Zombies Online, having defeated {0}. Come challenge me!	Friendly Duel	Won a friend duel
+4001	Talent	Sunflower Talent	To this day, the fact that my Sunflower is so overpowered is entirely the result of my careful nurturing, nobody else's, wahahaha!	Talent	Sunflower Talent
+5001	Get 3-Star Card	First time getting a 3-star card in the Tavern	I got a plant from the stars, and it's even 3-star! Absolutely awesome!	Get 3-Star Card	First time getting a 3-star card in the Tavern
+5002	Obtained a 4-star card	First 4-Star Card from Tavern	I got a rare plant in Plants vs. Zombies, come check it out!	Obtained a 4-star card	First 4-Star Card from Tavern
+5003			My plant has been upgraded in stars, making its combat power even stronger. I dare you to challenge me!		Not in use
+6001	Test Tube	Craft Flask	I was tinkering with a new invention in the lab, and after feeding it to a Sunflower, an unexpected thing happened...	Test Tube	Craft Flask
+7001	Check-in	Daily Check-In	Title: Plants vs. Zombies Online is trending! Content: I found a super fun game called Plants vs. Zombies Online. It's different from the classic Plants vs. Zombies. Lots of friends are playing it, come join us!	Check-in	Daily Check-In
+8001	Endless Challenge	Endless Mode Victory	Come give me a like! I scored {0} points in Endless Survival! Who else can beat that?	Endless Challenge	Endless Mode Victory

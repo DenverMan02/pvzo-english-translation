@@ -8,7 +8,7 @@ if (token) sessionStorage.setItem('pvz-launcher-token', token);
 const $ = (s, root = document) => root.querySelector(s);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const icon = (name, cls = '') => `<svg${cls ? ` class="${esc(cls)}"` : ''} aria-hidden="true"><use href="#i-${name}"/></svg>`;
-const pages = {home:'首页',accounts:'账号与资料',gm:'GM 管理',services:'服务与日志',backups:'存档备份',settings:'设置'};
+const pages = {home:'Home',accounts:'Accounts & Profiles',gm:'GM Management',services:'Services & Logs',backups:'Backups',settings:'Settings'};
 let page = (location.hash || '#home').slice(1);
 if (!pages[page]) page = 'home';
 let appState = {running:false,busy:false,services:[],currentAccount:null};
@@ -46,25 +46,25 @@ let booting = false;
 let settingsSaveQueue = Promise.resolve();
 
 const demoAccounts = [
-  {id:'10001',uin:'10001',name:'向日葵的午后',signature:'把每一缕阳光，都种进花园里。',level:35,gold:128650,face_id:0},
-  {id:'10002',uin:'10002',name:'豌豆守护者',signature:'今天也要守护花园。',level:21,gold:6800,face_id:1},
-  {id:'10003',uin:'10003',name:'小院新朋友',signature:'',level:8,gold:1200,face_id:2}
+  {id:'10001',uin:'10001',name:'Sunflower Afternoon',signature:'Plant every ray of sunshine into your garden.',level:35,gold:128650,face_id:0},
+  {id:'10002',uin:'10002',name:'Pea Guardian',signature:'Defend the garden today as well.',level:21,gold:6800,face_id:1},
+  {id:'10003',uin:'10003',name:'New Year Friend',signature:'',level:8,gold:1200,face_id:2}
 ];
 const demoServices = [
-  {id:'web',name:'游戏资源',status:'stopped',detail:'游戏页面与静态资源',port:8080},
-  {id:'admin',name:'GM 后台',status:'stopped',detail:'角色与游戏管理工作台',port:8081},
-  {id:'game',name:'游戏服务',status:'stopped',detail:'角色数据与游戏逻辑',port:9001},
-  {id:'policy',name:'连接策略',status:'stopped',detail:'等待启动',port:843}
+  {id:'web',name:'Game Resources',status:'stopped',detail:'Game pages and static assets',port:8080},
+  {id:'admin',name:'GM Dashboard',status:'stopped',detail:'Profile and Game Management Dashboard',port:8081},
+  {id:'game',name:'Game Service',status:'stopped',detail:'Player Data & Game Logic',port:9001},
+  {id:'policy',name:'Connection Policy',status:'stopped',detail:'Waiting to start',port:843}
 ];
 const demoLogs = [
-  {id:1,time:'10:32:18',level:'INFO',message:'花园启动器已准备就绪'},
-  {id:2,time:'10:32:18',level:'INFO',message:'已发现 3 个本地角色，等待选择角色'},
-  {id:3,time:'10:32:19',level:'INFO',message:'四项游戏服务未启动，点击「开始游戏」进入花园'},
-  {id:4,time:'10:32:19',level:'INFO',message:'只读演示模式：展示界面，不连接或修改游戏存档'}
+  {id:1,time:'10:32:18',level:'INFO',message:'Garden Launcher is ready'},
+  {id:2,time:'10:32:18',level:'INFO',message:'3 local profiles found, waiting for profile selection'},
+  {id:3,time:'10:32:19',level:'INFO',message:'Four game services are not running. Click "Start Game" to enter the garden'},
+  {id:4,time:'10:32:19',level:'INFO',message:'Read-only Demo Mode: UI preview only, game saves will not be connected or modified'}
 ];
 
 function accountId(a) { return String(a?.id ?? a?.uin ?? a?.account_id ?? ''); }
-function accountName(a) { return a?.name || a?.nickname || (a ? `角色 ${accountId(a)}` : '尚未选择角色'); }
+function accountName(a) { return a?.name || a?.nickname || (a ? `角色 ${accountId(a)}` : 'No profile selected'); }
 function isRobotAccount(a) {
   const uin = Number(accountId(a));
   return a?.is_robot === true || (uin >= 900000 && uin < 1000000);

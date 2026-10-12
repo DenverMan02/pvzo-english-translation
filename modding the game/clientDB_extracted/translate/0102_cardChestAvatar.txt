@@ -1,618 +1,618 @@
 id	unLockDec
-1107	时装水晶 150
-1108	时装精华 20
-1109	时装精华 40
-11010	时装精华 10
-11011	时装水晶 75
-1116	时装水晶 150
-1117	时装精华 60
-1118	时装精华 20
-1119	时装水晶 200
-11110	时装精华 10
-11111	时装精华 15
-1126	时装精华 20
-1127	时装精华 40
-1128	时装精华 60
-1129	时装精华 50
-1136	时装精华 20
-1137	时装精华 40
-1138	时装精华 60
-1146	时装精华 20
-1147	时装精华 40
-1148	时装精华 60
-1156	时装精华 20
-1157	时装精华 40
-1158	时装精华 60
-1166	时装精华 40
-1167	时装精华 60
-1168	时装精华 20
-1176	时装精华 40
-1177	时装精华 60
-1178	时装精华 50
-1186	时装精华 20
-1187	时装精华 40
-1188	时装精华 60
-1189	时装精华 50
-1196	时装精华 20
-1197	时装精华 40
-1198	时装精华 60
-1226	时装精华 20
-1227	时装精华 40
-1228	时装精华 60
-1229	时装精华 50
-1236	时装精华 20
-1237	时装精华 40
-1238	时装精华 60
-1239	时装精华 50
-1246	时装精华 20
-1247	时装精华 40
-1248	时装精华 60
-1249	时装精华 50
-1256	时装精华 20
-1257	时装精华 40
-1258	时装精华 60
-1259	时装精华 50
-1304	时装水晶 100
-1706	时装水晶 150
-1707	时装精华 60
-1708	时装精华 20
-1709	免费植物可兑换
-17010	时装精华 10
-17011	时装精华 50
-17012	时装精华 15
-3608	时装水晶 200
-3609	时装精华 20
-3907	时装水晶 150
-3908	时装精华 20
-3909	时装水晶 200
-39010	时装精华 10
-4509	时装精华 10
-4608	时装精华 20
-4609	时装精华 40
-46010	时装精华 10
-46011	时装精华 30
-4706	时装精华 20
-4707	时装精华 30
-4708	时装精华 40
-4709	时装水晶 250
-47010	时装精华 10
-47011	时装水晶 300
-4908	时装精华 20
-4909	时装精华 40
-49010	时装精华 60
-49011	时装精华 30
-5509	时装水晶 200
-5606	时装水晶 150
-5607	时装水晶 300
-5608	时装精华 20
-5609	时装精华 40
-56010	时装精华 10
-56011	时装水晶 250
-5706	时装水晶 150
-5707	时装精华 60
-5708	时装精华 20
-5709	时装精华 40
-6206	免费植物可兑换
-6207	时装精华 60
-6208	时装精华 20
-6209	时装精华 40
-62010	时装精华 10
-62011	时装水晶 250
-6409	时装精华 40
-6507	时装精华 60
-6508	时装精华 20
-6509	时装精华 40
-65010	时装水晶 150
-65011	时装精华 10
-65012	时装水晶 250
-6707	时装水晶 300
-6708	时装精华 20
-6709	时装精华 40
-6907	时装水晶 150
-6908	时装精华 20
-6909	免费植物可兑换
-69010	时装精华 60
-69011	时装精华 10
-7209	时装精华 40
-72010	时装精华 10
-72011	时装精华 20
-72012	时装精华 30
-72013	时装水晶 300
-7407	时装水晶 150
-7408	时装精华 20
-7409	时装精华 40
-74010	时装精华 10
-74011	时装精华 60
-7508	时装精华 20
-7509	时装精华 40
-75010	时装精华 10
-7606	时装精华 20
-7607	时装水晶 200
-7608	时装水晶 150
-7609	时装精华 10
-7706	时装精华 20
-7707	时装水晶 200
-7807	时装精华 60
-7808	时装精华 20
-7809	时装精华 40
-78010	时装精华 30
-78011	时装精华 10
-7906	时装精华 20
-7907	时装精华 40
-7908	时装精华 60
-8008	时装精华 60
-8009	时装精华 40
-80010	时装精华 10
-80011	时装精华 20
-80012	时装精华 30
-8108	时装精华 20
-8109	时装精华 40
-81010	时装精华 30
-81011	时装精华 10
-81012	时装精华 60
-8307	时装精华 60
-8308	时装精华 20
-8309	时装精华 40
-83010	时装精华 10
-8506	时装精华 30
-8507	时装精华 20
-8508	时装精华 60
-8509	时装精华 40
-8607	时装精华 60
-8608	时装精华 20
-8609	时装精华 40
-8707	时装精华 60
-8708	时装精华 20
-8709	时装精华 40
-8806	时装精华 40
-8807	时装精华 10
-8808	时装精华 20
-8809	时装精华 30
-8906	时装精华 40
-8907	时装精华 60
-8908	时装精华 20
-8909	时装精华 10
-89010	时装精华 30
-89011	时装精华 50
-89012	时装精华 60
-9006	时装精华 10
-9007	时装精华 20
-9008	时装精华 30
-90010	时装精华 40
-9106	时装精华 20
-9107	时装精华 40
-9206	时装精华 10
-9207	时装精华 20
-9208	时装精华 30
-9209	时装精华 40
-9306	时装精华 40
-9307	时装精华 60
-9308	时装精华 10
-9309	时装精华 20
-93010	时装精华 30
-9406	时装精华 10
-9407	时装精华 20
-9408	时装水晶 200
-9409	时装精华 30
-9506	时装精华 20
-9507	时装精华 40
-9508	时装精华 60
-9509	时装精华 50
-9510	时装精华 30
-9606	时装精华 20
-9607	时装精华 40
-9608	时装精华 60
-9706	时装精华 10
-9707	时装精华 20
-9708	时装精华 30
-9806	时装精华 20
-9807	时装精华 40
-9808	时装精华 60
-9809	时装精华 50
-9810	时装精华 30
-98011	时装精华 10
-9906	时装精华 20
-9907	时装精华 40
-9908	时装精华 60
-9909	时装精华 50
-99010	时装精华 30
+1107	Costume Crystal 150
+1108	Costume Essence 20
+1109	Costume Essence 40
+11010	Costume Essence 10
+11011	Costume Crystal 75
+1116	Costume Crystal 150
+1117	Costume Essence 60
+1118	Costume Essence 20
+1119	Costume Crystal 200
+11110	Costume Essence 10
+11111	Costume Essence 15
+1126	Costume Essence 20
+1127	Costume Essence 40
+1128	Costume Essence 60
+1129	Costume Essence 50
+1136	Costume Essence 20
+1137	Costume Essence 40
+1138	Costume Essence 60
+1146	Costume Essence 20
+1147	Costume Essence 40
+1148	Costume Essence 60
+1156	Costume Essence 20
+1157	Costume Essence 40
+1158	Costume Essence 60
+1166	Costume Essence 40
+1167	Costume Essence 60
+1168	Costume Essence 20
+1176	Costume Essence 40
+1177	Costume Essence 60
+1178	Costume Essence 50
+1186	Costume Essence 20
+1187	Costume Essence 40
+1188	Costume Essence 60
+1189	Costume Essence 50
+1196	Costume Essence 20
+1197	Costume Essence 40
+1198	Costume Essence 60
+1226	Costume Essence 20
+1227	Costume Essence 40
+1228	Costume Essence 60
+1229	Costume Essence 50
+1236	Costume Essence 20
+1237	Costume Essence 40
+1238	Costume Essence 60
+1239	Costume Essence 50
+1246	Costume Essence 20
+1247	Costume Essence 40
+1248	Costume Essence 60
+1249	Costume Essence 50
+1256	Costume Essence 20
+1257	Costume Essence 40
+1258	Costume Essence 60
+1259	Costume Essence 50
+1304	Costume Crystal 100
+1706	Costume Crystal 150
+1707	Costume Essence 60
+1708	Costume Essence 20
+1709	Free plants available for redemption
+17010	Costume Essence 10
+17011	Costume Essence 50
+17012	Costume Essence 15
+3608	Costume Crystal 200
+3609	Costume Essence 20
+3907	Costume Crystal 150
+3908	Costume Essence 20
+3909	Costume Crystal 200
+39010	Costume Essence 10
+4509	Costume Essence 10
+4608	Costume Essence 20
+4609	Costume Essence 40
+46010	Costume Essence 10
+46011	Costume Essence 30
+4706	Costume Essence 20
+4707	Costume Essence 30
+4708	Costume Essence 40
+4709	Costume Crystal 250
+47010	Costume Essence 10
+47011	Costume Crystal 300
+4908	Costume Essence 20
+4909	Costume Essence 40
+49010	Costume Essence 60
+49011	Costume Essence 30
+5509	Costume Crystal 200
+5606	Costume Crystal 150
+5607	Costume Crystal 300
+5608	Costume Essence 20
+5609	Costume Essence 40
+56010	Costume Essence 10
+56011	Costume Crystal 250
+5706	Costume Crystal 150
+5707	Costume Essence 60
+5708	Costume Essence 20
+5709	Costume Essence 40
+6206	Free plants available for redemption
+6207	Costume Essence 60
+6208	Costume Essence 20
+6209	Costume Essence 40
+62010	Costume Essence 10
+62011	Costume Crystal 250
+6409	Costume Essence 40
+6507	Costume Essence 60
+6508	Costume Essence 20
+6509	Costume Essence 40
+65010	Costume Crystal 150
+65011	Costume Essence 10
+65012	Costume Crystal 250
+6707	Costume Crystal 300
+6708	Costume Essence 20
+6709	Costume Essence 40
+6907	Costume Crystal 150
+6908	Costume Essence 20
+6909	Free plants available for redemption
+69010	Costume Essence 60
+69011	Costume Essence 10
+7209	Costume Essence 40
+72010	Costume Essence 10
+72011	Costume Essence 20
+72012	Costume Essence 30
+72013	Costume Crystal 300
+7407	Costume Crystal 150
+7408	Costume Essence 20
+7409	Costume Essence 40
+74010	Costume Essence 10
+74011	Costume Essence 60
+7508	Costume Essence 20
+7509	Costume Essence 40
+75010	Costume Essence 10
+7606	Costume Essence 20
+7607	Costume Crystal 200
+7608	Costume Crystal 150
+7609	Costume Essence 10
+7706	Costume Essence 20
+7707	Costume Crystal 200
+7807	Costume Essence 60
+7808	Costume Essence 20
+7809	Costume Essence 40
+78010	Costume Essence 30
+78011	Costume Essence 10
+7906	Costume Essence 20
+7907	Costume Essence 40
+7908	Costume Essence 60
+8008	Costume Essence 60
+8009	Costume Essence 40
+80010	Costume Essence 10
+80011	Costume Essence 20
+80012	Costume Essence 30
+8108	Costume Essence 20
+8109	Costume Essence 40
+81010	Costume Essence 30
+81011	Costume Essence 10
+81012	Costume Essence 60
+8307	Costume Essence 60
+8308	Costume Essence 20
+8309	Costume Essence 40
+83010	Costume Essence 10
+8506	Costume Essence 30
+8507	Costume Essence 20
+8508	Costume Essence 60
+8509	Costume Essence 40
+8607	Costume Essence 60
+8608	Costume Essence 20
+8609	Costume Essence 40
+8707	Costume Essence 60
+8708	Costume Essence 20
+8709	Costume Essence 40
+8806	Costume Essence 40
+8807	Costume Essence 10
+8808	Costume Essence 20
+8809	Costume Essence 30
+8906	Costume Essence 40
+8907	Costume Essence 60
+8908	Costume Essence 20
+8909	Costume Essence 10
+89010	Costume Essence 30
+89011	Costume Essence 50
+89012	Costume Essence 60
+9006	Costume Essence 10
+9007	Costume Essence 20
+9008	Costume Essence 30
+90010	Costume Essence 40
+9106	Costume Essence 20
+9107	Costume Essence 40
+9206	Costume Essence 10
+9207	Costume Essence 20
+9208	Costume Essence 30
+9209	Costume Essence 40
+9306	Costume Essence 40
+9307	Costume Essence 60
+9308	Costume Essence 10
+9309	Costume Essence 20
+93010	Costume Essence 30
+9406	Costume Essence 10
+9407	Costume Essence 20
+9408	Costume Crystal 200
+9409	Costume Essence 30
+9506	Costume Essence 20
+9507	Costume Essence 40
+9508	Costume Essence 60
+9509	Costume Essence 50
+9510	Costume Essence 30
+9606	Costume Essence 20
+9607	Costume Essence 40
+9608	Costume Essence 60
+9706	Costume Essence 10
+9707	Costume Essence 20
+9708	Costume Essence 30
+9806	Costume Essence 20
+9807	Costume Essence 40
+9808	Costume Essence 60
+9809	Costume Essence 50
+9810	Costume Essence 30
+98011	Costume Essence 10
+9906	Costume Essence 20
+9907	Costume Essence 40
+9908	Costume Essence 60
+9909	Costume Essence 50
+99010	Costume Essence 30
 1101	
-1102	植物升至绿色品质
-1103	植物升至蓝色品质
-1104	植物升至紫色品质
-1105	植物升至橙色品质
+1102	Upgrade plant to Green quality
+1103	Upgrade plant to Blue quality
+1104	Upgrade plant to Purple quality
+1105	Upgrade plant to Orange quality
 1111	
-1112	植物升至绿色品质
-1113	植物升至蓝色品质
-1114	植物升至紫色品质
-1115	植物升至橙色品质
+1112	Upgrade plant to Green quality
+1113	Upgrade plant to Blue quality
+1114	Upgrade plant to Purple quality
+1115	Upgrade plant to Orange quality
 1121	
-1122	植物升至绿色品质
-1123	植物升至蓝色品质
-1124	植物升至紫色品质
-1125	植物升至橙色品质
+1122	Upgrade plant to Green quality
+1123	Upgrade plant to Blue quality
+1124	Upgrade plant to Purple quality
+1125	Upgrade plant to Orange quality
 1131	
-1132	植物升至绿色品质
-1133	植物升至蓝色品质
-1134	植物升至紫色品质
-1135	植物升至橙色品质
+1132	Upgrade plant to Green quality
+1133	Upgrade plant to Blue quality
+1134	Upgrade plant to Purple quality
+1135	Upgrade plant to Orange quality
 1141	
-1142	植物升至绿色品质
-1143	植物升至蓝色品质
-1144	植物升至紫色品质
-1145	植物升至橙色品质
+1142	Upgrade plant to Green quality
+1143	Upgrade plant to Blue quality
+1144	Upgrade plant to Purple quality
+1145	Upgrade plant to Orange quality
 1151	
-1152	植物升至绿色品质
-1153	植物升至蓝色品质
-1154	植物升至紫色品质
-1155	植物升至橙色品质
+1152	Upgrade plant to Green quality
+1153	Upgrade plant to Blue quality
+1154	Upgrade plant to Purple quality
+1155	Upgrade plant to Orange quality
 1161	
-1162	植物升至绿色品质
-1163	植物升至蓝色品质
-1164	植物升至紫色品质
-1165	植物升至橙色品质
+1162	Upgrade plant to Green quality
+1163	Upgrade plant to Blue quality
+1164	Upgrade plant to Purple quality
+1165	Upgrade plant to Orange quality
 1171	
-1172	植物升至绿色品质
-1173	植物升至蓝色品质
-1174	植物升至紫色品质
-1175	植物升至橙色品质
+1172	Upgrade plant to Green quality
+1173	Upgrade plant to Blue quality
+1174	Upgrade plant to Purple quality
+1175	Upgrade plant to Orange quality
 1181	
-1182	植物升至绿色品质
-1183	植物升至蓝色品质
-1184	植物升至紫色品质
-1185	植物升至橙色品质
+1182	Upgrade plant to Green quality
+1183	Upgrade plant to Blue quality
+1184	Upgrade plant to Purple quality
+1185	Upgrade plant to Orange quality
 1191	
-1192	植物升至绿色品质
-1193	植物升至蓝色品质
-1194	植物升至紫色品质
-1195	植物升至橙色品质
+1192	Upgrade plant to Green quality
+1193	Upgrade plant to Blue quality
+1194	Upgrade plant to Purple quality
+1195	Upgrade plant to Orange quality
 1201	
-1202	植物升至绿色品质
-1203	植物升至蓝色品质
-1204	植物升至紫色品质
-1205	植物升至橙色品质
+1202	Upgrade plant to Green quality
+1203	Upgrade plant to Blue quality
+1204	Upgrade plant to Purple quality
+1205	Upgrade plant to Orange quality
 1211	
-1212	植物升至绿色品质
-1213	植物升至蓝色品质
-1214	植物升至紫色品质
-1215	植物升至橙色品质
+1212	Upgrade plant to Green quality
+1213	Upgrade plant to Blue quality
+1214	Upgrade plant to Purple quality
+1215	Upgrade plant to Orange quality
 1221	
-1222	植物升至绿色品质
-1223	植物升至蓝色品质
-1224	植物升至紫色品质
-1225	植物升至橙色品质
+1222	Upgrade plant to Green quality
+1223	Upgrade plant to Blue quality
+1224	Upgrade plant to Purple quality
+1225	Upgrade plant to Orange quality
 1231	
-1232	植物升至绿色品质
-1233	植物升至蓝色品质
-1234	植物升至紫色品质
-1235	植物升至橙色品质
+1232	Upgrade plant to Green quality
+1233	Upgrade plant to Blue quality
+1234	Upgrade plant to Purple quality
+1235	Upgrade plant to Orange quality
 1241	
-1242	植物升至绿色品质
-1243	植物升至蓝色品质
-1244	植物升至紫色品质
-1245	植物升至橙色品质
+1242	Upgrade plant to Green quality
+1243	Upgrade plant to Blue quality
+1244	Upgrade plant to Purple quality
+1245	Upgrade plant to Orange quality
 1251	
-1252	植物升至绿色品质
-1253	植物升至蓝色品质
-1254	植物升至紫色品质
-1255	植物升至橙色品质
+1252	Upgrade plant to Green quality
+1253	Upgrade plant to Blue quality
+1254	Upgrade plant to Purple quality
+1255	Upgrade plant to Orange quality
 1301	
-1302	植物升至绿色品质
-1303	植物升至蓝色品质
-1305	植物升至紫色品质
-1306	植物升至橙色品质
+1302	Upgrade plant to Green quality
+1303	Upgrade plant to Blue quality
+1305	Upgrade plant to Purple quality
+1306	Upgrade plant to Orange quality
 1401	
-1402	植物升至绿色品质
-1403	植物升至蓝色品质
-1404	植物升至紫色品质
-1405	植物升至橙色品质
+1402	Upgrade plant to Green quality
+1403	Upgrade plant to Blue quality
+1404	Upgrade plant to Purple quality
+1405	Upgrade plant to Orange quality
 1501	
-1502	植物升至绿色品质
-1503	植物升至蓝色品质
-1504	植物升至紫色品质
-1505	植物升至橙色品质
+1502	Upgrade plant to Green quality
+1503	Upgrade plant to Blue quality
+1504	Upgrade plant to Purple quality
+1505	Upgrade plant to Orange quality
 1601	
-1602	植物升至绿色品质
-1603	植物升至蓝色品质
-1604	植物升至紫色品质
-1605	植物升至橙色品质
+1602	Upgrade plant to Green quality
+1603	Upgrade plant to Blue quality
+1604	Upgrade plant to Purple quality
+1605	Upgrade plant to Orange quality
 1701	
-1702	植物升至绿色品质
-1703	植物升至蓝色品质
-1704	植物升至紫色品质
-1705	植物升至橙色品质
+1702	Upgrade plant to Green quality
+1703	Upgrade plant to Blue quality
+1704	Upgrade plant to Purple quality
+1705	Upgrade plant to Orange quality
 1801	
-1802	植物升至绿色品质
-1803	植物升至蓝色品质
-1804	植物升至紫色品质
-1805	植物升至橙色品质
+1802	Upgrade plant to Green quality
+1803	Upgrade plant to Blue quality
+1804	Upgrade plant to Purple quality
+1805	Upgrade plant to Orange quality
 1901	
-1902	植物升至绿色品质
-1903	植物升至蓝色品质
-1904	植物升至紫色品质
-1905	植物升至橙色品质
+1902	Upgrade plant to Green quality
+1903	Upgrade plant to Blue quality
+1904	Upgrade plant to Purple quality
+1905	Upgrade plant to Orange quality
 2001	
-2002	植物升至绿色品质
-2003	植物升至蓝色品质
-2004	植物升至紫色品质
-2005	植物升至橙色品质
+2002	Upgrade plant to Green quality
+2003	Upgrade plant to Blue quality
+2004	Upgrade plant to Purple quality
+2005	Upgrade plant to Orange quality
 3101	
-3102	植物升至绿色品质
-3103	植物升至蓝色品质
-3104	植物升至紫色品质
-3105	植物升至橙色品质
+3102	Upgrade plant to Green quality
+3103	Upgrade plant to Blue quality
+3104	Upgrade plant to Purple quality
+3105	Upgrade plant to Orange quality
 3201	
-3202	植物升至绿色品质
-3203	植物升至蓝色品质
-3204	植物升至紫色品质
-3205	植物升至橙色品质
+3202	Upgrade plant to Green quality
+3203	Upgrade plant to Blue quality
+3204	Upgrade plant to Purple quality
+3205	Upgrade plant to Orange quality
 3301	
-3302	植物升至绿色品质
-3303	植物升至蓝色品质
-3304	植物升至紫色品质
-3305	植物升至橙色品质
+3302	Upgrade plant to Green quality
+3303	Upgrade plant to Blue quality
+3304	Upgrade plant to Purple quality
+3305	Upgrade plant to Orange quality
 3601	
-3602	植物升至绿色品质
-3603	植物升至蓝色品质
-3604	植物升至紫色品质
-3605	植物升至橙色品质
+3602	Upgrade plant to Green quality
+3603	Upgrade plant to Blue quality
+3604	Upgrade plant to Purple quality
+3605	Upgrade plant to Orange quality
 3701	
-3702	植物升至绿色品质
-3703	植物升至蓝色品质
-3704	植物升至紫色品质
-3705	植物升至橙色品质
+3702	Upgrade plant to Green quality
+3703	Upgrade plant to Blue quality
+3704	Upgrade plant to Purple quality
+3705	Upgrade plant to Orange quality
 3901	
-3902	植物升至绿色品质
-3903	植物升至蓝色品质
-3904	植物升至紫色品质
-3905	植物升至橙色品质
+3902	Upgrade plant to Green quality
+3903	Upgrade plant to Blue quality
+3904	Upgrade plant to Purple quality
+3905	Upgrade plant to Orange quality
 4101	
-4102	植物升至绿色品质
-4103	植物升至蓝色品质
-4104	植物升至紫色品质
-4105	植物升至橙色品质
+4102	Upgrade plant to Green quality
+4103	Upgrade plant to Blue quality
+4104	Upgrade plant to Purple quality
+4105	Upgrade plant to Orange quality
 4201	
-4202	植物升至绿色品质
-4203	植物升至蓝色品质
-4204	植物升至紫色品质
-4205	植物升至橙色品质
+4202	Upgrade plant to Green quality
+4203	Upgrade plant to Blue quality
+4204	Upgrade plant to Purple quality
+4205	Upgrade plant to Orange quality
 4301	
-4302	植物升至绿色品质
-4303	植物升至蓝色品质
-4304	植物升至紫色品质
-4305	植物升至橙色品质
+4302	Upgrade plant to Green quality
+4303	Upgrade plant to Blue quality
+4304	Upgrade plant to Purple quality
+4305	Upgrade plant to Orange quality
 4401	
-4402	植物升至绿色品质
-4403	植物升至蓝色品质
-4404	植物升至紫色品质
-4405	植物升至橙色品质
+4402	Upgrade plant to Green quality
+4403	Upgrade plant to Blue quality
+4404	Upgrade plant to Purple quality
+4405	Upgrade plant to Orange quality
 4501	
-4502	植物升至绿色品质
-4503	植物升至蓝色品质
-4504	植物升至紫色品质
-4505	植物升至橙色品质
+4502	Upgrade plant to Green quality
+4503	Upgrade plant to Blue quality
+4504	Upgrade plant to Purple quality
+4505	Upgrade plant to Orange quality
 4601	
-4602	植物升至绿色品质
-4603	植物升至蓝色品质
-4604	植物升至紫色品质
-4605	植物升至橙色品质
+4602	Upgrade plant to Green quality
+4603	Upgrade plant to Blue quality
+4604	Upgrade plant to Purple quality
+4605	Upgrade plant to Orange quality
 4701	
-4702	植物升至绿色品质
-4703	植物升至蓝色品质
-4704	植物升至紫色品质
-4705	植物升至橙色品质
+4702	Upgrade plant to Green quality
+4703	Upgrade plant to Blue quality
+4704	Upgrade plant to Purple quality
+4705	Upgrade plant to Orange quality
 5301	
-5302	植物升至绿色品质
-5303	植物升至蓝色品质
-5304	植物升至紫色品质
-5305	植物升至橙色品质
+5302	Upgrade plant to Green quality
+5303	Upgrade plant to Blue quality
+5304	Upgrade plant to Purple quality
+5305	Upgrade plant to Orange quality
 5401	
-5402	植物升至绿色品质
-5403	植物升至蓝色品质
-5404	植物升至紫色品质
-5405	植物升至橙色品质
+5402	Upgrade plant to Green quality
+5403	Upgrade plant to Blue quality
+5404	Upgrade plant to Purple quality
+5405	Upgrade plant to Orange quality
 5501	
-5502	植物升至绿色品质
-5503	植物升至蓝色品质
-5504	植物升至紫色品质
-5505	植物升至橙色品质
+5502	Upgrade plant to Green quality
+5503	Upgrade plant to Blue quality
+5504	Upgrade plant to Purple quality
+5505	Upgrade plant to Orange quality
 5601	
-5602	植物升至绿色品质
-5603	植物升至蓝色品质
-5604	植物升至紫色品质
-5605	植物升至橙色品质
+5602	Upgrade plant to Green quality
+5603	Upgrade plant to Blue quality
+5604	Upgrade plant to Purple quality
+5605	Upgrade plant to Orange quality
 5701	
-5702	植物升至绿色品质
-5703	植物升至蓝色品质
-5704	植物升至紫色品质
-5705	植物升至橙色品质
+5702	Upgrade plant to Green quality
+5703	Upgrade plant to Blue quality
+5704	Upgrade plant to Purple quality
+5705	Upgrade plant to Orange quality
 5901	
-5902	植物升至绿色品质
-5903	植物升至蓝色品质
-5904	植物升至紫色品质
-5905	植物升至橙色品质
+5902	Upgrade plant to Green quality
+5903	Upgrade plant to Blue quality
+5904	Upgrade plant to Purple quality
+5905	Upgrade plant to Orange quality
 6001	
-6002	植物升至绿色品质
-6003	植物升至蓝色品质
-6004	植物升至紫色品质
-6005	植物升至橙色品质
+6002	Upgrade plant to Green quality
+6003	Upgrade plant to Blue quality
+6004	Upgrade plant to Purple quality
+6005	Upgrade plant to Orange quality
 6101	
-6102	植物升至绿色品质
-6103	植物升至蓝色品质
-6104	植物升至紫色品质
-6105	植物升至橙色品质
+6102	Upgrade plant to Green quality
+6103	Upgrade plant to Blue quality
+6104	Upgrade plant to Purple quality
+6105	Upgrade plant to Orange quality
 6201	
-6202	植物升至绿色品质
-6203	植物升至蓝色品质
-6204	植物升至紫色品质
-6205	植物升至橙色品质
+6202	Upgrade plant to Green quality
+6203	Upgrade plant to Blue quality
+6204	Upgrade plant to Purple quality
+6205	Upgrade plant to Orange quality
 6301	
-6302	植物升至绿色品质
-6303	植物升至蓝色品质
-6304	植物升至紫色品质
-6305	植物升至橙色品质
+6302	Upgrade plant to Green quality
+6303	Upgrade plant to Blue quality
+6304	Upgrade plant to Purple quality
+6305	Upgrade plant to Orange quality
 6401	
-6402	植物升至绿色品质
-6403	植物升至蓝色品质
-6404	植物升至紫色品质
-6405	植物升至橙色品质
+6402	Upgrade plant to Green quality
+6403	Upgrade plant to Blue quality
+6404	Upgrade plant to Purple quality
+6405	Upgrade plant to Orange quality
 6501	
-6502	植物升至绿色品质
-6503	植物升至蓝色品质
-6504	植物升至紫色品质
-6505	植物升至橙色品质
+6502	Upgrade plant to Green quality
+6503	Upgrade plant to Blue quality
+6504	Upgrade plant to Purple quality
+6505	Upgrade plant to Orange quality
 6601	
-6602	植物升至绿色品质
-6603	植物升至蓝色品质
-6604	植物升至紫色品质
-6605	植物升至橙色品质
+6602	Upgrade plant to Green quality
+6603	Upgrade plant to Blue quality
+6604	Upgrade plant to Purple quality
+6605	Upgrade plant to Orange quality
 6701	
-6702	植物升至绿色品质
-6703	植物升至蓝色品质
-6704	植物升至紫色品质
-6705	植物升至橙色品质
+6702	Upgrade plant to Green quality
+6703	Upgrade plant to Blue quality
+6704	Upgrade plant to Purple quality
+6705	Upgrade plant to Orange quality
 6901	
-6902	植物升至绿色品质
-6903	植物升至蓝色品质
-6904	植物升至紫色品质
-6905	植物升至橙色品质
+6902	Upgrade plant to Green quality
+6903	Upgrade plant to Blue quality
+6904	Upgrade plant to Purple quality
+6905	Upgrade plant to Orange quality
 7201	
-7202	植物升至绿色品质
-7203	植物升至蓝色品质
-7204	植物升至紫色品质
-7205	植物升至橙色品质
+7202	Upgrade plant to Green quality
+7203	Upgrade plant to Blue quality
+7204	Upgrade plant to Purple quality
+7205	Upgrade plant to Orange quality
 7401	
-7402	植物升至绿色品质
-7403	植物升至蓝色品质
-7404	植物升至紫色品质
-7405	植物升至橙色品质
+7402	Upgrade plant to Green quality
+7403	Upgrade plant to Blue quality
+7404	Upgrade plant to Purple quality
+7405	Upgrade plant to Orange quality
 7501	
-7502	植物升至绿色品质
-7503	植物升至蓝色品质
-7504	植物升至紫色品质
-7505	植物升至橙色品质
+7502	Upgrade plant to Green quality
+7503	Upgrade plant to Blue quality
+7504	Upgrade plant to Purple quality
+7505	Upgrade plant to Orange quality
 7601	
-7602	植物升至绿色品质
-7603	植物升至蓝色品质
-7604	植物升至紫色品质
-7605	植物升至橙色品质
+7602	Upgrade plant to Green quality
+7603	Upgrade plant to Blue quality
+7604	Upgrade plant to Purple quality
+7605	Upgrade plant to Orange quality
 7701	
-7702	植物升至绿色品质
-7703	植物升至蓝色品质
-7704	植物升至紫色品质
-7705	植物升至橙色品质
+7702	Upgrade plant to Green quality
+7703	Upgrade plant to Blue quality
+7704	Upgrade plant to Purple quality
+7705	Upgrade plant to Orange quality
 7801	
-7802	植物升至绿色品质
-7803	植物升至蓝色品质
-7804	植物升至紫色品质
-7805	植物升至橙色品质
+7802	Upgrade plant to Green quality
+7803	Upgrade plant to Blue quality
+7804	Upgrade plant to Purple quality
+7805	Upgrade plant to Orange quality
 7901	
-7902	植物升至绿色品质
-7903	植物升至蓝色品质
-7904	植物升至紫色品质
-7905	植物升至橙色品质
+7902	Upgrade plant to Green quality
+7903	Upgrade plant to Blue quality
+7904	Upgrade plant to Purple quality
+7905	Upgrade plant to Orange quality
 8001	
-8002	植物升至绿色品质
-8003	植物升至蓝色品质
-8004	植物升至紫色品质
-8005	植物升至橙色品质
+8002	Upgrade plant to Green quality
+8003	Upgrade plant to Blue quality
+8004	Upgrade plant to Purple quality
+8005	Upgrade plant to Orange quality
 8101	
-8102	植物升至绿色品质
-8103	植物升至蓝色品质
-8104	植物升至紫色品质
-8105	植物升至橙色品质
+8102	Upgrade plant to Green quality
+8103	Upgrade plant to Blue quality
+8104	Upgrade plant to Purple quality
+8105	Upgrade plant to Orange quality
 8201	
-8202	植物升至绿色品质
-8203	植物升至蓝色品质
-8204	植物升至紫色品质
-8205	植物升至橙色品质
+8202	Upgrade plant to Green quality
+8203	Upgrade plant to Blue quality
+8204	Upgrade plant to Purple quality
+8205	Upgrade plant to Orange quality
 8301	
-8302	植物升至绿色品质
-8303	植物升至蓝色品质
-8304	植物升至紫色品质
-8305	植物升至橙色品质
+8302	Upgrade plant to Green quality
+8303	Upgrade plant to Blue quality
+8304	Upgrade plant to Purple quality
+8305	Upgrade plant to Orange quality
 8401	
-8402	植物升至绿色品质
-8403	植物升至蓝色品质
-8404	植物升至紫色品质
-8405	植物升至橙色品质
+8402	Upgrade plant to Green quality
+8403	Upgrade plant to Blue quality
+8404	Upgrade plant to Purple quality
+8405	Upgrade plant to Orange quality
 8501	
-8502	植物升至绿色品质
-8503	植物升至蓝色品质
-8504	植物升至紫色品质
-8505	植物升至橙色品质
+8502	Upgrade plant to Green quality
+8503	Upgrade plant to Blue quality
+8504	Upgrade plant to Purple quality
+8505	Upgrade plant to Orange quality
 8601	
-8602	植物升至绿色品质
-8603	植物升至蓝色品质
-8604	植物升至紫色品质
-8605	植物升至橙色品质
+8602	Upgrade plant to Green quality
+8603	Upgrade plant to Blue quality
+8604	Upgrade plant to Purple quality
+8605	Upgrade plant to Orange quality
 8701	
-8702	植物升至绿色品质
-8703	植物升至蓝色品质
-8704	植物升至紫色品质
-8705	植物升至橙色品质
+8702	Upgrade plant to Green quality
+8703	Upgrade plant to Blue quality
+8704	Upgrade plant to Purple quality
+8705	Upgrade plant to Orange quality
 4901	
-4902	植物升至绿色品质
-4903	植物升至蓝色品质
-4904	植物升至紫色品质
-4905	植物升至橙色品质
+4902	Upgrade plant to Green quality
+4903	Upgrade plant to Blue quality
+4904	Upgrade plant to Purple quality
+4905	Upgrade plant to Orange quality
 8801	
-8802	植物升至绿色品质
-8803	植物升至蓝色品质
-8804	植物升至紫色品质
-8805	植物升至橙色品质
+8802	Upgrade plant to Green quality
+8803	Upgrade plant to Blue quality
+8804	Upgrade plant to Purple quality
+8805	Upgrade plant to Orange quality
 8901	
-8902	植物升至绿色品质
-8903	植物升至蓝色品质
-8904	植物升至紫色品质
-8905	植物升至橙色品质
+8902	Upgrade plant to Green quality
+8903	Upgrade plant to Blue quality
+8904	Upgrade plant to Purple quality
+8905	Upgrade plant to Orange quality
 9001	
-9002	植物升至绿色品质
-9003	植物升至蓝色品质
-9004	植物升至紫色品质
-9005	植物升至橙色品质
+9002	Upgrade plant to Green quality
+9003	Upgrade plant to Blue quality
+9004	Upgrade plant to Purple quality
+9005	Upgrade plant to Orange quality
 9101	
-9102	植物升至绿色品质
-9103	植物升至蓝色品质
-9104	植物升至紫色品质
-9105	植物升至橙色品质
+9102	Upgrade plant to Green quality
+9103	Upgrade plant to Blue quality
+9104	Upgrade plant to Purple quality
+9105	Upgrade plant to Orange quality
 9201	
-9202	植物升至绿色品质
-9203	植物升至蓝色品质
-9204	植物升至紫色品质
-9205	植物升至橙色品质
+9202	Upgrade plant to Green quality
+9203	Upgrade plant to Blue quality
+9204	Upgrade plant to Purple quality
+9205	Upgrade plant to Orange quality
 9301	
-9302	植物升至绿色品质
-9303	植物升至蓝色品质
-9304	植物升至紫色品质
-9305	植物升至橙色品质
+9302	Upgrade plant to Green quality
+9303	Upgrade plant to Blue quality
+9304	Upgrade plant to Purple quality
+9305	Upgrade plant to Orange quality
 9401	
-9402	植物升至绿色品质
-9403	植物升至蓝色品质
-9404	植物升至紫色品质
-9405	植物升至橙色品质
+9402	Upgrade plant to Green quality
+9403	Upgrade plant to Blue quality
+9404	Upgrade plant to Purple quality
+9405	Upgrade plant to Orange quality
 9501	
-9502	植物升至绿色品质
-9503	植物升至蓝色品质
-9504	植物升至紫色品质
-9505	植物升至橙色品质
+9502	Upgrade plant to Green quality
+9503	Upgrade plant to Blue quality
+9504	Upgrade plant to Purple quality
+9505	Upgrade plant to Orange quality
 9601	
-9602	植物升至绿色品质
-9603	植物升至蓝色品质
-9604	植物升至紫色品质
-9605	植物升至橙色品质
+9602	Upgrade plant to Green quality
+9603	Upgrade plant to Blue quality
+9604	Upgrade plant to Purple quality
+9605	Upgrade plant to Orange quality
 9701	
-9702	植物升至绿色品质
-9703	植物升至蓝色品质
-9704	植物升至紫色品质
-9705	植物升至橙色品质
+9702	Upgrade plant to Green quality
+9703	Upgrade plant to Blue quality
+9704	Upgrade plant to Purple quality
+9705	Upgrade plant to Orange quality
 9801	
-9802	植物升至绿色品质
-9803	植物升至蓝色品质
-9804	植物升至紫色品质
-9805	植物升至橙色品质
+9802	Upgrade plant to Green quality
+9803	Upgrade plant to Blue quality
+9804	Upgrade plant to Purple quality
+9805	Upgrade plant to Orange quality
 9901	
-9902	植物升至绿色品质
-9903	植物升至蓝色品质
-9904	植物升至紫色品质
-9905	植物升至橙色品质
+9902	Upgrade plant to Green quality
+9903	Upgrade plant to Blue quality
+9904	Upgrade plant to Purple quality
+9905	Upgrade plant to Orange quality

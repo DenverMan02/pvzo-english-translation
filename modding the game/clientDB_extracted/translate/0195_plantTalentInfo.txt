@@ -30,7 +30,7 @@ id	name	desc	condName	condDesc
 2401	Increase Defense	Health increased by 15%	Own 6 flower pots	Tap to jump to related feature
 2402	Sharp Fangs	Deal certain damage after biting zombies	Reach 42 points in today's Ranked Arena	Tap to jump to related feature
 2403	Sharp Blades and Teeth	Significantly increase damage effect	Upgrade Lab [Junior] Attack to level 20	Tap to jump to related feature
-2501	Rapid Growth	Cooldown reduced by 10 seconds	在战歌平原拥有4个矿区	Tap to jump to related feature
+2501	Rapid Growth	Cooldown reduced by 10 seconds	Own 4 mines in War Song Plains	Tap to jump to related feature
 2502	Melon-pult Explosion	Explodes upon disappearing, dealing damage to units outside the lane	Clear Stage 5 in Zombie Island	Tap to jump to related feature
 2601	Sturdy Physique	Health increased by 10%	Upgrade 4 plants to Level 40	Tap to jump to related feature
 2602	Spring Grass Grows Anew	Chance to revive once upon death	Upgrade Tree of Wisdom to level 15	Tap to jump to related feature

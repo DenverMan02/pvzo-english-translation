@@ -1,8 +1,8 @@
 id	name	desc
-1	傲慢	1.首关战力 大于等于 10w<br/>2.无治疗<br/>3.无傀儡<br/>4.前1200名晋级
-2	欲望	1.首关战力 大于等于 125w<br/>2.有治疗<br/>3.无傀儡<br/>4.前900名晋级，2800名之后降级
-3	暴食	1.首关战力 大于等于 185w<br/>2.有治疗<br/>3.有傀儡<br/>4.前600名晋级，2100名之后降级
-4	贪婪	1.首关战力 大于等于 235w<br/>2.有治疗<br/>3.有傀儡<br/>4.前300名晋级，1400名之后降级
-5	愤怒	1.首关战力 大于等于 290w<br/>2.有治疗<br/>3.有傀儡<br/>4.抵抗傀儡百分比伤害<br/>5.前100名晋级，700名之后降级
-6	异端	1.首关战力 大于等于 385w<br/>2.有治疗<br/>3.有傀儡<br/>4.抵抗傀儡百分比伤害<br/>5.所有负面状态免疫+10%<br/>6.前50名晋级，200名之后降级
-7	暴力	1.首关战力 大于等于 490w<br/>2.有治疗<br/>3.有傀儡<br/>4.抵抗傀儡百分比伤害<br/>5.所有负面状态免疫+15%<br/>6.100名之后降级
+1	Arrogance	1.Stage 1 Might ≥ 100k<br/>2.No Healing<br/>3.No Puppet<br/>4.Top 1200 advance
+2	Lust	1.Stage 1 Might ≥ 1,250k<br/>2.Has Healing<br/>3.No Puppet<br/>4.Top 900 advance, demoted after rank 2800
+3	Gluttony	1.Stage 1 Might ≥ 1,850k<br/>2.Has Healing<br/>3.Has Puppet<br/>4.Top 600 advance, demoted after rank 2100
+4	Greed	1.Stage 1 Might ≥ 2,350k<br/>2.Has Healing<br/>3.Has Puppet<br/>4.Top 300 advance, demoted after rank 1400
+5	Wrath	1.Stage 1 Might ≥ 2,900k<br/>2.Has Healing<br/>3.Has Puppet<br/>4.Resists Puppet % Damage<br/>5.Top 100 advance, demoted after rank 700
+6	Heresy	1.Stage 1 Might ≥ 3,850k<br/>2.Has Healing<br/>3.Has Puppet<br/>4.Resists Puppet % Damage<br/>5.All Debuff Immunity +10%<br/>6.Top 50 advance, demoted after rank 200
+7	Violence	1.Stage 1 Might ≥ 4,900k<br/>2.Has Healing<br/>3.Has Puppet<br/>4.Resists Puppet % Damage<br/>5.All Debuff Immunity +15%<br/>6.Demoted after rank 100

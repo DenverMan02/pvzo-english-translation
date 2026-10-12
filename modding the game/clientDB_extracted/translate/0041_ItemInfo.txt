@@ -174,7 +174,7 @@ id	name	desc	gainWay
 1048	Item Flower Seed 2	Plant in the Greenhouse to obtain a random item upon maturity.	
 1049	Item Flower Seed 3	Plant in the Greenhouse to obtain a random item upon maturity.	
 1050	Tool Flower Seed 4	Plant in the Greenhouse to obtain a random item upon maturity.	
-1090	Memory Card	"Used to carry over last week's ""Tower Defense Challenge"" scores"	
+1090	Memory Card	Used to carry over last week's ""ower Defense Challenge" scores	
 1091	Random Item	Randomly obtain 3 items: Magic Plant Coins, Plant Coins, 1-Star Chlorophyll, Energy Orbs, Puzzle Points, Costume Crystals, Coins.	Mystery Draw
 1100	Lucky	Increases luck in the Super Flip event. Once accumulated to a certain value, each flip grants multiplied rewards.	Super Card Flip Event
 1101	Speed-up Card	Speeds up troop march. Each use reduces remaining march time by 10%. Can be used repeatedly. Cannot be used when march time is under 15 seconds.	
@@ -1077,7 +1077,7 @@ id	name	desc	gainWay
 28302	Electric Blueberry (2-Star)	Rarity: 6<br>Basic Attack: Attacks the current target and grants 50% Lifesteal, scaling with Power.<br>Skill: Prioritizes attacking 5 random units in the center and rear of the formation, reducing their damage and healing output by 25% for 1 turn.	
 28303	Electric Blueberry (3-Star)	Rarity: 6<br>Basic Attack: Attacks the current target and gains 50% Lifesteal, scaled by Power.<br>Skill: Prioritizes attacking 5 random units in the center and rear of the formation, reducing their damage and healing output by 35% for 1 turn.	
 28402	Akee (2-Star)	Rarity: 5<br>Basic Attack: Attacks front target and deals bonus skill damage<br>Skill: Attacks all enemies in the front row with a 20% chance to immobilize them for 1 turn, and recovers 2 Energy at the end of the turn	
-28403	Akee (3-Star)	稀有度：5<br>普攻：攻击前方目标并附加技力伤害<br>技能：攻击前方横行的所有敌人并有30%几率使其定身1回合，回合结束时回复2点能量	
+28403	Akee (3-Star)	Rarity: 5<br>Basic Attack: Attacks the target ahead and deals skill damage<br>Skill: Attacks all enemies in the same row ahead and has a 30% chance to immobilize them for 1 turn, recovering 2 energy at the end of the turn	
 28502	Agave (2-Star)	Rarity: 6<br>Basic Attack: Inflicts 10% Bleed effect on the current target, scaled by Skill Power.<br>Skill: Attacks all enemy units and inflicts 20% Vulnerable effect on them for 1 turn, restores 2 Energy at the end of the turn.	
 28503	Agave (3-Star)	Rarity: 6<br>Basic Attack: Inflicts 10% Bleed effect on the current target, scaling with Energy Might.<br>Skill: Attacks all enemy units and inflicts a 30% Vulnerable effect on them for 1 turn, restores 2 Energy at the end of the turn.	
 28602	Moonflower (2-Star)	Rarity: 6<br>Basic Attack: Heals the ally with the lowest HP percentage and grants them 20% Thorns effect for 1 turn.<br>Skill: Heals all allies with moonlight power, cleanses Root and Silence statuses from teammates, and grants them a 20% damage bonus for 1 turn.	

@@ -1,5 +1,5 @@
 id	name
-1	初出茅庐
-2	一枝独秀
-3	骁勇善战
-4	势不可挡
+1	Greenhorn
+2	Stand Out
+3	Battle-Hardened
+4	Unstoppable

@@ -1,2 +1,2 @@
 id	name
-1	一站到底
+1	Last Stand

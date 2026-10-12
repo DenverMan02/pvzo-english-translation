@@ -1,361 +1,361 @@
 id	name
-100111	皇陵边缘
-100112	皇陵边缘
-100113	皇陵边缘
-100114	皇陵边缘
-100115	皇陵边缘
-100121	皇陵守卫1
-100122	皇陵守卫1
-100123	皇陵守卫1
-100124	皇陵守卫1
-100125	皇陵守卫1
-100131	皇陵守卫2
-100132	皇陵守卫2
-100133	皇陵守卫2
-100134	皇陵守卫2
-100135	皇陵守卫2
-100141	皇陵守卫3
-100142	皇陵守卫3
-100143	皇陵守卫3
-100144	皇陵守卫3
-100145	皇陵守卫3
-100151	皇陵守卫4
-100152	皇陵守卫4
-100153	皇陵守卫4
-100154	皇陵守卫4
-100155	皇陵守卫4
-100161	皇陵之战
-100162	皇陵之战
-100163	皇陵之战
-100164	皇陵之战
-100165	皇陵之战
-100211	沙漠边缘
-100212	沙漠边缘
-100213	沙漠边缘
-100214	沙漠边缘
-100215	沙漠边缘
-100221	沙漠群尸1
-100222	沙漠群尸1
-100223	沙漠群尸1
-100224	沙漠群尸1
-100225	沙漠群尸1
-100231	沙漠群尸2
-100232	沙漠群尸2
-100233	沙漠群尸2
-100234	沙漠群尸2
-100235	沙漠群尸2
-100241	沙漠群尸3
-100242	沙漠群尸3
-100243	沙漠群尸3
-100244	沙漠群尸3
-100245	沙漠群尸3
-100251	沙漠群尸4
-100252	沙漠群尸4
-100253	沙漠群尸4
-100254	沙漠群尸4
-100255	沙漠群尸4
-100261	沙漠之战
-100262	沙漠之战
-100263	沙漠之战
-100264	沙漠之战
-100265	沙漠之战
-100311	海盗迷踪
-100312	海盗迷踪
-100313	海盗迷踪
-100314	海盗迷踪
-100315	海盗迷踪
-100321	海盗船员1
-100322	海盗船员1
-100323	海盗船员1
-100324	海盗船员1
-100325	海盗船员1
-100331	海盗船员2
-100332	海盗船员2
-100333	海盗船员2
-100334	海盗船员2
-100335	海盗船员2
-100341	海盗船员3
-100342	海盗船员3
-100343	海盗船员3
-100344	海盗船员3
-100345	海盗船员3
-100351	海盗船员4
-100352	海盗船员4
-100353	海盗船员4
-100354	海盗船员4
-100355	海盗船员4
-100361	海盗之战
-100362	海盗之战
-100363	海盗之战
-100364	海盗之战
-100365	海盗之战
-100411	未来边缘
-100412	未来边缘
-100413	未来边缘
-100414	未来边缘
-100415	未来边缘
-100421	未来僵尸1
-100422	未来僵尸1
-100423	未来僵尸1
-100424	未来僵尸1
-100425	未来僵尸1
-100431	未来僵尸2
-100432	未来僵尸2
-100433	未来僵尸2
-100434	未来僵尸2
-100435	未来僵尸2
-100441	未来僵尸3
-100442	未来僵尸3
-100443	未来僵尸3
-100444	未来僵尸3
-100445	未来僵尸3
-100451	未来僵尸4
-100452	未来僵尸4
-100453	未来僵尸4
-100454	未来僵尸4
-100455	未来僵尸4
-100461	未来之战
-100462	未来之战
-100463	未来之战
-100464	未来之战
-100465	未来之战
-100511	冰川边缘
-100512	冰川边缘
-100513	冰川边缘
-100514	冰川边缘
-100515	冰川边缘
-100521	冰川蛮族1
-100522	冰川蛮族1
-100523	冰川蛮族1
-100524	冰川蛮族1
-100525	冰川蛮族1
-100531	冰川蛮族2
-100532	冰川蛮族2
-100533	冰川蛮族2
-100534	冰川蛮族2
-100535	冰川蛮族2
-100541	冰川蛮族3
-100542	冰川蛮族3
-100543	冰川蛮族3
-100544	冰川蛮族3
-100545	冰川蛮族3
-100551	冰川蛮族4
-100552	冰川蛮族4
-100553	冰川蛮族4
-100554	冰川蛮族4
-100555	冰川蛮族4
-100561	冰川之战
-100562	冰川之战
-100563	冰川之战
-100564	冰川之战
-100565	冰川之战
-100611	龙宫边缘
-100612	龙宫边缘
-100613	龙宫边缘
-100614	龙宫边缘
-100615	龙宫边缘
-100621	龙宫守卫1
-100622	龙宫守卫1
-100623	龙宫守卫1
-100624	龙宫守卫1
-100625	龙宫守卫1
-100631	龙宫守卫2
-100632	龙宫守卫2
-100633	龙宫守卫2
-100634	龙宫守卫2
-100635	龙宫守卫2
-100641	龙宫守卫3
-100642	龙宫守卫3
-100643	龙宫守卫3
-100644	龙宫守卫3
-100645	龙宫守卫3
-100651	龙宫守卫4
-100652	龙宫守卫4
-100653	龙宫守卫4
-100654	龙宫守卫4
-100655	龙宫守卫4
-100661	龙宫之战
-100662	龙宫之战
-100663	龙宫之战
-100664	龙宫之战
-100665	龙宫之战
-100711	火山边缘
-100712	火山边缘
-100713	火山边缘
-100714	火山边缘
-100715	火山边缘
-100721	火山僵群1
-100722	火山僵群1
-100723	火山僵群1
-100724	火山僵群1
-100725	火山僵群1
-100731	火山僵群2
-100732	火山僵群2
-100733	火山僵群2
-100734	火山僵群2
-100735	火山僵群2
-100741	火山僵群3
-100742	火山僵群3
-100743	火山僵群3
-100744	火山僵群3
-100745	火山僵群3
-100751	火山僵群4
-100752	火山僵群4
-100753	火山僵群4
-100754	火山僵群4
-100755	火山僵群4
-100761	火山之战
-100762	火山之战
-100763	火山之战
-100764	火山之战
-100765	火山之战
-100811	密境边缘
-100812	密境边缘
-100813	密境边缘
-100814	密境边缘
-100815	密境边缘
-100821	密境僵尸1
-100822	密境僵尸1
-100823	密境僵尸1
-100824	密境僵尸1
-100825	密境僵尸1
-100831	密境僵尸2
-100832	密境僵尸2
-100833	密境僵尸2
-100834	密境僵尸2
-100835	密境僵尸2
-100841	密境僵尸3
-100842	密境僵尸3
-100843	密境僵尸3
-100844	密境僵尸3
-100845	密境僵尸3
-100851	密境僵尸4
-100852	密境僵尸4
-100853	密境僵尸4
-100854	密境僵尸4
-100855	密境僵尸4
-100861	密境之战
-100862	密境之战
-100863	密境之战
-100864	密境之战
-100865	密境之战
-100911	深渊边境1
-100912	深渊边境1
-100913	深渊边境1
-100914	深渊边境1
-100915	深渊边境1
-100921	深渊边境2
-100922	深渊边境2
-100923	深渊边境2
-100924	深渊边境2
-100925	深渊边境2
-100931	深渊边境3
-100932	深渊边境3
-100933	深渊边境3
-100934	深渊边境3
-100935	深渊边境3
-100941	深渊边境4
-100942	深渊边境4
-100943	深渊边境4
-100944	深渊边境4
-100945	深渊边境4
-100951	深渊边境5
-100952	深渊边境5
-100953	深渊边境5
-100954	深渊边境5
-100955	深渊边境5
-100961	深渊之境
-100962	深渊之境
-100963	深渊之境
-100964	深渊之境
-100965	深渊之境
-101011	至暗边缘1
-101012	至暗边缘1
-101013	至暗边缘1
-101014	至暗边缘1
-101015	至暗边缘1
-101021	至暗边缘2
-101022	至暗边缘2
-101023	至暗边缘2
-101024	至暗边缘2
-101025	至暗边缘2
-101031	至暗边缘3
-101032	至暗边缘3
-101033	至暗边缘3
-101034	至暗边缘3
-101035	至暗边缘3
-101041	至暗边缘4
-101042	至暗边缘4
-101043	至暗边缘4
-101044	至暗边缘4
-101045	至暗边缘4
-101051	至暗边缘5
-101052	至暗边缘5
-101053	至暗边缘5
-101054	至暗边缘5
-101055	至暗边缘5
-101061	至暗之境
-101062	至暗之境
-101063	至暗之境
-101064	至暗之境
-101065	至暗之境
-200111	皇陵边缘
-200121	皇陵守卫1
-200131	皇陵守卫2
-200141	皇陵守卫3
-200151	皇陵守卫4
-200161	皇陵之战
-200211	沙漠边缘
-200221	沙漠群尸1
-200231	沙漠群尸2
-200241	沙漠群尸3
-200251	沙漠群尸4
-200261	沙漠之战
-200311	海盗迷踪
-200321	海盗船员1
-200331	海盗船员2
-200341	海盗船员3
-200351	海盗船员4
-200361	海盗之战
-200411	未来边缘
-200421	未来僵尸1
-200431	未来僵尸2
-200441	未来僵尸3
-200451	未来僵尸4
-200461	未来之战
-200511	冰川边缘
-200521	冰川蛮族1
-200531	冰川蛮族2
-200541	冰川蛮族3
-200551	冰川蛮族4
-200561	冰川之战
-200611	龙宫边缘
-200621	龙宫守卫1
-200631	龙宫守卫2
-200641	龙宫守卫3
-200651	龙宫守卫4
-200661	龙宫之战
-200711	火山边缘
-200721	火山僵群1
-200731	火山僵群2
-200741	火山僵群3
-200751	火山僵群4
-200761	火山之战
-200811	密境边缘
-200821	密境僵尸1
-200831	密境僵尸2
-200841	密境僵尸3
-200851	密境僵尸4
-200861	密境之战
-200911	深渊边境1
-200921	深渊边境2
-200931	深渊边境3
-200941	深渊边境4
-200951	深渊边境5
-200961	深渊之境
-201011	至暗边缘1
-201021	至暗边缘2
-201031	至暗边缘3
-201041	至暗边缘4
-201051	至暗边缘5
-201061	至暗之境
+100111	Imperial Tomb Edge
+100112	Imperial Tomb Edge
+100113	Imperial Tomb Edge
+100114	Imperial Tomb Edge
+100115	Imperial Tomb Edge
+100121	Mausoleum Guard 1
+100122	Mausoleum Guard 1
+100123	Mausoleum Guard 1
+100124	Mausoleum Guard 1
+100125	Mausoleum Guard 1
+100131	Mausoleum Guard 2
+100132	Mausoleum Guard 2
+100133	Mausoleum Guard 2
+100134	Mausoleum Guard 2
+100135	Mausoleum Guard 2
+100141	Imperial Tomb Guard 3
+100142	Imperial Tomb Guard 3
+100143	Imperial Tomb Guard 3
+100144	Imperial Tomb Guard 3
+100145	Imperial Tomb Guard 3
+100151	Mausoleum Guard 4
+100152	Mausoleum Guard 4
+100153	Mausoleum Guard 4
+100154	Mausoleum Guard 4
+100155	Mausoleum Guard 4
+100161	Mausoleum Battle
+100162	Mausoleum Battle
+100163	Mausoleum Battle
+100164	Mausoleum Battle
+100165	Mausoleum Battle
+100211	Desert Edge
+100212	Desert Edge
+100213	Desert Edge
+100214	Desert Edge
+100215	Desert Edge
+100221	Desert Horde 1
+100222	Desert Horde 1
+100223	Desert Horde 1
+100224	Desert Horde 1
+100225	Desert Horde 1
+100231	Desert Horde 2
+100232	Desert Horde 2
+100233	Desert Horde 2
+100234	Desert Horde 2
+100235	Desert Horde 2
+100241	Desert Horde 3
+100242	Desert Horde 3
+100243	Desert Horde 3
+100244	Desert Horde 3
+100245	Desert Horde 3
+100251	Desert Zombie Horde 4
+100252	Desert Zombie Horde 4
+100253	Desert Zombie Horde 4
+100254	Desert Zombie Horde 4
+100255	Desert Zombie Horde 4
+100261	Desert Battle
+100262	Desert Battle
+100263	Desert Battle
+100264	Desert Battle
+100265	Desert Battle
+100311	Pirate Trail
+100312	Pirate Trail
+100313	Pirate Trail
+100314	Pirate Trail
+100315	Pirate Trail
+100321	Pirate Crew 1
+100322	Pirate Crew 1
+100323	Pirate Crew 1
+100324	Pirate Crew 1
+100325	Pirate Crew 1
+100331	Pirate Crew 2
+100332	Pirate Crew 2
+100333	Pirate Crew 2
+100334	Pirate Crew 2
+100335	Pirate Crew 2
+100341	Pirate Crew 3
+100342	Pirate Crew 3
+100343	Pirate Crew 3
+100344	Pirate Crew 3
+100345	Pirate Crew 3
+100351	Pirate Crew 4
+100352	Pirate Crew 4
+100353	Pirate Crew 4
+100354	Pirate Crew 4
+100355	Pirate Crew 4
+100361	Pirate Battle
+100362	Pirate Battle
+100363	Pirate Battle
+100364	Pirate Battle
+100365	Pirate Battle
+100411	Future Edge
+100412	Future Edge
+100413	Future Edge
+100414	Future Edge
+100415	Future Edge
+100421	Future Zombie 1
+100422	Future Zombie 1
+100423	Future Zombie 1
+100424	Future Zombie 1
+100425	Future Zombie 1
+100431	Future Zombie 2
+100432	Future Zombie 2
+100433	Future Zombie 2
+100434	Future Zombie 2
+100435	Future Zombie 2
+100441	Future Zombie 3
+100442	Future Zombie 3
+100443	Future Zombie 3
+100444	Future Zombie 3
+100445	Future Zombie 3
+100451	Future Zombie 4
+100452	Future Zombie 4
+100453	Future Zombie 4
+100454	Future Zombie 4
+100455	Future Zombie 4
+100461	Future Battle
+100462	Future Battle
+100463	Future Battle
+100464	Future Battle
+100465	Future Battle
+100511	Glacier Edge
+100512	Glacier Edge
+100513	Glacier Edge
+100514	Glacier Edge
+100515	Glacier Edge
+100521	Glacier Barbarian 1
+100522	Glacier Barbarian 1
+100523	Glacier Barbarian 1
+100524	Glacier Barbarian 1
+100525	Glacier Barbarian 1
+100531	Glacier Barbarian 2
+100532	Glacier Barbarian 2
+100533	Glacier Barbarian 2
+100534	Glacier Barbarian 2
+100535	Glacier Barbarian 2
+100541	Glacier Barbarian 3
+100542	Glacier Barbarian 3
+100543	Glacier Barbarian 3
+100544	Glacier Barbarian 3
+100545	Glacier Barbarian 3
+100551	Glacial Barbarian 4
+100552	Glacial Barbarian 4
+100553	Glacial Barbarian 4
+100554	Glacial Barbarian 4
+100555	Glacial Barbarian 4
+100561	Battle of the Glacier
+100562	Battle of the Glacier
+100563	Battle of the Glacier
+100564	Battle of the Glacier
+100565	Battle of the Glacier
+100611	Dragon Palace Edge
+100612	Dragon Palace Edge
+100613	Dragon Palace Edge
+100614	Dragon Palace Edge
+100615	Dragon Palace Edge
+100621	Dragon Palace Guard 1
+100622	Dragon Palace Guard 1
+100623	Dragon Palace Guard 1
+100624	Dragon Palace Guard 1
+100625	Dragon Palace Guard 1
+100631	Dragon Palace Guard 2
+100632	Dragon Palace Guard 2
+100633	Dragon Palace Guard 2
+100634	Dragon Palace Guard 2
+100635	Dragon Palace Guard 2
+100641	Dragon Palace Guard 3
+100642	Dragon Palace Guard 3
+100643	Dragon Palace Guard 3
+100644	Dragon Palace Guard 3
+100645	Dragon Palace Guard 3
+100651	Dragon Palace Guard 4
+100652	Dragon Palace Guard 4
+100653	Dragon Palace Guard 4
+100654	Dragon Palace Guard 4
+100655	Dragon Palace Guard 4
+100661	Dragon Palace Battle
+100662	Dragon Palace Battle
+100663	Dragon Palace Battle
+100664	Dragon Palace Battle
+100665	Dragon Palace Battle
+100711	Volcano Edge
+100712	Volcano Edge
+100713	Volcano Edge
+100714	Volcano Edge
+100715	Volcano Edge
+100721	Volcano Zombie Swarm 1
+100722	Volcano Zombie Swarm 1
+100723	Volcano Zombie Swarm 1
+100724	Volcano Zombie Swarm 1
+100725	Volcano Zombie Swarm 1
+100731	Volcano Zombie Horde 2
+100732	Volcano Zombie Horde 2
+100733	Volcano Zombie Horde 2
+100734	Volcano Zombie Horde 2
+100735	Volcano Zombie Horde 2
+100741	Volcano Zombie Horde 3
+100742	Volcano Zombie Horde 3
+100743	Volcano Zombie Horde 3
+100744	Volcano Zombie Horde 3
+100745	Volcano Zombie Horde 3
+100751	Volcano Zombie Horde 4
+100752	Volcano Zombie Horde 4
+100753	Volcano Zombie Horde 4
+100754	Volcano Zombie Horde 4
+100755	Volcano Zombie Horde 4
+100761	Volcano Battle
+100762	Volcano Battle
+100763	Volcano Battle
+100764	Volcano Battle
+100765	Volcano Battle
+100811	Mystic Edge
+100812	Mystic Edge
+100813	Mystic Edge
+100814	Mystic Edge
+100815	Mystic Edge
+100821	Mystic Zombie 1
+100822	Mystic Zombie 1
+100823	Mystic Zombie 1
+100824	Mystic Zombie 1
+100825	Mystic Zombie 1
+100831	Mystic Zombie 2
+100832	Mystic Zombie 2
+100833	Mystic Zombie 2
+100834	Mystic Zombie 2
+100835	Mystic Zombie 2
+100841	Mystic Realm Zombie 3
+100842	Mystic Realm Zombie 3
+100843	Mystic Realm Zombie 3
+100844	Mystic Realm Zombie 3
+100845	Mystic Realm Zombie 3
+100851	Mystic Realm Zombie 4
+100852	Mystic Realm Zombie 4
+100853	Mystic Realm Zombie 4
+100854	Mystic Realm Zombie 4
+100855	Mystic Realm Zombie 4
+100861	Mystic Battle
+100862	Mystic Battle
+100863	Mystic Battle
+100864	Mystic Battle
+100865	Mystic Battle
+100911	Abyss Frontier 1
+100912	Abyss Frontier 1
+100913	Abyss Frontier 1
+100914	Abyss Frontier 1
+100915	Abyss Frontier 1
+100921	Abyss Frontier 2
+100922	Abyss Frontier 2
+100923	Abyss Frontier 2
+100924	Abyss Frontier 2
+100925	Abyss Frontier 2
+100931	Abyss Frontier 3
+100932	Abyss Frontier 3
+100933	Abyss Frontier 3
+100934	Abyss Frontier 3
+100935	Abyss Frontier 3
+100941	Abyss Frontier 4
+100942	Abyss Frontier 4
+100943	Abyss Frontier 4
+100944	Abyss Frontier 4
+100945	Abyss Frontier 4
+100951	Abyss Frontier 5
+100952	Abyss Frontier 5
+100953	Abyss Frontier 5
+100954	Abyss Frontier 5
+100955	Abyss Frontier 5
+100961	Abyss Realm
+100962	Abyss Realm
+100963	Abyss Realm
+100964	Abyss Realm
+100965	Abyss Realm
+101011	Pitch-Dark Edge 1
+101012	Pitch-Dark Edge 1
+101013	Pitch-Dark Edge 1
+101014	Pitch-Dark Edge 1
+101015	Pitch-Dark Edge 1
+101021	Darkest Edge 2
+101022	Darkest Edge 2
+101023	Darkest Edge 2
+101024	Darkest Edge 2
+101025	Darkest Edge 2
+101031	Pitch-Dark Edge 3
+101032	Pitch-Dark Edge 3
+101033	Pitch-Dark Edge 3
+101034	Pitch-Dark Edge 3
+101035	Pitch-Dark Edge 3
+101041	Darkest Edge 4
+101042	Darkest Edge 4
+101043	Darkest Edge 4
+101044	Darkest Edge 4
+101045	Darkest Edge 4
+101051	Darkest Edge 5
+101052	Darkest Edge 5
+101053	Darkest Edge 5
+101054	Darkest Edge 5
+101055	Darkest Edge 5
+101061	Realm of Darkness
+101062	Realm of Darkness
+101063	Realm of Darkness
+101064	Realm of Darkness
+101065	Realm of Darkness
+200111	Imperial Tomb Edge
+200121	Mausoleum Guard 1
+200131	Mausoleum Guard 2
+200141	Imperial Tomb Guard 3
+200151	Mausoleum Guard 4
+200161	Mausoleum Battle
+200211	Desert Edge
+200221	Desert Horde 1
+200231	Desert Horde 2
+200241	Desert Horde 3
+200251	Desert Zombie Horde 4
+200261	Desert Battle
+200311	Pirate Trail
+200321	Pirate Crew 1
+200331	Pirate Crew 2
+200341	Pirate Crew 3
+200351	Pirate Crew 4
+200361	Pirate Battle
+200411	Future Edge
+200421	Future Zombie 1
+200431	Future Zombie 2
+200441	Future Zombie 3
+200451	Future Zombie 4
+200461	Future Battle
+200511	Glacier Edge
+200521	Glacier Barbarian 1
+200531	Glacier Barbarian 2
+200541	Glacier Barbarian 3
+200551	Glacial Barbarian 4
+200561	Battle of the Glacier
+200611	Dragon Palace Edge
+200621	Dragon Palace Guard 1
+200631	Dragon Palace Guard 2
+200641	Dragon Palace Guard 3
+200651	Dragon Palace Guard 4
+200661	Dragon Palace Battle
+200711	Volcano Edge
+200721	Volcano Zombie Swarm 1
+200731	Volcano Zombie Horde 2
+200741	Volcano Zombie Horde 3
+200751	Volcano Zombie Horde 4
+200761	Volcano Battle
+200811	Mystic Edge
+200821	Mystic Zombie 1
+200831	Mystic Zombie 2
+200841	Mystic Realm Zombie 3
+200851	Mystic Realm Zombie 4
+200861	Mystic Battle
+200911	Abyss Frontier 1
+200921	Abyss Frontier 2
+200931	Abyss Frontier 3
+200941	Abyss Frontier 4
+200951	Abyss Frontier 5
+200961	Abyss Realm
+201011	Pitch-Dark Edge 1
+201021	Darkest Edge 2
+201031	Pitch-Dark Edge 3
+201041	Darkest Edge 4
+201051	Darkest Edge 5
+201061	Realm of Darkness

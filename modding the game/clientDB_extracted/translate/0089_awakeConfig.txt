@@ -1,391 +1,391 @@
 id	name
-1105	向日葵
-1115	双头向日葵
-1205	单发豌豆
-1215	双发豌豆
-1305	矮坚果
-1405	卷心菜
-1505	土豆地雷
-1605	回旋镖
-1705	冰冻生菜
-1805	白菜战士
-1905	墓碑吞噬者
-2005	魔藤
-3105	竹小龙
-3205	胡萝卜火箭
-3305	蒲公英
-3605	捕蝇草
-3705	倭瓜
-3905	火龙草
-4105	地刺
-4205	地刺王
-4305	玉米
-4405	弹簧豆
-4505	三发豌豆
-5305	寒冰射手
-5405	双头豌豆
-5505	豌豆荚
-5605	高坚果
-5705	樱桃炸弹
-4605	椰子加农炮
-5905	巴豆
-6005	火桩
-6105	电草
-6205	杨桃
-6305	激光豆子
-6405	柚子
-6505	全息坚果
-6605	棱镜草
-6705	辣椒
-6905	冰冻西瓜
-7505	食人花
-7605	瓷砖萝卜
-7705	西瓜投手
-7805	香蒲
-8505	海星果
-7405	硝化菇
-8605	钻地荔枝果
-8305	电海松
-8705	海葵花
-7905	灵芝
-8105	氧气藻
-8005	芭蕉
-4705	石榴
-4905	榴莲
-101105	向日葵(觉醒1)
-101115	双头向日葵(觉醒1)
-101205	单发豌豆(觉醒1)
-101215	双发豌豆(觉醒1)
-101305	矮坚果(觉醒1)
-101405	卷心菜(觉醒1)
-101505	土豆地雷(觉醒1)
-101605	回旋镖(觉醒1)
-101705	冰冻生菜(觉醒1)
-101805	白菜战士(觉醒1)
-101905	墓碑吞噬者(觉醒1)
-102005	魔藤(觉醒1)
-103105	竹小龙(觉醒1)
-103205	胡萝卜火箭(觉醒1)
-103305	蒲公英(觉醒1)
-103605	捕蝇草(觉醒1)
-103705	倭瓜(觉醒1)
-103905	火龙草(觉醒1)
-104105	地刺(觉醒1)
-104205	地刺王(觉醒1)
-104305	玉米(觉醒1)
-104405	弹簧豆(觉醒1)
-104505	三发豌豆(觉醒1)
-105305	寒冰射手(觉醒1)
-105405	双头豌豆(觉醒1)
-105505	豌豆荚(觉醒1)
-105605	高坚果(觉醒1)
-105705	樱桃炸弹(觉醒1)
-104605	椰子加农炮(觉醒1)
-105905	巴豆(觉醒1)
-106005	火桩(觉醒1)
-106105	电草(觉醒1)
-106205	杨桃(觉醒1)
-106305	激光豆子(觉醒1)
-106405	柚子(觉醒1)
-106505	全息坚果(觉醒1)
-106605	棱镜草(觉醒1)
-106705	辣椒(觉醒1)
-106905	冰冻西瓜(觉醒1)
-107505	食人花(觉醒1)
-107605	瓷砖萝卜(觉醒1)
-107705	西瓜投手(觉醒1)
-107805	香蒲(觉醒1)
-108505	海星果(觉醒1)
-107405	硝化菇(觉醒1)
-108605	钻地荔枝果(觉醒1)
-108305	电海松(觉醒1)
-108705	海葵花（觉醒1）
-107905	灵芝（觉醒1）
-108105	氧气藻（觉醒1）
-108005	芭蕉（觉醒1）
-104705	石榴（觉醒1）
-104905	榴莲（觉醒1）
-201105	向日葵(觉醒2)
-201115	双头向日葵(觉醒2)
-201205	单发豌豆(觉醒2)
-201215	双发豌豆(觉醒2)
-201305	矮坚果(觉醒2)
-201405	卷心菜(觉醒2)
-201505	土豆地雷(觉醒2)
-201605	回旋镖(觉醒2)
-201705	冰冻生菜(觉醒2)
-201805	白菜战士(觉醒2)
-201905	墓碑吞噬者(觉醒2)
-202005	魔藤(觉醒2)
-203105	竹小龙(觉醒2)
-203205	胡萝卜火箭(觉醒2)
-203305	蒲公英(觉醒2)
-203605	捕蝇草(觉醒2)
-203705	倭瓜(觉醒2)
-203905	火龙草(觉醒2)
-204105	地刺(觉醒2)
-204205	地刺王(觉醒2)
-204305	玉米(觉醒2)
-204405	弹簧豆(觉醒2)
-204505	三发豌豆(觉醒2)
-205305	寒冰射手(觉醒2)
-205405	双头豌豆(觉醒2)
-205505	豌豆荚(觉醒2)
-205605	高坚果(觉醒2)
-205705	樱桃炸弹(觉醒2)
-204605	椰子加农炮(觉醒2)
-205905	巴豆(觉醒2)
-206005	火桩(觉醒2)
-206105	电草(觉醒2)
-206205	杨桃(觉醒2)
-206305	激光豆子(觉醒2)
-206405	柚子(觉醒2)
-206505	全息坚果(觉醒2)
-206605	棱镜草(觉醒2)
-206705	辣椒(觉醒2)
-206905	冰冻西瓜(觉醒2)
-207505	食人花(觉醒2)
-207605	瓷砖萝卜(觉醒2)
-207705	西瓜投手(觉醒2)
-207805	香蒲(觉醒2)
-208505	海星果(觉醒2)
-207405	硝化菇(觉醒2)
-208605	钻地荔枝果(觉醒2)
-208305	电海松(觉醒2)
-208705	海葵花（觉醒2）
-207905	灵芝（觉醒2）
-208105	氧气藻（觉醒2）
-208005	芭蕉（觉醒2）
-204705	石榴（觉醒2）
-204905	榴莲（觉醒2）
-301105	向日葵(觉醒3)
-301115	双头向日葵(觉醒3)
-301205	单发豌豆(觉醒3)
-301215	双发豌豆(觉醒3)
-301305	矮坚果(觉醒3)
-301405	卷心菜(觉醒3)
-301505	土豆地雷(觉醒3)
-301605	回旋镖(觉醒3)
-301705	冰冻生菜(觉醒3)
-301805	白菜战士(觉醒3)
-301905	墓碑吞噬者(觉醒3)
-302005	魔藤(觉醒3)
-303105	竹小龙(觉醒3)
-303205	胡萝卜火箭(觉醒3)
-303305	蒲公英(觉醒3)
-303605	捕蝇草(觉醒3)
-303705	倭瓜(觉醒3)
-303905	火龙草(觉醒3)
-304105	地刺(觉醒3)
-304205	地刺王(觉醒3)
-304305	玉米(觉醒3)
-304405	弹簧豆(觉醒3)
-304505	三发豌豆(觉醒3)
-305305	寒冰射手(觉醒3)
-305405	双头豌豆(觉醒3)
-305505	豌豆荚(觉醒3)
-305605	高坚果(觉醒3)
-305705	樱桃炸弹(觉醒3)
-304605	椰子加农炮(觉醒3)
-305905	巴豆(觉醒3)
-306005	火桩(觉醒3)
-306105	电草(觉醒3)
-306205	杨桃(觉醒3)
-306305	激光豆子(觉醒3)
-306405	柚子(觉醒3)
-306505	全息坚果(觉醒3)
-306605	棱镜草(觉醒3)
-306705	辣椒(觉醒3)
-306905	冰冻西瓜(觉醒3)
-307505	食人花(觉醒3)
-307605	瓷砖萝卜(觉醒3)
-307705	西瓜投手(觉醒3)
-307805	香蒲(觉醒3)
-308505	海星果(觉醒3)
-307405	硝化菇(觉醒3)
-308605	钻地荔枝果(觉醒3)
-308305	电海松(觉醒3)
-308705	海葵花（觉醒3）
-307905	灵芝（觉醒3）
-308105	氧气藻（觉醒3）
-308005	芭蕉（觉醒3）
-304705	石榴（觉醒3）
-304905	榴莲（觉醒3）
-401105	向日葵(觉醒4)
-401115	双头向日葵(觉醒4)
-401205	单发豌豆(觉醒4)
-401215	双发豌豆(觉醒4)
-401305	矮坚果(觉醒4)
-401405	卷心菜(觉醒4)
-401505	土豆地雷(觉醒4)
-401605	回旋镖(觉醒4)
-401705	冰冻生菜(觉醒4)
-401805	白菜战士(觉醒4)
-401905	墓碑吞噬者(觉醒4)
-402005	魔藤(觉醒4)
-403105	竹小龙(觉醒4)
-403205	胡萝卜火箭(觉醒4)
-403305	蒲公英(觉醒4)
-403605	捕蝇草(觉醒4)
-403705	倭瓜(觉醒4)
-403905	火龙草(觉醒4)
-404105	地刺(觉醒4)
-404205	地刺王(觉醒4)
-404305	玉米(觉醒4)
-404405	弹簧豆(觉醒4)
-404505	三发豌豆(觉醒4)
-405305	寒冰射手(觉醒4)
-405405	双头豌豆(觉醒4)
-405505	豌豆荚(觉醒4)
-405605	高坚果(觉醒4)
-405705	樱桃炸弹(觉醒4)
-404605	椰子加农炮(觉醒4)
-405905	巴豆(觉醒4)
-406005	火桩(觉醒4)
-406105	电草(觉醒4)
-406205	杨桃(觉醒4)
-406305	激光豆子(觉醒4)
-406405	柚子(觉醒4)
-406505	全息坚果(觉醒4)
-406605	棱镜草(觉醒4)
-406705	辣椒(觉醒4)
-406905	冰冻西瓜(觉醒4)
-407505	食人花(觉醒4)
-407605	瓷砖萝卜(觉醒4)
-407705	西瓜投手(觉醒4)
-407805	香蒲(觉醒4)
-408505	海星果(觉醒4)
-407405	硝化菇(觉醒4)
-408605	钻地荔枝果(觉醒4)
-408305	电海松(觉醒4)
-408705	海葵花（觉醒4）
-407905	灵芝（觉醒4）
-408105	氧气藻（觉醒4）
-408005	芭蕉（觉醒4）
-404705	石榴（觉醒4）
-404905	榴莲（觉醒4）
-7205	脉冲黄桃
-107205	脉冲黄桃（觉醒1）
-207205	脉冲黄桃（觉醒2）
-307205	脉冲黄桃（觉醒3）
-407205	脉冲黄桃（觉醒4）
-8805	水雷果
-108805	水雷果（觉醒1）
-208805	水雷果（觉醒2）
-308805	水雷果（觉醒3）
-408805	水雷果（觉醒4）
-8905	玫瑰剑客
-108905	玫瑰剑客（觉醒1）
-208905	玫瑰剑客（觉醒2）
-308905	玫瑰剑客（觉醒3）
-408905	玫瑰剑客（觉醒4）
-9005	君子兰
-109005	君子兰（觉醒1）
-209005	君子兰（觉醒2）
-309005	君子兰（觉醒3）
-409005	君子兰（觉醒4）
-9105	树脂发射器
-109105	树脂发射器（觉醒1）
-209105	树脂发射器（觉醒2）
-309105	树脂发射器（觉醒3）
-409105	树脂发射器（觉醒4）
-9205	强酸柠檬
-109205	强酸柠檬（觉醒1）
-209205	强酸柠檬（觉醒2）
-309205	强酸柠檬（觉醒3）
-409205	强酸柠檬（觉醒4）
-9305	魔术菇
-109305	魔术菇（觉醒1）
-209305	魔术菇（觉醒2）
-309305	魔术菇（觉醒3）
-409305	魔术菇（觉醒4）
-9405	火焰射手
-109405	火焰射手（觉醒1）
-209405	火焰射手（觉醒2）
-309405	火焰射手（觉醒3）
-409405	火焰射手（觉醒4）
-9505	幽灵辣椒
-109505	幽灵辣椒（觉醒1）
-209505	幽灵辣椒（觉醒2）
-309505	幽灵辣椒（觉醒3）
-409505	幽灵辣椒（觉醒4）
-9605	鳄梨
-109605	鳄梨（觉醒1）
-209605	鳄梨（觉醒2）
-309605	鳄梨（觉醒3）
-409605	鳄梨（觉醒4）
-9705	飓风甘蓝
-109705	飓风甘蓝（觉醒1）
-209705	飓风甘蓝（觉醒2）
-309705	飓风甘蓝（觉醒3）
-409705	飓风甘蓝（觉醒4）
-9805	路灯花
-109805	路灯花（觉醒1）
-209805	路灯花（觉醒2）
-309805	路灯花（觉醒3）
-409805	路灯花（觉醒4）
-9905	橡木射手
-109905	橡木射手（觉醒1）
-209905	橡木射手（觉醒2）
-309905	橡木射手（觉醒3）
-409905	橡木射手（觉醒4）
-1125	导向蓟
-101125	导向蓟（觉醒1）
-201125	导向蓟（觉醒2）
-301125	导向蓟（觉醒3）
-401125	导向蓟（觉醒4）
-1135	甜椒投手
-101135	甜椒投手（觉醒1）
-201135	甜椒投手（觉醒2）
-301135	甜椒投手（觉醒3）
-401135	甜椒投手（觉醒4）
-1145	南瓜小巫
-101145	南瓜小巫（觉醒1）
-201145	南瓜小巫（觉醒2）
-301145	南瓜小巫（觉醒3）
-401145	南瓜小巫（觉醒4）
-1155	功夫萝卜
-101155	功夫萝卜（觉醒1）
-201155	功夫萝卜（觉醒2）
-301155	功夫萝卜（觉醒3）
-401155	功夫萝卜（觉醒4）
-1165	金蟾菇
-101165	金蟾菇（觉醒1）
-201165	金蟾菇（觉醒2）
-301165	金蟾菇（觉醒3）
-401165	金蟾菇（觉醒4）
-1175	铃儿草
-101175	铃儿草（觉醒1）
-201175	铃儿草（觉醒2）
-301175	铃儿草（觉醒3）
-401175	铃儿草（觉醒4）
-1185	红针花
-101185	红针花（觉醒1）
-201185	红针花（觉醒2）
-301185	红针花（觉醒3）
-401185	红针花（觉醒4）
-1225	闪电蓝莓
-101225	闪电蓝莓（觉醒1）
-201225	闪电蓝莓（觉醒2）
-301225	闪电蓝莓（觉醒3）
-401225	闪电蓝莓（觉醒4）
-1195	阿开木
-101195	阿开木（觉醒1）
-201195	阿开木（觉醒2）
-301195	阿开木（觉醒3）
-401195	阿开木（觉醒4）
-1235	龙舌兰
-101235	龙舌兰（觉醒1）
-201235	龙舌兰（觉醒2）
-301235	龙舌兰（觉醒3）
-401235	龙舌兰（觉醒4）
-1245	月光花
-101245	月光花（觉醒1）
-201245	月光花（觉醒2）
-301245	月光花（觉醒3）
-401245	月光花（觉醒4）
-1255	芦笋战机
-101255	芦笋战机（觉醒1）
-201255	芦笋战机（觉醒2）
-301255	芦笋战机（觉醒3）
-401255	芦笋战机（觉醒4）
+1105	Sunflower
+1115	Twin Sunflower
+1205	Peashooter
+1215	Repeater
+1305	Wall-nut
+1405	Cabbage-pult
+1505	Potato Mine
+1605	Bloomerang
+1705	Iceberg Lettuce
+1805	Bonk Choy
+1905	Grave Buster
+2005	Magic Beanstalk
+3105	Bruce Bamboo
+3205	Carrocket
+3305	Explodelion
+3605	Venus Flytrap
+3705	Squash
+3905	Snapdragon
+4105	Spikeweed
+4205	Spikeweed
+4305	Kernel-pult
+4405	Spring Bean
+4505	Threepeater
+5305	Snow Pea
+5405	Repeater
+5505	Pea Pod
+5605	Tall-nut
+5705	Cherry Bomb
+4605	Coconut Cannon
+5905	Stallia
+6005	Torchwood
+6105	Lightning Reed
+6205	Starfruit
+6305	Laser Bean
+6405	Citron
+6505	Infi-nut
+6605	Magnifying Grass
+6705	Jalapeno
+6905	Winter Melon
+7505	Chomper
+7605	Tile Turnip
+7705	Melon-pult
+7805	Cattail
+8505	Starfruit
+7405	Nitro-shroom
+8605	Lychee Drill
+8305	Electric Sea-shroom
+8705	Sea Anemone
+7905	Ganoderma
+8105	Oxygen Algae
+8005	Banana Tree
+4705	Pomegranate-pult
+4905	Durian
+101105	Sunflower (Awakening 1)
+101115	Twin Sunflower (Awakening 1)
+101205	Peashooter (Awaken 1)
+101215	Repeater (Awaken 1)
+101305	Wall-nut (Awaken 1)
+101405	Cabbage-pult (Awaken 1)
+101505	Potato Mine (Awaken 1)
+101605	Boomerang (Awaken 1)
+101705	Iceberg Lettuce (Awaken 1)
+101805	Bonk Choy (Awakening 1)
+101905	Grave Buster (Awaken 1)
+102005	Magic Beanstalk (Awakening 1)
+103105	Bruce Bamboo (Awaken 1)
+103205	Carrot Missileer (Awakening 1)
+103305	Dandelion (Awakening 1)
+103605	Venus Flytrap (Awakening 1)
+103705	Squash (Awakening 1)
+103905	Snapdragon (Awakening 1)
+104105	Spikeweed (Awaken 1)
+104205	Spikerock (Awakening 1)
+104305	Kernel-pult (Awakening 1)
+104405	Spring Bean (Awakening 1)
+104505	Threepeater (Awakening 1)
+105305	Snow Pea (Awakening 1)
+105405	Repeater (Awaken 1)
+105505	Pea Pod (Awakening 1)
+105605	Tall-nut (Awaken 1)
+105705	Cherry Bomb (Awakening 1)
+104605	Coconut Cannon (Awakening 1)
+105905	Stallia (Awakening 1)
+106005	Stallia (Awakening 1)
+106105	E.M.Peach (Awakening 1)
+106205	Starfruit (Awakening 1)
+106305	Laser Bean (Awakening 1)
+106405	Pomelo (Awaken 1)
+106505	Infi-nut (Awaken 1)
+106605	Magnifying Grass (Awakening 1)
+106705	Jalapeno (Awakening 1)
+106905	Winter Melon (Awakening 1)
+107505	Chomper (Awakening 1)
+107605	Tile Turnip (Awakening 1)
+107705	Melon-pult (Awakening 1)
+107805	Cattail (Awakening 1)
+108505	Starfruit (Awakening 1)
+107405	Gloom-shroom (Awaken 1)
+108605	Lychee Drill (Awaken 1)
+108305	Electric Blueberry (Awakening 1)
+108705	Sea Anemone (Awaken 1)
+107905	Ganoderma (Awaken 1)
+108105	Oxygen Algae (Awakening 1)
+108005	Banana (Awakening 1)
+104705	Pomegranate (Awakening 1)
+104905	Durian (Awakening 1)
+201105	Sunflower (Awakening 2)
+201115	Twin Sunflower (Awakening 2)
+201205	Peashooter (Awaken 2)
+201215	Repeater (Awakening 2)
+201305	Mini Wall-nut (Awakening 2)
+201405	Cabbage-pult (Awakening 2)
+201505	Potato Mine (Awaken 2)
+201605	Boomerang (Awaken 2)
+201705	Iceberg Lettuce (Awaken 2)
+201805	Bonk Choy (Awaken 2)
+201905	Grave Buster (Awaken 2)
+202005	Tangle Kelp (Awakening 2)
+203105	Bamboo Spartan (Awakening 2)
+203205	Carrot Missile (Awakening 2)
+203305	Dandelion (Awakening 2)
+203605	Venus Flytrap (Awakening 2)
+203705	Squash (Awaken 2)
+203905	Snapdragon (Awakening 2)
+204105	Spikeweed (Awakening 2)
+204205	Spikerock (Awakening 2)
+204305	Corn (Awaken 2)
+204405	Spring Bean (Awakening 2)
+204505	Threepeater (Awaken 2)
+205305	Snow Pea (Awakening 2)
+205405	Repeater (Awakening 2)
+205505	Peashooter Pod (Awakening 2)
+205605	Tall-nut (Awakening 2)
+205705	Cherry Bomb (Awakening 2)
+204605	Coconut Cannon (Awakening 2)
+205905	Stallia (Awaken 2)
+206005	Torchwood (Awaken 2)
+206105	Electric Vine (Awaken 2)
+206205	Starfruit (Awakening 2)
+206305	Laser Bean (Awakening 2)
+206405	Citron (Awakening 2)
+206505	Holonut (Awakening 2)
+206605	Magnifying Grass (Awakening 2)
+206705	Jalapeno (Awakening 2)
+206905	Winter Melon (Awaken 2)
+207505	Chomper (Awakening 2)
+207605	Tile Turnip (Awakening 2)
+207705	Melon-pult (Awaken 2)
+207805	Cattail (Awakening 2)
+208505	Starfruit (Awaken 2)
+207405	Gloom-shroom (Awakening 2)
+208605	Burrowing Lychee (Awakening 2)
+208305	Electric Sea-Pine (Awakening 2)
+208705	Sea Anemone (Awakening 2)
+207905	Ganoderma (Awakening 2)
+208105	Oxygen Algae (Awaken 2)
+208005	Banana (Awakening 2)
+204705	Pomegranate (Awaken 2)
+204905	Durian (Awakening 2)
+301105	Sunflower (Awakening 3)
+301115	Twin Sunflower (Awaken 3)
+301205	Peashooter (Awakening 3)
+301215	Repeater (Awakening 3)
+301305	Endurian (Awakening 3)
+301405	Cabbage-pult (Awakening 3)
+301505	Potato Mine (Awaken 3)
+301605	Boomerang (Awakening 3)
+301705	Iceberg Lettuce (Awakening 3)
+301805	Bonk Choy (Awakening 3)
+301905	Grave Buster (Awakening 3)
+302005	Thorns N' Roses (Awaken 3)
+303105	Bamboo Spartan (Awaken 3)
+303205	Carrot Rocket (Awakening 3)
+303305	Dandelion (Awaken 3)
+303605	Venus Flytrap (Awaken 3)
+303705	Squash (Awakening 3)
+303905	Snapdragon (Awakening 3)
+304105	Spikeweed (Awaken 3)
+304205	Spikerock (Awakening 3)
+304305	Kernel-pult (Awaken 3)
+304405	Spring Bean (Awaken 3)
+304505	Threepeater (Awakening 3)
+305305	Snow Pea (Awaken 3)
+305405	Repeater (Awaken 3)
+305505	Pea Pod (Awakening 3)
+305605	Tall-nut (Awakening 3)
+305705	Cherry Bomb (Awaken 3)
+304605	Coconut Cannon (Awakening 3)
+305905	Stallia (Awakening 3)
+306005	Flame Stump (Awakening 3)
+306105	Lightning Reed (Awaken 3)
+306205	Starfruit (Awakening 3)
+306305	Laser Bean (Awakening 3)
+306405	Citron (Awakening 3)
+306505	Holographic Wall-nut (Awaken 3)
+306605	Prismabean (Awakening 3)
+306705	Jalapeno (Awaken 3)
+306905	Winter Melon (Awakening 3)
+307505	Chomper (Awakening 3)
+307605	Tile Turnip (Awakening 3)
+307705	Melon-pult (Awakening 3)
+307805	Cattail (Awaken 3)
+308505	Starfruit (Awakening 3)
+307405	Nitressing Mushroom (Awakening 3)
+308605	Lychee Drill (Awaken 3)
+308305	Electric Sea-Pine (Awakening 3)
+308705	Sea Anemone (Awakening 3)
+307905	Ganoderma (Awaken 3)
+308105	Oxygen Algae (Awakening 3)
+308005	Plantain (Awaken 3)
+304705	Pomegranate (Awakening 3)
+304905	Durian (Awakening 3)
+401105	Sunflower (Awaken 4)
+401115	Twin Sunflower (Awaken 4)
+401205	Peashooter (Awaken 4)
+401215	Repeater (Awakening 4)
+401305	Wall-nut (Awaken 4)
+401405	Cabbage-pult (Awaken 4)
+401505	Potato Mine (Awakening 4)
+401605	Boomerang (Awakening 4)
+401705	Iceberg Lettuce (Awakening 4)
+401805	Bonk Choy (Awaken 4)
+401905	Grave Buster (Awakening 4)
+402005	Magic Beanstalk (Awaken 4)
+403105	Bamboo Little Dragon (Awakening 4)
+403205	Carrot Missile (Awaken 4)
+403305	Dandelion (Awakening 4)
+403605	Venus Flytrap (Awakening 4)
+403705	Squash (Awaken 4)
+403905	Snapdragon (Awakening 4)
+404105	Spikeweed (Awakening 4)
+404205	Spikerock (Awaken 4)
+404305	Kernel-pult (Awakening 4)
+404405	Spring Bean (Awakening 4)
+404505	Threepeater (Awakening 4)
+405305	Snow Pea (Awakening 4)
+405405	Repeater (Awaken 4)
+405505	Pea Pod (Awakening 4)
+405605	Tall-nut (Awakening 4)
+405705	Cherry Bomb (Awakening 4)
+404605	Coconut Cannon (Awaken 4)
+405905	Stallia (Awakening 4)
+406005	Stallia (Awakening 4)
+406105	Electric Vine (Awaken 4)
+406205	Starfruit (Awakening 4)
+406305	Laser Bean (Awakening 4)
+406405	Citron (Awakening 4)
+406505	Holographic Nut (Awakening 4)
+406605	Magnifying Grass (Awakening 4)
+406705	Jalapeno (Awaken 4)
+406905	Winter Melon (Awakening 4)
+407505	Chomper (Awakening 4)
+407605	Tile Turnip (Awakening 4)
+407705	Melon-pult (Awakening 4)
+407805	Cattail (Awakening 4)
+408505	Starfruit (Awaken 4)
+407405	Gloom-shroom (Awakening 4)
+408605	Burrowing Lychee (Awakening 4)
+408305	Electric Sea Pine (Awakening 4)
+408705	Sea Anemone (Awakening 4)
+407905	Ganoderma (Awakening 4)
+408105	Oxygen Algae (Awakening 4)
+408005	Plantain (Awaken 4)
+404705	Pomegranate (Awaken 4)
+404905	Durian (Awakening 4)
+7205	Impear
+107205	Impear (Awakening 1)
+207205	Impear (Awaken 2)
+307205	Imitater Peach (Awakening 3)
+407205	E.M.Peach (Awakening 4)
+8805	Potato Mine
+108805	Water Mine Fruit (Awaken 1)
+208805	Water Mine Fruit (Awaken 2)
+308805	Homing Thistle (Awakening 3)
+408805	Homing Thistle (Awakening 4)
+8905	Rose Swordfighter
+108905	Rose Swordsman (Awakening 1)
+208905	Blooming Heart (Awakening 2)
+308905	Rose Swordsman (Awakening 3)
+408905	Rose Swordsman (Awakening 4)
+9005	Clivia
+109005	Clivia (Awakening 1)
+209005	Clivia (Awaken 2)
+309005	Clivia (Awakening 3)
+409005	Clivia (Awakening 4)
+9105	Sap-fling
+109105	Sap-fling (Awakening 1)
+209105	Resin Launcher (Awakening 2)
+309105	Resin Launcher (Awakening 3)
+409105	Sap-fling (Awakening 4)
+9205	Acid Lemon
+109205	Acidic Citrus (Awakening 1)
+209205	Acidic Citrus (Awakening 2)
+309205	Acid Lemon (Awakening 3)
+409205	Acidic Lemon (Awakening 4)
+9305	Magic-shroom
+109305	Magic Mushroom (Awakening 1)
+209305	Magic Mushroom (Awaken 2)
+309305	Magic Shroom (Awakening 3)
+409305	Magical Mushroom (Awaken 4)
+9405	Fire Peashooter
+109405	Fire Peashooter (Awaken 1)
+209405	Fire Peashooter (Awakening 2)
+309405	Fire Peashooter (Awakening 3)
+409405	Fire Peashooter (Awaken 4)
+9505	Ghost Pepper
+109505	Ghost Pepper (Awakening 1)
+209505	Ghost Pepper (Awaken 2)
+309505	Ghost Pepper (Awakening 3)
+409505	Ghost Pepper (Awaken 4)
+9605	Guacodile
+109605	Guacodile (Awaken 1)
+209605	Avocado (Awakening 2)
+309605	Guacodile (Awaken 3)
+409605	Avocado (Awakening 4)
+9705	Hurrikale
+109705	Hurrikale (Awaken 1)
+209705	Hurrikale (Awakening 2)
+309705	Hurrikale (Awakening 3)
+409705	Hurrikale (Awakening 4)
+9805	Lantern
+109805	Lantern (Awakening 1)
+209805	Lantern (Awakening 2)
+309805	Plantern (Awaken 3)
+409805	Plantern (Awakening 4)
+9905	Oak Archer
+109905	Oak Archer (Awakening 1)
+209905	Oak Archer (Awaken 2)
+309905	Oak Archer (Awakening 3)
+409905	Oak Archer (Awaken 4)
+1125	Homing Thistle
+101125	Homing Thistle (Awakening 1)
+201125	Homing Thistle (Awakening 2)
+301125	Homing Thistle (Awaken 3)
+401125	Homing Thistle (Awakening 4)
+1135	Pepper-pult
+101135	Pepper-pult (Awakening 1)
+201135	Pepper-pult (Awakening 2)
+301135	Capsaicin Pult (Awaken 3)
+401135	Pepper-pult (Awakening 4)
+1145	Pumpkin Witch
+101145	Witch Hazel (Awaken 1)
+201145	Witch Hazel (Awakening 2)
+301145	Witch Hazel (Awaken 3)
+401145	Witch Hazel (Awakening 4)
+1155	Kung Fu Carrot
+101155	Carrot Missileer (Awakening 1)
+201155	Kung Fu Radish (Awakening 2)
+301155	Kung Fu Radish (Awaken 3)
+401155	Kung Fu Radish (Awaken 4)
+1165	Toadstool
+101165	Toadstool (Awaken 1)
+201165	Toadstool (Awakening 2)
+301165	Toadstool (Awakening 3)
+401165	Toadstool (Awakening 4)
+1175	Bell Grass
+101175	Bellgrass (Awaken 1)
+201175	Bell Grass (Awakening 2)
+301175	Bell Grass (Awaken 3)
+401175	Bell Grass (Awakening 4)
+1185	Red Stinger
+101185	Red Stinger (Awakening 1)
+201185	Red Stinger (Awakening 2)
+301185	Red Stinger (Awakening 3)
+401185	Red Stinger (Awakening 4)
+1225	Electric Blueberry
+101225	Electric Blueberry (Awaken 1)
+201225	Electric Blueberry (Awakening 2)
+301225	Electric Blueberry (Awaken 3)
+401225	Electric Blueberry (Awakening 4)
+1195	A.K.E.E.
+101195	A.K.E.E. (Awakening 1)
+201195	A.K.E.E. (Awakening 2)
+301195	A.K.E.E. (Awakening 3)
+401195	A.K.E.E. Mamey (Awaken 4)
+1235	Agave
+101235	Agave (Awakening 1)
+201235	Agave (Awaken 2)
+301235	Agave (Awakening 3)
+401235	Agave (Awakening 4)
+1245	Moonflower
+101245	Moonflower (Awaken 1)
+201245	Moonflower (Awakening 2)
+301245	Moonflower (Awakening 3)
+401245	Moonflower (Awakening 4)
+1255	Aceparagus
+101255	Aceparagus (Awaken 1)
+201255	Spear-mint (Awakening 2)
+301255	Aceparagus (Awakening 3)
+401255	Aceparagus (Awakening 4)

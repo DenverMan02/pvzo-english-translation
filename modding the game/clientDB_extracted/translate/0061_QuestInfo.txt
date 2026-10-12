@@ -67,7 +67,7 @@ id	questName	desc	finishConditionDesc
 1660	Path of Trials	Clearing the Trial Road is not only a proof of strength, but also grants more equipment materials!	Pass Level 10 of Trial of Wisdom
 1670	Craft Equipment	Plants feel much less lonely with equipment!	Craft 1 piece of equipment
 1680	Upgrade Plants	Plant Legion quality directly affects your Power, how can you not upgrade them!	Own 2 Blue Quality Cards
-1690	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到22级
+1690	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 22
 1700	Nursery	Summon a nutritionist and let him win reagents for you!	Summon a Nutritionist 1 time in the Nutrient Room
 1710	Nursery	Reagents only take effect when equipped on plants!	Deploy one Reagent
 1720	Nursery	Upgrade reagents to make plants even stronger!	Upgrade a reagent once
@@ -107,7 +107,7 @@ id	questName	desc	finishConditionDesc
 2060	Tidings of victory pour in	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Adventure 12-1
 2070	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 120,000 Power
 2080	Pirate Bay's Song 4	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Clear Chapter 12 Normal stage
-2090	纷乱的战场4	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Clear Elite Stage 12-1
+2090	Chaotic Battlefield 4	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Clear Elite Stage 12-1
 2100	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 47
 2110	Tidings of victory pour in	The mysteries of the universe are vast and deep. Who knows if there might actually be a zombie army out in space?	Adventure 13-1
 2120	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 140,000 Might
@@ -157,7 +157,7 @@ id	questName	desc	finishConditionDesc
 2560	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 85
 2570	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 350,000 Might
 2580	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 86
-2590	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到87级
+2590	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 87
 2600	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 88
 2610	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 89
 2620	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 90
@@ -165,7 +165,7 @@ id	questName	desc	finishConditionDesc
 2640	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Lv. 91
 2650	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 92
 2660	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 93
-2670	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到94级
+2670	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 94
 2680	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 95
 2690	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 400,000 Power
 2700	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 96
@@ -179,7 +179,7 @@ id	questName	desc	finishConditionDesc
 2780	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 103
 2790	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 104
 2800	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches Lv. 105
-2810	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到106级
+2810	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 106
 2820	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 107
 2830	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 108
 2840	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 109
@@ -202,17 +202,17 @@ id	questName	desc	finishConditionDesc
 3010	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 124
 3020	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 125
 3030	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 126
-3040	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到127级
+3040	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 127
 3050	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 128
 3060	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 129
-3070	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到130级
+3070	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 130
 3080	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 560,000 Might
 3090	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Lv. 131
 3100	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 132
 3110	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 133
 3120	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 134
 3130	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Lv. 135
-3140	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到136级
+3140	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 136
 3150	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 137
 3160	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 138
 3170	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 139
@@ -230,7 +230,7 @@ id	questName	desc	finishConditionDesc
 3290	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 150
 3300	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 650,000 Power
 3310	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 151
-3320	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到152级
+3320	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 152
 3330	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches Lv. 153
 3340	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 154
 3350	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 155
@@ -251,7 +251,7 @@ id	questName	desc	finishConditionDesc
 3500	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches Lv. 169
 3510	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Lv. 170
 3520	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 730,000 Power
-3530	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到171级
+3530	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 171
 3540	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 172
 3550	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches Lv. 173
 3560	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 174
@@ -267,7 +267,7 @@ id	questName	desc	finishConditionDesc
 3660	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches Lv. 183
 3670	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 184
 3680	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 185
-3690	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到186级
+3690	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 186
 3700	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches Lv. 187
 3710	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Lv. 188
 3720	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 189
@@ -413,7 +413,7 @@ id	questName	desc	finishConditionDesc
 18030	Upgrade World Tree to Level 3	Upgrade the World Tree to boost your power!	Upgrade World Tree to Level 30
 18040	Upgrade World Tree 4	Upgrade the World Tree to boost your power!	Upgrade World Tree to Level 40
 18050	Upgrade World Tree to Level 5	Upgrade the World Tree to boost your power!	Upgrade World Tree to Level 50
-18060	Upgrade World Tree to Level 6	Upgrade the World Tree to boost your power!	世界树升为60级
+18060	Upgrade World Tree to Level 6	Upgrade the World Tree to boost your power!	Upgrade World Tree to Level 60
 18070	World Tree Upgrade 7	Upgrade the World Tree to boost your power!	Upgrade World Tree to level 70
 18080	Upgrade World Tree to Level 8	Upgrade the World Tree to boost your power!	Upgrade World Tree to Lv. 80
 18090	Upgrade World Tree 9	Upgrade the World Tree to boost your power!	Upgrade World Tree to Level 90

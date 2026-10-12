@@ -1,13 +1,13 @@
 id	name	desc
-1	攻击加成	攻击属性获得加成（至多+74666），可提升植物战力
-2	防御加成	防御属性获得加成（至多+37083），可提升植物战力
-3	生命加成	生命属性获得加成（至多+222499），可提升植物战力
-5	技力加成	技力属性获得加成（至多+37083），可提升植物战力
-6	命中加成	命中属性获得加成（至多+9166），可提升植物战力
-7	闪避加成	闪避属性获得加成（至多+9166），可提升植物战力
-8	暴击加成	暴击属性获得加成（至多+9166），可提升植物战力
-9	韧性加成	韧性属性获得加成（至多+9166），可提升植物战力
-17	普攻伤害加成	提高植物在战斗中的普攻伤害（至多+179816），不提升战力
-18	普攻免伤加成	提高植物在战斗中的普攻免伤（至多+179816），不提升战力
-19	技能伤害加成	提高植物在战斗中的技能伤害（至多+311366），不提升战力
-20	技能免伤加成	提高植物在战斗中的技能免伤（至多+311366），不提升战力
+1	Attack Bonus	Attack stats receive a bonus (up to +74666), increases plant Might.
+2	Defense Bonus	Defense stats receive a bonus (up to +37083), increases plant Might.
+3	Health Bonus	Health stats receive a bonus (up to +222499), increases plant Might.
+5	Energy Bonus	Energy stats receive a bonus (up to +37083), increases plant Might.
+6	Hit Bonus	Hit stats receive a bonus (up to +9166), increases plant Might.
+7	Dodge Bonus	Dodge stats receive a bonus (up to +9166), increases plant Might.
+8	Critical Bonus	Critical stats receive a bonus (up to +9166), increases plant Might.
+9	Toughness Bonus	Toughness stats receive a bonus (up to +9166), increases plant Might.
+17	Basic Attack Damage Bonus	Increases plant basic attack damage in battle (up to +179816), does not increase Might.
+18	Basic Attack Damage Reduction Bonus	Increases plant basic attack damage reduction in battle (up to +179816), does not increase Might.
+19	Skill Damage Bonus	Increases plant skill damage in battle (up to +311366), does not increase Might.
+20	Skill Damage Reduction Bonus	Increases plant skill damage reduction in battle (up to +311366), does not increase Might.

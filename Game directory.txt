@@ -1,6 +1,6 @@
-游戏目录说明（2026-10-04整理）
+Game Directory Description
 
-启动游戏：双击“一键启动游戏.exe”。
+To start the game, double click on "PvZOL Launcher.exe"
 游戏本体：“pvzol本地”文件夹，保持内部路径不变。
 历史备份、旧日志、实验和构建文件：“游戏维护归档”文件夹。
 本次归档附带“整理清单.json”，记录原路径与归档路径，便于恢复。

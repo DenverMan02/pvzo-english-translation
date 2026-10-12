@@ -1,21 +1,21 @@
 id	name
-1	酒吧买十个经验豆
-2	酒吧买一个经验豆
-16	神秘卡包
-20	商城购买
-3	金币兑换
-5	体力购买
-19	塔防消费
-15	冒险借用植物
-18	购买叶绿素
-6	购买补签卡
-9	时装强化
-7	营养室召唤
-8	购买喇叭
-14	购买能量珠
-21	每日优惠购买
-12	植物大乱斗鼓舞
-11	天梯竞斗场购买挑战次数
-17	皇陵迷踪购买骰子
-4	购买高级小镇搬迁卡
-22	购买行军加速
+1	Buy 10 EXP Beans at the bar
+2	Buy 1 EXP Bean at the bar
+16	Mystery Card Pack
+20	Store Purchase
+3	Coin Exchange
+5	Stamina Purchase
+19	Tower Defense Spending
+15	Adventure Borrow Plant
+18	Purchase Plant Food
+6	Purchase Make-up Sign-in Card
+9	Costume Upgrade
+7	Nursery Summon
+8	Purchase Loudspeaker
+14	Purchase Energy Orb
+21	Daily Special Purchase
+12	Plant Rumble Inspire
+11	Purchase Arena Challenge Attempts
+17	Buy Dice in Imperial Tomb Labyrinth
+4	Purchase Advanced Town Relocation Card
+22	Purchase March Speed-Up

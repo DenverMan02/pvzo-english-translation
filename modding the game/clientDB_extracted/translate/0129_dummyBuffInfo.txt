@@ -1,164 +1,164 @@
 id	name	desc
-103	攻击加成百分比加强	攻击加成效果增加{0}
-1032	攻击加成百分比加强	攻击加成效果增加{0}
-1033	攻击加成百分比加强	攻击加成效果增加{0}
-1034	攻击加成百分比加强	攻击加成效果增加{0}
-104	攻击加成百分比加强	攻击加成效果增加{0}
-1042	攻击加成百分比加强	攻击加成效果增加{0}
-1043	攻击加成百分比加强	攻击加成效果增加{0}
-1044	攻击加成百分比加强	攻击加成效果增加{0}
-105	攻击加成百分比加强	攻击加成效果下降{0}
-1052	攻击加成百分比加强	攻击加成效果下降{0}
-1053	攻击加成百分比加强	攻击加成效果下降{0}
-1054	攻击加成百分比加强	攻击加成效果下降{0}
-106	攻击加成百分比加强	攻击加成效果增加{0}
-1062	攻击加成百分比加强	攻击加成效果增加{0}
-1063	攻击加成百分比加强	攻击加成效果增加{0}
-1064	攻击加成百分比加强	攻击加成效果增加{0}
-201	攻击加成百分比加强	‘削弱’抗性增加{0}
-2012	攻击加成百分比加强	‘削弱’抗性增加{0}
-2013	攻击加成百分比加强	‘削弱’抗性增加{0}
-2014	攻击加成百分比加强	‘削弱’抗性增加{0}
-303	生命加成百分比加强	生命加成效果增加{0}
-3032	生命加成百分比加强	生命加成效果增加{0}
-3033	生命加成百分比加强	生命加成效果增加{0}
-3034	生命加成百分比加强	生命加成效果增加{0}
-304	生命加成百分比加强	生命加成效果增加{0}
-3042	生命加成百分比加强	生命加成效果增加{0}
-3043	生命加成百分比加强	生命加成效果增加{0}
-3044	生命加成百分比加强	生命加成效果增加{0}
-305	生命加成百分比加强	生命加成效果下降{0}
-3052	生命加成百分比加强	生命加成效果下降{0}
-3053	生命加成百分比加强	生命加成效果下降{0}
-3054	生命加成百分比加强	生命加成效果下降{0}
-306	生命加成百分比加强	生命加成效果增加{0}
-3062	生命加成百分比加强	生命加成效果增加{0}
-3063	生命加成百分比加强	生命加成效果增加{0}
-3064	生命加成百分比加强	生命加成效果增加{0}
-401	技力加成固定值加强	技力加成效果增加{0}
-4012	技力加成固定值加强	技力加成效果增加{0}
-4013	技力加成固定值加强	技力加成效果增加{0}
-4014	技力加成固定值加强	技力加成效果增加{0}
-404	技力加成百分比减弱	‘吸血’效果下降{0}
-4042	技力加成百分比减弱	‘吸血’效果下降{0}
-4043	技力加成百分比减弱	‘吸血’效果下降{0}
-4044	技力加成百分比减弱	‘吸血’效果下降{0}
-703	暴击加成百分比加强	暴击加成效果增加{0}
-7032	暴击加成百分比加强	暴击加成效果增加{0}
-7033	暴击加成百分比加强	暴击加成效果增加{0}
-7034	暴击加成百分比加强	暴击加成效果增加{0}
-704	暴击加成百分比加强	暴击加成效果增加{0}
-7042	暴击加成百分比加强	暴击加成效果增加{0}
-7043	暴击加成百分比加强	暴击加成效果增加{0}
-7044	暴击加成百分比加强	暴击加成效果增加{0}
-903	定身命中百分比加强	‘定身’抗性下降{0}
-9032	定身命中百分比加强	‘定身’抗性下降{0}
-9033	定身命中百分比加强	‘定身’抗性下降{0}
-9034	定身命中百分比加强	‘定身’抗性下降{0}
-904	定身命中百分比减弱	‘定身’抗性增加{0}
-9042	定身命中百分比减弱	‘定身’抗性增加{0}
-9043	定身命中百分比减弱	‘定身’抗性增加{0}
-9044	定身命中百分比减弱	‘定身’抗性增加{0}
-905	定身命中百分比加强	‘定身’抗性增加{0}
-9052	定身命中百分比加强	‘定身’抗性增加{0}
-9053	定身命中百分比加强	‘定身’抗性增加{0}
-9054	定身命中百分比加强	‘定身’抗性增加{0}
-1003	流放命中百分比加强	‘流放’抗性下降{0}
-10032	流放命中百分比加强	‘流放’抗性下降{0}
-10033	流放命中百分比加强	‘流放’抗性下降{0}
-10034	流放命中百分比加强	‘流放’抗性下降{0}
-1004	流放命中百分比减弱	‘流放’抗性增加{0}
-10042	流放命中百分比减弱	‘流放’抗性增加{0}
-10043	流放命中百分比减弱	‘流放’抗性增加{0}
-10044	流放命中百分比减弱	‘流放’抗性增加{0}
-1103	沉默命中百分比加强	‘沉默’抗性下降{0}
-11032	沉默命中百分比加强	‘沉默’抗性下降{0}
-11033	沉默命中百分比加强	‘沉默’抗性下降{0}
-11034	沉默命中百分比加强	‘沉默’抗性下降{0}
-1104	沉默命中百分比减弱	‘沉默’抗性增加{0}
-11042	沉默命中百分比减弱	‘沉默’抗性增加{0}
-11043	沉默命中百分比减弱	‘沉默’抗性增加{0}
-11044	沉默命中百分比减弱	‘沉默’抗性增加{0}
-1203	能量命中百分比加强	‘减能’抗性下降{0}
-12032	能量命中百分比加强	‘减能’抗性下降{0}
-12033	能量命中百分比加强	‘减能’抗性下降{0}
-12034	能量命中百分比加强	‘减能’抗性下降{0}
-1204	能量命中百分比减弱	‘减能’抗性增加{0}
-12042	能量命中百分比减弱	‘减能’抗性增加{0}
-12043	能量命中百分比减弱	‘减能’抗性增加{0}
-12044	能量命中百分比减弱	‘减能’抗性增加{0}
-1205	能量命中百分比减弱	‘减能’抗性增加{0}
-12052	能量命中百分比减弱	‘减能’抗性增加{0}
-12053	能量命中百分比减弱	‘减能’抗性增加{0}
-12054	能量命中百分比减弱	‘减能’抗性增加{0}
-1501		‘流血’抗性下降{0}
-15012		‘流血’抗性下降{0}
-15013		‘流血’抗性下降{0}
-15014		‘流血’抗性下降{0}
-1502		‘流血’抗性增加{0}
-15022		‘流血’抗性增加{0}
-15023		‘流血’抗性增加{0}
-15024		‘流血’抗性增加{0}
-1601		‘削弱’抗性下降{0}
-16012		‘削弱’抗性下降{0}
-16013		‘削弱’抗性下降{0}
-16014		‘削弱’抗性下降{0}
-1602		‘削弱’抗性增加{0}
-16022		‘削弱’抗性增加{0}
-16023		‘削弱’抗性增加{0}
-16024		‘削弱’抗性增加{0}
-1701		‘吸血’效果下降{0}
-17012		‘吸血’效果下降{0}
-17013		‘吸血’效果下降{0}
-17014		‘吸血’效果下降{0}
-1702		‘吸血’效果增加{0}
-17022		‘吸血’效果增加{0}
-17023		‘吸血’效果增加{0}
-17024		‘吸血’效果增加{0}
-1801		‘反伤’效果下降{0}
-18012		‘反伤’效果下降{0}
-18013		‘反伤’效果下降{0}
-18014		‘反伤’效果下降{0}
-1802		‘反伤’效果增加{0}
-18022		‘反伤’效果增加{0}
-18023		‘反伤’效果增加{0}
-18024		‘反伤’效果增加{0}
-1901		‘免伤’效果下降{0}
-19012		‘免伤’效果下降{0}
-19013		‘免伤’效果下降{0}
-19014		‘免伤’效果下降{0}
-1902		‘免伤’效果增加{0}
-19022		‘免伤’效果增加{0}
-19023		‘免伤’效果增加{0}
-19024		‘免伤’效果增加{0}
-1903		‘免伤’效果增加{0}
-19032		‘免伤’效果增加{0}
-19033		‘免伤’效果增加{0}
-19034		‘免伤’效果增加{0}
-1904	攻击加成百分比加强	生命加成效果增加{0}
-19042	攻击加成百分比加强	生命加成效果增加{0}
-19043	攻击加成百分比加强	生命加成效果增加{0}
-19044	攻击加成百分比加强	生命加成效果增加{0}
-1905		‘流血’抗性增加{0}
-19052		‘流血’抗性增加{0}
-19053		‘流血’抗性增加{0}
-19054		‘流血’抗性增加{0}
-1906		‘吸血’效果增加{0}
-19062		‘吸血’效果增加{0}
-19063		‘吸血’效果增加{0}
-19064		‘吸血’效果增加{0}
-10103	攻击加成百分比加强	攻击加成效果增加{0}
-10303	生命加成百分比加强	生命加成效果增加{0}
-10603	闪避加成百分比加强	闪避加成效果增加{0}
-10703	暴击加成百分比加强	暴击加成效果增加{0}
-10903	定身命中百分比加强	‘定身’抗性下降{0}
-10904	定身命中百分比减弱	‘定身’抗性增加{0}
-11003	流放命中百分比加强	‘流放’抗性下降{0}
-11004	流放命中百分比减弱	‘流放’抗性增加{0}
-11103	沉默命中百分比加强	‘沉默’抗性下降{0}
-11104	沉默命中百分比减弱	‘沉默’抗性增加{0}
-11203	能量命中百分比加强	‘减能’抗性下降{0}
-11204	能量命中百分比减弱	‘减能’抗性增加{0}
-11205	能量命中百分比减弱	‘减能’抗性增加{0}
-11303	护盾命中百分比加强	‘护盾’命中增加{0}
-11403	治疗命中百分比加强	‘治疗’命中增加{0}
+103	Attack bonus percentage enhanced	Attack bonus effect increased by {0}
+1032	Attack bonus percentage enhanced	Attack bonus effect increased by {0}
+1033	Attack bonus percentage enhanced	Attack bonus effect increased by {0}
+1034	Attack bonus percentage enhanced	Attack bonus effect increased by {0}
+104	Attack bonus percentage enhanced	Attack bonus effect increased by {0}
+1042	Attack bonus percentage enhanced	Attack bonus effect increased by {0}
+1043	Attack bonus percentage enhanced	Attack bonus effect increased by {0}
+1044	Attack bonus percentage enhanced	Attack bonus effect increased by {0}
+105	Attack bonus percentage enhanced	Attack bonus effect decreased by {0}
+1052	Attack bonus percentage enhanced	Attack bonus effect decreased by {0}
+1053	Attack bonus percentage enhanced	Attack bonus effect decreased by {0}
+1054	Attack bonus percentage enhanced	Attack bonus effect decreased by {0}
+106	Attack bonus percentage enhanced	Attack bonus effect increased by {0}
+1062	Attack bonus percentage enhanced	Attack bonus effect increased by {0}
+1063	Attack bonus percentage enhanced	Attack bonus effect increased by {0}
+1064	Attack bonus percentage enhanced	Attack bonus effect increased by {0}
+201	Attack bonus percentage enhanced	Weakness resistance increased by {0}
+2012	Attack bonus percentage enhanced	Weakness resistance increased by {0}
+2013	Attack bonus percentage enhanced	Weakness resistance increased by {0}
+2014	Attack bonus percentage enhanced	Weakness resistance increased by {0}
+303	Health bonus percentage enhanced	Health bonus effect increased by {0}
+3032	Health bonus percentage enhanced	Health bonus effect increased by {0}
+3033	Health bonus percentage enhanced	Health bonus effect increased by {0}
+3034	Health bonus percentage enhanced	Health bonus effect increased by {0}
+304	Health bonus percentage enhanced	Health bonus effect increased by {0}
+3042	Health bonus percentage enhanced	Health bonus effect increased by {0}
+3043	Health bonus percentage enhanced	Health bonus effect increased by {0}
+3044	Health bonus percentage enhanced	Health bonus effect increased by {0}
+305	Health bonus percentage enhanced	Health bonus effect decreased by {0}
+3052	Health bonus percentage enhanced	Health bonus effect decreased by {0}
+3053	Health bonus percentage enhanced	Health bonus effect decreased by {0}
+3054	Health bonus percentage enhanced	Health bonus effect decreased by {0}
+306	Health bonus percentage enhanced	Health bonus effect increased by {0}
+3062	Health bonus percentage enhanced	Health bonus effect increased by {0}
+3063	Health bonus percentage enhanced	Health bonus effect increased by {0}
+3064	Health bonus percentage enhanced	Health bonus effect increased by {0}
+401	Skill power flat bonus enhanced	Skill power bonus effect increased by {0}
+4012	Skill power flat bonus enhanced	Skill power bonus effect increased by {0}
+4013	Skill power flat bonus enhanced	Skill power bonus effect increased by {0}
+4014	Skill power flat bonus enhanced	Skill power bonus effect increased by {0}
+404	Skill power bonus percentage weakened	'Lifesteal' effect decreased by {0}
+4042	Skill power bonus percentage weakened	'Lifesteal' effect decreased by {0}
+4043	Skill power bonus percentage weakened	'Lifesteal' effect decreased by {0}
+4044	Skill power bonus percentage weakened	'Lifesteal' effect decreased by {0}
+703	Critical bonus percentage enhanced	Critical bonus effect increased by {0}
+7032	Critical bonus percentage enhanced	Critical bonus effect increased by {0}
+7033	Critical bonus percentage enhanced	Critical bonus effect increased by {0}
+7034	Critical bonus percentage enhanced	Critical bonus effect increased by {0}
+704	Critical bonus percentage enhanced	Critical bonus effect increased by {0}
+7042	Critical bonus percentage enhanced	Critical bonus effect increased by {0}
+7043	Critical bonus percentage enhanced	Critical bonus effect increased by {0}
+7044	Critical bonus percentage enhanced	Critical bonus effect increased by {0}
+903	Stun hit rate percentage increased	Stun resistance decreased by {0}
+9032	Stun hit rate percentage increased	Stun resistance decreased by {0}
+9033	Stun hit rate percentage increased	Stun resistance decreased by {0}
+9034	Stun hit rate percentage increased	Stun resistance decreased by {0}
+904	Root hit percentage weakened	'Root' resistance increased by {0}
+9042	Root hit percentage weakened	'Root' resistance increased by {0}
+9043	Root hit percentage weakened	'Root' resistance increased by {0}
+9044	Root hit percentage weakened	'Root' resistance increased by {0}
+905	Stun hit rate percentage increased	'Root' resistance increased by {0}
+9052	Stun hit rate percentage increased	'Root' resistance increased by {0}
+9053	Stun hit rate percentage increased	'Root' resistance increased by {0}
+9054	Stun hit rate percentage increased	'Root' resistance increased by {0}
+1003	Banishment hit percentage enhanced	'Banishment' resistance decreased by {0}
+10032	Banishment hit percentage enhanced	'Banishment' resistance decreased by {0}
+10033	Banishment hit percentage enhanced	'Banishment' resistance decreased by {0}
+10034	Banishment hit percentage enhanced	'Banishment' resistance decreased by {0}
+1004	Banishment hit percentage weakened	Banishment resistance increased by {0}
+10042	Banishment hit percentage weakened	Banishment resistance increased by {0}
+10043	Banishment hit percentage weakened	Banishment resistance increased by {0}
+10044	Banishment hit percentage weakened	Banishment resistance increased by {0}
+1103	Silence hit percentage enhanced	'Silence' resistance decreased by {0}
+11032	Silence hit percentage enhanced	'Silence' resistance decreased by {0}
+11033	Silence hit percentage enhanced	'Silence' resistance decreased by {0}
+11034	Silence hit percentage enhanced	'Silence' resistance decreased by {0}
+1104	Silence hit percentage weakened	'Silence' resistance increased by {0}
+11042	Silence hit percentage weakened	'Silence' resistance increased by {0}
+11043	Silence hit percentage weakened	'Silence' resistance increased by {0}
+11044	Silence hit percentage weakened	'Silence' resistance increased by {0}
+1203	Energy hit percentage enhanced	Energy reduction resistance decreased by {0}
+12032	Energy hit percentage enhanced	Energy reduction resistance decreased by {0}
+12033	Energy hit percentage enhanced	Energy reduction resistance decreased by {0}
+12034	Energy hit percentage enhanced	Energy reduction resistance decreased by {0}
+1204	Energy hit rate percentage decreased	'Energy Drain' resistance increased by {0}
+12042	Energy hit rate percentage decreased	'Energy Drain' resistance increased by {0}
+12043	Energy hit rate percentage decreased	'Energy Drain' resistance increased by {0}
+12044	Energy hit rate percentage decreased	'Energy Drain' resistance increased by {0}
+1205	Energy hit rate percentage decreased	'Energy Drain' resistance increased by {0}
+12052	Energy hit rate percentage decreased	'Energy Drain' resistance increased by {0}
+12053	Energy hit rate percentage decreased	'Energy Drain' resistance increased by {0}
+12054	Energy hit rate percentage decreased	'Energy Drain' resistance increased by {0}
+1501		'Bleed' resistance decreased by {0}
+15012		'Bleed' resistance decreased by {0}
+15013		'Bleed' resistance decreased by {0}
+15014		'Bleed' resistance decreased by {0}
+1502		Bleed resistance increased by {0}
+15022		Bleed resistance increased by {0}
+15023		Bleed resistance increased by {0}
+15024		Bleed resistance increased by {0}
+1601		'Debuff' resistance decreased by {0}
+16012		'Debuff' resistance decreased by {0}
+16013		'Debuff' resistance decreased by {0}
+16014		'Debuff' resistance decreased by {0}
+1602		Weakness resistance increased by {0}
+16022		Weakness resistance increased by {0}
+16023		Weakness resistance increased by {0}
+16024		Weakness resistance increased by {0}
+1701		'Lifesteal' effect decreased by {0}
+17012		'Lifesteal' effect decreased by {0}
+17013		'Lifesteal' effect decreased by {0}
+17014		'Lifesteal' effect decreased by {0}
+1702		'Lifesteal' effect increased by {0}
+17022		'Lifesteal' effect increased by {0}
+17023		'Lifesteal' effect increased by {0}
+17024		'Lifesteal' effect increased by {0}
+1801		'Thorns' effect decreased by {0}
+18012		'Thorns' effect decreased by {0}
+18013		'Thorns' effect decreased by {0}
+18014		'Thorns' effect decreased by {0}
+1802		Thorns effect increased by {0}
+18022		Thorns effect increased by {0}
+18023		Thorns effect increased by {0}
+18024		Thorns effect increased by {0}
+1901		'Damage Reduction' effect decreased by {0}
+19012		'Damage Reduction' effect decreased by {0}
+19013		'Damage Reduction' effect decreased by {0}
+19014		'Damage Reduction' effect decreased by {0}
+1902		'Damage Reduction' effect increased by {0}
+19022		'Damage Reduction' effect increased by {0}
+19023		'Damage Reduction' effect increased by {0}
+19024		'Damage Reduction' effect increased by {0}
+1903		'Damage Reduction' effect increased by {0}
+19032		'Damage Reduction' effect increased by {0}
+19033		'Damage Reduction' effect increased by {0}
+19034		'Damage Reduction' effect increased by {0}
+1904	Attack bonus percentage enhanced	Health bonus effect increased by {0}
+19042	Attack bonus percentage enhanced	Health bonus effect increased by {0}
+19043	Attack bonus percentage enhanced	Health bonus effect increased by {0}
+19044	Attack bonus percentage enhanced	Health bonus effect increased by {0}
+1905		Bleed resistance increased by {0}
+19052		Bleed resistance increased by {0}
+19053		Bleed resistance increased by {0}
+19054		Bleed resistance increased by {0}
+1906		'Lifesteal' effect increased by {0}
+19062		'Lifesteal' effect increased by {0}
+19063		'Lifesteal' effect increased by {0}
+19064		'Lifesteal' effect increased by {0}
+10103	Attack bonus percentage enhanced	Attack bonus effect increased by {0}
+10303	Health bonus percentage enhanced	Health bonus effect increased by {0}
+10603	Evasion bonus percentage enhanced	Evasion bonus effect increased by {0}
+10703	Critical bonus percentage enhanced	Critical bonus effect increased by {0}
+10903	Stun hit rate percentage increased	Stun resistance decreased by {0}
+10904	Root hit percentage weakened	'Root' resistance increased by {0}
+11003	Banishment hit percentage enhanced	'Banishment' resistance decreased by {0}
+11004	Banishment hit percentage weakened	Banishment resistance increased by {0}
+11103	Silence hit percentage enhanced	'Silence' resistance decreased by {0}
+11104	Silence hit percentage weakened	'Silence' resistance increased by {0}
+11203	Energy hit percentage enhanced	Energy reduction resistance decreased by {0}
+11204	Energy hit rate percentage decreased	'Energy Drain' resistance increased by {0}
+11205	Energy hit rate percentage decreased	'Energy Drain' resistance increased by {0}
+11303	Shield hit percentage enhanced	'Shield' accuracy increased by {0}
+11403	Healing hit percentage enhanced	'Healing' accuracy increased by {0}

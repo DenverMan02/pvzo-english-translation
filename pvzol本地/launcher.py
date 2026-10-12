@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-植物大战僵尸OL — 私人服务器启动器 (图形界面，Windows / macOS)。
+PvZOL Localhost Launcher (GUI，Windows / macOS)。
 
 一个按钮：启动网页服务器 + GM 后台 + 游戏服务器 (PvZ-Server-PoC/run_all.py)，待服务器就绪后，
 自动打开游戏播放器并进入游戏。Windows 使用捆绑的 Flash Projector，

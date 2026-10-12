@@ -1,501 +1,501 @@
 id	rewardItemStr
-1001	植物精华<br>初级基因元件
-1002	植物精华<br>初级基因元件
-1003	植物精华<br>初级基因元件
-1004	植物精华<br>初级基因元件
-1005	植物精华<br>初级基因元件
-1006	植物精华<br>初级基因元件
-1007	植物精华<br>初级基因元件
-1008	植物精华<br>初级基因元件
-1009	植物精华<br>初级基因元件
-1010	植物精华<br>初级基因元件
-1011	植物精华<br>初级基因元件
-1012	植物精华<br>初级基因元件
-1013	植物精华<br>初级基因元件
-1014	植物精华<br>初级基因元件
-1015	植物精华<br>初级基因元件
-1016	植物精华<br>初级基因元件
-1017	植物精华<br>初级基因元件
-1018	植物精华<br>初级基因元件
-1019	植物精华<br>初级基因元件
-1020	植物精华<br>初级基因元件
-1021	植物精华<br>初级基因元件
-1022	植物精华<br>初级基因元件
-1023	植物精华<br>初级基因元件
-1024	植物精华<br>初级基因元件
-1025	植物精华<br>初级基因元件
-1026	植物精华<br>初级基因元件
-1027	植物精华<br>初级基因元件
-1028	植物精华<br>初级基因元件
-1029	植物精华<br>初级基因元件
-1030	植物精华<br>初级基因元件
-1031	植物精华<br>初级基因元件
-1032	植物精华<br>初级基因元件
-1033	植物精华<br>初级基因元件
-1034	植物精华<br>初级基因元件
-1035	植物精华<br>初级基因元件
-1036	植物精华<br>初级基因元件
-1037	植物精华<br>初级基因元件
-1038	植物精华<br>初级基因元件
-1039	植物精华<br>初级基因元件
-1040	植物精华<br>初级基因元件
-1041	植物精华<br>初级基因元件
-1042	植物精华<br>初级基因元件
-1043	植物精华<br>初级基因元件
-1044	植物精华<br>初级基因元件
-1045	植物精华<br>初级基因元件
-1046	植物精华<br>初级基因元件
-1047	植物精华<br>初级基因元件
-1048	植物精华<br>初级基因元件
-1049	植物精华<br>初级基因元件
-1050	植物精华<br>初级基因元件
-2001	植物精华<br>中级基因元件
-2002	植物精华<br>中级基因元件
-2003	植物精华<br>中级基因元件
-2004	植物精华<br>中级基因元件
-2005	植物精华<br>中级基因元件
-2006	植物精华<br>中级基因元件
-2007	植物精华<br>中级基因元件
-2008	植物精华<br>中级基因元件
-2009	植物精华<br>中级基因元件
-2010	植物精华<br>中级基因元件
-2011	植物精华<br>中级基因元件
-2012	植物精华<br>中级基因元件
-2013	植物精华<br>中级基因元件
-2014	植物精华<br>中级基因元件
-2015	植物精华<br>中级基因元件
-2016	植物精华<br>中级基因元件
-2017	植物精华<br>中级基因元件
-2018	植物精华<br>中级基因元件
-2019	植物精华<br>中级基因元件
-2020	植物精华<br>中级基因元件
-2021	植物精华<br>中级基因元件
-2022	植物精华<br>中级基因元件
-2023	植物精华<br>中级基因元件
-2024	植物精华<br>中级基因元件
-2025	植物精华<br>中级基因元件
-2026	植物精华<br>中级基因元件
-2027	植物精华<br>中级基因元件
-2028	植物精华<br>中级基因元件
-2029	植物精华<br>中级基因元件
-2030	植物精华<br>中级基因元件
-2031	植物精华<br>中级基因元件
-2032	植物精华<br>中级基因元件
-2033	植物精华<br>中级基因元件
-2034	植物精华<br>中级基因元件
-2035	植物精华<br>中级基因元件
-2036	植物精华<br>中级基因元件
-2037	植物精华<br>中级基因元件
-2038	植物精华<br>中级基因元件
-2039	植物精华<br>中级基因元件
-2040	植物精华<br>中级基因元件
-2041	植物精华<br>中级基因元件
-2042	植物精华<br>中级基因元件
-2043	植物精华<br>中级基因元件
-2044	植物精华<br>中级基因元件
-2045	植物精华<br>中级基因元件
-2046	植物精华<br>中级基因元件
-2047	植物精华<br>中级基因元件
-2048	植物精华<br>中级基因元件
-2049	植物精华<br>中级基因元件
-2050	植物精华<br>中级基因元件
-3001	植物精华<br>高级基因元件
-3002	植物精华<br>高级基因元件
-3003	植物精华<br>高级基因元件
-3004	植物精华<br>高级基因元件
-3005	植物精华<br>高级基因元件
-3006	植物精华<br>高级基因元件
-3007	植物精华<br>高级基因元件
-3008	植物精华<br>高级基因元件
-3009	植物精华<br>高级基因元件
-3010	植物精华<br>高级基因元件
-3011	植物精华<br>高级基因元件
-3012	植物精华<br>高级基因元件
-3013	植物精华<br>高级基因元件
-3014	植物精华<br>高级基因元件
-3015	植物精华<br>高级基因元件
-3016	植物精华<br>高级基因元件
-3017	植物精华<br>高级基因元件
-3018	植物精华<br>高级基因元件
-3019	植物精华<br>高级基因元件
-3020	植物精华<br>高级基因元件
-3021	植物精华<br>高级基因元件
-3022	植物精华<br>高级基因元件
-3023	植物精华<br>高级基因元件
-3024	植物精华<br>高级基因元件
-3025	植物精华<br>高级基因元件
-3026	植物精华<br>高级基因元件
-3027	植物精华<br>高级基因元件
-3028	植物精华<br>高级基因元件
-3029	植物精华<br>高级基因元件
-3030	植物精华<br>高级基因元件
-3031	植物精华<br>高级基因元件
-3032	植物精华<br>高级基因元件
-3033	植物精华<br>高级基因元件
-3034	植物精华<br>高级基因元件
-3035	植物精华<br>高级基因元件
-3036	植物精华<br>高级基因元件
-3037	植物精华<br>高级基因元件
-3038	植物精华<br>高级基因元件
-3039	植物精华<br>高级基因元件
-3040	植物精华<br>高级基因元件
-3041	植物精华<br>高级基因元件
-3042	植物精华<br>高级基因元件
-3043	植物精华<br>高级基因元件
-3044	植物精华<br>高级基因元件
-3045	植物精华<br>高级基因元件
-3046	植物精华<br>高级基因元件
-3047	植物精华<br>高级基因元件
-3048	植物精华<br>高级基因元件
-3049	植物精华<br>高级基因元件
-3050	植物精华<br>高级基因元件
-4001	植物精华<br>稀有基因元件
-4002	植物精华<br>稀有基因元件
-4003	植物精华<br>稀有基因元件
-4004	植物精华<br>稀有基因元件
-4005	植物精华<br>稀有基因元件
-4006	植物精华<br>稀有基因元件
-4007	植物精华<br>稀有基因元件
-4008	植物精华<br>稀有基因元件
-4009	植物精华<br>稀有基因元件
-4010	植物精华<br>稀有基因元件
-4011	植物精华<br>稀有基因元件
-4012	植物精华<br>稀有基因元件
-4013	植物精华<br>稀有基因元件
-4014	植物精华<br>稀有基因元件
-4015	植物精华<br>稀有基因元件
-4016	植物精华<br>稀有基因元件
-4017	植物精华<br>稀有基因元件
-4018	植物精华<br>稀有基因元件
-4019	植物精华<br>稀有基因元件
-4020	植物精华<br>稀有基因元件
-4021	植物精华<br>稀有基因元件
-4022	植物精华<br>稀有基因元件
-4023	植物精华<br>稀有基因元件
-4024	植物精华<br>稀有基因元件
-4025	植物精华<br>稀有基因元件
-4026	植物精华<br>稀有基因元件
-4027	植物精华<br>稀有基因元件
-4028	植物精华<br>稀有基因元件
-4029	植物精华<br>稀有基因元件
-4030	植物精华<br>稀有基因元件
-4031	植物精华<br>稀有基因元件
-4032	植物精华<br>稀有基因元件
-4033	植物精华<br>稀有基因元件
-4034	植物精华<br>稀有基因元件
-4035	植物精华<br>稀有基因元件
-4036	植物精华<br>稀有基因元件
-4037	植物精华<br>稀有基因元件
-4038	植物精华<br>稀有基因元件
-4039	植物精华<br>稀有基因元件
-4040	植物精华<br>稀有基因元件
-4041	植物精华<br>稀有基因元件
-4042	植物精华<br>稀有基因元件
-4043	植物精华<br>稀有基因元件
-4044	植物精华<br>稀有基因元件
-4045	植物精华<br>稀有基因元件
-4046	植物精华<br>稀有基因元件
-4047	植物精华<br>稀有基因元件
-4048	植物精华<br>稀有基因元件
-4049	植物精华<br>稀有基因元件
-4050	植物精华<br>稀有基因元件
-5001	植物精华<br>传奇基因元件
-5002	植物精华<br>传奇基因元件
-5003	植物精华<br>传奇基因元件
-5004	植物精华<br>传奇基因元件
-5005	植物精华<br>传奇基因元件
-5006	植物精华<br>传奇基因元件
-5007	植物精华<br>传奇基因元件
-5008	植物精华<br>传奇基因元件
-5009	植物精华<br>传奇基因元件
-5010	植物精华<br>传奇基因元件
-5011	植物精华<br>传奇基因元件
-5012	植物精华<br>传奇基因元件
-5013	植物精华<br>传奇基因元件
-5014	植物精华<br>传奇基因元件
-5015	植物精华<br>传奇基因元件
-5016	植物精华<br>传奇基因元件
-5017	植物精华<br>传奇基因元件
-5018	植物精华<br>传奇基因元件
-5019	植物精华<br>传奇基因元件
-5020	植物精华<br>传奇基因元件
-5021	植物精华<br>传奇基因元件
-5022	植物精华<br>传奇基因元件
-5023	植物精华<br>传奇基因元件
-5024	植物精华<br>传奇基因元件
-5025	植物精华<br>传奇基因元件
-5026	植物精华<br>传奇基因元件
-5027	植物精华<br>传奇基因元件
-5028	植物精华<br>传奇基因元件
-5029	植物精华<br>传奇基因元件
-5030	植物精华<br>传奇基因元件
-5031	植物精华<br>传奇基因元件
-5032	植物精华<br>传奇基因元件
-5033	植物精华<br>传奇基因元件
-5034	植物精华<br>传奇基因元件
-5035	植物精华<br>传奇基因元件
-5036	植物精华<br>传奇基因元件
-5037	植物精华<br>传奇基因元件
-5038	植物精华<br>传奇基因元件
-5039	植物精华<br>传奇基因元件
-5040	植物精华<br>传奇基因元件
-5041	植物精华<br>传奇基因元件
-5042	植物精华<br>传奇基因元件
-5043	植物精华<br>传奇基因元件
-5044	植物精华<br>传奇基因元件
-5045	植物精华<br>传奇基因元件
-5046	植物精华<br>传奇基因元件
-5047	植物精华<br>传奇基因元件
-5048	植物精华<br>传奇基因元件
-5049	植物精华<br>传奇基因元件
-5050	植物精华<br>传奇基因元件
-1001001	植物精华<br>初级基因元件
-1001002	植物精华<br>初级基因元件
-1001003	植物精华<br>初级基因元件
-1001004	植物精华<br>初级基因元件
-1001005	植物精华<br>初级基因元件
-1001006	植物精华<br>初级基因元件
-1001007	植物精华<br>初级基因元件
-1001008	植物精华<br>初级基因元件
-1001009	植物精华<br>初级基因元件
-1001010	植物精华<br>初级基因元件
-1001011	植物精华<br>初级基因元件
-1001012	植物精华<br>初级基因元件
-1001013	植物精华<br>初级基因元件
-1001014	植物精华<br>初级基因元件
-1001015	植物精华<br>初级基因元件
-1001016	植物精华<br>初级基因元件
-1001017	植物精华<br>初级基因元件
-1001018	植物精华<br>初级基因元件
-1001019	植物精华<br>初级基因元件
-1001020	植物精华<br>初级基因元件
-1001021	植物精华<br>初级基因元件
-1001022	植物精华<br>初级基因元件
-1001023	植物精华<br>初级基因元件
-1001024	植物精华<br>初级基因元件
-1001025	植物精华<br>初级基因元件
-1001026	植物精华<br>初级基因元件
-1001027	植物精华<br>初级基因元件
-1001028	植物精华<br>初级基因元件
-1001029	植物精华<br>初级基因元件
-1001030	植物精华<br>初级基因元件
-1001031	植物精华<br>初级基因元件
-1001032	植物精华<br>初级基因元件
-1001033	植物精华<br>初级基因元件
-1001034	植物精华<br>初级基因元件
-1001035	植物精华<br>初级基因元件
-1001036	植物精华<br>初级基因元件
-1001037	植物精华<br>初级基因元件
-1001038	植物精华<br>初级基因元件
-1001039	植物精华<br>初级基因元件
-1001040	植物精华<br>初级基因元件
-1001041	植物精华<br>初级基因元件
-1001042	植物精华<br>初级基因元件
-1001043	植物精华<br>初级基因元件
-1001044	植物精华<br>初级基因元件
-1001045	植物精华<br>初级基因元件
-1001046	植物精华<br>初级基因元件
-1001047	植物精华<br>初级基因元件
-1001048	植物精华<br>初级基因元件
-1001049	植物精华<br>初级基因元件
-1001050	植物精华<br>初级基因元件
-1002001	植物精华<br>中级基因元件
-1002002	植物精华<br>中级基因元件
-1002003	植物精华<br>中级基因元件
-1002004	植物精华<br>中级基因元件
-1002005	植物精华<br>中级基因元件
-1002006	植物精华<br>中级基因元件
-1002007	植物精华<br>中级基因元件
-1002008	植物精华<br>中级基因元件
-1002009	植物精华<br>中级基因元件
-1002010	植物精华<br>中级基因元件
-1002011	植物精华<br>中级基因元件
-1002012	植物精华<br>中级基因元件
-1002013	植物精华<br>中级基因元件
-1002014	植物精华<br>中级基因元件
-1002015	植物精华<br>中级基因元件
-1002016	植物精华<br>中级基因元件
-1002017	植物精华<br>中级基因元件
-1002018	植物精华<br>中级基因元件
-1002019	植物精华<br>中级基因元件
-1002020	植物精华<br>中级基因元件
-1002021	植物精华<br>中级基因元件
-1002022	植物精华<br>中级基因元件
-1002023	植物精华<br>中级基因元件
-1002024	植物精华<br>中级基因元件
-1002025	植物精华<br>中级基因元件
-1002026	植物精华<br>中级基因元件
-1002027	植物精华<br>中级基因元件
-1002028	植物精华<br>中级基因元件
-1002029	植物精华<br>中级基因元件
-1002030	植物精华<br>中级基因元件
-1002031	植物精华<br>中级基因元件
-1002032	植物精华<br>中级基因元件
-1002033	植物精华<br>中级基因元件
-1002034	植物精华<br>中级基因元件
-1002035	植物精华<br>中级基因元件
-1002036	植物精华<br>中级基因元件
-1002037	植物精华<br>中级基因元件
-1002038	植物精华<br>中级基因元件
-1002039	植物精华<br>中级基因元件
-1002040	植物精华<br>中级基因元件
-1002041	植物精华<br>中级基因元件
-1002042	植物精华<br>中级基因元件
-1002043	植物精华<br>中级基因元件
-1002044	植物精华<br>中级基因元件
-1002045	植物精华<br>中级基因元件
-1002046	植物精华<br>中级基因元件
-1002047	植物精华<br>中级基因元件
-1002048	植物精华<br>中级基因元件
-1002049	植物精华<br>中级基因元件
-1002050	植物精华<br>中级基因元件
-1003001	植物精华<br>高级基因元件
-1003002	植物精华<br>高级基因元件
-1003003	植物精华<br>高级基因元件
-1003004	植物精华<br>高级基因元件
-1003005	植物精华<br>高级基因元件
-1003006	植物精华<br>高级基因元件
-1003007	植物精华<br>高级基因元件
-1003008	植物精华<br>高级基因元件
-1003009	植物精华<br>高级基因元件
-1003010	植物精华<br>高级基因元件
-1003011	植物精华<br>高级基因元件
-1003012	植物精华<br>高级基因元件
-1003013	植物精华<br>高级基因元件
-1003014	植物精华<br>高级基因元件
-1003015	植物精华<br>高级基因元件
-1003016	植物精华<br>高级基因元件
-1003017	植物精华<br>高级基因元件
-1003018	植物精华<br>高级基因元件
-1003019	植物精华<br>高级基因元件
-1003020	植物精华<br>高级基因元件
-1003021	植物精华<br>高级基因元件
-1003022	植物精华<br>高级基因元件
-1003023	植物精华<br>高级基因元件
-1003024	植物精华<br>高级基因元件
-1003025	植物精华<br>高级基因元件
-1003026	植物精华<br>高级基因元件
-1003027	植物精华<br>高级基因元件
-1003028	植物精华<br>高级基因元件
-1003029	植物精华<br>高级基因元件
-1003030	植物精华<br>高级基因元件
-1003031	植物精华<br>高级基因元件
-1003032	植物精华<br>高级基因元件
-1003033	植物精华<br>高级基因元件
-1003034	植物精华<br>高级基因元件
-1003035	植物精华<br>高级基因元件
-1003036	植物精华<br>高级基因元件
-1003037	植物精华<br>高级基因元件
-1003038	植物精华<br>高级基因元件
-1003039	植物精华<br>高级基因元件
-1003040	植物精华<br>高级基因元件
-1003041	植物精华<br>高级基因元件
-1003042	植物精华<br>高级基因元件
-1003043	植物精华<br>高级基因元件
-1003044	植物精华<br>高级基因元件
-1003045	植物精华<br>高级基因元件
-1003046	植物精华<br>高级基因元件
-1003047	植物精华<br>高级基因元件
-1003048	植物精华<br>高级基因元件
-1003049	植物精华<br>高级基因元件
-1003050	植物精华<br>高级基因元件
-1004001	植物精华<br>稀有基因元件
-1004002	植物精华<br>稀有基因元件
-1004003	植物精华<br>稀有基因元件
-1004004	植物精华<br>稀有基因元件
-1004005	植物精华<br>稀有基因元件
-1004006	植物精华<br>稀有基因元件
-1004007	植物精华<br>稀有基因元件
-1004008	植物精华<br>稀有基因元件
-1004009	植物精华<br>稀有基因元件
-1004010	植物精华<br>稀有基因元件
-1004011	植物精华<br>稀有基因元件
-1004012	植物精华<br>稀有基因元件
-1004013	植物精华<br>稀有基因元件
-1004014	植物精华<br>稀有基因元件
-1004015	植物精华<br>稀有基因元件
-1004016	植物精华<br>稀有基因元件
-1004017	植物精华<br>稀有基因元件
-1004018	植物精华<br>稀有基因元件
-1004019	植物精华<br>稀有基因元件
-1004020	植物精华<br>稀有基因元件
-1004021	植物精华<br>稀有基因元件
-1004022	植物精华<br>稀有基因元件
-1004023	植物精华<br>稀有基因元件
-1004024	植物精华<br>稀有基因元件
-1004025	植物精华<br>稀有基因元件
-1004026	植物精华<br>稀有基因元件
-1004027	植物精华<br>稀有基因元件
-1004028	植物精华<br>稀有基因元件
-1004029	植物精华<br>稀有基因元件
-1004030	植物精华<br>稀有基因元件
-1004031	植物精华<br>稀有基因元件
-1004032	植物精华<br>稀有基因元件
-1004033	植物精华<br>稀有基因元件
-1004034	植物精华<br>稀有基因元件
-1004035	植物精华<br>稀有基因元件
-1004036	植物精华<br>稀有基因元件
-1004037	植物精华<br>稀有基因元件
-1004038	植物精华<br>稀有基因元件
-1004039	植物精华<br>稀有基因元件
-1004040	植物精华<br>稀有基因元件
-1004041	植物精华<br>稀有基因元件
-1004042	植物精华<br>稀有基因元件
-1004043	植物精华<br>稀有基因元件
-1004044	植物精华<br>稀有基因元件
-1004045	植物精华<br>稀有基因元件
-1004046	植物精华<br>稀有基因元件
-1004047	植物精华<br>稀有基因元件
-1004048	植物精华<br>稀有基因元件
-1004049	植物精华<br>稀有基因元件
-1004050	植物精华<br>稀有基因元件
-1005001	植物精华<br>传奇基因元件
-1005002	植物精华<br>传奇基因元件
-1005003	植物精华<br>传奇基因元件
-1005004	植物精华<br>传奇基因元件
-1005005	植物精华<br>传奇基因元件
-1005006	植物精华<br>传奇基因元件
-1005007	植物精华<br>传奇基因元件
-1005008	植物精华<br>传奇基因元件
-1005009	植物精华<br>传奇基因元件
-1005010	植物精华<br>传奇基因元件
-1005011	植物精华<br>传奇基因元件
-1005012	植物精华<br>传奇基因元件
-1005013	植物精华<br>传奇基因元件
-1005014	植物精华<br>传奇基因元件
-1005015	植物精华<br>传奇基因元件
-1005016	植物精华<br>传奇基因元件
-1005017	植物精华<br>传奇基因元件
-1005018	植物精华<br>传奇基因元件
-1005019	植物精华<br>传奇基因元件
-1005020	植物精华<br>传奇基因元件
-1005021	植物精华<br>传奇基因元件
-1005022	植物精华<br>传奇基因元件
-1005023	植物精华<br>传奇基因元件
-1005024	植物精华<br>传奇基因元件
-1005025	植物精华<br>传奇基因元件
-1005026	植物精华<br>传奇基因元件
-1005027	植物精华<br>传奇基因元件
-1005028	植物精华<br>传奇基因元件
-1005029	植物精华<br>传奇基因元件
-1005030	植物精华<br>传奇基因元件
-1005031	植物精华<br>传奇基因元件
-1005032	植物精华<br>传奇基因元件
-1005033	植物精华<br>传奇基因元件
-1005034	植物精华<br>传奇基因元件
-1005035	植物精华<br>传奇基因元件
-1005036	植物精华<br>传奇基因元件
-1005037	植物精华<br>传奇基因元件
-1005038	植物精华<br>传奇基因元件
-1005039	植物精华<br>传奇基因元件
-1005040	植物精华<br>传奇基因元件
-1005041	植物精华<br>传奇基因元件
-1005042	植物精华<br>传奇基因元件
-1005043	植物精华<br>传奇基因元件
-1005044	植物精华<br>传奇基因元件
-1005045	植物精华<br>传奇基因元件
-1005046	植物精华<br>传奇基因元件
-1005047	植物精华<br>传奇基因元件
-1005048	植物精华<br>传奇基因元件
-1005049	植物精华<br>传奇基因元件
-1005050	植物精华<br>传奇基因元件
+1001	Plant Essence<br>Basic Genetic Component
+1002	Plant Essence<br>Basic Genetic Component
+1003	Plant Essence<br>Basic Genetic Component
+1004	Plant Essence<br>Basic Genetic Component
+1005	Plant Essence<br>Basic Genetic Component
+1006	Plant Essence<br>Basic Genetic Component
+1007	Plant Essence<br>Basic Genetic Component
+1008	Plant Essence<br>Basic Genetic Component
+1009	Plant Essence<br>Basic Genetic Component
+1010	Plant Essence<br>Basic Genetic Component
+1011	Plant Essence<br>Basic Genetic Component
+1012	Plant Essence<br>Basic Genetic Component
+1013	Plant Essence<br>Basic Genetic Component
+1014	Plant Essence<br>Basic Genetic Component
+1015	Plant Essence<br>Basic Genetic Component
+1016	Plant Essence<br>Basic Genetic Component
+1017	Plant Essence<br>Basic Genetic Component
+1018	Plant Essence<br>Basic Genetic Component
+1019	Plant Essence<br>Basic Genetic Component
+1020	Plant Essence<br>Basic Genetic Component
+1021	Plant Essence<br>Basic Genetic Component
+1022	Plant Essence<br>Basic Genetic Component
+1023	Plant Essence<br>Basic Genetic Component
+1024	Plant Essence<br>Basic Genetic Component
+1025	Plant Essence<br>Basic Genetic Component
+1026	Plant Essence<br>Basic Genetic Component
+1027	Plant Essence<br>Basic Genetic Component
+1028	Plant Essence<br>Basic Genetic Component
+1029	Plant Essence<br>Basic Genetic Component
+1030	Plant Essence<br>Basic Genetic Component
+1031	Plant Essence<br>Basic Genetic Component
+1032	Plant Essence<br>Basic Genetic Component
+1033	Plant Essence<br>Basic Genetic Component
+1034	Plant Essence<br>Basic Genetic Component
+1035	Plant Essence<br>Basic Genetic Component
+1036	Plant Essence<br>Basic Genetic Component
+1037	Plant Essence<br>Basic Genetic Component
+1038	Plant Essence<br>Basic Genetic Component
+1039	Plant Essence<br>Basic Genetic Component
+1040	Plant Essence<br>Basic Genetic Component
+1041	Plant Essence<br>Basic Genetic Component
+1042	Plant Essence<br>Basic Genetic Component
+1043	Plant Essence<br>Basic Genetic Component
+1044	Plant Essence<br>Basic Genetic Component
+1045	Plant Essence<br>Basic Genetic Component
+1046	Plant Essence<br>Basic Genetic Component
+1047	Plant Essence<br>Basic Genetic Component
+1048	Plant Essence<br>Basic Genetic Component
+1049	Plant Essence<br>Basic Genetic Component
+1050	Plant Essence<br>Basic Genetic Component
+2001	Plant Essence<br>Intermediate Genetic Component
+2002	Plant Essence<br>Intermediate Genetic Component
+2003	Plant Essence<br>Intermediate Genetic Component
+2004	Plant Essence<br>Intermediate Genetic Component
+2005	Plant Essence<br>Intermediate Genetic Component
+2006	Plant Essence<br>Intermediate Genetic Component
+2007	Plant Essence<br>Intermediate Genetic Component
+2008	Plant Essence<br>Intermediate Genetic Component
+2009	Plant Essence<br>Intermediate Genetic Component
+2010	Plant Essence<br>Intermediate Genetic Component
+2011	Plant Essence<br>Intermediate Genetic Component
+2012	Plant Essence<br>Intermediate Genetic Component
+2013	Plant Essence<br>Intermediate Genetic Component
+2014	Plant Essence<br>Intermediate Genetic Component
+2015	Plant Essence<br>Intermediate Genetic Component
+2016	Plant Essence<br>Intermediate Genetic Component
+2017	Plant Essence<br>Intermediate Genetic Component
+2018	Plant Essence<br>Intermediate Genetic Component
+2019	Plant Essence<br>Intermediate Genetic Component
+2020	Plant Essence<br>Intermediate Genetic Component
+2021	Plant Essence<br>Intermediate Genetic Component
+2022	Plant Essence<br>Intermediate Genetic Component
+2023	Plant Essence<br>Intermediate Genetic Component
+2024	Plant Essence<br>Intermediate Genetic Component
+2025	Plant Essence<br>Intermediate Genetic Component
+2026	Plant Essence<br>Intermediate Genetic Component
+2027	Plant Essence<br>Intermediate Genetic Component
+2028	Plant Essence<br>Intermediate Genetic Component
+2029	Plant Essence<br>Intermediate Genetic Component
+2030	Plant Essence<br>Intermediate Genetic Component
+2031	Plant Essence<br>Intermediate Genetic Component
+2032	Plant Essence<br>Intermediate Genetic Component
+2033	Plant Essence<br>Intermediate Genetic Component
+2034	Plant Essence<br>Intermediate Genetic Component
+2035	Plant Essence<br>Intermediate Genetic Component
+2036	Plant Essence<br>Intermediate Genetic Component
+2037	Plant Essence<br>Intermediate Genetic Component
+2038	Plant Essence<br>Intermediate Genetic Component
+2039	Plant Essence<br>Intermediate Genetic Component
+2040	Plant Essence<br>Intermediate Genetic Component
+2041	Plant Essence<br>Intermediate Genetic Component
+2042	Plant Essence<br>Intermediate Genetic Component
+2043	Plant Essence<br>Intermediate Genetic Component
+2044	Plant Essence<br>Intermediate Genetic Component
+2045	Plant Essence<br>Intermediate Genetic Component
+2046	Plant Essence<br>Intermediate Genetic Component
+2047	Plant Essence<br>Intermediate Genetic Component
+2048	Plant Essence<br>Intermediate Genetic Component
+2049	Plant Essence<br>Intermediate Genetic Component
+2050	Plant Essence<br>Intermediate Genetic Component
+3001	Plant Essence<br>Advanced Genetic Component
+3002	Plant Essence<br>Advanced Genetic Component
+3003	Plant Essence<br>Advanced Genetic Component
+3004	Plant Essence<br>Advanced Genetic Component
+3005	Plant Essence<br>Advanced Genetic Component
+3006	Plant Essence<br>Advanced Genetic Component
+3007	Plant Essence<br>Advanced Genetic Component
+3008	Plant Essence<br>Advanced Genetic Component
+3009	Plant Essence<br>Advanced Genetic Component
+3010	Plant Essence<br>Advanced Genetic Component
+3011	Plant Essence<br>Advanced Genetic Component
+3012	Plant Essence<br>Advanced Genetic Component
+3013	Plant Essence<br>Advanced Genetic Component
+3014	Plant Essence<br>Advanced Genetic Component
+3015	Plant Essence<br>Advanced Genetic Component
+3016	Plant Essence<br>Advanced Genetic Component
+3017	Plant Essence<br>Advanced Genetic Component
+3018	Plant Essence<br>Advanced Genetic Component
+3019	Plant Essence<br>Advanced Genetic Component
+3020	Plant Essence<br>Advanced Genetic Component
+3021	Plant Essence<br>Advanced Genetic Component
+3022	Plant Essence<br>Advanced Genetic Component
+3023	Plant Essence<br>Advanced Genetic Component
+3024	Plant Essence<br>Advanced Genetic Component
+3025	Plant Essence<br>Advanced Genetic Component
+3026	Plant Essence<br>Advanced Genetic Component
+3027	Plant Essence<br>Advanced Genetic Component
+3028	Plant Essence<br>Advanced Genetic Component
+3029	Plant Essence<br>Advanced Genetic Component
+3030	Plant Essence<br>Advanced Genetic Component
+3031	Plant Essence<br>Advanced Genetic Component
+3032	Plant Essence<br>Advanced Genetic Component
+3033	Plant Essence<br>Advanced Genetic Component
+3034	Plant Essence<br>Advanced Genetic Component
+3035	Plant Essence<br>Advanced Genetic Component
+3036	Plant Essence<br>Advanced Genetic Component
+3037	Plant Essence<br>Advanced Genetic Component
+3038	Plant Essence<br>Advanced Genetic Component
+3039	Plant Essence<br>Advanced Genetic Component
+3040	Plant Essence<br>Advanced Genetic Component
+3041	Plant Essence<br>Advanced Genetic Component
+3042	Plant Essence<br>Advanced Genetic Component
+3043	Plant Essence<br>Advanced Genetic Component
+3044	Plant Essence<br>Advanced Genetic Component
+3045	Plant Essence<br>Advanced Genetic Component
+3046	Plant Essence<br>Advanced Genetic Component
+3047	Plant Essence<br>Advanced Genetic Component
+3048	Plant Essence<br>Advanced Genetic Component
+3049	Plant Essence<br>Advanced Genetic Component
+3050	Plant Essence<br>Advanced Genetic Component
+4001	Plant Essence<br>Rare Genetic Component
+4002	Plant Essence<br>Rare Genetic Component
+4003	Plant Essence<br>Rare Genetic Component
+4004	Plant Essence<br>Rare Genetic Component
+4005	Plant Essence<br>Rare Genetic Component
+4006	Plant Essence<br>Rare Genetic Component
+4007	Plant Essence<br>Rare Genetic Component
+4008	Plant Essence<br>Rare Genetic Component
+4009	Plant Essence<br>Rare Genetic Component
+4010	Plant Essence<br>Rare Genetic Component
+4011	Plant Essence<br>Rare Genetic Component
+4012	Plant Essence<br>Rare Genetic Component
+4013	Plant Essence<br>Rare Genetic Component
+4014	Plant Essence<br>Rare Genetic Component
+4015	Plant Essence<br>Rare Genetic Component
+4016	Plant Essence<br>Rare Genetic Component
+4017	Plant Essence<br>Rare Genetic Component
+4018	Plant Essence<br>Rare Genetic Component
+4019	Plant Essence<br>Rare Genetic Component
+4020	Plant Essence<br>Rare Genetic Component
+4021	Plant Essence<br>Rare Genetic Component
+4022	Plant Essence<br>Rare Genetic Component
+4023	Plant Essence<br>Rare Genetic Component
+4024	Plant Essence<br>Rare Genetic Component
+4025	Plant Essence<br>Rare Genetic Component
+4026	Plant Essence<br>Rare Genetic Component
+4027	Plant Essence<br>Rare Genetic Component
+4028	Plant Essence<br>Rare Genetic Component
+4029	Plant Essence<br>Rare Genetic Component
+4030	Plant Essence<br>Rare Genetic Component
+4031	Plant Essence<br>Rare Genetic Component
+4032	Plant Essence<br>Rare Genetic Component
+4033	Plant Essence<br>Rare Genetic Component
+4034	Plant Essence<br>Rare Genetic Component
+4035	Plant Essence<br>Rare Genetic Component
+4036	Plant Essence<br>Rare Genetic Component
+4037	Plant Essence<br>Rare Genetic Component
+4038	Plant Essence<br>Rare Genetic Component
+4039	Plant Essence<br>Rare Genetic Component
+4040	Plant Essence<br>Rare Genetic Component
+4041	Plant Essence<br>Rare Genetic Component
+4042	Plant Essence<br>Rare Genetic Component
+4043	Plant Essence<br>Rare Genetic Component
+4044	Plant Essence<br>Rare Genetic Component
+4045	Plant Essence<br>Rare Genetic Component
+4046	Plant Essence<br>Rare Genetic Component
+4047	Plant Essence<br>Rare Genetic Component
+4048	Plant Essence<br>Rare Genetic Component
+4049	Plant Essence<br>Rare Genetic Component
+4050	Plant Essence<br>Rare Genetic Component
+5001	Plant Essence<br>Legendary Genetic Component
+5002	Plant Essence<br>Legendary Genetic Component
+5003	Plant Essence<br>Legendary Genetic Component
+5004	Plant Essence<br>Legendary Genetic Component
+5005	Plant Essence<br>Legendary Genetic Component
+5006	Plant Essence<br>Legendary Genetic Component
+5007	Plant Essence<br>Legendary Genetic Component
+5008	Plant Essence<br>Legendary Genetic Component
+5009	Plant Essence<br>Legendary Genetic Component
+5010	Plant Essence<br>Legendary Genetic Component
+5011	Plant Essence<br>Legendary Genetic Component
+5012	Plant Essence<br>Legendary Genetic Component
+5013	Plant Essence<br>Legendary Genetic Component
+5014	Plant Essence<br>Legendary Genetic Component
+5015	Plant Essence<br>Legendary Genetic Component
+5016	Plant Essence<br>Legendary Genetic Component
+5017	Plant Essence<br>Legendary Genetic Component
+5018	Plant Essence<br>Legendary Genetic Component
+5019	Plant Essence<br>Legendary Genetic Component
+5020	Plant Essence<br>Legendary Genetic Component
+5021	Plant Essence<br>Legendary Genetic Component
+5022	Plant Essence<br>Legendary Genetic Component
+5023	Plant Essence<br>Legendary Genetic Component
+5024	Plant Essence<br>Legendary Genetic Component
+5025	Plant Essence<br>Legendary Genetic Component
+5026	Plant Essence<br>Legendary Genetic Component
+5027	Plant Essence<br>Legendary Genetic Component
+5028	Plant Essence<br>Legendary Genetic Component
+5029	Plant Essence<br>Legendary Genetic Component
+5030	Plant Essence<br>Legendary Genetic Component
+5031	Plant Essence<br>Legendary Genetic Component
+5032	Plant Essence<br>Legendary Genetic Component
+5033	Plant Essence<br>Legendary Genetic Component
+5034	Plant Essence<br>Legendary Genetic Component
+5035	Plant Essence<br>Legendary Genetic Component
+5036	Plant Essence<br>Legendary Genetic Component
+5037	Plant Essence<br>Legendary Genetic Component
+5038	Plant Essence<br>Legendary Genetic Component
+5039	Plant Essence<br>Legendary Genetic Component
+5040	Plant Essence<br>Legendary Genetic Component
+5041	Plant Essence<br>Legendary Genetic Component
+5042	Plant Essence<br>Legendary Genetic Component
+5043	Plant Essence<br>Legendary Genetic Component
+5044	Plant Essence<br>Legendary Genetic Component
+5045	Plant Essence<br>Legendary Genetic Component
+5046	Plant Essence<br>Legendary Genetic Component
+5047	Plant Essence<br>Legendary Genetic Component
+5048	Plant Essence<br>Legendary Genetic Component
+5049	Plant Essence<br>Legendary Genetic Component
+5050	Plant Essence<br>Legendary Genetic Component
+1001001	Plant Essence<br>Basic Genetic Component
+1001002	Plant Essence<br>Basic Genetic Component
+1001003	Plant Essence<br>Basic Genetic Component
+1001004	Plant Essence<br>Basic Genetic Component
+1001005	Plant Essence<br>Basic Genetic Component
+1001006	Plant Essence<br>Basic Genetic Component
+1001007	Plant Essence<br>Basic Genetic Component
+1001008	Plant Essence<br>Basic Genetic Component
+1001009	Plant Essence<br>Basic Genetic Component
+1001010	Plant Essence<br>Basic Genetic Component
+1001011	Plant Essence<br>Basic Genetic Component
+1001012	Plant Essence<br>Basic Genetic Component
+1001013	Plant Essence<br>Basic Genetic Component
+1001014	Plant Essence<br>Basic Genetic Component
+1001015	Plant Essence<br>Basic Genetic Component
+1001016	Plant Essence<br>Basic Genetic Component
+1001017	Plant Essence<br>Basic Genetic Component
+1001018	Plant Essence<br>Basic Genetic Component
+1001019	Plant Essence<br>Basic Genetic Component
+1001020	Plant Essence<br>Basic Genetic Component
+1001021	Plant Essence<br>Basic Genetic Component
+1001022	Plant Essence<br>Basic Genetic Component
+1001023	Plant Essence<br>Basic Genetic Component
+1001024	Plant Essence<br>Basic Genetic Component
+1001025	Plant Essence<br>Basic Genetic Component
+1001026	Plant Essence<br>Basic Genetic Component
+1001027	Plant Essence<br>Basic Genetic Component
+1001028	Plant Essence<br>Basic Genetic Component
+1001029	Plant Essence<br>Basic Genetic Component
+1001030	Plant Essence<br>Basic Genetic Component
+1001031	Plant Essence<br>Basic Genetic Component
+1001032	Plant Essence<br>Basic Genetic Component
+1001033	Plant Essence<br>Basic Genetic Component
+1001034	Plant Essence<br>Basic Genetic Component
+1001035	Plant Essence<br>Basic Genetic Component
+1001036	Plant Essence<br>Basic Genetic Component
+1001037	Plant Essence<br>Basic Genetic Component
+1001038	Plant Essence<br>Basic Genetic Component
+1001039	Plant Essence<br>Basic Genetic Component
+1001040	Plant Essence<br>Basic Genetic Component
+1001041	Plant Essence<br>Basic Genetic Component
+1001042	Plant Essence<br>Basic Genetic Component
+1001043	Plant Essence<br>Basic Genetic Component
+1001044	Plant Essence<br>Basic Genetic Component
+1001045	Plant Essence<br>Basic Genetic Component
+1001046	Plant Essence<br>Basic Genetic Component
+1001047	Plant Essence<br>Basic Genetic Component
+1001048	Plant Essence<br>Basic Genetic Component
+1001049	Plant Essence<br>Basic Genetic Component
+1001050	Plant Essence<br>Basic Genetic Component
+1002001	Plant Essence<br>Intermediate Genetic Component
+1002002	Plant Essence<br>Intermediate Genetic Component
+1002003	Plant Essence<br>Intermediate Genetic Component
+1002004	Plant Essence<br>Intermediate Genetic Component
+1002005	Plant Essence<br>Intermediate Genetic Component
+1002006	Plant Essence<br>Intermediate Genetic Component
+1002007	Plant Essence<br>Intermediate Genetic Component
+1002008	Plant Essence<br>Intermediate Genetic Component
+1002009	Plant Essence<br>Intermediate Genetic Component
+1002010	Plant Essence<br>Intermediate Genetic Component
+1002011	Plant Essence<br>Intermediate Genetic Component
+1002012	Plant Essence<br>Intermediate Genetic Component
+1002013	Plant Essence<br>Intermediate Genetic Component
+1002014	Plant Essence<br>Intermediate Genetic Component
+1002015	Plant Essence<br>Intermediate Genetic Component
+1002016	Plant Essence<br>Intermediate Genetic Component
+1002017	Plant Essence<br>Intermediate Genetic Component
+1002018	Plant Essence<br>Intermediate Genetic Component
+1002019	Plant Essence<br>Intermediate Genetic Component
+1002020	Plant Essence<br>Intermediate Genetic Component
+1002021	Plant Essence<br>Intermediate Genetic Component
+1002022	Plant Essence<br>Intermediate Genetic Component
+1002023	Plant Essence<br>Intermediate Genetic Component
+1002024	Plant Essence<br>Intermediate Genetic Component
+1002025	Plant Essence<br>Intermediate Genetic Component
+1002026	Plant Essence<br>Intermediate Genetic Component
+1002027	Plant Essence<br>Intermediate Genetic Component
+1002028	Plant Essence<br>Intermediate Genetic Component
+1002029	Plant Essence<br>Intermediate Genetic Component
+1002030	Plant Essence<br>Intermediate Genetic Component
+1002031	Plant Essence<br>Intermediate Genetic Component
+1002032	Plant Essence<br>Intermediate Genetic Component
+1002033	Plant Essence<br>Intermediate Genetic Component
+1002034	Plant Essence<br>Intermediate Genetic Component
+1002035	Plant Essence<br>Intermediate Genetic Component
+1002036	Plant Essence<br>Intermediate Genetic Component
+1002037	Plant Essence<br>Intermediate Genetic Component
+1002038	Plant Essence<br>Intermediate Genetic Component
+1002039	Plant Essence<br>Intermediate Genetic Component
+1002040	Plant Essence<br>Intermediate Genetic Component
+1002041	Plant Essence<br>Intermediate Genetic Component
+1002042	Plant Essence<br>Intermediate Genetic Component
+1002043	Plant Essence<br>Intermediate Genetic Component
+1002044	Plant Essence<br>Intermediate Genetic Component
+1002045	Plant Essence<br>Intermediate Genetic Component
+1002046	Plant Essence<br>Intermediate Genetic Component
+1002047	Plant Essence<br>Intermediate Genetic Component
+1002048	Plant Essence<br>Intermediate Genetic Component
+1002049	Plant Essence<br>Intermediate Genetic Component
+1002050	Plant Essence<br>Intermediate Genetic Component
+1003001	Plant Essence<br>Advanced Genetic Component
+1003002	Plant Essence<br>Advanced Genetic Component
+1003003	Plant Essence<br>Advanced Genetic Component
+1003004	Plant Essence<br>Advanced Genetic Component
+1003005	Plant Essence<br>Advanced Genetic Component
+1003006	Plant Essence<br>Advanced Genetic Component
+1003007	Plant Essence<br>Advanced Genetic Component
+1003008	Plant Essence<br>Advanced Genetic Component
+1003009	Plant Essence<br>Advanced Genetic Component
+1003010	Plant Essence<br>Advanced Genetic Component
+1003011	Plant Essence<br>Advanced Genetic Component
+1003012	Plant Essence<br>Advanced Genetic Component
+1003013	Plant Essence<br>Advanced Genetic Component
+1003014	Plant Essence<br>Advanced Genetic Component
+1003015	Plant Essence<br>Advanced Genetic Component
+1003016	Plant Essence<br>Advanced Genetic Component
+1003017	Plant Essence<br>Advanced Genetic Component
+1003018	Plant Essence<br>Advanced Genetic Component
+1003019	Plant Essence<br>Advanced Genetic Component
+1003020	Plant Essence<br>Advanced Genetic Component
+1003021	Plant Essence<br>Advanced Genetic Component
+1003022	Plant Essence<br>Advanced Genetic Component
+1003023	Plant Essence<br>Advanced Genetic Component
+1003024	Plant Essence<br>Advanced Genetic Component
+1003025	Plant Essence<br>Advanced Genetic Component
+1003026	Plant Essence<br>Advanced Genetic Component
+1003027	Plant Essence<br>Advanced Genetic Component
+1003028	Plant Essence<br>Advanced Genetic Component
+1003029	Plant Essence<br>Advanced Genetic Component
+1003030	Plant Essence<br>Advanced Genetic Component
+1003031	Plant Essence<br>Advanced Genetic Component
+1003032	Plant Essence<br>Advanced Genetic Component
+1003033	Plant Essence<br>Advanced Genetic Component
+1003034	Plant Essence<br>Advanced Genetic Component
+1003035	Plant Essence<br>Advanced Genetic Component
+1003036	Plant Essence<br>Advanced Genetic Component
+1003037	Plant Essence<br>Advanced Genetic Component
+1003038	Plant Essence<br>Advanced Genetic Component
+1003039	Plant Essence<br>Advanced Genetic Component
+1003040	Plant Essence<br>Advanced Genetic Component
+1003041	Plant Essence<br>Advanced Genetic Component
+1003042	Plant Essence<br>Advanced Genetic Component
+1003043	Plant Essence<br>Advanced Genetic Component
+1003044	Plant Essence<br>Advanced Genetic Component
+1003045	Plant Essence<br>Advanced Genetic Component
+1003046	Plant Essence<br>Advanced Genetic Component
+1003047	Plant Essence<br>Advanced Genetic Component
+1003048	Plant Essence<br>Advanced Genetic Component
+1003049	Plant Essence<br>Advanced Genetic Component
+1003050	Plant Essence<br>Advanced Genetic Component
+1004001	Plant Essence<br>Rare Genetic Component
+1004002	Plant Essence<br>Rare Genetic Component
+1004003	Plant Essence<br>Rare Genetic Component
+1004004	Plant Essence<br>Rare Genetic Component
+1004005	Plant Essence<br>Rare Genetic Component
+1004006	Plant Essence<br>Rare Genetic Component
+1004007	Plant Essence<br>Rare Genetic Component
+1004008	Plant Essence<br>Rare Genetic Component
+1004009	Plant Essence<br>Rare Genetic Component
+1004010	Plant Essence<br>Rare Genetic Component
+1004011	Plant Essence<br>Rare Genetic Component
+1004012	Plant Essence<br>Rare Genetic Component
+1004013	Plant Essence<br>Rare Genetic Component
+1004014	Plant Essence<br>Rare Genetic Component
+1004015	Plant Essence<br>Rare Genetic Component
+1004016	Plant Essence<br>Rare Genetic Component
+1004017	Plant Essence<br>Rare Genetic Component
+1004018	Plant Essence<br>Rare Genetic Component
+1004019	Plant Essence<br>Rare Genetic Component
+1004020	Plant Essence<br>Rare Genetic Component
+1004021	Plant Essence<br>Rare Genetic Component
+1004022	Plant Essence<br>Rare Genetic Component
+1004023	Plant Essence<br>Rare Genetic Component
+1004024	Plant Essence<br>Rare Genetic Component
+1004025	Plant Essence<br>Rare Genetic Component
+1004026	Plant Essence<br>Rare Genetic Component
+1004027	Plant Essence<br>Rare Genetic Component
+1004028	Plant Essence<br>Rare Genetic Component
+1004029	Plant Essence<br>Rare Genetic Component
+1004030	Plant Essence<br>Rare Genetic Component
+1004031	Plant Essence<br>Rare Genetic Component
+1004032	Plant Essence<br>Rare Genetic Component
+1004033	Plant Essence<br>Rare Genetic Component
+1004034	Plant Essence<br>Rare Genetic Component
+1004035	Plant Essence<br>Rare Genetic Component
+1004036	Plant Essence<br>Rare Genetic Component
+1004037	Plant Essence<br>Rare Genetic Component
+1004038	Plant Essence<br>Rare Genetic Component
+1004039	Plant Essence<br>Rare Genetic Component
+1004040	Plant Essence<br>Rare Genetic Component
+1004041	Plant Essence<br>Rare Genetic Component
+1004042	Plant Essence<br>Rare Genetic Component
+1004043	Plant Essence<br>Rare Genetic Component
+1004044	Plant Essence<br>Rare Genetic Component
+1004045	Plant Essence<br>Rare Genetic Component
+1004046	Plant Essence<br>Rare Genetic Component
+1004047	Plant Essence<br>Rare Genetic Component
+1004048	Plant Essence<br>Rare Genetic Component
+1004049	Plant Essence<br>Rare Genetic Component
+1004050	Plant Essence<br>Rare Genetic Component
+1005001	Plant Essence<br>Legendary Genetic Component
+1005002	Plant Essence<br>Legendary Genetic Component
+1005003	Plant Essence<br>Legendary Genetic Component
+1005004	Plant Essence<br>Legendary Genetic Component
+1005005	Plant Essence<br>Legendary Genetic Component
+1005006	Plant Essence<br>Legendary Genetic Component
+1005007	Plant Essence<br>Legendary Genetic Component
+1005008	Plant Essence<br>Legendary Genetic Component
+1005009	Plant Essence<br>Legendary Genetic Component
+1005010	Plant Essence<br>Legendary Genetic Component
+1005011	Plant Essence<br>Legendary Genetic Component
+1005012	Plant Essence<br>Legendary Genetic Component
+1005013	Plant Essence<br>Legendary Genetic Component
+1005014	Plant Essence<br>Legendary Genetic Component
+1005015	Plant Essence<br>Legendary Genetic Component
+1005016	Plant Essence<br>Legendary Genetic Component
+1005017	Plant Essence<br>Legendary Genetic Component
+1005018	Plant Essence<br>Legendary Genetic Component
+1005019	Plant Essence<br>Legendary Genetic Component
+1005020	Plant Essence<br>Legendary Genetic Component
+1005021	Plant Essence<br>Legendary Genetic Component
+1005022	Plant Essence<br>Legendary Genetic Component
+1005023	Plant Essence<br>Legendary Genetic Component
+1005024	Plant Essence<br>Legendary Genetic Component
+1005025	Plant Essence<br>Legendary Genetic Component
+1005026	Plant Essence<br>Legendary Genetic Component
+1005027	Plant Essence<br>Legendary Genetic Component
+1005028	Plant Essence<br>Legendary Genetic Component
+1005029	Plant Essence<br>Legendary Genetic Component
+1005030	Plant Essence<br>Legendary Genetic Component
+1005031	Plant Essence<br>Legendary Genetic Component
+1005032	Plant Essence<br>Legendary Genetic Component
+1005033	Plant Essence<br>Legendary Genetic Component
+1005034	Plant Essence<br>Legendary Genetic Component
+1005035	Plant Essence<br>Legendary Genetic Component
+1005036	Plant Essence<br>Legendary Genetic Component
+1005037	Plant Essence<br>Legendary Genetic Component
+1005038	Plant Essence<br>Legendary Genetic Component
+1005039	Plant Essence<br>Legendary Genetic Component
+1005040	Plant Essence<br>Legendary Genetic Component
+1005041	Plant Essence<br>Legendary Genetic Component
+1005042	Plant Essence<br>Legendary Genetic Component
+1005043	Plant Essence<br>Legendary Genetic Component
+1005044	Plant Essence<br>Legendary Genetic Component
+1005045	Plant Essence<br>Legendary Genetic Component
+1005046	Plant Essence<br>Legendary Genetic Component
+1005047	Plant Essence<br>Legendary Genetic Component
+1005048	Plant Essence<br>Legendary Genetic Component
+1005049	Plant Essence<br>Legendary Genetic Component
+1005050	Plant Essence<br>Legendary Genetic Component

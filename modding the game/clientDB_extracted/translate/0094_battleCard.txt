@@ -313,7 +313,7 @@ id	name	des
 535	Robo-Imp	Robo-Imp
 536	EM Shield Zombie	EM Shield Zombie
 537	EM Shield Zombie	EM Shield Zombie
-539	Robo-Imp Boss	机器虫小鬼僵尸首领
+539	Robo-Imp Boss	Mecha-Bug Imp Zombie Boss
 540	Mecha Conehead Zombie	Mecha Conehead Zombie
 541	Mecha Conehead Zombie	Mecha Conehead Zombie
 542	Mecha Conehead Zombie	Mecha Conehead Zombie
@@ -767,7 +767,7 @@ id	name	des
 5905	Stallia	Deals heavy damage to the current target and weakens the damage output of all units behind it by 20% for 1 turn.
 6001	Torchwood	Increase damage output of allies at the rear of the formation by 20% for 1 turn.
 6002	Torchwood	Increases damage dealt by allies in the back row by 25% for 1 turn.
-6003	Torchwood	提高友方阵尾单位伤害能力30%，效果持续1回合
+6003	Torchwood	Increases damage output of allied units at the back of the formation by 30% for 1 turn.
 6004	Torchwood	Increases damage dealt by allies at the back of the formation by 35% for 1 turn.
 6005	Torchwood	Increases the damage of the ally at the rear of the formation by 40% for 1 turn.
 6101	Lightning Reed	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
@@ -906,7 +906,7 @@ id	name	des
 9304	Magic-shroom	Attacks the current target and has a 25% chance to immobilize them for 1 turn, consuming no energy when using skills.
 9305	Magic-shroom	Attacks the current target with a 33% chance to immobilize them for 1 turn. Using this skill costs no energy.
 9401	Fire Peashooter	Fires a fire pea, dealing damage to the current target and reducing its defense by 15% for 2 turns.
-9402	Fire Peashooter	发射火焰豌豆，对当前目标造成伤害并使其防御下降18%，持续2回合
+9402	Fire Peashooter	Fires a fire pea, dealing damage to the current target and reducing their defense by 18% for 2 turns.
 9403	Fire Peashooter	Fires a fire pea, dealing damage to the current target and reducing their defense by 21% for 2 turns.
 9404	Fire Peashooter	Fires a fire pea, dealing damage to the current target and reducing its defense by 24% for 2 turns.
 9405	Fire Peashooter	Fires a fire pea, dealing damage to the current target and reducing their defense by 27% for 2 turns.
@@ -1453,7 +1453,7 @@ id	name	des
 55905	Stallia	Deals heavy damage to the current target and weakens the damage output of all units behind it by 20% for 1 turn.
 56001	Torchwood	Increase damage output of allies at the rear of the formation by 20% for 1 turn.
 56002	Torchwood	Increases damage dealt by allies in the back row by 25% for 1 turn.
-56003	Torchwood	提高友方阵尾单位伤害能力30%，效果持续1回合
+56003	Torchwood	Increases damage output of allied units at the back of the formation by 30% for 1 turn.
 56004	Torchwood	Increases damage dealt by allies at the back of the formation by 35% for 1 turn.
 56005	Torchwood	Increases the damage of the ally at the rear of the formation by 40% for 1 turn.
 56101	Lightning Reed	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.

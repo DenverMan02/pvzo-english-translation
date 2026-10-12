@@ -1,5 +1,5 @@
 id	content
-1	时光之旅奖励
-2	捉小偷奖励
-3	护农田奖励
-4	活跃度
+1	Time Travel Reward
+2	Catch the Thief Reward
+3	Farm Defense Reward
+4	Activity

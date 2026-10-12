@@ -1,121 +1,121 @@
 id	name
-1011	皇陵边缘
-1012	皇陵守卫1
-1013	皇陵守卫2
-1014	皇陵守卫3
-1015	皇陵守卫4
-1016	皇陵之战
-1021	沙漠边缘
-1022	沙漠群尸1
-1023	沙漠群尸2
-1024	沙漠群尸3
-1025	沙漠群尸4
-1026	沙漠之战
-1031	海盗迷踪
-1032	海盗船员1
-1033	海盗船员2
-1034	海盗船员3
-1035	海盗船员4
-1036	海盗之战
-1041	未来边缘
-1042	未来僵尸1
-1043	未来僵尸2
-1044	未来僵尸3
-1045	未来僵尸4
-1046	未来之战
-1051	冰川边缘
-1052	冰川蛮族1
-1053	冰川蛮族2
-1054	冰川蛮族3
-1055	冰川蛮族4
-1056	冰川之战
-1061	龙宫边缘
-1062	龙宫守卫1
-1063	龙宫守卫2
-1064	龙宫守卫3
-1065	龙宫守卫4
-1066	龙宫之战
-1071	火山边缘
-1072	火山僵群1
-1073	火山僵群2
-1074	火山僵群3
-1075	火山僵群4
-1076	火山之战
-1081	密境边缘
-1082	密境僵尸1
-1083	密境僵尸2
-1084	密境僵尸3
-1085	密境僵尸4
-1086	密境之战
-1091	深渊边境1
-1092	深渊边境2
-1093	深渊边境3
-1094	深渊边境4
-1095	深渊边境5
-1096	深渊之境
-1101	至暗边缘1
-1102	至暗边缘2
-1103	至暗边缘3
-1104	至暗边缘4
-1105	至暗边缘5
-1106	至暗之境
-2011	皇陵边缘
-2012	皇陵守卫1
-2013	皇陵守卫2
-2014	皇陵守卫3
-2015	皇陵守卫4
-2016	皇陵之战
-2021	沙漠边缘
-2022	沙漠群尸1
-2023	沙漠群尸2
-2024	沙漠群尸3
-2025	沙漠群尸4
-2026	沙漠之战
-2031	海盗迷踪
-2032	海盗船员1
-2033	海盗船员2
-2034	海盗船员3
-2035	海盗船员4
-2036	海盗之战
-2041	未来边缘
-2042	未来僵尸1
-2043	未来僵尸2
-2044	未来僵尸3
-2045	未来僵尸4
-2046	未来之战
-2051	冰川边缘
-2052	冰川蛮族1
-2053	冰川蛮族2
-2054	冰川蛮族3
-2055	冰川蛮族4
-2056	冰川之战
-2061	龙宫边缘
-2062	龙宫守卫1
-2063	龙宫守卫2
-2064	龙宫守卫3
-2065	龙宫守卫4
-2066	龙宫之战
-2071	火山边缘
-2072	火山僵群1
-2073	火山僵群2
-2074	火山僵群3
-2075	火山僵群4
-2076	火山之战
-2081	密境边缘
-2082	密境僵尸1
-2083	密境僵尸2
-2084	密境僵尸3
-2085	密境僵尸4
-2086	密境之战
-2091	深渊边境1
-2092	深渊边境2
-2093	深渊边境3
-2094	深渊边境4
-2095	深渊边境5
-2096	深渊之境
-2101	至暗边缘1
-2102	至暗边缘2
-2103	至暗边缘3
-2104	至暗边缘4
-2105	至暗边缘5
-2106	至暗之境
+1011	Underground Palace Edge
+1012	Underground Palace Guard 1
+1013	Underground Palace Guard 2
+1014	Underground Palace Guard 3
+1015	Underground Palace 4
+1016	Underground Palace Battle
+1021	Desert Edge
+1022	Desert Horde 1
+1023	Desert Horde 2
+1024	Desert Horde 3
+1025	Desert Zombie Horde 4
+1026	Desert Battle
+1031	Pirate Trail
+1032	Pirate Crew 1
+1033	Pirate Crew 2
+1034	Pirate Crew 3
+1035	Pirate Crew 4
+1036	Pirate Battle
+1041	Future Edge
+1042	Future Zombie 1
+1043	Future Zombie 2
+1044	Future Zombie 3
+1045	Future Zombie 4
+1046	Future Battle
+1051	Glacier Edge
+1052	Glacier Barbarian 1
+1053	Glacier Barbarian 2
+1054	Glacier Barbarian 3
+1055	Glacial Barbarian 4
+1056	Battle of the Glacier
+1061	Dragon Palace Edge
+1062	Dragon Palace Guard 1
+1063	Dragon Palace Guard 2
+1064	Dragon Palace Guard 3
+1065	Dragon Palace Guard 4
+1066	Dragon Palace Battle
+1071	Volcano Edge
+1072	Volcano Zombie Swarm 1
+1073	Volcano Zombie Horde 2
+1074	Volcano Zombie Horde 3
+1075	Volcano Zombie Horde 4
+1076	Volcano Battle
+1081	Mystic Edge
+1082	Mystic Zombie 1
+1083	Mystic Zombie 2
+1084	Mystic Realm Zombie 3
+1085	Mystic Realm Zombie 4
+1086	Mystic Battle
+1091	Abyss Frontier 1
+1092	Abyss Frontier 2
+1093	Abyss Frontier 3
+1094	Abyss Frontier 4
+1095	Abyss Frontier 5
+1096	Abyss Realm
+1101	Pitch-Dark Edge 1
+1102	Darkest Edge 2
+1103	Pitch-Dark Edge 3
+1104	Darkest Edge 4
+1105	Darkest Edge 5
+1106	Realm of Darkness
+2011	Underground Palace Edge
+2012	Underground Palace Guard 1
+2013	Underground Palace Guard 2
+2014	Underground Palace Guard 3
+2015	Underground Palace Guard 4
+2016	Underground Palace Battle
+2021	Desert Edge
+2022	Desert Horde 1
+2023	Desert Horde 2
+2024	Desert Horde 3
+2025	Desert Zombie Horde 4
+2026	Desert Battle
+2031	Pirate Trail
+2032	Pirate Crew 1
+2033	Pirate Crew 2
+2034	Pirate Crew 3
+2035	Pirate Crew 4
+2036	Pirate Battle
+2041	Future Edge
+2042	Future Zombie 1
+2043	Future Zombie 2
+2044	Future Zombie 3
+2045	Future Zombie 4
+2046	Future Battle
+2051	Glacier Edge
+2052	Glacier Barbarian 1
+2053	Glacier Barbarian 2
+2054	Glacier Barbarian 3
+2055	Glacial Barbarian 4
+2056	Battle of the Glacier
+2061	Dragon Palace Edge
+2062	Dragon Palace Guard 1
+2063	Dragon Palace Guard 2
+2064	Dragon Palace Guard 3
+2065	Dragon Palace Guard 4
+2066	Dragon Palace Battle
+2071	Volcano Edge
+2072	Volcano Zombie Swarm 1
+2073	Volcano Zombie Horde 2
+2074	Volcano Zombie Horde 3
+2075	Volcano Zombie Horde 4
+2076	Volcano Battle
+2081	Mystic Edge
+2082	Mystic Zombie 1
+2083	Mystic Zombie 2
+2084	Mystic Realm Zombie 3
+2085	Mystic Realm Zombie 4
+2086	Mystic Battle
+2091	Abyss Frontier 1
+2092	Abyss Frontier 2
+2093	Abyss Frontier 3
+2094	Abyss Frontier 4
+2095	Abyss Frontier 5
+2096	Abyss Realm
+2101	Pitch-Dark Edge 1
+2102	Darkest Edge 2
+2103	Pitch-Dark Edge 3
+2104	Darkest Edge 4
+2105	Darkest Edge 5
+2106	Realm of Darkness
