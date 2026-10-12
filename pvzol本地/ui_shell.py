@@ -24,15 +24,15 @@ from urllib.parse import parse_qs, urlsplit
 from launcher_dpi import initialize_dpi_awareness, safe_exception_detail
 
 
-TITLE = "植物大战僵尸 OL"
+TITLE = "PvZ OL"
 LOCALIZATION = {
-    "global.quitConfirmation": "确定退出启动器吗？退出后将关闭本次启动的游戏服务。",
-    "global.ok": "确定",
-    "global.quit": "退出",
-    "global.cancel": "取消",
-    "global.saveFile": "保存文件",
-    "windows.fileFilter.allFiles": "所有文件",
-    "windows.fileFilter.otherFiles": "其他文件类型",
+    "global.quitConfirmation": "Are you sure you want to exit the launcher? Exiting will close the game service launched this time.",
+    "global.ok": "OK",
+    "global.quit": "Quit",
+    "global.cancel": "Cancel",
+    "global.saveFile": "Save File",
+    "windows.fileFilter.allFiles": "All Files",
+    "windows.fileFilter.otherFiles": "Other File Types",
 }
 
 
@@ -43,7 +43,7 @@ def validate_local_url(value: str) -> str:
         address = ipaddress.ip_address(parsed.hostname or "")
         port = parsed.port
     except (ValueError, TypeError) as exc:
-        raise ValueError("启动器地址必须是本机 HTTP 地址。") from exc
+        raise ValueError("The launcher must have a local HTTP address") from exc
     if (
         parsed.scheme.lower() != "http"
         or not address.is_loopback
@@ -53,7 +53,7 @@ def validate_local_url(value: str) -> str:
         or not 1 <= port <= 65535
         or any(char in value for char in "\r\n\t")
     ):
-        raise ValueError("启动器只能打开带端口的本机 HTTP 地址。")
+        raise ValueError("The launcher can only open local HTTP addresses with the ports specified.")
     return value
 
 
@@ -107,7 +107,7 @@ class LoopbackClient:
         parsed = urlsplit(validate_local_url(url))
         tokens = parse_qs(parsed.query, keep_blank_values=True).get('token', [])
         if len(tokens) != 1 or not tokens[0] or any(ch in tokens[0] for ch in '\r\n\0'):
-            raise TrayError('启动器会话无效，请重新打开启动器。')
+            raise TrayError('The launcher session is invalid. Please reopen the launcher.')
         self._host, self._port, self._token = parsed.hostname, parsed.port, tokens[0]
         self._timeout = timeout
         self._closed = threading.Event()
@@ -126,7 +126,7 @@ class LoopbackClient:
         with self._lock:
             if self._closed.is_set():
                 con.close()
-                raise TrayError('启动器正在退出。')
+                raise TrayError('The launcher is exiting.')
             self._connection = con
         response = None
         try:
@@ -134,7 +134,7 @@ class LoopbackClient:
             with self._lock:
                 if self._closed.is_set():
                     con.close()
-                    raise TrayError('启动器正在退出。')
+                    raise TrayError('The launcher is exiting.')
                 self._socket = con.sock
             headers = {'X-PVZ-Token': self._token, 'Accept': 'application/json'}
             body = None
@@ -144,13 +144,13 @@ class LoopbackClient:
             con.request(method, path, body=body, headers=headers)
             response = con.getresponse()
             if 300 <= response.status < 400:
-                raise TrayError('启动器连接已失效，请重新打开启动器。')
+                raise TrayError('The launcher connection has failed. Please reopen the launcher.')
             raw = response.read(1024 * 1024 + 1)
             if len(raw) > 1024 * 1024:
-                raise TrayError('启动器返回的数据过大。')
+                raise TrayError('The launcher returned too much data.')
             payload = json.loads(raw.decode('utf-8'))
             if not isinstance(payload, dict) or 'ok' not in payload:
-                raise TrayError('启动器返回的数据无效。')
+                raise TrayError('The launcher returned invalid data.')
             if response.status >= 400 or payload.get('ok') is not True:
                 raise TrayError(self._safe_message(payload.get('error') or '启动器操作失败。'))
             return payload.get('data')
