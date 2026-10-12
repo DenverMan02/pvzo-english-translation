@@ -27,8 +27,10 @@ def run_git_cmd(args):
 
 
 def check_status():
-    """Show brief git status."""
-    ok, out, err = run_git_cmd(['status', '-s'])
+    """Show brief status, excluding volatile launcher cache files."""
+    ok, out, err = run_git_cmd([
+        'status', '-s', '--', '.', ':(exclude,glob)**/launcher_cache/**'
+    ])
     if not ok:
         print(f"  [ERROR] {err}")
         return False
@@ -44,7 +46,12 @@ def check_status():
 def do_push(custom_msg=None):
     """Add all, commit, and push."""
     print("\n[1/3] Checking for changes...")
-    ok, out, _ = run_git_cmd(['status', '-s'])
+    ok, out, err = run_git_cmd([
+        'status', '-s', '--', '.', ':(exclude,glob)**/launcher_cache/**'
+    ])
+    if not ok:
+        print(f"  [ERROR] Could not check Git status: {err or out}")
+        return
     if not out:
         print("  Nothing to push! No files have been changed.")
         return
@@ -59,16 +66,36 @@ def do_push(custom_msg=None):
             msg = default_msg
 
     print("\n[2/3] Staging and committing files...")
-    ok, _, err = run_git_cmd(['add', '.'])
+
+    # The game embeds a Chromium/WebView profile in launcher_cache. Its live
+    # Cookies database can be locked while the game is running, and cache
+    # contents should not be uploaded to GitHub anyway. Clear any cache paths
+    # left staged by an earlier failed attempt, then exclude them from staging.
+    run_git_cmd([
+        'reset', '-q', 'HEAD', '--', ':(glob)**/launcher_cache/**'
+    ])
+    ok, _, err = run_git_cmd([
+        'add', '-A', '--', '.', ':(exclude,glob)**/launcher_cache/**'
+    ])
     if not ok:
         print(f"  [ERROR] Failed to add files: {err}")
         return
 
-    ok, out, err = run_git_cmd(['commit', '-m', msg])
-    if not ok and "nothing to commit" not in (out + err):
-        print(f"  [ERROR] Commit failed: {err}")
+    # A status change may consist only of runtime cache files. Do not create an
+    # empty commit in that case. Preserve any other already-staged changes.
+    ok, staged, err = run_git_cmd(['diff', '--cached', '--name-only'])
+    if not ok:
+        print(f"  [ERROR] Could not inspect staged changes: {err or staged}")
         return
-    print(f"  Committed: \"{msg}\"")
+    if not staged:
+        print("  No non-cache changes are staged; nothing to commit.")
+        return
+
+    ok, out, err = run_git_cmd(['commit', '-m', msg])
+    if not ok:
+        print(f"  [ERROR] Commit failed: {err or out}")
+        return
+    print(f'  Committed: "{msg}"')
 
     print("\n[3/3] Uploading to GitHub...")
     ok, out, err = run_git_cmd(['push'])
