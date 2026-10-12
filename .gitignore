@@ -5,3 +5,6 @@ translate.py
 .env
 .env.*
 !.env.example
+
+# Player save data
+players.db
