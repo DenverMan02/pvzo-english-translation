@@ -1,7 +1,0 @@
-10:39:54  DEBUG  Using selector: SelectSelector
-10:39:54  INFO   player store: C:\Users\fuyu\Downloads\pvzol本地gpt修复版\pvzol本地\PvZ-Server-PoC\players.db
-10:39:54  INFO   game server listening on 0.0.0.0:9001
-10:39:54  INFO   game server listening on 0.0.0.0:8001
-10:39:54  INFO   game server listening on 0.0.0.0:443
-10:39:54  INFO   game server listening on 0.0.0.0:80
-10:39:54  INFO   socket-policy server listening on 0.0.0.0:843

@@ -1,7 +1,0 @@
-[2m2026-10-01T05:00:31.196620Z[0m [32m INFO[0m [2mruffle_desktop::gui::controller[0m[2m:[0m Using preferred backend Vulkan
-[2m2026-10-01T05:00:31.257457Z[0m [32m INFO[0m [2mruffle_desktop::gui::controller[0m[2m:[0m Using graphics API vulkan on Intel(R) Iris(R) Xe Graphics (type: IntegratedGpu)
-[2m2026-10-01T05:00:31.257514Z[0m [32m INFO[0m [2mruffle_desktop::gui::controller[0m[2m:[0m Using surface format Rgba8Unorm
-[2m2026-10-01T05:00:31.358074Z[0m [33m WARN[0m [2mruffle_desktop::gui::controller[0m[2m:[0m Failed to register [Name("Noto Sans CJK"), Name("Source Han Sans"), Name("WenQuanYi Zen Hei"), Name("Arial Unicode MS")] as Proportional: no unicode fonts found!
-[2m2026-10-01T05:00:31.358604Z[0m [32m INFO[0m [2mruffle_desktop::gui::controller[0m[2m:[0m Opening http://127.0.0.1:8080/loader_p.swf?server=127.0.0.1:9001&zoneID=&uin=700000201&skey=ABCDEFGHIJ
-[2m2026-10-01T05:00:31.379406Z[0m [32m INFO[0m [2mruffle_video_external::decoder::openh264[0m[2m:[0m Using OpenH264 at "C:\\Users\\huawei\\AppData\\Local\\ruffle\\video\\openh264-2.4.1-win64.dll"
-[2m2026-10-01T05:00:33.507748Z[0m [31mERROR[0m [2mruffle_desktop::player[0m[2m:[0m Async error: HTTP Status is not OK: Got 502 Bad Gateway status: 502 redirected: false length: 94

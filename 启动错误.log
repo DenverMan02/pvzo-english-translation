@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "portable_boot.py", line 78, in <module>
+  File "portable_boot.py", line 73, in main
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\launcher.py", line 1553, in <module>
+    main()
+    ~~~~^^
+  File "C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\launcher.py", line 1549, in main
+    return run()
+  File "C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\launcher_desktop.py", line 319, in run
+    raise RuntimeError('新启动器界面运行文件缺失，请检查“启动器界面”文件夹。可使用 --legacy-ui 打开旧界面。')
+RuntimeError: 新启动器界面运行文件缺失，请检查“启动器界面”文件夹。可使用 --legacy-ui 打开旧界面。

@@ -1,2 +1,0 @@
-关闭游戏后，将此备份中 webroot\Game_p.swf 和 webroot\fileVer.xml 复制回游戏 webroot 同名文件即可恢复。
-新增版本文件可保留，不会被旧映射加载。
