@@ -118,6 +118,17 @@ def install(g):
         body=b''.join(m(1,g._build_plant_info_dto(pid)) for pid in store.get_player_plants(player['uin']))
         return [('PVZ.Cmd.Cmd_Friend_GetMyPlant_SC',body)]
     route('Cmd_Friend_GetMyPlant',myplant)
+    def get_list(data,player):
+        """Fetch the player's actual friend list from the friends table."""
+        friends_list=visible_friends(player['uin'],store.get_friends(player['uin']))
+        # Build Dto_FriendInfo DTOs: field 1=friend_role_id, field 2=friend_name, field 3=help_plant_id, 
+        # field 4=help_plant_level, field 5=diamond_flag, field 6=diamond_blue_lvl, field 7=diamond_yellow_lvl, field 8=diamond_xinyue_lvl
+        friend_dtos=b''.join(m(7,v(1,int(f['friend_role_id']))+s(2,f['friend_name'])+v(3,int(f['help_plant_id']))+
+                          v(4,int(f['help_plant_level']))+v(5,int(f['diamond_flag']))+v(6,int(f['diamond_blue_lvl']))+
+                          v(7,int(f['diamond_yellow_lvl']))+v(8,int(f['diamond_xinyue_lvl']))) for f in friends_list)
+        body=friend_dtos
+        return [('PVZ.Cmd.Cmd_Friend_GetList_SC',body)]
+    route('Cmd_Friend_GetList',get_list)
     # Logs are backed by actual recorded operations, never invented battles.
     def log_info(data,player,fight=False):
         page=max(1,integer(data,1,1));size=max(1,min(50,integer(data,2,10)))
