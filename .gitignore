@@ -1,0 +1,7 @@
+# Local scripts that may contain machine-specific settings or credentials
+translate.py
+
+# Local secrets / API credentials
+.env
+.env.*
+!.env.example
