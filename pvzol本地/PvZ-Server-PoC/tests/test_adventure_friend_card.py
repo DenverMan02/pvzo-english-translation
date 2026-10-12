@@ -71,6 +71,7 @@ class AdventureFriendCardTest(unittest.TestCase):
 
     def friend_dto(self):
         """The Dto_FriendInfo the picker receives for the 人机, decoded."""
+        store.add_friend(UIN, BOT_UIN, "BotTester", 0, 1)
         for dto in _subs(self.friend_list(), 7):
             if srv.parse_varint_fields(dto).get(2) == BOT_UIN:
                 return dto
@@ -196,6 +197,28 @@ class AdventureFriendCardTest(unittest.TestCase):
              "help_plant_level": 33}, BOT_UIN)
         self.assertEqual((cid, level), (self.card_id, 33))
         self.assertEqual(uid, srv._friend_help_uid(BOT_UIN, self.card_id))
+
+    def test_empty_friend_list_returns_zero_total_and_does_not_crash(self):
+        clean_uin = 700099999
+        p, _ = store.get_or_create_player(clean_uin)
+        # Ensure clean_uin has 0 friends
+        self.assertEqual(len(store.get_friends(clean_uin)), 0)
+        req = (srv.pb_varint_field(1, 5) + srv.pb_varint_field(2, 0)
+               + srv.pb_varint_field(3, 0) + srv.pb_varint_field(4, 6))
+        # Call request handler registered in REQUEST_HANDLERS (exercises friend_energy_repairs wrapper)
+        handler = srv.REQUEST_HANDLERS["PVZ.Cmd.Cmd_Friend_GetList_CS"]
+        res = handler(req, p)
+        if isinstance(res, list):
+            res_bytes = res[0][1]
+        elif isinstance(res, tuple):
+            res_bytes = res[1]
+        else:
+            res_bytes = res
+        fields = srv.parse_varint_fields(res_bytes)
+        total_count = fields.get(5, -1)
+        self.assertEqual(total_count, 0)
+        dtos = _subs(res_bytes, 7)
+        self.assertEqual(len(dtos), 0)
 
 
 if __name__ == "__main__":
