@@ -1,0 +1,15 @@
+id	desc
+1	Sunflower, produces 12 base EXP every 20 seconds.
+2	Sunflower, produces 12 base EXP every 20 seconds.
+3	Sunflower, produces 12 base EXP every 20 seconds.
+4	Sunflower, produces 12 base EXP every 20 seconds.
+5	Sunflower, produces 12 base EXP every 20 seconds.
+6	Sunflower, produces 12 base EXP every 20 seconds.
+7	Sunflower, produces 12 base EXP every 20 seconds.
+8	Wall-nut, yields 100 soil and a random chance of diamonds or soil upon harvest.
+9	Twin Sunflower, yields 10 soil upon harvest.
+10	Kernel-pult, yields 20 soil upon harvest.
+11	Repeater, yields 30 soil upon harvest.
+12	Carrocket, yields 100,000 coins upon harvest.
+13	Explodelion, yields 200,000 coins upon harvest.
+14	Bruce Bamboo, yields 10 alloy elements upon harvest.

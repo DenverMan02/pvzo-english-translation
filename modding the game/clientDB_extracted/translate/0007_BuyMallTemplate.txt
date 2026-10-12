@@ -1,0 +1,20 @@
+id	name	desc
+1	300 Gold Diamond Monthly Card	100 diamonds per day, for 25 days
+2	1880 Gold Diamonds (One-Time Purchase)	Also includes 1880 Diamonds
+3	20 Gold Diamonds	Top Up
+4	100 Gold Diamonds	Top Up
+5	1000 Gold Diamonds	Top Up
+6	5000 Gold Diamonds	Top Up
+7	VIP1	Purchase Sunshine VIP
+8	VIP2	Purchase Wealth VIP
+9	VIP3	Purchase Golden Pot VIP
+10	1¥	Plant gift pack for 1¥
+11	10¥	Plant gift pack for 10¥
+12	50¥	Plant gift pack for 50¥
+13	Group Purchase	Great Value Group Purchase
+14	Tower Defense Privileges	Purchase Tower Defense Privileges
+15	20 Gold Diamonds (One-Time Purchase)	Also includes 20 Diamonds
+16	100 Gold Diamonds (One-Time Purchase)	Also includes 100 Diamonds
+17	1000 Gold Diamonds (One-Time Purchase)	Also includes 1000 Diamonds
+18	300 Gold Diamonds (One-Time Purchase)	100 diamonds a day, for 30 days
+19	5000 Gold Diamonds (One-Time Purchase)	Also includes 5000 Diamonds

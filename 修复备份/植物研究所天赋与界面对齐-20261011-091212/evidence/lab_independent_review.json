@@ -1,0 +1,30 @@
+{
+  "scope": "Independent source audit of the research popup geometry",
+  "current_game_n_sha256": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db",
+  "font_swf_sha256": "10b445ee2a3823a0069b494c63e6536d13fbe6a0f54e5a1581e6369a8254fa63",
+  "popup_source_root": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\lab_ui\\exports\\Game_n\\scripts\\com\\qq\\modules\\td\\view\\components",
+  "runtime_source_root": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\arena_text\\runtime_source\\scripts",
+  "findings": [
+    {
+      "issue": "Plant title is seven logical pixels left of the popup center",
+      "evidence": "TalentAdvancedWindowCE.as: width=504 at line41; l_plantName.x=170 at line65, width=150 at line67. .TXT_HKHB_24_Yellow_Shadow uses textAlign:center in live Res/pvz.css.",
+      "geometry": "170+150/2=245; 504/2=252; offset=-7",
+      "minimal_fix": "Set l_plantName.x=177 without changing its width/style."
+    },
+    {
+      "issue": "Ability PNG renders two logical pixels above and left of its intended icon center",
+      "evidence": "TalentAdvancedWindow.as: icon width/height=50 line43; x=237 line45, y=101 line46. Installed image/talent/talent/1105.png is46x46. Image extends SWFLoader; current SWFLoader defaults _scaleContent=false at line56, _maintainAspectRatio=true at line60, and scales only inside if(scaleContent) at lines328/362. It does not center smaller contents (contentX/Y are padding only at lines228/233).",
+      "geometry": "Visible center without scaling=(237+46/2,101+46/2)=(260,124). Intended50 box center=(262,126), matching l_abilityName.y114,height24 center126.",
+      "minimal_fix": "Set icon.scaleContent=true; retain its existing50x50 size and coordinates. Aspect ratio preservation already defaults true."
+    },
+    {
+      "issue": "The longest condition text fills all200 pixels before Flash text gutters",
+      "evidence": "TalentAdvancedWindowCE.as sets l_condition.x=284 and height24; TalentAdvancedWindow.as overrides its width to200 at line40. Installed ModuleFont.swf hkhb font advances measured for all plantTalentInfo.txt condName rows: max200px at font16,189px at font15,175px at font14. Talent1105 is one of the200px conditions.",
+      "geometry": "The field ends at x484, so it is inside the504 popup. The clipping arises from text width/gutters rather than an offscreen field.",
+      "minimal_fix": "Set this popup's l_condition fontSize to15, leaving11 pixels beyond the longest advance. Keep x284,width200,height24 and the existing condition text, link, tooltip, and color logic.",
+      "validation_limit": "Font advance measurements from FFDec TTF via Pillow are independent source evidence and exclude Flash TextField gutters/shadow; real Flash rendering remains the final visual check."
+    }
+  ],
+  "font_measurement_report": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\arena_text\\condition_font_measurements.json",
+  "game_directory_writes": false
+}

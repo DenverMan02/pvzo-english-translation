@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "canonical_swf_count": 7,
+  "installed_file_and_alias_count": 40,
+  "all_file_hashes_match_candidates": true,
+  "xml_size_md5_and_alias_mapping_valid": true,
+  "original_backups_match_baselines": true,
+  "real_flash_ui_tested": false
+}

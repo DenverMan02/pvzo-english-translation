@@ -1,0 +1,110 @@
+"""Offline profile edits use the same columns and limits as the game protocol."""
+from pathlib import Path
+import hashlib
+import os
+import tempfile
+import player_store as store
+
+NAME_MIN, NAME_MAX, SIGNATURE_MAX = 2, 7, 30
+MAX_IMAGE_BYTES = 5 * 1024 * 1024
+GAME_ROOT = Path(__file__).resolve().parent.parent
+
+
+def avatar_choices(root=None):
+    heads = Path(root or GAME_ROOT) / 'webroot/image/head'
+    return [(0, '默认头像')] + [(int(p.stem), '头像 %s' % p.stem)
+                                for p in sorted(heads.glob('*.png'), key=lambda p: int(p.stem) if p.stem.isascii() and p.stem.isdigit() else -1)
+                                if p.stem.isascii() and p.stem.isdigit() and int(p.stem) > 0]
+
+
+def _text(value, label, maximum, minimum=0):
+    if not isinstance(value, str):
+        raise ValueError('%s必须是文字。' % label)
+    try:
+        length = len(value.encode('utf-16-le')) // 2
+    except UnicodeError:
+        raise ValueError('%s包含无效字符。' % label) from None
+    if not minimum <= length <= maximum or any(ord(c) < 32 for c in value):
+        raise ValueError('%s需为 %d—%d 个字符，且不能包含换行或控制字符。' % (label, minimum, maximum))
+    return value
+
+
+def _image(path):
+    source = Path(path).expanduser()
+    if not source.is_file() or not 0 < source.stat().st_size <= MAX_IMAGE_BYTES:
+        raise ValueError('请选择不超过 5 MiB 的 PNG 或 JPG 图片。')
+    data = source.read_bytes()
+    if len(data) > MAX_IMAGE_BYTES:
+        raise ValueError('头像图片不能超过 5 MiB。')
+    if data.startswith(b'\x89PNG\r\n\x1a\n') and data.endswith(b'IEND\xaeB`\x82'):
+        suffix = '.png'
+    elif data.startswith(b'\xff\xd8\xff') and data.endswith(b'\xff\xd9'):
+        suffix = '.jpg'
+    else:
+        raise ValueError('头像文件不是有效的 PNG 或 JPG 图片。')
+    return data, suffix
+
+
+def save_profile(uin, request, root=None):
+    if not isinstance(request, dict):
+        raise ValueError('个人资料格式不正确。')
+    root = Path(root or GAME_ROOT).resolve()
+    with store._db() as con:
+        row = con.execute('SELECT * FROM players WHERE uin=?', (int(uin),)).fetchone()
+        player = dict(row) if row else None
+    if not player:
+        raise ValueError('账号不存在。')
+    name = request.get('name', player['name'])
+    if not isinstance(name, str):
+        raise ValueError('名称必须是文字。')
+    name = name.strip()
+    # Legacy generated names can exceed seven characters. Preserve them when
+    # editing only the avatar/signature; new names follow the original limit.
+    if name != player['name']:
+        _text(name, '名称', NAME_MAX, NAME_MIN)
+    signature = _text(request.get('signature', player.get('signature') or ''), '签名', SIGNATURE_MAX)
+    mode = request.get('avatar', 'keep')
+    fields = {'name': name, 'signature': signature}
+    data = suffix = None
+    if mode == 'custom':
+        source = request.get('image_path')
+        if not isinstance(source, str) or not source:
+            raise ValueError('请先选择头像图片。')
+        data, suffix = _image(source)
+    elif mode != 'keep':
+        if type(mode) is not int or mode not in dict(avatar_choices(root)):
+            raise ValueError('请选择现有的头像。')
+        fields.update(face_id=mode, qq_face_url='')
+    created = None
+    try:
+        with store.atomic_player(player):
+            with store._db() as con:
+                if name != player['name'] and con.execute('SELECT 1 FROM players WHERE name=? COLLATE NOCASE AND uin<>?', (name, player['uin'])).fetchone():
+                    raise ValueError('该名称已被其他账号使用。')
+            if data is not None:
+                folder = root/'webroot/image/head/custom'
+                folder.mkdir(parents=True, exist_ok=True)
+                target = folder/('%d_%s%s' % (int(player['uin']), hashlib.sha256(data).hexdigest(), suffix))
+                assert target.resolve().is_relative_to(folder.resolve())
+                if not target.exists():
+                    temporary = None
+                    try:
+                        with tempfile.NamedTemporaryFile(dir=folder, suffix='.tmp', delete=False) as stream:
+                            temporary = Path(stream.name);stream.write(data)
+                        os.replace(temporary, target);created = target
+                    finally:
+                        if temporary and temporary.exists():
+                            temporary.unlink()
+                fields.update(face_id=0, qq_face_url='http://127.0.0.1:8080/image/head/custom/'+target.name)
+            store.save_player(player['uin'], **fields)
+            with store._db() as con:
+                con.execute('UPDATE friends SET friend_name=? WHERE friend_role_id=?', (name, player['role_id']))
+                if con.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='local_guild_members'").fetchone():
+                    con.execute('UPDATE local_guild_members SET name=? WHERE uin=?', (name, player['uin']))
+    except BaseException:
+        if created and created.exists():
+            created.unlink()
+        raise
+    return {'name': name, 'signature': signature,
+            'face_id': fields.get('face_id', int(player.get('face_id') or 0)),
+            'qq_face_url': fields.get('qq_face_url', player.get('qq_face_url') or '')}

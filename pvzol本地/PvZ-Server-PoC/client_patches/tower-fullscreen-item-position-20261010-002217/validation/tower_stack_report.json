@@ -1,0 +1,74 @@
+[
+  {
+    "file": "Game_p.swf",
+    "classname": "starling.core.Starling",
+    "method": "initialize",
+    "method_id": 3058,
+    "code_size": 67,
+    "max_stack_used": 3,
+    "max_scope_used": 6,
+    "instruction_count": 28,
+    "reachable_count": 28,
+    "return_count": 1
+  },
+  {
+    "file": "Game_p.swf",
+    "classname": "starling.display.QuadBatch",
+    "method": "createBuffers",
+    "method_id": 5687,
+    "code_size": 154,
+    "max_stack_used": 4,
+    "max_scope_used": 7,
+    "instruction_count": 69,
+    "reachable_count": 69,
+    "return_count": 2
+  },
+  {
+    "file": "Game_p.tower.swf",
+    "classname": "starling.core.Starling",
+    "method": "initialize",
+    "method_id": 3058,
+    "code_size": 67,
+    "max_stack_used": 3,
+    "max_scope_used": 6,
+    "instruction_count": 31,
+    "reachable_count": 31,
+    "return_count": 1
+  },
+  {
+    "file": "Game_p.tower.swf",
+    "classname": "starling.display.QuadBatch",
+    "method": "createBuffers",
+    "method_id": 5687,
+    "code_size": 164,
+    "max_stack_used": 4,
+    "max_scope_used": 7,
+    "instruction_count": 75,
+    "reachable_count": 75,
+    "return_count": 2
+  },
+  {
+    "file": "ModuleTD_p.swf",
+    "classname": "com.qq.modules.td.view.game.TDBGViewMediator",
+    "method": "checkSize",
+    "method_id": 290,
+    "code_size": 687,
+    "max_stack_used": 6,
+    "max_scope_used": 8,
+    "instruction_count": 312,
+    "reachable_count": 312,
+    "return_count": 1
+  },
+  {
+    "file": "ModuleTD_p.tower.swf",
+    "classname": "com.qq.modules.td.view.game.TDBGViewMediator",
+    "method": "checkSize",
+    "method_id": 290,
+    "code_size": 687,
+    "max_stack_used": 6,
+    "max_scope_used": 8,
+    "instruction_count": 322,
+    "reachable_count": 322,
+    "return_count": 1
+  }
+]

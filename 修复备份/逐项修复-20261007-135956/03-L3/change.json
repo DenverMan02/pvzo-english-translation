@@ -1,0 +1,39 @@
+{
+  "issue": "L3",
+  "files": [
+    {
+      "relative": "pvzol本地/launcher.py",
+      "old_sha256": "ed6e6068d92e5b966eb64c4bb838aa24ba0ec11f96518d3dfc567ccfa0f1be44",
+      "new_sha256": "5c67920b4494b2be24008a47b5b94179789420067af668038df072c2c8e92e1f",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\launcher.py"
+    },
+    {
+      "relative": "pvzol本地/PvZ-Server-PoC/gm.py",
+      "old_sha256": "bb28df881a259524657814837d732ab7b610262a2adc8eb094d23e55162d6c27",
+      "new_sha256": "b6da86d9e76bb73508a068406d4b806d92bda03aaafb227dcb65296cb9654a9d",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\PvZ-Server-PoC\\gm.py"
+    },
+    {
+      "relative": "pvzol本地/PvZ-Server-PoC/admin_server.py",
+      "old_sha256": "3d7d29e23574453a24d8ddaad157718785dc90cb5207193472eff9fc2bffee91",
+      "new_sha256": "0265a3b4af6cc9df0a5093cdc0d5355dba33587ca412c4360b64473fc4821a4f",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\PvZ-Server-PoC\\admin_server.py"
+    },
+    {
+      "relative": "pvzol本地/PvZ-Server-PoC/pvz_poc_server.py",
+      "old_sha256": "addb6652e9bef13a72b9bb96f89358c1c20b82e71dc578ae467429a797f26e5b",
+      "new_sha256": "ae7638f5e2cfc5f802d0998a2de6884fd030ae1f513df26e56eed56bd1f5227f",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\PvZ-Server-PoC\\pvz_poc_server.py"
+    },
+    {
+      "relative": "pvzol本地/PvZ-Server-PoC/tests/test_launcher_lifecycle.py",
+      "old_sha256": "c38718170674bc286d7ead70c5cab7b1717655925076410150594e595cc3f496",
+      "new_sha256": "923ae4a326beec20156539798d28c66bc8e2b0de091e34684b78249e6eb0ff77",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\PvZ-Server-PoC\\tests\\test_launcher_lifecycle.py"
+    }
+  ],
+  "tests": [
+    "test_03_uin: 3 passed",
+    "test_launcher_lifecycle: 27 passed"
+  ]
+}

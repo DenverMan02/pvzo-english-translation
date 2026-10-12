@@ -1,0 +1,6 @@
+id	name
+1	Online for 5 minutes
+2	Online for 10 minutes
+3	Online for 15 minutes
+4	Online for 20 minutes
+5	Online for 30 minutes

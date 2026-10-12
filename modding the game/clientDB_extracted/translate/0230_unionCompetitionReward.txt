@@ -1,0 +1,7 @@
+id	name
+1	Champion
+2	Runner-up
+3	Semifinals
+4	Top 8
+5	Top 16
+6	Top 24 Preliminaries

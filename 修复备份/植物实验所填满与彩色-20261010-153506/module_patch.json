@@ -1,0 +1,78 @@
+{
+  "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModulePlantTalent.swf",
+  "output": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-8\\work\\color-fill\\ModulePlantTalent.filled.swf",
+  "source_sha256": "d93f1cee2a2411ea487f9910ade35345af79199889f078897d5921f4ebf85068",
+  "output_sha256": "8fce4eaf8552e42afd298458d1a8754c67fad8dfcf4498c44bd0e98d9543e43a",
+  "methods": [
+    {
+      "classname": "com.qq.modules.plantTalent.view.comps.PTBar",
+      "name": "InitializeComponent",
+      "method_id": 92,
+      "detail": {
+        "assignment_block_offset": 176,
+        "assignment_block_size": 119,
+        "same_method_length": 726,
+        "changed_pushbyte_operands": [
+          {
+            "operand_offset": 184,
+            "before": 9,
+            "after": 8
+          },
+          {
+            "operand_offset": 196,
+            "before": 8,
+            "after": 7
+          },
+          {
+            "operand_offset": 208,
+            "before": 44,
+            "after": 46
+          },
+          {
+            "operand_offset": 220,
+            "before": 44,
+            "after": 46
+          },
+          {
+            "operand_offset": 246,
+            "before": 9,
+            "after": 8
+          },
+          {
+            "operand_offset": 261,
+            "before": 8,
+            "after": 7
+          },
+          {
+            "operand_offset": 276,
+            "before": 44,
+            "after": 46
+          },
+          {
+            "operand_offset": 291,
+            "before": 44,
+            "after": 46
+          }
+        ],
+        "icon_and_mask": {
+          "x": 8,
+          "y": 7,
+          "width": 46,
+          "height": 46
+        },
+        "grayscale_and_learned_state_methods_unchanged": true,
+        "one_pixel_bleed_under_antialiased_frame": true,
+        "stack_scope_verification": {
+          "max_stack_used": 4,
+          "max_scope_used": 15,
+          "instruction_count": 304,
+          "reachable_count": 304,
+          "return_count": 1
+        }
+      }
+    }
+  ],
+  "total_method_bodies": 128,
+  "unchanged_method_bodies": 127,
+  "constant_pools_and_class_structure_unchanged": true
+}

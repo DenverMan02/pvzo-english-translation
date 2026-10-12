@@ -1,0 +1,195 @@
+{
+  "root": "D:\\pvzol本地最新最新ol",
+  "backup": "D:\\pvzol本地最新最新ol\\修复备份\\植物研究所天赋与界面对齐-20261011-091212",
+  "edits": [
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\0",
+      "before": "cdbb22def3ec2ad0a518638850a74f92c620364818b6cc18e98563b590d734d9",
+      "after": "8df9a57224b600d1160f97f3ca2a04e67c02dd579a3116862f04c8933c2e1269",
+      "size": 1228109
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\tests\\test_talent_gates.py",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\1",
+      "before": "a6175f6e6e387e38f2c40c9513355f80dd7dc10fdeb02d79e8e44e4dda028fae",
+      "after": "3c1e205213944b43cfe243bd57d3f42557f0b7d535b2ca076b7fafb92d78f095",
+      "size": 1883
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\tests\\test_display_rules_20261009.py",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\2",
+      "before": "182c4e7c06480e08ccf1239c1dc064287d2aa5975bfba6cbbc4121666a8c0551",
+      "after": "889e27dd7a82db87c1c4a9279aa875f9867a884d158c10fac841092527a8a04a",
+      "size": 4580
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\tests\\test_talent_arena_score_20261011.py",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\3",
+      "before": null,
+      "after": "23b7ab1eedaef5dfff7e7cd433c2e2e8266ae837452950dba58b449821f341dd",
+      "size": 6141
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\4",
+      "before": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db",
+      "after": "6bfd9d04ae8479f3b79cec8eaab5b8f5ac616d164e165eb5681fa84bcc72c8df",
+      "size": 2331888
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_8cc275294353263d5f5767ac0893d728.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\5",
+      "before": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db",
+      "after": "6bfd9d04ae8479f3b79cec8eaab5b8f5ac616d164e165eb5681fa84bcc72c8df",
+      "size": 2331888
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_be797a192e1d8fe008b64817a797f626.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\6",
+      "before": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db",
+      "after": "6bfd9d04ae8479f3b79cec8eaab5b8f5ac616d164e165eb5681fa84bcc72c8df",
+      "size": 2331888
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_n.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\7",
+      "before": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db",
+      "after": "6bfd9d04ae8479f3b79cec8eaab5b8f5ac616d164e165eb5681fa84bcc72c8df",
+      "size": 2331888
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_n_4d53e0052a8b9a17f19cf626f29c10bc.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\8",
+      "before": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db",
+      "after": "6bfd9d04ae8479f3b79cec8eaab5b8f5ac616d164e165eb5681fa84bcc72c8df",
+      "size": 2331888
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_n_8cc275294353263d5f5767ac0893d728.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\9",
+      "before": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db",
+      "after": "6bfd9d04ae8479f3b79cec8eaab5b8f5ac616d164e165eb5681fa84bcc72c8df",
+      "size": 2331888
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_n_be797a192e1d8fe008b64817a797f626.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\10",
+      "before": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db",
+      "after": "6bfd9d04ae8479f3b79cec8eaab5b8f5ac616d164e165eb5681fa84bcc72c8df",
+      "size": 2331888
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_n_17c4cce34fab45fbb72ba75c4ea15053.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\11",
+      "before": null,
+      "after": "6bfd9d04ae8479f3b79cec8eaab5b8f5ac616d164e165eb5681fa84bcc72c8df",
+      "size": 2331888
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_17c4cce34fab45fbb72ba75c4ea15053.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\12",
+      "before": null,
+      "after": "6bfd9d04ae8479f3b79cec8eaab5b8f5ac616d164e165eb5681fa84bcc72c8df",
+      "size": 2331888
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\13",
+      "before": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e",
+      "after": "c5e819a6f963b607969dc7976b7acf18482ec58fb4c82725a6ebfa0ed8c936e6",
+      "size": 2403699
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_041205df680ecb63e34f6da5bacbfcf1.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\14",
+      "before": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e",
+      "after": "c5e819a6f963b607969dc7976b7acf18482ec58fb4c82725a6ebfa0ed8c936e6",
+      "size": 2403699
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_04d85414d9f7ef6add82a525a0475506.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\15",
+      "before": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e",
+      "after": "c5e819a6f963b607969dc7976b7acf18482ec58fb4c82725a6ebfa0ed8c936e6",
+      "size": 2403699
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_136f07596f913cef93d35343a83626ec.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\16",
+      "before": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e",
+      "after": "c5e819a6f963b607969dc7976b7acf18482ec58fb4c82725a6ebfa0ed8c936e6",
+      "size": 2403699
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_2f31414da4c6b9aff9be96e68029c65b.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\17",
+      "before": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e",
+      "after": "c5e819a6f963b607969dc7976b7acf18482ec58fb4c82725a6ebfa0ed8c936e6",
+      "size": 2403699
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_44d757b4fb708f31dad7a2394a1a360f.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\18",
+      "before": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e",
+      "after": "c5e819a6f963b607969dc7976b7acf18482ec58fb4c82725a6ebfa0ed8c936e6",
+      "size": 2403699
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_69140ebbd2987948f780ae0440e57a78.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\19",
+      "before": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e",
+      "after": "c5e819a6f963b607969dc7976b7acf18482ec58fb4c82725a6ebfa0ed8c936e6",
+      "size": 2403699
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_867dbb7ffa06e76c8e280fe312d5a976.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\20",
+      "before": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e",
+      "after": "c5e819a6f963b607969dc7976b7acf18482ec58fb4c82725a6ebfa0ed8c936e6",
+      "size": 2403699
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_c874590c49beaaf924c0395036c85119.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\21",
+      "before": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e",
+      "after": "c5e819a6f963b607969dc7976b7acf18482ec58fb4c82725a6ebfa0ed8c936e6",
+      "size": 2403699
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_cb7af05d4d2ddbe204ea4926772f3b92.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\22",
+      "before": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e",
+      "after": "c5e819a6f963b607969dc7976b7acf18482ec58fb4c82725a6ebfa0ed8c936e6",
+      "size": 2403699
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_ddd80a273668f4e746bbaa442bfc55f0.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\23",
+      "before": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e",
+      "after": "c5e819a6f963b607969dc7976b7acf18482ec58fb4c82725a6ebfa0ed8c936e6",
+      "size": 2403699
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_e90cc556a5e9f63b73ffa23b6fe21c34.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\24",
+      "before": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e",
+      "after": "c5e819a6f963b607969dc7976b7acf18482ec58fb4c82725a6ebfa0ed8c936e6",
+      "size": 2403699
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_ff6c4bac65e9900e16a61c1c932690b4.swf",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\25",
+      "before": null,
+      "after": "c5e819a6f963b607969dc7976b7acf18482ec58fb4c82725a6ebfa0ed8c936e6",
+      "size": 2403699
+    },
+    {
+      "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\fileVer.xml",
+      "staged": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-6\\work\\research_install\\26",
+      "before": "3888db99f762958344d0fcde82864ad72065be950d608f056cef3bd5b7393597",
+      "after": "84afb2836691b2d48310309accac4f09a514bb7e2d18726ad102a09c4a93c73d",
+      "size": 224105
+    }
+  ]
+}

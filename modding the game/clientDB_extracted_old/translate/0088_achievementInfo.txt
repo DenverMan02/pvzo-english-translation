@@ -1,0 +1,20 @@
+id	desc	name
+1	Produce at least {1} sun	Sun Produced
+2	Spend no more than {1} sun	Sun Used
+3	Never have more than {1} plants	Simultaneous Plants
+4	Don't lose more than {1} plants	Plants Lost
+5	Don't let the zombies trample the flowers	Flower Bed
+6	Survive without any lawn mowers	Retain Mowers
+7	Survive and protect the endangered plants	Save Our Seeds
+8	Don't spend any sun for {1} seconds	Sun Holdout
+9	Defeat {2} zombies in {1} seconds	Zombie Slayer
+10	Defeat every zombie	Complete the Level
+11	Survive without planting on Dave's mold colonies	Mold Colonies
+12	Miss no more than {1} matches	Few Mistakes
+13	Score to beat: {1}	Target Score
+14	Flip cards no more than {1} times	Memory Master
+15	Use no more than {2} {plantName}s	Plant Conservation
+16	Make {2} matches in Beghouled within {1} seconds	Beghouled
+17	Make no more than {1} mistakes in Beghouled	Beghouled Master
+18	Reach a score of {1} with Coconut Cannon	High Score Challenge
+19	Reach a score of {1} with Coconut Cannon	Challenge for a Higher Score

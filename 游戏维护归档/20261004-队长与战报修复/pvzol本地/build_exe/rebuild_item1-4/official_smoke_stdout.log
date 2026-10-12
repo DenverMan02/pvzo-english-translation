@@ -1,0 +1,60 @@
+17:33:26  INFO   local guild adapter ready (29 core routes)
+>>> PvZ PoC launcher: starting web + game servers in ONE window.
+>>> Ctrl+C to stop both.
+
+17:33:26  DEBUG  Using selector: SelectSelector
+============================================================
+Serving: webroot (assembled)
+  D:\pvzol本地最新最新ol\pvzol本地\webroot
+Verify in a browser:
+  http://127.0.0.1:8080/swf/resource_64c342244c3d8f16b3c815e5ee133cf8.swf
+  (should download a ~286 KB file AND print a 200 line below)
+Load in the Flash projector:
+  http://127.0.0.1:8080/loader_n.swf
+============================================================
+(Ctrl+C to stop)
+
+17:33:26  INFO   player store: D:\pvzol本地最新最新ol\pvzol本地\players.db
+17:33:26  INFO   loaded 2079 battle cards (213 TD-plant mappings)
+17:33:26  INFO   loaded 40 lab bottles
+17:33:26  INFO   loaded 999 world-tree levels
+17:33:26  INFO   loaded 1960 card-fruit templates
+17:33:26  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+17:33:26  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+17:33:26  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+17:33:26  INFO   loaded 617 card avatar templates
+17:33:26  INFO   loaded prestige evolution: 200 levels, 7 plant types
+17:33:26  INFO   loaded 44 card puzzle stages
+17:33:26  INFO   loaded 1975 card forge templates
+17:33:26  INFO   bots: ensured 50 bot accounts (疯狂戴夫=900001, 向日葵侠=900002, 豌豆先生=900003 ...)
+17:33:26  INFO   bot autonomy loop started (interval=120s)
+17:33:26  INFO   loaded 254 TD level reward templates from clientDB
+17:33:26  INFO   loaded 25 usable TD laboratory material ids: (40001, 40003, 40004, 40005, 40006, 40007, 40009, 40010, 40011, 40012, 40013, 40015, 40016, 40017, 40018, 40019, 40021, 40022, 40023, 40024, 40025, 40027, 40028, 40029, 40030)
+17:33:26  INFO   loaded 200 role-level exp thresholds
+17:33:26  INFO   loaded 2023 item sell templates
+17:33:26  INFO   loaded 23 town buildings
+17:33:26  INFO   loaded 32 fuben chapters
+17:33:26  INFO   loaded fuben stages for 92 chapter/mode combos
+17:33:26  INFO   loaded 10 energy-buy tiers
+17:33:26  INFO   loaded energyMax for 200 role levels
+17:33:26  INFO   loaded 35 card forge chance entries
+17:33:26  INFO   loaded 78 card recruit recipes
+17:33:26  INFO   loaded 12 card avatar forge types
+17:33:26  INFO   loaded 112 plant talents across 4 stages
+17:33:26  INFO   loaded 41 nutrition reagent bases
+17:33:26  INFO   loaded 3 baptize action costs + 10 baptize cap rows
+17:33:26  INFO   loaded 200 zombie-island levels
+17:33:26  INFO   loaded 12 zombie-island stages
+17:33:26  INFO   loaded 傀儡 config: 50 puppets, 120 stages, 225 skill levels
+17:33:26  INFO   loaded 22 activity-fuben templates
+17:33:26  INFO   loaded 390 awake transition rules
+17:33:26  INFO   loaded 390 awake config rows
+17:33:26  INFO   template warm-up done (32 tables preloaded)
+17:33:26  INFO   game server listening on 0.0.0.0:9001
+17:33:26  INFO   game server listening on 0.0.0.0:8001
+17:33:26  INFO   game server listening on 0.0.0.0:443
+17:33:26  INFO   game server listening on 0.0.0.0:80
+17:33:26  INFO   socket-policy server listening on 0.0.0.0:843
+  GET /image/head/1.png HTTP/1.1 -> 200
+  GET /image/lab/10000.png HTTP/1.1 -> 200
+  GET /swf/roleInfo/avoidWar3.png HTTP/1.1 -> 200

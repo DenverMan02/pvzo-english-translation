@@ -1,0 +1,1962 @@
+02:49:19  INFO   local guild adapter ready (29 core routes)
+02:49:19  INFO   local guild adapter ready (29 core routes)
+02:49:19  INFO   local guild adapter ready (29 core routes)
+02:49:19  INFO   local guild adapter ready (29 core routes)
+02:49:19  INFO   loaded skill info for 762 skills
+02:49:19  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+02:49:19  INFO   loaded card level curve (300 levels)
+02:49:19  INFO       world boss 998: uin=88001 damage=5000000 hp=0 attacks=1
+02:49:19  INFO       world boss 999: uin=88001 damage=3000000 hp=0 attacks=1
+02:49:19  INFO       world boss 1000: uin=88001 damage=7000000 hp=0 attacks=1
+02:49:20  INFO   loaded 44 card puzzle stages
+02:49:20  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:20  INFO   loaded 1975 card forge templates
+02:49:20  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+02:49:20  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+02:49:20  INFO       card puzzle complete: uid=10001001 quality 3->4
+02:49:20  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:20  INFO   loaded 40 lab bottles
+02:49:20  INFO   loaded 999 world-tree levels
+02:49:21  INFO       puppets act from rounds [1]
+02:49:21  INFO   loaded 傀儡 config: 50 puppets, 120 stages, 225 skill levels
+02:49:21  INFO       world boss 998: uin=1 damage=14774 hp=5000000 attacks=1
+02:49:21  INFO       world boss 999: uin=1 damage=45000 hp=2955000 attacks=1
+02:49:21  INFO       world boss 1000: uin=1 damage=21000 hp=6979000 attacks=1
+02:49:21  INFO   loaded 44 card puzzle stages
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=100
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=0
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=1
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=2
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=2
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=2
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=2
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=2
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=2
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=2
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=2
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=2
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=2
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=2
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=2
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=4
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=4
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=4
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=4
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=4
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=4
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=4
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=4
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=4
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=4
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=4
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=4
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=3
+02:49:21  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:21  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=3
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=3
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=3
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=3
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=3
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=3
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=4
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=4
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=4
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=4
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=4
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=4
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=4
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=4
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=4
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=4
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=4
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=4
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=4
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=4
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=4
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=4
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=5
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=5
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=5
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=5
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=5
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=5
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=5
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=5
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=5
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=5
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=5
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=5
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=5
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=5
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=5
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=5
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=6
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=6
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=6
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=6
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=6
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=6
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=6
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=6
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=6
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=6
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=6
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=6
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=6
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=6
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=6
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=6
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=7
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=7
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=7
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=7
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=7
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=7
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=7
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=7
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=7
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=7
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=7
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=7
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=7
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=7
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=7
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=7
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=9
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=9
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=9
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=9
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=9
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=9
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=9
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=9
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=9
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=9
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=9
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=9
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=9
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=9
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=9
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=9
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=8
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=8
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=8
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=8
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=8
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=8
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=8
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=8
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=8
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=8
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=8
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=8
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=8
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=8
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=8
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=8
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=8
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=8
+02:49:22  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:22  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=8
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=8
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=9
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=10
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=12
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=11
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=13
+02:49:23  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:23  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=13
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=15
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=17
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=19
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=21
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=23
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=23
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=23
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=23
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=23
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=23
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=23
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=23
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=23
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=23
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=23
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=23
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=23
+02:49:24  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:24  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=17
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=19
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=21
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=23
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=25
+02:49:25  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:25  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=25
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=25
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=25
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=25
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=25
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=25
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=27
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=29
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=31
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=33
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=35
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=37
+02:49:26  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:26  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=37
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=39
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=41
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=43
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=45
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=47
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=47
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=47
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=47
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=47
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=47
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=47
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=47
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=47
+02:49:27  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:27  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=47
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=47
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=47
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=47
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=47
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=47
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=47
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=47
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=47
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=47
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=47
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=47
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=47
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=47
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=47
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=47
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=49
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=51
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=53
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=53
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=53
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=53
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=53
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=53
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=53
+02:49:28  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:28  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=53
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=53
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=53
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=53
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=53
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=53
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=53
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=53
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=53
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=53
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=53
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=53
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=53
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=53
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=53
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=53
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=53
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=53
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=0
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=1
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=1 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=2
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=2 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=3
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=3 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=4
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=4 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=5
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=5 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=6
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=6 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=7
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=7 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=8
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=8 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=9
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=9 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=10
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=10 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=11
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=11 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=12
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=12 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=13
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=13 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=14
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=14 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=15
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=15 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=16
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=16 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=17
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=17 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=18
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=18 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=19
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=19 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=20
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=20 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=21
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=21 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=22
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=22 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=23
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=23 amount=55
+02:49:29  INFO       card fill REJECTED: uid=10001001 index=24
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=24 amount=55
+verified stage/cell combinations: 948
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=1
+02:49:29  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+02:49:29  INFO   loaded 3 card-exp items {2002: 10000, 2003: 50000, 2004: 200000}
+02:49:29  INFO   loaded 390 card star-up recipes
+02:49:29  INFO   loaded 1975 card forge templates
+02:49:29  INFO       puzzle purchase rejected: uid=10001001 index=0 amount=1
+02:49:30  INFO       fuben SET formation: {17: 4006101} owner_roles={17: 4}
+02:49:30  INFO       fuben GET formation: 1 cards {17: 4006101} owner_roles={17: 4}
+02:49:30  INFO       fuben SET formation: {3: 10001706, 7: 10006503, 9: 10006904, 11: 10001243, 13: 10008103, 15: 10001223, 17: 4006101} owner_roles={17: 4}
+02:49:30  INFO       fuben GET formation: 7 cards {3: 10001706, 7: 10006503, 9: 10006904, 11: 10001243, 13: 10008103, 15: 10001223, 17: 4006101} owner_roles={17: 4}
+02:49:30  WARNING      fuben SET formation rejected: duplicate/invalid slot or card
+02:49:30  INFO       fuben GET formation: 1 cards {9: 10006904} owner_roles={}
+02:49:30  WARNING      fuben SET formation rejected: duplicate/invalid slot or card
+02:49:30  INFO       fuben GET formation: 1 cards {9: 10006904} owner_roles={}
+02:49:30  WARNING      fuben SET formation rejected: duplicate/invalid slot or card
+02:49:30  INFO       fuben GET formation: 1 cards {9: 10006904} owner_roles={}
+02:49:30  INFO       fuben SET formation: {7: 10006503, 9: 10006904, 11: 10001243, 13: 10008103, 15: 10001223, 3: 4006101} owner_roles={3: 4}
+02:49:30  INFO       fuben GET formation: 6 cards {3: 4006101, 7: 10006503, 9: 10006904, 11: 10001243, 13: 10008103, 15: 10001223} owner_roles={3: 4}
+02:49:30  INFO       fuben GET formation: 6 cards {3: 4006101, 7: 10006503, 9: 10006904, 11: 10001243, 13: 10008103, 15: 10001223} owner_roles={3: 4}
+02:49:30  INFO       fuben SET formation: {7: 10006503, 9: 10006904, 11: 10001243, 13: 10008103, 15: 10001223, 17: 4006101} owner_roles={17: 4}
+02:49:30  INFO       fuben GET formation: 6 cards {7: 10006503, 9: 10006904, 11: 10001243, 13: 10008103, 15: 10001223, 17: 4006101} owner_roles={17: 4}
+02:49:30  INFO       fuben GET formation: 6 cards {7: 10006503, 9: 10006904, 11: 10001243, 13: 10008103, 15: 10001223, 17: 4006101} owner_roles={17: 4}
+02:49:30  INFO       fuben SET formation: {7: 10006503, 9: 10006904, 11: 10001243, 13: 10008103, 15: 10001223, 3: 4006101} owner_roles={3: 4}
+02:49:30  INFO       fuben GET formation: 6 cards {3: 4006101, 7: 10006503, 9: 10006904, 11: 10001243, 13: 10008103, 15: 10001223} owner_roles={3: 4}
+02:49:30  INFO       fuben GET formation: 6 cards {3: 4006101, 7: 10006503, 9: 10006904, 11: 10001243, 13: 10008103, 15: 10001223} owner_roles={3: 4}
+02:49:30  INFO       fuben SET formation: {7: 10006503, 9: 10006904, 11: 10001243, 13: 10008103, 15: 10001223, 17: 4006101} owner_roles={17: 4}
+02:49:30  INFO       fuben GET formation: 6 cards {7: 10006503, 9: 10006904, 11: 10001243, 13: 10008103, 15: 10001223, 17: 4006101} owner_roles={17: 4}
+02:49:30  INFO       fuben GET formation: 6 cards {7: 10006503, 9: 10006904, 11: 10001243, 13: 10008103, 15: 10001223, 17: 4006101} owner_roles={17: 4}
+02:49:30  INFO       fuben SET formation: {7: 10001706, 9: 10006904, 11: 10001243, 13: 10008103, 17: 4006101} owner_roles={17: 4}
+02:49:30  INFO       fuben GET formation: 5 cards {7: 10001706, 9: 10006904, 11: 10001243, 13: 10008103, 17: 4006101} owner_roles={17: 4}
+02:49:30  INFO       fuben SET formation: {9: 10001706} owner_roles={}
+02:49:30  INFO       fuben GET formation: 1 cards {9: 10001706} owner_roles={}
+02:49:30  INFO   loaded card level curve (300 levels)
+.....................................................................
+----------------------------------------------------------------------
+Ran 69 tests in 11.309s
+
+OK

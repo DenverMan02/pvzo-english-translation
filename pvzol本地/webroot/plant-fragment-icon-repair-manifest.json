@@ -1,0 +1,1028 @@
+{
+  "method": "crop native alpha bounds; proportional Lanczos fit 46x46; center on transparent 50x50",
+  "created_icons": 24,
+  "preserved_original_icons": 54,
+  "backup_directory": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\backups\\plant-fragment-icons-20261009-113712",
+  "config_changed": false,
+  "player_save_changed": false,
+  "added_files": [
+    "image/item/54300.png",
+    "image/item/56200.png",
+    "image/item/56300.png",
+    "image/item/56400.png",
+    "image/item/56600.png",
+    "image/item/56800.png",
+    "image/item/57000.png",
+    "image/item/57600.png",
+    "image/item/57700.png",
+    "image/item/57800.png",
+    "image/item/57900.png",
+    "image/item/58100.png",
+    "image/item/58200.png",
+    "image/item/58500.png",
+    "image/item/58700.png",
+    "image/item/58800.png",
+    "image/item/58900.png",
+    "image/item/59200.png",
+    "image/item/59300.png",
+    "image/item/59400.png",
+    "image/item/59500.png",
+    "image/item/59600.png",
+    "image/item/59700.png",
+    "image/item/59800.png"
+  ],
+  "preserved_original_sha256": {
+    "image/item/51100.png": "4c2fcf8788c3b7053ab2e889745f1067480c90cee1737cba7fc97ddeccfd1607",
+    "image/item/51110.png": "5b5736f2dfed3ec51361fb9e915392081c122c8aa81a0a2948e3df4e7bf39769",
+    "image/item/51200.png": "a8755f3c3a6118e7790a4f7e99a19342649f245bdfbc8b1007e033ee690b038e",
+    "image/item/51210.png": "b80648d0315ce0f58df61fe4216621f604ecf93887c23b6c81cdcc2fc009a73d",
+    "image/item/51300.png": "3e050ba7d3f8e938af6292c7f0322f954b15a269a61349c82f09eb814f67292f",
+    "image/item/51400.png": "82a111a8bf7397d26100c732cef265872e271777cc5fa283aadb59c098a24f79",
+    "image/item/51500.png": "e4ed86ddaff4e58f4aabda7fc954a84771658572be469eb1aa9d862e2b69d7f0",
+    "image/item/51600.png": "cbe90efd5194995126c73ddee03703e78c6bc379be4008e5f4da95ee4d2f6144",
+    "image/item/51700.png": "afa3d869878721f5eac590f8fae03850f2abd520620269f801f2b93a8cd01e01",
+    "image/item/51800.png": "3a84c820088fe16d0f1508449cfc659412e6fea71329644808821a60fcffc6cf",
+    "image/item/51900.png": "1aa4c7b23f73fa385ee5cdccff1a593a6902f5a1672d0834b107ae044493b610",
+    "image/item/52000.png": "ea2091e9da2cc506097fc1050c88757d8ad2c4fa881150f7640c642f06ef4dcd",
+    "image/item/53100.png": "0be17fcfeb0dd5e190673d201701fcc230e32ac8103f97f981ef76965b6ac32d",
+    "image/item/53200.png": "02dd72cac5b5808ad6bc205c7dc838258ec3f034e5292bf05823466e8c854d08",
+    "image/item/53300.png": "2ac16fbb1e34bf43fc2f35042904655e158d0e9293327da2e5f750c344e21450",
+    "image/item/53700.png": "364da44c55bac2fb32064fa1f63713c6694512b60e942786acc54a16079393d9",
+    "image/item/53600.png": "f31af2043a256dac161ad218a0c8f0c7b6d94fc35b29eef2826347b02cbf21ff",
+    "image/item/53800.png": "57850bff31588f15ed6fd2434da962b1c2fb21e064945a51d54f00d88e29884d",
+    "image/item/53900.png": "d7d140161847f2c9c9b2a780670f15911e0a7ac55aa6d5387789a76f9c6e0367",
+    "image/item/54000.png": "0715047bf1f5f007487eaa878015de6516acfccc4141c77a41746e6480bc23c4",
+    "image/item/54100.png": "3563953867b67f1d11eda79baa5ce0fa9a95cc88b1b120fcad63f7c280767a32",
+    "image/item/54200.png": "0e36e0dbc62b792911a424746209045359f8496bc242c34148e29e34a5752570",
+    "image/item/54400.png": "6f4c1af98109277b8d29b90ef4cc0d19d5014be3782ca358ba5078a063f9cbdc",
+    "image/item/54500.png": "8fbce04da7a9ff0639addf54643a17d5c2af88e072c5373f8fe342146a50cf99",
+    "image/item/54600.png": "b712b970cd405f0b8d7f064484316ad8d0d18b804184386601986b6466c69e5b",
+    "image/item/54700.png": "500f0c1a63dbdb1738d04a32837a6fb9b83c326594deab511d03939580d24563",
+    "image/item/54800.png": "088f793cb7c81760e600f6bda15f1059c08a359b90ae7e575fe2ee417b2fa30d",
+    "image/item/54900.png": "44d8d38335cbc377a36acbbcbcec6a7cb0ed72c129098de0ab929a17a649519a",
+    "image/item/55000.png": "12b0272086e0f6d7b8044f021f29a8c45098d2f8cb906a379305297977f485a0",
+    "image/item/55100.png": "1d60ba742d99baf98bdf9a4351c6f91b70ba4d378271be544d0ffa04f5a6446f",
+    "image/item/55200.png": "7a99f2040ce541f650ee0f621c0366613db10cf42ebf32992329c6ea1cc6b13c",
+    "image/item/55300.png": "5f154ecb01fd5f97ac6a625e05b3b903966a0de46705711b0d9ca996b5cc8052",
+    "image/item/55400.png": "64db03a4c4d301d27dc941a18ebb0fd47b9c440b681ddbe8b3a711328173153b",
+    "image/item/55500.png": "68fc82d61099f7005af982c39e64b842ba007e045a1cda73e8b5a47d72ea8767",
+    "image/item/55600.png": "4257a16a0ed67603e6f35c6c989727f652ce63320c2ac530999a7d56d9c5cbf9",
+    "image/item/55700.png": "cad992f208a1934a432d208cb05481cc0d74a569062d4238dcf0f97b2000d3bb",
+    "image/item/55800.png": "633ecd78bf2b2fd992555fbf3759797370b0f2548b45dc7f6427e5a80ea244b1",
+    "image/item/55900.png": "7a494c766075b0257d614134fc506760499f4bff63af64d4e9a8c79941c729bb",
+    "image/item/56000.png": "842a01726723cd9076d34feb1f17ac563ebffef3cccde0d3c15877e7e13ff457",
+    "image/item/56100.png": "4d424dd3c3d8e1bc1ecdc28aaa8e7f11802b56b0ba96f752eb3ff912dbd7f9b6",
+    "image/item/56500.png": "0ac51dd1d05e398cfde3c15f353cd05b86951bbe7b6ce41716550d0d17b53366",
+    "image/item/56700.png": "92f855f6fbb3b9c4ac78bc8ce8e61b57121e945417042b3506836f1fa7e827a3",
+    "image/item/56900.png": "b52a19db77419d67e9d009ee5dbb24e796fa009b3fb65c4cd8afd3f948128ded",
+    "image/item/57100.png": "a29df70bc4ae6a244d8589771fd73aa6d0b9acb6deb3565a7f909f2dbb8bedb0",
+    "image/item/57200.png": "f4f5ae471c25407fa91446cbca0d563af1910e3147d6b246696484539b837987",
+    "image/item/57300.png": "310dd9083066b4b1cfb83f45025780d5433ea163218cb18a2b4653cf40b93503",
+    "image/item/57400.png": "8827c4341a8d779de670c19a0319a015148091557dbb62eefec3d8ae2fc8f2ed",
+    "image/item/57500.png": "6ae234a6bc269b144c14230ffc4919b7e9e9fa9a134e09f25924ea5e14dc60e5",
+    "image/item/58000.png": "89503cb2f81f6bc8458ad31fd09887b8985b2c924c4ea4b02852f933f19dd09b",
+    "image/item/58300.png": "f240b090dec49db0453c39565c1182bfa1ddea69cbee7d832659ae0bb1fb0978",
+    "image/item/58400.png": "87383b847540fd124bb83d74ff10428ceb7e767c13ccc467145b10fb6c2f816f",
+    "image/item/58600.png": "5fe2751d0ad702063ae2b2644692976b8d6156cd7fa7eee260837cacb29fa6cd",
+    "image/item/59000.png": "39504e9f2e5012821962b055b1da6c2cdf2b58ca6423e1f863e83cace8766c64",
+    "image/item/59100.png": "34329b5bc91f9eea841f584da8857e3ca9d42b37a2ffa64c1cfbaa676e71a5e9"
+  },
+  "records": [
+    {
+      "item_id": 54300,
+      "item_icon": 54300,
+      "name": "碎片-豌豆荚",
+      "native_source": "swf/icons/card/550_5501.png",
+      "native_source_sha256": "f8caf96534b8c1128c4108be24f8f0592d8b1fae15fc828591adcf416d258958",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        12,
+        1,
+        57,
+        61
+      ],
+      "fitted_size": [
+        34,
+        46
+      ],
+      "position": [
+        8,
+        2
+      ],
+      "output": "image/item/54300.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "0a730302e42081bc9273f6453722f65ff27b89b168dd24eb7c21d71d4b8c47d0",
+      "output_alpha_bbox": [
+        8,
+        2,
+        42,
+        48
+      ]
+    },
+    {
+      "item_id": 56200,
+      "item_icon": 56200,
+      "name": "碎片-西瓜投手",
+      "native_source": "swf/icons/card/770_7701.png",
+      "native_source_sha256": "f19ff40e24c9b157d62d50a35a6a27ed98054305dfc3d30a8d3a98fb840b2407",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        5,
+        1,
+        64,
+        61
+      ],
+      "fitted_size": [
+        45,
+        46
+      ],
+      "position": [
+        2,
+        2
+      ],
+      "output": "image/item/56200.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "78309e58e57cd8be73f12ece19a99ebe98d6e72541a6961126b27da4650723be",
+      "output_alpha_bbox": [
+        2,
+        2,
+        47,
+        48
+      ]
+    },
+    {
+      "item_id": 56300,
+      "item_icon": 56300,
+      "name": "碎片-香蒲",
+      "native_source": "swf/icons/card/780_7801.png",
+      "native_source_sha256": "9d95e6aa17011524c0e29d67ca698c60e46e78e5df5c9d89cec0d8fda67563ab",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        7,
+        2,
+        62,
+        61
+      ],
+      "fitted_size": [
+        43,
+        46
+      ],
+      "position": [
+        3,
+        2
+      ],
+      "output": "image/item/56300.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "78ff6e090cc17a57a8f035a1220283fab2f056f41164eb96bd3263b35e9af235",
+      "output_alpha_bbox": [
+        3,
+        2,
+        46,
+        48
+      ]
+    },
+    {
+      "item_id": 56400,
+      "item_icon": 56400,
+      "name": "碎片-海星果",
+      "native_source": "swf/icons/card/850_8501.png",
+      "native_source_sha256": "6745f1df8ca5f3837d52b933bf26af3ad1bffec72027f3456d3e679205a92f60",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        10,
+        4,
+        60,
+        58
+      ],
+      "fitted_size": [
+        43,
+        46
+      ],
+      "position": [
+        3,
+        2
+      ],
+      "output": "image/item/56400.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "01ca2dca147942be0d4877a245b6edfba74877176e2338a2ff02b3f715a0a59d",
+      "output_alpha_bbox": [
+        3,
+        2,
+        46,
+        48
+      ]
+    },
+    {
+      "item_id": 56600,
+      "item_icon": 56600,
+      "name": "碎片-钻地荔枝果",
+      "native_source": "swf/icons/card/860_8601.png",
+      "native_source_sha256": "1cab0f07118ca66541b9d9b7466806db86f581c741678097d93b40dfa146d946",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        5,
+        4,
+        65,
+        59
+      ],
+      "fitted_size": [
+        46,
+        42
+      ],
+      "position": [
+        2,
+        4
+      ],
+      "output": "image/item/56600.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "d424f4f4652ca727984fd34f82f549a464ef29806dfd81137c4d9bef1a19d2be",
+      "output_alpha_bbox": [
+        2,
+        4,
+        48,
+        46
+      ]
+    },
+    {
+      "item_id": 56800,
+      "item_icon": 56800,
+      "name": "碎片-电海松",
+      "native_source": "swf/icons/card/830_8301.png",
+      "native_source_sha256": "3eb0b7df00bf69c0ccb862b1d71dd28f17e4d509c58ef6b5750265bb1d0c4096",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        9,
+        1,
+        60,
+        61
+      ],
+      "fitted_size": [
+        39,
+        46
+      ],
+      "position": [
+        5,
+        2
+      ],
+      "output": "image/item/56800.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "916ca1a31edde1507c3beec4817994be1c598e9cb7899b9a789ad568e82204e2",
+      "output_alpha_bbox": [
+        5,
+        2,
+        44,
+        48
+      ]
+    },
+    {
+      "item_id": 57000,
+      "item_icon": 57000,
+      "name": "碎片-氧气藻",
+      "native_source": "swf/icons/card/810_8101.png",
+      "native_source_sha256": "5a6c4344804d6b7db8e596fbbe3b242db4fff0b41f2ad696a3cc459541e1c877",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        8,
+        1,
+        61,
+        61
+      ],
+      "fitted_size": [
+        41,
+        46
+      ],
+      "position": [
+        4,
+        2
+      ],
+      "output": "image/item/57000.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "9e50a2d3beb3f192a9e4de31688ef5c516da8d4faee8a34f37a2438e2345d387",
+      "output_alpha_bbox": [
+        4,
+        2,
+        45,
+        48
+      ]
+    },
+    {
+      "item_id": 57600,
+      "item_icon": 57600,
+      "name": "碎片-君子兰",
+      "native_source": "swf/icons/card/900_9001.png",
+      "native_source_sha256": "5bb440db818a559be2387686e5a852eea1e5ddc0ec075d71c8e8513bb4e75f77",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        9,
+        1,
+        60,
+        61
+      ],
+      "fitted_size": [
+        39,
+        46
+      ],
+      "position": [
+        5,
+        2
+      ],
+      "output": "image/item/57600.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "c3452b41019d0af5a466a51e4343cb480aa9cb7ae852ffc808bfd8540a3cf090",
+      "output_alpha_bbox": [
+        5,
+        2,
+        44,
+        48
+      ]
+    },
+    {
+      "item_id": 57700,
+      "item_icon": 57700,
+      "name": "碎片-玫瑰剑客",
+      "native_source": "swf/icons/card/890_8901.png",
+      "native_source_sha256": "24ca962717883247ae998a74e69d574e098d61271a5ddc3bf17507b5c6b3ab37",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        14,
+        9,
+        55,
+        53
+      ],
+      "fitted_size": [
+        43,
+        46
+      ],
+      "position": [
+        3,
+        2
+      ],
+      "output": "image/item/57700.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "be05406376e2fcfe979a61b2dea48bb49f181ac723e1eba3e233cd1601bae60f",
+      "output_alpha_bbox": [
+        3,
+        2,
+        46,
+        48
+      ]
+    },
+    {
+      "item_id": 57800,
+      "item_icon": 57800,
+      "name": "碎片-树脂发射器",
+      "native_source": "swf/icons/card/910_9101.png",
+      "native_source_sha256": "756c5b6196a8d4ad8f2b795a490e0b0a1bacb39e06bcafe924369e705528b28d",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        8,
+        7,
+        62,
+        56
+      ],
+      "fitted_size": [
+        46,
+        42
+      ],
+      "position": [
+        2,
+        4
+      ],
+      "output": "image/item/57800.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "32555438bbf8fe55c04dc8d95e6a691f7235774a3dddec0f89e4a5a508c8ad90",
+      "output_alpha_bbox": [
+        2,
+        4,
+        48,
+        46
+      ]
+    },
+    {
+      "item_id": 57900,
+      "item_icon": 57900,
+      "name": "碎片-强酸柠檬",
+      "native_source": "swf/icons/card/920_9201.png",
+      "native_source_sha256": "f8e9ecac3c9a8240e019180a3bf7b5054d0089e9e5a04dd71497afb65e917b09",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        9,
+        1,
+        60,
+        61
+      ],
+      "fitted_size": [
+        39,
+        46
+      ],
+      "position": [
+        5,
+        2
+      ],
+      "output": "image/item/57900.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "b50a353f8dedbd558ae99d86bf5a3d818eaff0223f98b1717a0527df9ca0a433",
+      "output_alpha_bbox": [
+        5,
+        2,
+        44,
+        48
+      ]
+    },
+    {
+      "item_id": 58100,
+      "item_icon": 58100,
+      "name": "碎片-火焰射手",
+      "native_source": "swf/icons/card/940_9401.png",
+      "native_source_sha256": "1dbca28caad3acaf44c867d2dbc849bb02ab0f27d76e23e857734249e0036d10",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        12,
+        1,
+        58,
+        61
+      ],
+      "fitted_size": [
+        35,
+        46
+      ],
+      "position": [
+        7,
+        2
+      ],
+      "output": "image/item/58100.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "0d2c73033d3dd4d5b0eb6867abc0ef60a414cd5c5a6312655fd226f28acf7622",
+      "output_alpha_bbox": [
+        7,
+        2,
+        42,
+        48
+      ]
+    },
+    {
+      "item_id": 58200,
+      "item_icon": 58200,
+      "name": "碎片-幽灵辣椒",
+      "native_source": "swf/icons/card/950_9501.png",
+      "native_source_sha256": "4033cdbdf42f353682cc6dbd981907752355c6e57e8ecefaf838d9fb0172961d",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        18,
+        1,
+        51,
+        61
+      ],
+      "fitted_size": [
+        25,
+        46
+      ],
+      "position": [
+        12,
+        2
+      ],
+      "output": "image/item/58200.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "4494c4f12cde9ff8f0a9cc8dfeda02ecb2c0769f195752733b016336e63e6730",
+      "output_alpha_bbox": [
+        12,
+        2,
+        37,
+        48
+      ]
+    },
+    {
+      "item_id": 58500,
+      "item_icon": 58500,
+      "name": "碎片-路灯花",
+      "native_source": "swf/icons/card/980_9801.png",
+      "native_source_sha256": "cca3d69df874f6227802626e9f8377b66c54555045dfb46a9919b08ed158c872",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        10,
+        1,
+        60,
+        61
+      ],
+      "fitted_size": [
+        38,
+        46
+      ],
+      "position": [
+        6,
+        2
+      ],
+      "output": "image/item/58500.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "66e5fd0d59169b9568794b9f2b0966ec6996b62672f6efe3c59ebc3df9d42078",
+      "output_alpha_bbox": [
+        6,
+        2,
+        44,
+        48
+      ]
+    },
+    {
+      "item_id": 58700,
+      "item_icon": 58700,
+      "name": "碎片-刺头花",
+      "native_source": "swf/icons/card/112_1121.png",
+      "native_source_sha256": "0d2f414e7da2ea0355be33f9f42936980a10fbbdf3416a3f6dad248842220989",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        10,
+        1,
+        60,
+        61
+      ],
+      "fitted_size": [
+        38,
+        46
+      ],
+      "position": [
+        6,
+        2
+      ],
+      "output": "image/item/58700.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "f6e545f3317ca42e3d423ddae2dc4e15bde799f734d9488fc8970b1029aebe86",
+      "output_alpha_bbox": [
+        6,
+        2,
+        44,
+        48
+      ]
+    },
+    {
+      "item_id": 58800,
+      "item_icon": 58800,
+      "name": "碎片-甜椒投手",
+      "native_source": "swf/icons/card/113_1131.png",
+      "native_source_sha256": "1d1aa6c1da4019c7d24fc5d81fab24210a3ae0c76cee22af654c2befb9882ae8",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        8,
+        1,
+        61,
+        61
+      ],
+      "fitted_size": [
+        41,
+        46
+      ],
+      "position": [
+        4,
+        2
+      ],
+      "output": "image/item/58800.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "7a19e91e62b279e7b2d875eaba052e1a0d589847030eb311144c7c0f352adfd4",
+      "output_alpha_bbox": [
+        4,
+        2,
+        45,
+        48
+      ]
+    },
+    {
+      "item_id": 58900,
+      "item_icon": 58900,
+      "name": "碎片-南瓜小巫",
+      "native_source": "swf/icons/card/114_1141.png",
+      "native_source_sha256": "5fde5370c34a4976e8972890c91c4e00913315926bede3658513089275e52455",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        5,
+        3,
+        65,
+        59
+      ],
+      "fitted_size": [
+        46,
+        43
+      ],
+      "position": [
+        2,
+        3
+      ],
+      "output": "image/item/58900.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "23765fa55d5afd3c74b544aede7b5e9889ca7f51c68494386aa3c599720f501a",
+      "output_alpha_bbox": [
+        2,
+        3,
+        48,
+        46
+      ]
+    },
+    {
+      "item_id": 59200,
+      "item_icon": 59200,
+      "name": "碎片-铃儿草",
+      "native_source": "swf/icons/card/117_1171.png",
+      "native_source_sha256": "84bd6c1affbeb54ee2fa8a0f23c3ace50b5332c484dbcf764d82fb28b2d1d211",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        5,
+        3,
+        65,
+        60
+      ],
+      "fitted_size": [
+        46,
+        44
+      ],
+      "position": [
+        2,
+        3
+      ],
+      "output": "image/item/59200.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "25c0569502f9f8a969435b3d24fefbae700bb91769a0c815acd5a0e59fc173b3",
+      "output_alpha_bbox": [
+        2,
+        3,
+        48,
+        47
+      ]
+    },
+    {
+      "item_id": 59300,
+      "item_icon": 59300,
+      "name": "碎片-红针花",
+      "native_source": "swf/icons/card/118_1181.png",
+      "native_source_sha256": "aeaf1d75cc6dbee99b25547556058b8a7969022e6497327574d274a69459e7f0",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        5,
+        7,
+        65,
+        55
+      ],
+      "fitted_size": [
+        46,
+        37
+      ],
+      "position": [
+        2,
+        6
+      ],
+      "output": "image/item/59300.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "1d2410911d2bf5ac5b258b70ebefeba91656a175b73d9b987e7003851cda2a12",
+      "output_alpha_bbox": [
+        2,
+        6,
+        48,
+        43
+      ]
+    },
+    {
+      "item_id": 59400,
+      "item_icon": 59400,
+      "name": "碎片-闪电蓝莓",
+      "native_source": "swf/icons/card/122_1221.png",
+      "native_source_sha256": "3a9fe16ae5b57b2c1b11ff56cef4d8525e6df40eea1a466bcf6869d3728a6655",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        10,
+        12,
+        60,
+        51
+      ],
+      "fitted_size": [
+        46,
+        36
+      ],
+      "position": [
+        2,
+        7
+      ],
+      "output": "image/item/59400.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "28f9cebe535a8f8fa1ac2c1874e3379064a189ae4638b0757416aaab5ddefc27",
+      "output_alpha_bbox": [
+        2,
+        7,
+        48,
+        43
+      ]
+    },
+    {
+      "item_id": 59500,
+      "item_icon": 59500,
+      "name": "碎片-阿开木",
+      "native_source": "swf/icons/card/119_1191.png",
+      "native_source_sha256": "327bcff79714c54d434eb727f2151f2ca6e6363761125e86b104a2b64fad2f8d",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        10,
+        3,
+        59,
+        60
+      ],
+      "fitted_size": [
+        40,
+        46
+      ],
+      "position": [
+        5,
+        2
+      ],
+      "output": "image/item/59500.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "61237af35585c150f70d4c9e7f241b61e621a18ff4c0e53fc1d8712fbf1342ed",
+      "output_alpha_bbox": [
+        5,
+        2,
+        45,
+        48
+      ]
+    },
+    {
+      "item_id": 59600,
+      "item_icon": 59600,
+      "name": "碎片-龙舌兰",
+      "native_source": "swf/icons/card/123_1231.png",
+      "native_source_sha256": "19c65799eb06b02a5711df9885fdc8b4ccaea31394f71ef4e9d903a324a12bf8",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        8,
+        3,
+        62,
+        60
+      ],
+      "fitted_size": [
+        44,
+        46
+      ],
+      "position": [
+        3,
+        2
+      ],
+      "output": "image/item/59600.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "c9c2786fb7cb38f63fe0ebcf5d2f44d18cc496261e9404eb66fc7ab9241b1028",
+      "output_alpha_bbox": [
+        3,
+        2,
+        47,
+        48
+      ]
+    },
+    {
+      "item_id": 59700,
+      "item_icon": 59700,
+      "name": "碎片-月光花",
+      "native_source": "swf/icons/card/124_1241.png",
+      "native_source_sha256": "34a53ca89cb32d8259385ae359c26819263cde0f1c80a5ddc609525a54df471d",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        15,
+        2,
+        54,
+        61
+      ],
+      "fitted_size": [
+        30,
+        46
+      ],
+      "position": [
+        10,
+        2
+      ],
+      "output": "image/item/59700.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "93aa12e8e195809251c68f7cd1e37c45a60d4520ab206b3dec8a44bd20c831d0",
+      "output_alpha_bbox": [
+        10,
+        2,
+        40,
+        48
+      ]
+    },
+    {
+      "item_id": 59800,
+      "item_icon": 59800,
+      "name": "碎片-芦笋战机",
+      "native_source": "swf/icons/card/125_251.png",
+      "native_source_sha256": "175c08c2cd335886fbe2e3226489ba24f51a8952adbc4a1cb96f87c18f6c96e6",
+      "native_size": [
+        330,
+        240
+      ],
+      "native_alpha_bbox": [
+        5,
+        17,
+        65,
+        46
+      ],
+      "fitted_size": [
+        46,
+        22
+      ],
+      "position": [
+        2,
+        14
+      ],
+      "output": "image/item/59800.png",
+      "output_size": [
+        50,
+        50
+      ],
+      "was_existing": false,
+      "identity": "exact recipe and recycle fragment, matching native card icon prefix",
+      "output_sha256": "eb0d73abff9b9c04db122a15023d7042a50486834a9f899188a6663057508665",
+      "output_alpha_bbox": [
+        2,
+        14,
+        48,
+        36
+      ]
+    }
+  ]
+}

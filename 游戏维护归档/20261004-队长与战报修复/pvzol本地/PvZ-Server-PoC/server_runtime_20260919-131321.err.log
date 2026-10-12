@@ -1,0 +1,8 @@
+13:13:21  DEBUG  Using selector: SelectSelector
+13:13:21  INFO   player store: C:\Users\fuyu\Downloads\pvzol本地gpt修复版\pvzol本地\PvZ-Server-PoC\players.db
+13:13:21  WARNING  could not bind game port 9001 ([Errno 10048] error while attempting to bind on address ('0.0.0.0', 9001): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。) - skipping (another program may own it; not fatal)
+13:13:21  WARNING  could not bind game port 8001 ([Errno 10048] error while attempting to bind on address ('0.0.0.0', 8001): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。) - skipping (another program may own it; not fatal)
+13:13:21  WARNING  could not bind game port 443 ([Errno 10048] error while attempting to bind on address ('0.0.0.0', 443): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。) - skipping (another program may own it; not fatal)
+13:13:21  WARNING  could not bind game port 80 ([Errno 10048] error while attempting to bind on address ('0.0.0.0', 80): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。) - skipping (another program may own it; not fatal)
+13:13:21  ERROR  !!! Could NOT bind ANY game port [9001, 8001, 443, 80].
+13:13:21  ERROR  !!! A stale server is running. Kill it: taskkill /F /IM python.exe

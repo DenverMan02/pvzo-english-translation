@@ -1,0 +1,141 @@
+{
+  "passed": true,
+  "test_count": 17,
+  "original_error_reproductions": 5,
+  "menu_coordinate_scenarios": 150,
+  "explicit_position_scenarios": 5,
+  "chest_size_scenarios": 5,
+  "tower_viewport_scenarios": 10,
+  "context_recovery_cycles": 4,
+  "canonical_files_scanned": 154,
+  "qpopup_definitions": [
+    {
+      "file": "ModuleAct3years.swf",
+      "method_id": 454
+    },
+    {
+      "file": "ModuleBag.swf",
+      "method_id": 333
+    },
+    {
+      "file": "ModuleCard.swf",
+      "method_id": 779
+    },
+    {
+      "file": "ModuleChat.swf",
+      "method_id": 150
+    },
+    {
+      "file": "ModuleUnion.swf",
+      "method_id": 1019
+    }
+  ],
+  "canonical_scan_failures": [],
+  "account_requests_sent": 0,
+  "real_flash_ui_tested": false,
+  "reports": {
+    "bag_validation_summary.json": {
+      "passed": true,
+      "test_count": 7,
+      "menu_coordinate_scenarios": 150,
+      "explicit_position_scenarios": 5,
+      "chest_size_scenarios": 5,
+      "original_error_reproductions": 2,
+      "canonical_scan_files": 154,
+      "qpopup_definitions": 5,
+      "baseline_webroot": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\baseline",
+      "candidate_webroot": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot",
+      "real_flash_ui_tested": false,
+      "account_requests_sent": 0,
+      "results": [
+        {
+          "test": "__main__.BagActualBytecodeRegression.test_all_real_menu_candidates_follow_mouse_at_window_scales",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.BagActualBytecodeRegression.test_candidate_chest_view_uses_logical_size_at_all_scales",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.BagActualBytecodeRegression.test_every_other_body_header_pool_and_trait_remains_identical",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.BagActualBytecodeRegression.test_explicit_positions_and_disabled_actions_preserved",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.BagActualBytecodeRegression.test_menu_and_init_methods_have_valid_control_flow_stacks",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.BagActualBytecodeRegression.test_original_chest_init_reproduces_oversized_view",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.BagActualBytecodeRegression.test_original_menu_reproduces_physical_coordinate_error",
+          "status": "passed"
+        }
+      ]
+    },
+    "tower_structure_summary.json": {
+      "passed": true,
+      "test_count": 3,
+      "failures": [],
+      "errors": [],
+      "baseline": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\baseline",
+      "candidate": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\tower",
+      "real_flash_ui_tested": false
+    },
+    "tower_behavior_summary.json": {
+      "passed": true,
+      "test_count": 7,
+      "old_error_reproductions": 3,
+      "viewport_scenarios": 10,
+      "context_recovery_cycles": 4,
+      "baseline": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\baseline",
+      "candidate": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\tower",
+      "real_flash_ui_tested": false,
+      "account_requests_sent": 0,
+      "failures": [],
+      "errors": []
+    }
+  },
+  "module_hashes": [
+    {
+      "filename": "ModuleAct3years.swf",
+      "baseline_sha256": "b7393d4715ea0f6e28c5ba0ff37cdc5ff0d847d9ef21e1fed11cb9cfc66078f5",
+      "candidate_sha256": "82c26e1d1be63dd78ba10df24b8b77d0748daa2309ca777e0d55c255cd1d150d"
+    },
+    {
+      "filename": "ModuleBag.swf",
+      "baseline_sha256": "7c4bff923b38a0b98fbb52a674d72653e8abc351d38b17ab0faf11ca594a4a9a",
+      "candidate_sha256": "e59ce295423dd781d169f0b2d31ad114851f99d8f5b6ea19981acbc8b59d0219"
+    },
+    {
+      "filename": "ModuleCard.swf",
+      "baseline_sha256": "a8c2ba52139fee775512ac9fbaa41503e253f05854b49cfbc9df0d71e441c3b0",
+      "candidate_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+    },
+    {
+      "filename": "ModuleChat.swf",
+      "baseline_sha256": "8ce176b6d90c32ae263d2c304f56ad0deac47160bd0b237c617deb856a3aa49d",
+      "candidate_sha256": "ab88f5e8abfc11c0e610be3ff45af86429974757dcfcdb933d91b8aa322fc399"
+    },
+    {
+      "filename": "ModuleUnion.swf",
+      "baseline_sha256": "0eadbc0247b7c6be7644d134538fc10f1faa240ec045fcd6e43bb5725916b2dc",
+      "candidate_sha256": "671f8c5786905b86bb339202918df941c505ac5aa0392fba7743239e25c749d2"
+    },
+    {
+      "filename": "Game_p.swf",
+      "baseline_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+      "candidate_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+    },
+    {
+      "filename": "ModuleTD_p.swf",
+      "baseline_sha256": "77334d656ef2901535328d8e3f9d5a865bc3ac3f3709867d1e59012cd5c9834e",
+      "candidate_sha256": "a13f2bbc3751a9beb6b9de87691ae51f2eb0da62a41ffbf19fe4f5c7fa9de3c8"
+    }
+  ]
+}

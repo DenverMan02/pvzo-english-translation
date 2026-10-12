@@ -1,0 +1,269 @@
+id	name
+1102	Sunflower
+1103	Sunflower
+1104	Sunflower
+1105	Sunflower
+1113	Twin Sunflower
+1114	Twin Sunflower
+1115	Twin Sunflower
+1201	Peashooter
+1202	Peashooter
+1203	Peashooter
+1204	Peashooter
+1205	Peashooter
+1212	Repeater
+1213	Repeater
+1214	Repeater
+1215	Repeater
+1301	Wall-nut
+1302	Wall-nut
+1303	Wall-nut
+1304	Wall-nut
+1305	Wall-nut
+1401	Cabbage-pult
+1402	Cabbage-pult
+1403	Cabbage-pult
+1404	Cabbage-pult
+1405	Cabbage-pult
+1501	Potato Mine
+1502	Potato Mine
+1503	Potato Mine
+1504	Potato Mine
+1505	Potato Mine
+1602	Bloomerang
+1603	Bloomerang
+1604	Bloomerang
+1605	Bloomerang
+1703	Iceberg Lettuce
+1704	Iceberg Lettuce
+1705	Iceberg Lettuce
+1803	Bonk Choy
+1804	Bonk Choy
+1805	Bonk Choy
+1901	Grave Buster
+1902	Grave Buster
+1903	Grave Buster
+1904	Grave Buster
+1905	Grave Buster
+2002	Magic Beanstalk
+2003	Magic Beanstalk
+2004	Magic Beanstalk
+2005	Magic Beanstalk
+3702	Squash
+3703	Squash
+3704	Squash
+3705	Squash
+3103	Bruce Bamboo
+3104	Bruce Bamboo
+3105	Bruce Bamboo
+3203	Carrocket
+3204	Carrocket
+3205	Carrocket
+3303	Explodelion
+3304	Explodelion
+3305	Explodelion
+3602	Venus Flytrap
+3603	Venus Flytrap
+3604	Venus Flytrap
+3605	Venus Flytrap
+4301	Kernel-pult
+4302	Kernel-pult
+4303	Kernel-pult
+4304	Kernel-pult
+4305	Kernel-pult
+3903	Snapdragon
+3904	Snapdragon
+3905	Snapdragon
+5303	Snow Pea
+5304	Snow Pea
+5305	Snow Pea
+5402	Repeater
+5403	Repeater
+5404	Repeater
+5405	Repeater
+4503	Threepeater
+4504	Threepeater
+4505	Threepeater
+5503	Pea Pod
+5504	Pea Pod
+5505	Pea Pod
+4101	Spikeweed
+4102	Spikeweed
+4103	Spikeweed
+4104	Spikeweed
+4105	Spikeweed
+4202	Spikeweed
+4203	Spikeweed
+4204	Spikeweed
+4205	Spikeweed
+5602	Tall-nut
+5603	Tall-nut
+5604	Tall-nut
+5605	Tall-nut
+5703	Cherry Bomb
+5704	Cherry Bomb
+5705	Cherry Bomb
+4401	Spring Bean
+4402	Spring Bean
+4403	Spring Bean
+4404	Spring Bean
+4405	Spring Bean
+4603	Coconut Cannon
+4604	Coconut Cannon
+4605	Coconut Cannon
+5901	Stallia
+5902	Stallia
+5903	Stallia
+5904	Stallia
+5905	Stallia
+6003	Torchwood
+6004	Torchwood
+6005	Torchwood
+6101	Lightning Reed
+6102	Lightning Reed
+6103	Lightning Reed
+6104	Lightning Reed
+6105	Lightning Reed
+6203	Starfruit
+6204	Starfruit
+6205	Starfruit
+6302	Laser Bean
+6303	Laser Bean
+6304	Laser Bean
+6305	Laser Bean
+6403	Citron
+6404	Citron
+6405	Citron
+6503	Infi-nut
+6504	Infi-nut
+6505	Infi-nut
+6602	Magnifying Grass
+6603	Magnifying Grass
+6604	Magnifying Grass
+6605	Magnifying Grass
+6703	Jalapeno
+6704	Jalapeno
+6705	Jalapeno
+6904	Winter Melon
+6905	Winter Melon
+7503	Chomper
+7504	Chomper
+7505	Chomper
+7603	Tile Turnip
+7604	Tile Turnip
+7605	Tile Turnip
+7703	Melon-pult
+7704	Melon-pult
+7705	Melon-pult
+7803	Cattail
+7804	Cattail
+7805	Cattail
+8503	Starfruit
+8504	Starfruit
+8505	Starfruit
+7403	Nitro-shroom
+7404	Nitro-shroom
+7405	Nitro-shroom
+8603	Lychee Drill
+8604	Lychee Drill
+8605	Lychee Drill
+8303	Electric Sea-shroom
+8304	Electric Sea-shroom
+8305	Electric Sea-shroom
+8703	Sea Anemone
+8704	Sea Anemone
+8705	Sea Anemone
+7903	Ganoderma
+7904	Ganoderma
+7905	Ganoderma
+8103	Oxygen Algae
+8104	Oxygen Algae
+8105	Oxygen Algae
+8003	Banana Tree
+8004	Banana Tree
+8005	Banana Tree
+4703	Pomegranate-pult
+4704	Pomegranate-pult
+4705	Pomegranate-pult
+4903	Durian
+4904	Durian
+4905	Durian
+7203	Impear
+7204	Impear
+7205	Impear
+8803	Potato Mine
+8804	Potato Mine
+8805	Potato Mine
+8903	Rose Swordfighter
+8904	Rose Swordfighter
+8905	Rose Swordfighter
+9003	Clivia
+9004	Clivia
+9005	Clivia
+9103	Sap-fling
+9104	Sap-fling
+9105	Sap-fling
+9203	Acid Lemon
+9204	Acid Lemon
+9205	Acid Lemon
+9303	Magic-shroom
+9304	Magic-shroom
+9305	Magic-shroom
+9403	Fire Peashooter
+9404	Fire Peashooter
+9405	Fire Peashooter
+9502	Ghost Pepper
+9503	Ghost Pepper
+9504	Ghost Pepper
+9505	Ghost Pepper
+9603	Guacodile
+9604	Guacodile
+9605	Guacodile
+9703	Hurrikale
+9704	Hurrikale
+9705	Hurrikale
+9803	Plantern
+9804	Plantern
+9805	Plantern
+9903	Oak Archer
+9904	Oak Archer
+9905	Oak Archer
+1123	Spikeweed
+1124	Spikeweed
+1125	Spikeweed
+1132	Pepper-pult
+1133	Pepper-pult
+1134	Pepper-pult
+1135	Pepper-pult
+1153	Kung Fu Carrot
+1154	Kung Fu Carrot
+1155	Kung Fu Carrot
+1163	Toadstool
+1164	Toadstool
+1165	Toadstool
+1172	Bell Grass
+1173	Bell Grass
+1174	Bell Grass
+1175	Bell Grass
+1183	Red Stinger
+1184	Red Stinger
+1185	Red Stinger
+1223	Electric Blueberry
+1224	Electric Blueberry
+1225	Electric Blueberry
+1192	A.K.E.E.
+1193	A.K.E.E.
+1194	A.K.E.E.
+1195	A.K.E.E.
+1233	Agave
+1234	Agave
+1235	Agave
+1243	Moonflower
+1244	Moonflower
+1245	Moonflower
+1253	Aceparagus
+1254	Aceparagus
+1255	Aceparagus
+1143	Pumpkin Witch
+1144	Pumpkin Witch
+1145	Pumpkin Witch

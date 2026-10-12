@@ -1,0 +1,454 @@
+id	questName	desc	finishConditionDesc
+1010	Imperial Tomb Mystery 1	Suddenly, I've arrived at an ancient imperial mausoleum. It's pitch black all around, I can't see a thing, and it feels like armed zombies are closing in on me!	Clear Tower Defense Stage 1-1
+1020	Imperial Tomb Mystery 2	Suddenly, I've arrived at an ancient imperial mausoleum. It's pitch black all around, I can't see a thing, and it feels like armed zombies are closing in on me!	Clear Tower Defense Stage 2-1
+1030	Power of Talents 1	Thus, a great talent was bestowed upon you!	Learn 1 Tier-1 Talent
+1040	Mausoleum Mystery 3	Suddenly, I've arrived at an ancient imperial mausoleum. It's pitch black all around, I can't see a thing, and it feels like armed zombies are closing in on me!	Clear Tower Defense Stage 1-3-1
+1050	Power of Talents 2	Thus, a great talent was bestowed upon you!	Learn 1 Tier-2 Talent
+1060	First Victory	I can't believe there's such a gorgeous place behind the Sphinx. Get my camera... The zombies have surrounded my camera bag! Prepare to break through!	Adventure Stage 1-1
+1070	Seed Planting	Plant your very first seed now, and she will bring you hope!	Plant for the 1st time in the Sunroom
+1080	Fertilize seeds	Want your seeds to grow up fast? You can't skip the fertilizer!	Fertilize Greenhouse for the 1st time
+1090	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town level reaches level 7
+1100	Open Card Pack	Opening card packs is the fastest way to increase your plant collection, give it a try!	Draw a Card Pack 1 time
+1110	Card Upgrade	Without leveling up, how can you boost your plants' power?	Own a Level 15 card
+1120	Card Upgrade	Plant enhancement can rapidly boost your Might. No need to say more, you get it!	Enhance a card 1 time
+1130	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 10
+1140	Upgrade Plants	Plant Legion quality directly affects your Power, how can you not upgrade them!	Own 1 green-quality plant
+1150	Sphinx's Secret 1	I can't believe there's such a gorgeous place behind the Sphinx. Get my camera... The zombies have surrounded my camera bag! Prepare to break through!	Clear Chapter 1 Normal Stage
+1160	Experiment Vial 1	You ask me how these flasks can boost plants' combat power? Uh, maybe the mysterious liquid inside can water the plants.	Craft Basic Crit Experiment Bottle
+1170	Basic Vial 1	You ask me how these flasks can boost plants' combat power? Uh, maybe the mysterious liquid inside can water the plants.	Upgrade Basic Attack Experiment Vial to level 10
+1180	Mausoleum Mystery 4	Suddenly, I've arrived at an ancient imperial mausoleum. It's pitch black all around, I can't see a thing, and it feels like armed zombies are closing in on me!	Tower Defense 1-4-1
+1190	Behind the Pyramid 1	I can't believe there's such a gorgeous place behind the Sphinx. Get my camera... The zombies have surrounded my camera bag! Prepare to break through!	Clear Elite Stage 1-1
+1200	Upgrade Plants	Plant Legion quality directly affects your Power, how can you not upgrade them!	Own 2 Green-tier Plants
+1210	Another Victory	I can't believe there's such a gorgeous place behind the Sphinx. Get my camera... The zombies have surrounded my camera bag! Prepare to break through!	Adventure 2-1
+1220	Upgrade Plants	Plant Legion quality directly affects your Power, how can you not upgrade them!	Own 3 Green-quality plants
+1230	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 11
+1240	Sphinx Secret 2	I can't believe there's such a gorgeous place behind the Sphinx. Get my camera... The zombies have surrounded my camera bag! Prepare to break through!	Clear Chapter 2 Normal Stage
+1250	Upgrade Plants	Plant Legion quality directly affects your Power, how can you not upgrade them!	Own 4 green-tier plants
+1260	Basic Test Tube 2	You ask me how these flasks can boost plants' combat power? Uh, maybe the mysterious liquid inside can water the plants.	Upgrade Primary Defense Vial to level 10
+1270	Basic Lab Vial 3	You ask me how these flasks can boost plants' combat power? Uh, maybe the mysterious liquid inside can water the plants.	Upgrade Basic Stamina Vial to Level 10
+1280	Basic Test Tube 4	You ask me how these flasks can boost plants' combat power? Uh, maybe the mysterious liquid inside can water the plants.	Junior Energy Experiment Bottle reaches Lv. 10
+1290	Behind the Pyramid 2	I can't believe there's such a gorgeous place behind the Sphinx. Get my camera... The zombies have surrounded my camera bag! Prepare to break through!	Clear Elite Stage 2-1
+1300	Triple Victory	I can't believe there's such a gorgeous place behind the Sphinx. Get my camera... The zombies have surrounded my camera bag! Prepare to break through!	Adventure 3-1
+1310	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 12
+1320	Secret of the Sphinx 3	I can't believe there's such a gorgeous place behind the Sphinx. Get my camera... The zombies have surrounded my camera bag! Prepare to break through!	Clear Chapter 3 Normal Stage
+1330	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 14
+1340	Upgrade Plants	Plant Legion quality directly affects your Power, how can you not upgrade them!	Own 5 Uncommon plants
+1350	World Tree Upgrade	Upgrade the World Tree to boost your power!	Upgrade World Tree to Level 2
+1360	Card Upgrade	Without leveling up, how can you boost your plants' power?	Own a Level 30 card
+1370	Golden Watering Can	Use a Gold Watering Can to quickly gain Sprout XP!	Use a Gold Watering Can once
+1380	Behind the Pyramid 3	I can't believe there's such a gorgeous place behind the Sphinx. Get my camera... The zombies have surrounded my camera bag! Prepare to break through!	Clear Elite Stage 3-1
+1390	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Power Exceeds 10,000
+1400	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 15
+1410	Path of Trials	Clearing the Trial Road is not only a proof of strength, but also grants more equipment materials!	Clear Stage 5 of the Path of Trials
+1420	Card Upgrade	Without leveling up, how can you boost your plants' power?	Own a Level 35 Card
+1430	Basic Vial 5	You ask me how these flasks can boost plants' combat power? Uh, maybe the mysterious liquid inside can water the plants.	Primary Attack Flask reaches level 15
+1440	Basic Experiment Bottle 6	You ask me how these flasks can boost plants' combat power? Uh, maybe the mysterious liquid inside can water the plants.	Upgrade Basic Defense Vial to Level 15
+1450	Basic Flask 7	You ask me how these flasks can boost plants' combat power? Uh, maybe the mysterious liquid inside can water the plants.	Upgrade Basic Stamina Lab Bottle to Lv. 15
+1460	Basic Vial 8	You ask me how these flasks can boost plants' combat power? Uh, maybe the mysterious liquid inside can water the plants.	Junior Power Test Bottle reaches Level 15
+1470	Four Victories Achieved	I can't believe there's such a gorgeous place behind the Sphinx. Get my camera... The zombies have surrounded my camera bag! Prepare to break through!	Adventure 4-1
+1480	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 16
+1490	Sphinx's Secret 4	I can't believe there's such a gorgeous place behind the Sphinx. Get my camera... The zombies have surrounded my camera bag! Prepare to break through!	Clear Chapter 4 Normal Stage
+1500	Behind the Pyramid 4	I can't believe there's such a gorgeous place behind the Sphinx. Get my camera... The zombies have surrounded my camera bag! Prepare to break through!	Clear Elite Stage 4-1
+1510	Card Upgrade	Without leveling up, how can you boost your plants' power?	Own a Lv. 40 card
+1520	Win 5 battles	Emperor Qin Shi Huang gazes at you calmly. Chills slowly seep out from the gloomy mausoleum. Do you dare look back?	Adventure 5-1
+1530	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 20K Power
+1540	First Emperor's Relic 1	Emperor Qin Shi Huang gazes at you calmly. Chills slowly seep out from the gloomy mausoleum. Do you dare look back?	Clear Chapter 5 Normal stage
+1550	Nether Thoughts 1	Emperor Qin Shi Huang gazes at you calmly. Chills slowly seep out from the gloomy mausoleum. Do you dare look back?	Clear Elite Stage 5-1
+1560	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 17
+1570	Upgrade Plants	Plant Legion quality directly affects your Power, how can you not upgrade them!	Own a Blue Quality Card
+1580	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 18
+1590	Lab Bottle 2	You ask me how these flasks can boost plants' combat power? Uh, maybe the mysterious liquid inside can water the plants.	Craft Intermediate Attack Vial
+1600	Basic Experiment Vial 9	You ask me how these flasks can boost plants' combat power? Uh, maybe the mysterious liquid inside can water the plants.	Intermediate Attack Test Bottle reaches Level 15
+1610	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town level reaches level 19
+1620	Costume Upgrade	Costume enhancement grants plants bonus stats, a must-have for the strong!	Enhance a plant costume 1 time
+1630	Win 6 consecutive battles	Emperor Qin Shi Huang gazes at you calmly. Chills slowly seep out from the gloomy mausoleum. Do you dare look back?	Adventure 6-1
+1640	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 20
+1650	Mine Assault	Occupy the mine to get a steady source of coins!	Attack the Mine once
+1660	Path of Trials	Clearing the Trial Road is not only a proof of strength, but also grants more equipment materials!	Pass Level 10 of Trial of Wisdom
+1670	Craft Equipment	Plants feel much less lonely with equipment!	Craft 1 piece of equipment
+1680	Upgrade Plants	Plant Legion quality directly affects your Power, how can you not upgrade them!	Own 2 Blue Quality Cards
+1690	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到22级
+1700	Nursery	Summon a nutritionist and let him win reagents for you!	Summon a Nutritionist 1 time in the Nutrient Room
+1710	Nursery	Reagents only take effect when equipped on plants!	Deploy one Reagent
+1720	Nursery	Upgrade reagents to make plants even stronger!	Upgrade a reagent once
+1730	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 30,000 Power
+1740	First Emperor's Ruin 2	Emperor Qin Shi Huang gazes at you calmly. Chills slowly seep out from the gloomy mausoleum. Do you dare look back?	Clear Chapter 6 Normal Stage
+1750	Nether Thoughts 2	Emperor Qin Shi Huang gazes at you calmly. Chills slowly seep out from the gloomy mausoleum. Do you dare look back?	Clear Elite Stage 6-1
+1760	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 40,000 Might
+1770	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 24
+1780	Upgrade Plants	Plant Legion quality directly affects your Power, how can you not upgrade them!	Own 3 Blue-tier Plants
+1790	Victorious in Seven Battles	Emperor Qin Shi Huang gazes at you calmly. Chills slowly seep out from the gloomy mausoleum. Do you dare look back?	Adventure 7-1
+1800	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 50,000 Might
+1810	Emperor Qin's Ruins 3	Emperor Qin Shi Huang gazes at you calmly. Chills slowly seep out from the gloomy mausoleum. Do you dare look back?	Clear Chapter 7 Normal Stage
+1820	Nether Thoughts 3	Emperor Qin Shi Huang gazes at you calmly. Chills slowly seep out from the gloomy mausoleum. Do you dare look back?	Clear Elite Stage 7-1
+1830	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 28
+1840	Eight Victories	Emperor Qin Shi Huang gazes at you calmly. Chills slowly seep out from the gloomy mausoleum. Do you dare look back?	Adventure 8-1
+1850	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 60,000 Power
+1860	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 30
+1870	Challenge Zombie Island	A peculiar piece of land is floating in the corner of the town, come and explore its mysteries!	Complete a Zombie Island challenge
+1880	First Emperor's Ruins 4	Emperor Qin Shi Huang gazes at you calmly. Chills slowly seep out from the gloomy mausoleum. Do you dare look back?	Clear Chapter 8 Normal Stage
+1890	Nether Thoughts 4	Emperor Qin Shi Huang gazes at you calmly. Chills slowly seep out from the gloomy mausoleum. Do you dare look back?	Clear Elite Stage 8-1
+1900	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 32
+1910	Tidings of victory pour in	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Adventure 9-1
+1920	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 80,000 Power
+1930	Pirate Bay Songs 1	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Clear Chapter 9 Normal Stage
+1940	Chaotic Battlefield 1	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Clear Elite Stage 9-1
+1950	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 36
+1960	Tidings of victory pour in	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Adventure 10-1
+1970	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 90k Might
+1980	Pirate Bay's Song 2	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Clear Chapter 10 Normal Stage
+1990	Chaotic Battlefield 2	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Clear Elite Stage 10-1
+2000	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Upgrade Town to Level 40
+2010	Tidings of victory pour in	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Adventure 11-1
+2020	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 100,000 Might
+2030	Pirate Bay Melody 3	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Clear Chapter 11 Normal stage
+2040	Chaotic Battlefield 3	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Clear Elite Stage 11-1
+2050	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches Lv. 43
+2060	Tidings of victory pour in	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Adventure 12-1
+2070	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 120,000 Power
+2080	Pirate Bay's Song 4	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Clear Chapter 12 Normal stage
+2090	纷乱的战场4	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Clear Elite Stage 12-1
+2100	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 47
+2110	Tidings of victory pour in	The mysteries of the universe are vast and deep. Who knows if there might actually be a zombie army out in space?	Adventure 13-1
+2120	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 140,000 Might
+2130	Mystery from the Sky 1	The mysteries of the universe are vast and deep. Who knows if there might actually be a zombie army out in space?	Clear Chapter 13 Normal Stage
+2140	Cosmic Bounty 1	The mysteries of the universe are vast and deep. Who knows if there might actually be a zombie army out in space?	Clear Elite Stage 13-1
+2150	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 51
+2160	Tidings of victory pour in	The mysteries of the universe are vast and deep. Who knows if there might actually be a zombie army out in space?	Adventure 14-1
+2170	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 160,000 Power
+2180	Mystery from Beyond 2	The mysteries of the universe are vast and deep. Who knows if there might actually be a zombie army out in space?	Clear Normal Stage Chapter 14
+2190	Cosmic Blessing II	The mysteries of the universe are vast and deep. Who knows if there might actually be a zombie army out in space?	Clear Elite Stage 14-1
+2200	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 55
+2210	Tidings of victory pour in	The mysteries of the universe are vast and deep. Who knows if there might actually be a zombie army out in space?	Adventure 15-1
+2220	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 170,000 Power
+2230	Secrets from Beyond 3	The mysteries of the universe are vast and deep. Who knows if there might actually be a zombie army out in space?	Clear Chapter 15 Normal Stage
+2240	Cosmic Blessing 3	The mysteries of the universe are vast and deep. Who knows if there might actually be a zombie army out in space?	Clear Hard stage 15-1
+2250	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town level 58
+2260	Tidings of victory pour in	The mysteries of the universe are vast and deep. Who knows if there might actually be a zombie army out in space?	Adventure 16-1
+2270	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 180,000 Power
+2280	Extraterrestrial Mystery 4	The mysteries of the universe are vast and deep. Who knows if there might actually be a zombie army out in space?	Clear Normal Stage Chapter 16
+2290	Cosmic Bounty 4	The mysteries of the universe are vast and deep. Who knows if there might actually be a zombie army out in space?	Clear Elite Stage 16-1
+2300	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 64
+2310	Tidings of victory pour in	Layers of moss float upon the polluted sea. Yet the Dragon King of the deep has lost his kind nature, growing violent and eccentric. Listen to his roar!	Adventure 17-1
+2320	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 220K Power
+2330	Dragon King's Roar 1	Layers of moss float upon the polluted sea. Yet the Dragon King of the deep has lost his kind nature, growing violent and eccentric. Listen to his roar!	Clear Chapter 17 Normal Stage
+2340	Dragon Palace Tremor 1	Layers of moss float upon the polluted sea. Yet the Dragon King of the deep has lost his kind nature, growing violent and eccentric. Listen to his roar!	Clear Elite Stage 17-1
+2350	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 67
+2360	Tidings of victory pour in	Layers of moss float upon the polluted sea. Yet the Dragon King of the deep has lost his kind nature, growing violent and eccentric. Listen to his roar!	Adventure 18-1
+2370	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 250,000 Power
+2380	Dragon King's Roar 2	Layers of moss float upon the polluted sea. Yet the Dragon King of the deep has lost his kind nature, growing violent and eccentric. Listen to his roar!	Clear Chapter 18 Normal Stage
+2390	Dragon Palace Tremor 2	Layers of moss float upon the polluted sea. Yet the Dragon King of the deep has lost his kind nature, growing violent and eccentric. Listen to his roar!	Clear Elite Stage 18-1
+2400	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 72
+2410	Tidings of victory pour in	Layers of moss float upon the polluted sea. Yet the Dragon King of the deep has lost his kind nature, growing violent and eccentric. Listen to his roar!	Adventure 19-1
+2420	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 280,000 Power
+2430	Dragon King's Roar 3	Layers of moss float upon the polluted sea. Yet the Dragon King of the deep has lost his kind nature, growing violent and eccentric. Listen to his roar!	Clear Chapter 19 Normal Stage
+2440	Dragon Palace Tremor 3	Layers of moss float upon the polluted sea. Yet the Dragon King of the deep has lost his kind nature, growing violent and eccentric. Listen to his roar!	Clear Elite Stage 19-1
+2450	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 77
+2460	Tidings of victory pour in	Layers of moss float upon the polluted sea. Yet the Dragon King of the deep has lost his kind nature, growing violent and eccentric. Listen to his roar!	Adventure 20-1
+2470	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Power reaches 300k
+2480	Dragon King's Roar 4	Layers of moss float upon the polluted sea. Yet the Dragon King of the deep has lost his kind nature, growing violent and eccentric. Listen to his roar!	Clear Chapter 20 Normal Stage
+2490	Dragon Palace Tremor 4	Layers of moss float upon the polluted sea. Yet the Dragon King of the deep has lost his kind nature, growing violent and eccentric. Listen to his roar!	Clear Elite Stage 20-1
+2500	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches Lv. 80
+2510	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 320,000 Power
+2520	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 81
+2530	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches Lv. 82
+2540	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 83
+2550	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 84
+2560	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 85
+2570	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 350,000 Might
+2580	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 86
+2590	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到87级
+2600	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 88
+2610	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 89
+2620	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 90
+2630	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 380,000 Power
+2640	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Lv. 91
+2650	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 92
+2660	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 93
+2670	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到94级
+2680	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 95
+2690	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 400,000 Power
+2700	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 96
+2710	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 97
+2720	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 98
+2730	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 99
+2740	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 100
+2750	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 430,000 Might
+2760	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches Lv. 101
+2770	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 102
+2780	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 103
+2790	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 104
+2800	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches Lv. 105
+2810	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到106级
+2820	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 107
+2830	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 108
+2840	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 109
+2850	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 110
+2860	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 450,000 Might
+2870	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 111
+2880	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 112
+2890	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 113
+2900	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 114
+2910	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 115
+2920	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 116
+2930	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 117
+2940	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 118
+2950	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 119
+2960	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Lv. 120
+2970	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 500,000 Might
+2980	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 121
+2990	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 122
+3000	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 123
+3010	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 124
+3020	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 125
+3030	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 126
+3040	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到127级
+3050	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 128
+3060	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 129
+3070	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到130级
+3080	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 560,000 Might
+3090	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Lv. 131
+3100	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 132
+3110	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 133
+3120	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 134
+3130	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Lv. 135
+3140	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到136级
+3150	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 137
+3160	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 138
+3170	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 139
+3180	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 140
+3190	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 600,000 Might
+3200	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 141
+3210	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 142
+3220	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 143
+3230	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 144
+3240	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 145
+3250	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 146
+3260	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 147
+3270	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 148
+3280	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 149
+3290	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 150
+3300	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 650,000 Power
+3310	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 151
+3320	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到152级
+3330	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches Lv. 153
+3340	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 154
+3350	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 155
+3360	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 156
+3370	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 157
+3380	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 158
+3390	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 159
+3400	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 160
+3410	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Power reaches 690k
+3420	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches Lv. 161
+3430	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 162
+3440	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 163
+3450	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 164
+3460	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 165
+3470	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 166
+3480	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 167
+3490	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 168
+3500	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches Lv. 169
+3510	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Lv. 170
+3520	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 730,000 Power
+3530	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到171级
+3540	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 172
+3550	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches Lv. 173
+3560	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 174
+3570	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 175
+3580	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 176
+3590	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 177
+3600	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 178
+3610	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 179
+3620	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 180
+3630	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 760,000 Might
+3640	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 181
+3650	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches Lv. 182
+3660	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches Lv. 183
+3670	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 184
+3680	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 185
+3690	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	小镇达到186级
+3700	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches Lv. 187
+3710	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Lv. 188
+3720	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 189
+3730	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Town reaches level 190
+3740	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 800,000 Power
+3750	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 191
+3760	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 192
+3770	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 193
+3780	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 194
+3790	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 195
+3800	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 196
+3810	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 197
+3820	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 198
+3830	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 199
+3840	Town Upgrade	Town upgraded! Claim some rewards to celebrate.	Reach Town Level 200
+3850	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 840,000 Power
+3860	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 850,000 Power
+3870	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 860,000 Might
+3880	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 870,000 Power
+3890	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 880,000 Power
+3900	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Power reaches 890k
+3910	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 900,000 Power
+3920	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 910K Power
+3930	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 920k Might
+3940	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 930,000 Power
+3950	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 940,000 Power
+3960	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 950,000 Power
+3970	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 960,000 Might
+3980	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 970,000 Might
+3990	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 980,000 Power
+4000	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 990,000 Might
+4010	Increase Power	Boost your Might and prove your sovereignty in the plant world!	Reach 1,000,000 Power
+6010	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 1 3-Star card
+6020	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 2 3-Star Cards
+6030	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 3 3-star cards
+6040	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 4 3-star cards
+6050	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 5 3-Star cards
+6060	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 6 3-Star cards
+6070	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 1 4-star card
+6080	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 2 4-Star cards
+6090	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 3 4-star cards
+6100	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 4 4-star cards
+6110	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 5 4-Star Cards
+6120	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 6 4-star cards
+6130	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 1 5-Star Card
+6140	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 2 5-star cards
+6150	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 3 5-star cards
+6160	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 4 5-Star cards
+6170	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 5 5-star cards
+6180	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 6 5-Star cards
+6190	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 7 5-Star cards
+6200	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 8 5-Star Cards
+6210	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 9 5-Star Cards
+6220	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 10 5-Star Cards
+6230	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 11 5-star cards
+6240	Star Card	In the chaotic battlefield, having more high-star plants is the key to victory!	Own 12 5-star cards
+8010	Behind the Pyramid	I can't believe there's such a gorgeous place behind the Sphinx. Get my camera... The zombies have surrounded my camera bag! Prepare to break through!	Clear Chapter 1 Hard Stage
+8020	Behind the Pyramid	I can't believe there's such a gorgeous place behind the Sphinx. Get my camera... The zombies have surrounded my camera bag! Prepare to break through!	Clear Elite Stage Chapter 2
+8030	Behind the Pyramid	I can't believe there's such a gorgeous place behind the Sphinx. Get my camera... The zombies have surrounded my camera bag! Prepare to break through!	Clear Chapter 3 Elite Stage
+8040	Behind the Pyramid	I can't believe there's such a gorgeous place behind the Sphinx. Get my camera... The zombies have surrounded my camera bag! Prepare to break through!	Clear Chapter 4 Elite Stage
+8050	Nether Thoughts	Emperor Qin Shi Huang gazes at you calmly. Chills slowly seep out from the gloomy mausoleum. Do you dare look back?	Clear Chapter 5 Elite Stage
+8060	Nether Thoughts	Emperor Qin Shi Huang gazes at you calmly. Chills slowly seep out from the gloomy mausoleum. Do you dare look back?	Clear Chapter 6 Elite Stage
+8070	Nether Thoughts	Emperor Qin Shi Huang gazes at you calmly. Chills slowly seep out from the gloomy mausoleum. Do you dare look back?	Clear Chapter 7 Elite Stage
+8080	Nether Thoughts	Emperor Qin Shi Huang gazes at you calmly. Chills slowly seep out from the gloomy mausoleum. Do you dare look back?	Clear Chapter 8 Elite Stage
+8090	Chaotic Battlefield	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Clear Chapter 9 Hard stage
+8100	Chaotic Battlefield	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Clear Chapter 10 Elite Stage
+8110	Chaotic Battlefield	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Clear Chapter 11 Elite Stage
+8120	Chaotic Battlefield	The songs of Pirate Seas echo. Have you ever wondered if the world seen with one eye covered is different from that of others?	Clear Chapter 12 Elite Stage
+8130	Cosmic Bounty	The mysteries of the universe are vast and deep. Who knows if there might actually be a zombie army out in space?	Clear Chapter 13 Elite Stage
+8140	Cosmic Bounty	The mysteries of the universe are vast and deep. Who knows if there might actually be a zombie army out in space?	Clear Chapter 14 Hard Stage
+8150	Cosmic Bounty	The mysteries of the universe are vast and deep. Who knows if there might actually be a zombie army out in space?	Clear Chapter 15 Elite Stage
+8160	Cosmic Bounty	The mysteries of the universe are vast and deep. Who knows if there might actually be a zombie army out in space?	Clear Chapter 16 Elite Stage
+8170	Dragon Palace Tremor	Layers of moss float upon the polluted sea. Yet the Dragon King of the deep has lost his kind nature, growing violent and eccentric. Listen to his roar!	Clear Chapter 17 Elite Stage
+8180	Dragon Palace Tremor	Layers of moss float upon the polluted sea. Yet the Dragon King of the deep has lost his kind nature, growing violent and eccentric. Listen to his roar!	Clear Chapter 18 Elite Stage
+8190	Dragon Palace Tremor	Layers of moss float upon the polluted sea. Yet the Dragon King of the deep has lost his kind nature, growing violent and eccentric. Listen to his roar!	Clear Chapter 19 Elite Stage
+8200	Dragon Palace Tremor	Layers of moss float upon the polluted sea. Yet the Dragon King of the deep has lost his kind nature, growing violent and eccentric. Listen to his roar!	Clear Chapter 20 Hard Stage
+10010	Nursery Might 1	What? The Nutrition Room can give this much Power bonus? What are you waiting for? Let's go...	Exceed 1,000 Power
+10020	Nutrient Room Might 2	What? The Nutrition Room can give this much Power bonus? What are you waiting for? Let's go...	Exceed 2,000 Power
+10030	Nutrient Room Power 3	What? The Nutrition Room can give this much Power bonus? What are you waiting for? Let's go...	Exceed 5,000 Power
+10040	Nursery Power level 4	What? The Nutrition Room can give this much Power bonus? What are you waiting for? Let's go...	Exceed 10,000 Might
+10050	Nursery Power level 5	What? The Nutrition Room can give this much Power bonus? What are you waiting for? Let's go...	Exceed 20,000 Power
+10060	Nutrition Room Power 6	What? The Nutrition Room can give this much Power bonus? What are you waiting for? Let's go...	Exceed 30,000 Power
+10070	Nursery Power 7	What? The Nutrition Room can give this much Power bonus? What are you waiting for? Let's go...	Exceed 40,000 Might
+10080	Nursery Power 8	What? The Nutrition Room can give this much Power bonus? What are you waiting for? Let's go...	Exceed 50,000 Power
+10090	Nursery Power 9	What? The Nutrition Room can give this much Power bonus? What are you waiting for? Let's go...	Surpass 60,000 Power
+10100	Nursery Power 10	What? The Nutrition Room can give this much Power bonus? What are you waiting for? Let's go...	Exceed 70,000 Power
+10110	Nutrition Room Power 11	What? The Nutrition Room can give this much Power bonus? What are you waiting for? Let's go...	Exceed 80,000 Power
+10120	Nursery Might 12	What? The Nutrition Room can give this much Power bonus? What are you waiting for? Let's go...	Exceed 90,000 Might
+10130	Nursery Power reaches 13	What? The Nutrition Room can give this much Power bonus? What are you waiting for? Let's go...	Reach 100,000 Might
+12010	Gear Expert 1	Plant equipment looks so cool, and the stat bonuses are amazing!	Own 1 White equipment
+12020	Gear Expert 2	Plant equipment looks so cool, and stat upgrades are amazing!	Own 1 Green Equipment
+12030	Equipment Expert 3	Plant equipment looks so cool, and stat upgrades are amazing!	Own 1 Blue equipment
+12040	Equipment Master IV	Plant equipment looks so cool, and stat upgrades are amazing!	Own 1 piece of purple equipment
+12050	Equipment Expert 5	Plant equipment looks so cool, and stat upgrades are amazing!	Own 1 Orange equipment
+12060	Equipment Master 6	Plant equipment looks so cool, and stat upgrades are amazing!	Own 1 piece of 1-star equipment
+12070	Gear Expert 7	Plant equipment looks so cool, and stat upgrades are amazing!	Own 1 2-star equipment
+12080	Equipment Master 8	Plant equipment looks so cool, and stat upgrades are amazing!	Own 1 3-star piece of equipment
+12090	Equipment Expert 9	Plant equipment looks so cool, and stat upgrades are amazing!	Own 1 4-star piece of equipment
+12100	Equipment Master X	Plant equipment looks so cool, and stat upgrades are amazing!	Own 1 5-Star Equipment
+14010	Trial Road 1	Time to prove your strength! Push forward to higher floors!	Clear 15 Stages in Trial Path
+14020	Path of Trials 2	Time to prove your strength! Push forward to higher floors!	Clear 20 stages in Trial Road
+14030	Trail of Trials 3	Time to prove your strength! Push forward to higher floors!	Clear Stage 25 of Trial Road
+14040	Path of Trials 4	Time to prove your strength! Push forward to higher floors!	Clear 30 stages in the Path of Trials
+16010	Advanced Vial 1	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft a Basic Evasion Experiment Vial
+16020	Advanced Test Tube 2	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft Basic Accuracy Flask
+16030	Advanced Experiment Vial 3	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft a Basic Toughness Vial
+16040	Advanced Flask 4	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Upgrade Basic Critical Test Tube to Level 15
+16050	Advanced Test Bottle 5	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Basic Evasion Lab Vial reaches level 15
+16060	Advanced Vial 6	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Reach Level 15 with Beginner Accuracy Flasks
+16070	Advanced Vial 7	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Upgrade Primary Toughness Vial to Level 15
+16080	Advanced Lab Bottle 8	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft an Intermediate Defense Vial
+16090	Advanced Vial 9	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Upgrade Intermediate Defense Vial to Level 15
+16100	Advanced Flask 10	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Brew Medium Stamina Elixir
+16110	Advanced Experiment Vial 11	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Reach Level 15 with Intermediate Stamina Experiment Bottle
+16120	Advanced Experiment Vial 12	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft Intermediate Energy Flasks
+16130	Advanced Vial 13	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Reach Level 15 with Intermediate Energy Experiment Bottle
+16140	Advanced Experiment Vial 14	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft an Intermediate Evasion Vial
+16150	Advanced Lab Bottle 15	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Upgrade Intermediate Evasion Test Tube to Level 15
+16160	Advanced Flask 16	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft Intermediate Critical Flasks
+16170	Advanced Flask 17	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Reach Level 15 on Intermediate Critical Flasks
+16180	Advanced Experiment Vial 18	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft Intermediate Hit Test Bottle
+16190	Advanced Experiment Vial 19	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Upgrade Intermediate Accuracy Vial to Level 15
+16200	Advanced Vial 20	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft Intermediate Toughness Experiment Bottle
+16210	Advanced Flask 21	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Intermediate Toughness Experiment Bottle reaches Lv. 15
+16220	Advanced Lab Vial 22	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft an Advanced Attack Vial
+16230	Advanced Vial 23	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft Advanced Defense Test Bottle
+16240	Advanced Lab Vial 24	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft Advanced Stamina Lab Bottle
+16250	Advanced Flask 25	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft Advanced Energy Experiment Vial
+16260	Advanced Test Bottle 26	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft Advanced Evasion Vial
+16270	Advanced Experiment Bottle 27	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft Advanced Crit Lab Bottle
+16280	Advanced Experiment Vial 28	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft Advanced Accuracy Vial
+16290	Advanced Flask 29	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft Advanced Toughness Test Vial
+16300	Advanced Vial 30	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft an Expert Attack Vial
+16310	Advanced Test Tube 31	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft Expert Defense Vial
+16320	Advanced Vial 32	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft an Expert Stamina Vial
+16330	Advanced Experiment Vial 33	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft Expert Energy Experiment Bottle
+16340	Advanced Lab Vial 34	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft Expert Critical Flask
+16350	Advanced Flask 35	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft Expert Accuracy Experiment Bottle
+16360	Advanced Test Vial 36	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft an Expert Toughness Vial
+16370	Advanced Flask 37	You ask how these vials boost plants' combat power? Perhaps the mysterious liquid inside can water the plants.	Craft Expert Evasion Flasks
+18010	Upgrade World Tree 1	Upgrade the World Tree to boost your power!	Upgrade World Tree to Level 10
+18020	Upgrade World Tree 2	Upgrade the World Tree to boost your power!	Upgrade World Tree to Lv. 20
+18030	Upgrade World Tree to Level 3	Upgrade the World Tree to boost your power!	Upgrade World Tree to Level 30
+18040	Upgrade World Tree 4	Upgrade the World Tree to boost your power!	Upgrade World Tree to Level 40
+18050	Upgrade World Tree to Level 5	Upgrade the World Tree to boost your power!	Upgrade World Tree to Level 50
+18060	Upgrade World Tree to Level 6	Upgrade the World Tree to boost your power!	世界树升为60级
+18070	World Tree Upgrade 7	Upgrade the World Tree to boost your power!	Upgrade World Tree to level 70
+18080	Upgrade World Tree to Level 8	Upgrade the World Tree to boost your power!	Upgrade World Tree to Lv. 80
+18090	Upgrade World Tree 9	Upgrade the World Tree to boost your power!	Upgrade World Tree to Level 90
+18100	World Tree upgrade 10	Upgrade the World Tree to boost your power!	Upgrade World Tree to level 100
+18110	World Tree upgrade 11	Upgrade the World Tree to boost your power!	Upgrade Tree of Wisdom to Level 110
+18120	World Tree upgrade 12	Upgrade the World Tree to boost your power!	Upgrade World Tree to Level 120
+18130	Upgrade World Tree to Level 13	Upgrade the World Tree to boost your power!	Upgrade World Tree to Level 130
+18140	Upgrade Tree of Wisdom 14	Upgrade the World Tree to boost your power!	Upgrade World Tree to level 140
+18150	Upgrade World Tree to Level 15	Upgrade the World Tree to boost your power!	Upgrade World Tree to level 150
+18160	Upgrade World Tree to Level 16	Upgrade the World Tree to boost your power!	Upgrade World Tree to Lv. 160
+18170	Upgrade World Tree to Level 17	Upgrade the World Tree to boost your power!	Upgrade World Tree to Level 170
+18180	Upgrade World Tree 18	Upgrade the World Tree to boost your power!	Upgrade Tree of Wisdom to Level 180
+18190	Upgrade World Tree to Lv. 19	Upgrade the World Tree to boost your power!	Upgrade World Tree to Level 190
+18200	Upgrade World Tree 20 times	Upgrade the World Tree to boost your power!	Upgrade World Tree to level 200
+22010	Rank Promotion 1	Progress in the Arena represents your overall improvement. Keep it up!	Reach Featherweight rank in Arena
+22020	Rank Promotion 2	Progress in the Arena represents your overall improvement. Keep it up!	Reach Featherweight in Ranked Arena
+22030	Rank Promotion 3	Progress in the Arena represents your overall improvement. Keep it up!	Enter Lightweight in Ranked Arena
+22040	Rank Promotion 4	Progress in the Arena represents your overall improvement. Keep it up!	Enter Middleweight in Ranked Arena
+22050	Rank Promotion 5	Progress in the Arena represents your overall improvement. Keep it up!	Reach Super Middleweight in Ranked Arena
+22060	Rank Promotion 6	Progress in the Arena represents your overall improvement. Keep it up!	Enter Cruiserweight in Ranked Arena
+22070	Rank Promotion 7	Progress in the Arena represents your overall improvement. Keep it up!	Reach Heavyweight in Ranked Arena
+20010	Rank 1 in Arena	Progress in the Arena represents your overall improvement. Keep it up!	Rank in the top 999 in the Arena
+20020	Rank 2 in Arena	Progress in the Arena represents your overall improvement. Keep it up!	Rank in the top 500 in the Arena
+20030	Arena Ranking 3	Progress in the Arena represents your overall improvement. Keep it up!	Reach top 200 in the Arena
+20040	Reach Rank 4 in Ladder	Progress in the Arena represents your overall improvement. Keep it up!	Rank in the top 100 in the Arena
+20050	Arena Rank 5	Progress in the Arena represents your overall improvement. Keep it up!	Reach Top 50 in the Arena
+20060	Arena Rank 6	Progress in the Arena represents your overall improvement. Keep it up!	Reach top 20 in the Arena
+20070	Reach Rank 7 in the Arena	Progress in the Arena represents your overall improvement. Keep it up!	Enter Top 10 in Ranked Arena
+20080	Arena Rank 8	Progress in the Arena represents your overall improvement. Keep it up!	Reach Top 5 in the Arena
+20090	Reach Rank 9 in Arena	Progress in the Arena represents your overall improvement. Keep it up!	Reach Rank 2 in the Arena
+20100	Rank 10 in Arena	Progress in the Arena represents your overall improvement. Keep it up!	Rank 1 in the Arena
+24010	Clear Tower Defense	Suddenly, I've arrived at an ancient imperial mausoleum. It's pitch black all around, I can't see a thing, and it feels like armed zombies are closing in on me!	Tower Defense 1-4-4
+24020	Clear Tower Defense	Plant Research Lab? How disappointing, it's not researching me! Oh well, let me explore what can be researched here.	Learn 1 Tier-3 Talent in the Plant Lab
+24030	Clear Tower Defense	Suddenly, I've arrived at an ancient imperial mausoleum. It's pitch black all around, I can't see a thing, and it feels like armed zombies are closing in on me!	Tower Defense 1-5-1
+24040	Clear Tower Defense	Suddenly, I've arrived at an ancient imperial mausoleum. It's pitch black all around, I can't see a thing, and it feels like armed zombies are closing in on me!	Tower Defense 1-6-1
+24050	Clear Tower Defense	Suddenly, I've arrived at an ancient imperial mausoleum. It's pitch black all around, I can't see a thing, and it feels like armed zombies are closing in on me!	Tower Defense 1-7-1
+24060	Clear Tower Defense	Plant Research Lab? How disappointing, it's not researching me! Oh well, let me explore what can be researched here.	Learn 1 Tier 4 Talent in the Plant Research Lab
+26010	Alliance Pact	How can you enjoy the game to the fullest without joining an alliance!?	Join an Alliance

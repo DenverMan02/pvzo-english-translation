@@ -1,0 +1,6 @@
+id	name
+1	Crushing Victory
+2	Minor Victory
+3	Narrow Victory
+4	Narrow Defeat
+5	Winning Streak

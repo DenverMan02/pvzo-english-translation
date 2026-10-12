@@ -1,0 +1,6 @@
+id	name	maxLV	compositeDrawingCostParam	compositeDrawingGenerateParam	exchangeNeedItemStr
+1	白色	10	1:10000	95531:30	95542:0
+2	绿色	40	1:15000	95531:50	95542:0
+3	蓝色	80	1:30000	95531:100	95542:0
+4	紫色	130	1:45000	95531:150	95542:0
+5	橙色	200	1:60000	95531:200	95542:0

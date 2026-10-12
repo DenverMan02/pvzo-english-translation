@@ -1,0 +1,2210 @@
+{
+  "updated_at": "2026-10-08T07:27:09.931482",
+  "note": "Only original card pixels are cropped, proportionally reduced and centered; no artwork is newly drawn.",
+  "main_geometry": {
+    "canvas": [
+      330,
+      240
+    ],
+    "visible_window": [
+      70,
+      63
+    ],
+    "subject_limit": [
+      60,
+      60
+    ],
+    "client_image_y": 3,
+    "client_mask_height": 66,
+    "auto_upscale": false
+  },
+  "assets": [
+    {
+      "path": "/swf/icons/card/10000_0.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\10000_0.png",
+      "source_sha256": "80b422f4d325858fac8071a5e6fc9f8daa75ce5a6ed49ef595c7c8e554bc3dc6",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        1,
+        42,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        16,
+        1,
+        53,
+        61
+      ],
+      "sha256": "e1ccfbe8fcecab398eef9551c1b82aff0521f9ddbbcddb27e5e6d7ff77549974"
+    },
+    {
+      "path": "/swf/icons/card/10040_0.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\10040_0.png",
+      "source_sha256": "f6a2bc9e1a5ee37afcc71ffe41690cb92f8595b71075018c8bf8acd74ca10d8c",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        2,
+        66,
+        74
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        1,
+        61,
+        61
+      ],
+      "sha256": "51d5e36db61d438bb278b0612b51a148cbddd9de94e6bbb16bad02b813119f84"
+    },
+    {
+      "path": "/swf/icons/card/10060_0.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\10060_0.png",
+      "source_sha256": "944ea122fb2016a15f9ad12b92d441aa72fbc0a39caf69af2dda1a368b769804",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        2,
+        64,
+        81
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        11,
+        1,
+        58,
+        61
+      ],
+      "sha256": "375263676c73645815955d034845e898a9efd7e4ab9beeead852572d429e44ad"
+    },
+    {
+      "path": "/swf/icons/card/10070_0.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\10070_0.png",
+      "source_sha256": "c04ab68f2e35c5e2b54039a7c074d0334f9507880e5ba1b212b0349fa7fe9813",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        2,
+        48,
+        79
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        17,
+        1,
+        53,
+        61
+      ],
+      "sha256": "1e7710427aa9e22928a454d4a33d048fefd1fd29bcc84f77a2b1be636ad3c1cd"
+    },
+    {
+      "path": "/swf/icons/card/100_1701.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\100_1701.png",
+      "source_sha256": "49477aa0758b404963f0945f58b94e857cd80d2625425ca98e46af99419b19f3",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        5,
+        13,
+        74,
+        78
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        3,
+        65,
+        60
+      ],
+      "sha256": "3828108d6b9db5908c5d2b8869554cb23cb3b0bbc1b44575295fc95b57b41418"
+    },
+    {
+      "path": "/swf/icons/card/10207_0.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\10207_0.png",
+      "source_sha256": "df540266d5a373eaf81e661ab87910f73c0785878d5d185f2bf8dedac5844475",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        6,
+        0,
+        55,
+        64
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        58,
+        61
+      ],
+      "sha256": "33aee22d34d6bd1dfdd58416177c6af620191def54b559b1dfd56bd5e0ec9676"
+    },
+    {
+      "path": "/swf/icons/card/10210_0.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\10210_0.png",
+      "source_sha256": "8edc29ac60a2911b23a20ec7a8ba4cf5db50d5d3e870282ed0e2a374552e7196",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        3,
+        0,
+        55,
+        63
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        1,
+        60,
+        61
+      ],
+      "sha256": "728b6e9a140d5be6540470181fcef1df9765bd721eee84d5d2d56a52f097bb1b"
+    },
+    {
+      "path": "/swf/icons/card/10212_0.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\10212_0.png",
+      "source_sha256": "df540266d5a373eaf81e661ab87910f73c0785878d5d185f2bf8dedac5844475",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        6,
+        0,
+        55,
+        64
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        58,
+        61
+      ],
+      "sha256": "33aee22d34d6bd1dfdd58416177c6af620191def54b559b1dfd56bd5e0ec9676"
+    },
+    {
+      "path": "/swf/icons/card/10214_0.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\10214_0.png",
+      "source_sha256": "79905b551522362e62674457b3366db71847965b28f6d8a235ee65a20756619d",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        0,
+        0,
+        63,
+        62
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        2,
+        65,
+        61
+      ],
+      "sha256": "b83cf3b57ec4e6a5c38661ea35ad2708f83637a524d9f5feaa990be8252de067"
+    },
+    {
+      "path": "/swf/icons/card/110_1901.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\110_1901.png",
+      "source_sha256": "17936a162a6df13430d49f85233fe54c28c9da9bedfd6b89d9ddf73adcb72d06",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        8,
+        5,
+        73,
+        67
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        3,
+        65,
+        60
+      ],
+      "sha256": "56884374aff01aa84c2862ec7766e6cf18eee2104d8aa5f81688a96de74bf579"
+    },
+    {
+      "path": "/swf/icons/card/113_1131.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\113_1131.png",
+      "source_sha256": "3617e2dce4706fc6108b668c6cc32ce287eb8d178459bf8e80c95b748f2b808d",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        2,
+        81,
+        92
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        1,
+        61,
+        61
+      ],
+      "sha256": "1d1aa6c1da4019c7d24fc5d81fab24210a3ae0c76cee22af654c2befb9882ae8"
+    },
+    {
+      "path": "/swf/icons/card/114_1141.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\114_1141.png",
+      "source_sha256": "863db204a6fbcb89008328afd23ac65702f56ca2c23d3607552bc026b2aad0c0",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        0,
+        0,
+        65,
+        61
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        3,
+        65,
+        59
+      ],
+      "sha256": "5fde5370c34a4976e8972890c91c4e00913315926bede3658513089275e52455"
+    },
+    {
+      "path": "/swf/icons/card/115_1151.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\115_1151.png",
+      "source_sha256": "c74892f8d3347e9afed974df52575e93213736f4ac68a79ce9ac4fe8ece1a0e2",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        6,
+        2,
+        66,
+        76
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        1,
+        59,
+        61
+      ],
+      "sha256": "6a46821d71c33bb71f3d9c6a7d15305a22fd4d6652a75c6cd4709007970d93ca"
+    },
+    {
+      "path": "/swf/icons/card/116_1161.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\116_1161.png",
+      "source_sha256": "4e2a8cdac68512796c7514119817dca37d30d8ac378fb980ff9f6e2141d3946e",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        6,
+        20,
+        62,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        7,
+        8,
+        63,
+        54
+      ],
+      "sha256": "36a6b0376bb4a9e1f9b5efa55ed96b919378423483ed97c9cd5d8fd3e9d4775e"
+    },
+    {
+      "path": "/swf/icons/card/117_1171.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\117_1171.png",
+      "source_sha256": "dbf0b22be9b17bc8a8a6cab78104748e196604cda965f169808a6c512af1dce0",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        0,
+        10,
+        61,
+        68
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        3,
+        65,
+        60
+      ],
+      "sha256": "84bd6c1affbeb54ee2fa8a0f23c3ace50b5332c484dbcf764d82fb28b2d1d211"
+    },
+    {
+      "path": "/swf/icons/card/118_1181.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\118_1181.png",
+      "source_sha256": "39714889a572fa0ed5c5da9f78b752ab25ee01b6dbb7d34ac71c9cb8b9321305",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        7,
+        16,
+        69,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        7,
+        65,
+        55
+      ],
+      "sha256": "aeaf1d75cc6dbee99b25547556058b8a7969022e6497327574d274a69459e7f0"
+    },
+    {
+      "path": "/swf/icons/card/119_1191.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\119_1191.png",
+      "source_sha256": "85c6ca614e8a3328b0e8b6241f0aaf61efb790cbd0efbbcdfda0ef20bc74db77",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        11,
+        9,
+        60,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        3,
+        59,
+        60
+      ],
+      "sha256": "327bcff79714c54d434eb727f2151f2ca6e6363761125e86b104a2b64fad2f8d"
+    },
+    {
+      "path": "/swf/icons/card/11_1121.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\11_1121.png",
+      "source_sha256": "7858578652635af5014547b24926d7a8839684b79074ad52637876932e1b434e",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        10,
+        6,
+        62,
+        68
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        1,
+        60,
+        61
+      ],
+      "sha256": "97977875890d47b993d360fada1af8895a80ccbd5da886347c7f48905c0f0096"
+    },
+    {
+      "path": "/swf/icons/card/120_2001.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\120_2001.png",
+      "source_sha256": "f75174e71c2947a56f2b27bb68f9ea817b7c53a0c4faf4063991b9f2718c0b61",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        19,
+        0,
+        56,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        18,
+        1,
+        52,
+        61
+      ],
+      "sha256": "ba4101280c5ba50f1623156ef13b63c0344694aca642b492667a33eef21d9eba"
+    },
+    {
+      "path": "/swf/icons/card/122_1221.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\122_1221.png",
+      "source_sha256": "29ec36d8df98a5c45784c5d868346996a9ab9dfb32b50b976c8b96e19b4622a6",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        7,
+        20,
+        57,
+        59
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        12,
+        60,
+        51
+      ],
+      "sha256": "3a9fe16ae5b57b2c1b11ff56cef4d8525e6df40eea1a466bcf6869d3728a6655"
+    },
+    {
+      "path": "/swf/icons/card/123_1231.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\123_1231.png",
+      "source_sha256": "5d72ecd80bea575db0ccbd8fcfe63245e011d0c5d2f20ca255de5649d801b433",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        5,
+        10,
+        59,
+        67
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        3,
+        62,
+        60
+      ],
+      "sha256": "19c65799eb06b02a5711df9885fdc8b4ccaea31394f71ef4e9d903a324a12bf8"
+    },
+    {
+      "path": "/swf/icons/card/124_1241.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\124_1241.png",
+      "source_sha256": "04aa613061ede647b5f17566a5ce77f8ea13a5911b36c569042084111fdaa6c3",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        17,
+        7,
+        56,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        15,
+        2,
+        54,
+        61
+      ],
+      "sha256": "34a53ca89cb32d8259385ae359c26819263cde0f1c80a5ddc609525a54df471d"
+    },
+    {
+      "path": "/swf/icons/card/125_251.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\125_251.png",
+      "source_sha256": "ebf79f2043107a9cd785a049fc89d262e0c71f511b788e378ad528349796f07d",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        6,
+        29,
+        74,
+        62
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        17,
+        65,
+        46
+      ],
+      "sha256": "175c08c2cd335886fbe2e3226489ba24f51a8952adbc4a1cb96f87c18f6c96e6"
+    },
+    {
+      "path": "/swf/icons/card/130_3101.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\130_3101.png",
+      "source_sha256": "205838dd9c79564d91a1b92691f231edbf8fedc58824de81161d9babbeaef741",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        12,
+        6,
+        58,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        58,
+        61
+      ],
+      "sha256": "b32d6768752dd5d6b28cd0d24e250d9b3ba3117b822337ead75667858339e364"
+    },
+    {
+      "path": "/swf/icons/card/140_3201.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\140_3201.png",
+      "source_sha256": "2ca782064049764e1aa70b08610ed2a4856b7f40de3a9e332a4e994ea6fe7abb",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        5,
+        1,
+        65,
+        68
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        1,
+        62,
+        61
+      ],
+      "sha256": "9111e266b35543d2d7fd556c57a738194a7526c783847bc0aeaf61318d2e088c"
+    },
+    {
+      "path": "/swf/icons/card/150_3310.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\150_3310.png",
+      "source_sha256": "4d60f4702c3209519621ef5b911777f1a83e4e84d5b150ec5129623b75358fd3",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        16,
+        16,
+        59,
+        67
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        13,
+        6,
+        56,
+        57
+      ],
+      "sha256": "142a81aec0a909c4bfeb09900746dbf18ca6b8c9fa51361a39e7c81c382d4ecb"
+    },
+    {
+      "path": "/swf/icons/card/30_1201.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\30_1201.png",
+      "source_sha256": "a1e69405f5b8c6971871de7660e4ff4932352b8e0c013f1134cdb8acf6c10731",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        18,
+        16,
+        67,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        6,
+        59,
+        56
+      ],
+      "sha256": "32c0f94258a9dcd93e5945f4f6bb4ced19df03af63c11a78b7b165570ef020b8"
+    },
+    {
+      "path": "/swf/icons/card/360_3601.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\360_3601.png",
+      "source_sha256": "1866ae96515340422647f376fc8b72a98aeef2499c43854424757c1b154a1018",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        9,
+        0,
+        60,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        58,
+        61
+      ],
+      "sha256": "59dd89e9e1f40298c5a7331ace21377fa7396163bb831ba290891ef140f77f1c"
+    },
+    {
+      "path": "/swf/icons/card/370_3701.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\370_3701.png",
+      "source_sha256": "341f82ae2b0a64c25e748611182e27f0b972522d71396776919d00eb47812bb2",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        12,
+        1,
+        64,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        11,
+        1,
+        59,
+        61
+      ],
+      "sha256": "b9daa56caf47499df477113185137d5601a7802c4335314cd7d31ac4246928e7"
+    },
+    {
+      "path": "/swf/icons/card/390_3901.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\390_3901.png",
+      "source_sha256": "aeed85c06db953a12cad438937d839855479dc4aae504aa529f5b439b209c292",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        16,
+        5,
+        67,
+        67
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        1,
+        59,
+        61
+      ],
+      "sha256": "e5a12663c902e022f07a34eaae8a36fd7f08963daa7d81bac49496fc17802152"
+    },
+    {
+      "path": "/swf/icons/card/40_1101.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\40_1101.png",
+      "source_sha256": "2fce4945cec1f41d4b4a99c459acb6c9b1d1ce9d6c799b13a5912a3db6b0dfb1",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        10,
+        0,
+        68,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        1,
+        61,
+        61
+      ],
+      "sha256": "e6947fc7dcc32a8d338fb9bf804949a1e7170a3c10d042a1b5b96d9cd244f836"
+    },
+    {
+      "path": "/swf/icons/card/410_4101.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\410_4101.png",
+      "source_sha256": "1872bcdb21d63ce117683a343f3b8a6844a54dd88954912427e271e774a6492c",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        1,
+        32,
+        73,
+        59
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        20,
+        65,
+        43
+      ],
+      "sha256": "8669db132b4dd8cdda463dc17cc51dd016de857de26ae9697c16a3ac427734e6"
+    },
+    {
+      "path": "/swf/icons/card/41_1111.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\41_1111.png",
+      "source_sha256": "803b5d01e3cc3b97c8616e83ea547c57bbe4977c48dc877b358ade5960315d21",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        1,
+        0,
+        73,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        4,
+        65,
+        58
+      ],
+      "sha256": "a8bb0a550b6ced23aba76a2153d356561f8173c5f81be564a3c9ee9186a31090"
+    },
+    {
+      "path": "/swf/icons/card/420_4201.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\420_4201.png",
+      "source_sha256": "6400098967070a2b3ed17857c9a7bb9187025dbe7b3bb6e048fa401d12bbd10b",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        6,
+        32,
+        71,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        16,
+        65,
+        46
+      ],
+      "sha256": "ac7fcfe50fef58872951bce268d44c684e6a4226be6f17f547989f8f8ff6f2cd"
+    },
+    {
+      "path": "/swf/icons/card/430_301.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\430_301.png",
+      "source_sha256": "93a576385e8a0b10410332af10bbc69880eed5a4e44798587241bf6f817dacd6",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        0,
+        12,
+        67,
+        69
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        6,
+        65,
+        57
+      ],
+      "sha256": "ecfa05616b8020f56872a47dae460738fc3655e169a1116c73c39d89b92f008a"
+    },
+    {
+      "path": "/swf/icons/card/440_4401.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\440_4401.png",
+      "source_sha256": "53f29c8b9a9f1bc1b522baae97e06c1dac12a93e7a55ca25c1ed0036dc430837",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        24,
+        9,
+        54,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        20,
+        3,
+        50,
+        59
+      ],
+      "sha256": "687447048d0b6d3d7c843ef3eeb46338ebfc69feccddd67049f52198e20c90c0"
+    },
+    {
+      "path": "/swf/icons/card/450_4501.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\450_4501.png",
+      "source_sha256": "3d662c446162b6671c00c15551995d8e2b2255e1c29e4d87cec185e431b5bf46",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        4,
+        6,
+        78,
+        69
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        6,
+        65,
+        57
+      ],
+      "sha256": "d2be0300e3b70bc243c65705673c39aa33bf195c27db9d37a1a0bb3258a9de64"
+    },
+    {
+      "path": "/swf/icons/card/460_4601.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\460_4601.png",
+      "source_sha256": "f8bc337b01511106c5b5191e83ee545076d2263f20b7645318d602898e74d360",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        0,
+        0,
+        70,
+        68
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        2,
+        65,
+        60
+      ],
+      "sha256": "4fcb7192cbfe344527fae11520e01c8fe473fdc8b699c81145582283624c42f4"
+    },
+    {
+      "path": "/swf/icons/card/470_4701.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\470_4701.png",
+      "source_sha256": "8a19b0e55fa689a7fb3e204d5e8796410372509e00cbd07b5d539ac46ed237a0",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        2,
+        92,
+        75
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        7,
+        65,
+        56
+      ],
+      "sha256": "a7e5d4c3becc03cbc844e061d1e54a9f74760b33dd72942fd74e59ab268190d6"
+    },
+    {
+      "path": "/swf/icons/card/490_4901.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\490_4901.png",
+      "source_sha256": "33ac966682a524efd8a9215f26c880c7ccb61376dd71dab38cbec73c71b67487",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        11,
+        7,
+        60,
+        71
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        58,
+        61
+      ],
+      "sha256": "a33f56a514e1a8bfb0251e24979647d5a78f50e970dc3ee343f8286bea033164"
+    },
+    {
+      "path": "/swf/icons/card/50_1301.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\50_1301.png",
+      "source_sha256": "e96a92145c72b752bd8cccdcf881f184a23bfc77394040fe6c62ebd82a3b9709",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        10,
+        4,
+        60,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        11,
+        1,
+        59,
+        61
+      ],
+      "sha256": "62307e0ab19c7e1d5e98388a3f8ecf40495cd8f0d4ba0bf21643dffd0dbbc9ed"
+    },
+    {
+      "path": "/swf/icons/card/530_5301.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\530_5301.png",
+      "source_sha256": "ad5ff57b077acff64008074976c5101bf2b0b3885e9b2d812f0412588d37f2d5",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        14,
+        18,
+        64,
+        67
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        7,
+        60,
+        56
+      ],
+      "sha256": "09edb140033729f0647d53a0f65761f3043c72923e0b383c4e1aeb8f6d3ff3f5"
+    },
+    {
+      "path": "/swf/icons/card/540_5401.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\540_5401.png",
+      "source_sha256": "fb01fcee530c3b202369c717f85ad53055d1c7c3f1b78811f80380d57c478278",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        10,
+        22,
+        72,
+        67
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        9,
+        65,
+        53
+      ],
+      "sha256": "c0ebb75bbe8cd0c1683eff3c5cac71c88ee7b30cc4a2a2c27b6e698d6c1ad684"
+    },
+    {
+      "path": "/swf/icons/card/550_5501.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\550_5501.png",
+      "source_sha256": "58effb8dddd3ac083c3c653c9f06b015f9281a817bd7e4c2bee88434e32a4f89",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        10,
+        0,
+        59,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        57,
+        61
+      ],
+      "sha256": "f8caf96534b8c1128c4108be24f8f0592d8b1fae15fc828591adcf416d258958"
+    },
+    {
+      "path": "/swf/icons/card/560_5601.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\560_5601.png",
+      "source_sha256": "c3efdc2615d3daabeba86c611ee140fd0c7771fff86267ddb40749f8720411e3",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        19,
+        0,
+        59,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        16,
+        1,
+        53,
+        61
+      ],
+      "sha256": "a281853b7c0a61abc257e7da6a721e0c9dcb8e328ed899cddd082925aa03678f"
+    },
+    {
+      "path": "/swf/icons/card/570_5701.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\570_5701.png",
+      "source_sha256": "7c32fc5ed3aea2516b6e067aec2281d90d008d93a13b7754c7bbb7b2c723c298",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        8,
+        2,
+        69,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        6,
+        1,
+        64,
+        61
+      ],
+      "sha256": "2a2f4b20184c891300cdb2678e17260fd4185fc231326c1eb810f598e437d46d"
+    },
+    {
+      "path": "/swf/icons/card/590_5901.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\590_5901.png",
+      "source_sha256": "1921782140c27ce4c8ac62ae1449d3a24ef1f117827ce6d6e869922181505cae",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        13,
+        7,
+        53,
+        64
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        15,
+        3,
+        55,
+        60
+      ],
+      "sha256": "5cadbdbcf5fedc40e18f69550c500c194b7b6525b83586dfaa050aad6587be6e"
+    },
+    {
+      "path": "/swf/icons/card/600_6001.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\600_6001.png",
+      "source_sha256": "5792104eb1127c1e4a67325b4fc2a614ba736be59020330142018bbe12f1c7ad",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        10,
+        0,
+        65,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        1,
+        60,
+        61
+      ],
+      "sha256": "ab0a2989bb5675fe725b78afd38816582bb4a030f8662d30a9dda10cf5d7c9bd"
+    },
+    {
+      "path": "/swf/icons/card/60_1501.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\60_1501.png",
+      "source_sha256": "7ae5006d0f72bb7144dcc2e4d4719395db682f34ab943a7764e68eb790e7a2e8",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        12,
+        19,
+        64,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        9,
+        8,
+        61,
+        55
+      ],
+      "sha256": "347be23a0d2eb4b56bb322b83ee8c6c5c18ce56e90cd588c190142c948e4614f"
+    },
+    {
+      "path": "/swf/icons/card/610_6101.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\610_6101.png",
+      "source_sha256": "40f3dbe03c011f5b64503f1f6533ab01e34ba7606a44fb7592fffee6a50d86d8",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        20,
+        17,
+        56,
+        67
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        17,
+        6,
+        53,
+        56
+      ],
+      "sha256": "535c6b7c9271fadbccc956d06c509d8398092c15f80edc8b920f29b6806d3b9b"
+    },
+    {
+      "path": "/swf/icons/card/620_6201.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\620_6201.png",
+      "source_sha256": "8939f1a2700a98a20d3d16a02714a00a50c6977668804f2d3ea012130c357936",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        10,
+        25,
+        64,
+        69
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        9,
+        62,
+        53
+      ],
+      "sha256": "4cfdc506bec3006cc251452f0ce73b950f45a1ed5a4366d1c7949e139ba74512"
+    },
+    {
+      "path": "/swf/icons/card/630_6301.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\630_6301.png",
+      "source_sha256": "65e4dabee3365d25339229b697d8a46275328830ad8eff90f15028ad3c02025e",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        20,
+        4,
+        60,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        15,
+        1,
+        54,
+        61
+      ],
+      "sha256": "934a7892fa856b07d75d0852ebbc13ee46b4340265b59a09ce353919a5233a44"
+    },
+    {
+      "path": "/swf/icons/card/640_6401.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\640_6401.png",
+      "source_sha256": "e1738709872db48a8f70c71411494772bd053770ebce6a06f5db4407ff4ff17b",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        13,
+        22,
+        60,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        11,
+        9,
+        58,
+        53
+      ],
+      "sha256": "16c5cbdf84ce2f4265583ffa3bfdbd64a82822f0231916785fffc3ab7eff18fd"
+    },
+    {
+      "path": "/swf/icons/card/650_6501.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\650_6501.png",
+      "source_sha256": "4ee6a2d134d5112fe3aabd1645ed62e46c75a4a12fc7c0a1715da30c0f5d4094",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        19,
+        0,
+        60,
+        58
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        14,
+        2,
+        55,
+        60
+      ],
+      "sha256": "c2b16e356dabee27f7f215092ba26d880243b3a6bdf9287a4e3a7981ef9a1f06"
+    },
+    {
+      "path": "/swf/icons/card/660_6601.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\660_6601.png",
+      "source_sha256": "26a3cce4674dbf08728a26299e43761991b6f2c89dddbfe46d1f535bea636566",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        19,
+        17,
+        57,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        16,
+        7,
+        54,
+        55
+      ],
+      "sha256": "84e36bad86b6a59840cdf1c4b0897c264919537530fc57862d0ae68b778cf5c5"
+    },
+    {
+      "path": "/swf/icons/card/670_6701.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\670_6701.png",
+      "source_sha256": "3a9aac2d221227979d7000ce155f018cc24869b8a193704f5267192eec304ce9",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        22,
+        2,
+        59,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        17,
+        1,
+        52,
+        61
+      ],
+      "sha256": "58bb74af05265b823bed49b6cb58ecefdd9213d2088bb06e3562d0cf01a2b263"
+    },
+    {
+      "path": "/swf/icons/card/690_6901.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\690_6901.png",
+      "source_sha256": "dbead53625c787722434e5de95bb09c692eec13bdcda6b88c6627b286e520001",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        0,
+        1,
+        63,
+        68
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        7,
+        1,
+        63,
+        61
+      ],
+      "sha256": "07aa2e3f1ba565272447f0c6110450542c0d60ceb30eae26d672dff32967b538"
+    },
+    {
+      "path": "/swf/icons/card/70_1601.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\70_1601.png",
+      "source_sha256": "ccb05f3d1d998d5b7683354bf82fcca3928d15a1d657ad1f105b82e9f746eae4",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        14,
+        14,
+        65,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        9,
+        6,
+        60,
+        57
+      ],
+      "sha256": "b74d60a41fa1470d653f2bb1888fd187106d17e652f8a100497d777a5a53643c"
+    },
+    {
+      "path": "/swf/icons/card/720_7201.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\720_7201.png",
+      "source_sha256": "573c0611dfd4f91c28b3bc32148068d27225bd3f6984566e2c89d319e40e766e",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        22,
+        3,
+        55,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        19,
+        1,
+        51,
+        61
+      ],
+      "sha256": "30a4b8165b4ea73f6c6e9b5c0e9e46fdb2148d181f17b425765224b33a1a136e"
+    },
+    {
+      "path": "/swf/icons/card/740_7401.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\740_7401.png",
+      "source_sha256": "7a7aa9cc7924d7eaaccecbf057f9dddb3a9149b075431c151f2874e1eb3f3e6a",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        19,
+        10,
+        59,
+        71
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        15,
+        1,
+        54,
+        61
+      ],
+      "sha256": "0b3e4c18c50b5e3fd5283654d86c32022aa52b63b6f8d28ac4b27666cacc5f0a"
+    },
+    {
+      "path": "/swf/icons/card/750_7501.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\750_7501.png",
+      "source_sha256": "92a68602e207d8e5d58c30025ea126b263bf9dffabaec6e546dd43ef7a43bd22",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        2,
+        65,
+        77
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        1,
+        60,
+        61
+      ],
+      "sha256": "d07439495fe65e752a368cd27c46a6f117f98c4a5bd8ea2c63f79f030273772a"
+    },
+    {
+      "path": "/swf/icons/card/760_7601.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\760_7601.png",
+      "source_sha256": "b646555aac50032c2be075f8b89d20dfc37088ad2c5ba3f9c3859d565fa48d3c",
+      "before_size": [
+        60,
+        72
+      ],
+      "before_bbox": [
+        14,
+        12,
+        59,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        4,
+        57,
+        58
+      ],
+      "sha256": "40c3aaa302c5e3ad0984f1d72635b6b6b61a6ba52244f8ed12be4f4dc1ca3c1a"
+    },
+    {
+      "path": "/swf/icons/card/770_7701.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\770_7701.png",
+      "source_sha256": "a7bf85659d78c39ee2ae28effa6f82934843139472cfad5ed2a9ddb81e618775",
+      "before_size": [
+        60,
+        72
+      ],
+      "before_bbox": [
+        0,
+        3,
+        60,
+        64
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        1,
+        64,
+        61
+      ],
+      "sha256": "f19ff40e24c9b157d62d50a35a6a27ed98054305dfc3d30a8d3a98fb840b2407"
+    },
+    {
+      "path": "/swf/icons/card/780_7801.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\780_7801.png",
+      "source_sha256": "a82d9895f3d434291ce2cb3cbd2b50dfe70b4e5e0e841a0cbc14bf52917ee7e3",
+      "before_size": [
+        60,
+        72
+      ],
+      "before_bbox": [
+        5,
+        4,
+        60,
+        63
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        7,
+        2,
+        62,
+        61
+      ],
+      "sha256": "9d95e6aa17011524c0e29d67ca698c60e46e78e5df5c9d89cec0d8fda67563ab"
+    },
+    {
+      "path": "/swf/icons/card/790_7901.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\790_7901.png",
+      "source_sha256": "95453f00da951ff8ff773acabbd42cede0cfef91882d0c7c374f72695ca67d25",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        4,
+        16,
+        73,
+        71
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        7,
+        65,
+        55
+      ],
+      "sha256": "5bb42a336fefd9f5eda8383f5e2b4eacee83b2af1da91c8b3f57eef63916b218"
+    },
+    {
+      "path": "/swf/icons/card/80_1401.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\80_1401.png",
+      "source_sha256": "1b4fea81bdfb8993c84cea5e593cc588c00b2d205ae79c6477ba7e210d3b6c28",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        0,
+        9,
+        64,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        5,
+        65,
+        58
+      ],
+      "sha256": "046fd3b837ed6331523c02f5034d5cde84467fbc33ead981b5a2cbd1f1882032"
+    },
+    {
+      "path": "/swf/icons/card/810_8101.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\810_8101.png",
+      "source_sha256": "b5f91b8a7876075bc402eb4f7092585ca12867a9871aaf957256f30b0bf299f7",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        4,
+        0,
+        60,
+        63
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        1,
+        61,
+        61
+      ],
+      "sha256": "5a6c4344804d6b7db8e596fbbe3b242db4fff0b41f2ad696a3cc459541e1c877"
+    },
+    {
+      "path": "/swf/icons/card/850_8501.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\850_8501.png",
+      "source_sha256": "d6742fa659b0c84ddd9cfa5465a4390f1f59836ad88862abd9e880e95ef075c7",
+      "before_size": [
+        60,
+        72
+      ],
+      "before_bbox": [
+        8,
+        15,
+        58,
+        69
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        4,
+        60,
+        58
+      ],
+      "sha256": "6745f1df8ca5f3837d52b933bf26af3ad1bffec72027f3456d3e679205a92f60"
+    },
+    {
+      "path": "/swf/icons/card/870_8701.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\870_8701.png",
+      "source_sha256": "bc19524f8cdb9a58dac83ac220428506aa7ec0cb3ded38d534bd4ea2ba18ecb4",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        12,
+        3,
+        61,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        11,
+        1,
+        58,
+        61
+      ],
+      "sha256": "b867164fc76cdb56a4d53f22081ea3086a7c180bbe23d99e62dfc2ab378e0698"
+    },
+    {
+      "path": "/swf/icons/card/880_8801.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\880_8801.png",
+      "source_sha256": "4cd24df25cc0d093eadb8ca94233958f8828d32a505862293f770db93a57df41",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        20,
+        15,
+        57,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        16,
+        6,
+        53,
+        56
+      ],
+      "sha256": "6ca7c8263978c5a08cc00a91283196f45390ee8afdd2dc10fd98b13399282c5c"
+    },
+    {
+      "path": "/swf/icons/card/890_8901.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\890_8901.png",
+      "source_sha256": "8cc6ceb4ad46576a5dbba14a269632c92e576428f706912c9065861196262482",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        14,
+        22,
+        55,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        14,
+        9,
+        55,
+        53
+      ],
+      "sha256": "24ca962717883247ae998a74e69d574e098d61271a5ddc3bf17507b5c6b3ab37"
+    },
+    {
+      "path": "/swf/icons/card/900_9001.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\900_9001.png",
+      "source_sha256": "9c559d9c97ad2d6cd1c6ae908b607d0ff6ee4cf5c9f9e7333b76d4cd59873e2d",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        2,
+        56,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        9,
+        1,
+        60,
+        61
+      ],
+      "sha256": "5bb440db818a559be2387686e5a852eea1e5ddc0ec075d71c8e8513bb4e75f77"
+    },
+    {
+      "path": "/swf/icons/card/90_1801.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\90_1801.png",
+      "source_sha256": "06cfd5937392ad4bdd003e5d65ce0c2c7d56bbb309513e7e21c2f940661ab573",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        1,
+        79,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        6,
+        65,
+        57
+      ],
+      "sha256": "a76f41c99951dd3a8e77b0beaa488dd8f32712f1eaff64dd606b72bd4aef6451"
+    },
+    {
+      "path": "/swf/icons/card/910_9101.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\910_9101.png",
+      "source_sha256": "f996466e783f66696ddb7ea7141715e59e3789f76ca4e7caa43b718d3a796600",
+      "before_size": [
+        234,
+        234
+      ],
+      "before_bbox": [
+        4,
+        5,
+        58,
+        54
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        7,
+        62,
+        56
+      ],
+      "sha256": "756c5b6196a8d4ad8f2b795a490e0b0a1bacb39e06bcafe924369e705528b28d"
+    },
+    {
+      "path": "/swf/icons/card/920_9201.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\920_9201.png",
+      "source_sha256": "82d6c5f35513c6eef6872125bac2ede0079022b077021e91eb27b3d88532b8c8",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        2,
+        78,
+        92
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        9,
+        1,
+        60,
+        61
+      ],
+      "sha256": "f8e9ecac3c9a8240e019180a3bf7b5054d0089e9e5a04dd71497afb65e917b09"
+    },
+    {
+      "path": "/swf/icons/card/930_9301.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\930_9301.png",
+      "source_sha256": "eda7e0619dfa4c886fc4b1ba9f7ca30f16c974e6bdff4db8bee5144fcb0572c1",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        8,
+        7,
+        55,
+        56
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        11,
+        7,
+        58,
+        56
+      ],
+      "sha256": "f84e54cb2ed2441f8dec2051063ea276d6259af4a8ccc3ad92b1bbc038ef0cc4"
+    },
+    {
+      "path": "/swf/icons/card/940_9401.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\940_9401.png",
+      "source_sha256": "b25794dc4cbb0ad199207d60037cdbd70bcfb10ba655ebd57aa7877a7ee004ed",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        17,
+        1,
+        66,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        58,
+        61
+      ],
+      "sha256": "1dbca28caad3acaf44c867d2dbc849bb02ab0f27d76e23e857734249e0036d10"
+    },
+    {
+      "path": "/swf/icons/card/950_9501.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\950_9501.png",
+      "source_sha256": "f355f82dec1fa3671c8366e4a79ef9f6ee291fe5d1f40c7f1be68f6bba223a7c",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        14,
+        8,
+        60,
+        92
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        18,
+        1,
+        51,
+        61
+      ],
+      "sha256": "4033cdbdf42f353682cc6dbd981907752355c6e57e8ecefaf838d9fb0172961d"
+    },
+    {
+      "path": "/swf/icons/card/960_9601.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\960_9601.png",
+      "source_sha256": "d3d7bfd0ffcedc80895249b91462be98168cd6c6eb582cf76b0787a738bda27e",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        11,
+        19,
+        66,
+        52
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        7,
+        15,
+        62,
+        48
+      ],
+      "sha256": "3425eb66a6528297cba29d94753e3e47d3427b5cf606a934b5eb0762b327fd3e"
+    },
+    {
+      "path": "/swf/icons/card/980_9801.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\980_9801.png",
+      "source_sha256": "5cdca165ebf089281d2f2d58ca3bd2c5d3550bd99d697584b5a07ba05dfde4db",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        3,
+        8,
+        71,
+        89
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        1,
+        60,
+        61
+      ],
+      "sha256": "cca3d69df874f6227802626e9f8377b66c54555045dfb46a9919b08ed158c872"
+    },
+    {
+      "path": "/swf/icons/card/990_9901.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\990_9901.png",
+      "source_sha256": "3bf2510db71cd6ab1513a1d18f0ca704e7b1f7b374c8793ad4a02c0666f72b23",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        0,
+        19,
+        66,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        10,
+        65,
+        53
+      ],
+      "sha256": "dbb56c6b45fddb4b8c27ec545aa51109f875c6c69c26794239ccda872f0e89d1"
+    }
+  ]
+}

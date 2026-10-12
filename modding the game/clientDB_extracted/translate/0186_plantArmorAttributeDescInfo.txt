@@ -1,0 +1,4 @@
+id	desc
+1	Increases damage by {1} per attack
+2	Reduces damage taken by {1} per hit
+3	Restores {0} health per action

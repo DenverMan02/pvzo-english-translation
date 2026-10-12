@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "test_count": 4,
+  "physical_geometry_scenarios": 52,
+  "dpi_change_geometry_scenarios": 18,
+  "main_initialization_scenarios": 2,
+  "fractional_120_percent_dpi": [
+    114,
+    115,
+    116
+  ],
+  "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\dpi-fix\\staged\\ui_shell.py",
+  "actual_os_scaling_changed": false,
+  "errors": [],
+  "failures": []
+}

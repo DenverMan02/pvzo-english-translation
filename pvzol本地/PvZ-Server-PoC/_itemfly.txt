@@ -1,0 +1,170 @@
+  ! ABC blob skipped: could not recover ABC tail (drift too large)
+### ModuleAct3years.swf :: com.qq.modules.act3years.model::Act3yearsProxy.onCmd_FlexibleActivity27_Exchange_SC (method 37)
+       74  callpropvoid     ::itemFly, 1
+### ModuleAct3years.swf :: com.qq.modules.act3years.model::Act3yearsProxy.onCmd_FlexibleActivity27_TakeReward_SC (method 38)
+       21  callpropvoid     ::itemFly, 1
+### ModuleActFlipcard.swf :: com.qq.modules.actFlipcard.view.components::ActFlipcardWindowMediator.onEventGetFlipCardFinish (method 97)
+       200  callpropvoid     ::itemFly, 1
+### ModuleActFund.swf :: com.qq.modules.actFund.view.components::ActTryFundPanelMediator.onActFund_Try_Got_Diamond (method 77)
+       83  callpropvoid     ::itemFly, 3
+### ModuleActHitJar.swf :: com.qq.modules.actHitJar.model::ActHitJarProxy.onCmd_FlexibleActivity26_BreakJar_SC (method 27)
+       98  callpropvoid     ::itemFly, 1
+### ModuleActHitJar.swf :: com.qq.modules.actHitJar.model::ActHitJarProxy.onCmd_FlexibleActivity26_DailyReward_SC (method 26)
+       29  callpropvoid     ::itemFly, 1
+### ModuleActHitJar.swf :: com.qq.modules.actHitJar.model::ActHitJarProxy.onCmd_FlexibleActivity26_JoinReward_SC (method 24)
+       34  callpropvoid     ::itemFly, 1
+### ModuleActPinball.swf :: com.qq.modules.actPinball.model::ActPinballProxy.onCmd_Hoodle_TakeReward_SC (method 32)
+       119  callpropvoid     ::itemFly, 1
+### ModuleActPlantCarnival.swf :: com.qq.modules.actPlantCarnival.model::ActPlantCarnivalProxy.onCmd_FlexibleActivity_TakePayReward_SC (method 34)
+       48  callpropvoid     ::itemFly, 1
+### ModuleActRed.swf :: com.qq.modules.actRed.view.components::ActRedWindowMediator.onPlayMc (method 70)
+       58  callpropvoid     ::itemFly, 1
+### ModuleActWishing.swf :: com.qq.modules.actWishing.model::ActWishingProxy.onCmd_Tanabata_Exchange_SC (method 23)
+       48  callpropvoid     ::itemFly, 2
+### ModuleActWishing.swf :: com.qq.modules.actWishing.model::ActWishingProxy.onCmd_Tanabata_Vow_SC (method 22)
+       55  callpropvoid     ::itemFly, 2
+### ModuleBag.swf :: com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator::stageClickHandler (method 238)
+       12  callpropvoid     ::itemFly, 1
+### ModuleBattleCardMarket.swf :: com.qq.modules.battleCardMarket.service::BattleCardMarketService.cmdHandler (method 50)
+       206  callpropvoid     ::itemFly, 2
+### ModuleBrain.swf :: com.qq.modules.brain.model::BrainProxy.onCmd_Question_TakeReward_SC (method 41)
+       21  callpropvoid     ::itemFly, 1
+### ModuleCard.swf :: com.qq.modules.card.view.components::CardViewCtMediator.onCARD_RECYCLE_SUCCEED (method 984)
+       13  callpropvoid     ::itemFly, 1
+### ModuleCardDNA.swf :: com.qq.modules.cardDNA.model::CardDNAProxy.onCmd_Card_RecycleGene_SC (method 21)
+       21  callpropvoid     ::itemFly, 1
+### ModuleCardDNA.swf :: com.qq.modules.cardDNA.model::CardDNAProxy.onCmd_GeneTest_Sweep_SC (method 23)
+       40  callpropvoid     ::itemFly, 1
+### ModuleCastle.swf :: com.qq.modules.castle.view.components::CastleGameWindowMediator.onOpenChest (method 103)
+       97  callpropvoid     ::itemFly, 1
+### ModuleCommEmbattle.swf :: com.qq.modules.hole.model::HoleProxy.onCmd_Guard_BuyLight_SC (method 330)
+       21  callpropvoid     ::itemFly, 1
+### ModuleCommEmbattle.swf :: com.qq.modules.hole.model::HoleProxy.onCmd_Guard_TakeReward_SC (method 345)
+       25  callpropvoid     ::itemFly, 1
+### ModuleDailyTD.swf :: com.qq.modules.dailyTD.model::DailyTdProxy.onCmd_DailyTD_DoTrade_SC (method 53)
+       104  callpropvoid     ::itemFly, 1
+### ModuleDailyTD.swf :: com.qq.modules.dailyTD.model::DailyTdProxy.onCmd_DailyTD_PassByVip_SC (method 55)
+       22  callpropvoid     ::itemFly, 2
+### ModuleDailyVow.swf :: com.qq.modules.dailyVow.model::DailyVowProxy.onCmd_DailyVow_DoVow_SC (method 31)
+       21  callpropvoid     ::itemFly, 1
+### ModuleDummy.swf :: com.qq.modules.dummy.view.components::DummyDrawCardPanelMediator.onPlayDrawEffect (method 755)
+       108  callpropvoid     ::itemFly, 1
+### ModuleEndlessFuben.swf :: com.qq.modules.endlessFuben.model::EndlessFubenProxy.onCmd_NoEndFuben_TakeReward_SC (method 26)
+       27  callpropvoid     ::itemFly, 1
+### ModuleEndlessTD.swf :: com.qq.modules.endlessTD.model::EndlessTDProxy.::onCmd_TakeReward_SC (method 36)
+       8  callpropvoid     ::itemFly, 1
+### ModuleEndlessTD.swf :: com.qq.modules.endlessTD.model::EndlessTDProxy.onCmd_NoEndTD_ReportResult_SC (method 33)
+       84  callpropvoid     ::itemFly, 1
+### ModuleEndlessTD.swf :: com.qq.modules.endlessTD.model::EndlessTDProxy.onCmd_NoEndTD_Vote_SC (method 34)
+       48  callpropvoid     ::itemFly, 1
+### ModuleEveryDayBuy.swf :: com.qq.modules.everyDayBuy.model::EveryDayBuyProxy.onDailyPayExchange (method 23)
+       38  callpropvoid     ::itemFly, 1
+### ModuleEveryDayBuy.swf :: com.qq.modules.everyDayBuy.model::EveryDayBuyProxy.onGetItem (method 24)
+       81  callpropvoid     ::itemFly, 1
+### ModuleExchange.swf :: com.qq.modules.exchange.service::ExchangeService.onCmdHandler (method 33)
+       138  callpropvoid     ::itemFly, 1
+### ModuleExpedition.swf :: com.qq.modules.expedition.model::ExpeditionProxy.onCmd_ExpeditionFight_AttackNpc_SC (method 67)
+       188  callpropvoid     ::itemFly, 1
+### ModuleExpedition.swf :: com.qq.modules.expedition.model::ExpeditionProxy.onCmd_ExpeditionFight_TakeReward_SC (method 65)
+       21  callpropvoid     ::itemFly, 1
+### ModuleFuzion.swf :: com.qq.modules.fuzion.model::FuzionProxy.onCmd_Melee_TakeReward_SC (method 25)
+       25  callpropvoid     ::itemFly, 1
+### ModuleGarden.swf :: com.qq.modules.garden.model::GardenProxy.onCmd_Garden_TakeBean_SC (method 60)
+       49  callpropvoid     ::itemFly, 1
+### ModuleGarden.swf :: com.qq.modules.garden.view.components::GardenFieldCellMediator.onHarvestSuccess (method 457)
+       298  callpropvoid     ::itemFly, 1
+### ModuleGroupBuying.swf :: com.qq.modules.groupBuying.model::GroupBuyingProxy.onCmd_Groupon_Buy_SC (method 21)
+       62  callpropvoid     ::itemFly, 1
+### ModuleGroupBuying.swf :: com.qq.modules.groupBuying.model::GroupBuyingProxy.onCmd_Groupon_Exchange_SC (method 25)
+       59  callpropvoid     ::itemFly, 1
+### ModuleGroupBuying.swf :: com.qq.modules.groupBuying.model::GroupBuyingProxy.onCmd_Groupon_TakeReward_SC (method 22)
+       21  callpropvoid     ::itemFly, 1
+### ModuleHalloween.swf :: com.qq.modules.halloween.model::HalloweenProxy.onCmd_Halloween_TakeFinalReward_SC (method 49)
+       44  callpropvoid     ::itemFly, 1
+### ModuleHalloween.swf :: com.qq.modules.halloween.model::HalloweenProxy.onCmd_Halloween_TakeFullServerReward_SC (method 51)
+       58  callpropvoid     ::itemFly, 1
+### ModuleHalloween.swf :: com.qq.modules.halloween.model::HalloweenProxy.onCmd_Halloween_TakeNutHammer_SC (method 45)
+       31  callpropvoid     ::itemFly, 1
+### ModuleHalloween.swf :: com.qq.modules.halloween.model::HalloweenProxy.onCmd_Halloween_TakeReward_SC (method 48)
+       60  callpropvoid     ::itemFly, 1
+### ModuleHeFuActivity.swf :: com.qq.modules.heFuActivity.model::HeFuActivityProxy.onGetHonorRewardHandler (method 24)
+       26  callpropvoid     ::itemFly, 2
+### ModuleHeFuActivity.swf :: com.qq.modules.heFuActivity.model::HeFuActivityProxy.onGetScoreRewardHandler (method 23)
+       26  callpropvoid     ::itemFly, 2
+### ModuleHole.swf :: com.qq.modules.hole.model::HoleProxy.onCmd_Guard_BuyLight_SC (method 31)
+       21  callpropvoid     ::itemFly, 1
+### ModuleHole.swf :: com.qq.modules.hole.model::HoleProxy.onCmd_Guard_TakeReward_SC (method 46)
+       25  callpropvoid     ::itemFly, 1
+### ModuleMail.swf :: com.qq.modules.mail.view::MailViewMediator.getItemHandler (method 96)
+       105  callpropvoid     ::itemFly, 1
+### ModuleMarket.swf :: com.qq.modules.market.view::MarketWindowMediator.tradeCompleteHandler (method 52)
+       24  callpropvoid     ::itemFly, 1
+### ModuleNutrition.swf :: com.qq.modules.nutrition.view.components::NutritionExchangeWindowMediator.onExchangeOk (method 498)
+       59  callpropvoid     ::itemFly, 1
+### ModuleOfflineReward.swf :: com.qq.modules.offlineReward.model::OfflineRewardProxy.onCmd_OfflineReward_ActiveTakeReward_SC (method 23)
+       21  callpropvoid     ::itemFly, 1
+### ModuleOfflineReward.swf :: com.qq.modules.offlineReward.model::OfflineRewardProxy.onCmd_OfflineReward_TakeReward_SC (method 30)
+       21  callpropvoid     ::itemFly, 1
+### ModulePlantExplore.swf :: com.qq.modules.plantExplore.model::PlantExploreProxy.onCmd_Adventure_Auto_Do_SC (method 24)
+       48  callpropvoid     ::itemFly, 1
+### ModulePlantExplore.swf :: com.qq.modules.plantExplore.model::PlantExploreProxy.onCmd_Adventure_Do_SC (method 23)
+       85  callpropvoid     ::itemFly, 1
+### ModuleRankArena.swf :: com.qq.modules.rankArena.view.components::RankArenaWdMediator.onTakeReward (method 194)
+       17  callpropvoid     ::itemFly, 1
+### ModuleScratch.swf :: com.qq.modules.scratch.view.components::ScratchWindowMediator.flyItem (method 69)
+       38  callpropvoid     ::itemFly, 1
+### ModuleServerActivity.swf :: com.qq.modules.serverActivity.model::ServerActivityProxy.onCmd_SevenDayLogin_TakeReward_SC (method 26)
+       21  callpropvoid     ::itemFly, 1
+### ModuleShelling.swf :: com.qq.modules.shelling.model::ShellingProxy.onCmd_Shelling_Exchange_SC (method 24)
+       83  callpropvoid     ::itemFly, 1
+### ModuleShop.swf :: com.qq.modules.shop.command::ShopCommand.::onBuyOk (method 34)
+       70  callpropvoid     ::itemFly, 1
+### ModuleShop.swf :: com.qq.modules.shop.service::ShopService.onMessageHandler (method 41)
+       152  callpropvoid     ::itemFly, 1
+### ModuleSlot.swf :: com.qq.modules.slot.model::SlotProxy.onCmd_SlotMachine_Exchange_SC (method 42)
+       39  callpropvoid     ::itemFly, 1
+### ModuleSlot.swf :: com.qq.modules.slot.view.components::SlotMachineMediator.onRollComplete (method 148)
+       97  callpropvoid     ::itemFly, 2
+### ModuleSuperArena.swf :: com.qq.modules.superArena.model::SuperArenaProxy.onCmd_AllServerRankArena_TakeDailyRankReward_SC (method 38)
+       29  callpropvoid     ::itemFly, 1
+### ModuleSuperArena.swf :: com.qq.modules.superArena.model::SuperArenaProxy.onCmd_AllServerRankArena_TakeMaxRankReward_SC (method 35)
+       21  callpropvoid     ::itemFly, 1
+### ModuleSuperArena.swf :: com.qq.modules.superArena.model::SuperArenaProxy.onCmd_AllServerRankArena_TakeScoreReward_SC (method 36)
+       31  callpropvoid     ::itemFly, 1
+### ModuleTD.swf :: com.qq.modules.td.model::TDProxy.onCmd_TD_ReportLevelResult_SC (method 668)
+       176  callpropvoid     ::itemFly, 1
+### ModuleThanksgiving.swf :: com.qq.modules.thanksgiving.view.components::ThanksgivingWindowMediator.onRotationStop (method 57)
+       70  callpropvoid     ::itemFly, 1
+### ModuleTreasure.swf :: com.qq.modules.treasure.service::TreasureService.onCmdHandler (method 38)
+       1044  callpropvoid     ::itemFly, 1
+       1072  callpropvoid     ::itemFly, 1
+       1102  callpropvoid     ::itemFly, 1
+### ModuleTreasure.swf :: com.qq.modules.treasure.view.components::TreasureWindowMediator.onGetTreasureMap (method 145)
+       47  callpropvoid     ::itemFly, 2
+### ModuleTrialRoad.swf :: com.qq.modules.trialRoad.view::TrialRoadSceneMediator.onSweep (method 87)
+       22  callpropvoid     ::itemFly, 1
+### ModuleUnionCompetition.swf :: com.qq.modules.unionCompetition.model::UnionCompetitionProxy.onCmd_GuildFight_GetBetNumReward_SC (method 39)
+       23  callpropvoid     ::itemFly, 1
+### ModuleUnionCompetition.swf :: com.qq.modules.unionCompetition.model::UnionCompetitionProxy.onCmd_GuildFight_GetBetReturnReward_SC (method 38)
+       28  callpropvoid     ::itemFly, 1
+### ModuleUnionCompetition.swf :: com.qq.modules.unionCompetition.model::UnionCompetitionProxy.onCmd_GuildFight_GetReward_SC (method 27)
+       21  callpropvoid     ::itemFly, 1
+### ModuleVip.swf :: com.qq.modules.vip.service::VipService.cmdHandler (method 33)
+       71  callpropvoid     ::itemFly, 1
+       138  callpropvoid     ::itemFly, 1
+### ModuleWelfareHall.swf :: com.qq.modules.welfareHall.model::WelfareDailyProxy.onCmd_Welfare_Take_SC (method 61)
+       336  callpropvoid     ::itemFly, 1
+### ModuleWelfareHall.swf :: com.qq.modules.welfareHall.model::WelfareResourceRecoverProxy.onCmd_Welfare_AllResourceReward_SC (method 71)
+       116  callpropvoid     ::itemFly, 1
+### ModuleWelfareHall.swf :: com.qq.modules.welfareHall.model::WelfareResourceRecoverProxy.onCmd_Welfare_ResourceReward_SC (method 70)
+       116  callpropvoid     ::itemFly, 1
+### ModuleWorldBoss.swf :: com.qq.modules.worldBoss.service::WorldBossService.onCmdHandler (method 39)
+       515  callpropvoid     ::itemFly, 1
+### ModuleYetiTD.swf :: com.qq.modules.yetiTD.model::YetiTDProxy.onCmd_SnowMan_OpenAllChest_SC (method 34)
+       28  callpropvoid     ::itemFly, 1
+### ModuleZombieIsland.swf :: com.qq.modules.zombieIsland.service::ZombieIslandService.onCmdHandler (method 44)
+       284  callpropvoid     ::itemFly, 2
+### ModuleZombieIsland.swf :: com.qq.modules.zombieIsland.service::ZombieIslandService.onCmd_NewZombieIsland_TakeAllReward_SC (method 38)
+       94  callpropvoid     ::itemFly, 2
+### ModuleZombieIsland.swf :: com.qq.modules.zombieIsland.service::ZombieIslandService.onCmd_NewZombieIsland_TakeReward_SC (method 40)
+       119  callpropvoid     ::itemFly, 2

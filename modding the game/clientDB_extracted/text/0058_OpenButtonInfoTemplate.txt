@@ -1,0 +1,8 @@
+id	buttonName	openLv	openDays	checkPanelName	addCommand	operateType
+1	application/mainLayer/moduleCity/NewCityToolBar/openQuestListBtn	2	0	NewCityToolBar	Guide_Add_QuestBtn	1
+2	application/mainLayer/moduleCity/NewCityToolBar/btnToFuben	4	0	NewCityToolBar	Guide_Add_FubenBtn	1
+3	btnRetrun	2	0	levelSelectMainCt		0
+4	application/mainLayer/moduleCity/NewCityToolBar/worldMapBtn	20	0	NewCityToolBar	Guide_Add_WorldMap	1
+5	application/mainLayer/moduleCity/NewCityToolBar/shopBtn	1	0	NewCityToolBar		
+6	application/mainLayer/moduleCity/NewCityToolBar/Name_Illustrations	7	0	NewCityToolBar	Guide_Add_Illustrations	1
+7	application/mainLayer/moduleCity/NewCityToolBar/Name_Dummy	55	0	NewCityToolBar	Guide_Add_Dummy	1

@@ -1,0 +1,15 @@
+{
+  "backup": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\backups\\endless-verifyerror-20261009-110111",
+  "updates": [
+    {
+      "name": "ModuleEndlessFuben.swf",
+      "old_sha256": "9818cd6c73c8f2f56b9da8be0cf62973d4065508801f4158d35448fc67227700",
+      "new_sha256": "f90140d8b9b1f6f4bfdfc3262c217904a555c9948f8ff824b047ccd093f89580"
+    },
+    {
+      "name": "ModuleEndlessFuben_e994851215b985a7a0149ac033843347.swf",
+      "old_sha256": "9818cd6c73c8f2f56b9da8be0cf62973d4065508801f4158d35448fc67227700",
+      "new_sha256": "f90140d8b9b1f6f4bfdfc3262c217904a555c9948f8ff824b047ccd093f89580"
+    }
+  ]
+}

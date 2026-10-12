@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "test_count": 3,
+  "before_after_stack_methods": 26,
+  "unchanged_methods": 7988,
+  "checksize_real_vm_scenarios": 10,
+  "real_windows_rendering_tested": false,
+  "failures": [],
+  "errors": []
+}

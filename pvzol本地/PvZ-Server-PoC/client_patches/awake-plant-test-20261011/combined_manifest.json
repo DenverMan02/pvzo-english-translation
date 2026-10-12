@@ -1,0 +1,116 @@
+{
+  "original_sha256": "a2ea44ff784c4c402e8b9388e8f3fbb8288b54b7c1eb0abfae7670eaef1ae495",
+  "combined_sha256": "9126f8e0f6672d7132efef22f3823439217fe8c502a0d6fce9c3b306eb23073a",
+  "md5": "646e3e42f496c2ea5c97b1c809d21a0c",
+  "size": 29673,
+  "plant_test": {
+    "source_sha256": "a2ea44ff784c4c402e8b9388e8f3fbb8288b54b7c1eb0abfae7670eaef1ae495",
+    "patched_sha256": "fcaecd882cba208378132620186fa72b68ed9b42dd7779f6d670d212d0374bf7",
+    "changed_methods": [
+      211,
+      346
+    ],
+    "added_slot": "PlantTestChapterVO.totalPower:uint",
+    "body_count": 469,
+    "unchanged_body_count": 467,
+    "all_method_headers_preserved": true,
+    "all_other_class_traits_preserved": true
+  },
+  "awake_levels": {
+    "original_sha256": "fcaecd882cba208378132620186fa72b68ed9b42dd7779f6d670d212d0374bf7",
+    "patched_sha256": "9126f8e0f6672d7132efef22f3823439217fe8c502a0d6fce9c3b306eb23073a",
+    "methods": [
+      {
+        "classname": "com.qq.modules.awake.view.components.AwakeMainWindowMediator",
+        "name": "onAwake",
+        "id": 373,
+        "validation": {
+          "max_stack_used": 3,
+          "max_scope_used": 8,
+          "instruction_count": 14,
+          "reachable_count": 14,
+          "return_count": 1
+        }
+      },
+      {
+        "classname": "com.qq.modules.awake.view.components.AwakeMainWindowMediator",
+        "name": "updateBaseInfo",
+        "id": 384,
+        "validation": {
+          "max_stack_used": 6,
+          "max_scope_used": 8,
+          "instruction_count": 554,
+          "reachable_count": 554,
+          "return_count": 1
+        }
+      },
+      {
+        "classname": "com.qq.modules.awake.view.components.AwakeMainWindowMediator",
+        "name": "isCardAwakeEnable",
+        "id": 388,
+        "validation": {
+          "max_stack_used": 4,
+          "max_scope_used": 8,
+          "instruction_count": 182,
+          "reachable_count": 182,
+          "return_count": 2
+        }
+      }
+    ],
+    "appended_strings": [
+      "level",
+      "升级条件：植物等级 ",
+      "升级条件：已满觉醒",
+      "升级条件：无法觉醒"
+    ],
+    "appended_multinames": 1,
+    "unchanged_method_count": 466,
+    "insertion_offsets": {
+      "updateBaseInfo": 1078,
+      "isCardAwakeEnable": 333
+    },
+    "heading_bounds": {
+      "x": 361,
+      "y": 263,
+      "width": 292,
+      "fontSize": 16
+    }
+  },
+  "verified_methods": {
+    "211": {
+      "max_stack_used": 2,
+      "max_scope_used": 5,
+      "instruction_count": 18,
+      "reachable_count": 18,
+      "return_count": 1
+    },
+    "346": {
+      "max_stack_used": 6,
+      "max_scope_used": 8,
+      "instruction_count": 106,
+      "reachable_count": 104,
+      "return_count": 1
+    },
+    "373": {
+      "max_stack_used": 3,
+      "max_scope_used": 8,
+      "instruction_count": 14,
+      "reachable_count": 14,
+      "return_count": 1
+    },
+    "384": {
+      "max_stack_used": 6,
+      "max_scope_used": 8,
+      "instruction_count": 554,
+      "reachable_count": 554,
+      "return_count": 1
+    },
+    "388": {
+      "max_stack_used": 4,
+      "max_scope_used": 8,
+      "instruction_count": 182,
+      "reachable_count": 182,
+      "return_count": 2
+    }
+  }
+}

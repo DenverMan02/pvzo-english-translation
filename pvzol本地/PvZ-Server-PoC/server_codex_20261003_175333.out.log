@@ -1,0 +1,1280 @@
+17:53:34  INFO   local guild adapter ready (29 core routes)
+>>> PvZ PoC launcher: starting web + admin + game servers in ONE window.
+>>> Ctrl+C to stop all services.
+
+============================================================
+Serving: webroot (assembled)
+  D:\pvzol±¾µØ×îÐÂ×îÐÂol\pvzol±¾µØ\webroot
+Verify in a browser:
+  http://127.0.0.1:8080/swf/resource_64c342244c3d8f16b3c815e5ee133cf8.swf
+  (should download a ~286 KB file AND print a 200 line below)
+Load in the Flash projector:
+  http://127.0.0.1:8080/loader_n.swf
+============================================================
+(Ctrl+C to stop)
+
+17:53:34  DEBUG  Using selector: SelectSelector
+[admin] ±¾µØ GM ºóÌ¨: http://127.0.0.1:8081
+[admin] Êý¾Ý¿â: D:\pvzol±¾µØ×îÐÂ×îÐÂol\pvzol±¾µØ\PvZ-Server-PoC\players.db
+17:53:34  INFO   player store: D:\pvzol±¾µØ×îÐÂ×îÐÂol\pvzol±¾µØ\PvZ-Server-PoC\players.db
+17:53:34  INFO   loaded 2079 battle cards (213 TD-plant mappings)
+17:53:34  INFO   loaded 40 lab bottles
+17:53:34  INFO   loaded 999 world-tree levels
+17:53:34  INFO   loaded 1960 card-fruit templates
+17:53:34  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+17:53:34  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+17:53:34  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+17:53:34  INFO   loaded 617 card avatar templates
+17:53:34  INFO   loaded prestige evolution: 200 levels, 7 plant types
+17:53:34  INFO   loaded 44 card puzzle stages
+17:53:34  INFO   loaded 1975 card forge templates
+17:53:34  INFO   bots: ensured 50 bot accounts (·è¿ñ´÷·ò=900001, ÏòÈÕ¿ûÏÀ=900002, Íã¶¹ÏÈÉú=900003 ...)
+17:53:34  INFO   bot autonomy loop started (interval=120s)
+17:53:34  INFO   loaded 254 TD level reward templates from clientDB
+17:53:34  INFO   loaded 25 usable TD laboratory material ids: (40001, 40003, 40004, 40005, 40006, 40007, 40009, 40010, 40011, 40012, 40013, 40015, 40016, 40017, 40018, 40019, 40021, 40022, 40023, 40024, 40025, 40027, 40028, 40029, 40030)
+17:53:34  INFO   loaded 200 role-level exp thresholds
+17:53:34  INFO   loaded 2023 item sell templates
+17:53:34  INFO   loaded 23 town buildings
+17:53:34  INFO   loaded 32 fuben chapters
+17:53:34  INFO   loaded fuben stages for 92 chapter/mode combos
+17:53:34  INFO   loaded 10 energy-buy tiers
+17:53:34  INFO   loaded energyMax for 200 role levels
+17:53:34  INFO   loaded 35 card forge chance entries
+17:53:34  INFO   loaded 78 card recruit recipes
+17:53:34  INFO   loaded 12 card avatar forge types
+17:53:34  INFO   loaded 112 plant talents across 4 stages
+17:53:34  INFO   loaded 41 nutrition reagent bases
+17:53:34  INFO   loaded 3 baptize action costs + 10 baptize cap rows
+17:53:34  INFO   loaded 200 zombie-island levels
+17:53:34  INFO   loaded 12 zombie-island stages
+17:53:34  INFO   loaded ¿þÀÜ config: 50 puppets, 120 stages, 225 skill levels
+17:53:34  INFO   loaded 22 activity-fuben templates
+17:53:34  INFO   loaded 390 awake transition rules
+17:53:34  INFO   loaded 390 awake config rows
+17:53:34  INFO   template warm-up done (32 tables preloaded)
+17:53:34  INFO   game server listening on 0.0.0.0:9001
+17:53:34  INFO   game server listening on 0.0.0.0:8001
+17:53:34  INFO   game server listening on 0.0.0.0:443
+17:53:34  INFO   game server listening on 0.0.0.0:80
+17:53:34  INFO   socket-policy server listening on 0.0.0.0:843
+  GET /ModuleHole.swf HTTP/1.1 -> 200
+  MODULEHOLE ALIAS /ModuleHole_3508156ea654f83ac1addc265592b194.swf -> /ModuleHole.swf
+  GET /ModuleHole_3508156ea654f83ac1addc265592b194.swf HTTP/1.1 -> 200
+  MODULEHOLE ALIAS /ModuleHole_cf009c40ff4cf43479417896ab7a31ad.swf -> /ModuleHole.swf
+  GET /ModuleHole_cf009c40ff4cf43479417896ab7a31ad.swf HTTP/1.1 -> 200
+  MODULEHOLE ALIAS /ModuleHole_681e9e1464a0b12af8ff678c2d7d387f.swf -> /ModuleHole.swf
+  GET /ModuleHole_681e9e1464a0b12af8ff678c2d7d387f.swf HTTP/1.1 -> 200
+  MODULEHOLE ALIAS /ModuleHole_498e993b5f2202d8027420849aecd2e3.swf -> /ModuleHole.swf
+  GET /ModuleHole_498e993b5f2202d8027420849aecd2e3.swf HTTP/1.1 -> 200
+  GET /loader_p.swf?server=127.0.0.1:9001&zoneID=&uin=700000204&skey=ABCDEFGHIJ HTTP/1.1 -> 200
+  GET /config.xml?0.6740855909883976 HTTP/1.1 -> 200
+  GET /fileVer.xml?0.9625965729355812 HTTP/1.1 -> 200
+  GET /Game_p_cb7af05d4d2ddbe204ea4926772f3b92.swf HTTP/1.1 -> 200
+  GET /Msgcheck_321d6c79802af718b4d60f0da39ba7e4.swf HTTP/1.1 -> 200
+  GET /image/logo.jpg HTTP/1.1 -> 200
+  GET /image/loadingbg.jpg HTTP/1.1 -> 200
+  GET /image/loadingbg2.jpg HTTP/1.1 -> 200
+  GET /init.xml?v=1791021282547 HTTP/1.1 -> 200
+  GET /asgui.xml?0.0033183940686285496?v=0 HTTP/1.1 -> 200
+  GET /swf/td/loading_4540519d0f4d22fbf0a1e277b3b20812.swf?v=0 HTTP/1.1 -> 200
+  GET /swf/resource_64c342244c3d8f16b3c815e5ee133cf8.swf?v=0 HTTP/1.1 -> 200
+  GET /swf/guide/guide_res_6391930dd1a5c645f77387239198f93d.swf?v=0 HTTP/1.1 -> 200
+  GET /clientDB.txt HTTP/1.1 -> 200
+  GET /swf/loading/time_tunnel.jpg HTTP/1.1 -> 200
+  GET /ModuleAvatarConfig_db6128ab924d3fdce35817839dac8f1f.swf HTTP/1.1 -> 200
+  GET /ModuleFont_3643d416703e6f2ef5af884db9645b19.swf HTTP/1.1 -> 200
+17:54:43  INFO   [policy] served policy to ('127.0.0.1', 51450) (req=b'<policy-file-request/>\x00')
+17:54:43  INFO   === client connected on PORT 9001 from ('127.0.0.1', 51451) ===
+17:54:43  INFO     (stripped TGW preamble: 'tgw_l7_forward\r\nHost: 127.0.0.1:9001')
+17:54:44  INFO   loaded 3 VIP tiers
+17:54:44  INFO       loaded existing player uin=700000204 name='online' level=200 coin=3783003 plants=[1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000, 3100, 3200, 3300, 3400, 3500, 3600, 3900, 4100, 4200, 4300, 4400, 4500, 4600, 4700, 4800, 4900, 5000, 6300, 6400, 6500, 6600, 6900, 7100, 7200, 7400, 7600, 7900, 8000, 8100, 8200, 8300, 8400]
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_CheckOldUser_CS
+17:54:44  INFO       step 1 -> Cmd_CheckOldUser_SC (new=False, name='online')
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_CheckOldUser_SC                    (10 body bytes, 53 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=69 cmdName=PVZ.Cmd.Cmd_Init_CS
+17:54:44  INFO       step 2 -> Cmd_Init_SC (from save)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Init_SC                            (5563 body bytes, 5599 total)
+17:54:44  INFO       -> PVZ.Cmd.Cmd_PVZPrivilege_SC (413 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_PVZPrivilege_SC                    (413 body bytes, 457 total)
+17:54:44  INFO       -> PVZ.Cmd.Cmd_VipInfo_SC (29 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_VipInfo_SC                         (29 body bytes, 67 total)
+17:54:44  INFO       VIP tier 3 active: 34 privileges
+17:54:44  INFO       -> PVZ.Cmd.Cmd_TD_OpenPrivilege_SC (7 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_TD_OpenPrivilege_SC                (7 body bytes, 54 total)
+17:54:44  INFO       TD privilege active: 9 premium plants
+17:54:44  INFO       -> PVZ.Cmd.Cmd_Vip_SyncVipInfo_SC (4 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Vip_SyncVipInfo_SC                 (4 body bytes, 50 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Card_GetPackage_CS
+  GET /ModuleGuide_6c1fea95614b0ad8441b123c46fd9bf6.swf HTTP/1.1 -> 200
+  GET /swf/guide/guideUI_b1b4995897dfe1e6b878c9a10e8a570b.swf HTTP/1.1 -> 200
+  GET /ModuleSecondaryPassword_1647ae7c2a1220dfe3170a6164c92fb8.swf HTTP/1.1 -> 200
+  GET /swf/secondaryPassword/secondaryPasswordUI_c923ad958c15df6f1ba027ecfbefa27d.swf HTTP/1.1 -> 200
+  GET /ModuleSignIn_c959b576cc6fad6a6ee8a6eda9e65c69.swf HTTP/1.1 -> 200
+  GET /ModuleOfflineReward_863190f12738f85541846534d446fe60.swf HTTP/1.1 -> 200
+  GET /swf/offlineReward/offlineRewardUI_ec5da62ec67fd83419bff0c13277ddc1.swf HTTP/1.1 -> 200
+17:54:44  INFO       card package: 126 card(s) in collection [(1101, 'ÏòÈÕ¿û'), (1113, 'Ë«Í·ÏòÈÕ¿û'), (1123, '´ÌÍ·»¨'), (1123, '´ÌÍ·»¨'), (1133, 'Ìð½·Í¶ÊÖ'), (1143, 'ÄÏ¹ÏÐ¡Î×'), (1143, 'ÄÏ¹ÏÐ¡Î×'), (1153, '¹¦·òÂÜ²·'), (1162, '½ðó¸¹½'), (1162, '½ðó¸¹½'), (1162, '½ðó¸¹½'), (1162, '½ðó¸¹½'), (1163, '½ðó¸¹½'), (1172, 'Áå¶ù²Ý'), (1182, 'ºìÕë»¨'), (1192, '°¢¿ªÄ¾'), (1193, '°¢¿ªÄ¾'), (1205, 'µ¥·¢Íã¶¹'), (1212, 'Ë«·¢Íã¶¹'), (1215, 'Ë«·¢Íã¶¹'), (1224, 'ÉÁµçÀ¶Ý®'), (1233, 'ÁúÉàÀ¼'), (1233, 'ÁúÉàÀ¼'), (1253, 'Â«ËñÕ½»ú'), (1253, 'Â«ËñÕ½»ú'), (1301, '°«¼á¹û'), (1401, '¾íÐÄ²Ë'), (1401, '¾íÐÄ²Ë'), (1501, 'ÍÁ¶¹µØÀ×'), (1602, '»ØÐýïÚ'), (1704, '±ù¶³Éú²Ë'), (1803, '°×²ËÕ½Ê¿'), (1901, 'Ä¹±®ÍÌÊÉÕß'), (2002, 'Ä§ÌÙ'), (2002, 'Ä§ÌÙ'), (3103, 'ÖñÐ¡Áú'), (3103, 'ÖñÐ¡Áú'), (3203, 'ºúÂÜ²·»ð¼ý'), (3203, 'ºúÂÜ²·»ð¼ý'), (3303, 'ÆÑ¹«Ó¢'), (3602, '²¶Ó¬²Ý'), (3702, 'ÙÁ¹Ï'), (3901, '»ðÁú²Ý'), (4101, 'µØ´Ì'), (4202, 'µØ´ÌÍõ'), (4202, 'µØ´ÌÍõ'), (4202, 'µØ´ÌÍõ'), (4301, 'ÓñÃ×'), (4301, 'ÓñÃ×'), (4401, 'µ¯»É¶¹'), (4401, 'µ¯»É¶¹'), (4503, 'Èý·¢Íã¶¹'), (4602, 'Ò¬×Ó¼ÓÅ©ÅÚ'), (4604, 'Ò¬×Ó¼ÓÅ©ÅÚ'), (4703, 'Ê¯Áñ'), (4902, 'ÁñÁ«'), (4903, 'ÁñÁ«'), (5303, 'º®±ùÉäÊÖ'), (5402, 'Ë«Í·Íã¶¹'), (5402, 'Ë«Í·Íã¶¹'), (5503, 'Íã¶¹¼Ô'), (5602, '¸ß¼á¹û'), (5602, '¸ß¼á¹û'), (5703, 'Ó£ÌÒÕ¨µ¯'), (5901, '°Í¶¹'), (6003, '»ð×®'), (6003, '»ð×®'), (6101, 'µç²Ý'), (6101, 'µç²Ý'), (6204, 'ÑîÌÒ'), (6204, 'ÑîÌÒ'), (6301, '¼¤¹â¶¹×Ó'), (6302, '¼¤¹â¶¹×Ó'), (6403, 'èÖ×Ó'), (6503, 'È«Ï¢¼á¹û'), (6601, 'Àâ¾µ²Ý'), (6705, '»ð±¬À±½·'), (6903, '±ù¶³Î÷¹Ï'), (6904, '±ù¶³Î÷¹Ï'), (7203, 'Âö³å»ÆÌÒ'), (7403, 'Ïõ»¯¹½'), (7502, 'Ê³ÈË»¨'), (7503, 'Ê³ÈË»¨'), (7503, 'Ê³ÈË»¨'), (7603, '´É×©ÂÜ²·'), (7703, 'Î÷¹ÏÍ¶ÊÖ'), (7803, 'ÏãÆÑ'), (7902, 'ÁéÖ¥'), (7902, 'ÁéÖ¥'), (8002, '°Å½¶'), (8002, '°Å½¶'), (8003, '°Å½¶'), (8003, '°Å½¶'), (8302, 'µçº£ËÉ'), (8302, 'µçº£ËÉ'), (8502, 'º£ÐÇ¹û'), (8503, 'º£ÐÇ¹û'), (8503, 'º£ÐÇ¹û'), (8503, 'º£ÐÇ¹û'), (8603, '×êµØÀóÖ¦¹û'), (8703, 'º£¿û»¨'), (8703, 'º£¿û»¨'), (8803, 'Ë®À×¹û'), (8903, 'Ãµ¹å½£¿Í'), (9005, '¾ý×ÓÀ¼'), (9102, 'Ê÷Ö¬·¢ÉäÆ÷'), (9103, 'Ê÷Ö¬·¢ÉäÆ÷'), (9203, 'Ç¿ËáÄûÃÊ'), (9303, 'Ä§Êõ¹½'), (9403, '»ðÑæÉäÊÖ'), (9502, 'ÓÄÁéÀ±½·'), (9502, 'ÓÄÁéÀ±½·'), (9502, 'ÓÄÁéÀ±½·'), (9503, 'ÓÄÁéÀ±½·'), (9602, 'öùÀæ'), (9603, 'öùÀæ'), (9703, 'ì«·ç¸ÊÀ¶'), (9802, 'Â·µÆ»¨'), (9803, 'Â·µÆ»¨'), (9902, 'ÏðÄ¾ÉäÊÖ'), (9903, 'ÏðÄ¾ÉäÊÖ'), (106505, 'È«Ï¢¼á¹û'), (106905, '±ù¶³Î÷¹Ï'), (501245, 'ÔÂ¹â»¨'), (501705, '±ù¶³Éú²Ë'), (508105, 'ÑõÆøÔå')]
+17:54:44  INFO       -> PVZ.Cmd.Cmd_Card_GetPackage_SC (12830 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Card_GetPackage_SC                 (12830 body bytes, 12877 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+17:54:44  INFO       battle GET formation: 6 cards {3: 10001243, 7: 10006503, 9: 10006904, 11: 10001706, 13: 10008103, 15: 10001223}
+17:54:44  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (1210 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (1210 body bytes, 1261 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=28 cmdName=PVZ.Cmd.Cmd_VipInfo_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_VipInfo_SC (29 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_VipInfo_SC                         (29 body bytes, 67 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Arena_GetMyInfo_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_Arena_GetMyInfo_SC (527 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Arena_GetMyInfo_SC                 (527 body bytes, 574 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Item_GetBagInfo_CS
+17:54:44  INFO       bag info: 1172 item stack(s), 28 equipment object(s)
+17:54:44  INFO       -> PVZ.Cmd.Cmd_Item_GetBagInfo_SC (16323 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Item_GetBagInfo_SC                 (16323 body bytes, 16370 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_Quest_GetList_CS
+17:54:44  INFO       main quests: uin=700000204 listed=115
+17:54:44  INFO       -> PVZ.Cmd.Cmd_Quest_GetList_SC (1105 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_GetList_SC                   (1105 body bytes, 1150 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_DailyQuest_GetInfo_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_DailyQuest_GetInfo_SC (24 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_DailyQuest_GetInfo_SC              (24 body bytes, 73 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_DailyActivity_GetInfo_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_DailyActivity_GetInfo_SC (128 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_DailyActivity_GetInfo_SC           (128 body bytes, 181 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_City_GetBuildingInfo_CS
+17:54:44  INFO       town buildings: level=200 -> 23 unlocked [10, 20, 30, 60, 70, 80, 110, 120, 130, 140, 150, 160, 170, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280]
+17:54:44  INFO       -> PVZ.Cmd.Cmd_City_GetBuildingInfo_SC (107 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetBuildingInfo_SC            (107 body bytes, 158 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Flag_GetList_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_Flag_GetList_SC (0 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Flag_GetList_SC                    (0 body bytes, 43 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=37 cmdName=PVZ.Cmd.Cmd_Lab_GetLabInfo_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_Lab_GetLabInfo_SC (322 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Lab_GetLabInfo_SC                  (322 body bytes, 368 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_RoleGuildInfo_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_RoleGuildInfo_SC (37 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_RoleGuildInfo_SC                   (37 body bytes, 81 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=30 cmdName=PVZ.Cmd.Cmd_City_Init_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_City_Init_SC (2 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_City_Init_SC                       (2 body bytes, 42 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_War_GetDeclareWarStat_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_War_GetDeclareWarStat_SC (0 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_War_GetDeclareWarStat_SC           (0 body bytes, 52 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=44 cmdName=PVZ.Cmd.Cmd_Setout_GetSetoutTimes_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_Setout_GetSetoutTimes_SC (0 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Setout_GetSetoutTimes_SC           (0 body bytes, 52 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (0 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (0 body bytes, 43 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Chat_GetHistory_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_Chat_GetHistory_SC (3 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Chat_GetHistory_SC                 (3 body bytes, 49 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=40 cmdName=PVZ.Cmd.Cmd_Friend_GetBlackList_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_Friend_GetBlackList_SC (0 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Friend_GetBlackList_SC             (0 body bytes, 50 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=53 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC (624 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC  (624 body bytes, 688 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_OnlineReward_GetInfo_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_OnlineReward_GetInfo_SC (151 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_GetInfo_SC            (151 body bytes, 203 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=40 cmdName=PVZ.Cmd.Cmd_PayShop_GetFlagList_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_PayShop_GetFlagList_SC (0 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetFlagList_SC             (0 body bytes, 50 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_PVZPrivilege_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_PVZPrivilege_SC (413 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_PVZPrivilege_SC                    (413 body bytes, 457 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_Fuben_GetChapterInfo_CS
+17:54:44  INFO       fuben chapters: level=200 -> 14 unlocked (progress-gated)
+17:54:44  INFO       -> PVZ.Cmd.Cmd_Fuben_GetChapterInfo_SC (140 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Fuben_GetChapterInfo_SC            (140 body bytes, 192 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_GetLevelRewardInfo_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_GetLevelRewardInfo_SC (0 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_GetLevelRewardInfo_SC              (0 body bytes, 49 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_City_MergeServerFlag_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_City_MergeServerFlag_SC (0 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_City_MergeServerFlag_SC            (0 body bytes, 51 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=37 cmdName=PVZ.Cmd.Cmd_Talent_GetList_CS
+17:54:44  INFO       talent list stage 1: 35 talents, 11 plants, 28 studied, 7 studiable-now
+17:54:44  INFO       -> PVZ.Cmd.Cmd_Talent_GetList_SC (464 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Talent_GetList_SC                  (464 body bytes, 510 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_Puppet_GetInfo_CS
+17:54:44  INFO       <= Cmd_Puppet_GetInfo_CS data=
+17:54:44  INFO       ¿þÀÜ: 5 owned, answering [1000001, 1000002, 1000005, 3000002, 4000002]
+17:54:44  INFO       -> PVZ.Cmd.Cmd_Puppet_GetInfo_SC (322 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Puppet_GetInfo_SC                  (322 body bytes, 368 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=40 cmdName=PVZ.Cmd.Cmd_Puppet_GetFormation_CS
+17:54:44  INFO       <= Cmd_Puppet_GetFormation_CS data=
+17:54:44  INFO       ¿þÀÜÉÏÕó: [4000002, 1000001, 1000005, 1000002, 3000002]
+17:54:44  INFO       -> PVZ.Cmd.Cmd_Puppet_GetFormation_SC (145 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Puppet_GetFormation_SC             (145 body bytes, 196 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=45 cmdName=PVZ.Cmd.Cmd_PayShop_GetDayTicketList_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_PayShop_GetDayTicketList_SC (0 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetDayTicketList_SC        (0 body bytes, 55 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_SC (0 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_SC       (0 body bytes, 56 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=53 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC (624 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC  (624 body bytes, 688 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_SignIn_GetInfo_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_SignIn_GetInfo_SC (12 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_SignIn_GetInfo_SC                  (12 body bytes, 57 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_OfflineReward_GetInfo_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_OfflineReward_GetInfo_SC (0 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_OfflineReward_GetInfo_SC           (0 body bytes, 52 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_Guide_GetKeys_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_Guide_GetKeys_SC (0 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Guide_GetKeys_SC                   (0 body bytes, 44 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_SecondPwd_Info_CS
+17:54:44  INFO       -> PVZ.Cmd.Cmd_SecondPwd_Info_SC (0 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_SecondPwd_Info_SC                  (0 body bytes, 45 total)
+17:54:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+  GET /ModuleNotice_dc3bf3ae7d1226d4a6447bbfef3761aa.swf HTTP/1.1 -> 200
+  GET /swf/notice/noticeUI_cdacafdb9dba9b417ae71773769ac22e.swf HTTP/1.1 -> 200
+  GET /ModuleCity_8f2d4fc09146944464d537b3cc2f4f91.swf HTTP/1.1 -> 200
+  GET /swf/city/cityRes_35bca513e884e3abc6bf53326f4c3035.swf HTTP/1.1 -> 200
+  GET /swf/city/cityMap_4e3c58894799c010271de762916a9f12.swf HTTP/1.1 -> 200
+17:54:44  INFO       battle GET formation: 6 cards {3: 10001243, 7: 10006503, 9: 10006904, 11: 10001706, 13: 10008103, 15: 10001223}
+17:54:44  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (1210 body bytes)
+17:54:44  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (1210 body bytes, 1261 total)
+  GET /ModuleRoleInfo_a372ede9ec47b6161bb7587fde6bbfeb.swf HTTP/1.1 -> 200
+  GET /ModuleEntryIcon_cea4251d4d4d42928537cb66d5b17bc5.swf HTTP/1.1 -> 200
+  GET /swf/entryIcon/entryIconUI_b50e6195726029792251be930078b346.swf HTTP/1.1 -> 200
+  GET /ModuleChat_058398f2830b5da8574a0cc15acffc56.swf HTTP/1.1 -> 200
+  GET /swf/roleInfo/roleInfoUI_5ca6b31482a1febd3279465061a0ae60.swf HTTP/1.1 -> 200
+  GET /swf/chat/chatRes_0261482a2672d733f7d47f153618bc64.swf HTTP/1.1 -> 200
+  GET /ModuleQuest_8cf13ef918706d8e94627576116af94c.swf HTTP/1.1 -> 200
+  GET /swf/quest/questUIRes_bed4cac830125a04750fd3d64d44d058.swf HTTP/1.1 -> 200
+  GET /ModuleFriend_d9537b842cb86a0512b574a0255bfacb.swf HTTP/1.1 -> 200
+  GET /swf/friend/friend_res_06b8a39e4bd0db17ded74e1b1f989ede.swf HTTP/1.1 -> 200
+17:54:49  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Notice_GetRollList_CS
+17:54:49  INFO       -> PVZ.Cmd.Cmd_Notice_GetRollList_SC (79 body bytes)
+17:54:49  INFO     -> S2C  PVZ.Cmd.Cmd_Notice_GetRollList_SC              (79 body bytes, 128 total)
+17:54:49  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=38 cmdName=PVZ.Cmd.Cmd_Notice_GetSysList_CS
+17:54:49  INFO       -> PVZ.Cmd.Cmd_Notice_GetSysList_SC (139 body bytes)
+17:54:49  INFO     -> S2C  PVZ.Cmd.Cmd_Notice_GetSysList_SC               (139 body bytes, 188 total)
+17:54:49  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=57 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+17:54:49  INFO       -> PVZ.Cmd.FlexibleActivity_1001 (111 body bytes)
+17:54:49  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1001                  (111 body bytes, 156 total)
+17:54:49  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=57 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+17:54:49  INFO       -> PVZ.Cmd.FlexibleActivity_1001 (111 body bytes)
+17:54:49  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1001                  (111 body bytes, 156 total)
+17:54:49  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+17:54:49  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+17:54:49  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+17:54:49  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+17:54:49  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+17:54:49  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+17:54:49  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+17:54:49  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+17:54:49  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+17:54:49  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+17:54:49  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+17:54:49  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+17:54:49  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_GetClientData_CS
+17:54:49  INFO       -> PVZ.Cmd.Cmd_GetClientData_SC (4 body bytes)
+17:54:49  INFO     -> S2C  PVZ.Cmd.Cmd_GetClientData_SC                   (4 body bytes, 48 total)
+17:54:49  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_City_GetTownDurability_CS
+17:54:49  INFO       -> PVZ.Cmd.Cmd_City_GetTownDurability_SC (0 body bytes)
+17:54:49  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetTownDurability_SC          (0 body bytes, 53 total)
+17:54:49  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=38 cmdName=PVZ.Cmd.Cmd_TD_GetStageInfo_CS
+17:54:49  INFO       TD stage info: stage=5 passed=[(1, 1, 1, [10]), (2, 1, 1, [10]), (2, 2, 3, [3, 6, 10]), (2, 3, 3, [3, 6, 10]), (2, 4, 3, [3, 6, 10]), (3, 1, 1, [10]), (4, 1, 1, [10]), (4, 2, 3, [1, 6, 10]), (4, 3, 3, [1, 6, 10]), (4, 4, 3, [1, 6, 10]), (5, 1, 1, [10]), (6, 1, 1, [10]), (6, 2, 1, [10]), (6, 3, 1, [10]), (6, 4, 1, [10]), (7, 1, 1, [10]), (8, 1, 1, [10]), (8, 2, 3, [6, 7, 10]), (8, 3, 3, [6, 7, 10]), (8, 4, 3, [6, 7, 10]), (9, 1, 1, [10]), (10, 1, 3, [6, 10, 11]), (10, 2, 3, [6, 10, 11]), (10, 3, 3, [6, 10, 11]), (10, 4, 1, [10]), (11, 1, 3, [4, 6, 10]), (12, 1, 3, [4, 6, 10]), (12, 2, 3, [4, 6, 10]), (12, 3, 1, [10]), (12, 4, 3, [6, 9, 10]), (13, 1, 3, [6, 9, 10]), (14, 1, 3, [6, 9, 10]), (14, 2, 1, [10]), (14, 3, 3, [5, 6, 10]), (14, 4, 3, [5, 6, 10]), (15, 1, 3, [5, 6, 10]), (16, 1, 1, [10]), (16, 2, 3, [6, 8, 10]), (16, 3, 3, [6, 8, 10]), (16, 4, 3, [6, 8, 10]), (17, 1, 1, [10]), (18, 1, 3, [3, 6, 10]), (18, 2, 3, [3, 6, 10]), (18, 3, 3, [3, 6, 10]), (18, 4, 1, [10]), (19, 1, 3, [6, 9, 10]), (19, 2, 3, [6, 9, 10]), (19, 3, 3, [6, 9, 10]), (19, 4, 1, [10]), (20, 1, 3, [1, 6, 10]), (20, 2, 3, [1, 6, 10]), (20, 3, 3, [1, 6, 10]), (20, 4, 1, [10]), (21, 1, 3, [2, 6, 10]), (21, 2, 3, [2, 6, 10]), (21, 3, 3, [2, 6, 10]), (21, 4, 1, [10]), (22, 1, 3, [4, 6, 10]), (22, 2, 3, [4, 6, 10]), (22, 3, 3, [4, 6, 10]), (22, 4, 1, [10]), (23, 1, 3, [4, 6, 10])] gates=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17] totalStars=142
+17:54:49  INFO       -> PVZ.Cmd.Cmd_TD_GetStageInfo_SC (695 body bytes)
+17:54:49  INFO     -> S2C  PVZ.Cmd.Cmd_TD_GetStageInfo_SC                 (695 body bytes, 742 total)
+17:54:49  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_War_GetSimpleHistory_CS
+17:54:49  INFO       -> PVZ.Cmd.Cmd_War_GetSimpleHistory_SC (0 body bytes)
+17:54:49  INFO     -> S2C  PVZ.Cmd.Cmd_War_GetSimpleHistory_SC            (0 body bytes, 51 total)
+  GET /ModuleSound_53f2087668722600f61190a7ef42fb88.swf HTTP/1.1 -> 200
+  GET /swf/friend/friend_list_bg.png HTTP/1.1 -> 200
+  GET /swf/shop/shopUI_1f931bc2ebc1bd9b849d96a02a735b21.swf HTTP/1.1 -> 200
+  GET /swf/luckystar/luckystarUI_2d226ea31060b2e33021996b9c7f72ac.swf HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /ModuleLuckyStar_f4c62b83a11f78ce43e00d68c92d6889.swf HTTP/1.1 -> 200
+  GET /ModuleWelfareHall_5f4a0801214ec7e1886619ce945182ec.swf HTTP/1.1 -> 200
+  GET /swf/chat/btnBBS_up.png HTTP/1.1 -> 200
+  GET /swf/activity/dodgeAndCat_6901d4eca3ccf7e9785dca243698529c.swf HTTP/1.1 -> 200
+  GET /ModuleDodgeAndCat_84f4869a8856cbe38429e1a012fc6299.swf HTTP/1.1 -> 200
+  GET /swf/welfareHall/welfareHallUI_ed790eb8512674add4bf50ab3ccdb0bf.swf HTTP/1.1 -> 200
+  GET /swf/chat/btnBBS_down.png HTTP/1.1 -> 200
+  GET /swf/chat/btnChooseChannel_down.png HTTP/1.1 -> 200
+  GET /swf/mapinfo/minict_cell.png HTTP/1.1 -> 200
+  GET /swf/chat/btn_down_42e229e4908f545000d32be1ddc59224.swf HTTP/1.1 -> 200
+  GET /swf/chat/btnChooseChannel_over.png HTTP/1.1 -> 200
+17:54:49  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Welfare_DailyActivity_CS
+17:54:49  INFO       -> PVZ.Cmd.Cmd_Welfare_DailyActivity_SC (3650 body bytes)
+17:54:49  INFO     -> S2C  PVZ.Cmd.Cmd_Welfare_DailyActivity_SC           (3650 body bytes, 3703 total)
+  GET /swf/chat/chatHornBg.png HTTP/1.1 -> 200
+  GET /swf/chat/chatWorldBg.png HTTP/1.1 -> 200
+  GET /swf/chat/btn_enter_48404201c72e25f82434a41f39349e88.swf HTTP/1.1 -> 200
+  GET /swf/chat/btnChooseChannel_up.png HTTP/1.1 -> 200
+  GET /swf/chat/inputBg.png HTTP/1.1 -> 200
+  ASSET FALLBACK /swf/chat/channelAlertFlag.png -> 1x1 placeholder (source missing)
+  GET /swf/chat/chatBgBig.png HTTP/1.1 -> 200
+  GET /swf/city/building280_1cb474186c868c1cd00df12714b35f0f.swf HTTP/1.1 -> 200
+  GET /swf/chat/btn_face_b3022e712c88129597ff3523a574c9eb.swf HTTP/1.1 -> 200
+  GET /swf/chat/channelAlertFlag.png HTTP/1.1 -> 200
+  GET /swf/city/building270_7f51faf093896934bb518f82ad405d03.swf HTTP/1.1 -> 200
+17:54:49  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_TopFight_TopN_CS
+17:54:49  INFO       -> PVZ.Cmd.Cmd_TopFight_TopN_SC (0 body bytes)
+17:54:49  INFO     -> S2C  PVZ.Cmd.Cmd_TopFight_TopN_SC                   (0 body bytes, 44 total)
+  GET /swf/city/building260_725a1e18e9ae86a4614fb920cb65b431.swf HTTP/1.1 -> 200
+  GET /swf/city/building220_7809bf538a5bee994082414646291495.swf HTTP/1.1 -> 200
+  GET /swf/city/building240_5673c0a499dd0bc101178f0efa9c922b.swf HTTP/1.1 -> 200
+  GET /swf/city/building250_b4c640e866b08e65d6317962baee79bd.swf HTTP/1.1 -> 200
+  GET /swf/city/building230_791b4f7ccc839acc7ae71db7ee405caf.swf HTTP/1.1 -> 200
+  GET /swf/city/building190_4db2aa4b7d4f7883d44c82b988b3a49d.swf HTTP/1.1 -> 200
+  GET /swf/city/building200_6e4f25fa9148eeb9a452ab75e4091c07.swf HTTP/1.1 -> 200
+  GET /swf/city/building160_4dd4fa2fe229bc1f36df6e8ba288c08e.swf HTTP/1.1 -> 200
+  GET /swf/city/building170_58c6b771720265b7c5e3609a950f25de.swf HTTP/1.1 -> 200
+  GET /swf/city/building150_5673c0a499dd0bc101178f0efa9c922b.swf HTTP/1.1 -> 200
+  GET /swf/city/building140_d3927856eca969011e369760f92f8407.swf HTTP/1.1 -> 200
+  GET /swf/city/building120_8c91babf80baad50d2d0bb8dcd82c2dc.swf HTTP/1.1 -> 200
+  GET /swf/city/building130_ee5d759565b0f76105e109ec3a0dd997.swf HTTP/1.1 -> 200
+  GET /swf/city/building110_132f3fb31c696a2dd50c9f1a6f26838b.swf HTTP/1.1 -> 200
+  GET /swf/city/building80_80612d3ecf28a1d7c677118ca4f90717.swf HTTP/1.1 -> 200
+  GET /swf/city/building60_d91e9c0e10700875be45fcd0739286f4.swf HTTP/1.1 -> 200
+  GET /swf/city/building70_39e7f8ea372538108b5bab5372fb81fe.swf HTTP/1.1 -> 200
+  GET /swf/city/building10_81d7d232d0d93d09749dc25677bab738.swf HTTP/1.1 -> 200
+  GET /swf/city/building30_8523afc14ddb08dcbbefe557ca2e8878.swf HTTP/1.1 -> 200
+  GET /swf/city/new_btn_to_dummy_02ce0ee2afb6fc3a66e34a1215d7d4b0.swf HTTP/1.1 -> 200
+  GET /swf/city/new_btn_to_illustrations_f6a7da0d530eecb0c6fd9a0ed152f37a.swf HTTP/1.1 -> 200
+  GET /swf/activity/promotionFlag_7e7a0845408a825dfe2d2c92871e2834.swf HTTP/1.1 -> 200
+  GET /swf/city/new_btn_to_shop_72b442432829c293d3590bd75505baf4.swf HTTP/1.1 -> 200
+  GET /swf/city/new_btn_to_worldMap_0b751e1d780bc6c19fea70e102f0c448.swf HTTP/1.1 -> 200
+  GET /swf/city/new_btn_to_fuben_a38509dcee8f6a48abdd42bba44d4a95.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/11_36a823ac33169a3ccf869dd3a7d4e9b7.swf HTTP/1.1 -> 200
+  GET /swf/city/new_btn_to_quest_e0007549d1a31148cd28555306f198c4.swf HTTP/1.1 -> 200
+  GET /swf/city/new_btn_to_mail_b1b26579fa7c1a03fe339095855b3aaf.swf HTTP/1.1 -> 200
+  GET /swf/city/new_btn_to_bag_61fec0d7eab99bb4cc6376a87a00591d.swf HTTP/1.1 -> 200
+  GET /swf/city/new_btn_to_friend_1339545b32d70ece45912dc8393c491b.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/10_e220db9882da8b37bcc374c9292da5f4.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/1012_6d64ada23a179f4e50d7c494c689f475.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/1010_7bdfec855ac0ded1a2b9fec8eedca26e.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/1001_ba620136080c5b985437857dba9c3849.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/1005_dbad185e2c0b2155e058b65634d23276.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/1009_c54cc38832cc8414a1bbea9305298e92.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/1019_1490e9bf96a36f939837408c9a169fb3.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/1017_1c187acc3647fa56f1461c67f2c7efad.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/1018_ccf645126e083415b875baa63b25acbd.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/1020_f1d112bd1fd951e2e88862da32f49503.swf HTTP/1.1 -> 200
+  GET /swf/friend/friend_newMsg_icon.png HTTP/1.1 -> 200
+  GET /swf/activity/icons/11_2ad5ea776194d63827c1dfd22c309089.swf HTTP/1.1 -> 200
+  GET /swf/activity/icons/13_ddac7c0995bfb8d6c6f292a66469a794.swf HTTP/1.1 -> 200
+  GET /swf/friend/icon_my_line_rect1.png HTTP/1.1 -> 200
+  GET /swf/friend/friend_alert_off.png HTTP/1.1 -> 200
+  GET /swf/friend/search_back.png HTTP/1.1 -> 200
+  GET /swf/friend/icon_friend_line_rect1.png HTTP/1.1 -> 200
+  GET /swf/friend/lv_back.png HTTP/1.1 -> 200
+  GET /swf/friend/page_bg.png HTTP/1.1 -> 200
+  GET /swf/roleInfo/month_cannot.png HTTP/1.1 -> 200
+  GET /swf/roleInfo/secondary_password.png HTTP/1.1 -> 200
+  GET /swf/roleInfo/castle2.png HTTP/1.1 -> 200
+  GET /swf/roleInfo/avoidWar3.png HTTP/1.1 -> 200
+  GET /image/arena/s1001.png HTTP/1.1 -> 200
+  GET /swf/activity/icons/10002_e9bbc678781efbc95f5414f78d36fd8a.swf HTTP/1.1 -> 200
+  GET /image/notice/rollNoticeBg.png HTTP/1.1 -> 200
+  GET /swf/welfareHall/npc/highWallnut_7ee6a9ecb862e706ddeddc11c883e4fd.bbone HTTP/1.1 -> 200
+  GET /image/head/unknow1.png HTTP/1.1 -> 200
+  GET /ModuleEmbattle_f42a60f5aad35cab3164ccf9ac3886b4.swf HTTP/1.1 -> 200
+17:54:50  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+  GET /swf/battle/animation/effect/dummyBase_f81c274695d88aa05ce62b26b4951936.bbone HTTP/1.1 -> 200
+  GET /swf/awake/effect/effect_back_5_3c5e691b1c2a20db4b481a318654eaec.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/PVP_zombie_kongfu_torch_8adadb45cf428c7bd536f5e16f9b27e0.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/moonflower_843572538147ec262b33091fd1bdcab5.bbone HTTP/1.1 -> 200
+  GET /swf/awake/effect/effect_front_5_934b386c2797c0593e6e274605ce1fb4.bbone HTTP/1.1 -> 200
+17:54:50  INFO       battle GET formation: 6 cards {3: 10001243, 7: 10006503, 9: 10006904, 11: 10001706, 13: 10008103, 15: 10001223}
+17:54:50  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (1210 body bytes)
+17:54:50  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (1210 body bytes, 1261 total)
+  GET /swf/battle/animation/unit/nuts_938e83e7f118ec0d410c0b69486b5908.bbone HTTP/1.1 -> 200
+  GET /swf/awake/effect/effect_back_1_aef63ca4cb8c6115ce2fc7ed77bc3b15.bbone HTTP/1.1 -> 200
+  GET /swf/cardDNA/effect/dna_back_effect2_a4b9efa0cb1c1c9bb91a7e261681f67c.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/wintermelon_7d2b87673d96467d2a623a12cc7ad730.bbone HTTP/1.1 -> 200
+  GET /swf/cardDNA/effect/dna_front_effect2_f7607dee68ec643b6df4441021989175.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/iceburg_b138c7a65bc814a9977f207badd01b7f.bbone HTTP/1.1 -> 200
+  GET /swf/cardDNA/effect/dna_back_effect10_be55faef378988dff04252ef171e35f2.bbone HTTP/1.1 -> 200
+  GET /swf/plantArmor/effect/effect11_de1eff615831b608d08ab87882b2aeb7.bbone HTTP/1.1 -> 200
+  GET /swf/cardDNA/effect/dna_front_effect10_c5691e767ed262531d3db4ff05dfbf2a.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/oxygenalage_21d6e09c547951b272feb59fbbb4dc09.bbone HTTP/1.1 -> 200
+  GET /swf/cardDNA/effect/dna_front_effect5_42c2d5b98c17ff1b8418b0cfd1732f16.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/electricblueberry_4d332f47b497b53e35e14d647952cd9d.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/cardDNA/effect/dna_back_effect5_31bb7063376946b4ad892aed7ef976ae.bbone HTTP/1.1 -> 200
+  GET /swf/plantArmor/effect/effect21_8fe134058260af989339b42d6a40e620.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /sound/city/bg3.mp3 HTTP/1.1 -> 200
+17:54:52  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_City_GetBuildingEvent_CS
+17:54:52  INFO       -> PVZ.Cmd.Cmd_City_GetBuildingEvent_SC (0 body bytes)
+17:54:52  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetBuildingEvent_SC           (0 body bytes, 52 total)
+17:55:22  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=29 cmdName=PVZ.Cmd.Cmd_Idle_CS
+17:55:22  INFO       -> PVZ.Cmd.Cmd_Idle_SC (6 body bytes)
+17:55:22  INFO     -> S2C  PVZ.Cmd.Cmd_Idle_SC                            (6 body bytes, 41 total)
+17:55:34  INFO   bot AI tick: 900006 vs 900016 -> b won
+  GET /sound/ui/UI_button_click_fc7c7ffddca3766b5229b75b7b4dfdd3.swf HTTP/1.1 -> 200
+  GET /sound/ui/UI_block_highlight_a82614f0e36087ee8e1bd4e7750d97d0.swf HTTP/1.1 -> 200
+  GET /swf/roleInfo/month_cannot.png HTTP/1.1 -> 200
+  MODULEHOLE ALIAS /ModuleHole_498e993b5f2202d8027420849aecd2e3.swf -> /ModuleHole.swf
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /swf/hole/holeUI_d929402e653b6cd2244d49ebf5e929b8.swf HTTP/1.1 -> 200
+  GET /ModuleHole_498e993b5f2202d8027420849aecd2e3.swf HTTP/1.1 -> 200
+  GET /swf/roleInfo/secondary_password.png HTTP/1.1 -> 200
+  GET /swf/roleInfo/castle2.png HTTP/1.1 -> 200
+  GET /image/arena/s1001.png HTTP/1.1 -> 200
+  GET /swf/chat/btn_up_879e2a070812fad8d9e604983f313d05.swf HTTP/1.1 -> 200
+  GET /swf/roleInfo/avoidWar3.png HTTP/1.1 -> 200
+  GET /swf/chat/chatBgSmall.png HTTP/1.1 -> 200
+17:55:46  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=31 cmdName=PVZ.Cmd.Cmd_Guard_Info_CS
+17:55:46  INFO       guard INFO -> 1 guard(s)
+17:55:46  INFO       -> PVZ.Cmd.Cmd_Guard_Info_SC (724 body bytes)
+17:55:46  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_Info_SC                      (724 body bytes, 766 total)
+  GET /swf/city/btn_to_city_232fb10a43a095dcda6489e1882b0a18.swf HTTP/1.1 -> 200
+  GET /swf/hole/holeBG_8d242eec8368dabb487e3ddc05981797.swf HTTP/1.1 -> 200
+  ASSET FALLBACK /image/item/ui/borderWhite.png -> 1x1 placeholder (source missing)
+  GET /image/item/1.png HTTP/1.1 -> 200
+  GET /image/item/ui/qualityNormal_bg.png HTTP/1.1 -> 200
+  GET /image/item/ui/borderWhite.png HTTP/1.1 -> 200
+17:55:47  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_RefreshRobTarget_CS
+17:55:47  INFO       guard REFRESH-ROB uin=700000204 type=13 members=[('ÃÜ²ØÂÓ¶áÕß1', 233689, True), ('ÃÜ²ØÂÓ¶áÕß2', 321250, True), ('ÃÜ²ØÂÓ¶áÕß3', 270630, True)] refresh=21 coin=3783002
+17:55:47  INFO       -> PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC (831 body bytes)
+17:55:47  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC          (831 body bytes, 885 total)
+17:55:47  INFO       -> PVZ.Cmd.Cmd_SyncCoin_SC (5 body bytes)
+17:55:47  INFO     -> S2C  PVZ.Cmd.Cmd_SyncCoin_SC                        (5 body bytes, 44 total)
+  GET /swf/battle/animation/unit/empeach_ea7d523e785cd24d34978501aac76918.bbone HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/laserPea_114430152d4ca072d91192b435fc4d4f.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/tile_turnip_557607c1254e90c862a74e9d196cb819.bbone HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /swf/awake/effect/effect_front_3_2f03ff3a902fdadc29d41673d77443d2.bbone HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /swf/awake/effect/effect_back_3_3d46a65633a5f51114840a3939703c98.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/empeach&holder_custom_002&custom_00.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/empeach&holder_custom_002&custom_00.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/empeach&holder_custom_002&custom_00.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/empeach&holder_custom_002&custom_00.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/empeach&holder_custom_002&custom_00.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/empeach&holder_custom_002&custom_00.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/empeach&holder_custom_002&custom_00.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/empeach&holder_custom_002&custom_00.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/empeach&holder_custom_002&custom_00.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/empeach&holder_custom_002&custom_00.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/empeach&holder_custom_002&custom_00.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/empeach&holder_custom_002&custom_00.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/commEmbattle/commEmbattleUI_fe8e0c6f4c5c988c74ef41d453c73a3d.swf HTTP/1.1 -> 200
+  GET /ModuleCommEmbattle_3942a0cc76fad4b002028b2ba7d32ba4.swf HTTP/1.1 -> 200
+17:55:52  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_Battle_GetFightInfo_CS
+  GET /swf/battle/animation/unit/PVP_zombie_kongfu_torch_8adadb45cf428c7bd536f5e16f9b27e0.bbone HTTP/1.1 -> 200
+17:55:52  INFO       GuardRob preview: index=2 -> 6 enemy cards (270630 power)
+17:55:52  INFO       -> PVZ.Cmd.Cmd_Battle_GetFightInfo_SC (826 body bytes)
+17:55:52  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFightInfo_SC             (826 body bytes, 877 total)
+17:55:52  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Guard_GetFormation_CS
+17:55:52  INFO       guard GET attack-formation
+17:55:52  INFO       -> PVZ.Cmd.Cmd_Guard_SyncFormation_SC (604 body bytes)
+17:55:52  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_SyncFormation_SC             (604 body bytes, 655 total)
+  GET /swf/icons/card/100_1701.png HTTP/1.1 -> 200
+  GET /swf/icons/card/620_6201.png HTTP/1.1 -> 200
+  GET /swf/icons/card/460_4601.png HTTP/1.1 -> 200
+  CARD IMAGE FALLBACK /swf/icons/card/125_1251.png -> /swf/icons/card/125_251.png
+  GET /swf/icons/card/125_1251.png HTTP/1.1 -> 200
+  CARD IMAGE FALLBACK /swf/icons/card/30_1202.png -> /swf/icons/card/30_1201.png
+  CARD IMAGE FALLBACK /swf/icons/card/900_9002.png -> /swf/icons/card/900_9001.png
+  CARD IMAGE FALLBACK /swf/icons/card/670_6702.png -> /swf/icons/card/670_6701.png
+  CARD IMAGE FALLBACK /swf/icons/card/122_1222.png -> /swf/icons/card/122_1221.png
+  GET /swf/icons/card/30_1202.png HTTP/1.1 -> 200
+  GET /swf/icons/card/900_9002.png HTTP/1.1 -> 200
+  GET /swf/icons/card/122_1222.png HTTP/1.1 -> 200
+  GET /swf/icons/card/670_6702.png HTTP/1.1 -> 200
+  ASSET FALLBACK /swf/icons/card/31_1211.png -> 1x1 placeholder (source missing)
+  GET /swf/icons/card/31_1211.png HTTP/1.1 -> 200
+  GET /swf/icons/card/650_6501.png HTTP/1.1 -> 200
+  CARD IMAGE FALLBACK /swf/icons/card/690_6902.png -> /swf/icons/card/690_6901.png
+  CARD IMAGE FALLBACK /swf/icons/card/810_8102.png -> /swf/icons/card/810_8101.png
+  GET /swf/icons/card/690_6902.png HTTP/1.1 -> 200
+  GET /swf/icons/card/810_8102.png HTTP/1.1 -> 200
+  CARD IMAGE FALLBACK /swf/icons/card/124_1242.png -> /swf/icons/card/124_1241.png
+  CARD IMAGE FALLBACK /swf/icons/card/100_1707.png -> /swf/icons/card/100_1701.png
+  GET /swf/icons/card/124_1242.png HTTP/1.1 -> 200
+  GET /swf/icons/card/100_1707.png HTTP/1.1 -> 200
+  GET /swf/awake/effect/effect_front_4_ec301071d9c03aa72df6161e1e346692.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/moteng_2b3aba4ee1b971258dc277aae545036a.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/plant_kongfu_turnip_2d3b1d9b61a97e3a542bc639ce68464d.bbone HTTP/1.1 -> 200
+  GET /swf/awake/effect/effect_back_4_dd0454741a6773cf74dbbc03fc80e6e5.bbone HTTP/1.1 -> 200
+  GET /swf/commEmbattle/embattle_20_788267a5be783a952f7bcbd652071839.swf HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/wallnut_6046f670bd6bb152c3f6de9260df2417.bbone HTTP/1.1 -> 200
+  GET /swf/awake/effect/effect_front_2_d820738cfe96928542cfcec57388f675.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/sunflower_twin_945f1bd15b1bcc72b063de70803f3515.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/awake/effect/effect_back_2_371eee013d65795606c3b46fb053722c.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/moonflower&holder_custom&custom01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/nuts&holder_custom_001&custom_01_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/iceburg&holder_custom_001&custom_1year.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/oxygenalage&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/wintermelon&holder_custom_001&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+17:55:53  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_FightRobTarget_CS
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+17:55:53  INFO   loaded skill info for 762 skills
+17:55:53  INFO   loaded card level curve (300 levels)
+17:55:53  INFO       guard FIGHT-ROB uin=700000204 index=2 vs=ÃÜ²ØÂÓ¶áÕß3 win=True power=1075393/170921 finish=False light=9987
+17:55:53  INFO       -> PVZ.Cmd.Cmd_Guard_FightRobTarget_SC (3318 body bytes)
+17:55:53  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_FightRobTarget_SC            (3318 body bytes, 3370 total)
+17:55:53  INFO       -> PVZ.Cmd.Cmd_SyncLight_SC (3 body bytes)
+17:55:53  INFO     -> S2C  PVZ.Cmd.Cmd_SyncLight_SC                       (3 body bytes, 43 total)
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /ModuleBattle_de6857fc48024c51ba03a935ddbe24be.swf HTTP/1.1 -> 200
+  GET /swf/battle/ui/battleUI_51f4851c0e725bff5548465b76daa9b5.swf HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/electricblueberry&holder_custom&custom_02.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/moonflower_843572538147ec262b33091fd1bdcab5.bbone HTTP/1.1 -> 200
+  GET /swf/battle/battleMap/friend_top_47a179d268e052ccacc09c5a10a9efba.swf HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/bullet_nuts_3376827b15ed7e73288d48664906da12.bbone HTTP/1.1 -> 200
+  GET /swf/battle/battleMap/friend_bottom_b18ad96cd9b39e10202e66c8ce3997a0.swf HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/nuts_938e83e7f118ec0d410c0b69486b5908.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/wintermelon_7d2b87673d96467d2a623a12cc7ad730.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/eff_wintermelon_87b49bf31303f10a3e61ed1150e1e52b.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/splat_wintermelon_085391bf53407967b33b39d2b761c5f5.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/nuts_effect_6cba9c00f1535c7f03bb8f62bde2c545.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/electricblueberry_4d332f47b497b53e35e14d647952cd9d.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/iceburg_b138c7a65bc814a9977f207badd01b7f.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/bullet_xiaomoteng_ee6c7483abc96d309a16cf013ff7b7e7.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/oxygenalage_21d6e09c547951b272feb59fbbb4dc09.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/electricblueberry_cloud_projectile_399afffef66ec9e96d7b1afb9b514488.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/ground_spinner_e626df93f3fd2afae16b12e742193f1d.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/bullet_moteng_485116d09774face616d29187262528c.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/sunflower_effect_53d9a879f36c5b75c44c810000207820.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/die_effect_smoke_21521ff3a553782fc18a8898e34e0cd9.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/leaderSkillEffect_4fb64b91daf13ef5eaae685e96949f5c.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/plant_skillEffect_foot_10cee651c5992d6438c9881d12a5a235.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/skill_flash_ae2dbb728555d87a151633ee644c9beb.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/plant_skillEffect_body_9ade9ffa8edd4b3fbd4219dde949d32e.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/zombie_skillEffect_25c6e82d759cc292107b0cfcd590e96e.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/zombie_skillEffect_body_d3ab9f1aeb30e609d72c11482690b980.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/zombie_skillEffect_foot_778f115fe187d387594e63e9ac19cf2b.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/buff_dizziness_fe64fd1c63fd60a6546c93e30e1a1e98.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/buff_palsy_ee6f6eb9c2b3dc4c589a834820fdfb8e.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/buff_poisoning_8a184d1e242bcb0ee305105e85c57a9b.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/buff_rally_92927fdb36211cf5ed8a662149d0cf80.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/buff_silence_54974f1071547cba37cca0d0b78269a7.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/dummyBase_f81c274695d88aa05ce62b26b4951936.bbone HTTP/1.1 -> 200
+  GET /image/head/zombie.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /swf/battle/battleMap/hole_bottom_ce83a515ba07ed340e281966020ea6c5.swf HTTP/1.1 -> 200
+17:55:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_Battle_GetFightInfo_CS
+17:55:56  INFO       GuardRob preview: index=0 -> 6 enemy cards (233689 power)
+17:55:56  INFO       -> PVZ.Cmd.Cmd_Battle_GetFightInfo_SC (822 body bytes)
+17:55:56  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFightInfo_SC             (822 body bytes, 873 total)
+17:55:56  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Guard_GetFormation_CS
+17:55:56  INFO       guard GET attack-formation
+17:55:56  INFO       -> PVZ.Cmd.Cmd_Guard_SyncFormation_SC (604 body bytes)
+17:55:56  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_SyncFormation_SC             (604 body bytes, 655 total)
+  GET /swf/battle/animation/unit/plant_Agave_2d2990ad9e95172fe45dcbc686dca62d.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/electricGrass_61214d48b878fdda182994c9c428c04a.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/plant_blooming_hearts_8e3b49cfcb5b1c82447323ac6f4a6a94.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/carrot_f0df15207d52bab2361324e5c971074e.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/asparagus_4203cc4e57b5ff3276f2e74ce6392911.bbone HTTP/1.1 -> 200
+17:55:57  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_FightRobTarget_CS
+17:55:57  INFO       guard FIGHT-ROB uin=700000204 index=0 vs=ÃÜ²ØÂÓ¶áÕß1 win=True power=1078047/147590 finish=False light=9986
+17:55:57  INFO       -> PVZ.Cmd.Cmd_Guard_FightRobTarget_SC (3457 body bytes)
+17:55:57  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_FightRobTarget_SC            (3457 body bytes, 3509 total)
+17:55:57  INFO       -> PVZ.Cmd.Cmd_SyncLight_SC (3 body bytes)
+17:55:57  INFO     -> S2C  PVZ.Cmd.Cmd_SyncLight_SC                       (3 body bytes, 43 total)
+  GET /swf/battle/animation/effect/electricGrass2_23db8d3a248443300c4b806f542abdd2.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/blooming_hearts_hit_fa5c25613c66760edfb201663afaf93b.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/electricGrass1_1c367b5e10755490bb49f6bcc0bc2ddc.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/bullet_blooming_hearts_9b7c7d708cb64679f60bfdbad4e9eaff.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/carrot_76ddf41be49971c5d7c6d14a62a9648b.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/carrotBombEff_33cab66d4aadd5eee52d8f503cf2a3e3.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/carrotBomb_4f9008f188a16e916e8051de6b705b98.bbone HTTP/1.1 -> 200
+  GET /image/head/zombie.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+17:56:00  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_Battle_GetFightInfo_CS
+17:56:00  INFO       GuardRob preview: index=1 -> 6 enemy cards (321250 power)
+17:56:00  INFO       -> PVZ.Cmd.Cmd_Battle_GetFightInfo_SC (828 body bytes)
+17:56:00  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFightInfo_SC             (828 body bytes, 879 total)
+17:56:00  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Guard_GetFormation_CS
+17:56:00  INFO       guard GET attack-formation
+17:56:00  INFO       -> PVZ.Cmd.Cmd_Guard_SyncFormation_SC (604 body bytes)
+17:56:00  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_SyncFormation_SC             (604 body bytes, 655 total)
+  GET /swf/battle/animation/unit/anemone_f6842e3befec0fe6afcac793c2eae3a7.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/highWallnut_33fb9d92556e35bb0030cd035944f4f9.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/firePile_d8a2d25feb3952c022e652da9166842b.bbone HTTP/1.1 -> 200
+17:56:01  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_FightRobTarget_CS
+17:56:01  INFO       guard FIGHT-ROB uin=700000204 index=1 vs=ÃÜ²ØÂÓ¶áÕß2 win=True power=1076060/202891 finish=True light=9985
+17:56:01  INFO       -> PVZ.Cmd.Cmd_Guard_FightRobTarget_SC (3276 body bytes)
+17:56:01  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_FightRobTarget_SC            (3276 body bytes, 3328 total)
+17:56:01  INFO       -> PVZ.Cmd.Cmd_SyncLight_SC (3 body bytes)
+17:56:01  INFO     -> S2C  PVZ.Cmd.Cmd_SyncLight_SC                       (3 body bytes, 43 total)
+  GET /swf/battle/animation/effect/empeach_effect_4d2cb70ee9fe202c62f38e5e76ed66cb.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/bullet_anemone_8d4391b2fcd736706203f71da8edb575.bbone HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /image/head/zombie.png HTTP/1.1 -> 200
+17:56:13  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Guard_CancelRob_CS
+17:56:13  INFO       guard CANCEL-ROB uin=700000204
+17:56:13  INFO       -> PVZ.Cmd.Cmd_Guard_CancelRob_SC (0 body bytes)
+17:56:13  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_CancelRob_SC                 (0 body bytes, 46 total)
+  GET /sound/ui/UI_button_click_fc7c7ffddca3766b5229b75b7b4dfdd3.swf HTTP/1.1 -> 200
+17:56:16  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_RefreshRobTarget_CS
+17:56:17  INFO       guard REFRESH-ROB uin=700000204 type=13 members=[('ÃÜ²ØÂÓ¶áÕß1', 237617, True), ('ÃÜ²ØÂÓ¶áÕß2', 263463, True), ('ÃÜ²ØÂÓ¶áÕß3', 313456, True)] refresh=22 coin=3783001
+17:56:17  INFO       -> PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC (835 body bytes)
+17:56:17  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC          (835 body bytes, 889 total)
+17:56:17  INFO       -> PVZ.Cmd.Cmd_SyncCoin_SC (5 body bytes)
+17:56:17  INFO     -> S2C  PVZ.Cmd.Cmd_SyncCoin_SC                        (5 body bytes, 44 total)
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/durian_0227b1d2c910912b06ae3ebd66e974a3.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/cushaw_2ee705038518af116488328d1fd3e8e7.bbone HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/cushaw&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/cushaw&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/cushaw&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/cushaw&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/cushaw&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/cushaw&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/cushaw&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/cushaw&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/cushaw&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/cushaw&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/cushaw&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/cushaw&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+17:56:18  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_RefreshRobTarget_CS
+17:56:18  INFO       guard REFRESH-ROB uin=700000204 type=13 members=[('ÃÜ²ØÂÓ¶áÕß1', 203930, True), ('ÃÜ²ØÂÓ¶áÕß2', 263303, True), ('ÃÜ²ØÂÓ¶áÕß3', 421690, True)] refresh=23 coin=3783000
+17:56:18  INFO       -> PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC (831 body bytes)
+17:56:18  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC          (831 body bytes, 885 total)
+17:56:18  INFO       -> PVZ.Cmd.Cmd_SyncCoin_SC (5 body bytes)
+17:56:18  INFO     -> S2C  PVZ.Cmd.Cmd_SyncCoin_SC                        (5 body bytes, 44 total)
+  GET /swf/battle/animation/unit/peaPod_3d1414bd1e0eb3eaf780d3a1a64571f9.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/peaPod&holder_custom_001&layer.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/peaPod&holder_custom_001&layer.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/peaPod&holder_custom_001&layer.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/peaPod&holder_custom_001&layer.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/peaPod&holder_custom_001&layer.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/peaPod&holder_custom_001&layer.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/peaPod&holder_custom_001&layer.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/peaPod&holder_custom_001&layer.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/peaPod&holder_custom_001&layer.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/peaPod&holder_custom_001&layer.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/peaPod&holder_custom_001&layer.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/peaPod&holder_custom_001&layer.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+17:56:19  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_Battle_GetFightInfo_CS
+17:56:19  INFO       GuardRob preview: index=2 -> 6 enemy cards (421690 power)
+17:56:19  INFO       -> PVZ.Cmd.Cmd_Battle_GetFightInfo_SC (829 body bytes)
+17:56:19  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFightInfo_SC             (829 body bytes, 880 total)
+17:56:19  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Guard_GetFormation_CS
+17:56:19  INFO       guard GET attack-formation
+17:56:19  INFO       -> PVZ.Cmd.Cmd_Guard_SyncFormation_SC (604 body bytes)
+17:56:19  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_SyncFormation_SC             (604 body bytes, 655 total)
+  GET /swf/battle/animation/unit/chomper_f6840e9b55a8fc4d69f57441070189c1.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/guide_the_ji_a1b994a3d26d88cd603747709bed6d6c.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/fireDragon_5d05b75ec414481064227ccf58f812e7.bbone HTTP/1.1 -> 200
+17:56:21  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_Battle_GetFightInfo_CS
+17:56:21  INFO       GuardRob preview: index=0 -> 6 enemy cards (203930 power)
+17:56:21  INFO       -> PVZ.Cmd.Cmd_Battle_GetFightInfo_SC (826 body bytes)
+17:56:21  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFightInfo_SC             (826 body bytes, 877 total)
+17:56:21  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Guard_GetFormation_CS
+17:56:21  INFO       guard GET attack-formation
+17:56:21  INFO       -> PVZ.Cmd.Cmd_Guard_SyncFormation_SC (604 body bytes)
+17:56:21  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_SyncFormation_SC             (604 body bytes, 655 total)
+  GET /swf/battle/animation/unit/starfruit_9b16cbc6999350a7344531958cfafae2.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/ganoderma_88e243a71936dcf5e2fadaee43397a71.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/melonpult_9b66d958447669d5f23f7049413d7e50.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/starFish_f01be14ee09c33f904a73953494e469e.bbone HTTP/1.1 -> 200
+17:56:22  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_FightRobTarget_CS
+17:56:22  INFO       guard FIGHT-ROB uin=700000204 index=0 vs=ÃÜ²ØÂÓ¶áÕß1 win=True power=1078084/128795 finish=False light=9984
+17:56:22  INFO       -> PVZ.Cmd.Cmd_Guard_FightRobTarget_SC (3336 body bytes)
+17:56:22  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_FightRobTarget_SC            (3336 body bytes, 3388 total)
+17:56:22  INFO       -> PVZ.Cmd.Cmd_SyncLight_SC (3 body bytes)
+17:56:22  INFO     -> S2C  PVZ.Cmd.Cmd_SyncLight_SC                       (3 body bytes, 43 total)
+  GET /swf/battle/animation/bullet/pea_projectile_big_11fd322fcb3df4045c5fe274e59402f4.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/bullet_cushaw_c3c4e34f4570df0a8d5e3ab1f6dba900.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/pea_projectile_bd0ef791f92638ac5cdad5510ea6e4c8.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/ganoderma_projectile_c05524565ce5e8d540b5957d9cd4edf1.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/melonpult_d2d0c2b9a48e6861efa2689778b7174e.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/eff_melonpult_142c696c86569ba483222d3d10808e88.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/starfruit_projectile_da80e39fa5fc1c52d55d523c290b271b.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/starfruit_projectile_hit_efa5c2a055be8390e135da0b0d4bcd87.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/starFish_hit_d734291bcbe367654f895649d787719f.bbone HTTP/1.1 -> 200
+  GET /image/head/zombie.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /sound/ui/UI_button_click_fc7c7ffddca3766b5229b75b7b4dfdd3.swf HTTP/1.1 -> 200
+17:56:24  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_RefreshRobTarget_CS
+17:56:24  INFO       guard REFRESH-ROB uin=700000204 type=13 members=[('ÃÜ²ØÂÓ¶áÕß1', 302794, True), ('ÃÜ²ØÂÓ¶áÕß2', 211098, True), ('ÃÜ²ØÂÓ¶áÕß3', 264079, True)] refresh=24 coin=3782999
+17:56:24  INFO       -> PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC (830 body bytes)
+17:56:24  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC          (830 body bytes, 884 total)
+17:56:24  INFO       -> PVZ.Cmd.Cmd_SyncCoin_SC (5 body bytes)
+17:56:24  INFO     -> S2C  PVZ.Cmd.Cmd_SyncCoin_SC                        (5 body bytes, 44 total)
+  GET /swf/battle/animation/unit/bloomerang_d5e43814a40fac861d42e32f953b49e8.bbone HTTP/1.1 -> 200
+17:56:26  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_Battle_GetFightInfo_CS
+17:56:26  INFO       GuardRob preview: index=2 -> 6 enemy cards (264079 power)
+17:56:26  INFO       -> PVZ.Cmd.Cmd_Battle_GetFightInfo_SC (826 body bytes)
+17:56:26  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFightInfo_SC             (826 body bytes, 877 total)
+17:56:26  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Guard_GetFormation_CS
+17:56:26  INFO       guard GET attack-formation
+17:56:26  INFO       -> PVZ.Cmd.Cmd_Guard_SyncFormation_SC (604 body bytes)
+17:56:26  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_SyncFormation_SC             (604 body bytes, 655 total)
+  GET /swf/battle/animation/unit/firePeashooter_6bc0a6c48b0a7c76d2f011e4409513dd.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/cattail_7c7bdd08d6db81e313233795af3270c9.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/pomegranate_6c3622b1448cc2b5d759885ba4eb3f8a.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/pugongying_08c49f2a170391751268be20504afd11.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/croton_67ac794670ef2789fc036f7c0b0b2ad4.bbone HTTP/1.1 -> 200
+17:56:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_FightRobTarget_CS
+17:56:27  INFO       guard FIGHT-ROB uin=700000204 index=2 vs=ÃÜ²ØÂÓ¶áÕß3 win=True power=1077703/166783 finish=False light=9983
+17:56:27  INFO       -> PVZ.Cmd.Cmd_Guard_FightRobTarget_SC (3379 body bytes)
+17:56:27  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_FightRobTarget_SC            (3379 body bytes, 3431 total)
+17:56:27  INFO       -> PVZ.Cmd.Cmd_SyncLight_SC (3 body bytes)
+17:56:27  INFO     -> S2C  PVZ.Cmd.Cmd_SyncLight_SC                       (3 body bytes, 43 total)
+  GET /swf/battle/animation/bullet/cattail_980c713d600f49a72f8a698c31bd4c5e.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/pomegranate_projectile_plantfood_8933a3ac60c73079c9513f51e2e2e05a.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/pomegranate_projectile_2deb229cbe0449cce60e7f8745090494.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/pea_projectile_fire_bc35df0e93bd3c7550f4799b08af4575.bbone HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /image/head/zombie.png HTTP/1.1 -> 200
+17:56:29  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_Battle_GetFightInfo_CS
+17:56:29  INFO       GuardRob preview: index=1 -> 6 enemy cards (211098 power)
+17:56:29  INFO       -> PVZ.Cmd.Cmd_Battle_GetFightInfo_SC (822 body bytes)
+17:56:29  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFightInfo_SC             (822 body bytes, 873 total)
+17:56:29  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Guard_GetFormation_CS
+17:56:29  INFO       guard GET attack-formation
+17:56:29  INFO       -> PVZ.Cmd.Cmd_Guard_SyncFormation_SC (604 body bytes)
+17:56:29  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_SyncFormation_SC             (604 body bytes, 655 total)
+  GET /swf/battle/animation/unit/ghostpepper_e026981bac229e85463bdcc2fd8d35e1.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/repeater_30bf5b6288e065eb2d536610ea9c6ac5.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/prismGrass_d08bb6c700461bed1a28f1ae28d31b57.bbone HTTP/1.1 -> 200
+17:56:30  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_FightRobTarget_CS
+17:56:30  INFO       guard FIGHT-ROB uin=700000204 index=1 vs=ÃÜ²ØÂÓ¶áÕß2 win=True power=1075000/133322 finish=False light=9982
+17:56:30  INFO       -> PVZ.Cmd.Cmd_Guard_FightRobTarget_SC (3402 body bytes)
+17:56:30  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_FightRobTarget_SC            (3402 body bytes, 3454 total)
+17:56:30  INFO       -> PVZ.Cmd.Cmd_SyncLight_SC (3 body bytes)
+17:56:30  INFO     -> S2C  PVZ.Cmd.Cmd_SyncLight_SC                       (3 body bytes, 43 total)
+  GET /swf/battle/animation/bullet/bullet_prism_05005752de2f3735e87641412e39d28f.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/bullet_ghostpepper_eaf8ebc0bf996ec6d9aa8143aa8b7a6f.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/eff_ghostpepper_092ae077b6e0a99047dd50ca5f849566.bbone HTTP/1.1 -> 200
+  GET /image/head/zombie.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+17:56:37  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Guard_CancelRob_CS
+17:56:37  INFO       guard CANCEL-ROB uin=700000204
+17:56:37  INFO       -> PVZ.Cmd.Cmd_Guard_CancelRob_SC (0 body bytes)
+17:56:37  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_CancelRob_SC                 (0 body bytes, 46 total)
+  GET /sound/ui/UI_button_click_fc7c7ffddca3766b5229b75b7b4dfdd3.swf HTTP/1.1 -> 200
+17:56:38  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_RefreshRobTarget_CS
+17:56:38  INFO       guard REFRESH-ROB uin=700000204 type=13 members=[('ÃÜ²ØÂÓ¶áÕß1', 308132, True), ('ÃÜ²ØÂÓ¶áÕß2', 290640, True), ('ÃÜ²ØÂÓ¶áÕß3', 264781, True)] refresh=25 coin=3782998
+17:56:38  INFO       -> PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC (830 body bytes)
+17:56:38  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC          (830 body bytes, 884 total)
+17:56:38  INFO       -> PVZ.Cmd.Cmd_SyncCoin_SC (5 body bytes)
+17:56:38  INFO     -> S2C  PVZ.Cmd.Cmd_SyncCoin_SC                        (5 body bytes, 44 total)
+  GET /swf/battle/animation/unit/sapling_ffbea5d361f27b22a7fcd6ff9bc56e68.bbone HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+17:56:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_Battle_GetFightInfo_CS
+17:56:39  INFO       GuardRob preview: index=1 -> 6 enemy cards (290640 power)
+17:56:39  INFO       -> PVZ.Cmd.Cmd_Battle_GetFightInfo_SC (826 body bytes)
+17:56:39  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFightInfo_SC             (826 body bytes, 877 total)
+17:56:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Guard_GetFormation_CS
+17:56:39  INFO       guard GET attack-formation
+17:56:39  INFO       -> PVZ.Cmd.Cmd_Guard_SyncFormation_SC (604 body bytes)
+17:56:39  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_SyncFormation_SC             (604 body bytes, 655 total)
+  GET /swf/battle/animation/unit/litchi_ecfaa201305e8eb5bdef43d065338a19.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/guacodile_3a8ef5aea847b9195aece97ef8db894b.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/electronic_pimaric_492bb0f5f7f020ed8ca0c55c2588a0b0.bbone HTTP/1.1 -> 200
+17:56:40  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_FightRobTarget_CS
+17:56:40  INFO       guard FIGHT-ROB uin=700000204 index=1 vs=ÃÜ²ØÂÓ¶áÕß2 win=True power=1077195/183559 finish=False light=9981
+17:56:40  INFO       -> PVZ.Cmd.Cmd_Guard_FightRobTarget_SC (3399 body bytes)
+17:56:40  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_FightRobTarget_SC            (3399 body bytes, 3451 total)
+17:56:40  INFO       -> PVZ.Cmd.Cmd_SyncLight_SC (3 body bytes)
+17:56:40  INFO     -> S2C  PVZ.Cmd.Cmd_SyncLight_SC                       (3 body bytes, 43 total)
+  GET /swf/battle/animation/effect/eff_sapling_18cdb451c5642ef8dd241a7f858b37f6.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/bullet_thunderPine_3acb5da4dffa0cdebd665e223a0c1e31.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/bullet_sapling_eb369ce5c7755898636143323bf6d538.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/bullet_thunderPine_projectile_ac44d23b86276cd7c21fbb16796866ef.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/bullet_guacodile_64ac0b1ed755665df3caae87f7f0227a.bbone HTTP/1.1 -> 200
+  GET /image/head/zombie.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+17:56:42  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_RefreshRobTarget_CS
+17:56:42  INFO       guard REFRESH-ROB uin=700000204 type=13 members=[('ÃÜ²ØÂÓ¶áÕß1', 149335, True), ('ÃÜ²ØÂÓ¶áÕß2', 201995, True), ('ÃÜ²ØÂÓ¶áÕß3', 284311, True)] refresh=26 coin=3782997
+17:56:42  INFO       -> PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC (828 body bytes)
+17:56:42  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC          (828 body bytes, 882 total)
+17:56:42  INFO       -> PVZ.Cmd.Cmd_SyncCoin_SC (5 body bytes)
+17:56:42  INFO     -> S2C  PVZ.Cmd.Cmd_SyncCoin_SC                        (5 body bytes, 44 total)
+  GET /swf/battle/animation/unit/nitration_mushroom_eeeee374246b9131d244afccf7be5a61.bbone HTTP/1.1 -> 200
+17:56:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_Battle_GetFightInfo_CS
+17:56:44  INFO       GuardRob preview: index=2 -> 6 enemy cards (284311 power)
+17:56:44  INFO       -> PVZ.Cmd.Cmd_Battle_GetFightInfo_SC (825 body bytes)
+17:56:44  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFightInfo_SC             (825 body bytes, 876 total)
+17:56:44  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Guard_GetFormation_CS
+17:56:44  INFO       guard GET attack-formation
+17:56:44  INFO       -> PVZ.Cmd.Cmd_Guard_SyncFormation_SC (604 body bytes)
+17:56:44  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_SyncFormation_SC             (604 body bytes, 655 total)
+  GET /swf/battle/animation/unit/coconutCannon_0fb6d46a412b5f7b2353c51f6d4448bc.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/pumpkin_c721f7981221b8e79b6b6ca1f60ae55f.bbone HTTP/1.1 -> 200
+17:56:45  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_FightRobTarget_CS
+17:56:45  INFO       guard FIGHT-ROB uin=700000204 index=2 vs=ÃÜ²ØÂÓ¶áÕß3 win=True power=1078010/179561 finish=False light=9980
+17:56:45  INFO       -> PVZ.Cmd.Cmd_Guard_FightRobTarget_SC (3354 body bytes)
+17:56:45  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_FightRobTarget_SC            (3354 body bytes, 3406 total)
+17:56:45  INFO       -> PVZ.Cmd.Cmd_SyncLight_SC (3 body bytes)
+17:56:45  INFO     -> S2C  PVZ.Cmd.Cmd_SyncLight_SC                       (3 body bytes, 43 total)
+  GET /swf/battle/animation/effect/coconutCannon_explosion_0bbda5ca80c3c770b5bfb5ecc147c1b4.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/bullet_coconut_small_c80e2d3e728b24deea4cfd961616f6e7.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/bullet_coconut_0269c809c4b1186aec617e5a70df30cc.bbone HTTP/1.1 -> 200
+  GET /image/head/zombie.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+17:56:50  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_Battle_GetFightInfo_CS
+17:56:50  INFO       GuardRob preview: index=1 -> 6 enemy cards (201995 power)
+17:56:50  INFO       -> PVZ.Cmd.Cmd_Battle_GetFightInfo_SC (823 body bytes)
+17:56:50  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFightInfo_SC             (823 body bytes, 874 total)
+17:56:50  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Guard_GetFormation_CS
+17:56:50  INFO       guard GET attack-formation
+17:56:50  INFO       -> PVZ.Cmd.Cmd_Guard_SyncFormation_SC (604 body bytes)
+17:56:50  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_SyncFormation_SC             (604 body bytes, 655 total)
+  GET /swf/battle/animation/unit/waterbomb_d5ab57155512e1a98de94f66b817c193.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/bonkchoy_9992cce20c441c3b0776ed52f1d903bf.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/banana_b986eff4b249673883db5943e1fdebf7.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/sunflower_137be76fe85aa0ca5e22fd4f3f92f070.bbone HTTP/1.1 -> 200
+17:56:51  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_FightRobTarget_CS
+17:56:51  INFO       guard FIGHT-ROB uin=700000204 index=1 vs=ÃÜ²ØÂÓ¶áÕß2 win=True power=1078233/127573 finish=False light=9979
+17:56:51  INFO       -> PVZ.Cmd.Cmd_Guard_FightRobTarget_SC (3302 body bytes)
+17:56:51  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_FightRobTarget_SC            (3302 body bytes, 3354 total)
+17:56:51  INFO       -> PVZ.Cmd.Cmd_SyncLight_SC (3 body bytes)
+17:56:51  INFO     -> S2C  PVZ.Cmd.Cmd_SyncLight_SC                       (3 body bytes, 43 total)
+  GET /swf/battle/animation/bullet/banana_projectile_66710d263093e3d908bcd28506f8f104.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/fireDragon_effect_2e022616db03d63769063d84587a778e.bbone HTTP/1.1 -> 200
+  GET /image/head/zombie.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /sound/ui/UI_button_click_fc7c7ffddca3766b5229b75b7b4dfdd3.swf HTTP/1.1 -> 200
+17:56:57  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Guard_CancelRob_CS
+17:56:57  INFO       guard CANCEL-ROB uin=700000204
+17:56:57  INFO       -> PVZ.Cmd.Cmd_Guard_CancelRob_SC (0 body bytes)
+17:56:57  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_CancelRob_SC                 (0 body bytes, 46 total)
+17:56:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_RefreshRobTarget_CS
+17:56:58  INFO       guard REFRESH-ROB uin=700000204 type=13 members=[('ÃÜ²ØÂÓ¶áÕß1', 206884, True), ('ÃÜ²ØÂÓ¶áÕß2', 331811, True), ('ÃÜ²ØÂÓ¶áÕß3', 254929, True)] refresh=27 coin=3782996
+17:56:58  INFO       -> PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC (833 body bytes)
+17:56:58  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC          (833 body bytes, 887 total)
+17:56:58  INFO       -> PVZ.Cmd.Cmd_SyncCoin_SC (5 body bytes)
+17:56:58  INFO     -> S2C  PVZ.Cmd.Cmd_SyncCoin_SC                        (5 body bytes, 44 total)
+  GET /swf/battle/animation/unit/icePea_0d621e583e1dd4efdc43a780583b13d8.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/doublePea_397f21815fe05c7e3aeb54713c5892e3.bbone HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+17:56:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_Battle_GetFightInfo_CS
+17:56:59  INFO       GuardRob preview: index=0 -> 6 enemy cards (206884 power)
+17:56:59  INFO       -> PVZ.Cmd.Cmd_Battle_GetFightInfo_SC (825 body bytes)
+17:56:59  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFightInfo_SC             (825 body bytes, 876 total)
+17:56:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Guard_GetFormation_CS
+17:56:59  INFO       guard GET attack-formation
+17:56:59  INFO       -> PVZ.Cmd.Cmd_Guard_SyncFormation_SC (604 body bytes)
+17:56:59  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_SyncFormation_SC             (604 body bytes, 655 total)
+  GET /swf/battle/animation/unit/flycatcher_d45a3df72390609081d734e4cd20411f.bbone HTTP/1.1 -> 200
+17:57:00  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_FightRobTarget_CS
+17:57:00  INFO       guard FIGHT-ROB uin=700000204 index=0 vs=ÃÜ²ØÂÓ¶áÕß1 win=True power=1076231/130661 finish=False light=9978
+17:57:00  INFO       -> PVZ.Cmd.Cmd_Guard_FightRobTarget_SC (3249 body bytes)
+17:57:00  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_FightRobTarget_SC            (3249 body bytes, 3301 total)
+17:57:00  INFO       -> PVZ.Cmd.Cmd_SyncLight_SC (3 body bytes)
+17:57:00  INFO     -> S2C  PVZ.Cmd.Cmd_SyncLight_SC                       (3 body bytes, 43 total)
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /image/head/zombie.png HTTP/1.1 -> 200
+17:57:03  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_Battle_GetFightInfo_CS
+17:57:03  INFO       GuardRob preview: index=1 -> 6 enemy cards (331811 power)
+17:57:03  INFO       -> PVZ.Cmd.Cmd_Battle_GetFightInfo_SC (826 body bytes)
+17:57:03  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFightInfo_SC             (826 body bytes, 877 total)
+17:57:03  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Guard_GetFormation_CS
+17:57:03  INFO       guard GET attack-formation
+17:57:03  INFO       -> PVZ.Cmd.Cmd_Guard_SyncFormation_SC (604 body bytes)
+17:57:03  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_SyncFormation_SC             (604 body bytes, 655 total)
+  GET /swf/battle/animation/unit/springBean_0b811a3e61420351f78ad648353584af.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/lemon_495773490eb7ab018635106c183a253e.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/lemon&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/lemon&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/lemon&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/lemon&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/lemon&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/lemon&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/lemon&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/lemon&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/lemon&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/lemon&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/unit/lemon&holder_custom&custom_01.bpart HTTP/1.1 -> File not found
+  GET /swf/battle/animation/unit/lemon&holder_custom&custom_01.bpart HTTP/1.1 -> 404  <<< NOT FOUND
+17:57:04  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_FightRobTarget_CS
+17:57:04  INFO       guard FIGHT-ROB uin=700000204 index=1 vs=ÃÜ²ØÂÓ¶áÕß2 win=True power=1078084/209561 finish=False light=9977
+17:57:04  INFO       -> PVZ.Cmd.Cmd_Guard_FightRobTarget_SC (3324 body bytes)
+17:57:04  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_FightRobTarget_SC            (3324 body bytes, 3376 total)
+17:57:04  INFO       -> PVZ.Cmd.Cmd_SyncLight_SC (3 body bytes)
+17:57:04  INFO     -> S2C  PVZ.Cmd.Cmd_SyncLight_SC                       (3 body bytes, 43 total)
+  GET /swf/battle/animation/bullet/bullet_lemon_small_e7257a187a050976b28f4aec6416cece.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/pea_projectile_ice_d36edf7c2f707cdfac9d101a0433baf9.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/ice_effect_a2c08428d97020321214fcb4b8de77f7.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/bullet_lemon_big_82ea8fb65fc454bc66fc56d3dd7cc472.bbone HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /image/head/zombie.png HTTP/1.1 -> 200
+  GET /sound/ui/UI_button_click_fc7c7ffddca3766b5229b75b7b4dfdd3.swf HTTP/1.1 -> 200
+17:57:10  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Guard_CancelRob_CS
+17:57:10  INFO       guard CANCEL-ROB uin=700000204
+17:57:10  INFO       -> PVZ.Cmd.Cmd_Guard_CancelRob_SC (0 body bytes)
+17:57:10  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_CancelRob_SC                 (0 body bytes, 46 total)
+17:57:10  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_RefreshRobTarget_CS
+17:57:10  INFO       guard REFRESH-ROB uin=700000204 type=13 members=[('ÃÜ²ØÂÓ¶áÕß1', 299407, True), ('ÃÜ²ØÂÓ¶áÕß2', 189593, True), ('ÃÜ²ØÂÓ¶áÕß3', 231468, True)] refresh=28 coin=3782995
+17:57:10  INFO       -> PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC (830 body bytes)
+17:57:10  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC          (830 body bytes, 884 total)
+17:57:10  INFO       -> PVZ.Cmd.Cmd_SyncCoin_SC (5 body bytes)
+17:57:10  INFO     -> S2C  PVZ.Cmd.Cmd_SyncCoin_SC                        (5 body bytes, 44 total)
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+17:57:11  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_Battle_GetFightInfo_CS
+17:57:11  INFO       GuardRob preview: index=2 -> 6 enemy cards (231468 power)
+17:57:11  INFO       -> PVZ.Cmd.Cmd_Battle_GetFightInfo_SC (824 body bytes)
+17:57:11  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFightInfo_SC             (824 body bytes, 875 total)
+17:57:11  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Guard_GetFormation_CS
+17:57:11  INFO       guard GET attack-formation
+17:57:11  INFO       -> PVZ.Cmd.Cmd_Guard_SyncFormation_SC (604 body bytes)
+17:57:11  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_SyncFormation_SC             (604 body bytes, 655 total)
+  GET /swf/battle/animation/unit/jalapeno_750ec96cfaefbbda7ff21609fcb9c435.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/hurrikale_3a2561f9039300c5653f0186cf2dd93e.bbone HTTP/1.1 -> 200
+17:57:13  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_Battle_GetFightInfo_CS
+17:57:14  INFO       GuardRob preview: index=1 -> 6 enemy cards (189593 power)
+17:57:14  INFO       -> PVZ.Cmd.Cmd_Battle_GetFightInfo_SC (823 body bytes)
+17:57:14  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFightInfo_SC             (823 body bytes, 874 total)
+17:57:14  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Guard_GetFormation_CS
+17:57:14  INFO       guard GET attack-formation
+17:57:14  INFO       -> PVZ.Cmd.Cmd_Guard_SyncFormation_SC (604 body bytes)
+17:57:14  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_SyncFormation_SC             (604 body bytes, 655 total)
+  GET /swf/battle/animation/unit/robinhoak_431b071e47497a8236bc05cb30b20a43.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/groundThornKing_b96bafad05e338ab316ce5aa5ff21c48.bbone HTTP/1.1 -> 200
+17:57:14  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_FightRobTarget_CS
+17:57:14  INFO       guard FIGHT-ROB uin=700000204 index=1 vs=ÃÜ²ØÂÓ¶áÕß2 win=True power=1077158/119741 finish=False light=9976
+17:57:14  INFO       -> PVZ.Cmd.Cmd_Guard_FightRobTarget_SC (3152 body bytes)
+17:57:14  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_FightRobTarget_SC            (3152 body bytes, 3204 total)
+17:57:14  INFO       -> PVZ.Cmd.Cmd_SyncLight_SC (3 body bytes)
+17:57:14  INFO     -> S2C  PVZ.Cmd.Cmd_SyncLight_SC                       (3 body bytes, 43 total)
+  GET /swf/battle/animation/bullet/bullet_robinhoak_d595546d4b4f1a795fac7482832ce549.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/effect_robinhoak_.bbone HTTP/1.1 -> File not found
+  GET /swf/battle/animation/effect/groundThorn_6f3fd9c7512df10afdf82dd1e875f91f.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/effect_robinhoak_.bbone HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/bullet/effect_robinhoak_.bbone HTTP/1.1 -> File not found
+  GET /swf/battle/animation/bullet/effect_robinhoak_.bbone HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/bullet/effect_robinhoak_.bbone HTTP/1.1 -> File not found
+  GET /swf/battle/animation/bullet/effect_robinhoak_.bbone HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/bullet/effect_robinhoak_.bbone HTTP/1.1 -> File not found
+  GET /swf/battle/animation/bullet/effect_robinhoak_.bbone HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/bullet/effect_robinhoak_.bbone HTTP/1.1 -> File not found
+  GET /swf/battle/animation/bullet/effect_robinhoak_.bbone HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /swf/battle/animation/bullet/effect_robinhoak_.bbone HTTP/1.1 -> File not found
+  GET /swf/battle/animation/bullet/effect_robinhoak_.bbone HTTP/1.1 -> 404  <<< NOT FOUND
+  GET /image/head/zombie.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /sound/ui/UI_button_click_fc7c7ffddca3766b5229b75b7b4dfdd3.swf HTTP/1.1 -> 200
+17:57:17  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_Battle_GetFightInfo_CS
+17:57:17  INFO       GuardRob preview: index=2 -> 6 enemy cards (231468 power)
+17:57:17  INFO       -> PVZ.Cmd.Cmd_Battle_GetFightInfo_SC (824 body bytes)
+17:57:17  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFightInfo_SC             (824 body bytes, 875 total)
+17:57:17  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Guard_GetFormation_CS
+17:57:17  INFO       guard GET attack-formation
+17:57:17  INFO       -> PVZ.Cmd.Cmd_Guard_SyncFormation_SC (604 body bytes)
+17:57:17  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_SyncFormation_SC             (604 body bytes, 655 total)
+17:57:18  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_FightRobTarget_CS
+17:57:18  INFO       guard FIGHT-ROB uin=700000204 index=2 vs=ÃÜ²ØÂÓ¶áÕß3 win=True power=1078010/146187 finish=False light=9975
+17:57:18  INFO       -> PVZ.Cmd.Cmd_Guard_FightRobTarget_SC (3254 body bytes)
+17:57:18  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_FightRobTarget_SC            (3254 body bytes, 3306 total)
+17:57:18  INFO       -> PVZ.Cmd.Cmd_SyncLight_SC (3 body bytes)
+17:57:18  INFO     -> S2C  PVZ.Cmd.Cmd_SyncLight_SC                       (3 body bytes, 43 total)
+  GET /swf/battle/animation/effect/effect_bullet_guide_the_ji_0931c8735a55c1a468828a9acdf54155.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/bullet_guide_the_ji_2668e8f4167808a59dcbd0dbada0168f.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/effect_bullet_guide_the_ji_spec_dcc9ec59cc8487d8eac9a5eae1076d6c.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/bullet_guide_the_ji_spec_34ed778da5fddcb2c9fd8909bd4b4f0b.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/effect/eff_jalapeno_5581b5e63de7c6a600b4c59bc8e4d488.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/wind_hurrikale_big_50bf8e626b365a223a5eb5d18e8fdd0c.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/bullet/wind_hurrikale_small_0c768253e84b755bfa79736c8a9807e3.bbone HTTP/1.1 -> 200
+  GET /image/head/zombie.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+17:57:34  INFO   bot AI tick: 900015 vs 900008 -> a won
+17:57:49  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=30 cmdName=PVZ.Cmd.Cmd_Idle_CS
+17:57:49  INFO       -> PVZ.Cmd.Cmd_Idle_SC (6 body bytes)
+17:57:49  INFO     -> S2C  PVZ.Cmd.Cmd_Idle_SC                            (6 body bytes, 41 total)
+17:57:51  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Guard_CancelRob_CS
+17:57:51  INFO       guard CANCEL-ROB uin=700000204
+17:57:51  INFO       -> PVZ.Cmd.Cmd_Guard_CancelRob_SC (0 body bytes)
+17:57:51  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_CancelRob_SC                 (0 body bytes, 46 total)
+  GET /sound/ui/UI_button_click_fc7c7ffddca3766b5229b75b7b4dfdd3.swf HTTP/1.1 -> 200
+17:57:52  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_RefreshRobTarget_CS
+17:57:52  INFO       guard REFRESH-ROB uin=700000204 type=13 members=[('ÃÜ²ØÂÓ¶áÕß1', 359175, True), ('ÃÜ²ØÂÓ¶áÕß2', 151013, True), ('ÃÜ²ØÂÓ¶áÕß3', 249913, True)] refresh=29 coin=3782994
+17:57:52  INFO       -> PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC (827 body bytes)
+17:57:52  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC          (827 body bytes, 881 total)
+17:57:52  INFO       -> PVZ.Cmd.Cmd_SyncCoin_SC (5 body bytes)
+17:57:52  INFO     -> S2C  PVZ.Cmd.Cmd_SyncCoin_SC                        (5 body bytes, 44 total)
+  GET /swf/battle/animation/unit/potatomine_a68e804e9a3cac3573038e7fb645c39a.bbone HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/plantern_a981f43c6d51ad4ccb04db8fd5002ce5.bbone HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/potatomine&holder_custom_001&potatomine_bulb.bpart HTTP/1.1 -> 200
+17:57:53  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_Battle_GetFightInfo_CS
+17:57:53  INFO       GuardRob preview: index=0 -> 6 enemy cards (359175 power)
+17:57:53  INFO       -> PVZ.Cmd.Cmd_Battle_GetFightInfo_SC (827 body bytes)
+17:57:53  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFightInfo_SC             (827 body bytes, 878 total)
+17:57:53  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Guard_GetFormation_CS
+17:57:53  INFO       guard GET attack-formation
+17:57:53  INFO       -> PVZ.Cmd.Cmd_Guard_SyncFormation_SC (604 body bytes)
+17:57:53  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_SyncFormation_SC             (604 body bytes, 655 total)
+  GET /swf/battle/animation/unit/zhuxiaolong_37b0349583a6a966706f9dc025c10077.bbone HTTP/1.1 -> 200
+  GET /swf/battle/animation/unit/rosefighter_adbbc7cd04e885508e27770a1caa83a7.bbone HTTP/1.1 -> 200
+17:57:55  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_FightRobTarget_CS
+17:57:55  INFO       guard FIGHT-ROB uin=700000204 index=0 vs=ÃÜ²ØÂÓ¶áÕß1 win=True power=1078233/226843 finish=False light=9974
+17:57:55  INFO       -> PVZ.Cmd.Cmd_Guard_FightRobTarget_SC (3408 body bytes)
+17:57:55  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_FightRobTarget_SC            (3408 body bytes, 3460 total)
+17:57:55  INFO       -> PVZ.Cmd.Cmd_SyncLight_SC (3 body bytes)
+17:57:55  INFO     -> S2C  PVZ.Cmd.Cmd_SyncLight_SC                       (3 body bytes, 43 total)
+  GET /swf/battle/animation/bullet/bullet_plantern_549ef7da1d5c8664debd59c493ab7be8.bbone HTTP/1.1 -> 200
+  GET /image/head/zombie.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+17:57:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_Battle_GetFightInfo_CS
+17:57:58  INFO       GuardRob preview: index=1 -> 6 enemy cards (151013 power)
+17:57:58  INFO       -> PVZ.Cmd.Cmd_Battle_GetFightInfo_SC (821 body bytes)
+17:57:58  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFightInfo_SC             (821 body bytes, 872 total)
+17:57:58  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Guard_GetFormation_CS
+17:57:58  INFO       guard GET attack-formation
+17:57:58  INFO       -> PVZ.Cmd.Cmd_Guard_SyncFormation_SC (604 body bytes)
+17:57:58  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_SyncFormation_SC             (604 body bytes, 655 total)
+17:57:59  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Guard_FightRobTarget_CS
+17:57:59  INFO       guard FIGHT-ROB uin=700000204 index=1 vs=ÃÜ²ØÂÓ¶áÕß2 win=True power=1079345/95375 finish=False light=9973
+17:57:59  INFO       -> PVZ.Cmd.Cmd_Guard_FightRobTarget_SC (3277 body bytes)
+17:57:59  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_FightRobTarget_SC            (3277 body bytes, 3329 total)
+17:57:59  INFO       -> PVZ.Cmd.Cmd_SyncLight_SC (3 body bytes)
+17:57:59  INFO     -> S2C  PVZ.Cmd.Cmd_SyncLight_SC                       (3 body bytes, 43 total)
+  GET /image/head/zombie.png HTTP/1.1 -> 200
+  GET /image/head/unknow.png HTTP/1.1 -> 200
+17:58:04  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Guard_CancelRob_CS
+17:58:04  INFO       guard CANCEL-ROB uin=700000204
+17:58:04  INFO       -> PVZ.Cmd.Cmd_Guard_CancelRob_SC (0 body bytes)
+17:58:04  INFO     -> S2C  PVZ.Cmd.Cmd_Guard_CancelRob_SC                 (0 body bytes, 46 total)
+  GET /sound/ui/UI_button_click_fc7c7ffddca3766b5229b75b7b4dfdd3.swf HTTP/1.1 -> 200
+17:58:05  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+17:58:05  INFO       battle GET formation: 6 cards {3: 10001243, 7: 10006503, 9: 10006904, 11: 10001706, 13: 10008103, 15: 10001223}
+17:58:05  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (1210 body bytes)
+17:58:05  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (1210 body bytes, 1261 total)
+17:58:05  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+17:58:05  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+17:58:05  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+17:58:05  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+17:58:05  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+17:58:05  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+17:58:05  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_City_GetTownDurability_CS
+17:58:05  INFO       -> PVZ.Cmd.Cmd_City_GetTownDurability_SC (0 body bytes)
+17:58:05  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetTownDurability_SC          (0 body bytes, 53 total)
+17:58:05  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=38 cmdName=PVZ.Cmd.Cmd_TD_GetStageInfo_CS
+17:58:05  INFO       TD stage info: stage=5 passed=[(1, 1, 1, [10]), (2, 1, 1, [10]), (2, 2, 3, [3, 6, 10]), (2, 3, 3, [3, 6, 10]), (2, 4, 3, [3, 6, 10]), (3, 1, 1, [10]), (4, 1, 1, [10]), (4, 2, 3, [1, 6, 10]), (4, 3, 3, [1, 6, 10]), (4, 4, 3, [1, 6, 10]), (5, 1, 1, [10]), (6, 1, 1, [10]), (6, 2, 1, [10]), (6, 3, 1, [10]), (6, 4, 1, [10]), (7, 1, 1, [10]), (8, 1, 1, [10]), (8, 2, 3, [6, 7, 10]), (8, 3, 3, [6, 7, 10]), (8, 4, 3, [6, 7, 10]), (9, 1, 1, [10]), (10, 1, 3, [6, 10, 11]), (10, 2, 3, [6, 10, 11]), (10, 3, 3, [6, 10, 11]), (10, 4, 1, [10]), (11, 1, 3, [4, 6, 10]), (12, 1, 3, [4, 6, 10]), (12, 2, 3, [4, 6, 10]), (12, 3, 1, [10]), (12, 4, 3, [6, 9, 10]), (13, 1, 3, [6, 9, 10]), (14, 1, 3, [6, 9, 10]), (14, 2, 1, [10]), (14, 3, 3, [5, 6, 10]), (14, 4, 3, [5, 6, 10]), (15, 1, 3, [5, 6, 10]), (16, 1, 1, [10]), (16, 2, 3, [6, 8, 10]), (16, 3, 3, [6, 8, 10]), (16, 4, 3, [6, 8, 10]), (17, 1, 1, [10]), (18, 1, 3, [3, 6, 10]), (18, 2, 3, [3, 6, 10]), (18, 3, 3, [3, 6, 10]), (18, 4, 1, [10]), (19, 1, 3, [6, 9, 10]), (19, 2, 3, [6, 9, 10]), (19, 3, 3, [6, 9, 10]), (19, 4, 1, [10]), (20, 1, 3, [1, 6, 10]), (20, 2, 3, [1, 6, 10]), (20, 3, 3, [1, 6, 10]), (20, 4, 1, [10]), (21, 1, 3, [2, 6, 10]), (21, 2, 3, [2, 6, 10]), (21, 3, 3, [2, 6, 10]), (21, 4, 1, [10]), (22, 1, 3, [4, 6, 10]), (22, 2, 3, [4, 6, 10]), (22, 3, 3, [4, 6, 10]), (22, 4, 1, [10]), (23, 1, 3, [4, 6, 10])] gates=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17] totalStars=142
+17:58:05  INFO       -> PVZ.Cmd.Cmd_TD_GetStageInfo_SC (695 body bytes)
+17:58:05  INFO     -> S2C  PVZ.Cmd.Cmd_TD_GetStageInfo_SC                 (695 body bytes, 742 total)
+17:58:05  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_Welfare_DailyActivity_CS
+17:58:05  INFO       -> PVZ.Cmd.Cmd_Welfare_DailyActivity_SC (3650 body bytes)
+17:58:05  INFO     -> S2C  PVZ.Cmd.Cmd_Welfare_DailyActivity_SC           (3650 body bytes, 3703 total)
+17:58:05  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=37 cmdName=PVZ.Cmd.Cmd_GetClientData_CS
+17:58:05  INFO       -> PVZ.Cmd.Cmd_GetClientData_SC (4 body bytes)
+17:58:05  INFO     -> S2C  PVZ.Cmd.Cmd_GetClientData_SC                   (4 body bytes, 48 total)
+  GET /swf/friend/lv_back.png HTTP/1.1 -> 200
+  GET /swf/friend/icon_my_line_rect1.png HTTP/1.1 -> 200
+  GET /swf/friend/friend_alert_off.png HTTP/1.1 -> 200
+  GET /swf/friend/friend_newMsg_icon.png HTTP/1.1 -> 200
+  GET /sound/ui/UI_button_back_2ecc2b0cd04bb322805984a65c56eb19.swf HTTP/1.1 -> 200
+  GET /swf/friend/icon_friend_line_rect1.png HTTP/1.1 -> 200
+  GET /swf/friend/page_bg.png HTTP/1.1 -> 200
+  GET /swf/friend/search_back.png HTTP/1.1 -> 200
+  GET /swf/chat/btn_down_42e229e4908f545000d32be1ddc59224.swf HTTP/1.1 -> 200
+  GET /swf/chat/chatBgBig.png HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/11_36a823ac33169a3ccf869dd3a7d4e9b7.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/10_e220db9882da8b37bcc374c9292da5f4.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/1001_ba620136080c5b985437857dba9c3849.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/1005_dbad185e2c0b2155e058b65634d23276.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/1012_6d64ada23a179f4e50d7c494c689f475.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/1010_7bdfec855ac0ded1a2b9fec8eedca26e.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/1009_c54cc38832cc8414a1bbea9305298e92.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/1019_1490e9bf96a36f939837408c9a169fb3.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/1017_1c187acc3647fa56f1461c67f2c7efad.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/1018_ccf645126e083415b875baa63b25acbd.swf HTTP/1.1 -> 200
+  GET /swf/activity/everyDayIcons/1020_f1d112bd1fd951e2e88862da32f49503.swf HTTP/1.1 -> 200
+  GET /swf/activity/icons/13_ddac7c0995bfb8d6c6f292a66469a794.swf HTTP/1.1 -> 200
+  GET /swf/activity/icons/10002_e9bbc678781efbc95f5414f78d36fd8a.swf HTTP/1.1 -> 200
+  GET /swf/city/building280_1cb474186c868c1cd00df12714b35f0f.swf HTTP/1.1 -> 200
+  GET /swf/activity/icons/11_2ad5ea776194d63827c1dfd22c309089.swf HTTP/1.1 -> 200
+17:58:05  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_TopFight_TopN_CS
+17:58:05  INFO       -> PVZ.Cmd.Cmd_TopFight_TopN_SC (0 body bytes)
+17:58:05  INFO     -> S2C  PVZ.Cmd.Cmd_TopFight_TopN_SC                   (0 body bytes, 44 total)
+  GET /swf/city/building260_725a1e18e9ae86a4614fb920cb65b431.swf HTTP/1.1 -> 200
+  GET /swf/city/building270_7f51faf093896934bb518f82ad405d03.swf HTTP/1.1 -> 200
+  GET /swf/city/building250_b4c640e866b08e65d6317962baee79bd.swf HTTP/1.1 -> 200
+  GET /swf/city/building230_791b4f7ccc839acc7ae71db7ee405caf.swf HTTP/1.1 -> 200
+  GET /swf/city/building240_5673c0a499dd0bc101178f0efa9c922b.swf HTTP/1.1 -> 200
+  GET /swf/city/building220_7809bf538a5bee994082414646291495.swf HTTP/1.1 -> 200
+  GET /swf/city/building170_58c6b771720265b7c5e3609a950f25de.swf HTTP/1.1 -> 200
+  GET /swf/city/building190_4db2aa4b7d4f7883d44c82b988b3a49d.swf HTTP/1.1 -> 200
+  GET /swf/city/building200_6e4f25fa9148eeb9a452ab75e4091c07.swf HTTP/1.1 -> 200
+  GET /swf/city/building160_4dd4fa2fe229bc1f36df6e8ba288c08e.swf HTTP/1.1 -> 200
+  GET /swf/city/building130_ee5d759565b0f76105e109ec3a0dd997.swf HTTP/1.1 -> 200
+  GET /swf/city/building140_d3927856eca969011e369760f92f8407.swf HTTP/1.1 -> 200
+  GET /swf/city/building150_5673c0a499dd0bc101178f0efa9c922b.swf HTTP/1.1 -> 200
+  GET /swf/city/building120_8c91babf80baad50d2d0bb8dcd82c2dc.swf HTTP/1.1 -> 200
+  GET /swf/city/building110_132f3fb31c696a2dd50c9f1a6f26838b.swf HTTP/1.1 -> 200
+  GET /swf/city/building60_d91e9c0e10700875be45fcd0739286f4.swf HTTP/1.1 -> 200
+  GET /swf/city/building30_8523afc14ddb08dcbbefe557ca2e8878.swf HTTP/1.1 -> 200
+  GET /swf/city/building80_80612d3ecf28a1d7c677118ca4f90717.swf HTTP/1.1 -> 200
+  GET /swf/city/building10_81d7d232d0d93d09749dc25677bab738.swf HTTP/1.1 -> 200
+  GET /swf/city/building70_39e7f8ea372538108b5bab5372fb81fe.swf HTTP/1.1 -> 200
+  GET /swf/city/new_btn_to_dummy_02ce0ee2afb6fc3a66e34a1215d7d4b0.swf HTTP/1.1 -> 200
+  GET /swf/city/new_btn_to_illustrations_f6a7da0d530eecb0c6fd9a0ed152f37a.swf HTTP/1.1 -> 200
+  GET /swf/activity/promotionFlag_7e7a0845408a825dfe2d2c92871e2834.swf HTTP/1.1 -> 200
+  GET /swf/city/new_btn_to_shop_72b442432829c293d3590bd75505baf4.swf HTTP/1.1 -> 200
+  GET /swf/city/new_btn_to_worldMap_0b751e1d780bc6c19fea70e102f0c448.swf HTTP/1.1 -> 200
+17:58:06  INFO   === client disconnected: ('127.0.0.1', 51451) ===
+17:59:34  INFO   bot AI tick: 900039 vs 900015 -> a won
+18:01:34  INFO   bot AI tick: 900036 vs 900023 -> a won
+18:03:34  INFO   bot AI tick: 900034 vs 900007 -> a won
+18:05:34  INFO   bot AI tick: 900029 vs 900020 -> a won
+18:07:34  INFO   bot AI tick: 900044 vs 900028 -> a won
+18:09:34  INFO   bot AI tick: 900024 vs 900008 -> a won
+18:11:34  INFO   bot AI tick: 900020 vs 900036 -> b won
+18:13:34  INFO   bot AI tick: 900024 vs 900010 -> a won
+18:15:34  INFO   bot AI tick: 900030 vs 900019 -> a won
+18:17:35  INFO   bot AI tick: 900035 vs 900034 -> a won
+18:19:35  INFO   bot AI tick: 900042 vs 900034 -> a won
+18:21:35  INFO   bot AI tick: 900015 vs 900010 -> a won
+18:23:35  INFO   bot AI tick: 900028 vs 900042 -> b won
+18:25:35  INFO   bot AI tick: 900034 vs 900011 -> a won
+18:27:35  INFO   bot AI tick: 900039 vs 900017 -> a won
+18:29:35  INFO   bot AI tick: 900001 vs 900008 -> b won
+18:31:35  INFO   bot AI tick: 900036 vs 900040 -> b won
+18:33:35  INFO   bot AI tick: 900003 vs 900015 -> b won
+18:35:35  INFO   bot AI tick: 900003 vs 900044 -> b won
+18:37:35  INFO   bot AI tick: 900021 vs 900019 -> a won
+18:39:35  INFO   bot AI tick: 900010 vs 900044 -> b won
+18:41:35  INFO   bot AI tick: 900044 vs 900005 -> a won
+18:43:35  INFO   bot AI tick: 900012 vs 900028 -> b won
+18:45:35  INFO   bot AI tick: 900016 vs 900048 -> b won
+18:47:25  INFO   === client connected on PORT 9001 from ('127.0.0.1', 62025) ===
+18:47:25  INFO   === client disconnected: ('127.0.0.1', 62025) ===

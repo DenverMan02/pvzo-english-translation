@@ -1,0 +1,75 @@
+311 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.8
+311 INFO: Python: 3.13.12
+332 INFO: Platform: Windows-11-10.0.26200-SP0
+332 INFO: Python environment: C:\Users\huawei\.workbuddy\binaries\python\envs\default
+333 INFO: wrote C:/Users/huawei/Downloads/pvzol本地最新最新/pvzol本地/build_exe\PvZOnline.spec
+336 INFO: Removing temporary files and cleaning cache in C:\Users\huawei\AppData\Local\pyinstaller
+340 INFO: Module search paths (PYTHONPATH):
+['C:\\Users\\huawei\\Downloads\\pvzol本地最新最新\\pvzol本地',
+ 'C:\\Users\\huawei\\AppData\\Local\\Programs\\WorkBuddy\\resources\\app.asar.unpacked\\cli\\vendor\\shim',
+ 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\versions\\3.13.12\\python313.zip',
+ 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\versions\\3.13.12\\DLLs',
+ 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\versions\\3.13.12\\Lib',
+ 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\versions\\3.13.12',
+ 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default',
+ 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages',
+ 'C:\\Users\\huawei\\Downloads\\pvzol本地最新最新\\pvzol本地',
+ 'C:\\Users\\huawei\\Downloads\\pvzol本地最新最新\\pvzol本地\\PvZ-Server-PoC']
+1370 INFO: checking Analysis
+1370 INFO: Building Analysis because Analysis-00.toc is non existent
+1370 INFO: Looking for Python shared library...
+1370 INFO: Using Python shared library: C:\Users\huawei\.workbuddy\binaries\python\versions\3.13.12\python313.dll
+1370 INFO: Running Analysis Analysis-00.toc
+1370 INFO: Target bytecode optimization level: 0
+1370 INFO: Initializing module dependency graph...
+1391 INFO: Initializing module graph hook caches...
+1403 INFO: Analyzing modules for base_library.zip ...
+5410 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+6671 INFO: Processing standard module hook 'hook-math.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+9110 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+10986 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+12037 INFO: Caching module dependency graph...
+12113 INFO: Analyzing C:\Users\huawei\Downloads\pvzol本地最新最新\pvzol本地\launcher.py
+12205 INFO: Processing pre-find-module-path hook 'hook-tkinter.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks\\pre_find_module_path'
+12210 INFO: TclTkInfo: initializing cached Tcl/Tk info...
+13244 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+13511 INFO: Processing standard module hook 'hook-sqlite3.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+16887 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+17235 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+17853 INFO: Processing standard module hook 'hook-sysconfig.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+17868 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+19182 INFO: Processing module hooks (post-graph stage)...
+19787 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+19803 INFO: Performing binary vs. data reclassification (923 entries)
+21098 INFO: Looking for ctypes DLLs
+21110 INFO: Analyzing run-time hooks ...
+21112 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+21121 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+21127 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+21135 INFO: Including run-time hook 'pyi_rth__tkinter.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+21192 INFO: Creating base_library.zip...
+21233 INFO: Looking for dynamic libraries
+22196 INFO: Extra DLL search directories (AddDllDirectory): []
+22196 INFO: Extra DLL search directories (PATH): []
+22907 INFO: Warnings written to C:\Users\huawei\Downloads\pvzol本地最新最新\pvzol本地\build_exe\work_launcher\PvZOnline\warn-PvZOnline.txt
+22944 INFO: Graph cross-reference written to C:\Users\huawei\Downloads\pvzol本地最新最新\pvzol本地\build_exe\work_launcher\PvZOnline\xref-PvZOnline.html
+23086 INFO: checking PYZ
+23086 INFO: Building PYZ because PYZ-00.toc is non existent
+23086 INFO: Building PYZ (ZlibArchive) C:\Users\huawei\Downloads\pvzol本地最新最新\pvzol本地\build_exe\work_launcher\PvZOnline\PYZ-00.pyz
+23623 INFO: Building PYZ (ZlibArchive) C:\Users\huawei\Downloads\pvzol本地最新最新\pvzol本地\build_exe\work_launcher\PvZOnline\PYZ-00.pyz completed successfully.
+23670 INFO: checking PKG
+23670 INFO: Building PKG because PKG-00.toc is non existent
+23670 INFO: Building PKG (CArchive) PvZOnline.pkg
+30769 INFO: Building PKG (CArchive) PvZOnline.pkg completed successfully.
+30783 INFO: Bootloader C:\Users\huawei\.workbuddy\binaries\python\envs\default\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
+30783 INFO: checking EXE
+30783 INFO: Building EXE because EXE-00.toc is non existent
+30784 INFO: Building EXE from EXE-00.toc
+30784 INFO: Copying bootloader EXE to C:\Users\huawei\Downloads\pvzol本地最新最新\pvzol本地\build_exe\dist\PvZOnline.exe
+30792 INFO: Copying icon to EXE
+30799 INFO: Copying 0 resources to EXE
+30799 INFO: Embedding manifest in EXE
+30809 INFO: Appending PKG archive to EXE
+30825 INFO: Fixing EXE headers
+30910 INFO: Building EXE from EXE-00.toc completed successfully.
+30923 INFO: Build complete! The results are available in: C:\Users\huawei\Downloads\pvzol本地最新最新\pvzol本地\build_exe\dist

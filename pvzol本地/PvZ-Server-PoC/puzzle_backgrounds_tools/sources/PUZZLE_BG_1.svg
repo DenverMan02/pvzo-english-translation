@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="405" height="338" viewBox="0 0 405 338">
+  <defs>
+    <clipPath id="panel"><rect x="17" y="17" width="371" height="304" rx="8"/></clipPath>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="0.56" stop-color="#f5f7f3" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#8a9d9b" stop-opacity="0.20"/>
+    </linearGradient>
+    <linearGradient id="panelSheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="0.55" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#8a9d9b" stop-opacity="0.10"/>
+    </linearGradient>
+  </defs>
+  <!-- A clearly visible pale color rim with a thin muted keyline, not a wooden frame. -->
+  <rect x="0.75" y="0.75" width="403.5" height="336.5" rx="11" fill="#f5f7f3" stroke="#8a9d9b" stroke-width="1.5"/>
+  <rect x="4.5" y="4.5" width="396" height="329" rx="9" fill="url(#rim)" stroke="#ffffff" stroke-opacity="0.88" stroke-width="1.2"/>
+  <g clip-path="url(#panel)">
+    <rect x="17" y="17" width="371" height="304" fill="#f0f2ee"/>
+    <path d="M202.50,320.00 L18.00,225.99 L18.00,135.50 Z" fill="#bfc8c6" opacity="0.76"/>
+    <path d="M202.50,320.00 L18.00,135.50 L48.62,18.00 Z" fill="#d7dedd" opacity="0.60"/>
+    <path d="M202.50,320.00 L48.62,18.00 L154.67,18.00 Z" fill="#bfc8c6" opacity="0.76"/>
+    <path d="M202.50,320.00 L154.67,18.00 L250.33,18.00 Z" fill="#d7dedd" opacity="0.60"/>
+    <path d="M202.50,320.00 L250.33,18.00 L356.38,18.00 Z" fill="#bfc8c6" opacity="0.76"/>
+    <path d="M202.50,320.00 L356.38,18.00 L387.00,135.50 Z" fill="#d7dedd" opacity="0.60"/>
+    <path d="M202.50,320.00 L387.00,135.50 L387.00,225.99 Z" fill="#bfc8c6" opacity="0.76"/>
+    <path d="M202.50,320.00 L387.00,225.99 L387.00,290.78 Z" fill="#d7dedd" opacity="0.60"/>
+    <rect x="17" y="17" width="371" height="304" fill="url(#panelSheen)"/>
+  </g>
+  <rect x="17.5" y="17.5" width="370" height="303" rx="8" fill="none" stroke="#f5f7f3" stroke-opacity="0.9" stroke-width="1.2"/>
+</svg>

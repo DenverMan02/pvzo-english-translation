@@ -1,0 +1,110 @@
+{
+  "ok": true,
+  "account_requests_sent": 0,
+  "system_settings_changed": false,
+  "asset": "1440x900 no-script/no-network SWF",
+  "measurements": [
+    {
+      "context": -1,
+      "set_success": true,
+      "client_size": [
+        1440,
+        900
+      ],
+      "bounds": [
+        208,
+        208,
+        1664,
+        1167
+      ],
+      "system_dpi": 96
+    },
+    {
+      "context": -2,
+      "set_success": true,
+      "client_size": [
+        2160,
+        1350
+      ],
+      "bounds": [
+        312,
+        312,
+        2496,
+        1751
+      ],
+      "system_dpi": 144
+    },
+    {
+      "context": -3,
+      "set_success": true,
+      "client_size": [
+        2160,
+        1350
+      ],
+      "bounds": [
+        312,
+        312,
+        2496,
+        1751
+      ],
+      "system_dpi": 144
+    },
+    {
+      "context": -4,
+      "set_success": true,
+      "client_size": [
+        2160,
+        1350
+      ],
+      "bounds": [
+        312,
+        312,
+        2496,
+        1751
+      ],
+      "system_dpi": 144
+    },
+    {
+      "context": 24592,
+      "set_success": true,
+      "client_size": [
+        1440,
+        900
+      ],
+      "bounds": [
+        208,
+        208,
+        1664,
+        1167
+      ],
+      "system_dpi": 96
+    }
+  ],
+  "trace": [
+    {
+      "t": 0.0521,
+      "hwnd": 15995002,
+      "physical_bounds": [
+        312,
+        312,
+        2496,
+        1751
+      ],
+      "source_client_size": [
+        1440,
+        900
+      ],
+      "visible": false
+    }
+  ],
+  "owned_pid": 50392,
+  "window_context": 24592,
+  "window_awareness": 0,
+  "window_dpi": 96,
+  "stage_size": [
+    1440,
+    900
+  ],
+  "never_revealed": true,
+  "owned_process_exited": true
+}

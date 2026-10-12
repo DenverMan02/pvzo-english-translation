@@ -1,0 +1,70 @@
+76 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.8
+76 INFO: Python: 3.12.14
+97 INFO: Platform: Windows-11-10.0.26200-SP0
+97 INFO: Python environment: C:\Users\komi\Documents\Codex\2026-09-29\new-chat-3\.venv-pyinstaller
+99 INFO: Removing temporary files and cleaning cache in C:\Users\komi\AppData\Local\pyinstaller
+99 INFO: Module search paths (PYTHONPATH):
+['C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\.venv-pyinstaller\\Scripts\\pyinstaller.exe',
+ 'C:\\Users\\komi\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip',
+ 'C:\\Users\\komi\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\DLLs',
+ 'C:\\Users\\komi\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib',
+ 'C:\\Users\\komi\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python',
+ 'C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\.venv-pyinstaller',
+ 'C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\.venv-pyinstaller\\Lib\\site-packages',
+ 'D:\\pvzol������������ol\\pvzol����\\PvZ-Server-PoC']
+283 INFO: checking Analysis
+283 INFO: Building Analysis because Analysis-00.toc is non existent
+283 INFO: Looking for Python shared library...
+283 INFO: Using Python shared library: C:\Users\komi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python312.dll
+283 INFO: Running Analysis Analysis-00.toc
+283 INFO: Target bytecode optimization level: 0
+283 INFO: Initializing module dependency graph...
+283 INFO: Initializing module graph hook caches...
+291 INFO: Analyzing modules for base_library.zip ...
+1015 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\.venv-pyinstaller\\Lib\\site-packages\\PyInstaller\\hooks'
+1254 INFO: Processing standard module hook 'hook-math.py' from 'C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\.venv-pyinstaller\\Lib\\site-packages\\PyInstaller\\hooks'
+1814 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\.venv-pyinstaller\\Lib\\site-packages\\PyInstaller\\hooks'
+2356 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\.venv-pyinstaller\\Lib\\site-packages\\PyInstaller\\hooks'
+2517 INFO: Caching module dependency graph...
+2535 INFO: Analyzing D:\pvzol������������ol\pvzol����\PvZ-Server-PoC\run_all.py
+2612 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\.venv-pyinstaller\\Lib\\site-packages\\PyInstaller\\hooks'
+2681 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\.venv-pyinstaller\\Lib\\site-packages\\PyInstaller\\hooks'
+2788 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\.venv-pyinstaller\\Lib\\site-packages\\PyInstaller\\hooks'
+3465 INFO: Processing standard module hook 'hook-sqlite3.py' from 'C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\.venv-pyinstaller\\Lib\\site-packages\\PyInstaller\\hooks'
+3887 INFO: Processing module hooks (post-graph stage)...
+3999 INFO: Performing binary vs. data reclassification (1 entries)
+4000 INFO: Looking for ctypes DLLs
+4004 INFO: Analyzing run-time hooks ...
+4004 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\.venv-pyinstaller\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+4006 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\.venv-pyinstaller\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+4007 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from 'C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\.venv-pyinstaller\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+4010 INFO: Creating base_library.zip...
+4020 INFO: Looking for dynamic libraries
+4145 INFO: Extra DLL search directories (AddDllDirectory): []
+4145 INFO: Extra DLL search directories (PATH): []
+4285 INFO: Warnings written to D:\pvzol������������ol\pvzol����\build_exe\rebuild_item1-4\work_server\PvZServer\warn-PvZServer.txt
+4294 INFO: Graph cross-reference written to D:\pvzol������������ol\pvzol����\build_exe\rebuild_item1-4\work_server\PvZServer\xref-PvZServer.html
+4305 INFO: checking PYZ
+4305 INFO: Building PYZ because PYZ-00.toc is non existent
+4305 INFO: Building PYZ (ZlibArchive) D:\pvzol������������ol\pvzol����\build_exe\rebuild_item1-4\work_server\PvZServer\PYZ-00.pyz
+4486 INFO: Building PYZ (ZlibArchive) D:\pvzol������������ol\pvzol����\build_exe\rebuild_item1-4\work_server\PvZServer\PYZ-00.pyz completed successfully.
+4490 INFO: checking PKG
+4490 INFO: Building PKG because PKG-00.toc is non existent
+4490 INFO: Building PKG (CArchive) PvZServer.pkg
+4505 INFO: Building PKG (CArchive) PvZServer.pkg completed successfully.
+4506 INFO: Bootloader C:\Users\komi\Documents\Codex\2026-09-29\new-chat-3\.venv-pyinstaller\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\run.exe
+4506 INFO: checking EXE
+4506 INFO: Building EXE because EXE-00.toc is non existent
+4506 INFO: Building EXE from EXE-00.toc
+4506 INFO: Copying bootloader EXE to D:\pvzol������������ol\pvzol����\build_exe\rebuild_item1-4\work_server\PvZServer\PvZServer.exe
+4548 INFO: Copying icon to EXE
+4571 INFO: Copying 0 resources to EXE
+4571 INFO: Embedding manifest in EXE
+4589 INFO: Appending PKG archive to EXE
+4620 INFO: Fixing EXE headers
+4742 INFO: Building EXE from EXE-00.toc completed successfully.
+4743 INFO: checking COLLECT
+4743 INFO: Building COLLECT because COLLECT-00.toc is non existent
+4743 INFO: Building COLLECT COLLECT-00.toc
+4829 INFO: Building COLLECT COLLECT-00.toc completed successfully.
+4830 INFO: Build complete! The results are available in: D:\pvzol������������ol\pvzol����\build_exe\rebuild_item1-4\dist

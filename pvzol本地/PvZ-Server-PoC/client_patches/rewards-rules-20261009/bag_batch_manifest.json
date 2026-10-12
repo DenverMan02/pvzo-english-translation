@@ -1,0 +1,15 @@
+{
+  "method": [
+    "com.qq.modules.bag.view.components.BagChooseRewardWindowMediator",
+    "refresh"
+  ],
+  "method_id": 230,
+  "body_count": 351,
+  "unchanged_bodies": 350,
+  "original_sha256": "5205c234f6471e656d7b3c246180996598eaf40aba6021f939c93b64fac5ac18",
+  "patched_sha256": "7c4bff923b38a0b98fbb52a674d72653e8abc351d38b17ab0faf11ca594a4a9a",
+  "files": [
+    "ModuleBag.swf",
+    "ModuleBag_0ebfeac56115494ceaf28933d3d28504.swf"
+  ]
+}

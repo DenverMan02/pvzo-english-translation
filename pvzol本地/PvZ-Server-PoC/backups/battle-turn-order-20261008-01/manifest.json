@@ -1,0 +1,24 @@
+{
+  "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC",
+  "backup": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\backups\\battle-turn-order-20261008-01",
+  "files": [
+    {
+      "relative_path": "pvz_poc_server.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-08\\d-pvzol-ol\\work\\battle-order\\server\\pvz_poc_server.py",
+      "before_sha256": "C8CF4A23FBD5F143BA358ABC5122DAAA7937A7B48728CD4BB0BA54881ACF3655",
+      "after_sha256": "14C82BC90C607F7A549EC724B407BB228E0D04DDBA3CDB15BAC0D902DD32C2AC"
+    },
+    {
+      "relative_path": "tests\\test_replay_targets.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-08\\d-pvzol-ol\\work\\battle-order\\server\\tests\\test_replay_targets.py",
+      "before_sha256": "E9C6803F18353FDD29E950B3C4A186D3AE6F4D66B55051B24413EB3C736D37B8",
+      "after_sha256": "3A888B4F0F3A1019662CAB4850F0B929525768FEF88FDF873F40557705B329D2"
+    },
+    {
+      "relative_path": "tests\\test_battle_turn_order.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-08\\d-pvzol-ol\\work\\battle-order\\server\\tests\\test_battle_turn_order.py",
+      "before_sha256": null,
+      "after_sha256": "E400AD977A14AEB82DEEA8FAD01D8BA4EEB3ADAD6167D5F386ED63A174F6EFF8"
+    }
+  ]
+}

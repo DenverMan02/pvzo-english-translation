@@ -1,0 +1,36 @@
+{
+  "game": "D:\\pvzol本地最新最新ol\\pvzol本地",
+  "backup": "D:\\pvzol本地最新最新ol\\修复备份\\个人资料编辑-20261007-125228",
+  "files": [
+    {
+      "relative": "launcher.py",
+      "source": "launcher.py",
+      "before": "84c9a4a342f0042e1e7a74331bd224575bd3052c4c13ed20ad58cc84900a886d",
+      "after": "79d9136721d93c49da51f32b3f44c64b71062ddce40b9e96832fa2b0a4c421fb"
+    },
+    {
+      "relative": "PvZ-Server-PoC/gm.py",
+      "source": "server/gm.py",
+      "before": "3836e5df4752d6330cfda3b99ec40a8138a65af78be4367a17228ab30afe79d1",
+      "after": "d9e488c5206c812fedec80a89032c2f511681bb53e3836d0f89109f78a32cbb8"
+    },
+    {
+      "relative": "PvZ-Server-PoC/player_store.py",
+      "source": "server/player_store.py",
+      "before": "cb62a939c204cb477ea2a260a6c0b16d4c08a015810d4fbec396c95769eb1518",
+      "after": "6a20dcfcf631a96b2a5bb7eefc506a949ea9b0368cc961114d202fe7f944525d"
+    },
+    {
+      "relative": "PvZ-Server-PoC/profile_editor.py",
+      "source": "server/profile_editor.py",
+      "before": null,
+      "after": "a19d04daac527b4f2e9424df22d6fcaf00ec609dc10a6ced29aeebe6e6f108a0"
+    },
+    {
+      "relative": "PvZ-Server-PoC/tests/test_profile_editor.py",
+      "source": "server/tests/test_profile_editor.py",
+      "before": null,
+      "after": "8e66563e819613700a36b9a9174a32d2a11506cec75cfbd0771e7001490cd3e7"
+    }
+  ]
+}

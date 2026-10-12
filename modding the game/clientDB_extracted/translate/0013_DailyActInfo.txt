@@ -1,0 +1,9 @@
+id	name
+1	Treasure Hunt
+2	Plant Rumble
+3	Plant Battle
+4	Friendship Reward Exchange
+5	Ranked Arena
+6	Ladder Arena
+7	Yeti Rampage
+8	Endless Challenge

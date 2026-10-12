@@ -1,0 +1,121 @@
+最终相关回归：23/23测试模块通过。
+新增针对性回归：30项通过。
+安装后：11个文件哈希与通过测试的副本一致。
+存档：players.db、guild_local.db SHA256未变化。
+实际游戏目录导入与原客户端配置加载验证：通过。
+
+PASS test_plant_tooltip_power.py
+PASS test_equipment_feedback.py
+PASS test_armor_prestige.py
+PASS test_baptize.py
+PASS test_baptize_wire.py
+PASS test_baptize_names.py
+PASS test_card_avatar.py
+PASS test_puzzle_flow.py
+PASS test_nutrition_positions.py
+PASS test_gene_6_10_extract.py
+PASS test_adventure_formation.py
+PASS test_adventure_friend_card.py
+PASS test_battle_preview.py
+PASS test_live_combat.py
+PASS test_combat_crit_dodge.py
+PASS test_battle_turn_order.py
+PASS test_npc_generation.py
+PASS test_rank_list.py
+PASS test_talent_gates.py
+PASS test_original_card_power.py
+PASS test_card_power_consumers.py
+PASS test_gene_power_units.py
+PASS test_original_puppet_power.py
+
+新测试详细输出：
+
+test_original_card_power.py
+11:16:28  INFO   local guild adapter ready (30 core routes)
+.11:16:28  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+...11:16:28  INFO   loaded 1975 card forge templates
+11:16:28  INFO   loaded 44 card puzzle stages
+11:16:28  INFO   loaded 1960 card-fruit templates
+11:16:28  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+11:16:28  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+C:\Users\komi\Documents\Codex\2026-10-08\d-pvzol-ol-3\work\power-audit\PvZ-Server-PoC\pvz_poc_server.py:5319: ResourceWarning: unclosed file <_io.BufferedReader name='C:\\Users\\komi\\Documents\\Codex\\2026-10-08\\d-pvzol-ol-3\\work\\power-audit\\webroot\\clientDB.txt'>
+  data = open(_CLIENTDB_PATH, "rb").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\komi\Documents\Codex\2026-10-08\d-pvzol-ol-3\work\power-audit\PvZ-Server-PoC\pvz_poc_server.py:5410: ResourceWarning: unclosed file <_io.BufferedReader name='C:\\Users\\komi\\Documents\\Codex\\2026-10-08\\d-pvzol-ol-3\\work\\power-audit\\webroot\\ModuleAvatarConfig.swf'>
+  data = open(path, "rb").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+11:16:28  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+11:16:28  INFO   loaded 617 card avatar templates
+...
+----------------------------------------------------------------------
+Ran 7 tests in 0.212s
+
+OK
+
+
+test_card_power_consumers.py
+11:16:28  INFO   local guild adapter ready (30 core routes)
+11:16:28  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+11:16:28  INFO   loaded 44 card puzzle stages
+11:16:28  INFO   loaded 1960 card-fruit templates
+11:16:28  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+11:16:28  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+C:\Users\komi\Documents\Codex\2026-10-08\d-pvzol-ol-3\work\power-audit\PvZ-Server-PoC\pvz_poc_server.py:5319: ResourceWarning: unclosed file <_io.BufferedReader name='C:\\Users\\komi\\Documents\\Codex\\2026-10-08\\d-pvzol-ol-3\\work\\power-audit\\webroot\\clientDB.txt'>
+  data = open(_CLIENTDB_PATH, "rb").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\komi\Documents\Codex\2026-10-08\d-pvzol-ol-3\work\power-audit\PvZ-Server-PoC\pvz_poc_server.py:5410: ResourceWarning: unclosed file <_io.BufferedReader name='C:\\Users\\komi\\Documents\\Codex\\2026-10-08\\d-pvzol-ol-3\\work\\power-audit\\webroot\\ModuleAvatarConfig.swf'>
+  data = open(path, "rb").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+11:16:28  INFO   loaded 617 avatar asset bindings (522 with TD bindings)
+11:16:28  INFO   loaded 617 card avatar templates
+11:16:28  INFO   loaded 1975 card forge templates
+11:16:28  INFO       card package: 1 card(s) in collection [(6504, '全息坚果')]
+.11:16:29  INFO   loaded 40 lab bottles
+11:16:29  INFO   loaded 999 world-tree levels
+11:16:29  INFO   loaded 3 VIP tiers
+11:16:29  INFO   loaded 41 nutrition reagent bases
+11:16:29  INFO   loaded card level curve (300 levels)
+....11:16:30  INFO       battle SET formation team=1: {9: 10006504, 17: 4006101}
+11:16:30  INFO       battle GET formation: 1 cards {9: 10006504}
+.11:16:30  WARNING      battle SET formation rejected: invalid slot/card/count
+11:16:30  INFO       battle GET formation: 1 cards {9: 10006504}
+11:16:30  WARNING      battle SET formation rejected: invalid slot/card/count
+11:16:30  INFO       battle GET formation: 1 cards {9: 10006504}
+11:16:30  WARNING      battle SET formation rejected: invalid slot/card/count
+11:16:30  INFO       battle GET formation: 1 cards {9: 10006504}
+11:16:30  WARNING      battle SET formation rejected: invalid slot/card/count
+11:16:30  INFO       battle GET formation: 1 cards {9: 10006504}
+11:16:30  WARNING      battle SET formation rejected: invalid slot/card/count
+11:16:30  INFO       battle GET formation: 1 cards {9: 10006504}
+.11:16:30  INFO       battle SET formation team=1: {9: 10006504, 17: 10006505}
+11:16:30  INFO       battle GET formation: 2 cards {9: 10006504, 17: 10006505}
+.11:16:30  INFO       card package: 2 card(s) in collection [(6504, '全息坚果'), (6504, '全息坚果')]
+11:16:30  INFO       card package: 2 card(s) in collection [(6504, '全息坚果'), (6504, '全息坚果')]
+..11:16:31  WARNING      battle SET formation rejected: invalid slot/card/count
+11:16:31  INFO       battle GET formation: 1 cards {9: 10006504}
+..
+----------------------------------------------------------------------
+Ran 12 tests in 2.436s
+
+OK
+
+
+test_gene_power_units.py
+11:16:31  INFO   local guild adapter ready (30 core routes)
+11:16:31  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+11:16:31  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.036s
+
+OK
+
+
+test_original_puppet_power.py
+11:16:31  INFO   local guild adapter ready (30 core routes)
+11:16:31  INFO   loaded 傀儡 config: 50 puppets, 120 stages, 225 skill levels
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.020s
+
+OK

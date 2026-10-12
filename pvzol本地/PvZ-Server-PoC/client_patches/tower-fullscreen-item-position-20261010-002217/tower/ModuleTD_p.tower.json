@@ -1,0 +1,21 @@
+{
+  "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleTD_p.swf",
+  "output": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\tower\\ModuleTD_p.tower.swf",
+  "source_sha256": "77334d656ef2901535328d8e3f9d5a865bc3ac3f3709867d1e59012cd5c9834e",
+  "output_sha256": "a13f2bbc3751a9beb6b9de87691ae51f2eb0da62a41ffbf19fe4f5c7fa9de3c8",
+  "methods": [
+    {
+      "classname": "com.qq.modules.td.view.game.TDBGViewMediator",
+      "name": "checkSize",
+      "method_id": 290,
+      "detail": {
+        "start": 301,
+        "length": 19,
+        "before_hex": "60b83466e8345d1624002ad2d34a1604618937"
+      }
+    }
+  ],
+  "total_method_bodies": 8001,
+  "unchanged_method_bodies": 8000,
+  "constant_pools_and_class_structure_unchanged": true
+}

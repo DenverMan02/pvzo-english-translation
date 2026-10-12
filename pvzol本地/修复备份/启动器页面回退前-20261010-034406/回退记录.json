@@ -1,0 +1,125 @@
+{
+  "created_at": "2026-10-10T03:44:06+08:00",
+  "source_version": "D:\\pvzol本地最新最新ol\\pvzol本地\\修复备份\\启动器全界面重构-20261010-032125",
+  "project": "D:\\pvzol本地最新最新ol\\pvzol本地",
+  "files": [
+    {
+      "file": "PvZ-Server-PoC/admin_server.py",
+      "sha256": "660ba210e73e2dffeb570c8d7f7301c67290542994b7908120dd35cf9ea8fde0",
+      "action": "restored_previous"
+    },
+    {
+      "file": "PvZ-Server-PoC/pvz_poc_server.py",
+      "sha256": "97a906eeebd372b72cc84c843a3167c013f258e2744a71dca1d4990b4afff6d4",
+      "action": "restored_previous"
+    },
+    {
+      "file": "PvZ-Server-PoC/run_all.py",
+      "sha256": "49d334a2cc5fe417367f27963dddb52b492d0bec032f42f8d43256d5da658d34",
+      "action": "restored_previous"
+    },
+    {
+      "file": "PvZ-Server-PoC/serve_client.py",
+      "sha256": "ca03a206595202a5036d5f962c963af1849d77efc698ec086e8dddc24b238716",
+      "action": "restored_previous"
+    },
+    {
+      "file": "PvZ-Server-PoC/tests/test_launcher_desktop.py",
+      "sha256": "4b892aa09b2d1f1c4416c35d65ea479142f043024f2136600040a212b471165a",
+      "action": "restored_previous"
+    },
+    {
+      "file": "PvZ-Server-PoC/tests/test_launcher_instance.py",
+      "sha256": "0c265fa24aa31aa2069dcdc04a70fff0e19f84616dfe7961e053ebb49488c35f",
+      "action": "restored_previous"
+    },
+    {
+      "file": "PvZ-Server-PoC/tests/test_launcher_npc_account_visibility.py",
+      "sha256": "eb741f8e38ef76724e8908e229eb280a71ed0e550127ce35e2b62e3dd0719e1d",
+      "action": "restored_previous"
+    },
+    {
+      "file": "launcher.py",
+      "sha256": "105807f6d1fbccd5f816eed55469efa98e19643e360d810371a4044dfdf23b4d",
+      "action": "restored_previous"
+    },
+    {
+      "file": "launcher_desktop.py",
+      "sha256": "edc82405341062f50c8d060d02298b664df8b074cef627c99204d538e6d0e594",
+      "action": "restored_previous"
+    },
+    {
+      "file": "launcher_service.py",
+      "sha256": "8c076d419d98c63911f03ac052f62de938ab54b7bb1eb16e1e1d1477f5cf9328",
+      "action": "restored_previous"
+    },
+    {
+      "file": "launcher_ui/app.js",
+      "sha256": "316fff122e05b088dfc219d150787868e619bfac3fd08d0909000db9f938832b",
+      "action": "restored_previous"
+    },
+    {
+      "file": "launcher_ui/index.html",
+      "sha256": "a6ce6428dafa59a3984b8818f97048bfc0254062ac5e48d6a0460fcc30b74524",
+      "action": "restored_previous"
+    },
+    {
+      "file": "launcher_ui/styles.css",
+      "sha256": "79f94a69d9002b7df5c7be1b13eebadd38682ab61ad010cefcf42c18481b9570",
+      "action": "restored_previous"
+    },
+    {
+      "file": "launcher_ports.py",
+      "sha256": "9d5cd39e81a8c42b47975ec7278c4c7e9e25c050387f5e102609f2383883dfd1",
+      "action": "moved_to_safety_backup"
+    },
+    {
+      "file": "launcher_runtime_status.py",
+      "sha256": "0f75a5f8e3e32d7dac7a951c3442d3b3cced7dce891450e1dd1b40a2fadf3313",
+      "action": "moved_to_safety_backup"
+    },
+    {
+      "file": "PvZ-Server-PoC/runtime_ports.py",
+      "sha256": "4f59c01ad440c7535a09cabc276385379155d8380b3c98bfb8c5f8a68acc0c6d",
+      "action": "moved_to_safety_backup"
+    },
+    {
+      "file": "PvZ-Server-PoC/launcher_avatar.py",
+      "sha256": "c3897bddd5f782b06edca99442821a4a9597a1fee004d4ae1b30fd660283b9a7",
+      "action": "moved_to_safety_backup"
+    },
+    {
+      "file": "PvZ-Server-PoC/tests/test_launcher_ports.py",
+      "sha256": "534bea2777e3834aeed823783e88b95c94f7a5982c818ce7b871c5d2979be1bb",
+      "action": "moved_to_safety_backup"
+    },
+    {
+      "file": "PvZ-Server-PoC/tests/test_launcher_runtime_status.py",
+      "sha256": "252d0b74fcad10375949b14530d1ebb01310fea9eefdded4bc3b21663e731cd2",
+      "action": "moved_to_safety_backup"
+    },
+    {
+      "file": "PvZ-Server-PoC/tests/test_launcher_service_exit.py",
+      "sha256": "17ea71601d7834cffa18ec0b68d9712562481c982385fd61606aa7511d437b84",
+      "action": "moved_to_safety_backup"
+    }
+  ],
+  "protected_files": {
+    "players.db": "3000BBA8775660D4C65E5D4E3A181C2AF6E80CC7771B36097AFAA67124D8FFAF",
+    "launcher_settings.json": "E985FB7CDC5BE61B26C520A77A580C01A15C7F48AFEACBEC48FD4769E3E1C9F4",
+    "PvZ-Server-PoC/players.db": "CF41E36BA243EB50CED87CC5417635F159AC94BEDDC1F753753737D996F06493",
+    "launcher_config.json": "A69C944E7D6E7FD5BADB676AA88AA1F4AF4ADFCFC7D365DD0881AF93A3A182BD"
+  },
+  "account_list_test": "restored exact previous test from historical patch, sha256=6bf639f80f8f16984fa157bcaec74fb1d2559bf53e18287f2f26c0d5d41cfdcc",
+  "validation": {
+    "original_files_match": 13,
+    "added_files_archived": 7,
+    "protected_files_unchanged": true,
+    "python_syntax": "7 restored source modules passed",
+    "javascript_syntax": "passed",
+    "launcher_tests": "164 passed, 1 historical Popen mock fixture issue independently passed with explicit wait return code 0",
+    "admin_account_list_tests": "5 passed",
+    "admin_launcher_embed_tests": "19 passed"
+  },
+  "status": "completed"
+}

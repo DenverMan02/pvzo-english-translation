@@ -1,0 +1,321 @@
+webroot/ModuleZombieIsland.swf: 1 ABC block(s)
+  classes=41 bodies=360
+
+=== com.qq.modules.zombieIsland.service::ZombieIslandService.onCmdHandler  (method 44)
+      0  getlocal0        
+      1  pushscope        
+      2  pushnull         
+      3  coerce           PVZ.Cmd::Cmd_ZombieIsland_GetIslandInfo_SC
+      6  setlocal2        
+      7  pushnull         
+      8  coerce           PVZ.Cmd::Cmd_ZombieIsland_TakeReward_SC
+     11  setlocal3        
+     12  pushnull         
+     13  coerce           PVZ.Cmd::Dto_RewardBox
+     15  setlocal         4
+     17  pushnull         
+     18  coerce           PVZ.Cmd::Cmd_ZombieIsland_GetRefreshInfo_SC
+     21  setlocal         5
+     23  pushnull         
+     24  coerce           PVZ.Cmd::Cmd_ZombieIsland_RefreshChallenge_SC
+     27  setlocal         6
+     29  pushnull         
+     30  coerce           PVZ.Cmd::Cmd_ZombieIsland_Fight_SC
+     33  setlocal         7
+     35  pushbyte         0
+     37  setlocal         8
+     39  jump             -> 528
+     42  op_0x0           
+     43  label            
+     44  getlocal1        
+     45  getproperty      ::socketData
+     48  getlex           PVZ.Cmd::Cmd_ZombieIsland_GetIslandInfo_SC
+     51  astypelate       
+     52  coerce           PVZ.Cmd::Cmd_ZombieIsland_GetIslandInfo_SC
+     55  setlocal2        
+     56  getlocal0        
+     57  getproperty      ::model
+     59  getlocal2        
+     60  getproperty      ::nextLevel
+     63  getlex           com.qq.modules.zombieIsland.constant::ZombieIslandConstant
+     66  getproperty      ::Mode_Normal
+     69  getlocal2        
+     70  getproperty      ::lastPassRoleLevel
+     73  callpropvoid     ::setNextLevel, 3
+     77  getlocal0        
+     78  getproperty      ::model
+     80  getlocal2        
+     81  getproperty      ::rewardBox
+     84  getlex           com.qq.modules.zombieIsland.constant::ZombieIslandConstant
+     87  getproperty      ::Mode_Normal
+     90  callpropvoid     ::setRewardBoxs, 2
+     94  getlocal0        
+     95  getproperty      ::model
+     97  getproperty      ::curMode
+    100  getlex           com.qq.modules.zombieIsland.constant::ZombieIslandConstant
+    103  getproperty      ::Mode_Normal
+    106  ifne             -> 134
+    108  op_0x0           
+    109  op_0x0           
+    110  getlex           com.qq.utils::CommandDispatcher
+    113  getlex           com.qq.modules.zombieIsland.constant::ZombieIslandConstant
+    116  getproperty      ::ISLAND_STATE_UPDATE
+    119  callpropvoid     ::send, 1
+    123  getlex           com.qq.utils::CommandDispatcher
+    126  getlex           com.qq.modules.zombieIsland.constant::ZombieIslandConstant
+    129  getproperty      ::ISLAND_BOX_UPDATE
+    132  callpropvoid     ::send, 1
+    136  getlex           com.qq.utils::CommandDispatcher
+    139  getlex           com.qq.modules.zombieIsland.constant::ZombieIslandConstant
+    142  getproperty      ::ISLAND_UPDATE_NORMAL_STAGE_NUM
+    145  callpropvoid     ::send, 1
+    149  jump             -> 661
+    152  op_0x0           
+    153  label            
+    154  getlocal1        
+    155  getproperty      ::socketData
+    158  getlex           PVZ.Cmd::Cmd_ZombieIsland_TakeReward_SC
+    161  astypelate       
+    162  coerce           PVZ.Cmd::Cmd_ZombieIsland_TakeReward_SC
+    165  setlocal3        
+    166  pushbyte         0
+    168  setlocal         8
+    170  jump             -> 225
+    172  op_0x0           
+    173  op_0x0           
+    174  label            
+    175  getlocal0        
+    176  getproperty      ::model
+    178  getproperty      ::rewardBoxs
+    181  getlocal         8
+    183  getproperty      <runtime>
+    186  coerce           PVZ.Cmd::Dto_RewardBox
+    188  dup              
+    189  setlocal         4
+    191  getproperty      ::levelId
+    194  getlocal3        
+    195  getproperty      ::levelId
+    198  equals           
+    199  dup              
+    200  iffalse          -> 213
+    202  op_0x0           
+    203  op_0x0           
+    204  pop              
+    205  getlocal         4
+    207  getproperty      ::boxId
+    210  getlocal3        
+    211  getproperty      ::boxId
+    214  equals           
+    215  iffalse          -> 223
+    217  op_0x0           
+    218  op_0x0           
+    219  getlocal         4
+    221  pushtrue         
+    222  setproperty      ::hasTaken
+    225  inclocal_i       8
+    227  getlocal         8
+    229  getlocal0        
+    230  getproperty      ::model
+    232  getproperty      ::rewardBoxs
+    235  getproperty      ::length
+    238  iflt             -> 175
+    243  op_0xcb          
+    244  throw            
+    245  callpropvoid     ::unlockScreen, 0
+    249  getlocal0        
+    250  getproperty      ::model
+    252  getproperty      ::isPlayOpenAnimation
+    255  iffalse          -> 274
+    257  op_0x0           
+    258  op_0x0           
+    259  getlex           com.qq.modules.bag.command::BagViewCmd
+    262  pushbyte         0
+    264  getlocal3        
+    265  getproperty      ::rewardList
+    268  callpropvoid     ::playBagItemOpenEffect, 2
+    272  jump             -> 286
+    274  op_0x0           
+    275  op_0x0           
+    276  getlex           com.qq.modules.main.command::CommonCmd
+    279  getlocal3        
+    280  getproperty      ::rewardList
+    283  pushtrue         
+    284  callpropvoid     ::itemFly, 2
+    288  findpropstrict   org.robotlegs.mvcs:Actor::dispatch
+    291  findpropstrict   flash.events::Event
+    293  getlex           com.qq.modules.zombieIsland.constant::ZombieIslandConstant
+    296  getproperty      ::ISLAND_BOX_UPDATE
+    299  constructprop    flash.events::Event, 1
+    302  callpropvoid     org.robotlegs.mvcs:Actor::dispatch, 1
+    306  jump             -> 660
+    308  bkpt             
+    309  op_0x0           
+    310  label            
+    311  getlocal1        
+    312  getproperty      ::socketData
+    315  getlex           PVZ.Cmd::Cmd_ZombieIsland_GetRefreshInfo_SC
+    318  astypelate       
+    319  coerce           PVZ.Cmd::Cmd_ZombieIsland_GetRefreshInfo_SC
+    322  setlocal         5
+    324  getlocal0        
+    325  getproperty      ::model
+    327  getlocal         5
+    329  getproperty      ::refreshTimes
+    332  getlex           com.qq.modules.zombieIsland.constant::ZombieIslandConstant
+    335  getproperty      ::Mode_Normal
+    338  callpropvoid     ::setRefreshTimes, 2
+    342  getlocal0        
+    343  getproperty      ::model
+    345  getlocal         5
+    347  getproperty      ::remainTimes
+    350  getlex           com.qq.modules.zombieIsland.constant::ZombieIslandConstant
+    353  getproperty      ::Mode_Normal
+    356  callpropvoid     ::setRemainTimes, 2
+    360  findpropstrict   org.robotlegs.mvcs:Actor::dispatch
+    363  findpropstrict   flash.events::Event
+    365  getlex           com.qq.modules.zombieIsland.constant::ZombieIslandConstant
+    368  getproperty      ::ISLAND_REFRESH_INFO
+    371  constructprop    flash.events::Event, 1
+    374  callpropvoid     org.robotlegs.mvcs:Actor::dispatch, 1
+    378  getlex           com.qq.modules.zombieIsland.command::ZombieIslandCmd
+    381  callpropvoid     ::requestPreCard, 0
+    384  jump             -> 660
+    386  bkpt             
+    387  op_0x0           
+    388  label            
+    389  getlocal1        
+    390  getproperty      ::socketData
+    393  getlex           PVZ.Cmd::Cmd_ZombieIsland_RefreshChallenge_SC
+    396  astypelate       
+    397  coerce           PVZ.Cmd::Cmd_ZombieIsland_RefreshChallenge_SC
+    400  setlocal         6
+    402  getlocal0        
+    403  getproperty      ::model
+    405  getlocal         5
+    407  getproperty      ::refreshTimes
+    410  getlex           com.qq.modules.zombieIsland.constant::ZombieIslandConstant
+    413  getproperty      ::Mode_Normal
+    416  callpropvoid     ::setRefreshTimes, 2
+    420  getlocal0        
+    421  getproperty      ::model
+    423  getlocal         5
+    425  getproperty      ::remainTimes
+    428  getlex           com.qq.modules.zombieIsland.constant::ZombieIslandConstant
+    431  getproperty      ::Mode_Normal
+    434  callpropvoid     ::setRemainTimes, 2
+    438  findpropstrict   org.robotlegs.mvcs:Actor::dispatch
+    441  findpropstrict   flash.events::Event
+    443  getlex           com.qq.modules.zombieIsland.constant::ZombieIslandConstant
+    446  getproperty      ::ISLAND_REFRESH_INFO
+    449  constructprop    flash.events::Event, 1
+    452  callpropvoid     org.robotlegs.mvcs:Actor::dispatch, 1
+    456  getlex           com.qq.modules.zombieIsland.command::ZombieIslandCmd
+    459  callpropvoid     ::requestPreCard, 0
+    462  jump             -> 661
+    465  op_0x0           
+    466  label            
+    467  getlocal1        
+    468  getproperty      ::socketData
+    471  getlex           PVZ.Cmd::Cmd_ZombieIsland_Fight_SC
+    474  astypelate       
+    475  coerce           PVZ.Cmd::Cmd_ZombieIsland_Fight_SC
+    478  setlocal         7
+    480  getlex           com.qq.modules.battle.command::BattleServiceCmd
+    483  getlocal         7
+    485  getproperty      ::report
+    488  pushnull         
+    489  getlex           com.qq.modules.zombieIsland.command::ZombieIslandCmd
+    492  getproperty      ::fightNextIsland
+    494  callpropvoid     ::setData, 3
+    498  findpropstrict   org.robotlegs.mvcs:Actor::dispatch
+    501  findpropstrict   flash.events::Event
+    503  getlex           com.qq.modules.zombieIsland.constant::ZombieIslandConstant
+    506  getproperty      ::ISLAND_REFRESH_INFO
+    509  constructprop    flash.events::Event, 1
+    512  callpropvoid     org.robotlegs.mvcs:Actor::dispatch, 1
+    516  jump             -> 661
+    519  op_0x0           
+    520  label            
+    521  jump             -> 661
+    524  op_0x0           
+    525  jump             -> 661
+    528  op_0x0           
+    529  getlocal1        
+    530  getproperty      ::type
+    533  setlocal         9
+    535  getlex           PVZ.Cmd::Cmd_ZombieIsland_GetIslandInfo_SC
+    538  getproperty      ::$MessageID
+    541  getlocal         9
+    543  ifstrictne       -> 551
+    545  op_0x0           
+    546  op_0x0           
+    547  pushbyte         0
+    549  jump             -> 635
+    551  op_0x0           
+    552  op_0x0           
+    553  getlex           PVZ.Cmd::Cmd_ZombieIsland_TakeReward_SC
+    556  getproperty      ::$MessageID
+    559  getlocal         9
+    561  ifstrictne       -> 569
+    563  op_0x0           
+    564  op_0x0           
+    565  pushbyte         1
+    567  jump             -> 635
+    569  op_0x0           
+    570  op_0x0           
+    571  getlex           PVZ.Cmd::Cmd_ZombieIsland_GetRefreshInfo_SC
+    574  getproperty      ::$MessageID
+    577  getlocal         9
+    579  ifstrictne       -> 587
+    581  op_0x0           
+    582  op_0x0           
+    583  pushbyte         2
+    585  jump             -> 635
+    587  op_0x0           
+    588  op_0x0           
+    589  getlex           PVZ.Cmd::Cmd_ZombieIsland_RefreshChallenge_SC
+    592  getproperty      ::$MessageID
+    595  getlocal         9
+    597  ifstrictne       -> 605
+    599  op_0x0           
+    600  op_0x0           
+    601  pushbyte         3
+    603  jump             -> 635
+    605  op_0x0           
+    606  op_0x0           
+    607  getlex           PVZ.Cmd::Cmd_ZombieIsland_Fight_SC
+    610  getproperty      ::$MessageID
+    613  getlocal         9
+    615  ifstrictne       -> 623
+    617  op_0x0           
+    618  op_0x0           
+    619  pushbyte         4
+    621  jump             -> 635
+    623  op_0x0           
+    624  op_0x0           
+    625  jump             -> 633
+    627  op_0x0           
+    628  op_0x0           
+    629  pushbyte         5
+    631  jump             -> 635
+    633  op_0x0           
+    634  op_0x0           
+    635  pushbyte         5
+    637  kill             9
+    639  lookupswitch     <?>
+    640  op_0x89          
+    641  op_0xff          
+    642  op_0xff          
+    643  setsuper         *
+    648  op_0xfe          
+    649  op_0xff          
+    650  op_0xb7          
+    651  op_0xfe          
+    652  op_0xff          
+    653  setsuper         *
+    657  op_0xff          
+    658  op_0xff          
+    659  op_0x89          
+    660  op_0xff          
+    661  op_0xff          
+    662  returnvoid       

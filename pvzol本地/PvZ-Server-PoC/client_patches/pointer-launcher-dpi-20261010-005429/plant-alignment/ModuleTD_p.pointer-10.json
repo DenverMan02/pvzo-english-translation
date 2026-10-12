@@ -1,0 +1,153 @@
+{
+  "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleTD_p.swf",
+  "output": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\plant-alignment\\ModuleTD_p.pointer.swf",
+  "source_sha256": "a13f2bbc3751a9beb6b9de87691ae51f2eb0da62a41ffbf19fe4f5c7fa9de3c8",
+  "output_sha256": "8773938069adddf3251f33aed34b86f49c2e92870c7a064e5ab8c4a9954ec8ae",
+  "methods": [
+    {
+      "classname": "com.qq.modules.td.logic.mouseAction.TDCropPlantAction",
+      "name": "onMouseMove",
+      "method_id": 472,
+      "detail": {
+        "insertion_offsets": [
+          41
+        ],
+        "insertion_hex": {
+          "41": "60e73c66f12fd246ef0101800dd6"
+        },
+        "native_window_point_normalized": true
+      }
+    },
+    {
+      "classname": "com.qq.modules.td.logic.mouseAction.TDCropPlantAction",
+      "name": "onMouseClick",
+      "method_id": 471,
+      "detail": {
+        "insertion_offsets": [
+          102
+        ],
+        "insertion_hex": {
+          "102": "d060e73c66f12fd066c80546ef0101800d68c805"
+        },
+        "native_window_point_normalized": true
+      }
+    },
+    {
+      "classname": "com.qq.modules.td.logic.mouseAction.TDUseShovelAction",
+      "name": "onMouseMove",
+      "method_id": 722,
+      "detail": {
+        "insertion_offsets": [
+          67
+        ],
+        "insertion_hex": {
+          "67": "d060e73c66f12fd0669f0746ef0101800d689f07"
+        },
+        "native_window_point_normalized": true
+      }
+    },
+    {
+      "classname": "com.qq.modules.td.logic.mouseAction.TDUseShovelAction",
+      "name": "onMouseClick",
+      "method_id": 723,
+      "detail": {
+        "insertion_offsets": [
+          57
+        ],
+        "insertion_hex": {
+          "57": "60e73c66f12fd246ef0101800dd6"
+        },
+        "native_window_point_normalized": true
+      }
+    },
+    {
+      "classname": "com.qq.modules.td.logic.mouseAction.TDReleaseAreaSkillAction",
+      "name": "onMouseMove",
+      "method_id": 317,
+      "detail": {
+        "insertion_offsets": [
+          28,
+          216
+        ],
+        "insertion_hex": {
+          "28": "60e73c66f12fd246ef0101800dd6",
+          "216": "60e73c66f12fd246ef0101800dd6"
+        },
+        "native_window_point_normalized": true
+      }
+    },
+    {
+      "classname": "com.qq.modules.td.logic.mouseAction.TDReleaseAreaSkillAction",
+      "name": "onMouseClick",
+      "method_id": 318,
+      "detail": {
+        "insertion_offsets": [
+          18
+        ],
+        "insertion_hex": {
+          "18": "60e73c66f12fd246ef0101800dd6"
+        },
+        "native_window_point_normalized": true
+      }
+    },
+    {
+      "classname": "com.qq.modules.td.logic.mouseAction.TDLayEnergyTileAction",
+      "name": "onMouseMove",
+      "method_id": 1110,
+      "detail": {
+        "insertion_offsets": [
+          28
+        ],
+        "insertion_hex": {
+          "28": "60e73c66f12fd246ef0101800dd6"
+        },
+        "native_window_point_normalized": true
+      }
+    },
+    {
+      "classname": "com.qq.modules.td.logic.mouseAction.TDLayEnergyTileAction",
+      "name": "onMouseClick",
+      "method_id": 1111,
+      "detail": {
+        "insertion_offsets": [
+          28
+        ],
+        "insertion_hex": {
+          "28": "60e73c66f12fd246ef0101800dd6"
+        },
+        "native_window_point_normalized": true
+      }
+    },
+    {
+      "classname": "com.qq.modules.td.logic.TDSpecialSkillTrigger",
+      "name": "updateState",
+      "method_id": 1489,
+      "detail": {
+        "insertion_offsets": [
+          117
+        ],
+        "insertion_hex": {
+          "117": "d060e73c66f12fd066860c46ef0101800d68860c"
+        },
+        "native_window_point_normalized": true
+      }
+    },
+    {
+      "classname": "com.qq.modules.td.logic.bt_ai.aiNode.aiCode.plant.AI_plant_OxygenAlgae",
+      "name": "onMouseMove",
+      "method_id": 3134,
+      "detail": {
+        "insertion_offsets": [
+          82
+        ],
+        "insertion_hex": {
+          "82": "630460e73c66f12f620446ef0101800d"
+        },
+        "native_window_point_normalized": true
+      }
+    }
+  ],
+  "total_method_bodies": 8001,
+  "unchanged_method_bodies": 7991,
+  "constant_pools_and_class_structure_unchanged": true
+}

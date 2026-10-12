@@ -1,0 +1,35 @@
+id	questName	questDesc
+1	Daily Login	Before today's adventure begins, please accept this gift
+2	Daily Check-In	Check in to claim great rewards
+50	Daily Adventure	Challenge Normal or Elite Adventure stages 3 times
+3	Harvest Treasury	Harvest Treasury 1 time
+14	Purchase Energy	Purchase stamina 1 time
+6	Friendship Exchange	Claim Friendship reward 1 time
+8	Fertilize seeds	Fertilize in Solar Room 1 time
+9	Ladder Arena	Challenge Ladder Arena 2 times
+10	Ranked Arena	Battle in Rank Arena 2 times
+13	Event Level	Catch Thief \ Protect Farm \ Sea Challenge 2 times
+43	Brainiac	Participate in Brainiac Trivia 1 time
+49	Plant Quiz	Challenge or sweep Plant Quiz 1 time
+46	Puppet Warzone	Challenge or sweep Puppet Warzone stages 3 times
+42	Gene Trial	Challenge or sweep Genetic Trial 1 time
+7	Alliance Fertilize	Fertilize Alliance Garden 1 time
+45	Alliance Raid	Participate in Alliance Raid battle 2 times
+15	Time Travel	Challenge Time Travel 1 time
+21	World Tree	Nurture World Tree 1 time
+17	Path of Trials	Challenge Path of Trials 1 time
+19	World Boss	Challenge World Boss 1 time
+20	Plant Brawl	Participate in Plant Rumble
+18	Zombie Island	Challenge Brave Zombie Island 1 time
+16	Yeti Rampage	Challenge Zomboni / Raging Yeti 1 time
+4	Send Stamina	Send stamina to a friend 1 time
+24	Combat Treasure Hunt	Participate in Treasure Hunt 1 time
+25	Free Plants	Free plant recharge 1 time
+26	Daily Special	Purchase Daily Special 2 times
+40	Test Your Luck	Test your luck 1 time
+5	Friendly Duel	Spar with friends 3 times
+27	Coin Exchange	Exchange for coins 1 time
+32	Advanced Training	Advanced Nurture World Tree 5 times
+23	Combat Treasure Hunt	Participate in Plunder War 1 time
+44	Secret Treasure Guardian	Claim Secret Vault Guardian reward 1 time
+39	Plant Refinement	Reforge any plant 1 time

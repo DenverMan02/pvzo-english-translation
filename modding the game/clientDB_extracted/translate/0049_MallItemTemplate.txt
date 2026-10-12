@@ -1,0 +1,87 @@
+id	desc
+101	Plant Exchange Coupon
+102	Storage Basket
+103	Lottery Ticket
+104	Prize Voucher
+105	Ordinary Capture
+106	Advanced Capture
+107	Town Relocation Card
+108	High-End Town Relocation Card
+109	Megaphone
+110	Bandage
+111	Truce
+112	Advanced Truce
+113	Town Reconstruction Order
+114	Accelerator Card
+115	Detective Card
+116	Replacement Card
+117	Name Change Card
+118	Alliance Name Change Card
+119	Alliance Contract
+120	Tower Defense Privilege Card (30 days)
+121	Magic Plant Coins
+122	Plant Coins
+123	Puppet Exchange Card
+124	Memory Card
+201	Fashion Crystal
+202	Fashion Essence
+203	Refining Potion
+204	Advanced Refining Potion
+205	One-Star Chlorophyll
+206	Two-Star Chlorophyll
+207	Three-Star Chlorophyll
+208	Four-Star Chlorophyll
+209	Five-Star Chlorophyll
+210	Golden Kettle
+211	Energy Stone
+212	Alloy Elements
+213	Level 2 Attack Crystal
+214	Level 2 Defense Crystal
+215	Level 2 Life Crystal
+216	Level 2 Skill Crystal
+217	Level 4 Attack Crystal
+218	Level 4 Defense Crystal
+219	Level 4 Life Crystal
+220	Level 4 Skill Crystal
+221	Star Soul
+222	Skill Magnetic Piece
+223	Skill CD
+224	Skill Fragments
+225	Standard Culture Medium
+226	Intermediate Culture Medium
+227	[Common] Helmet Blueprint
+228	[Excellent] Helmet Blueprint
+229	[Common] Jacket Blueprint
+230	[Excellent] Jacket Blueprint
+231	[Common] Weapon Blueprint
+232	[Excellent] Weapon Blueprint
+233	[Common] Boot Blueprint
+234	[Excellent] Boot Blueprint
+235	[Common] Glove Blueprint
+236	[Excellent] Glove Blueprint
+237	[Common] Pants Blueprint
+238	[Excellent] Pants Blueprint
+239	Gene Medicine
+401	Snowman - Iceberg Lettuce
+402	Christmas - Winter Melon
+403	New Year - Starfruit
+404	Frozen (1 day)
+405	Frozen (7 days)
+406	Frozen (14 days)
+407	The Wizard of Oz (1 day)
+408	The Wizard of Oz (7 days)
+409	The Wizard of Oz (14 days)
+410	Happy Chinese New Year (1 day)
+411	Happy Chinese New Year (7 days)
+412	Happy Chinese New Year (14 days)
+601	Small Cannon
+602	Large Cannon
+603	Marble
+604	Bag of Marbles
+605	Rocking Coin
+606	Adventure Torch
+607	Telescope
+608	Marigold
+609	Durian Hammer
+610	Hammer
+611	The Pharaoh's Key

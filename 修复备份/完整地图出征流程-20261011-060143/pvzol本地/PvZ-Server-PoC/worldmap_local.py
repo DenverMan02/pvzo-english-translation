@@ -1,0 +1,1509 @@
+"""Offline WorldMap/ModuleExped adapter (not the separate ExpeditionFight event).
+
+Protocol IDs/fields come from Assets/src/PVZ/Cmd. NPCs, declaration wait, march
+durations, daily limits, cooldowns and rewards below are local reconstruction
+rules, not claims about the retired online game's economy. Towns start neutral;
+saved declarations enable combat after the original client's countdown boundary.
+Every other saved local town can be challenged. Defender saves
+are read-only: combat snapshots their deployed plants without altering them.
+
+Import/registration is side-effect free. Tables are additive and opened lazily
+using the CURRENT store.DB_PATH. Mission result + currency + cooldown are committed
+in one SQLite transaction; all reports and formations are scoped to the account.
+"""
+from __future__ import annotations
+
+import contextlib
+import copy
+import functools
+import json
+import math
+import sqlite3
+import time
+
+TEAM_ID = 1001  # E_WARTEAM_ATTACKMIN; do not replace the ordinary home team 1.
+ATTACK_TEAMS = (1, TEAM_ID, 1002, 1003, 1004)  # UI labels are array indices; preserve existing save IDs.
+TEAM_MAX_NUM = len(ATTACK_TEAMS)
+# Original clientDB levelupOpenInfo.txt rows 81/88 unlock the fourth/fifth
+# expedition formations at town levels 25/30. No independent second/third
+# threshold exists in the supplied resources; retain those existing slots.
+FORMATION_UNLOCK_LEVELS = (0, 0, 0, 25, 30)
+
+
+def attack_teams_at_level(level):
+    return tuple(team for team, threshold in zip(ATTACK_TEAMS, FORMATION_UNLOCK_LEVELS)
+                 if int(level or 1) >= threshold)
+
+
+DAILY_LIMIT = 20
+DECLARE_WAIT_SECONDS = 60  # Explicit local wait; the client adds its two-second boundary.
+DECLARE_DAILY_LIMIT = 20
+TARGET_COOLDOWN = 60
+AREA_CHANGE_COOLDOWN = 86400  # Local cross-continent relocation rule, one server day.
+HISTORY_LIMIT = 50
+MAP_SIZES = {1: 2016, 2: 720}  # 56 or 20 repeated 36x36 TMX chunks.
+MAP_SIZE = max(MAP_SIZES.values())
+SUPPORTED_AREAS = (1, 2)
+SPEEDUP_ITEM = 1101
+MOVE_ITEM = 3122
+HEAL_COST_PER_CARD = 100  # Explicit local coin repair price, not item2005 health bandages.
+BUY_COSTS = (10, 20, 30)  # Local diamond prices; hardcoded client text says diamonds.
+BUILD_SITES = tuple((x,y) for x in (5,11,17,23,29,35) for y in (5,11,17,23,29,35))
+MARCHING, RECALLING, HOME, RETURNING = 1, 3, 4, 5
+NPCS = (
+    {"role_id": 6000000000001, "name": "本地演练·僵尸营地", "pos": (24, 18),
+     "level": 20, "power": 1500, "coin": 500, "stage": 1},
+    {"role_id": 6000000000002, "name": "本地演练·僵尸哨站", "pos": (18, 24),
+     "level": 30, "power": 15000, "coin": 1500, "stage": 16},
+    {"role_id": 6000000000003, "name": "本地演练·僵尸要塞", "pos": (26, 26),
+     "level": 45, "power": 100000, "coin": 5000, "stage": 31},
+)
+
+
+def _now():
+    """Replaceable clock for isolated, deterministic acceptance tests."""
+    return int(time.time())
+
+
+def _v(field, value):
+    def varint(n):
+        n = int(n)
+        if n < 0 or n > 0xffffffffffffffff:
+            raise ValueError("unsigned protobuf integer outside range")
+        out = bytearray()
+        while n > 127:
+            out.append((n & 127) | 128)
+            n >>= 7
+        return bytes(out + bytes([n]))
+    return varint(field << 3) + varint(value)
+
+
+def _m(field, value):
+    return _tagged_bytes(field, value)
+
+
+def _tagged_bytes(field, value):
+    tag = _v(field, 0)[:-1]
+    return bytes([tag[0] | 2]) + tag[1:] + _v(1, len(value))[1:] + value
+
+
+def _s(field, value):
+    return _m(field, str(value).encode("utf-8"))
+
+
+def _fields(data):
+    """Strict bounded parser; unlike the legacy helper, never silently truncates."""
+    if len(data) > 8 * 1024 * 1024:
+        raise ValueError("oversized protobuf message")
+    out, at = {}, 0
+    def read():
+        nonlocal at
+        n = 0
+        for shift in range(0, 70, 7):
+            if at >= len(data):
+                raise ValueError("truncated map request")
+            b = data[at]
+            at += 1
+            n |= (b & 127) << shift
+            if not b & 128:
+                if n > 0xffffffffffffffff:
+                    raise ValueError("oversized varint")
+                return n
+        raise ValueError("overlong varint")
+    while at < len(data):
+        tag = read()
+        field, wire = tag >> 3, tag & 7
+        if not field:
+            raise ValueError("invalid field")
+        if wire == 0:
+            value = read()
+        elif wire in (1, 2, 5):
+            length = read() if wire == 2 else (8 if wire == 1 else 4)
+            if at + length > len(data):
+                raise ValueError("truncated map field")
+            value = data[at:at + length]
+            at += length
+        else:
+            raise ValueError("invalid wire type")
+        out.setdefault(field, []).append((wire, value))
+    return out
+
+
+def _one(data, field, wire=0, default=0):
+    entries = _fields(data).get(field, [])
+    if not entries:
+        return default
+    if len(entries) != 1 or entries[0][0] != wire:
+        raise ValueError("duplicate field or wrong wire type")
+    return entries[0][1]
+
+
+def _pos(data, field):
+    value = _one(data, field, 2, None)
+    if value is None:
+        raise ValueError("missing target position")
+    x, y = _one(value, 1, default=-1), _one(value, 2, default=-1)
+    if not (0 <= x < MAP_SIZE and 0 <= y < MAP_SIZE):
+        raise ValueError("invalid target position")
+    return x, y
+
+
+def _viewport_pos(data, field):
+    value = _one(data,field,2,None)
+    if value is None:
+        raise ValueError("missing viewport position")
+    def signed(n):
+        n &= 0xffffffff
+        return n - 0x100000000 if n & 0x80000000 else n
+    return signed(_one(value,1)), signed(_one(value,2))
+
+
+def _position(pos):
+    return _v(1, pos[0]) + _v(2, pos[1])
+
+
+def _replace(data, field, value):
+    out = b""
+    for key, entries in _fields(data).items():
+        if key == field:
+            continue
+        for wire, item in entries:
+            if wire == 0:
+                out += _v(key, item)
+            elif wire == 2:
+                out += _m(key, item)
+            else:
+                raise ValueError("unexpected fixed wire in formation")
+    return out + value
+
+
+def _error(code):
+    return [("PVZ.Cmd.Cmd_LogicError_SC", _v(1, code))]
+
+
+def _reply(name, body=b""):
+    return [("PVZ.Cmd.Cmd_" + name + "_SC", body)]
+
+
+class WorldMap:
+    def __init__(self, api):
+        self.api = api
+        self.original_get = api.REQUEST_HANDLERS.get("PVZ.Cmd.Cmd_Battle_GetFormation_CS")
+        self.original_set = api.REQUEST_HANDLERS.get("PVZ.Cmd.Cmd_Battle_SetFormation_CS")
+        self.original_preview = api.REQUEST_HANDLERS.get("PVZ.Cmd.Cmd_Battle_GetFightInfo_CS")
+        self.original_fight = api.REQUEST_HANDLERS.get("PVZ.Cmd.Cmd_Battle_Fight_CS")
+        self.original_query_report = api.REQUEST_HANDLERS.get("PVZ.Cmd.Cmd_Battle_QueryReport_CS")
+        self.resources = None
+        self.active_users = set()
+        self.seen_users = set()
+        self.notifications = {}
+
+    @contextlib.contextmanager
+    def db(self, player):
+        uin = int(player.get("uin", 0))
+        # Puppet/reward handlers refresh formations before their atomic claim
+        # commits. Join that writer instead of locking against our own thread.
+        shared = bool(getattr(getattr(self.api.store, "_THREAD_STATE", None), "atomic_depth", 0))
+        con = (self.api.store._thread_db() if shared else
+               sqlite3.connect(self.api.store.DB_PATH, timeout=10, isolation_level=None))
+        con.row_factory = sqlite3.Row
+        try:
+            if not shared:
+                con.execute("BEGIN IMMEDIATE")
+            if con.execute("SELECT 1 FROM players WHERE uin=?", (uin,)).fetchone() is None:
+                raise ValueError("unknown authenticated player")
+            con.execute("""CREATE TABLE IF NOT EXISTS local_worldmap_state (
+                uin INTEGER PRIMARY KEY, area INTEGER NOT NULL DEFAULT 1,
+                x INTEGER NOT NULL DEFAULT 18, y INTEGER NOT NULL DEFAULT 18,
+                day TEXT NOT NULL DEFAULT '', used INTEGER NOT NULL DEFAULT 0,
+                show_null INTEGER NOT NULL DEFAULT 0,
+                formation TEXT NOT NULL DEFAULT '', leader INTEGER NOT NULL DEFAULT 0,
+                cooldowns TEXT NOT NULL DEFAULT '{}', wins INTEGER NOT NULL DEFAULT 0,
+                default_team INTEGER NOT NULL DEFAULT 1,
+                bonus INTEGER NOT NULL DEFAULT 0, bought INTEGER NOT NULL DEFAULT 0,
+                health TEXT NOT NULL DEFAULT '{}',
+                area_positions TEXT NOT NULL DEFAULT '{}', change_cd INTEGER NOT NULL DEFAULT 0,
+                home_initialized INTEGER NOT NULL DEFAULT 0, defend_team INTEGER NOT NULL DEFAULT 0)""")
+            con.execute("""CREATE TABLE IF NOT EXISTS local_worldmap_missions (
+                id INTEGER PRIMARY KEY AUTOINCREMENT, uin INTEGER NOT NULL,
+                npc INTEGER NOT NULL, area INTEGER NOT NULL, team_id INTEGER NOT NULL,
+                origin_x INTEGER NOT NULL, origin_y INTEGER NOT NULL,
+                state INTEGER NOT NULL, begin_at INTEGER NOT NULL,
+                arrive_at INTEGER NOT NULL, home_at INTEGER NOT NULL,
+                period INTEGER NOT NULL, settled INTEGER NOT NULL DEFAULT 0,
+                cancelled INTEGER NOT NULL DEFAULT 0, won INTEGER NOT NULL,
+                reward INTEGER NOT NULL, report BLOB NOT NULL,
+                formation BLOB NOT NULL, created_at INTEGER NOT NULL,
+                health_after TEXT NOT NULL DEFAULT '{}')""")
+            mission_columns = {r[1] for r in con.execute('PRAGMA table_info(local_worldmap_missions)')}
+            if 'target_snapshot' not in mission_columns:
+                con.execute("ALTER TABLE local_worldmap_missions ADD COLUMN target_snapshot TEXT NOT NULL DEFAULT '{}' ")
+            con.execute("CREATE INDEX IF NOT EXISTS local_worldmap_missions_owner "
+                        "ON local_worldmap_missions(uin,id)")
+            con.execute("""CREATE TABLE IF NOT EXISTS local_worldmap_wars (
+                uin INTEGER NOT NULL, role_id INTEGER NOT NULL, area INTEGER NOT NULL,
+                target_uin INTEGER NOT NULL DEFAULT 0, declared_at INTEGER NOT NULL,
+                ready_at INTEGER NOT NULL, phase INTEGER NOT NULL DEFAULT 1,
+                cooldown_until INTEGER NOT NULL DEFAULT 0,
+                PRIMARY KEY (uin,role_id,area))""")
+            con.execute('CREATE INDEX IF NOT EXISTS local_worldmap_wars_target ON local_worldmap_wars(target_uin,area,phase)')
+            state_columns = {r[1] for r in con.execute('PRAGMA table_info(local_worldmap_state)')}
+            if 'declared_used' not in state_columns:
+                con.execute('ALTER TABLE local_worldmap_state ADD COLUMN declared_used INTEGER NOT NULL DEFAULT 0')
+            con.execute("INSERT OR IGNORE INTO local_worldmap_state(uin) VALUES (?)", (uin,))
+            today = time.strftime("%Y%m%d", time.localtime(_now()))
+            con.execute("UPDATE local_worldmap_state SET day=?,used=0,bonus=0,bought=0,declared_used=0 WHERE uin=? AND day<>?",
+                        (today, uin, today))
+            yield con
+            if not shared:
+                con.commit()
+            row = con.execute("SELECT coin,present_ticket,ticket FROM players WHERE uin=?", (uin,)).fetchone()
+            if row is not None:
+                player["coin"],player["present_ticket"],player["ticket"] = map(int,row)
+        except Exception:
+            if not shared:
+                con.rollback()
+            raise
+        finally:
+            if not shared:
+                con.close()
+
+    def unlocked_attack_teams(self, player, con=None):
+        if con is None:
+            with self.db(player) as active:
+                return self.unlocked_attack_teams(player, active)
+        row = con.execute("SELECT level FROM players WHERE uin=?", (player["uin"],)).fetchone()
+        return attack_teams_at_level(row[0] if row else 1)
+
+    def state(self, con, player):
+        return dict(con.execute("SELECT * FROM local_worldmap_state WHERE uin=?",
+                                (int(player["uin"]),)).fetchone())
+
+    def mission(self, con, player, team_id=None):
+        sql = "SELECT * FROM local_worldmap_missions WHERE uin=? AND state<>?"
+        args = [int(player["uin"]),HOME]
+        if team_id is not None:
+            sql += " AND team_id=?"
+            args.append(int(team_id))
+        return con.execute(sql+" ORDER BY id DESC LIMIT 1",args).fetchone()
+
+    def city_busy_cards(self,con,player):
+        cards = set()
+        for row in con.execute("SELECT formation FROM local_worldmap_missions WHERE uin=? AND state<>?",
+                               (player["uin"],HOME)):
+            cards.update(_one(card,2) for wire,card in _fields(bytes(row[0])).get(1,[]) if wire == 2)
+        return cards
+
+    def busy_cards(self,con,player):
+        cards = self.city_busy_cards(con,player)
+        if self.resources:
+            cards.update(self.resources.busy_cards(player,con=con))
+        return cards
+
+    def team_busy(self,con,player,team_id):
+        return bool(self.mission(con,player,team_id) or
+                    (self.resources and self.resources.team_busy(player,team_id,con=con)))
+
+    def current_placements(self,con,player,team_id):
+        if team_id == TEAM_ID:
+            return {int(k):int(v) for k,v in json.loads(self.state(con,player)["formation"] or '{}').items()}
+        return {int(row[0]):int(row[1]) for row in con.execute(
+            "SELECT pos_index,uid FROM formation WHERE uin=? AND team_id=? AND COALESCE(owner_role_id,0)=0",
+            (player["uin"],team_id))}
+
+    def current_leader(self,con,player,team_id):
+        if team_id == TEAM_ID:
+            return int(self.state(con,player)["leader"])
+        row = con.execute("SELECT uid FROM formation_leader WHERE uin=? AND team_id=?",
+                          (player["uin"],team_id)).fetchone()
+        return int(row[0]) if row else 0
+
+    def health_snapshot(self,state,placements):
+        health = json.loads(state["health"])
+        return {str(uid):int(health.get(str(uid),10000)) for uid in placements.values()}
+
+    def repair_cost(self,state,placements):
+        return sum(value < 10000 for value in self.health_snapshot(state,placements).values())*HEAL_COST_PER_CARD
+
+    def repair_in_transaction(self,con,player,placements):
+        """Return charged coins, or None; no partial heal on insufficient money."""
+        state = self.state(con,player)
+        cost = self.repair_cost(state,placements)
+        if cost and not con.execute("UPDATE players SET coin=coin-? WHERE uin=? AND coin>=?",
+                                    (cost,player["uin"],cost)).rowcount:
+            return None
+        if cost:
+            health = json.loads(state["health"])
+            health.update({str(uid):10000 for uid in placements.values()})
+            con.execute("UPDATE local_worldmap_state SET health=? WHERE uin=?",(json.dumps(health),player["uin"]))
+        return cost
+
+    def restored_formation(self,dto):
+        cards = b"".join(_m(1,_replace(card,4,_v(4,_one(card,5))))
+                         for wire,card in _fields(dto).get(1,[]) if wire == 2)
+        return _replace(_replace(dto,1,cards),7,_v(7,0))
+
+    def npc(self, role_id=None, pos=None):
+        return next((n for n in NPCS if (n["role_id"] == role_id if role_id is not None
+                                       else n["pos"] == pos)), None)
+
+    def town_targets(self, con, player, area=None):
+        """Existing saved towns in the viewed area; never create an opponent save.
+
+        Local town combat is explicitly available for bots and human accounts.
+        Viewing/fighting defenders never initializes or regenerates their plants.
+        """
+        display = getattr(self, 'local_city_display', None)
+        if display is None:
+            return []
+        display.ensure(con)
+        rows = con.execute('SELECT * FROM players WHERE uin<>? ORDER BY uin',(player['uin'],)).fetchall()
+        result = []
+        for row in rows:
+            profile = dict(row)
+            st = display.town_state(con, profile)
+            if area is not None and st['area'] != area:
+                continue
+            role = int(profile.get('role_id') or profile['uin'])
+            result.append(dict(role_id=role, name=profile.get('name') or '本地人机',
+                               pos=(st['x'], st['y']), area=st['area'],
+                               level=int(profile.get('level') or 1), coin=500,
+                               face_id=int(profile.get('face_id') or 0),
+                               face_url=(self.api.player_face_url(profile) if hasattr(self.api,'player_face_url') else ''),
+                               town_uin=int(profile['uin'])))
+        return result
+
+    def target(self, player, role_id=None, pos=None, con=None):
+        if con is None:
+            with self.db(player) as connection:
+                return self.target(player, role_id, pos, connection)
+        area = self.state(con, player)['area']
+        static = self.npc(role_id=role_id, pos=pos)
+        if static is not None:
+            return dict(static, area=area)
+        return next((n for n in self.town_targets(con, player, area)
+                     if (n['role_id'] == role_id if role_id is not None else n['pos'] == pos)), None)
+
+    def target_cell(self, con, player, st, target):
+        if 'town_uin' not in target:
+            return self.cell(player, st, target, con=con)
+        row = con.execute('SELECT * FROM players WHERE uin=?', (target['town_uin'],)).fetchone()
+        return self.local_city_display.cell(con, dict(row), viewer=player)[0]
+
+    def war_record(self, con, player, role_id, area):
+        """Read the actual relationship in either direction, scoped to its area."""
+        return con.execute('SELECT w.* FROM local_worldmap_wars w LEFT JOIN players p ON p.uin=w.uin '
+            'WHERE w.area=? AND ((w.uin=? AND w.role_id=?) OR '
+            '(w.target_uin=? AND COALESCE(NULLIF(p.role_id,0),p.uin)=?)) '
+            'AND (w.phase<>0 OR w.cooldown_until>?) '
+            'ORDER BY (w.uin=?) DESC,w.declared_at DESC LIMIT 1',
+            (area,player['uin'],role_id,player['uin'],role_id,_now(),player['uin'])).fetchone()
+
+    def war_view(self, con, player, role_id, area=None):
+        """E_WarState, declaration deadline, E_WarFreeType, protection deadline.
+
+        A target's existence only grants permission to declare. CanAttack comes
+        from a saved declaration or a mission that predates this migration.
+        """
+        if con is None:
+            with contextlib.closing(sqlite3.connect(self.api.store.DB_PATH)) as connection:
+                connection.row_factory = sqlite3.Row
+                return self.war_view(connection,player,role_id,area)
+        state = self.state(con,player)
+        area = state['area'] if area is None else area
+        if area != state['area'] or role_id == int(player.get('role_id') or player['uin']):
+            return 0,0,1,0
+        row = self.war_record(con,player,role_id,area)
+        cooldown = max(int(json.loads(state['cooldowns']).get(str(role_id),0)),
+                       int(row['cooldown_until']) if row else 0)
+        if cooldown > _now():
+            # MapCityCellVO keeps protection through endTime+1 inclusive.
+            return 0,0,2,cooldown-1
+        if row and row['phase']:
+            if _now() < row['ready_at']:
+                return (1 if row['uin']==player['uin'] else 2),row['ready_at']-2,1,0
+            return 3,0,1,0
+        legacy = con.execute('SELECT target_snapshot FROM local_worldmap_missions WHERE uin=? AND npc=? AND area=? '
+            'AND state=? AND settled=0 AND cancelled=0',
+            (player['uin'],role_id,area,MARCHING)).fetchall()
+        legacy_active = any(not json.loads(r[0] or '{}').get('_war_key') for r in legacy)
+        return (3 if legacy_active else 0),0,1,0
+
+    def ready_war(self, con, player, role_id, area):
+        row = self.war_record(con,player,role_id,area)
+        return row if row and row['phase'] in (1,3,4) and row['ready_at'] <= _now() and self.war_view(
+            con,player,role_id,area)[0] == 3 else None
+
+    def mission_war(self, con, row):
+        snapshot = json.loads(row.get('target_snapshot') or '{}')
+        key, generation = snapshot.get('_war_key'),snapshot.get('_war_generation')
+        war = con.execute('SELECT * FROM local_worldmap_wars WHERE uin=? AND role_id=? AND area=?',key).fetchone() if key else None
+        return war if war and (not generation or [war['declared_at'],war['ready_at']]==generation) else None
+
+    def declared_targets(self, con, player, state):
+        targets = [dict(n,area=state['area']) for n in NPCS] + self.town_targets(con,player,state['area'])
+        return [n for n in targets if self.war_record(con,player,n['role_id'],state['area']) or
+                self.war_view(con,player,n['role_id'],state['area'])[0]]
+
+    def declare_stat(self, data, player):
+        with self.db(player) as con:
+            state = self.state(con,player)
+        total = self.declare_limit()
+        return _reply('War_GetDeclareWarStat',_v(1,total)+_v(2,max(0,total-state['declared_used'])))
+
+    def declare_limit(self):
+        return int(self.api._cfg_value('iDailyDeclareWarTimes')) if hasattr(self.api,'_cfg_value') else DECLARE_DAILY_LIMIT
+
+    def war_updates(self, player):
+        """Refresh this session's viewport and enemy rows after relationship changes."""
+        with self.db(player) as con:
+            area = self.state(con,player)['area']
+        data = player.get('_worldmap_viewport',b'')
+        if not data:
+            data = _v(5,area)
+        display = getattr(self,'local_city_display',None)
+        view = display.get_info(data,player) if display else self.get_info(data,player)
+        return view + self.enemy_list(b'',player) + self.city_list(_v(1,1),player) + self.declare_stat(b'',player)
+
+    def notify_war_peers(self, player, peers):
+        # Cache a marker; each socket rebuilds its own full viewport on receipt.
+        for uin in set(peers)-{int(player['uin']),0}:
+            version = self.notifications.get(uin,(0,[]))[0]+1
+            self.notifications[uin] = (version,[('WORLD_MAP_WAR_REFRESH',b'')])
+            self.active_users.add(uin)
+
+    def advance(self, player):
+        """Settle every due independent team, once, in one account transaction."""
+        # Mine battles have an independent travel lifecycle. Settle them before
+        # taking the town transaction so combat never runs under its write lock.
+        resource_updates = (self.resources.advance_missions(player)
+                            if self.resources and hasattr(self.resources,'advance_missions') else [])
+        now, changed, war_changed, peers = _now(), [], False, set()
+        with self.db(player) as con:
+            wars = con.execute('SELECT * FROM local_worldmap_wars WHERE phase=1 '
+                               'AND (uin=? OR target_uin=?) AND ready_at<=?',
+                               (player['uin'],player['uin'],now)).fetchall()
+            for war in wars:
+                con.execute('UPDATE local_worldmap_wars SET phase=3 WHERE uin=? AND role_id=? AND area=? AND phase=1',
+                            (war['uin'],war['role_id'],war['area']))
+                peers.update((war['uin'],war['target_uin']))
+                war_changed = True
+            cooled = con.execute('SELECT * FROM local_worldmap_wars WHERE phase=0 AND cooldown_until>0 '
+                                 'AND cooldown_until<=? AND (uin=? OR target_uin=?)',
+                                 (now,player['uin'],player['uin'])).fetchall()
+            for war in cooled:
+                con.execute('UPDATE local_worldmap_wars SET cooldown_until=0 WHERE uin=? AND role_id=? AND area=?',
+                            (war['uin'],war['role_id'],war['area']))
+                peers.update((war['uin'],war['target_uin']))
+                war_changed = True
+            cooldowns_before = json.loads(self.state(con,player)['cooldowns'])
+            if any(int(until)<=now for until in cooldowns_before.values()):
+                con.execute('UPDATE local_worldmap_state SET cooldowns=? WHERE uin=?',
+                    (json.dumps({role:until for role,until in cooldowns_before.items() if int(until)>now}),player['uin']))
+                war_changed = True
+            rows = con.execute("SELECT * FROM local_worldmap_missions WHERE uin=? AND state<>? ORDER BY id",
+                               (player["uin"],HOME)).fetchall()
+            self.seen_users.add(int(player["uin"]))
+            for record in rows:
+                row = dict(record)
+                mutated = False
+                if row["state"] == MARCHING and now >= row["arrive_at"]:
+                    if not row["settled"]:
+                        reward = row["reward"] if row["won"] else 0
+                        if reward:
+                            con.execute("UPDATE players SET coin=MIN(4294967295,coin+?) WHERE uin=?",
+                                        (reward,player["uin"]))
+                        state = self.state(con,player)
+                        snapshot = json.loads(row.get('target_snapshot') or '{}')
+                        war = self.mission_war(con,row)
+                        if war:
+                            con.execute('UPDATE local_worldmap_wars SET phase=0,cooldown_until=MAX(cooldown_until,?) '
+                                        'WHERE uin=? AND role_id=? AND area=?',
+                                        (row['arrive_at']+TARGET_COOLDOWN,war['uin'],war['role_id'],war['area']))
+                            peers.update((war['uin'],war['target_uin']))
+                        war_changed = True
+                        cooldowns = json.loads(state["cooldowns"])
+                        key = str(row["npc"])
+                        if war or not snapshot.get('_war_key'):
+                            cooldowns[key] = max(cooldowns.get(key,0),row["arrive_at"]+TARGET_COOLDOWN)
+                        health = json.loads(state["health"])
+                        health.update(json.loads(row["health_after"]))
+                        con.execute("UPDATE local_worldmap_state SET cooldowns=?,health=?,wins=wins+? WHERE uin=?",
+                                    (json.dumps(cooldowns),json.dumps(health),int(bool(row["won"])),player["uin"]))
+                        after_hp = json.loads(row["health_after"])
+                        cards = b""
+                        injured = 0
+                        for wire,card in _fields(bytes(row["formation"])).get(1,[]):
+                            if wire != 2:
+                                continue
+                            ratio = int(after_hp.get(str(_one(card,2)),10000))
+                            injured += int(ratio < 10000)
+                            cards += _m(1,_replace(card,4,_v(4,_one(card,5)*ratio//10000)))
+                        row["formation"] = _replace(_replace(bytes(row["formation"]),1,cards),7,
+                                                    _v(7,injured*HEAL_COST_PER_CARD))
+                        row["settled"] = 1
+                    row["state"],mutated = RETURNING,True
+                if row["state"] in (RETURNING,RECALLING) and now >= row["home_at"]:
+                    row["state"],mutated = HOME,True
+                    if row['cancelled']:
+                        war = self.mission_war(con,row)
+                        if war:
+                            con.execute('UPDATE local_worldmap_wars SET phase=0 WHERE uin=? AND role_id=? AND area=?',
+                                        (war['uin'],war['role_id'],war['area']))
+                            peers.update((war['uin'],war['target_uin']))
+                            war_changed = True
+                if mutated:
+                    con.execute("UPDATE local_worldmap_missions SET state=?,settled=?,formation=? WHERE id=? AND uin=?",
+                                (row["state"],row["settled"],row["formation"],row["id"],player["uin"]))
+                    changed.append(row)
+            waiting = con.execute('SELECT 1 FROM local_worldmap_wars WHERE (phase=1 OR cooldown_until>?) '
+                                  'AND (uin=? OR target_uin=?) LIMIT 1',
+                                  (now,player['uin'],player['uin'])).fetchone()
+            waiting = waiting or any(int(until)>now for until in json.loads(self.state(con,player)['cooldowns']).values())
+            resources_waiting = (self.resources.has_active_missions(player,con=con)
+                                 if self.resources and hasattr(self.resources,'has_active_missions') else False)
+            if self.mission(con,player) is None and not waiting and not resources_waiting:
+                self.active_users.discard(int(player["uin"]))
+            else:
+                self.active_users.add(int(player['uin']))
+            con.execute("DELETE FROM local_worldmap_missions WHERE uin=? AND state=? AND id NOT IN "
+                        "(SELECT id FROM local_worldmap_missions WHERE uin=? ORDER BY id DESC LIMIT ?)",
+                        (player["uin"],HOME,player["uin"],HISTORY_LIMIT))
+        if not changed and not war_changed and not resource_updates:
+            return []
+        messages = list(resource_updates)
+        messages += _reply("SyncCoin",_v(1,player["coin"])) if changed else []
+        messages += [("PVZ.Cmd.Cmd_War_SyncHistory_SC",_m(1,self.history_dto(player,row))) for row in changed]
+        if changed:
+            messages += self.get_formation(b"",player)
+        if war_changed:
+            messages += self.war_updates(player)
+            self.notify_war_peers(player,peers)
+        self.publish(player,messages)
+        return messages
+
+    def publish(self,player,messages):
+        uin = int(player["uin"])
+        version = self.notifications.get(uin,(0,[]))[0] + 1
+        self.notifications[uin] = (version,list(messages))
+        player["_worldmap_seen_revision"] = version
+
+    def pending_notifications(self,player):
+        event = self.notifications.get(int(player["uin"]))
+        if not event or player.get("_worldmap_seen_revision") == event[0]:
+            return []
+        player["_worldmap_seen_revision"] = event[0]
+        if any(name=='WORLD_MAP_WAR_REFRESH' for name,_ in event[1]):
+            return self.war_updates(player)
+        # Currency in a cached transition is never authoritative after another
+        # connection performs a subsequent action. Read the current total.
+        with contextlib.closing(sqlite3.connect(self.api.store.DB_PATH)) as con:
+            row = con.execute("SELECT coin FROM players WHERE uin=?",(player["uin"],)).fetchone()
+        if row:
+            player["coin"] = int(row[0])
+        current_formation = self.get_formation(b"",player)[0][1]
+        messages = [(name,(_v(1,player["coin"]) if name.endswith("SyncCoin_SC") else
+                      current_formation if name.endswith("Battle_GetFormation_SC") else body))
+                for name,body in event[1]]
+        war_names = {'WorldMap_GetInfo','WorldMap_GetEnemyList','Setout_GetCityList','War_GetDeclareWarStat'}
+        if any(name.endswith('WorldMap_GetInfo_SC') for name,_ in messages):
+            messages = [(name,body) for name,body in messages if not any(name.endswith(n+'_SC') for n in war_names)]
+            messages += self.war_updates(player)
+        return messages
+
+    def city_init(self, data, player):
+        with self.db(player) as con:
+            st = self.state(con, player)
+        return _reply("City_Init", _m(1, _position((st["x"], st["y"]))) + _v(2, st["area"])
+                      + _v(3, st["change_cd"]) + _v(4, st["show_null"]))
+
+    def cell(self, player, st, npc=None, con=None):
+        role = int(player.get("role_id") or player["uin"])
+        name, pos, face = player.get("name") or "Player", (st["x"], st["y"]), 0
+        war, deadline, free, free_end = 0,0,1,0
+        if npc:
+            role, name, pos, face = npc["role_id"], npc["name"], npc["pos"], 0
+            war,deadline,free,free_end = self.war_view(con,player,role,st['area'])
+        dto = (_v(1, 1) + _m(2, _position(pos)) + _v(3, role) + _s(4, name)
+                + _v(5, war) + _v(6, deadline) + _v(7, face)
+                + _v(8, free) + _v(9, free_end)
+                + _v(11, 0) + _s(12, "") + _m(13, b"") + _m(14, b"")
+                + _v(15, st["area"]) + _m(16, self.api.build_player_diamond(player if not npc else {}))
+                + _v(30, 0) + _v(50, 0))
+        if not npc and self.resources and hasattr(self.resources, 'mine_cars'):
+            dto += self.resources.mine_cars(player, st)
+        return dto
+
+    def get_info(self, data, player):
+        area = _one(data, 5, default=1) or 1
+        if area not in SUPPORTED_AREAS:
+            return _error(4703)
+        with self.db(player) as con:
+            st = self.state(con, player)
+        # NPC fields are local to the viewed area; the player exists only in its
+        # persisted area. Do not duplicate the player marker on every map.
+        shown = dict(st, area=area)
+        cells = [(self.cell(player, shown, n), n["pos"]) for n in NPCS]
+        bounds = [_viewport_pos(data, i) for i in range(1, 5) if i in _fields(data)]
+        if self.resources:
+            cells += self.resources.resource_cells(player, shown, bounds=bounds)
+        # Building-site VOs (type11) are generated locally from TMX objects.
+        # The network factory accepts only types1/2/3, so never transmit11.
+        if area == st["area"]:
+            cells.insert(0, (self.cell(player, st), (st["x"], st["y"])))
+        if bounds:
+            lo_x, hi_x = min(p[0] for p in bounds), max(p[0] for p in bounds)
+            lo_y, hi_y = min(p[1] for p in bounds), max(p[1] for p in bounds)
+            cells = [(cell, pos) for cell, pos in cells if lo_x <= pos[0] <= hi_x and lo_y <= pos[1] <= hi_y]
+        body = b"".join(_m(1, c) for c, _ in cells)
+        # A viewport belongs to this socket's player/session object. Cache only
+        # successfully parsed requests so malformed input cannot poison a later
+        # resource update after its transaction has already committed.
+        player['_worldmap_viewport'] = data
+        return _reply("WorldMap_GetInfo", body)
+
+    def get_cell(self, data, player):
+        role = _one(data, 1)
+        own = int(player.get("role_id") or player["uin"])
+        npc = self.npc(role_id=role)
+        if role not in (0, own) and npc is None:
+            return _error(108)
+        with self.db(player) as con:
+            st = self.state(con, player)
+        return _reply("WorldMap_GetCellInfo", _m(1, self.cell(player, st, npc)))
+
+    def get_city(self, data, player):
+        role = _one(data, 1)
+        own = int(player.get("role_id") or player["uin"])
+        npc = self.npc(role_id=role)
+        if role not in (0, own) and npc is None:
+            return _error(108)
+        body = (_v(1, npc["role_id"] if npc else own) + _s(2, npc["name"] if npc else player.get("name", "Player"))
+                + _v(3, npc["level"] if npc else int(player.get("level") or 1))
+                + _v(4, 0 if npc else int(player.get("face_id") or 0)) + _v(5, 0) + _s(6, "")
+                + _s(8, "") + _m(9, self.api.build_player_diamond(player if not npc else {}))
+                + _v(10, 0) + _s(11, "离线演练目标，战胜后获得金币；不影响其他账号。" if npc else ""))
+        return _reply("WorldMap_GetCityInfo", body)
+
+    def enemy_list(self, data, player):
+        with self.db(player) as con:
+            st = self.state(con, player)
+            targets = self.declared_targets(con,player,st)
+            body = b''.join(_m(1, self.target_cell(con, player, st, n)) for n in targets)
+        return _reply("WorldMap_GetEnemyList", body)
+
+    def period(self, origin, target):
+        return max(20, min(300, int(math.ceil(math.hypot(target[0]-origin[0], target[1]-origin[1])*3))))
+
+    def city_list(self, data, player):
+        kind = _one(data, 1, default=1)
+        if kind not in (1,2,3,4):
+            return _error(107)
+        start, end = _one(data, 2), _one(data, 3, default=1000)
+        if start > end or end-start > 1000:
+            return _error(4703)
+        with self.db(player) as con:
+            st = self.state(con, player)
+            targets = self.declared_targets(con,player,st) if kind == 1 else []
+            body = b""
+            for n in targets[start:end]:
+                war,_,free,_ = self.war_view(con,player,n['role_id'],st['area'])
+                enemy_state = 2 if free==2 else 3 if war in (1,2) else 4 if war==3 else 1
+                dto = (_v(1, n["role_id"]) + _s(2, n["name"]) + _v(3, n["level"])
+                       + _v(4, st["area"]) + _m(5, _position(n["pos"])) + _v(6, enemy_state)
+                       + _v(7, self.period((st["x"],st["y"]), n["pos"])))
+                body += _m(1, dto)
+        return _reply("Setout_GetCityList", body + _v(2, len(targets)))
+
+    def times(self, data, player):
+        with self.db(player) as con:
+            st = self.state(con, player)
+        return _reply("Setout_GetSetoutTimes", _v(1, _one(data, 1, default=2))
+                      + _v(2, DAILY_LIMIT) + _v(3, max(0, DAILY_LIMIT+st["bonus"]-st["used"]))
+                      + _v(4, len(BUY_COSTS)) + _v(5, max(0,len(BUY_COSTS)-st["bought"])))
+
+    def declare(self, data, player):
+        with self.db(player) as con:
+            npc = self.target(player, role_id=_one(data,1),con=con)
+            if npc is None:
+                return _error(4706)
+            own_level = con.execute('SELECT level FROM players WHERE uin=?',(player['uin'],)).fetchone()[0]
+            if int(own_level or 1)<13 or int(npc['level'])<13:
+                return _error(200)
+            st = self.state(con, player)
+            war,_,free,_ = self.war_view(con,player,npc['role_id'],st['area'])
+            if free==2:
+                return _error(4709)
+            row = self.war_record(con,player,npc['role_id'],st['area'])
+            if row and row['phase']:
+                deadline = row['ready_at']-2
+            else:
+                total = self.declare_limit()
+                if st['declared_used'] >= total:
+                    return _error(4708)
+                deadline = _now()+DECLARE_WAIT_SECONDS
+                con.execute('INSERT INTO local_worldmap_wars '
+                    '(uin,role_id,area,target_uin,declared_at,ready_at,phase,cooldown_until) VALUES(?,?,?,?,?,?,1,0) '
+                    'ON CONFLICT(uin,role_id,area) DO UPDATE SET target_uin=excluded.target_uin,'
+                    'declared_at=excluded.declared_at,ready_at=excluded.ready_at,phase=1,cooldown_until=0',
+                    (player['uin'],npc['role_id'],st['area'],npc.get('town_uin',0),_now(),deadline+2))
+                con.execute('UPDATE local_worldmap_state SET declared_used=declared_used+1 WHERE uin=?',(player['uin'],))
+        self.active_users.add(int(player['uin']))
+        self.seen_users.add(int(player['uin']))
+        self.notify_war_peers(player,[npc.get('town_uin',0)])
+        # MapInfoProxy decrements its cached count on every declaration response;
+        # always follow it with the actual count, including network retries.
+        return _reply('War_DeclareWar',_v(1,npc['role_id'])+_v(2,deadline)) + self.war_updates(player)
+
+    def pre_setout(self, data, player):
+        war_type = _one(data,1)
+        if war_type not in (2,4):
+            return _error(2007)
+        pos = _pos(data,2)
+        with self.db(player) as con:
+            st = self.state(con,player)
+            target = self.target(player,pos=pos,con=con)
+            if target and war_type == 2:
+                if not self.ready_war(con,player,target['role_id'],st['area']):
+                    return _error(4705)
+                return _reply("War_PreSetOut",_v(1,self.period((st["x"],st["y"]),pos)))
+        # All three Embattle map child modes call preWar before their dedicated
+        # Mine_SetOutTeam/Temple_SetOut request. Recognize resource cells here too,
+        # or the real UI fails before it can reach those correctly tested routes.
+        if self.resources:
+            if hasattr(self.resources,'valid_mine_position') and self.resources.valid_mine_position(pos,st['area']):
+                return _reply("War_PreSetOut",_v(1,self.period((st['x'],st['y']),pos)))
+            for dto,cell_pos in self.resources.resource_cells(player,st):
+                if cell_pos == pos and _one(dto,1) in (2,3):
+                    return _reply("War_PreSetOut",_v(1,1))
+        return _error(4703)
+
+    def placements(self, player, team_id=TEAM_ID):
+        if team_id not in ATTACK_TEAMS:
+            return {}
+        self.api.ensure_player_cards(player)
+        with self.db(player) as con:
+            st = self.state(con,player)
+            reserved = {uid for other in ATTACK_TEAMS if other != 1
+                        for uid in self.current_placements(con,player,other).values()}
+        if team_id == 1:
+            if not st["home_initialized"]:
+                self.api.default_formation_placements(player)
+                with self.db(player) as con:
+                    con.execute("UPDATE local_worldmap_state SET home_initialized=1 WHERE uin=?",(player["uin"],))
+            saved = self.api.store.get_formation_with_owner(player["uin"],1)
+            placements = {int(pos):int(uid) for pos,(uid,owner) in saved.items()
+                          if not int(owner or 0) and int(uid) not in reserved}
+            # Adventure auto-fill may reinsert a plant already assigned to a
+            # map team. Remove only duplicate owned slots, retaining friend slots.
+            overlap = [int(uid) for _pos,(uid,owner) in saved.items()
+                       if not int(owner or 0) and int(uid) in reserved]
+            if overlap:
+                with self.db(player) as con:
+                    con.executemany("DELETE FROM formation WHERE uin=? AND team_id=1 AND uid=? AND COALESCE(owner_role_id,0)=0",
+                                    [(player["uin"],uid) for uid in overlap])
+        else:
+            with self.db(player) as con:
+                placements = self.current_placements(con,player,team_id)
+        owned = {int(r[0]) for r in self.api.store.get_cards(player["uin"])}
+        cleaned = {p:uid for p,uid in placements.items() if p in self.api._FORMATION_POS and uid in owned}
+        return cleaned if self.valid_placements(cleaned) else {}
+
+    def valid_placements(self,placements):
+        return (len(placements) <= len(self.api._FORMATION_POS)
+                and set(placements) <= set(self.api._FORMATION_POS)
+                and len(set(placements.values())) == len(placements)
+                and all(int(uid) > 0 for uid in placements.values()))
+
+    def formation(self, player, team_id=TEAM_ID):
+        with self.db(player) as con:
+            mission = self.mission(con, player,team_id)
+            st = self.state(con, player)
+        if mission:
+            return _replace(bytes(mission["formation"]), 6, _v(6, 1))
+        if self.resources:
+            frozen = self.resources.frozen_formation(player,team_id)
+            if frozen is not None:
+                return _replace(frozen,6,_v(6,1))
+        placements = self.placements(player, team_id)
+        dto = self.api.build_formation_info(player, team_id, placements)
+        dto = _replace(dto, 6, _v(6, 0))
+        dto = _replace(dto, 8, _v(8,int(st["defend_team"] == team_id)))
+        with self.db(player) as con:
+            captain = self.current_leader(con,player,team_id)
+        dto = _replace(dto,3,_v(3,captain if captain in placements.values() else 0))
+        health = json.loads(st["health"])
+        cards,injured = b"",0
+        for wire,card in _fields(dto).get(1,[]):
+            uid,maxhp = _one(card,2),_one(card,5)
+            ratio = max(0,min(10000,int(health.get(str(uid),10000))))
+            injured += int(ratio < 10000)
+            cards += _m(1,_replace(card,4,_v(4,maxhp*ratio//10000)))
+        dto = _replace(dto,1,cards)
+        return _replace(dto,7,_v(7,injured*HEAL_COST_PER_CARD))
+
+    def get_formation(self, data, player):
+        request_team = _one(data,1,default=0)
+        with self.db(player) as con:
+            st = self.state(con,player)
+            unlocked = self.unlocked_attack_teams(player, con)
+        if request_team and request_team not in unlocked:
+            return _error(4701)
+        teams = {team:self.formation(player,team) for team in unlocked}
+        selected = request_team if request_team in teams else 1
+        # The client creates teamMaxNum hidden buttons, then shows only the
+        # supplied teams. Reserve all five buttons even before their unlocks.
+        default_team = st["default_team"] if st["default_team"] in unlocked else 1
+        body = (_m(1,teams[selected])
+                + b"".join(_m(2,teams[team]) for team in unlocked)
+                + _v(3,TEAM_MAX_NUM)+_v(4,default_team))
+        return _reply("Battle_GetFormation",body)
+
+    def set_formation(self, data, player):
+        formation = _one(data, 1, 2, b"")
+        team = _one(formation, 5, default=1) or 1
+        if team not in self.unlocked_attack_teams(player):
+            return _error(4701)
+        placements, owned = {}, {int(r[0]) for r in self.api.store.get_cards(player["uin"])}
+        for wire, card in _fields(formation).get(1, []):
+            if wire != 2:
+                return _error(2001)
+            pos, uid = _one(card, 1), _one(card, 2)
+            if (_one(card, 3) not in (0, int(player.get("role_id") or player["uin"]))
+                    or pos not in self.api._FORMATION_POS or uid not in owned
+                    or pos in placements or uid in placements.values()):
+                return _error(2001)
+            placements[pos] = uid
+        if len(placements) > len(self.api._FORMATION_POS):
+            return _error(2001)
+        leader = _one(formation, 3)
+        if leader and leader not in placements.values():
+            return _error(2001)
+        with self.db(player) as con:
+            if team not in self.unlocked_attack_teams(player, con):
+                return _error(4701)
+            if self.team_busy(con,player,team) or set(placements.values()) & self.busy_cards(con,player):
+                return _error(4702)
+            live_owned = {int(r[0]) for r in con.execute("SELECT uid FROM cards WHERE uin=?",(player["uin"],))}
+            if not set(placements.values()) <= live_owned:
+                return _error(2001)
+            st = self.state(con,player)
+            saved = {other:self.current_placements(con,player,other) for other in ATTACK_TEAMS}
+            leaders = {other:self.current_leader(con,player,other) for other in ATTACK_TEAMS}
+            for other in ATTACK_TEAMS:
+                saved[other] = (placements if other == team else
+                                {p:uid for p,uid in saved[other].items() if uid not in placements.values()})
+            if st["defend_team"] and not saved.get(st["defend_team"]):
+                return _error(5202)
+            if not any(saved.values()):
+                return _error(4715)
+            for other in ATTACK_TEAMS:
+                captain = leader if other == team else leaders[other]
+                if captain not in saved[other].values():
+                    captain = 0
+                if other == TEAM_ID:
+                    con.execute("UPDATE local_worldmap_state SET formation=?,leader=? WHERE uin=?",
+                                (json.dumps(saved[other]),captain,player["uin"]))
+                else:
+                    if other == team:
+                        # Home team shares its table with adventure's borrowed
+                        # friend. Keep the ownership marker in an unused slot.
+                        friend_rows = (con.execute("SELECT pos_index,uid,owner_role_id FROM formation "
+                            "WHERE uin=? AND team_id=1 AND COALESCE(owner_role_id,0)<>0",
+                            (player["uin"],)).fetchall() if other == 1 else [])
+                        con.execute("DELETE FROM formation WHERE uin=? AND team_id=?",(player["uin"],other))
+                        con.executemany("INSERT INTO formation(uin,team_id,pos_index,uid,owner_role_id) VALUES(?,?,?,?,0)",
+                                        [(player["uin"],other,pos,uid) for pos,uid in placements.items()])
+                        con.executemany("INSERT INTO formation(uin,team_id,pos_index,uid,owner_role_id) VALUES(?,?,?,?,?)",
+                            [(player["uin"],1,row[0],row[1],row[2]) for row in friend_rows
+                             if row[0] not in placements])
+                    else:
+                        con.executemany("DELETE FROM formation WHERE uin=? AND team_id=? AND uid=? AND COALESCE(owner_role_id,0)=0",
+                                        [(player["uin"],other,uid) for uid in placements.values()])
+                    con.execute("INSERT INTO formation_leader(uin,team_id,uid) VALUES(?,?,?) "
+                                "ON CONFLICT(uin,team_id) DO UPDATE SET uid=excluded.uid",(player["uin"],other,captain))
+            con.execute("UPDATE local_worldmap_state SET home_initialized=1 WHERE uin=?",(player["uin"],))
+        return self.get_formation(_v(1,team),player)
+
+    def enemies(self, npc):
+        self.api.load_battle_cards()
+        if 'town_uin' in npc or 'bot_uin' in npc:
+            # Read only the defender's existing deployed plants. Unlike arena
+            # matchmaking this never calls ensure_player_cards/regenerate.
+            defender_uin = npc.get('town_uin',npc.get('bot_uin'))
+            with contextlib.closing(sqlite3.connect(self.api.store.DB_PATH)) as con:
+                con.row_factory = sqlite3.Row
+                row = con.execute('SELECT * FROM players WHERE uin=?', (defender_uin,)).fetchone()
+                if row is None:
+                    return []
+                st = con.execute('SELECT * FROM local_worldmap_state WHERE uin=?',(defender_uin,)).fetchone()
+                owned = {int(r[0]) for r in con.execute('SELECT uid FROM cards WHERE uin=?',(defender_uin,))}
+                home = {int(r[0]):int(r[1]) for r in con.execute(
+                    'SELECT pos_index,uid FROM formation WHERE uin=? AND team_id=1 AND COALESCE(owner_role_id,0)=0',
+                    (defender_uin,))}
+                placements, team_id, leader = home, 1, None
+                if st and int(st['defend_team']) == TEAM_ID:
+                    saved = {int(k):int(v) for k,v in json.loads(st['formation'] or '{}').items()}
+                    # Respect an explicit defence selection even if its plants
+                    # were subsequently removed from a legacy/imported save.
+                    placements,team_id,leader = (saved if self.valid_placements(saved) else {}),TEAM_ID,int(st['leader'])
+                elif st and int(st['defend_team']) in ATTACK_TEAMS:
+                    team_id = int(st['defend_team'])
+                    placements = self.current_placements(con,dict(row),team_id)
+                    leader = self.current_leader(con,dict(row),team_id)
+                busy = self.city_busy_cards(con,dict(row))
+                if con.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='local_worldmap_mines'").fetchone():
+                    for record in con.execute('SELECT formation FROM local_worldmap_mines WHERE uin=? AND team_id<>0',
+                                              (defender_uin,)):
+                        busy.update(_one(card,2) for wire,card in _fields(bytes(record[0])).get(1,[]) if wire == 2)
+                if con.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='local_worldmap_mine_missions'").fetchone():
+                    for record in con.execute('SELECT formation FROM local_worldmap_mine_missions WHERE uin=? AND state<>?',
+                                              (defender_uin,HOME)):
+                        busy.update(_one(card,2) for wire,card in _fields(bytes(record[0])).get(1,[]) if wire == 2)
+                placements = {p:u for p,u in placements.items() if u not in busy}
+                health = json.loads(st['health'] or '{}') if st else {}
+            if not placements or not self.valid_placements(placements):
+                return []
+            placements = {p:u for p,u in placements.items() if u in owned}
+            units = self.api.build_player_units(dict(row), placements,leader_team_id=team_id,
+                                                leader_uid_override=leader)
+            if leader == 0:
+                for unit in units:
+                    unit['is_leader'] = False
+            for unit in units:
+                unit['pos'] += 1  # Stored plant-left positions -> defender-right positions.
+                unit['max_hp'] = unit['hp']
+                ratio = max(0,min(10000,int(health.get(str(unit['uid']),10000))))
+                unit['initial_hp'] = unit['hp']*ratio//10000
+                unit['is_live'] = unit['initial_hp'] > 0
+                if not unit['is_live']:
+                    unit['is_leader'] = False
+            return units
+        return self.api._tr_enemy_squad(npc["power"], npc["stage"])
+
+    def make_report_details(self, player, npc, placements, team_id=TEAM_ID, leader_uid_override=None):
+        if not placements or not self.valid_placements(placements):
+            raise ValueError("invalid or duplicated map formation")
+        with self.db(player) as con:
+            selected_leader = (self.current_leader(con,player,team_id) if leader_uid_override is None
+                               else int(leader_uid_override))
+        left = self.api.build_player_units(player, placements, leader_team_id=team_id,
+                                          leader_uid_override=selected_leader)
+        # The shared PvE builder chooses the first card as a fallback. Map
+        # captain clearing is explicit and must survive into the battle report.
+        if not selected_leader:
+            for unit in left:
+                unit['is_leader'] = False
+        # Actual Embattle checkPlantHP confirmation invokes SetOut directly.
+        # All dispatches therefore fight restored units; their caller atomically
+        # pays the quoted repair cost when committing the operation.
+        right = self.enemies(npc)
+        if not left or (not right and 'town_uin' not in npc):
+            raise ValueError("empty or fully injured combat formation")
+        # Current combat resolves outcome and replay in the same simulation.
+        # Re-running simulate_battle would also lose the authoritative final
+        # health after healing, shields and temporary maximum-HP changes.
+        won, _lp, _rp, rounds = self.api.run_battle(
+            left, right, leader_sides=(("left","right") if 'town_uin' in npc or 'bot_uin' in npc else ("left",)),
+            stop_on_elimination=True)
+        after = {str(u["uid"]):max(0,min(10000,int(math.ceil(
+                    int(u.get("final_hp",u["hp"]))*10000 /
+                    max(1,int(u.get("final_max_hp",u.get("max_hp",u["hp"]))))))))
+                 for u in left}
+        report = self.api.build_fight_report(player, 0, 0, 0, won,
+                    [(1,npc["coin"])] if won else [], False, left, right,
+                    self.api.encode_fight_replay(rounds), fight_type=3, side_types=(8,9))
+        right_dto = _one(report, 3, 2, b"")
+        right_dto = _replace(right_dto, 6, _s(6, npc["name"]))
+        right_dto = _replace(right_dto,8,_v(8,npc.get('level',1)))
+        if 'town_uin' in npc:
+            right_dto = _replace(right_dto,5,_v(5,npc.get('face_id',0)))
+            if npc.get('face_url'):
+                right_dto = _replace(right_dto,13,_s(13,npc['face_url']))
+        return bool(won), _replace(report, 3, _m(3, right_dto)), after
+
+    def make_report(self,player,npc,placements):
+        won,report,_health = self.make_report_details(player,npc,placements)
+        return won,report
+
+    def setout(self, data, player):
+        if _one(data, 1) != 2:
+            return _error(2007)
+        team_id = _one(data, 3)
+        if team_id not in self.unlocked_attack_teams(player):
+            return _error(4701)
+        npc = self.target(player, pos=_pos(data, 2))
+        if not npc:
+            return _error(4703)
+        with self.db(player) as con:
+            if not self.ready_war(con,player,npc['role_id'],self.state(con,player)['area']):
+                return _error(4705)
+        placements = self.placements(player, team_id)
+        if not placements:
+            return _error(4704)
+        with self.db(player) as con:
+            st = self.state(con, player)
+            if self.team_busy(con,player,team_id) or set(placements.values()) & self.busy_cards(con,player):
+                return _error(4702)
+            if st["defend_team"] == team_id:
+                return _error(4721)
+            if st["used"] >= DAILY_LIMIT+st["bonus"]:
+                return _error(4708)
+            if json.loads(st["cooldowns"]).get(str(npc["role_id"]),0) > _now():
+                return _error(4709)
+            war_before = self.ready_war(con,player,npc['role_id'],st['area'])
+            if not war_before:
+                return _error(4705)
+            war_key = [war_before['uin'],war_before['role_id'],war_before['area']]
+            declared_before = war_before['declared_at']
+            ready_before = war_before['ready_at']
+            fingerprint = json.dumps(placements,sort_keys=True)
+            repair_cost = self.repair_cost(st,placements)
+            if int(con.execute("SELECT coin FROM players WHERE uin=?",(player["uin"],)).fetchone()[0]) < repair_cost:
+                return _error(202)
+            health_before = self.health_snapshot(st,placements)
+            origin_before = (st["area"],st["x"],st["y"])
+            leader_before = self.current_leader(con,player,team_id)
+        # No database write lock is held while the existing battle engine runs.
+        try:
+            won, report, health_after = self.make_report_details(player, npc, placements, team_id=team_id)
+        except ValueError:
+            return _error(4704)
+        formation = self.restored_formation(self.formation(player,team_id))
+        now = _now()
+        with self.db(player) as con:
+            st = self.state(con, player)
+            if self.team_busy(con,player,team_id) or set(placements.values()) & self.busy_cards(con,player):
+                return _error(4702)
+            if st["defend_team"] == team_id:
+                return _error(4721)
+            if st["used"] >= DAILY_LIMIT+st["bonus"]:
+                return _error(4708)
+            if json.loads(st["cooldowns"]).get(str(npc["role_id"]),0) > now:
+                return _error(4709)
+            war_now = self.ready_war(con,player,npc['role_id'],st['area'])
+            if not war_now or [war_now['uin'],war_now['role_id'],war_now['area']] != war_key or (war_now['declared_at'],war_now['ready_at']) != (declared_before,ready_before):
+                return _error(4705)
+            if self.health_snapshot(st,placements) != health_before or (st["area"],st["x"],st["y"]) != origin_before:
+                return _error(4705)
+            live_target = self.target(player, role_id=npc['role_id'], con=con)
+            if live_target is None or live_target['pos'] != npc['pos'] or live_target['area'] != npc['area']:
+                return _error(4705)
+            leader_now = self.current_leader(con,player,team_id)
+            if leader_now != leader_before:
+                return _error(4705)
+            if json.dumps(self.current_placements(con,player,team_id),sort_keys=True) != fingerprint:
+                return _error(4705)
+            # Recheck ownership against SQL under the dispatch lock (a recycled
+            # card must not be submitted through a stale formation/session).
+            owned = {int(r[0]) for r in con.execute("SELECT uid FROM cards WHERE uin=?", (player["uin"],))}
+            if not set(placements.values()) <= owned:
+                return _error(2001)
+            paid_repair = self.repair_in_transaction(con,player,placements)
+            if paid_repair is None:
+                return _error(202)
+            period = self.period((st["x"], st["y"]), npc["pos"])
+            snapshot = dict(npc,_war_key=war_key,_war_generation=[declared_before,ready_before])
+            cur = con.execute("INSERT INTO local_worldmap_missions "
+                "(uin,npc,area,team_id,origin_x,origin_y,state,begin_at,arrive_at,home_at,period,won,reward,report,formation,created_at,health_after,target_snapshot) "
+                "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                (player["uin"],npc["role_id"],st["area"],team_id,st["x"],st["y"],MARCHING,now,now+period,
+                 now+2*period,period,int(won),npc["coin"] if won else 0,report,formation,now,json.dumps(health_after),
+                 json.dumps(snapshot,ensure_ascii=False)))
+            con.execute("UPDATE local_worldmap_state SET used=used+1 WHERE uin=?", (player["uin"],))
+            mission = dict(con.execute("SELECT * FROM local_worldmap_missions WHERE id=?", (cur.lastrowid,)).fetchone())
+        self.active_users.add(int(player["uin"]))
+        self.seen_users.add(int(player["uin"]))
+        return (_reply("War_SetOut", _v(1, team_id))
+                + (_reply("SyncCoin",_v(1,player["coin"])) if paid_repair else [])
+                + _reply("War_SyncHistory", _m(1, self.history_dto(player, mission)))
+                + self.get_formation(b"", player) + self.times(_v(1,2), player))
+
+    def target_dto(self, role, name, pos):
+        role_info = _v(1,0) + _s(2,"") + _v(3,role) + _s(4,name) + _m(5,_position(pos))
+        return _v(1,1) + _v(2,0) + _m(3,_position(pos)) + _m(4,role_info)
+
+    def history_dto(self, player, row):
+        snapshot = row['target_snapshot'] if 'target_snapshot' in row.keys() else '{}'
+        n = json.loads(snapshot or '{}') or self.npc(role_id=row["npc"])
+        if n is None:
+            # Preserve even imported history whose old target no longer exists.
+            n = dict(role_id=row['npc'], name='已离开的本地目标', pos=(row['origin_x'],row['origin_y']))
+        own = int(player.get("role_id") or player["uin"])
+        origin = self.target_dto(own,player.get("name") or "Player",(row["origin_x"],row["origin_y"]))
+        target = self.target_dto(n["role_id"],n["name"],n["pos"])
+        begin = row["begin_at"] if row["state"] == MARCHING else row["arrive_at"]
+        end = row["arrive_at"] if row["state"] == MARCHING else row["home_at"]
+        return (_v(1,2) + _m(2,origin) + _m(3,target) + _v(4,row["team_id"]) + _v(5,row["id"])
+                + _v(6,begin) + _v(7,end) + _v(8,row["state"])
+                + _v(9,(2 if row["won"] else 1) if row["settled"] else 0)
+                + _v(10,row["id"] if row["settled"] and not row["cancelled"] else 0)
+                + _v(11,max(1,end-begin)) + _v(12,row["area"]) + _v(13,1) + _v(14,_now()))
+
+    def history(self, name, data, player):
+        if name == "War_GetHistory":
+            history_type = _one(data,1,default=1)
+            if history_type not in (1,2,3):
+                return _error(107)
+            if history_type != 1:
+                # Guild/Plant-War tabs must not mislabel private NPC training
+                # missions as real shared guild attacks.
+                return _reply(name)
+        with self.db(player) as con:
+            rows = con.execute("SELECT * FROM local_worldmap_missions WHERE uin=? ORDER BY id DESC LIMIT ?",
+                               (player["uin"], HISTORY_LIMIT)).fetchall()
+        if name in ("War_GetMapHistory","War_GetSimpleHistory"):
+            rows = [r for r in rows if r["state"] != HOME]
+        body = b''.join(_m(1,self.history_dto(player,r)) for r in rows)
+        if self.resources and hasattr(self.resources,'mine_histories'):
+            body += b''.join(_m(1,dto) for dto in self.resources.mine_histories(player,name=name))
+        return _reply(name,body)
+
+    def query_report(self, data, player):
+        report_id = _one(data,1)
+        with self.db(player) as con:
+            row = con.execute("SELECT report FROM local_worldmap_missions WHERE id=? AND uin=? "
+                              "AND settled=1 AND cancelled=0", (report_id,player["uin"])).fetchone()
+        if row:
+            return _reply("Battle_QueryReport",_m(1,bytes(row[0])))
+        resource_report = self.resources.query_report(report_id,player) if self.resources else None
+        if resource_report:
+            return _reply("Battle_QueryReport",_m(1,resource_report))
+        # This route is shared with arena replays. Installing the map adapter
+        # must not hide reports kept by the original battle handler.
+        if self.original_query_report:
+            return self.original_query_report(data,player)
+        return _error(2005)
+
+    def recall(self, data, player):
+        team_id = _one(data,1)
+        if team_id not in ATTACK_TEAMS or _one(data,2,default=1) != 1:
+            return _error(4701)
+        if self.resources and hasattr(self.resources,'recall_mission'):
+            resource_reply = self.resources.recall_mission(data,player)
+            if resource_reply is not None:
+                return resource_reply
+        now = _now()
+        with self.db(player) as con:
+            row = self.mission(con,player,team_id)
+            if row is None or row["team_id"] != team_id or row["state"] != MARCHING:
+                return _error(4705)
+            duration = max(1,min(row["period"],now-row["begin_at"]))
+            con.execute("UPDATE local_worldmap_missions SET state=?,cancelled=1,reward=0,arrive_at=?,home_at=? WHERE id=?",
+                        (RECALLING,now,now+duration,row["id"]))
+            row = dict(con.execute("SELECT * FROM local_worldmap_missions WHERE id=?",(row["id"],)).fetchone())
+        return _reply("War_RecallTeam") + _reply("War_SyncHistory",_m(1,self.history_dto(player,row)))
+
+    def speedup(self, data, player):
+        team_id = _one(data,1)
+        if team_id not in ATTACK_TEAMS:
+            return _error(4701)
+        if _one(data,2) != SPEEDUP_ITEM:
+            return _error(204)
+        if self.resources and hasattr(self.resources,'speedup_mission'):
+            resource_reply = self.resources.speedup_mission(data,player)
+            if resource_reply is not None:
+                return resource_reply
+        with self.db(player) as con:
+            row = self.mission(con,player,team_id)
+            if row is None or row["team_id"] != team_id or row["state"] not in (MARCHING,RETURNING,RECALLING):
+                return _error(4705)
+            column = "arrive_at" if row["state"] == MARCHING else "home_at"
+            remaining = row[column]-_now()
+            if remaining < 15:
+                return _error(4722)
+            spent = con.execute("UPDATE items SET count=count-1 WHERE uin=? AND item_id=? AND count>=1",
+                                (player["uin"],SPEEDUP_ITEM)).rowcount
+            if not spent:
+                return _error(204)
+            cut = max(1,int(math.ceil(remaining*0.1)))
+            if column == "arrive_at":
+                con.execute("UPDATE local_worldmap_missions SET arrive_at=arrive_at-?,home_at=home_at-? WHERE id=?",
+                            (cut,cut,row["id"]))
+            else:
+                con.execute("UPDATE local_worldmap_missions SET home_at=home_at-? WHERE id=?",(cut,row["id"]))
+            count = con.execute("SELECT count FROM items WHERE uin=? AND item_id=?",(player["uin"],SPEEDUP_ITEM)).fetchone()[0]
+            row = dict(con.execute("SELECT * FROM local_worldmap_missions WHERE id=?",(row["id"],)).fetchone())
+        return (_reply("War_SpeedUpTeam") + _reply("War_SyncHistory",_m(1,self.history_dto(player,row)))
+                + _reply("Item_Update",_m(1,self.api.build_item_dto(SPEEDUP_ITEM,count))))
+
+    def preview(self, data, player):
+        if self.resources:
+            result = self.resources.preview(data,player)
+            if result is not None:
+                return result
+        target = _one(data,1,2,b"")
+        if _one(target,1) != 3:
+            return self.original_preview(data,player)
+        npc = self.target(player, role_id=_one(target,8))
+        if npc is None:
+            return _error(4703)
+        enemies = self.enemies(npc)
+        body = _m(1,self.formation(player))
+        for u in enemies:
+            card = self.api.build_enemy_card(u["pos"],u["card_id"],u.get('initial_hp',u['hp']),u["level"],u["is_leader"],u["power"],
+                                             speed=u.get('speed'))
+            body += _m(4,_replace(card,8,_v(8,u.get('max_hp',u['hp']))))
+        return _reply("Battle_GetFightInfo",body+_v(5,sum(u["power"] for u in enemies)))
+
+    def fight(self, data, player):
+        if self.resources:
+            result = self.resources.fight(data,player)
+            if result is not None:
+                return result
+        target = _one(data,1,2,b"")
+        # World map attacks must travel and settle via War_SetOut. Never let an
+        # arbitrary generic Battle_Fight request become a free fuben fight.
+        if _one(target,1) == 3:
+            return _error(4705)
+        return self.original_fight(data,player)
+
+    def buy_times(self,data,player):
+        with self.db(player) as con:
+            st = self.state(con,player)
+            # Match the real UI: refill whenever remaining is below the fixed
+            # capacity, including19/20. At20/20 a repeated request cannot spend.
+            remaining = DAILY_LIMIT+st["bonus"]-st["used"]
+            if remaining >= DAILY_LIMIT or st["bought"] >= len(BUY_COSTS):
+                return _error(4708)
+            cost = BUY_COSTS[st["bought"]]
+            wallet = con.execute("SELECT present_ticket,ticket FROM players WHERE uin=?",(player["uin"],)).fetchone()
+            gift,gold = max(0,int(wallet[0])),max(0,int(wallet[1]))
+            if gift+gold < cost:
+                return _error(208)
+            gift_cost = min(gift,cost)
+            con.execute("UPDATE players SET present_ticket=present_ticket-?,ticket=ticket-? WHERE uin=?",
+                        (gift_cost,cost-gift_cost,player["uin"]))
+            con.execute("UPDATE local_worldmap_state SET bought=bought+1,bonus=bonus+1 WHERE uin=?",
+                        (player["uin"],))
+            left = len(BUY_COSTS)-st["bought"]-1
+        return (_reply("Setout_BuyMapWarSetoutTimes",_v(1,len(BUY_COSTS))+_v(2,left))
+                + _reply("SyncPresentTicket",_v(1,player["present_ticket"]))
+                + _reply("SyncTicket",_v(1,player["ticket"])))
+
+    def fixed_move(self,data,player):
+        area,pos = _one(data,1),_pos(data,2)
+        if (area not in SUPPORTED_AREAS or pos[0] % 6 != 5 or pos[1] % 6 != 5
+                or not (0 <= pos[0] < MAP_SIZES[area]-1 and 0 <= pos[1] < MAP_SIZES[area]-1)
+                or self.npc(pos=pos) is not None):
+            return _error(4703)
+        if self.resources and any(t["pos"] == pos and t["area"] == area for t in self.resources.templates()[0]):
+            return _error(4703)
+        if int(player.get("level") or 1) < (30 if area == 2 else 20):
+            return _error(200)
+        with self.db(player) as con:
+            st = self.state(con,player)
+            if self.mission(con,player) or (self.resources and self.resources.busy(player,con=con)):
+                return _error(4702)
+            if area == st["area"] and pos == (st["x"],st["y"]):
+                # Repeated network delivery is an idempotent acknowledgement.
+                return _reply("City_FixedMove",_v(1,area)+_m(2,_position(pos)))
+            towns = getattr(self,"local_city_display",None)
+            if towns and towns.occupied(con,player,area,pos):
+                return _error(4703)
+            if not con.execute("UPDATE items SET count=count-1 WHERE uin=? AND item_id=? AND count>0",
+                               (player["uin"],MOVE_ITEM)).rowcount:
+                return _error(204)
+            positions = json.loads(st["area_positions"])
+            positions[str(st["area"])] = [st["x"],st["y"]]
+            positions[str(area)] = list(pos)
+            con.execute("UPDATE local_worldmap_state SET area=?,x=?,y=?,area_positions=? WHERE uin=?",
+                        (area,pos[0],pos[1],json.dumps(positions),player["uin"]))
+            count = con.execute("SELECT count FROM items WHERE uin=? AND item_id=?",(player["uin"],MOVE_ITEM)).fetchone()[0]
+        return (_reply("City_FixedMove",_v(1,area)+_m(2,_position(pos)))
+                + _reply("Item_Update",_m(1,self.api.build_item_dto(MOVE_ITEM,count)))
+                + self.city_init(b"",player))
+
+    def recover_hp(self,data,player):
+        team = _one(data,1)
+        if team not in ATTACK_TEAMS:
+            return _error(4701)
+        placements = self.placements(player,team)
+        with self.db(player) as con:
+            if self.team_busy(con,player,team) or set(placements.values()) & self.busy_cards(con,player):
+                return _error(4705)
+            if self.current_placements(con,player,team) != placements:
+                return _error(4705)
+            st = self.state(con,player)
+            health = json.loads(st["health"])
+            injured = [str(uid) for uid in placements.values() if int(health.get(str(uid),10000)) < 10000]
+            if not injured:
+                return _error(4711)
+            cost = len(injured)*HEAL_COST_PER_CARD
+            if not con.execute("UPDATE players SET coin=coin-? WHERE uin=? AND coin>=?",
+                               (cost,player["uin"],cost)).rowcount:
+                return _error(202)
+            for uid in injured:
+                health[uid] = 10000
+            con.execute("UPDATE local_worldmap_state SET health=? WHERE uin=?",(json.dumps(health),player["uin"]))
+        return (_reply("War_RecoverHp") + _reply("SyncCoin",_v(1,player["coin"]))
+                + self.get_formation(_v(1,team),player))
+
+    def change_area(self, data, player):
+        area = _one(data,1)
+        if area not in SUPPORTED_AREAS:
+            return _error(4703)
+        if area == 2 and int(player.get("level") or 1) < 30:
+            return _error(602)
+        with self.db(player) as con:
+            if self.mission(con,player) or (self.resources and self.resources.busy(player,con=con)):
+                return _error(4702)
+            st = self.state(con,player)
+            if area == st["area"]:
+                return _reply("City_ChangeArea",_v(1,st["change_cd"]))
+            if st["change_cd"] > _now():
+                return _error(603)
+            positions = json.loads(st["area_positions"])
+            positions[str(st["area"])] = [st["x"],st["y"]]
+            pos = positions.get(str(area),[18,18])
+            towns = getattr(self,"local_city_display",None)
+            if towns:
+                pos = towns.destination(con,player,area,pos)
+            end = _now()+AREA_CHANGE_COOLDOWN
+            con.execute("UPDATE local_worldmap_state SET area=?,x=?,y=?,area_positions=?,change_cd=? WHERE uin=?",
+                        (area,pos[0],pos[1],json.dumps(positions),end,player["uin"]))
+        # ChangeArea_SC changes only the button's cooldown. The native random-
+        # relocation message is the route that updates myPos/myAreaId and view.
+        return (_reply("City_ChangeArea",_v(1,end))
+                + _reply("City_RandomMove",_m(1,_position(pos))+_v(2,area)+_v(3,0))
+                + self.city_init(b"",player))
+
+    def set_defend(self,data,player,cancel=False):
+        team = _one(data,1)
+        if team not in ATTACK_TEAMS:
+            return _error(4701)
+        if not cancel and team not in self.unlocked_attack_teams(player):
+            return _error(4701)
+        placements = self.placements(player,team)
+        with self.db(player) as con:
+            state = self.state(con,player)
+            if cancel:
+                if state["defend_team"] not in (0,team):
+                    return _error(4701)
+                con.execute("UPDATE local_worldmap_state SET defend_team=0 WHERE uin=?",(player["uin"],))
+            else:
+                if not placements:
+                    return _error(5202)
+                if self.current_placements(con,player,team) != placements:
+                    return _error(4705)
+                if self.team_busy(con,player,team) or set(placements.values()) & self.busy_cards(con,player):
+                    return _error(4702)
+                con.execute("UPDATE local_worldmap_state SET defend_team=? WHERE uin=?",(team,player["uin"]))
+        # These commands define no _SC classes; synchronize the authoritative
+        # formation list instead of inventing an unreadable response.
+        return self.get_formation(b"",player)
+
+    def set_default(self, data, player):
+        team_id = _one(data,1)
+        if team_id not in self.unlocked_attack_teams(player):
+            return _error(4701)
+        with self.db(player) as con:
+            con.execute("UPDATE local_worldmap_state SET default_team=? WHERE uin=?",(team_id,player["uin"]))
+        return _reply("Battle_SetDefaultTeam",_v(1,team_id))
+
+    def set_null(self, data, player):
+        show = _one(data,1)
+        if show not in (0,1):
+            raise ValueError("invalid boolean")
+        with self.db(player) as con:
+            con.execute("UPDATE local_worldmap_state SET show_null=? WHERE uin=?",(show,player["uin"]))
+        return []  # No Cmd_City_SetNullShow_SC exists.
+
+    def guard(self, fn, response_name=None):
+        @functools.wraps(fn)
+        def wrapped(data,player):
+            try:
+                if len(data) > 65536:
+                    raise ValueError("oversized map request")
+                _fields(data)
+                updates = self.advance(player)
+                result = fn(data,player)
+                if isinstance(result, bytes):
+                    # Only delegated ordinary handlers may return raw bytes.
+                    return result if not updates else updates + [("PVZ.Cmd.Cmd_" + response_name + "_SC", result)]
+                if (response_name in {"War_DeclareWar","War_SetOut","War_RecallTeam","War_SpeedUpTeam",
+                        "Battle_SetFormation","Battle_SetDefaultTeam","Battle_SetDefendTeam",
+                        "Battle_CancelDefendTeam","City_FixedMove",
+                        "City_ChangeArea","War_RecoverHp"}
+                        and not any(name.endswith("LogicError_SC") for name,_body in result)):
+                    self.publish(player,result)
+                if response_name in {'WorldMap_GetInfo','WorldMap_GetEnemyList','Setout_GetCityList','War_GetDeclareWarStat'}:
+                    # This request already returns the current view/list. An
+                    # unsolicited default-page snapshot must not precede it or
+                    # override the viewport/pagination the client just requested.
+                    names = {name for name,_ in result}
+                    updates = [(name,body) for name,body in updates if name not in names]
+                return updates + result
+            except (ValueError,OverflowError):
+                return _error(4703)
+            except sqlite3.Error:
+                self.api.log.exception("worldmap database operation rolled back")
+                return _error(3001)
+        return wrapped
+
+    def handlers(self):
+        routes = {
+            "City_Init": self.city_init, "City_SetNullShow": self.set_null,
+            "City_ChangeArea": self.change_area,
+            "City_FixedMove": self.fixed_move,
+            "WorldMap_GetInfo": self.get_info, "WorldMap_GetCellInfo": self.get_cell,
+            "WorldMap_GetCityInfo": self.get_city, "WorldMap_GetEnemyList": self.enemy_list,
+            "WorldMap_GetGuildMemberList": lambda d,p: _reply("WorldMap_GetGuildMemberList"),
+            "WorldMap_OperateStatInfo": lambda d,p: [],
+            "Setout_GetCityList": self.city_list, "Setout_GetSetoutTimes": self.times,
+            "Setout_GetTempleList": lambda d,p: _reply("Setout_GetTempleList",_v(2,0)),
+            "Setout_BuyMapWarSetoutTimes": self.buy_times,
+            "War_DeclareWar": self.declare, "War_PreSetOut": self.pre_setout,
+            "War_SetOut": self.setout, "War_RecallTeam": self.recall,
+            "War_SpeedUpTeam": self.speedup, "War_RecoverHp": self.recover_hp,
+            "War_GetDeclareWarStat": self.declare_stat,
+            "Battle_GetFormation": self.get_formation, "Battle_SetFormation": self.set_formation,
+            "Battle_GetFightInfo": self.preview, "Battle_Fight": self.fight,
+            "Battle_QueryReport": self.query_report,
+            "Battle_SetDefaultTeam": self.set_default,
+            "Battle_SetDefendTeam": self.set_defend,
+            "Battle_CancelDefendTeam": lambda d,p: self.set_defend(d,p,True),
+            "City_GetTownDurability": lambda d,p: _reply("City_GetTownDurability",_v(1,100)+_v(2,100)+_v(3,0)),
+            # Online shared-world services are deliberately not fabricated. Their
+            # read-only lists may be empty, but mutations must not fake success.
+            "Outpost_GetAllyTeam": lambda d,p: _reply("Outpost_GetAllyTeam"),
+            "Outpost_ReturnAllyTeam": lambda d,p: _error(12600),
+            "Outpost_SetFormation": lambda d,p: _error(12600),
+            "Flag_GetList": lambda d,p: _reply("Flag_GetList"),
+            "Flag_Close": lambda d,p: _error(12600),
+            "Battle_SetAutoRestoreDefenceTeamHealthHp": lambda d,p: _error(12600),
+        }
+        for name in ("War_GetHistory","War_GetMapHistory","War_GetSimpleHistory"):
+            routes[name] = functools.partial(self.history,name)
+        return {"PVZ.Cmd.Cmd_"+name+"_CS": self.guard(fn,name) for name,fn in routes.items()}
+
+
+def make_handlers(api):
+    adapter = WorldMap(api)
+    api._worldmap_adapter = adapter
+    return adapter.handlers()
+
+
+def poll(api,player):
+    adapter = getattr(api,"_worldmap_adapter",None)
+    if not adapter or not player:
+        return []
+    uin = int(player["uin"])
+    if uin not in adapter.seen_users:
+        # First connection poll is read-only if this account never used the map.
+        # Opening the game must not create map tables or rewrite an idle save.
+        with contextlib.closing(sqlite3.connect(api.store.DB_PATH)) as con:
+            exists = con.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='local_worldmap_missions'").fetchone()
+            if exists and con.execute("SELECT 1 FROM local_worldmap_missions WHERE uin=? AND state<>? LIMIT 1",(uin,HOME)).fetchone():
+                adapter.active_users.add(uin)
+            mines = con.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='local_worldmap_mine_missions'").fetchone()
+            if mines and con.execute('SELECT 1 FROM local_worldmap_mine_missions WHERE uin=? AND state IN (?,?,?) LIMIT 1',
+                                    (uin,MARCHING,RECALLING,RETURNING)).fetchone():
+                adapter.active_users.add(uin)
+            wars = con.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='local_worldmap_wars'").fetchone()
+            if wars and con.execute('SELECT 1 FROM local_worldmap_wars WHERE (phase=1 OR cooldown_until>?) '
+                'AND (uin=? OR target_uin=?) LIMIT 1',(_now(),uin,uin)).fetchone():
+                adapter.active_users.add(uin)
+        adapter.seen_users.add(uin)
+    updates = adapter.advance(player) if uin in adapter.active_users else []
+    return updates or adapter.pending_notifications(player)

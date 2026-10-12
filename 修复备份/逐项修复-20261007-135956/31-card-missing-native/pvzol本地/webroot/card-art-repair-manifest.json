@@ -1,0 +1,4762 @@
+{
+  "updated_at": "2026-10-08T07:40:57.361058",
+  "note": "Original card pixels fitted to proven bitmap viewport; missing cards rendered from their own original SWF. No newly drawn artwork.",
+  "main_geometry": {
+    "canvas": [
+      330,
+      240
+    ],
+    "visible_window": [
+      70,
+      63
+    ],
+    "subject_limit": [
+      60,
+      60
+    ],
+    "client_image_y": 3,
+    "client_mask_height": 66,
+    "auto_upscale": false
+  },
+  "assets": [
+    {
+      "path": "/swf/icons/card/10000_0.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\10000_0.png",
+      "source_sha256": "80b422f4d325858fac8071a5e6fc9f8daa75ce5a6ed49ef595c7c8e554bc3dc6",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        1,
+        42,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        16,
+        1,
+        53,
+        61
+      ],
+      "sha256": "e1ccfbe8fcecab398eef9551c1b82aff0521f9ddbbcddb27e5e6d7ff77549974"
+    },
+    {
+      "path": "/swf/icons/card/10040_0.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\10040_0.png",
+      "source_sha256": "f6a2bc9e1a5ee37afcc71ffe41690cb92f8595b71075018c8bf8acd74ca10d8c",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        2,
+        66,
+        74
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        1,
+        61,
+        61
+      ],
+      "sha256": "51d5e36db61d438bb278b0612b51a148cbddd9de94e6bbb16bad02b813119f84"
+    },
+    {
+      "path": "/swf/icons/card/10060_0.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\10060_0.png",
+      "source_sha256": "944ea122fb2016a15f9ad12b92d441aa72fbc0a39caf69af2dda1a368b769804",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        2,
+        64,
+        81
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        11,
+        1,
+        58,
+        61
+      ],
+      "sha256": "375263676c73645815955d034845e898a9efd7e4ab9beeead852572d429e44ad"
+    },
+    {
+      "path": "/swf/icons/card/10070_0.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\10070_0.png",
+      "source_sha256": "c04ab68f2e35c5e2b54039a7c074d0334f9507880e5ba1b212b0349fa7fe9813",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        2,
+        48,
+        79
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        17,
+        1,
+        53,
+        61
+      ],
+      "sha256": "1e7710427aa9e22928a454d4a33d048fefd1fd29bcc84f77a2b1be636ad3c1cd"
+    },
+    {
+      "path": "/swf/icons/card/100_1701.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\100_1701.png",
+      "source_sha256": "49477aa0758b404963f0945f58b94e857cd80d2625425ca98e46af99419b19f3",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        5,
+        13,
+        74,
+        78
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        3,
+        65,
+        60
+      ],
+      "sha256": "3828108d6b9db5908c5d2b8869554cb23cb3b0bbc1b44575295fc95b57b41418"
+    },
+    {
+      "path": "/swf/icons/card/10207_0.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\10207_0.png",
+      "source_sha256": "df540266d5a373eaf81e661ab87910f73c0785878d5d185f2bf8dedac5844475",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        6,
+        0,
+        55,
+        64
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        58,
+        61
+      ],
+      "sha256": "33aee22d34d6bd1dfdd58416177c6af620191def54b559b1dfd56bd5e0ec9676"
+    },
+    {
+      "path": "/swf/icons/card/10210_0.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\10210_0.png",
+      "source_sha256": "8edc29ac60a2911b23a20ec7a8ba4cf5db50d5d3e870282ed0e2a374552e7196",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        3,
+        0,
+        55,
+        63
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        1,
+        60,
+        61
+      ],
+      "sha256": "728b6e9a140d5be6540470181fcef1df9765bd721eee84d5d2d56a52f097bb1b"
+    },
+    {
+      "path": "/swf/icons/card/10212_0.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\10212_0.png",
+      "source_sha256": "df540266d5a373eaf81e661ab87910f73c0785878d5d185f2bf8dedac5844475",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        6,
+        0,
+        55,
+        64
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        58,
+        61
+      ],
+      "sha256": "33aee22d34d6bd1dfdd58416177c6af620191def54b559b1dfd56bd5e0ec9676"
+    },
+    {
+      "path": "/swf/icons/card/10214_0.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\10214_0.png",
+      "source_sha256": "79905b551522362e62674457b3366db71847965b28f6d8a235ee65a20756619d",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        0,
+        0,
+        63,
+        62
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        2,
+        65,
+        61
+      ],
+      "sha256": "b83cf3b57ec4e6a5c38661ea35ad2708f83637a524d9f5feaa990be8252de067"
+    },
+    {
+      "path": "/swf/icons/card/110_1901.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\110_1901.png",
+      "source_sha256": "17936a162a6df13430d49f85233fe54c28c9da9bedfd6b89d9ddf73adcb72d06",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        8,
+        5,
+        73,
+        67
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        3,
+        65,
+        60
+      ],
+      "sha256": "56884374aff01aa84c2862ec7766e6cf18eee2104d8aa5f81688a96de74bf579"
+    },
+    {
+      "path": "/swf/icons/card/113_1131.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\113_1131.png",
+      "source_sha256": "3617e2dce4706fc6108b668c6cc32ce287eb8d178459bf8e80c95b748f2b808d",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        2,
+        81,
+        92
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        1,
+        61,
+        61
+      ],
+      "sha256": "1d1aa6c1da4019c7d24fc5d81fab24210a3ae0c76cee22af654c2befb9882ae8"
+    },
+    {
+      "path": "/swf/icons/card/114_1141.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\114_1141.png",
+      "source_sha256": "863db204a6fbcb89008328afd23ac65702f56ca2c23d3607552bc026b2aad0c0",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        0,
+        0,
+        65,
+        61
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        3,
+        65,
+        59
+      ],
+      "sha256": "5fde5370c34a4976e8972890c91c4e00913315926bede3658513089275e52455"
+    },
+    {
+      "path": "/swf/icons/card/115_1151.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\115_1151.png",
+      "source_sha256": "c74892f8d3347e9afed974df52575e93213736f4ac68a79ce9ac4fe8ece1a0e2",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        6,
+        2,
+        66,
+        76
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        1,
+        59,
+        61
+      ],
+      "sha256": "6a46821d71c33bb71f3d9c6a7d15305a22fd4d6652a75c6cd4709007970d93ca"
+    },
+    {
+      "path": "/swf/icons/card/116_1161.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\116_1161.png",
+      "source_sha256": "4e2a8cdac68512796c7514119817dca37d30d8ac378fb980ff9f6e2141d3946e",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        6,
+        20,
+        62,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        7,
+        8,
+        63,
+        54
+      ],
+      "sha256": "36a6b0376bb4a9e1f9b5efa55ed96b919378423483ed97c9cd5d8fd3e9d4775e"
+    },
+    {
+      "path": "/swf/icons/card/117_1171.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\117_1171.png",
+      "source_sha256": "dbf0b22be9b17bc8a8a6cab78104748e196604cda965f169808a6c512af1dce0",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        0,
+        10,
+        61,
+        68
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        3,
+        65,
+        60
+      ],
+      "sha256": "84bd6c1affbeb54ee2fa8a0f23c3ace50b5332c484dbcf764d82fb28b2d1d211"
+    },
+    {
+      "path": "/swf/icons/card/118_1181.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\118_1181.png",
+      "source_sha256": "39714889a572fa0ed5c5da9f78b752ab25ee01b6dbb7d34ac71c9cb8b9321305",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        7,
+        16,
+        69,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        7,
+        65,
+        55
+      ],
+      "sha256": "aeaf1d75cc6dbee99b25547556058b8a7969022e6497327574d274a69459e7f0"
+    },
+    {
+      "path": "/swf/icons/card/119_1191.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\119_1191.png",
+      "source_sha256": "85c6ca614e8a3328b0e8b6241f0aaf61efb790cbd0efbbcdfda0ef20bc74db77",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        11,
+        9,
+        60,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        3,
+        59,
+        60
+      ],
+      "sha256": "327bcff79714c54d434eb727f2151f2ca6e6363761125e86b104a2b64fad2f8d"
+    },
+    {
+      "path": "/swf/icons/card/11_1121.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\11_1121.png",
+      "source_sha256": "7858578652635af5014547b24926d7a8839684b79074ad52637876932e1b434e",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        10,
+        6,
+        62,
+        68
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        1,
+        60,
+        61
+      ],
+      "sha256": "97977875890d47b993d360fada1af8895a80ccbd5da886347c7f48905c0f0096"
+    },
+    {
+      "path": "/swf/icons/card/120_2001.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\120_2001.png",
+      "source_sha256": "f75174e71c2947a56f2b27bb68f9ea817b7c53a0c4faf4063991b9f2718c0b61",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        19,
+        0,
+        56,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        18,
+        1,
+        52,
+        61
+      ],
+      "sha256": "ba4101280c5ba50f1623156ef13b63c0344694aca642b492667a33eef21d9eba"
+    },
+    {
+      "path": "/swf/icons/card/122_1221.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\122_1221.png",
+      "source_sha256": "29ec36d8df98a5c45784c5d868346996a9ab9dfb32b50b976c8b96e19b4622a6",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        7,
+        20,
+        57,
+        59
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        12,
+        60,
+        51
+      ],
+      "sha256": "3a9fe16ae5b57b2c1b11ff56cef4d8525e6df40eea1a466bcf6869d3728a6655"
+    },
+    {
+      "path": "/swf/icons/card/123_1231.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\123_1231.png",
+      "source_sha256": "5d72ecd80bea575db0ccbd8fcfe63245e011d0c5d2f20ca255de5649d801b433",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        5,
+        10,
+        59,
+        67
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        3,
+        62,
+        60
+      ],
+      "sha256": "19c65799eb06b02a5711df9885fdc8b4ccaea31394f71ef4e9d903a324a12bf8"
+    },
+    {
+      "path": "/swf/icons/card/124_1241.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\124_1241.png",
+      "source_sha256": "04aa613061ede647b5f17566a5ce77f8ea13a5911b36c569042084111fdaa6c3",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        17,
+        7,
+        56,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        15,
+        2,
+        54,
+        61
+      ],
+      "sha256": "34a53ca89cb32d8259385ae359c26819263cde0f1c80a5ddc609525a54df471d"
+    },
+    {
+      "path": "/swf/icons/card/125_251.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\125_251.png",
+      "source_sha256": "ebf79f2043107a9cd785a049fc89d262e0c71f511b788e378ad528349796f07d",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        6,
+        29,
+        74,
+        62
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        17,
+        65,
+        46
+      ],
+      "sha256": "175c08c2cd335886fbe2e3226489ba24f51a8952adbc4a1cb96f87c18f6c96e6"
+    },
+    {
+      "path": "/swf/icons/card/130_3101.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\130_3101.png",
+      "source_sha256": "205838dd9c79564d91a1b92691f231edbf8fedc58824de81161d9babbeaef741",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        12,
+        6,
+        58,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        58,
+        61
+      ],
+      "sha256": "b32d6768752dd5d6b28cd0d24e250d9b3ba3117b822337ead75667858339e364"
+    },
+    {
+      "path": "/swf/icons/card/140_3201.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\140_3201.png",
+      "source_sha256": "2ca782064049764e1aa70b08610ed2a4856b7f40de3a9e332a4e994ea6fe7abb",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        5,
+        1,
+        65,
+        68
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        1,
+        62,
+        61
+      ],
+      "sha256": "9111e266b35543d2d7fd556c57a738194a7526c783847bc0aeaf61318d2e088c"
+    },
+    {
+      "path": "/swf/icons/card/150_3310.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\150_3310.png",
+      "source_sha256": "4d60f4702c3209519621ef5b911777f1a83e4e84d5b150ec5129623b75358fd3",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        16,
+        16,
+        59,
+        67
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        13,
+        6,
+        56,
+        57
+      ],
+      "sha256": "142a81aec0a909c4bfeb09900746dbf18ca6b8c9fa51361a39e7c81c382d4ecb"
+    },
+    {
+      "path": "/swf/icons/card/30_1201.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\30_1201.png",
+      "source_sha256": "a1e69405f5b8c6971871de7660e4ff4932352b8e0c013f1134cdb8acf6c10731",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        18,
+        16,
+        67,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        6,
+        59,
+        56
+      ],
+      "sha256": "32c0f94258a9dcd93e5945f4f6bb4ced19df03af63c11a78b7b165570ef020b8"
+    },
+    {
+      "path": "/swf/icons/card/360_3601.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\360_3601.png",
+      "source_sha256": "1866ae96515340422647f376fc8b72a98aeef2499c43854424757c1b154a1018",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        9,
+        0,
+        60,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        58,
+        61
+      ],
+      "sha256": "59dd89e9e1f40298c5a7331ace21377fa7396163bb831ba290891ef140f77f1c"
+    },
+    {
+      "path": "/swf/icons/card/370_3701.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\370_3701.png",
+      "source_sha256": "341f82ae2b0a64c25e748611182e27f0b972522d71396776919d00eb47812bb2",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        12,
+        1,
+        64,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        11,
+        1,
+        59,
+        61
+      ],
+      "sha256": "b9daa56caf47499df477113185137d5601a7802c4335314cd7d31ac4246928e7"
+    },
+    {
+      "path": "/swf/icons/card/390_3901.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\390_3901.png",
+      "source_sha256": "aeed85c06db953a12cad438937d839855479dc4aae504aa529f5b439b209c292",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        16,
+        5,
+        67,
+        67
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        1,
+        59,
+        61
+      ],
+      "sha256": "e5a12663c902e022f07a34eaae8a36fd7f08963daa7d81bac49496fc17802152"
+    },
+    {
+      "path": "/swf/icons/card/40_1101.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\40_1101.png",
+      "source_sha256": "2fce4945cec1f41d4b4a99c459acb6c9b1d1ce9d6c799b13a5912a3db6b0dfb1",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        10,
+        0,
+        68,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        1,
+        61,
+        61
+      ],
+      "sha256": "e6947fc7dcc32a8d338fb9bf804949a1e7170a3c10d042a1b5b96d9cd244f836"
+    },
+    {
+      "path": "/swf/icons/card/410_4101.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\410_4101.png",
+      "source_sha256": "1872bcdb21d63ce117683a343f3b8a6844a54dd88954912427e271e774a6492c",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        1,
+        32,
+        73,
+        59
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        20,
+        65,
+        43
+      ],
+      "sha256": "8669db132b4dd8cdda463dc17cc51dd016de857de26ae9697c16a3ac427734e6"
+    },
+    {
+      "path": "/swf/icons/card/41_1111.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\41_1111.png",
+      "source_sha256": "803b5d01e3cc3b97c8616e83ea547c57bbe4977c48dc877b358ade5960315d21",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        1,
+        0,
+        73,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        4,
+        65,
+        58
+      ],
+      "sha256": "a8bb0a550b6ced23aba76a2153d356561f8173c5f81be564a3c9ee9186a31090"
+    },
+    {
+      "path": "/swf/icons/card/420_4201.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\420_4201.png",
+      "source_sha256": "6400098967070a2b3ed17857c9a7bb9187025dbe7b3bb6e048fa401d12bbd10b",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        6,
+        32,
+        71,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        16,
+        65,
+        46
+      ],
+      "sha256": "ac7fcfe50fef58872951bce268d44c684e6a4226be6f17f547989f8f8ff6f2cd"
+    },
+    {
+      "path": "/swf/icons/card/430_301.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\430_301.png",
+      "source_sha256": "93a576385e8a0b10410332af10bbc69880eed5a4e44798587241bf6f817dacd6",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        0,
+        12,
+        67,
+        69
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        6,
+        65,
+        57
+      ],
+      "sha256": "ecfa05616b8020f56872a47dae460738fc3655e169a1116c73c39d89b92f008a"
+    },
+    {
+      "path": "/swf/icons/card/440_4401.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\440_4401.png",
+      "source_sha256": "53f29c8b9a9f1bc1b522baae97e06c1dac12a93e7a55ca25c1ed0036dc430837",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        24,
+        9,
+        54,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        20,
+        3,
+        50,
+        59
+      ],
+      "sha256": "687447048d0b6d3d7c843ef3eeb46338ebfc69feccddd67049f52198e20c90c0"
+    },
+    {
+      "path": "/swf/icons/card/450_4501.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\450_4501.png",
+      "source_sha256": "3d662c446162b6671c00c15551995d8e2b2255e1c29e4d87cec185e431b5bf46",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        4,
+        6,
+        78,
+        69
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        6,
+        65,
+        57
+      ],
+      "sha256": "d2be0300e3b70bc243c65705673c39aa33bf195c27db9d37a1a0bb3258a9de64"
+    },
+    {
+      "path": "/swf/icons/card/460_4601.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\460_4601.png",
+      "source_sha256": "f8bc337b01511106c5b5191e83ee545076d2263f20b7645318d602898e74d360",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        0,
+        0,
+        70,
+        68
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        2,
+        65,
+        60
+      ],
+      "sha256": "4fcb7192cbfe344527fae11520e01c8fe473fdc8b699c81145582283624c42f4"
+    },
+    {
+      "path": "/swf/icons/card/470_4701.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\470_4701.png",
+      "source_sha256": "8a19b0e55fa689a7fb3e204d5e8796410372509e00cbd07b5d539ac46ed237a0",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        2,
+        92,
+        75
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        7,
+        65,
+        56
+      ],
+      "sha256": "a7e5d4c3becc03cbc844e061d1e54a9f74760b33dd72942fd74e59ab268190d6"
+    },
+    {
+      "path": "/swf/icons/card/490_4901.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\490_4901.png",
+      "source_sha256": "33ac966682a524efd8a9215f26c880c7ccb61376dd71dab38cbec73c71b67487",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        11,
+        7,
+        60,
+        71
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        58,
+        61
+      ],
+      "sha256": "a33f56a514e1a8bfb0251e24979647d5a78f50e970dc3ee343f8286bea033164"
+    },
+    {
+      "path": "/swf/icons/card/50_1301.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\50_1301.png",
+      "source_sha256": "e96a92145c72b752bd8cccdcf881f184a23bfc77394040fe6c62ebd82a3b9709",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        10,
+        4,
+        60,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        11,
+        1,
+        59,
+        61
+      ],
+      "sha256": "62307e0ab19c7e1d5e98388a3f8ecf40495cd8f0d4ba0bf21643dffd0dbbc9ed"
+    },
+    {
+      "path": "/swf/icons/card/530_5301.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\530_5301.png",
+      "source_sha256": "ad5ff57b077acff64008074976c5101bf2b0b3885e9b2d812f0412588d37f2d5",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        14,
+        18,
+        64,
+        67
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        7,
+        60,
+        56
+      ],
+      "sha256": "09edb140033729f0647d53a0f65761f3043c72923e0b383c4e1aeb8f6d3ff3f5"
+    },
+    {
+      "path": "/swf/icons/card/540_5401.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\540_5401.png",
+      "source_sha256": "fb01fcee530c3b202369c717f85ad53055d1c7c3f1b78811f80380d57c478278",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        10,
+        22,
+        72,
+        67
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        9,
+        65,
+        53
+      ],
+      "sha256": "c0ebb75bbe8cd0c1683eff3c5cac71c88ee7b30cc4a2a2c27b6e698d6c1ad684"
+    },
+    {
+      "path": "/swf/icons/card/550_5501.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\550_5501.png",
+      "source_sha256": "58effb8dddd3ac083c3c653c9f06b015f9281a817bd7e4c2bee88434e32a4f89",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        10,
+        0,
+        59,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        57,
+        61
+      ],
+      "sha256": "f8caf96534b8c1128c4108be24f8f0592d8b1fae15fc828591adcf416d258958"
+    },
+    {
+      "path": "/swf/icons/card/560_5601.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\560_5601.png",
+      "source_sha256": "c3efdc2615d3daabeba86c611ee140fd0c7771fff86267ddb40749f8720411e3",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        19,
+        0,
+        59,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        16,
+        1,
+        53,
+        61
+      ],
+      "sha256": "a281853b7c0a61abc257e7da6a721e0c9dcb8e328ed899cddd082925aa03678f"
+    },
+    {
+      "path": "/swf/icons/card/570_5701.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\570_5701.png",
+      "source_sha256": "7c32fc5ed3aea2516b6e067aec2281d90d008d93a13b7754c7bbb7b2c723c298",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        8,
+        2,
+        69,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        6,
+        1,
+        64,
+        61
+      ],
+      "sha256": "2a2f4b20184c891300cdb2678e17260fd4185fc231326c1eb810f598e437d46d"
+    },
+    {
+      "path": "/swf/icons/card/590_5901.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\590_5901.png",
+      "source_sha256": "1921782140c27ce4c8ac62ae1449d3a24ef1f117827ce6d6e869922181505cae",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        13,
+        7,
+        53,
+        64
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        15,
+        3,
+        55,
+        60
+      ],
+      "sha256": "5cadbdbcf5fedc40e18f69550c500c194b7b6525b83586dfaa050aad6587be6e"
+    },
+    {
+      "path": "/swf/icons/card/600_6001.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\600_6001.png",
+      "source_sha256": "5792104eb1127c1e4a67325b4fc2a614ba736be59020330142018bbe12f1c7ad",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        10,
+        0,
+        65,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        1,
+        60,
+        61
+      ],
+      "sha256": "ab0a2989bb5675fe725b78afd38816582bb4a030f8662d30a9dda10cf5d7c9bd"
+    },
+    {
+      "path": "/swf/icons/card/60_1501.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\60_1501.png",
+      "source_sha256": "7ae5006d0f72bb7144dcc2e4d4719395db682f34ab943a7764e68eb790e7a2e8",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        12,
+        19,
+        64,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        9,
+        8,
+        61,
+        55
+      ],
+      "sha256": "347be23a0d2eb4b56bb322b83ee8c6c5c18ce56e90cd588c190142c948e4614f"
+    },
+    {
+      "path": "/swf/icons/card/610_6101.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\610_6101.png",
+      "source_sha256": "40f3dbe03c011f5b64503f1f6533ab01e34ba7606a44fb7592fffee6a50d86d8",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        20,
+        17,
+        56,
+        67
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        17,
+        6,
+        53,
+        56
+      ],
+      "sha256": "535c6b7c9271fadbccc956d06c509d8398092c15f80edc8b920f29b6806d3b9b"
+    },
+    {
+      "path": "/swf/icons/card/620_6201.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\620_6201.png",
+      "source_sha256": "8939f1a2700a98a20d3d16a02714a00a50c6977668804f2d3ea012130c357936",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        10,
+        25,
+        64,
+        69
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        9,
+        62,
+        53
+      ],
+      "sha256": "4cfdc506bec3006cc251452f0ce73b950f45a1ed5a4366d1c7949e139ba74512"
+    },
+    {
+      "path": "/swf/icons/card/630_6301.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\630_6301.png",
+      "source_sha256": "65e4dabee3365d25339229b697d8a46275328830ad8eff90f15028ad3c02025e",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        20,
+        4,
+        60,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        15,
+        1,
+        54,
+        61
+      ],
+      "sha256": "934a7892fa856b07d75d0852ebbc13ee46b4340265b59a09ce353919a5233a44"
+    },
+    {
+      "path": "/swf/icons/card/640_6401.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\640_6401.png",
+      "source_sha256": "e1738709872db48a8f70c71411494772bd053770ebce6a06f5db4407ff4ff17b",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        13,
+        22,
+        60,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        11,
+        9,
+        58,
+        53
+      ],
+      "sha256": "16c5cbdf84ce2f4265583ffa3bfdbd64a82822f0231916785fffc3ab7eff18fd"
+    },
+    {
+      "path": "/swf/icons/card/650_6501.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\650_6501.png",
+      "source_sha256": "4ee6a2d134d5112fe3aabd1645ed62e46c75a4a12fc7c0a1715da30c0f5d4094",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        19,
+        0,
+        60,
+        58
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        14,
+        2,
+        55,
+        60
+      ],
+      "sha256": "c2b16e356dabee27f7f215092ba26d880243b3a6bdf9287a4e3a7981ef9a1f06"
+    },
+    {
+      "path": "/swf/icons/card/660_6601.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\660_6601.png",
+      "source_sha256": "26a3cce4674dbf08728a26299e43761991b6f2c89dddbfe46d1f535bea636566",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        19,
+        17,
+        57,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        16,
+        7,
+        54,
+        55
+      ],
+      "sha256": "84e36bad86b6a59840cdf1c4b0897c264919537530fc57862d0ae68b778cf5c5"
+    },
+    {
+      "path": "/swf/icons/card/670_6701.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\670_6701.png",
+      "source_sha256": "3a9aac2d221227979d7000ce155f018cc24869b8a193704f5267192eec304ce9",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        22,
+        2,
+        59,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        17,
+        1,
+        52,
+        61
+      ],
+      "sha256": "58bb74af05265b823bed49b6cb58ecefdd9213d2088bb06e3562d0cf01a2b263"
+    },
+    {
+      "path": "/swf/icons/card/690_6901.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\690_6901.png",
+      "source_sha256": "dbead53625c787722434e5de95bb09c692eec13bdcda6b88c6627b286e520001",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        0,
+        1,
+        63,
+        68
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        7,
+        1,
+        63,
+        61
+      ],
+      "sha256": "07aa2e3f1ba565272447f0c6110450542c0d60ceb30eae26d672dff32967b538"
+    },
+    {
+      "path": "/swf/icons/card/70_1601.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\70_1601.png",
+      "source_sha256": "ccb05f3d1d998d5b7683354bf82fcca3928d15a1d657ad1f105b82e9f746eae4",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        14,
+        14,
+        65,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        9,
+        6,
+        60,
+        57
+      ],
+      "sha256": "b74d60a41fa1470d653f2bb1888fd187106d17e652f8a100497d777a5a53643c"
+    },
+    {
+      "path": "/swf/icons/card/720_7201.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\720_7201.png",
+      "source_sha256": "573c0611dfd4f91c28b3bc32148068d27225bd3f6984566e2c89d319e40e766e",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        22,
+        3,
+        55,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        19,
+        1,
+        51,
+        61
+      ],
+      "sha256": "30a4b8165b4ea73f6c6e9b5c0e9e46fdb2148d181f17b425765224b33a1a136e"
+    },
+    {
+      "path": "/swf/icons/card/740_7401.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\740_7401.png",
+      "source_sha256": "7a7aa9cc7924d7eaaccecbf057f9dddb3a9149b075431c151f2874e1eb3f3e6a",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        19,
+        10,
+        59,
+        71
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        15,
+        1,
+        54,
+        61
+      ],
+      "sha256": "0b3e4c18c50b5e3fd5283654d86c32022aa52b63b6f8d28ac4b27666cacc5f0a"
+    },
+    {
+      "path": "/swf/icons/card/750_7501.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\750_7501.png",
+      "source_sha256": "92a68602e207d8e5d58c30025ea126b263bf9dffabaec6e546dd43ef7a43bd22",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        2,
+        65,
+        77
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        1,
+        60,
+        61
+      ],
+      "sha256": "d07439495fe65e752a368cd27c46a6f117f98c4a5bd8ea2c63f79f030273772a"
+    },
+    {
+      "path": "/swf/icons/card/760_7601.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\760_7601.png",
+      "source_sha256": "b646555aac50032c2be075f8b89d20dfc37088ad2c5ba3f9c3859d565fa48d3c",
+      "before_size": [
+        60,
+        72
+      ],
+      "before_bbox": [
+        14,
+        12,
+        59,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        4,
+        57,
+        58
+      ],
+      "sha256": "40c3aaa302c5e3ad0984f1d72635b6b6b61a6ba52244f8ed12be4f4dc1ca3c1a"
+    },
+    {
+      "path": "/swf/icons/card/770_7701.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\770_7701.png",
+      "source_sha256": "a7bf85659d78c39ee2ae28effa6f82934843139472cfad5ed2a9ddb81e618775",
+      "before_size": [
+        60,
+        72
+      ],
+      "before_bbox": [
+        0,
+        3,
+        60,
+        64
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        1,
+        64,
+        61
+      ],
+      "sha256": "f19ff40e24c9b157d62d50a35a6a27ed98054305dfc3d30a8d3a98fb840b2407"
+    },
+    {
+      "path": "/swf/icons/card/780_7801.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\780_7801.png",
+      "source_sha256": "a82d9895f3d434291ce2cb3cbd2b50dfe70b4e5e0e841a0cbc14bf52917ee7e3",
+      "before_size": [
+        60,
+        72
+      ],
+      "before_bbox": [
+        5,
+        4,
+        60,
+        63
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        7,
+        2,
+        62,
+        61
+      ],
+      "sha256": "9d95e6aa17011524c0e29d67ca698c60e46e78e5df5c9d89cec0d8fda67563ab"
+    },
+    {
+      "path": "/swf/icons/card/790_7901.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\790_7901.png",
+      "source_sha256": "95453f00da951ff8ff773acabbd42cede0cfef91882d0c7c374f72695ca67d25",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        4,
+        16,
+        73,
+        71
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        7,
+        65,
+        55
+      ],
+      "sha256": "5bb42a336fefd9f5eda8383f5e2b4eacee83b2af1da91c8b3f57eef63916b218"
+    },
+    {
+      "path": "/swf/icons/card/80_1401.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\80_1401.png",
+      "source_sha256": "1b4fea81bdfb8993c84cea5e593cc588c00b2d205ae79c6477ba7e210d3b6c28",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        0,
+        9,
+        64,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        5,
+        65,
+        58
+      ],
+      "sha256": "046fd3b837ed6331523c02f5034d5cde84467fbc33ead981b5a2cbd1f1882032"
+    },
+    {
+      "path": "/swf/icons/card/810_8101.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\810_8101.png",
+      "source_sha256": "b5f91b8a7876075bc402eb4f7092585ca12867a9871aaf957256f30b0bf299f7",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        4,
+        0,
+        60,
+        63
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        1,
+        61,
+        61
+      ],
+      "sha256": "5a6c4344804d6b7db8e596fbbe3b242db4fff0b41f2ad696a3cc459541e1c877"
+    },
+    {
+      "path": "/swf/icons/card/850_8501.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\850_8501.png",
+      "source_sha256": "d6742fa659b0c84ddd9cfa5465a4390f1f59836ad88862abd9e880e95ef075c7",
+      "before_size": [
+        60,
+        72
+      ],
+      "before_bbox": [
+        8,
+        15,
+        58,
+        69
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        4,
+        60,
+        58
+      ],
+      "sha256": "6745f1df8ca5f3837d52b933bf26af3ad1bffec72027f3456d3e679205a92f60"
+    },
+    {
+      "path": "/swf/icons/card/870_8701.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\870_8701.png",
+      "source_sha256": "bc19524f8cdb9a58dac83ac220428506aa7ec0cb3ded38d534bd4ea2ba18ecb4",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        12,
+        3,
+        61,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        11,
+        1,
+        58,
+        61
+      ],
+      "sha256": "b867164fc76cdb56a4d53f22081ea3086a7c180bbe23d99e62dfc2ab378e0698"
+    },
+    {
+      "path": "/swf/icons/card/880_8801.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\880_8801.png",
+      "source_sha256": "4cd24df25cc0d093eadb8ca94233958f8828d32a505862293f770db93a57df41",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        20,
+        15,
+        57,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        16,
+        6,
+        53,
+        56
+      ],
+      "sha256": "6ca7c8263978c5a08cc00a91283196f45390ee8afdd2dc10fd98b13399282c5c"
+    },
+    {
+      "path": "/swf/icons/card/890_8901.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\890_8901.png",
+      "source_sha256": "8cc6ceb4ad46576a5dbba14a269632c92e576428f706912c9065861196262482",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        14,
+        22,
+        55,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        14,
+        9,
+        55,
+        53
+      ],
+      "sha256": "24ca962717883247ae998a74e69d574e098d61271a5ddc3bf17507b5c6b3ab37"
+    },
+    {
+      "path": "/swf/icons/card/900_9001.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\900_9001.png",
+      "source_sha256": "9c559d9c97ad2d6cd1c6ae908b607d0ff6ee4cf5c9f9e7333b76d4cd59873e2d",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        2,
+        56,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        9,
+        1,
+        60,
+        61
+      ],
+      "sha256": "5bb440db818a559be2387686e5a852eea1e5ddc0ec075d71c8e8513bb4e75f77"
+    },
+    {
+      "path": "/swf/icons/card/90_1801.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\90_1801.png",
+      "source_sha256": "06cfd5937392ad4bdd003e5d65ce0c2c7d56bbb309513e7e21c2f940661ab573",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        1,
+        79,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        6,
+        65,
+        57
+      ],
+      "sha256": "a76f41c99951dd3a8e77b0beaa488dd8f32712f1eaff64dd606b72bd4aef6451"
+    },
+    {
+      "path": "/swf/icons/card/910_9101.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\910_9101.png",
+      "source_sha256": "f996466e783f66696ddb7ea7141715e59e3789f76ca4e7caa43b718d3a796600",
+      "before_size": [
+        234,
+        234
+      ],
+      "before_bbox": [
+        4,
+        5,
+        58,
+        54
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        7,
+        62,
+        56
+      ],
+      "sha256": "756c5b6196a8d4ad8f2b795a490e0b0a1bacb39e06bcafe924369e705528b28d"
+    },
+    {
+      "path": "/swf/icons/card/920_9201.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\920_9201.png",
+      "source_sha256": "82d6c5f35513c6eef6872125bac2ede0079022b077021e91eb27b3d88532b8c8",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        2,
+        2,
+        78,
+        92
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        9,
+        1,
+        60,
+        61
+      ],
+      "sha256": "f8e9ecac3c9a8240e019180a3bf7b5054d0089e9e5a04dd71497afb65e917b09"
+    },
+    {
+      "path": "/swf/icons/card/930_9301.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\930_9301.png",
+      "source_sha256": "eda7e0619dfa4c886fc4b1ba9f7ca30f16c974e6bdff4db8bee5144fcb0572c1",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        8,
+        7,
+        55,
+        56
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        11,
+        7,
+        58,
+        56
+      ],
+      "sha256": "f84e54cb2ed2441f8dec2051063ea276d6259af4a8ccc3ad92b1bbc038ef0cc4"
+    },
+    {
+      "path": "/swf/icons/card/940_9401.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\940_9401.png",
+      "source_sha256": "b25794dc4cbb0ad199207d60037cdbd70bcfb10ba655ebd57aa7877a7ee004ed",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        17,
+        1,
+        66,
+        65
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        58,
+        61
+      ],
+      "sha256": "1dbca28caad3acaf44c867d2dbc849bb02ab0f27d76e23e857734249e0036d10"
+    },
+    {
+      "path": "/swf/icons/card/950_9501.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\950_9501.png",
+      "source_sha256": "f355f82dec1fa3671c8366e4a79ef9f6ee291fe5d1f40c7f1be68f6bba223a7c",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        14,
+        8,
+        60,
+        92
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        18,
+        1,
+        51,
+        61
+      ],
+      "sha256": "4033cdbdf42f353682cc6dbd981907752355c6e57e8ecefaf838d9fb0172961d"
+    },
+    {
+      "path": "/swf/icons/card/960_9601.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\960_9601.png",
+      "source_sha256": "d3d7bfd0ffcedc80895249b91462be98168cd6c6eb582cf76b0787a738bda27e",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        11,
+        19,
+        66,
+        52
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        7,
+        15,
+        62,
+        48
+      ],
+      "sha256": "3425eb66a6528297cba29d94753e3e47d3427b5cf606a934b5eb0762b327fd3e"
+    },
+    {
+      "path": "/swf/icons/card/980_9801.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\980_9801.png",
+      "source_sha256": "5cdca165ebf089281d2f2d58ca3bd2c5d3550bd99d697584b5a07ba05dfde4db",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        3,
+        8,
+        71,
+        89
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        1,
+        60,
+        61
+      ],
+      "sha256": "cca3d69df874f6227802626e9f8377b66c54555045dfb46a9919b08ed158c872"
+    },
+    {
+      "path": "/swf/icons/card/990_9901.png",
+      "method": "preserve_original_pixels_fit_bitmap_viewport",
+      "source_before": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card-art-work\\28-main-layout\\before\\webroot\\swf\\icons\\card\\990_9901.png",
+      "source_sha256": "3bf2510db71cd6ab1513a1d18f0ca704e7b1f7b374c8793ad4a02c0666f72b23",
+      "before_size": [
+        330,
+        240
+      ],
+      "before_bbox": [
+        0,
+        19,
+        66,
+        66
+      ],
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        10,
+        65,
+        53
+      ],
+      "sha256": "dbb56c6b45fddb4b8c27ec545aa51109f875c6c69c26794239ccda872f0e89d1"
+    },
+    {
+      "path": "/swf/icons/card/31_1211.png",
+      "icon": 31,
+      "names": [
+        "双发豌豆"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_31.swf",
+      "source_sha256": "5c76b11e908b2aec8daa3c33240770de73055a97a073505858c5eeb7432d4eeb",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_31.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "f2b9e0b2be4ced91c6b134470c21d2a1838ade5af1efd70b8d398e3d3e2d37a0",
+      "root_placement_ids": [
+        34
+      ],
+      "default_avatar": 1211,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        6,
+        1,
+        64,
+        61
+      ],
+      "sha256": "8b791327c45ba5d72ec2f7b736d69a66b5a4038a6f946a6ee837a5da8b5c2717",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/112_1121.png",
+      "icon": 112,
+      "names": [
+        "刺头花"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_112.swf",
+      "source_sha256": "56e163afac1a2fe6e21dc6d972687cea342e11946aaf8a15095ffd44912683c1",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_112.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "14f16e4ddd13f783b6deb88f4d76621607097983db7ecd511cccadc371655f79",
+      "root_placement_ids": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58
+      ],
+      "default_avatar": 1121,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        1,
+        60,
+        61
+      ],
+      "sha256": "0d2f414e7da2ea0355be33f9f42936980a10fbbdf3416a3f6dad248842220989",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/800_8001.png",
+      "icon": 800,
+      "names": [
+        "芭蕉"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_800.swf",
+      "source_sha256": "b72c1cae51fe04649587622eef1d0ab14c88cac080635113db31028581f1c303",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_800.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "954af87ac7c911ce4cb78880b11d790b1ef3a2338911b7074614204af1c3ea27",
+      "root_placement_ids": [
+        66
+      ],
+      "default_avatar": 8001,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        7,
+        65,
+        55
+      ],
+      "sha256": "5e4f53161fa541d667d075aecb606570e386d89033b7b9d68a36c944d85d36ae",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/830_8301.png",
+      "icon": 830,
+      "names": [
+        "电海松"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_830.swf",
+      "source_sha256": "16034a08f33437700b73f44e8ab9e98ef3a45bbd9bb7fb3a94f871b7727b76ab",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_830.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "6056e3ca72f9100a63a495f9671558821bfaadc1b4cb268ccf02439c4c6b0631",
+      "root_placement_ids": [
+        69
+      ],
+      "default_avatar": 8301,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        9,
+        1,
+        60,
+        61
+      ],
+      "sha256": "3eb0b7df00bf69c0ccb862b1d71dd28f17e4d509c58ef6b5750265bb1d0c4096",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/860_8601.png",
+      "icon": 860,
+      "names": [
+        "钻地荔枝果"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_860.swf",
+      "source_sha256": "39c6fd9d649448b3f7465da8ce06340722ec50e31bfc1659bc75268cedd5cf3e",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_860.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "7e11bf92ca17b931c13436723d32867659c183a64afb1064ffc4f9eb761f35a6",
+      "root_placement_ids": [
+        61
+      ],
+      "default_avatar": 8601,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        4,
+        65,
+        59
+      ],
+      "sha256": "1cab0f07118ca66541b9d9b7466806db86f581c741678097d93b40dfa146d946",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/970_9701.png",
+      "icon": 970,
+      "names": [
+        "飓风甘蓝"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_970.swf",
+      "source_sha256": "466e749c0cee3c8d70f8bdf9507745626042dcf926e482465b4e520d106b23c8",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_970.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "7090b2cee4d68961dbbd769acb68730bf48e38fb7dee1556ab78de51fcd9a86e",
+      "root_placement_ids": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        13,
+        15,
+        17,
+        19,
+        21,
+        35,
+        37,
+        39,
+        41,
+        43,
+        44,
+        66,
+        68,
+        70,
+        71,
+        72,
+        73
+      ],
+      "default_avatar": 9701,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        1,
+        62,
+        61
+      ],
+      "sha256": "63aaaa3dd021126bec58fac3824d879eadbc749a03d6581782b25c5f93b775eb",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10010_0.png",
+      "icon": 10010,
+      "names": [
+        "路障僵尸首领",
+        "路障木乃伊"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10010.swf",
+      "source_sha256": "4b216d5f5278e5043a649c53f943d55e7328c3e5dd1c7d1a449a6c98c86109e7",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10010.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "dd3b146c61eff2ea50b8c84a649ad60dfc27ef671c4a6a52d7dd77278d201134",
+      "root_placement_ids": [
+        43
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        20,
+        1,
+        50,
+        61
+      ],
+      "sha256": "ded488d24df64668fcde17594986ab8d427b9d3c9e8735caa711f7dfa56941f5",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10020_0.png",
+      "icon": 10020,
+      "names": [
+        "铁桶僵尸首领",
+        "铁桶木乃伊"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10020.swf",
+      "source_sha256": "4b1cbffc4938c64293c7e6294aa5e4caeb8f3403fc9e91d1c2798fe09c2ce20b",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10020.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "99d7aef0ced0bbd27d70f7dfcc0dfe55ab87e5f125514bd60d32e767aa428d49",
+      "root_placement_ids": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        33,
+        35,
+        37,
+        42
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        19,
+        1,
+        51,
+        61
+      ],
+      "sha256": "c22d35a189f8f017ca41048bb69db47202c38ebbc42ef4e6aee6c53761c38bf9",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10030_0.png",
+      "icon": 10030,
+      "names": [
+        "摇旗木乃伊",
+        "摇旗木乃伊首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10030.swf",
+      "source_sha256": "8cb585c9c3004da5109fdc3f007c03c6ff20243c199be0e17b23b22461847e80",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10030.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "101e3814dab4e41b248241c6fcec52eb060dab5caa923b53f56bc6f2616ea532",
+      "root_placement_ids": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        45
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        16,
+        1,
+        54,
+        61
+      ],
+      "sha256": "cfd0de9b1a80f5261784cddffebef1833cccd0bc2de4917e9123f546c71d703e",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10050_0.png",
+      "icon": 10050,
+      "names": [
+        "骆驼僵尸",
+        "骆驼僵尸首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10050.swf",
+      "source_sha256": "a1f71e9f4a78571e0ce94f126679ba3501b9b7cd448e36b7b3d03c1bb6082591",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10050.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "a43c11a89219291f6f81b311a7426f65912f8d5919937dcf6f31dbaca7f25f6e",
+      "root_placement_ids": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        47
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        17,
+        1,
+        52,
+        61
+      ],
+      "sha256": "1f43bebc1dfbd5e5b3c1110a9baea4e3d01886e23787e613be1a9b36c96ab09d",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10080_0.png",
+      "icon": 10080,
+      "names": [
+        "法老木乃伊",
+        "法老木乃伊首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10080.swf",
+      "source_sha256": "69e3a9c8bddf3f03186ea990f7000ce1ed0f0e0411a89e71ec5957b2af7ea615",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10080.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "4ad44260c21bc3ff65d2a1599f8cc147d080496e61f69ec83795010f96f1251a",
+      "root_placement_ids": [
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        1,
+        61,
+        61
+      ],
+      "sha256": "21496c731efd5ec8b930089bff987f8dac236e1e59b9bdd6767ba1978317f701",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10090_0.png",
+      "icon": 10090,
+      "names": [
+        "大盗僵尸",
+        "小偷僵尸",
+        "强盗僵尸",
+        "窃贼僵尸"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10090.swf",
+      "source_sha256": "775d525351c2c52f7264111e92056705c91c389441879d9e1af51236b8d629bd",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10090.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "f19cba9fa2c7e2841dcbb465c468eab2ce92caeeec733bd1287bfca2b4fe51cc",
+      "root_placement_ids": [
+        36
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        16,
+        1,
+        53,
+        61
+      ],
+      "sha256": "cf54a29baf2ceb0ca377170bcab3447706b838245a13dd7105bee83b913b4e6a",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10100_0.png",
+      "icon": 10100,
+      "names": [
+        "动物僵尸2",
+        "动物僵尸3",
+        "动物僵尸4",
+        "大盗僵尸",
+        "胡萝卜僵尸"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10100.swf",
+      "source_sha256": "743201f2735ad581c019055b0836d2f2c1d27b881941a571f1a8eab014868822",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10100.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "0e2858a3428566bd1950577ad565d96f3da56128dd8fd9768bac6c0235ac8836",
+      "root_placement_ids": [
+        132
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        16,
+        1,
+        54,
+        61
+      ],
+      "sha256": "f5defb8fe95c77727700c5b06476bceefa6b875c039ca78f3f0a42a59e4fb408",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10110_0.png",
+      "icon": 10110,
+      "names": [
+        "军士僵尸",
+        "军士僵尸首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10110.swf",
+      "source_sha256": "d467ff4c8d7a203a32b32083257f1a26c49b4c610086f490d184e2095abb0bc5",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10110.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "03d624be4d7cc67d5e541325ce42ac899b2f0a80038f936468994ba5fcdd4ff4",
+      "root_placement_ids": [
+        53
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        13,
+        1,
+        56,
+        61
+      ],
+      "sha256": "e7a75d179dc639ebe60141839e3485261ec9cb2d222a67cbe616800a1ecebd7d",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10120_0.png",
+      "icon": 10120,
+      "names": [
+        "顶碗军士",
+        "顶碗军士首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10120.swf",
+      "source_sha256": "4132aa1c14c9838a94ed4e43caa6659fb9db4214e6b76941e5c50d470160329f",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10120.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "84da7ab7d31fb92b425a39b369c410b609b1d74a049da91a8a5859e308e92d4d",
+      "root_placement_ids": [
+        55
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        14,
+        1,
+        56,
+        61
+      ],
+      "sha256": "960e83716c7e0384cd625dde5f632ce718b80cfffa7bc0ff0946f7bd88b28abb",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10130_0.png",
+      "icon": 10130,
+      "names": [
+        "铁盔军士",
+        "铁盔军士首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10130.swf",
+      "source_sha256": "db2043e3caec0a0f4fbfaaf457f49cdaddfb0b11c77364cb37bdc4cc8974485d",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10130.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "b4d65bb52b590d90830cc4ad41a2e39422c882bbf5729408876942a1c6f35bc6",
+      "root_placement_ids": [
+        60
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        16,
+        1,
+        53,
+        61
+      ],
+      "sha256": "46c5f7682b024e1235613ab803a11ec150c0db33a5f5c6bd0af3bad52fac1c1e",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10140_0.png",
+      "icon": 10140,
+      "names": [
+        "令牌僵尸",
+        "令牌僵尸首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10140.swf",
+      "source_sha256": "b1d1d55d2d46945e5d530cd7d33444ff2f8937efb9955b29d6ddd72120e88c05",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10140.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "959e387798078dd33570c38e4959f8ded2baedf30b0f3b73ca2947c28a4b0293",
+      "root_placement_ids": [
+        53
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        13,
+        1,
+        56,
+        61
+      ],
+      "sha256": "e56eadc6a2a60d21795fbf90fe008c3535482b2eedaf3308a877548741e34660",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10150_0.png",
+      "icon": 10150,
+      "names": [
+        "盾卫僵尸",
+        "盾卫僵尸首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10150.swf",
+      "source_sha256": "8a7fcb9deda3b703048220f3252271dacc32fb5a10bcbdbc2c8fc73e4623defe",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10150.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "b797bcda1c96f52e255a0f4f08f6890a1895373cc7b7c2ee0ac3246f2f684633",
+      "root_placement_ids": [
+        41
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        16,
+        1,
+        53,
+        61
+      ],
+      "sha256": "06d69a0b5e50634435fd4a53468de9e218ac8a457f9f35e428cd8c35406c5031",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10160_0.png",
+      "icon": 10160,
+      "names": [
+        "推车小贩",
+        "推车小贩首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10160.swf",
+      "source_sha256": "cc9a020e80685ec86365642545cef3d3447fa3b27be2f4403d66792ab837337c",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10160.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "5f974a6bed71a0dbc271c01fe0db0205742f2b938534fb8f52548f61ec8d409c",
+      "root_placement_ids": [
+        63
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        6,
+        65,
+        57
+      ],
+      "sha256": "643ae0eee140abd5bfcec0f2f2477e1b7e8bedf9a8c4a4b31023676c34c3f106",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10170_0.png",
+      "icon": 10170,
+      "names": [
+        "骑兵僵尸",
+        "骑兵僵尸首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10170.swf",
+      "source_sha256": "1460f28c69b273be022e2d97c3daf4fd0975b02d2f32346b87dad936e61ee86d",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10170.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "e8d5988927687f8b054788198ad206e38e0deeaa7a607c1b5e0773070f48f610",
+      "root_placement_ids": [
+        101
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        6,
+        1,
+        63,
+        61
+      ],
+      "sha256": "737b1599b214ad43fa8d2b186888b90ee935f09169326ca679b7255885168105",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10180_0.png",
+      "icon": 10180,
+      "names": [
+        "弓箭僵尸",
+        "弓箭僵尸首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10180.swf",
+      "source_sha256": "9d85e4bea22496391f443da31c4ad356ed3607f0ff654916d4d39b16a410cb41",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10180.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "369608f3efb9bade582329953efc9259742b6021dc54e090e4718d930a0aa14f",
+      "root_placement_ids": [
+        53
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        11,
+        1,
+        59,
+        61
+      ],
+      "sha256": "2d1778dab822bfae48c421c170553f7e777ccec3831b492849fad1fa4544caed",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10190_0.png",
+      "icon": 10190,
+      "names": [
+        "秦始皇",
+        "邪恶博士",
+        "醉酒僵尸",
+        "醉酒僵尸首领",
+        "霸刀将王"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10190.swf",
+      "source_sha256": "781a56ecb1d8d2091a04fc265ce7f2ccb1e31a18cbcc773ca1f1dafaa49fe0fb",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10190.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "a89460c491e8a982263db79f6b53d6b73d281a085929cb349024bfa0eab9bdb8",
+      "root_placement_ids": [
+        92
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        58,
+        61
+      ],
+      "sha256": "d2f339a98284fc927f72313262d0071d82edd579838ceb5f65d063f3f524be82",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10200_0.png",
+      "icon": 10200,
+      "names": [
+        "滚筒僵尸",
+        "滚筒僵尸首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10200.swf",
+      "source_sha256": "45e04bcfa31d5d4ca1dd68d3a41ab536ffd1d6b43deec60adef41de6d6f789c4",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10200.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "9a34c9798fcfe2bee532271f3a0d5988f0cbb786b79f74726434f6cdfa86c442",
+      "root_placement_ids": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        39,
+        41,
+        43,
+        45
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        14,
+        1,
+        56,
+        61
+      ],
+      "sha256": "b9e6fd441ee84710f30e31384c7222bf1b5c87b07694dcf3f819b80102b47ecc",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10201_0.png",
+      "icon": 10201,
+      "names": [
+        "海鸥僵尸",
+        "海鸥僵尸首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10201.swf",
+      "source_sha256": "2629557a8fc004b984b384ce086bc96a1a2a3b609a4da30d1f20614b07a0fc21",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10201.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "bd352a24a0811a1c1a899ff06fdfef4258b43985f5e83521c0daf9cce2c96f67",
+      "root_placement_ids": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        25,
+        26,
+        28,
+        30,
+        40,
+        42,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        21,
+        1,
+        48,
+        61
+      ],
+      "sha256": "f33cbb4f10c56c17242c92b18e1d2074f350fb84b3c4d4c3b44d0f4ed73a6ea3",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10202_0.png",
+      "icon": 10202,
+      "names": [
+        "海盗巨人僵尸",
+        "海盗巨人首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10202.swf",
+      "source_sha256": "0253d73f07884679f6a7a9669df72f457c5b2adb90c229f45bd4e903455ed18c",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10202.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "349252b96ba72b087a9ae9b256d7fd81ec9eb158219db50be60bb1a5864bfc67",
+      "root_placement_ids": [
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        39,
+        41,
+        78,
+        83,
+        85,
+        87,
+        89,
+        91,
+        92,
+        94,
+        102,
+        104,
+        106,
+        137,
+        139,
+        141,
+        143,
+        145
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        4,
+        65,
+        58
+      ],
+      "sha256": "7199dff08508822a872745801c9b9c67bbf93cb6c04212d8c78dbf88e61c0796",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10203_0.png",
+      "icon": 10203,
+      "names": [
+        "海盗小鬼僵尸",
+        "海盗小鬼首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10203.swf",
+      "source_sha256": "f35d41de54ff1270278ad63cc3e6b053e7e1c44727e26edd9a778c405d7c6265",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10203.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "95294a26821fc030ce1b26b0636d456452dba986e007f846449de633d7c2da57",
+      "root_placement_ids": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        31,
+        33,
+        35
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        57,
+        61
+      ],
+      "sha256": "cf0461edd691655d8dbaa750aeaabfa71f748b60cb0708f1bc219969f369f8ae",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10204_0.png",
+      "icon": 10204,
+      "names": [
+        "杂耍僵尸",
+        "杂耍僵尸首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10204.swf",
+      "source_sha256": "fc3685ed0ed52d352bd074928e01bf5645f2665c780d8199a829a851c4a5e636",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10204.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "1c20a0a42bf4850c904c57e028113c64cb730d6613f51ddc8fb9e695912b9e76",
+      "root_placement_ids": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        14,
+        1,
+        56,
+        61
+      ],
+      "sha256": "4916eb8f0833818b94417b1b28ac3358253b358a95a61562bef4f44213763c1f",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10205_0.png",
+      "icon": 10205,
+      "names": [
+        "猴子僵尸",
+        "猴子僵尸首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10205.swf",
+      "source_sha256": "c9586ce6e60b218dc16861e657be4a3abd500a83c858514ab946eee85182e043",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10205.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "1cc20298f3ca6942245c254a9164c6cc74ca2b30ffc2ba7f5b0a1e7f7414b75f",
+      "root_placement_ids": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        29
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        1,
+        61,
+        61
+      ],
+      "sha256": "eeadc5caecf25c6ede6836654926e4268d5759091f6c383ecafea28ac83cc8fc",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10206_0.png",
+      "icon": 10206,
+      "names": [
+        "摇旗水手",
+        "摇旗水手首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10206.swf",
+      "source_sha256": "d77746fc39949cc13e104ee6747936d4517ca6d456898e484b07b4938e052e0f",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10206.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "13810916f02c8c6640c6d6fb62b451dd9e6ea7f039d7d9e6db4e4dcfb43175fb",
+      "root_placement_ids": [
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        50
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        15,
+        1,
+        54,
+        61
+      ],
+      "sha256": "76bfeb8cbb7c607f689a195d2bc069cad508cd04cafec99b0057e6ec766b815a",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10208_0.png",
+      "icon": 10208,
+      "names": [
+        "电磁盾僵尸",
+        "电磁盾僵尸首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10208.swf",
+      "source_sha256": "514b50e38b6a2d7eeea3655756910bc9ce9e48de4ba7396bd973d2df1056b83c",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10208.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "b17cac34bf9a8ec1d562fb5732abe60d7d40379966bc34c55f9fafd0d2859ad5",
+      "root_placement_ids": [
+        96,
+        115,
+        123,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        21,
+        1,
+        48,
+        61
+      ],
+      "sha256": "e76339ca68143f59ced81f091fc45abc75e7493532c1436aacd71673ea1094c8",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10211_0.png",
+      "icon": 10211,
+      "names": [
+        "迪斯科3000",
+        "迪斯科3000首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10211.swf",
+      "source_sha256": "c3be5b961ed854cddfe44d69bfcf1d4658cde775dc6918b47f0987827338353d",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10211.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "c0dc3ede86b826879715b7d1b4a092fec9c1edf1c39df4a5b15bcc8cb39a7971",
+      "root_placement_ids": [
+        72,
+        97,
+        99,
+        130,
+        132,
+        134,
+        136,
+        138,
+        147,
+        156,
+        158,
+        160,
+        162,
+        164,
+        166,
+        168,
+        178
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        5,
+        65,
+        57
+      ],
+      "sha256": "3c6fbe4a29c99fe02fb74a612a64a440bd58dbd6dc5379bc580ef8a65bcca4ad",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10213_0.png",
+      "icon": 10213,
+      "names": [
+        "机甲橄榄球僵尸",
+        "机甲橄榄球僵尸首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10213.swf",
+      "source_sha256": "110b2c35a82ab7a376fe9cb44b2fd1de9c7a4989bac7d1984b46aaae98705e67",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10213.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "d9e32a9ab872c7b8b3d573230af35c144d05ef3a383fee03bf77328f582a1db0",
+      "root_placement_ids": [
+        24,
+        59,
+        61,
+        70,
+        72,
+        122,
+        124,
+        126,
+        128,
+        130,
+        132,
+        133,
+        135,
+        141,
+        143,
+        145,
+        150,
+        152,
+        154,
+        156,
+        161,
+        164,
+        166,
+        168,
+        170,
+        172,
+        175,
+        177
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        9,
+        1,
+        61,
+        61
+      ],
+      "sha256": "bd60ba9676d5b349d6e885b18c0226ef4c105e2d067a082f293606ca8b6dc17c",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10215_0.png",
+      "icon": 10215,
+      "names": [
+        "分裂僵尸",
+        "分裂僵尸首领",
+        "小鱼僵尸",
+        "小鱼僵尸首领",
+        "水母僵尸",
+        "水母僵尸首领",
+        "河豚僵尸",
+        "河豚僵尸首领",
+        "海夜叉僵尸",
+        "海夜叉首领",
+        "海带僵尸",
+        "海带僵尸首领",
+        "深海力士僵尸",
+        "深海力士首领",
+        "蚌仙僵尸",
+        "蟹将僵尸",
+        "蟹将僵尸首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10215.swf",
+      "source_sha256": "b657dfb9b0d03982422ca5564a721eeaf2c003984e9db97aa3eea7d43c137711",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10215.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "35be51b2d8891677b75a3f520249f48c8777b790290985784824e7405d24448f",
+      "root_placement_ids": [
+        2,
+        4,
+        8,
+        10,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        19,
+        1,
+        51,
+        61
+      ],
+      "sha256": "ec056f34701e80c1c5be94f67d2da6cb6a1cbb96232e57b946613b2b79b1c1e2",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10216_0.png",
+      "icon": 10216,
+      "names": [
+        "虾兵僵尸",
+        "虾兵僵尸首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10216.swf",
+      "source_sha256": "c9a57cce75707a69c8cf636dfa429567f2f78360d790b0a413eab899da46680b",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10216.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "27c4bd6ef614a5bd9baa65c7333ed1169cabcd9b6b7df7611f558f59fca8c9f5",
+      "root_placement_ids": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        31,
+        33,
+        40,
+        42,
+        44,
+        48,
+        50,
+        52,
+        54,
+        57,
+        59,
+        61,
+        63
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        57,
+        61
+      ],
+      "sha256": "1aaa554164658b86d0a883455588f8e74e69f10ef4b304f1014ced880200fc11",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10217_0.png",
+      "icon": 10217,
+      "names": [
+        "蚌仙僵尸",
+        "蚌仙僵尸首领",
+        "螺兵僵尸",
+        "螺兵僵尸首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10217.swf",
+      "source_sha256": "259b6b482ee921d95b4de9b6d0e2cb40a45a65f0bc50bae11a744a0893ce9aed",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10217.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "a267fd77c520cdec616364e376a1b18183c1eb402c823503618db85339c5b4ee",
+      "root_placement_ids": [
+        2,
+        4,
+        6,
+        10,
+        12,
+        14,
+        17,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        11,
+        1,
+        58,
+        61
+      ],
+      "sha256": "58264c2cbf71a127fde151be9b3f2f6adb4fdcb234c8d0dc58d02c1c9870ab12",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10218_0.png",
+      "icon": 10218,
+      "names": [
+        "海马僵尸",
+        "海马僵尸首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10218.swf",
+      "source_sha256": "b48ddba1b3b4fede05e312acd533320cc5ebcb55ac268fac4cecdb66d071df8a",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10218.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "c8dc463a650ee2f9f723666074e382e40c999acc5741f5da99703fc90229630b",
+      "root_placement_ids": [
+        2,
+        4,
+        8,
+        10,
+        46,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        62,
+        64,
+        66,
+        68,
+        70,
+        72,
+        74,
+        76,
+        78,
+        80,
+        82,
+        84,
+        86,
+        88
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        15,
+        1,
+        54,
+        61
+      ],
+      "sha256": "8af634493b33feb2031f274138418b2ca5294966714067b188d619e76a684afc",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/10219_0.png",
+      "icon": 10219,
+      "names": [
+        "龟丞相僵尸",
+        "龟丞相首领"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_10219.swf",
+      "source_sha256": "fb9f4e4b7ef5214b746370a42b3d274d3ea57ea2d293fee5c44bb0bc624628e5",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_10219.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "f41f0adf98e0002ae13c510273c14a7909fe532c308fab6ff58c622073fc90f4",
+      "root_placement_ids": [
+        2,
+        4,
+        6,
+        12,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        61,
+        63,
+        65,
+        67,
+        69
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        2,
+        65,
+        61
+      ],
+      "sha256": "e0dfd5b167cb53b4e0a698aa33ecb61799c371a8a60b4a2f1f7be72545be43df",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/1000001_0.png",
+      "icon": 1000001,
+      "names": [
+        "武僧僵尸"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_1000001.swf",
+      "source_sha256": "b3c9b4173d6b6e6586cfcd39442c15622269b892e06961496d7ec2fbcdd39ecc",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_1000001.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "75b8a288be97e7572e12abd2a42e756b5278ead22a6fd576c65957f58bd9d1b3",
+      "root_placement_ids": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        39,
+        46,
+        48,
+        50,
+        55
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        20,
+        1,
+        49,
+        61
+      ],
+      "sha256": "3f2a20f7268b79bfe0b821a09a9086b201fca747cbdb17187b2b89a0f7ec3f26",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/1000002_0.png",
+      "icon": 1000002,
+      "names": [
+        "炸弹僵尸"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_1000002.swf",
+      "source_sha256": "14ccde1a98e5800b925309bd98057ca8777b42899ab342b0a70a14746904671a",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_1000002.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "62f0d49b6ce6ee9b890a100f836e8f0acba8e800d091b91ce5de8476643ed06a",
+      "root_placement_ids": [
+        4,
+        12,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        43,
+        45,
+        50
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        13,
+        1,
+        56,
+        61
+      ],
+      "sha256": "bb8105119e804a2b2bacc714a1139e216a42eed965db2a195f092839a3b36a31",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/1000005_0.png",
+      "icon": 1000005,
+      "names": [
+        "铜锣僵尸"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_1000005.swf",
+      "source_sha256": "86ca60b3ba19caaa9a646cfdee20a42d4d0a4c63c3ede3e59333f0f4c17ce1be",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_1000005.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "8e0d635b0c6cbcc71540ce25829fa225630f3440c855197c49758d57115124a9",
+      "root_placement_ids": [
+        18,
+        25,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50,
+        52,
+        54,
+        59,
+        61
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        15,
+        1,
+        54,
+        61
+      ],
+      "sha256": "2eba45022d24e76e09d0f85690756bf942797d87f4e1dc92998f9717a2ec100d",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/2000001_0.png",
+      "icon": 2000001,
+      "names": [
+        "醉拳尸兄"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_2000001.swf",
+      "source_sha256": "e6ce41e3506c1f408278f44f7c23a63cf2f2563d9e3898a0d8212ace07d80310",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_2000001.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "7250ceb8c25a08da4006a025de121fe033b51692635e8dc200dce5b664a96055",
+      "root_placement_ids": [
+        2,
+        15,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        47,
+        49,
+        52,
+        54,
+        56,
+        58,
+        60
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        17,
+        1,
+        53,
+        61
+      ],
+      "sha256": "8c5c37632d0493ad4272fbaf91aa25f768b1af714c43b2eb8714934bc17f7e1a",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/2000002_0.png",
+      "icon": 2000002,
+      "names": [
+        "摇旗僵尸"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_2000002.swf",
+      "source_sha256": "018a3997cd2fd90fbe0ce0bfea6f071d290336062aba217ac9b0e8a88f58a3a4",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_2000002.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "1f24415bba0f74e149e816bc7d11b46b7e31cc9e03f5473281f4d5550bc88b87",
+      "root_placement_ids": [
+        2,
+        13,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50,
+        55
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        16,
+        1,
+        54,
+        61
+      ],
+      "sha256": "abab116e1b566dcf5032ca57c0a2cb2aceaa30ae0f43e06664e3f33b7f6b1466",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/2000005_0.png",
+      "icon": 2000005,
+      "names": [
+        "士兵僵尸"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_2000005.swf",
+      "source_sha256": "37d72b03887c880db65e71c3bc5f800352ef387475972c0b757e24b0a121f02c",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_2000005.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "f688742816fd1342ac02febb9ab81aded2f7f4151dd592a870ab9dd82ea4298e",
+      "root_placement_ids": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        29,
+        31,
+        40,
+        47,
+        49,
+        51,
+        56
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        20,
+        1,
+        49,
+        61
+      ],
+      "sha256": "ed107c724c1c29c22974655c020acbcc94408ca4a69fa78b686ba64233b35708",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/2000006_0.png",
+      "icon": 2000006,
+      "names": [
+        "冰霜旗手"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_2000006.swf",
+      "source_sha256": "1d625f087f76f49b7a9b3bf38abcefd8aaf7f8e25e2f2de138bca469f255b0f8",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_2000006.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "e380561e99610f2df2e1511f05b1d80153ae2a869eda54c9b0dcc589d5d65942",
+      "root_placement_ids": [
+        2,
+        7,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        52,
+        54
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        8,
+        1,
+        61,
+        61
+      ],
+      "sha256": "0fda567ceaa45420e306e6ebf6fd303f300309b297a54cbd2f70a7be725d340e",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/2000007_0.png",
+      "icon": 2000007,
+      "names": [
+        "冰川猎人"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_2000007.swf",
+      "source_sha256": "d029e73234b937bd21ac91c66094a65db4f57dd7110c9bfc0e328026f8c34fb8",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_2000007.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "b4565109259ee0a954b530e89289a36be27a31738d353e3fbfe48e4a80fdb4b5",
+      "root_placement_ids": [
+        6,
+        11,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        42,
+        44,
+        46,
+        51,
+        53
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        6,
+        1,
+        63,
+        61
+      ],
+      "sha256": "d86b45f7bba60e99bc20d38616bf9a38d4c8276fbf8a504db47df74cc1344d4a",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/3000001_0.png",
+      "icon": 3000001,
+      "names": [
+        "大锤僵尸"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_3000001.swf",
+      "source_sha256": "778ed6726c6b70b52b414c0f5954c4f6c88f1e68fca14ada0266da5e99a30399",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_3000001.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "2f319a54aaac208d531e008ebfde17dcbeb23dd3999c4819467650806651eb35",
+      "root_placement_ids": [
+        2,
+        6,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        42
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        1,
+        59,
+        61
+      ],
+      "sha256": "caab66a9e02e1a887455460d2ae9ea6c119aec177ed227276609a7fdf388e450",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/3000002_0.png",
+      "icon": 3000002,
+      "names": [
+        "大刀僵尸"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_3000002.swf",
+      "source_sha256": "4a3e8a230cd22aaf539b0a9594ecd3c1f70a1efc4fe2df01c513cf2feaa9c02d",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_3000002.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "1f7dcf2cd425484bb398e70ccf74e4824f3364995fc679750fbcee3b2b059524",
+      "root_placement_ids": [
+        2,
+        11,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        53
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        10,
+        1,
+        59,
+        61
+      ],
+      "sha256": "24cd9ec7a9626e3f2a5c5f4501dc06d2abda9271481d6e02df3189fadd687dfc",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/3000005_0.png",
+      "icon": 3000005,
+      "names": [
+        "禅杖铜尸"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_3000005.swf",
+      "source_sha256": "f4a5522047f2c63a497ad70665ed30b17db9c5bfe380024cc6a6f4475f9c6541",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_3000005.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "414f634381b2ff7eb6bcf37f590931cb5617ab3fb2478a5b449b565dab7727c5",
+      "root_placement_ids": [
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        53,
+        56,
+        58,
+        60,
+        62,
+        64,
+        66,
+        68,
+        70,
+        72,
+        74,
+        76,
+        78,
+        80,
+        82,
+        84
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        5,
+        65,
+        57
+      ],
+      "sha256": "aadde49daeb68153f1bca86c28d4f1ff8d9661553b9190c0ae4fd09666f0604a",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/3000006_0.png",
+      "icon": 3000006,
+      "names": [
+        "洞穴野人"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_3000006.swf",
+      "source_sha256": "9f5fd6975bd5d31d6c7fa6062881a1791ce2c7de8befa532c1fb9f3378e832a3",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_3000006.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "3f5f6195a5100b52bdacbfbf6be7837acc7621543e0d162a9fafcdccd64bc5b7",
+      "root_placement_ids": [
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        33,
+        35,
+        37,
+        47,
+        49,
+        51,
+        56,
+        58
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        58,
+        61
+      ],
+      "sha256": "2f7daf2e1f162924f818b2ae533e8ab74bcd1e15166e3c9e6336505368039bda",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/3000007_0.png",
+      "icon": 3000007,
+      "names": [
+        "渡鸟骑士"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_3000007.swf",
+      "source_sha256": "e099c234f68fd9c3f5f4ea9b0e7c9451bb0e9a5b30c0576cbf98bc72db160bcc",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_3000007.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "c4f0380e461db69d46dfebeb920dbf8bdb99c3013a4a778690c5104f2fcf4c2c",
+      "root_placement_ids": [
+        1,
+        3,
+        5,
+        7,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        27,
+        29,
+        39,
+        41,
+        44,
+        46,
+        53,
+        55,
+        57,
+        59,
+        64,
+        71,
+        78,
+        85,
+        92,
+        94,
+        96,
+        98,
+        100,
+        103,
+        105,
+        107,
+        109,
+        111
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        7,
+        1,
+        63,
+        61
+      ],
+      "sha256": "1fd4660c9c073e03f651c82d379dfefec92244dbcb51db71ceed50e123f344fa",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/4000001_0.png",
+      "icon": 4000001,
+      "names": [
+        "气功老傀"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_4000001.swf",
+      "source_sha256": "c82cd9a144de7e19eaed76225f1736b9356cd7499a05b9c87815c2ab8220026e",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_4000001.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "f386b2fdb804bca5dc87f0d3c7fe4a304a31f98f6c173d202f74150be394ea20",
+      "root_placement_ids": [
+        4,
+        10,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        43,
+        45
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        57,
+        61
+      ],
+      "sha256": "59ea70b64bd3aea5533d9f362acdf5edca444d49d5922a6db7cfd69e3c946e02",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/4000002_0.png",
+      "icon": 4000002,
+      "names": [
+        "火炬僵尸"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_4000002.swf",
+      "source_sha256": "7c6cd152400b7af4052a9d4b0951a7090d8d63a5d8cf70353dc032bf5dcf9ee5",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_4000002.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "adfdbc747b8522dd0826a56c031079477821bea98756ef875777a084a041d9d8",
+      "root_placement_ids": [
+        2,
+        11,
+        19,
+        38,
+        40,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        61,
+        63,
+        65,
+        67,
+        69,
+        71,
+        73
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        12,
+        1,
+        58,
+        61
+      ],
+      "sha256": "2f8cd02098ca41b626386637751c281e3819878c6a8bc57f022498af3fd1ec5b",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/4000005_0.png",
+      "icon": 4000005,
+      "names": [
+        "冰雪巨人"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_4000005.swf",
+      "source_sha256": "ddfaa7004b7ec843a7e72dec7fcabd92384d7b9cbc8e506bcad397510a65b58e",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_4000005.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "d7b74cb243b7c98c3035683c204ffceee904f0e01f509fe862dbfeb29c8fe6bb",
+      "root_placement_ids": [
+        20,
+        21,
+        22,
+        23,
+        31,
+        33,
+        35,
+        40,
+        42,
+        44,
+        46,
+        53,
+        55,
+        57,
+        59,
+        61,
+        63,
+        65,
+        67,
+        69,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        6,
+        65,
+        57
+      ],
+      "sha256": "bb9cd4d854edb18f21cff0ae7eb57c01f5d6482ed9cc0e6162b90a4c3dcf57f7",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/4000006_0.png",
+      "icon": 4000006,
+      "names": [
+        "霸刀将王"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_4000006.swf",
+      "source_sha256": "e26e4e7386dc1403b5f8ec5db583d0dbbeec4cf50a01dce261baccef50d0b6ec",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_4000006.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "ed963dacb1f0170bebf3d68532a9f6f5444b1cd24c887e54a8a276440dd98f12",
+      "root_placement_ids": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        27,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        45
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        5,
+        6,
+        65,
+        56
+      ],
+      "sha256": "2bfab655dc17f2ba9cd07550ed3fdcac1c2f984f9b27aa9d7217f7ba1b6cfbf3",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/4000007_0.png",
+      "icon": 4000007,
+      "names": [
+        "寒霜蛮族"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_4000007.swf",
+      "source_sha256": "60c0a2f89b32962fdf9d7412e4736a53b7d0443fe9fe212b13ea81781d014e42",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_4000007.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "819e6f0310c9176babf7148a7ea3a60c1d31633b41af5017a2458eb724d954df",
+      "root_placement_ids": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        14,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        29,
+        31,
+        41,
+        44,
+        46,
+        56,
+        58
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        17,
+        1,
+        53,
+        61
+      ],
+      "sha256": "0185a83d3ae2411abe04ddf4e1d28f430eb098c77623738db35da176e18ef187",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/5000001_0.png",
+      "icon": 5000001,
+      "names": [
+        "酒鬼僵尸"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_5000001.swf",
+      "source_sha256": "469ec78a5a08c382f4162f1abd2458cf90dbad52d99a051af505d8c15440a3b3",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_5000001.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "8796ec8d8eaf0828a6b8ecde108ae147bf036b06f3735b11ad92a8e83c80fd87",
+      "root_placement_ids": [
+        6,
+        15,
+        18,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        54
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        14,
+        1,
+        56,
+        61
+      ],
+      "sha256": "c04419424a4f39f2c302c0287594567f86449acfdbf5bc70860d04beb36cd398",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    },
+    {
+      "path": "/swf/icons/card/5000002_0.png",
+      "icon": 5000002,
+      "names": [
+        "火箭僵尸"
+      ],
+      "method": "render_original_complete_swf_base_pose",
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\icons\\card\\card_icon_5000002.swf",
+      "source_sha256": "e317a82e741ef4eab0724dfc66c018e613384ef75414ac1d13842c6b6e7780f4",
+      "source_raster": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\card_missing_audit\\export\\rendered\\card_icon_5000002.swf\\DefineSprite_60000\\1.png",
+      "raster_sha256": "23f653c6f87fa38fd547bfec185a072f3bec60d7988f0702fdec45e375545c1c",
+      "root_placement_ids": [
+        2,
+        13,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        45
+      ],
+      "default_avatar": 0,
+      "rendered_pose": "original full stage frame1 with unselected costume insertion slots suppressed in WORK input only",
+      "size": [
+        330,
+        240
+      ],
+      "bbox": [
+        14,
+        1,
+        55,
+        61
+      ],
+      "sha256": "cec830b994bbb4d67e6461e3a90f0e77095d730ec90753bca3b9825e4639fe4d",
+      "costume_note": "Original base appearance; missing exact costume artwork is not claimed restored."
+    }
+  ]
+}

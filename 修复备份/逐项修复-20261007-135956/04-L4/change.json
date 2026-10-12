@@ -1,0 +1,21 @@
+{
+  "issue": "L4",
+  "files": [
+    {
+      "relative": "pvzol本地/launcher.py",
+      "old_sha256": "5c67920b4494b2be24008a47b5b94179789420067af668038df072c2c8e92e1f",
+      "new_sha256": "25da1f3b983f46d15cbcaff01edc61599501195088121c9499dd7613735ae1b1",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\launcher.py"
+    },
+    {
+      "relative": "pvzol本地/PvZ-Server-PoC/gm.py",
+      "old_sha256": "b6da86d9e76bb73508a068406d4b806d92bda03aaafb227dcb65296cb9654a9d",
+      "new_sha256": "7e932ec917bc2ccdbe0967c77cdd3025a2cb831f4d65151d19eb8de2d764b50f",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\PvZ-Server-PoC\\gm.py"
+    }
+  ],
+  "tests": [
+    "test_04_editor_conflict: 3 passed",
+    "test_01_numeric_safety: 4 passed"
+  ]
+}

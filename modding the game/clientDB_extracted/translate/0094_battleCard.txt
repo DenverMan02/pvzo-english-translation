@@ -1,0 +1,2100 @@
+id	name	des
+11	Bungee Zombie	I wonder what good loot the Burglar Zombie drops when defeated?
+12	Bungee Zombie	I wonder what good loot the Burglar Zombie drops when defeated?
+13	Bungee Zombie	I wonder what good loot the Burglar Zombie drops when defeated?
+14	Bungee Zombie	I wonder what good loot the Burglar Zombie drops when defeated?
+15	Bungee Zombie	I wonder what good loot the Burglar Zombie drops when defeated?
+21	Burglar Zombie	Bungee Zombie must be dropping tons of treasure!
+22	Burglar Zombie	Bungee Zombie must be dropping tons of treasure!
+23	Burglar Zombie	Bungee Zombie must be dropping tons of treasure!
+24	Burglar Zombie	Bungee Zombie must be dropping tons of treasure!
+25	Burglar Zombie	Bungee Zombie must be dropping tons of treasure!
+31	Bandit Zombie	Can you defeat such a fierce Bandit Zombie?
+32	Bandit Zombie	Can you defeat such a fierce Bandit Zombie?
+33	Bandit Zombie	Can you defeat such a fierce Bandit Zombie?
+34	Bandit Zombie	Can you defeat such a fierce Bandit Zombie?
+35	Bandit Zombie	Can you defeat such a fierce Bandit Zombie?
+41	Robber Zombie	To the Master Thief Zombie, acquiring treasure is an art form.
+42	Robber Zombie	To the Master Thief Zombie, acquiring treasure is an art form.
+43	Robber Zombie	To the Master Thief Zombie, acquiring treasure is an art form.
+44	Robber Zombie	To the Master Thief Zombie, acquiring treasure is an art form.
+45	Robber Zombie	To the Master Thief Zombie, acquiring treasure is an art form.
+51	Carrot Zombie	This zombie seems to have a thing for carrots.
+52	Carrot Zombie	This zombie seems to have a thing for carrots.
+53	Carrot Zombie	This zombie seems to have a thing for carrots.
+54	Carrot Zombie	This zombie seems to have a thing for carrots.
+55	Carrot Zombie	This zombie seems to have a thing for carrots.
+61	Animal Zombie 2	This is a strange zombie.
+62	Animal Zombie 2	This is a strange zombie.
+63	Animal Zombie 2	This is a strange zombie.
+64	Animal Zombie 2	This is a strange zombie.
+65	Animal Zombie 2	This is a strange zombie.
+71	Animal Zombie 3	This is a strange zombie.
+72	Animal Zombie 3	This is a strange zombie.
+73	Animal Zombie 3	This is a strange zombie.
+74	Animal Zombie 3	This is a strange zombie.
+75	Animal Zombie 3	This is a strange zombie.
+81	Animal Zombie 4	This is a strange zombie.
+82	Animal Zombie 4	This is a strange zombie.
+83	Animal Zombie 4	This is a strange zombie.
+84	Animal Zombie 4	This is a strange zombie.
+85	Animal Zombie 4	This is a strange zombie.
+101	Zombie	Regular Zombie
+102	Zombie	Regular Zombie
+103	Zombie	Regular Zombie
+104	Zombie	Regular Zombie
+105	Zombie	Regular Zombie
+111	Mummy Zombie	Regular Zombie
+112	Mummy Zombie	Regular Zombie
+113	Mummy Zombie	Regular Zombie
+114	Mummy Zombie	Regular Zombie
+115	Mummy Zombie	Regular Zombie
+119	Mummy Zombie Boss	Mummy Zombie Boss
+121	Conehead Mummy	Conehead Mummy Zombie
+122	Conehead Mummy	Conehead Mummy Zombie
+123	Conehead Mummy	Conehead Mummy Zombie
+124	Conehead Mummy	Conehead Mummy Zombie
+125	Conehead Mummy	Conehead Mummy Zombie
+126	Conehead Mummy	Conehead Mummy Zombie
+129	Conehead Zombie Boss	Conehead Zombie Boss
+130	Buckethead Mummy	Buckethead Zombie
+131	Buckethead Mummy	Buckethead Zombie
+132	Buckethead Mummy	Buckethead Zombie
+133	Buckethead Mummy	Buckethead Zombie
+134	Buckethead Mummy	Buckethead Zombie
+135	Buckethead Mummy	Buckethead Zombie
+136	Buckethead Mummy	Buckethead Zombie
+139	Buckethead Zombie Leader	Buckethead Zombie Leader
+141	Flag Mummy	Can boost zombie morale and restore health.
+142	Flag Mummy	Can boost zombie morale and restore health.
+143	Flag Mummy	Can boost zombie morale and restore health.
+144	Flag Mummy	Can boost zombie morale and restore health.
+145	Flag Mummy	Can boost zombie morale and restore health.
+146	Flag Mummy	Can boost zombie morale and restore health.
+149	Flag Mummy Leader	Flag Mummy Leader
+150	Ra Zombie	Absorbs plants' stamina
+151	Ra Zombie	Absorbs plants' stamina
+152	Ra Zombie	Absorbs plants' stamina
+153	Ra Zombie	Absorbs plants' stamina
+154	Ra Zombie	Absorbs plants' stamina
+155	Ra Zombie	Absorbs plants' stamina
+156	Ra Zombie	Absorbs plants' stamina
+159	Sun God Zombie Boss	Sun God Zombie Boss
+161	Camel Zombie	Regular Zombie
+162	Camel Zombie	Regular Zombie
+163	Camel Zombie	Regular Zombie
+164	Camel Zombie	Regular Zombie
+165	Camel Zombie	Regular Zombie
+166	Camel Zombie	Regular Zombie
+169	Camel Zombie Leader	Camel Zombie Leader
+171	Explorer Zombie	Uses a torch to burn everything to ashes.
+172	Explorer Zombie	Uses a torch to burn everything to ashes.
+173	Explorer Zombie	Uses a torch to burn everything to ashes.
+174	Explorer Zombie	Uses a torch to burn everything to ashes.
+175	Explorer Zombie	Uses a torch to burn everything to ashes.
+176	Explorer Zombie	Uses a torch to burn everything to ashes.
+179	Explorer Zombie Boss	Explorer Zombie Boss
+181	Tomb Raiser Zombie	Throws tombstones to attack 3 targets.
+182	Tomb Raiser Zombie	Throws tombstones to attack 3 targets.
+183	Tomb Raiser Zombie	Throws tombstones to attack 3 targets.
+184	Tomb Raiser Zombie	Throws tombstones to attack 3 targets.
+185	Tomb Raiser Zombie	Throws tombstones to attack 3 targets.
+186	Tomb Raiser Zombie	Throws tombstones to attack 3 targets.
+189	Grave Digger Zombie Leader	Grave Digger Zombie Leader
+190	Pharaoh Mummy	A zombie hiding inside a giant coffin.
+191	Pharaoh Mummy	A zombie hiding inside a giant coffin.
+192	Pharaoh Mummy	A zombie hiding inside a giant coffin.
+193	Pharaoh Mummy	A zombie hiding inside a giant coffin.
+194	Pharaoh Mummy	A zombie hiding inside a giant coffin.
+195	Pharaoh Mummy	A zombie hiding inside a giant coffin.
+196	Pharaoh Mummy	A zombie hiding inside a giant coffin.
+199	Pharaoh Mummy Leader	Pharaoh Mummy Leader
+200	Jetpack Zombie	Jetpack Zombie
+201	EM Shield Zombie	EM Shield Zombie
+202	Mecha Conehead Zombie	Mecha Conehead Zombie
+203	Mecha Conehead Zombie	Mecha Conehead Zombie
+204	Disco 3000	Disco 3000
+205	Disco 3000	Disco 3000
+206	Mecha-Football Zombie	Mecha-Football Zombie
+207	Mecha-Gargantuar	Mecha-Gargantuar
+208	Mecha-Gargantuar	Mecha-Gargantuar
+250	Jetpack Zombie	Zombie Island Challenge Mode
+251	Jetpack Zombie Boss	Zombie Island Challenge Mode
+252	EM Shield Zombie	Zombie Island Challenge Mode
+253	EM Shield Zombie Leader	Zombie Island Challenge Mode
+254	Jetpack Dancer	Zombie Island Challenge Mode
+255	Jetpack Dancer Boss	Zombie Island Challenge Mode
+256	Pharaoh Mummy	Zombie Island Challenge Mode
+257	Pharaoh Mummy Leader	Zombie Island Challenge Mode
+258	Conehead Mummy	Zombie Island Challenge Mode
+259	Conehead Zombie Boss	Zombie Island Challenge Mode
+260	Buckethead Mummy	Zombie Island Challenge Mode
+261	Buckethead Zombie Leader	Zombie Island Challenge Mode
+262	Ra Zombie	Zombie Island Challenge Mode
+263	Sun God Zombie Boss	Zombie Island Challenge Mode
+264	Camel Zombie	Zombie Island Challenge Mode
+265	Camel Zombie Leader	Zombie Island Challenge Mode
+266	Explorer Zombie	Zombie Island Challenge Mode
+267	Explorer Zombie Boss	Zombie Island Challenge Mode
+268	Tomb Raiser Zombie	Zombie Island Challenge Mode
+269	Grave Digger Zombie Leader	Zombie Island Challenge Mode
+270	Sergeant Zombie	Zombie Island Challenge Mode
+271	Sergeant Zombie Leader	Zombie Island Challenge Mode
+272	Bowl-Head Sergeant	Zombie Island Challenge Mode
+273	Bowl-topper Sergeant Boss	Zombie Island Challenge Mode
+274	Iron Helm Sergeant	Zombie Island Challenge Mode
+275	Iron Helmet Sergeant Leader	Zombie Island Challenge Mode
+276	Archer Zombie	Zombie Island Challenge Mode
+277	Archer Zombie Leader	Zombie Island Challenge Mode
+278	Cavalry Zombie	Zombie Island Challenge Mode
+279	Cavalry Zombie Leader	Zombie Island Challenge Mode
+280	Drunken Zombie	Zombie Island Challenge Mode
+281	Drunken Zombie Leader	Zombie Island Challenge Mode
+282	Barrel Roller Zombie	Zombie Island Challenge Mode
+283	Barrel Roller Zombie Boss	Zombie Island Challenge Mode
+284	Seagull Zombie	Zombie Island Challenge Mode
+285	Seagull Zombie Leader	Zombie Island Challenge Mode
+286	Pirate Gargantuar	Zombie Island Challenge Mode
+287	Pirate Gargantuar Boss	Zombie Island Challenge Mode
+288	Jester Zombie	Zombie Island Challenge Mode
+289	Juggler Zombie Leader	Zombie Island Challenge Mode
+290	Monkey Zombie	Zombie Island Challenge Mode
+291	Monkey Zombie Boss	Zombie Island Challenge Mode
+292	Deep Sea Gargantuar	Zombie Island Challenge Mode
+293	Deep Sea Gargantuar Boss	Zombie Island Challenge Mode
+310	Sergeant Zombie	Regular Soldier
+311	Sergeant Zombie	Regular Soldier
+312	Sergeant Zombie	Regular Soldier
+313	Sergeant Zombie	Regular Soldier
+314	Sergeant Zombie	Regular Soldier
+315	Sergeant Zombie	Regular Soldier
+316	Sergeant Zombie	Regular Soldier
+319	Sergeant Zombie Leader	Sergeant Zombie Leader
+320	Bowl-Head Sergeant	Found a bowl to wear on my head, better than nothing!
+321	Bowl-Head Sergeant	Found a bowl to wear on my head, better than nothing!
+322	Bowl-Head Sergeant	Found a bowl to wear on my head, better than nothing!
+323	Bowl-Head Sergeant	Found a bowl to wear on my head, better than nothing!
+324	Bowl-Head Sergeant	Found a bowl to wear on my head, better than nothing!
+325	Bowl-Head Sergeant	Found a bowl to wear on my head, better than nothing!
+326	Bowl-Head Sergeant	Found a bowl to wear on my head, better than nothing!
+329	Bowl-topper Sergeant Boss	Bowl-topper Sergeant Boss
+330	Iron Helm Sergeant	Ever since I got this iron helm, plants can't slap my face anymore!
+331	Iron Helm Sergeant	Ever since I got this iron helm, plants can't slap my face anymore!
+332	Iron Helm Sergeant	Ever since I got this iron helm, plants can't slap my face anymore!
+333	Iron Helm Sergeant	Ever since I got this iron helm, plants can't slap my face anymore!
+334	Iron Helm Sergeant	Ever since I got this iron helm, plants can't slap my face anymore!
+335	Iron Helm Sergeant	Ever since I got this iron helm, plants can't slap my face anymore!
+336	Iron Helm Sergeant	Ever since I got this iron helm, plants can't slap my face anymore!
+339	Iron Helmet Sergeant Leader	Iron Helmet Sergeant Leader
+350	Archer Zombie	Excels at firing sneak arrows from the back row, but is very fragile.
+351	Archer Zombie	Excels at firing sneak arrows from the back row, but is very fragile.
+352	Archer Zombie	Excels at firing sneak arrows from the back row, but is very fragile.
+353	Archer Zombie	Excels at firing sneak arrows from the back row, but is very fragile.
+354	Archer Zombie	Excels at firing sneak arrows from the back row, but is very fragile.
+355	Archer Zombie	Excels at firing sneak arrows from the back row, but is very fragile.
+356	Archer Zombie	Excels at firing sneak arrows from the back row, but is very fragile.
+359	Archer Zombie Leader	Archer Zombie Leader
+370	Shield Guard Zombie	Shield is nearly impervious to blades and firearms.
+371	Shield Guard Zombie	Shield is nearly impervious to blades and firearms.
+372	Shield Guard Zombie	Shield is nearly impervious to blades and firearms.
+373	Shield Guard Zombie	Shield is nearly impervious to blades and firearms.
+374	Shield Guard Zombie	Shield is nearly impervious to blades and firearms.
+375	Shield Guard Zombie	Shield is nearly impervious to blades and firearms.
+376	Shield Guard Zombie	Shield is nearly impervious to blades and firearms.
+379	Shield Zombie Leader	Shield Zombie Leader
+380	Cart Peddler Zombie	Little pigs always seem to fall off the cart.
+381	Cart Peddler Zombie	Little pigs always seem to fall off the cart.
+382	Cart Peddler Zombie	Little pigs always seem to fall off the cart.
+383	Cart Peddler Zombie	Little pigs always seem to fall off the cart.
+384	Cart Peddler Zombie	Little pigs always seem to fall off the cart.
+385	Cart Peddler Zombie	Little pigs always seem to fall off the cart.
+386	Cart Peddler Zombie	Little pigs always seem to fall off the cart.
+389	Cart Vendor Zombie Leader	Cart Vendor Zombie Leader
+400	Cavalry Zombie	Thinks riding a hobby horse makes them cavalry.
+401	Cavalry Zombie	Thinks riding a hobby horse makes them cavalry.
+402	Cavalry Zombie	Thinks riding a hobby horse makes them cavalry.
+403	Cavalry Zombie	Thinks riding a hobby horse makes them cavalry.
+404	Cavalry Zombie	Thinks riding a hobby horse makes them cavalry.
+405	Cavalry Zombie	Thinks riding a hobby horse makes them cavalry.
+406	Cavalry Zombie	Thinks riding a hobby horse makes them cavalry.
+409	Cavalry Zombie Leader	Cavalry Zombie Leader
+410	Token Zombie	The token is the sign of a massive wave of zombies.
+411	Token Zombie	The token is the sign of a massive wave of zombies.
+412	Token Zombie	The token is the sign of a massive wave of zombies.
+413	Token Zombie	The token is the sign of a massive wave of zombies.
+414	Token Zombie	The token is the sign of a massive wave of zombies.
+415	Token Zombie	The token is the sign of a massive wave of zombies.
+416	Token Zombie	The token is the sign of a massive wave of zombies.
+419	Token Zombie Leader	Token Zombie Leader
+430	Drunken Zombie	Wine-loving Zombie
+431	Drunken Zombie	Wine-loving Zombie
+432	Drunken Zombie	Wine-loving Zombie
+433	Drunken Zombie	Wine-loving Zombie
+434	Drunken Zombie	Wine-loving Zombie
+435	Drunken Zombie	Wine-loving Zombie
+436	Drunken Zombie	Wine-loving Zombie
+439	Drunken Zombie Leader	Drunken Zombie Leader
+441	Barrel Roller Zombie	Wine-loving Zombie
+442	Barrel Roller Zombie	Wine-loving Zombie
+443	Barrel Roller Zombie	Wine-loving Zombie
+444	Barrel Roller Zombie	Wine-loving Zombie
+445	Barrel Roller Zombie	Wine-loving Zombie
+446	Barrel Roller Zombie	Wine-loving Zombie
+449	Barrel Roller Zombie Boss	Barrel Roller Zombie Boss
+450	Seagull Zombie	Wine-loving Zombie
+451	Seagull Zombie	Wine-loving Zombie
+452	Seagull Zombie	Wine-loving Zombie
+453	Seagull Zombie	Wine-loving Zombie
+454	Seagull Zombie	Wine-loving Zombie
+455	Seagull Zombie	Wine-loving Zombie
+456	Seagull Zombie	Wine-loving Zombie
+459	Seagull Zombie Leader	Seagull Zombie Leader
+460	Pirate Gargantuar	Wine-loving Zombie
+461	Pirate Gargantuar	Wine-loving Zombie
+462	Pirate Gargantuar	Wine-loving Zombie
+463	Pirate Gargantuar	Wine-loving Zombie
+464	Pirate Gargantuar	Wine-loving Zombie
+465	Pirate Gargantuar	Wine-loving Zombie
+466	Pirate Gargantuar	Wine-loving Zombie
+469	Pirate Gargantuar Boss	Pirate Gargantuar Boss
+470	Pirate Imp	Wine-loving Zombie
+471	Pirate Imp	Wine-loving Zombie
+472	Pirate Imp	Wine-loving Zombie
+473	Pirate Imp	Wine-loving Zombie
+474	Pirate Imp	Wine-loving Zombie
+475	Pirate Imp	Wine-loving Zombie
+479	Pirate Imp Boss	Pirate Imp Boss
+480	Jester Zombie	Wine-loving Zombie
+481	Jester Zombie	Wine-loving Zombie
+482	Jester Zombie	Wine-loving Zombie
+483	Jester Zombie	Wine-loving Zombie
+484	Jester Zombie	Wine-loving Zombie
+485	Jester Zombie	Wine-loving Zombie
+486	Jester Zombie	Wine-loving Zombie
+489	Juggler Zombie Leader	Juggler Zombie Leader
+490	Monkey Zombie	Wine-loving Zombie
+491	Monkey Zombie	Wine-loving Zombie
+492	Monkey Zombie	Wine-loving Zombie
+493	Monkey Zombie	Wine-loving Zombie
+494	Monkey Zombie	Wine-loving Zombie
+495	Monkey Zombie	Wine-loving Zombie
+496	Monkey Zombie	Wine-loving Zombie
+499	Monkey Zombie Boss	Monkey Zombie Boss
+500	Flag Sailor Zombie	Wine-loving Zombie
+501	Flag Sailor Zombie	Wine-loving Zombie
+502	Flag Sailor Zombie	Wine-loving Zombie
+503	Flag Sailor Zombie	Wine-loving Zombie
+504	Flag Sailor Zombie	Wine-loving Zombie
+505	Flag Sailor Zombie	Wine-loving Zombie
+506	Flag Sailor Zombie	Wine-loving Zombie
+509	Flag Sailor Leader	Flag Sailor Leader
+510	Jetpack Zombie	Jetpack Zombie
+511	Jetpack Zombie	Jetpack Zombie
+512	Jetpack Zombie	Jetpack Zombie
+513	Jetpack Zombie	Jetpack Zombie
+514	Jetpack Zombie	Jetpack Zombie
+515	Jetpack Zombie	Jetpack Zombie
+516	Jetpack Zombie	Jetpack Zombie
+517	Jetpack Zombie	Jetpack Zombie
+519	Jetpack Zombie Boss	Jetpack Zombie Boss
+520	EM Shield Zombie	EM Shield Zombie
+521	EM Shield Zombie	EM Shield Zombie
+522	EM Shield Zombie	EM Shield Zombie
+523	EM Shield Zombie	EM Shield Zombie
+524	EM Shield Zombie	EM Shield Zombie
+525	EM Shield Zombie	EM Shield Zombie
+526	EM Shield Zombie	EM Shield Zombie
+527	EM Shield Zombie	EM Shield Zombie
+529	EM Shield Zombie Leader	EM Shield Zombie Leader
+531	Robo-Imp	Robo-Imp
+532	Robo-Imp	Robo-Imp
+533	Robo-Imp	Robo-Imp
+534	Robo-Imp	Robo-Imp
+535	Robo-Imp	Robo-Imp
+536	EM Shield Zombie	EM Shield Zombie
+537	EM Shield Zombie	EM Shield Zombie
+539	Robo-Imp Boss	机器虫小鬼僵尸首领
+540	Mecha Conehead Zombie	Mecha Conehead Zombie
+541	Mecha Conehead Zombie	Mecha Conehead Zombie
+542	Mecha Conehead Zombie	Mecha Conehead Zombie
+543	Mecha Conehead Zombie	Mecha Conehead Zombie
+544	Mecha Conehead Zombie	Mecha Conehead Zombie
+545	Mecha Conehead Zombie	Mecha Conehead Zombie
+546	Mecha Conehead Zombie	Mecha Conehead Zombie
+547	Mecha Conehead Zombie	Mecha Conehead Zombie
+549	Mecha-Conehead Zombie Boss	Mecha-Conehead Zombie Boss
+550	Disco 3000	Disco 3000
+551	Disco 3000	Disco 3000
+552	Disco 3000	Disco 3000
+553	Disco 3000	Disco 3000
+554	Disco 3000	Disco 3000
+555	Disco 3000	Disco 3000
+556	Disco 3000	Disco 3000
+557	Disco 3000	Disco 3000
+559	Disco-3000 Leader	Disco-3000 Leader
+561	Jetpack Dancer	Jetpack Dancer
+562	Jetpack Dancer	Jetpack Dancer
+563	Jetpack Dancer	Jetpack Dancer
+564	Jetpack Dancer	Jetpack Dancer
+565	Jetpack Dancer	Jetpack Dancer
+566	Jetpack Dancer	Jetpack Dancer
+567	Jetpack Dancer	Jetpack Dancer
+569	Jetpack Dancer Boss	Jetpack Dancer Boss
+570	Mecha-Football Zombie	Mecha-Football Zombie
+571	Mecha-Football Zombie	Mecha-Football Zombie
+572	Mecha-Football Zombie	Mecha-Football Zombie
+573	Mecha-Football Zombie	Mecha-Football Zombie
+574	Mecha-Football Zombie	Mecha-Football Zombie
+575	Mecha-Football Zombie	Mecha-Football Zombie
+576	Mecha-Football Zombie	Mecha-Football Zombie
+577	Mecha-Football Zombie	Mecha-Football Zombie
+579	Mecha-Football Zombie Leader	Mecha-Football Zombie Leader
+580	Mecha-Gargantuar	Mecha-Gargantuar
+581	Mecha-Gargantuar	Mecha-Gargantuar
+582	Mecha-Gargantuar	Mecha-Gargantuar
+583	Mecha-Gargantuar	Mecha-Gargantuar
+584	Mecha-Gargantuar	Mecha-Gargantuar
+585	Mecha-Gargantuar	Mecha-Gargantuar
+586	Mecha-Gargantuar	Mecha-Gargantuar
+587	Mecha-Gargantuar	Mecha-Gargantuar
+589	Mecha Gargantuar Boss	Mecha Gargantuar Boss
+600	Mummy Zombie	Regular Zombie
+601	Mummy Leader	Mummy Leader
+602	Conehead Mummy	Conehead Mummy Zombie
+603	Conehead Zombie Boss	Conehead Zombie Boss
+604	Buckethead Mummy	Buckethead Zombie
+605	Buckethead Zombie Leader	Buckethead Zombie Leader
+606	Ra Zombie	Absorbs plants' stamina
+607	Sun God Zombie Boss	Sun God Zombie Boss
+608	Camel Zombie	Regular Zombie
+609	Camel Zombie Leader	Camel Zombie Leader
+610	Explorer Zombie	Uses a torch to burn everything to ashes.
+611	Explorer Zombie Boss	Explorer Zombie Boss
+612	Tomb Raiser Zombie	Throws tombstones to attack 3 targets.
+613	Grave Digger Zombie Leader	Grave Digger Zombie Leader
+614	Sergeant Zombie	Regular Soldier
+615	Sergeant Zombie Leader	Sergeant Zombie Leader
+616	Bowl-Head Sergeant	Found a bowl to wear on my head, better than nothing!
+617	Bowl-topper Sergeant Boss	Bowl-topper Sergeant Boss
+618	Iron Helm Sergeant	Ever since I got this iron helm, plants can't slap my face anymore!
+619	Iron Helmet Sergeant Leader	Iron Helmet Sergeant Leader
+620	Archer Zombie	Excels at firing sneak arrows from the back row, but is very fragile.
+621	Archer Zombie Leader	Archer Zombie Leader
+622	Cavalry Zombie	Thinks riding a hobby horse makes them cavalry.
+623	Cavalry Zombie Leader	Cavalry Zombie Leader
+624	Drunken Zombie	Wine-loving Zombie
+625	Drunken Zombie Leader	Drunken Zombie Leader
+626	Barrel Roller Zombie	Wine-loving Zombie
+627	Barrel Roller Zombie Boss	Barrel Roller Zombie Boss
+628	Seagull Zombie	Wine-loving Zombie
+629	Seagull Zombie Leader	Seagull Zombie Leader
+630	Pirate Gargantuar	Wine-loving Zombie
+631	Pirate Gargantuar Boss	Pirate Gargantuar Boss
+632	Pirate Imp	Wine-loving Zombie
+633	Pirate Imp Boss	Pirate Imp Boss
+634	Jester Zombie	Wine-loving Zombie
+635	Juggler Zombie Leader	Juggler Zombie Leader
+636	Monkey Zombie	Wine-loving Zombie
+637	Monkey Zombie Boss	Monkey Zombie Boss
+638	Cart Peddler Zombie	Little pigs always seem to fall off the cart.
+701	Jetpack Zombie	Jetpack Zombie
+702	Jetpack Zombie	Jetpack Zombie
+703	Jetpack Zombie	Jetpack Zombie
+711	EM Shield Zombie	EM Shield Zombie
+712	EM Shield Zombie	EM Shield Zombie
+713	EM Shield Zombie	EM Shield Zombie
+714	EM Shield Zombie	EM Shield Zombie
+715	EM Shield Zombie	EM Shield Zombie
+721	Mecha Conehead Zombie	Mecha Conehead Zombie
+722	Mecha Conehead Zombie	Mecha Conehead Zombie
+723	Mecha Conehead Zombie	Mecha Conehead Zombie
+724	Mecha Conehead Zombie	Mecha Conehead Zombie
+731	Disco 3000	Disco 3000
+732	Disco 3000	Disco 3000
+733	Disco 3000	Disco 3000
+734	Disco 3000	Disco 3000
+735	Disco 3000	Disco 3000
+741	Mecha-Football Zombie	Mecha-Football Zombie
+742	Mecha-Football Zombie	Mecha-Football Zombie
+743	Mecha-Football Zombie	Mecha-Football Zombie
+751	Mecha-Gargantuar	Mecha-Gargantuar
+752	Mecha-Gargantuar	Mecha-Gargantuar
+753	Mecha-Gargantuar	Mecha-Gargantuar
+771	Kelp Zombie	Submarine Dragon Palace Basic Zombie
+772	Kelp Zombie	Submarine Dragon Palace Basic Zombie
+773	Kelp Zombie	Submarine Dragon Palace Basic Zombie
+774	Kelp Zombie	Submarine Dragon Palace Basic Zombie
+775	Kelp Zombie	Submarine Dragon Palace Basic Zombie
+776	Kelp Zombie	Submarine Dragon Palace Basic Zombie
+777	Kelp Zombie	Submarine Dragon Palace Basic Zombie
+779	Kelp Zombie Boss	Kelp Zombie Boss
+781	Shrimp Soldier Zombie	Shrimp-shell Protected Zombie
+782	Shrimp Soldier Zombie	Shrimp-shell Protected Zombie
+783	Shrimp Soldier Zombie	Shrimp-shell Protected Zombie
+784	Shrimp Soldier Zombie	Shrimp-shell Protected Zombie
+785	Shrimp Soldier Zombie	Shrimp-shell Protected Zombie
+786	Shrimp Soldier Zombie	Shrimp-shell Protected Zombie
+789	Shrimp Soldier Zombie Leader	Shrimp Soldier Zombie Leader
+791	Snail Shell Zombie	Snail shell-protected zombie
+792	Snail Shell Zombie	Snail shell-protected zombie
+793	Snail Shell Zombie	Snail shell-protected zombie
+794	Snail Shell Zombie	Snail shell-protected zombie
+795	Snail Shell Zombie	Snail shell-protected zombie
+796	Snail Shell Zombie	Snail shell-protected zombie
+799	Snail Soldier Zombie Leader	Snail Soldier Zombie Leader
+801	Seahorse Zombie	Undersea Dragon Palace Medic Zombie
+802	Seahorse Zombie	Undersea Dragon Palace Medic Zombie
+803	Seahorse Zombie	Undersea Dragon Palace Medic Zombie
+804	Seahorse Zombie	Undersea Dragon Palace Medic Zombie
+805	Seahorse Zombie	Undersea Dragon Palace Medic Zombie
+806	Seahorse Zombie	Undersea Dragon Palace Medic Zombie
+809	Seahorse Zombie Boss	Seahorse Zombie Boss
+811	Small Fish Zombie	Agile Imp Zombie
+812	Small Fish Zombie	Agile Imp Zombie
+813	Small Fish Zombie	Agile Imp Zombie
+814	Small Fish Zombie	Agile Imp Zombie
+815	Small Fish Zombie	Agile Imp Zombie
+816	Seahorse Zombie	Undersea Dragon Palace Medic Zombie
+817	Clam Fairy Zombie	Clam Fairy Zombie
+818	Prime Minister Turtle Zombie	Prime Minister Turtle Zombie
+819	Small Fish Zombie Leader	Small Fish Zombie Leader
+820	Pufferfish Zombie	Pufferfish Zombie
+821	Crab General Zombie	Crab General Zombie
+822	Crab General Zombie	Crab General Zombie
+823	Crab General Zombie	Crab General Zombie
+824	Crab General Zombie	Crab General Zombie
+825	Crab General Zombie	Crab General Zombie
+826	Seahorse Zombie	Undersea Dragon Palace Medic Zombie
+827	Clam Fairy Zombie	Clam Fairy Zombie
+828	Prime Minister Turtle Zombie	Prime Minister Turtle Zombie
+829	General Crab Zombie Leader	General Crab Zombie Leader
+830	Pufferfish Zombie	Pufferfish Zombie
+831	Clam Fairy Zombie	Clam Fairy Zombie
+832	Clam Fairy Zombie	Clam Fairy Zombie
+833	Clam Fairy Zombie	Clam Fairy Zombie
+834	Clam Fairy Zombie	Clam Fairy Zombie
+835	Clam Fairy Zombie	Clam Fairy Zombie
+839	Clam Fairy Zombie Boss	Clam Fairy Zombie Boss
+841	Jellyfish Zombie	Jellyfish Zombie
+842	Jellyfish Zombie	Jellyfish Zombie
+843	Jellyfish Zombie	Jellyfish Zombie
+844	Jellyfish Zombie	Jellyfish Zombie
+845	Jellyfish Zombie	Jellyfish Zombie
+849	Jellyfish Zombie Boss	Jellyfish Zombie Boss
+851	Pufferfish Zombie	Pufferfish Zombie
+852	Pufferfish Zombie	Pufferfish Zombie
+853	Pufferfish Zombie	Pufferfish Zombie
+854	Pufferfish Zombie	Pufferfish Zombie
+855	Pufferfish Zombie	Pufferfish Zombie
+859	Pufferfish Zombie Leader	Pufferfish Zombie Leader
+861	Prime Minister Turtle Zombie	Prime Minister Turtle Zombie
+862	Prime Minister Turtle Zombie	Prime Minister Turtle Zombie
+863	Prime Minister Turtle Zombie	Prime Minister Turtle Zombie
+864	Prime Minister Turtle Zombie	Prime Minister Turtle Zombie
+865	Prime Minister Turtle Zombie	Prime Minister Turtle Zombie
+869	Chancellor Turtle Boss	Chancellor Turtle Boss
+871	Deep Sea Yaksha Zombie	Deep Sea Yaksha Zombie
+872	Deep Sea Yaksha Zombie	Deep Sea Yaksha Zombie
+873	Deep Sea Yaksha Zombie	Deep Sea Yaksha Zombie
+874	Deep Sea Yaksha Zombie	Deep Sea Yaksha Zombie
+875	Deep Sea Yaksha Zombie	Deep Sea Yaksha Zombie
+879	Sea Yaksha Zombie Leader	Sea Yaksha Zombie Leader
+881	Split Pea Zombie	Split Pea Zombie
+882	Split Pea Zombie	Split Pea Zombie
+883	Split Pea Zombie	Split Pea Zombie
+884	Split Pea Zombie	Split Pea Zombie
+885	Split Pea Zombie	Split Pea Zombie
+889	Split Zombie Boss	Split Zombie Boss
+891	Deep Sea Gargantuar	Deep Sea Gargantuar
+892	Deep Sea Gargantuar	Deep Sea Gargantuar
+893	Deep Sea Gargantuar	Deep Sea Gargantuar
+894	Deep Sea Gargantuar	Deep Sea Gargantuar
+895	Deep Sea Gargantuar	Deep Sea Gargantuar
+896	Split Pea Zombie	Split Pea Zombie
+897	Deep Sea Gargantuar	Deep Sea Gargantuar
+899	Deep Sea Gargantuar Boss	Deep Sea Gargantuar Boss
+901	Bowl-Head Sergeant	Found a bowl to wear on my head, better than nothing!
+902	Cart Peddler Zombie	Little pigs always seem to fall off the cart.
+903	Cavalry Zombie	Thinks riding a hobby horse makes them cavalry.
+906	Split Pea Zombie	Split Pea Zombie
+907	Deep Sea Gargantuar	Deep Sea Gargantuar
+960	Kelp Zombie	Submarine Dragon Palace Basic Zombie
+966	Kelp Zombie	Submarine Dragon Palace Basic Zombie
+967	Kelp Zombie	Submarine Dragon Palace Basic Zombie
+970	Shrimp Soldier Zombie	Shrimp-shell Protected Zombie
+976	Shrimp Soldier Zombie	Shrimp-shell Protected Zombie
+977	Shrimp Soldier Zombie	Shrimp-shell Protected Zombie
+980	Snail Shell Zombie	Snail shell-protected zombie
+986	Snail Shell Zombie	Snail shell-protected zombie
+987	Snail Shell Zombie	Snail shell-protected zombie
+990	Seahorse Zombie	Undersea Dragon Palace Medic Zombie
+996	Seahorse Zombie	Undersea Dragon Palace Medic Zombie
+997	Seahorse Zombie	Undersea Dragon Palace Medic Zombie
+998	Emperor Qin	Warriors of Qin, open your eyes and trample everything!
+999	Dr. Zomboss	Load! Launch!
+1000	Overlord Blade King	One slash is enough!
+1002	Emperor Qin	Cross-Server Expedition BOSS
+1003	Dr. Zomboss	Cross-Server Expedition BOSS
+1004	Overlord Blade King	Cross-Server Expedition BOSS
+1016	Jellyfish Zombie	Jellyfish Zombie
+1017	Jellyfish Zombie	Jellyfish Zombie
+1026	Clam Fairy Zombie	Clam Fairy Zombie
+1027	Clam Fairy Zombie	Clam Fairy Zombie
+1036	Deep Sea Yaksha Zombie	Deep Sea Yaksha Zombie
+1037	Deep Sea Yaksha Zombie	Deep Sea Yaksha Zombie
+1039	Jetpack Zombie Boss	Alloy Mine
+1040	EM Shield Zombie Leader	Alloy Mine
+1041	Mecha-Conehead Zombie Boss	Alloy Mine
+1101	Sunflower	Heals the 3 allied units with the lowest percentage of health.
+1102	Sunflower	Heals the 3 allied units with the lowest percentage of health.
+1103	Sunflower	Heals the 3 allied units with the lowest percentage of health.
+1104	Sunflower	Heals the 3 allied units with the lowest percentage of health.
+1105	Sunflower	Heals the 3 allied units with the lowest percentage of health.
+1111	Twin Sunflower	Heals all allied units.
+1112	Twin Sunflower	Heals all allied units.
+1113	Twin Sunflower	Heals all allied units.
+1114	Twin Sunflower	Heals all allied units.
+1115	Twin Sunflower	Heals all allied units.
+1121	Spikeweed	Randomly attacks 3 enemy units, reducing their damage and healing output by 10% for 2 turns.
+1122	Spikeweed	Randomly attacks 3 enemy units, reducing their damage and healing capacity by 20% for 2 turns.
+1123	Spikeweed	Randomly attacks 3 enemy units, reducing their damage and healing capabilities by 30% for 2 turns.
+1124	Spikeweed	Randomly attacks 3 enemy units, reducing their damage and healing capabilities by 40% for 2 turns.
+1125	Spikeweed	Attacks 3 random enemy units, reducing their damage dealt and healing output by 50% for 2 turns.
+1131	Bell Pepper-pult	Attacks all enemies in the front row, with a 60% chance to cause them to bleed for 10% of their HP per turn for 3 turns.
+1132	Bell Pepper-pult	Attacks all enemies in the front row, with a 60% chance to cause them to bleed for 12% damage per turn for 3 turns.
+1133	Bell Pepper-pult	Attacks all enemies in the forward row, with a 60% chance to cause 14% bleed damage per turn for 3 turns.
+1134	Bell Pepper-pult	Attacks all enemies in the front row and has a 60% chance to cause them to bleed for 16% damage per turn for 3 turns.
+1135	Bell Pepper-pult	Attacks all enemies in the front row, with a 60% chance to cause them to bleed for 18% per turn for 3 turns.
+1141	Pumpkin Witch	Attacks 3 random enemy units with a 10% chance to stun them for 1 turn.
+1142	Pumpkin Witch	Randomly attacks 3 enemy units with a 20% chance to Root them for 1 turn.
+1143	Pumpkin Witch	Randomly attacks 3 enemy units with a 30% chance to immobilize them for 1 turn.
+1144	Pumpkin Witch	Attacks 3 random enemy units with a 40% chance to immobilize them for 1 turn.
+1145	Pumpkin Witch	Randomly attacks 3 enemy units with a 50% chance to immobilize them for 1 turn.
+1151	Kung Fu Carrot	Boosts the 2 allied units with the lowest HP percentages, granting them a shield and a 10% damage reflection effect for 2 turns.
+1152	Kung Fu Carrot	Buffs 2 allies with the lowest health percentages, granting them a shield and 15% thorn damage for 2 turns.
+1153	Kung Fu Carrot	Buffs 3 allies with the lowest HP percentage, granting them a shield and 20% thorns effect for 2 turns.
+1154	Kung Fu Carrot	Empowers 3 allied units with the lowest HP percentage, granting them a shield and 25% damage reflection for 2 turns.
+1155	Kung Fu Carrot	Boosts the 4 allied units with the lowest HP percentages, granting them a shield and a 30% damage reflection effect for 2 turns.
+1161	Toadstool	Attacks the current target, granting all allies 10% max HP bonus and 15% damage reduction for 2 turns.
+1162	Toadstool	Attacks the current target and grants all allies a 12% Max HP bonus and 20% Damage Reduction for 2 turns.
+1163	Toadstool	Attacks the current target and grants all allied units a 15% HP bonus and 25% damage reduction for 2 turns.
+1164	Toadstool	Attacks the current target and grants all allies an 18% health bonus and 30% damage reduction for 2 turns.
+1165	Toadstool	Attacks the current target, granting all allies a 20% HP bonus and 35% damage reduction for 2 turns.
+1171	Bell Grass	Attacks 5 random enemy targets with a 12% chance to exile them for 1 turn. Restores 2 energy at the end of the turn.
+1172	Bell Grass	Randomly attacks 5 enemy units with a 14% chance to exile them for 1 turn, recovering 2 energy at the end of the turn.
+1173	Bell Grass	Randomly attacks 5 enemy units with a 16% chance to exile them for 1 turn, and recovers 2 energy at the end of the turn.
+1174	Bell Grass	Randomly attacks 5 enemy units and has an 18% chance to exile them for 1 turn. Restores 2 energy at the end of the turn.
+1175	Bell Grass	Randomly attacks 5 enemy units with a 20% chance to exile them for 1 turn, and restores 2 energy at the end of the turn.
+1181	Red Stinger	Attacks the current target, causing 5% bleed damage per turn for 2 turns, and grants a 10% damage bonus for 1 turn.
+1182	Red Stinger	Attacks the current target, causing it to bleed for 10% HP per turn for 2 turns, and grants a 20% damage bonus for 1 turn.
+1183	Red Stinger	Attacks the current target, causing it to bleed for 15% HP per turn for 2 turns, and grants a 30% damage bonus for 1 turn.
+1184	Red Stinger	Attacks the current target, causes it to bleed for 20% HP per turn for 2 turns, and gains a 40% damage bonus for 1 turn.
+1185	Red Stinger	Attacks the current target, inflicting 25% bleeding per turn for 2 turns and granting a 50% damage bonus for 1 turn.
+1191	A.K.E.E.	Attacks all enemies in the front row with a 10% chance to immobilize them for 1 turn. Restores 2 energy at the end of the turn.
+1192	A.K.E.E.	Attack all enemies in the front row horizontally with a 20% chance to stun them for 1 turn. Recover 2 energy at the end of the turn.
+1193	A.K.E.E.	Attacks all enemies in the front row with a 30% chance to immobilize them for 1 turn, and restores 2 energy at the end of the turn.
+1194	A.K.E.E.	Attacks all enemies in the front row with a 40% chance to immobilize them for 1 turn. Restores 2 energy at the end of the turn.
+1195	A.K.E.E.	Attacks all enemies in the same horizontal row ahead with a 50% chance to immobilize them for 1 turn, and restores 2 energy at the end of the turn.
+1201	Peashooter	Continuously fires a barrage of peas, dealing massive damage to the current target.
+1202	Peashooter	Continuously fires a barrage of peas, dealing massive damage to the current target.
+1203	Peashooter	Continuously fires a barrage of peas, dealing massive damage to the current target.
+1204	Peashooter	Continuously fires a barrage of peas, dealing massive damage to the current target.
+1205	Peashooter	Continuously fires a barrage of peas, dealing massive damage to the current target.
+1211	Repeater	Deals damage to the current target with a 50% chance to Root them for 2 turns.
+1212	Repeater	Deals damage to the current target and has a 55% chance to immobilize them for 2 turns.
+1213	Repeater	Deals damage to the current target with a 60% chance to immobilize them for 2 turns.
+1214	Repeater	Deals damage to the current target with a 65% chance to immobilize them for 2 turns.
+1215	Repeater	Deals damage to the current target with a 70% chance to immobilize them for 2 turns.
+1221	Electric Blueberry	Prioritizes attacking 5 random units in the middle and rear columns, reducing their damage and healing output by 15% for 1 turn.
+1222	Electric Blueberry	Prioritizes attacking 5 random units in the middle and rear of the formation, reducing their damage and healing capacity by 25% for 1 turn.
+1223	Electric Blueberry	Prioritizes attacking 5 random units in the middle and rear columns, reducing their damage and healing output by 35% for 1 turn.
+1224	Electric Blueberry	Prioritizes attacking 5 random units in the middle and rear rows, reducing their damage and healing capacity by 45% for 1 turn.
+1225	Electric Blueberry	Prioritizes attacking 5 random units in the middle and back rows, reducing their damage and healing output by 55% for 1 turn.
+1231	Agave	Attacks all enemy units, inflicting 10% Vulnerable for 1 turn. Restores 2 energy at the end of the turn.
+1232	Agave	Attacks all enemy units, inflicting 20% increased damage taken for 1 turn, and restores 2 energy at the end of the turn.
+1233	Agave	Attacks all enemy units, inflicting 30% Vulnerable for 1 turn. Restores 2 energy at the end of the turn.
+1234	Agave	Attacks all enemy units, inflicting 40% vulnerability for 1 turn, and restores 2 energy at the end of the turn.
+1235	Agave	Attacks all enemy units, inflicting 50% vulnerability for 1 turn, and recovers 2 energy at the end of the turn.
+1241	Moonflower	Heals all allies with moonlight power, clears teammates' immobilization and silence statuses, and grants them a 10% damage bonus for 1 turn.
+1242	Moonflower	Heal all allies with moonlight, cleanse teammates' stun and silence effects, and grant them a 20% damage bonus for 1 turn.
+1243	Moonflower	Heals all allies with the power of moonlight, removes immobilization and silence from teammates, and grants them a 30% damage bonus for 1 turn.
+1244	Moonflower	Heal all allies with moonlight, cleanse teammates' stun and silence effects, and grant them a 40% damage bonus for 1 turn.
+1245	Moonflower	Heals all allies with the power of moonlight, cleanses allies of stun and silence effects, and grants them a 50% damage bonus for 1 turn.
+1251	Aceparagus	Lashes out a powerful strike at the current target, granting an extra 10% Critical Hit and 10% damage bonus for this attack.
+1252	Aceparagus	Lauches a powerful strike at the current target, gaining an extra 20% critical hit rate and 15% damage bonus for this attack.
+1253	Aceparagus	Lashes out with a powerful blow at the current target, gaining an additional 30% critical hit rate and 20% damage bonus for this attack.
+1254	Aceparagus	Lashes out a powerful strike at the current target, granting this attack an extra 40% critical chance and 25% damage bonus.
+1255	Aceparagus	Delivers a heavy blow to the current target, gaining an additional 50% crit and 30% damage bonus for this attack.
+1301	Wall-nut	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+1302	Wall-nut	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+1303	Wall-nut	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+1304	Wall-nut	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+1305	Wall-nut	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+1401	Cabbage-pult	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+1402	Cabbage-pult	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+1403	Cabbage-pult	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+1404	Cabbage-pult	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+1405	Cabbage-pult	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+1501	Potato Mine	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+1502	Potato Mine	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+1503	Potato Mine	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+1504	Potato Mine	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+1505	Potato Mine	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+1601	Bloomerang	Deals damage to all enemy units in the forward row.
+1602	Bloomerang	Deals damage to all enemy units in the forward row.
+1603	Bloomerang	Deals damage to all enemy units in the forward row.
+1604	Bloomerang	Deals damage to all enemy units in the forward row.
+1605	Bloomerang	Deals damage to all enemy units in the forward row.
+1701	Iceberg Lettuce	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+1702	Iceberg Lettuce	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+1703	Iceberg Lettuce	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+1704	Iceberg Lettuce	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+1705	Iceberg Lettuce	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+1801	Bonk Choy	Attacks the current target and increases Dodge by 1000 for 1 turn.
+1802	Bonk Choy	Attacks the current target and increases dodge by 1500 for 1 turn.
+1803	Bonk Choy	Attacks the current target and increases Dodge by 2000 for 1 turn.
+1804	Bonk Choy	Attacks the current target and increases Evasion by 2500 for 1 turn.
+1805	Bonk Choy	Attacks the current target and increases Dodge by 3000 for 1 turn.
+1901	Grave Buster	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+1902	Grave Buster	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+1903	Grave Buster	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+1904	Grave Buster	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+1905	Grave Buster	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+2001	Magic Beanstalk	Fires a massive energy orb at the current target, dealing extra damage to shields.
+2002	Magic Beanstalk	Fires a massive energy orb at the current target, dealing extra damage to shields.
+2003	Magic Beanstalk	Fires a massive energy orb at the current target, dealing extra damage to shields.
+2004	Magic Beanstalk	Fires a massive energy orb at the current target, dealing extra damage to shields.
+2005	Magic Beanstalk	Fires a massive energy orb at the current target, dealing extra damage to shields.
+3101	Bruce Bamboo	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+3102	Bruce Bamboo	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+3103	Bruce Bamboo	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+3104	Bruce Bamboo	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+3105	Bruce Bamboo	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+3201	Carrocket	Fires a rocket at the opponent, randomly striking 3 enemy units.
+3202	Carrocket	Fires a rocket at the opponent, randomly striking 3 enemy units.
+3203	Carrocket	Fires a rocket at the opponent, randomly striking 3 enemy units.
+3204	Carrocket	Fires a rocket at the opponent, randomly striking 3 enemy units.
+3205	Carrocket	Fires a rocket at the opponent, randomly striking 3 enemy units.
+3301	Explodelion	Spins wildly, dealing damage to all enemy units in the current target's column.
+3302	Explodelion	Spins wildly, dealing damage to all enemy units in the current target's column.
+3303	Explodelion	Spins wildly, dealing damage to all enemy units in the current target's column.
+3304	Explodelion	Spins wildly, dealing damage to all enemy units in the current target's column.
+3305	Explodelion	Spins wildly, dealing damage to all enemy units in the current target's column.
+3601	Venus Flytrap	Deals damage to the current target and causes it to bleed for 10% HP per turn for 3 turns.
+3602	Venus Flytrap	Deals damage to the current target and causes them to bleed for 12% per turn for 3 turns.
+3603	Venus Flytrap	Deals damage to the current target and inflicts 14% bleeding per turn for 3 turns.
+3604	Venus Flytrap	Deals damage to the current target and inflicts 16% bleeding per turn for 3 turns.
+3605	Venus Flytrap	Deals damage to the current target, causing them to bleed for 18% per turn for 3 turns.
+3701	Squash	Slams the current target, dealing damage and reducing its defense by 15% for 1 turn.
+3702	Squash	Slams the current target, dealing damage and reducing its defense by 18% for 1 turn.
+3703	Squash	Slam down hard on the current target, dealing damage and reducing its defense by 21% for 1 turn.
+3704	Squash	Slam the current target, dealing damage and reducing its defense by 24% for 1 turn.
+3705	Squash	Slams the current target, dealing damage and reducing its defense by 27% for 1 turn.
+3901	Snapdragon	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+3902	Snapdragon	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+3903	Snapdragon	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+3904	Snapdragon	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+3905	Snapdragon	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+4101	Spikeweed	Attacks the current target and gains 50% lifesteal.
+4102	Spikeweed	Attacks the current target and gains 55% lifesteal.
+4103	Spikeweed	Attacks the current target and gains 60% lifesteal.
+4104	Spikeweed	Attacks the current target and gains 65% lifesteal.
+4105	Spikeweed	Attacks the current target and gains 70% lifesteal.
+4201	Spikeweed	Attacks the current target and gains 35% reflect damage for 1 turn.
+4202	Spikeweed	Attacks the current target and gains 40% damage reflection for 1 turn.
+4203	Spikeweed	Attacks the current target and gains a 45% damage reflection effect for 1 turn.
+4204	Spikeweed	Attacks the current target and gains 50% Thorns (Damage Reflection) for 1 turn.
+4205	Spikeweed	Attacks the current target and gains 55% damage reflection for 1 turn.
+4301	Kernel-pult	Hurls Kernel-pult mash to randomly strike 2 targets.
+4302	Kernel-pult	Hurls Kernel-pult mash to randomly strike 2 targets.
+4303	Kernel-pult	Hurls Kernel-pult mash to randomly strike 2 targets.
+4304	Kernel-pult	Hurls Kernel-pult mash to randomly strike 2 targets.
+4305	Kernel-pult	Hurls Kernel-pult mash to randomly strike 2 targets.
+4401	Spring Bean	Jumps up and shakes the ground, dealing damage to all enemy units.
+4402	Spring Bean	Jump up and shake the ground, dealing damage to all enemies.
+4403	Spring Bean	Jump up and shake the ground, dealing damage to all enemies.
+4404	Spring Bean	Jump up and shake the ground, dealing damage to all enemies.
+4405	Spring Bean	Jump up and shake the ground, dealing damage to all enemies.
+4501	Threepeater	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+4502	Threepeater	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+4503	Threepeater	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+4504	Threepeater	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+4505	Threepeater	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+4601	Coconut Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+4602	Coconut Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+4603	Coconut Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+4604	Coconut Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+4605	Coconut Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+4701	Pomegranate-pult	Attacks the current target and grants a 10% attack bonus for 2 turns.
+4702	Pomegranate-pult	Attacks the current target and grants a 12% attack bonus for 2 turns.
+4703	Pomegranate-pult	Attacks the current target and grants a 15% attack bonus for 2 turns.
+4704	Pomegranate-pult	Attacks the current target and grants an 18% attack bonus for 2 turns.
+4705	Pomegranate-pult	Attacks the current target and gains a 20% attack bonus for 2 turns.
+4901	Durian	Attacks the current target and grants all allied units a 10% health bonus for 2 turns.
+4902	Durian	Attacks the current target and grants all allies a 12% HP bonus for 2 turns.
+4903	Durian	Attacks the current target and grants all allies a 15% HP bonus for 2 turns.
+4904	Durian	Attacks the current target and grants all allies an 18% health bonus for 2 turns.
+4905	Durian	Attacks the current target and grants all allied units a 20% HP bonus for 2 turns.
+5301	Snow Pea	Attacks the current target and immobilizes them for 1 turn.
+5302	Snow Pea	Attacks the current target and immobilizes them for 1 turn.
+5303	Snow Pea	Attacks the current target and immobilizes them for 1 turn.
+5304	Snow Pea	Attacks the current target and immobilizes them for 1 turn.
+5305	Snow Pea	Attacks the current target and immobilizes them for 1 turn.
+5401	Repeater	Randomly selects 2 front-row enemies and deals damage to each.
+5402	Repeater	Randomly selects 2 front-row enemies and deals damage to each.
+5403	Repeater	Randomly selects 2 front-row enemies and deals damage to each.
+5404	Repeater	Randomly selects 2 front-row enemies and deals damage to each.
+5405	Repeater	Randomly selects 2 front-row enemies and deals damage to each.
+5501	Pea Pod	Deals heavy damage to the current target and decreases its defense by 15% for 1 turn.
+5502	Pea Pod	Deal heavy damage to the current target and reduce its defense by 18% for 1 turn.
+5503	Pea Pod	Deals heavy damage to the current target and decreases its defense by 21% for 1 turn.
+5504	Pea Pod	Deals massive damage to the current target and reduces its defense by 24% for 1 turn.
+5505	Pea Pod	Deals heavy damage to the current target and reduces its defense by 27% for 1 turn.
+5601	Tall-nut	Equips a steel helmet, gaining a shield equal to 50% of current health.
+5602	Tall-nut	Equips a steel helmet, gaining a shield equal to 50% of current health.
+5603	Tall-nut	Equips a steel helmet, gaining a shield equal to 50% of current health.
+5604	Tall-nut	Equips a steel helmet, gaining a shield equal to 50% of current health.
+5605	Tall-nut	Equips a steel helmet, gaining a shield equal to 50% of current health.
+5701	Cherry Bomb	Massive explosion, dealing massive damage to the current target.
+5702	Cherry Bomb	Massive explosion, dealing massive damage to the current target.
+5703	Cherry Bomb	Massive explosion, dealing massive damage to the current target.
+5704	Cherry Bomb	Massive explosion, dealing massive damage to the current target.
+5705	Cherry Bomb	Massive explosion, dealing massive damage to the current target.
+5901	Stallia	Deals massive damage to the current target and reduces the damage capability of all units behind it by 12% for 1 turn.
+5902	Stallia	Deals massive damage to the current target and reduces the damage of all units behind it by 14% for 1 turn.
+5903	Stallia	Deals massive damage to the current target and reduces the damage capability of all units behind it by 16% for 1 turn.
+5904	Stallia	Deals heavy damage to the current target and reduces the attack power of all units behind it by 18% for 1 turn.
+5905	Stallia	Deals heavy damage to the current target and weakens the damage output of all units behind it by 20% for 1 turn.
+6001	Torchwood	Increase damage output of allies at the rear of the formation by 20% for 1 turn.
+6002	Torchwood	Increases damage dealt by allies in the back row by 25% for 1 turn.
+6003	Torchwood	提高友方阵尾单位伤害能力30%，效果持续1回合
+6004	Torchwood	Increases damage dealt by allies at the back of the formation by 35% for 1 turn.
+6005	Torchwood	Increases the damage of the ally at the rear of the formation by 40% for 1 turn.
+6101	Lightning Reed	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+6102	Lightning Reed	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+6103	Lightning Reed	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+6104	Lightning Reed	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+6105	Lightning Reed	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+6201	Starfruit	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+6202	Starfruit	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+6203	Starfruit	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+6204	Starfruit	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+6205	Starfruit	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+6301	Laser Bean	Deals damage to all units in the same horizontal row ahead, with a 35% chance to immobilize targets for 2 turns.
+6302	Laser Bean	Deals damage to all units in the front row, with a 38% chance to stun targets for 2 turns.
+6303	Laser Bean	Deals damage to all units in the forward row, with a 42% chance to stun targets for 2 turns.
+6304	Laser Bean	Deals damage to all units in the front row, with a 46% chance to immobilize the targets for 2 turns.
+6305	Laser Bean	Deals damage to all units in the front row, with a 50% chance to immobilize the targets for 2 turns.
+6401	Citron	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+6402	Citron	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+6403	Citron	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+6404	Citron	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+6405	Citron	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+6501	Infi-nut	Attack the current target and increase self damage reduction by 31% for 1 turn.
+6502	Infi-nut	Attacks the current target and increases own Damage Reduction by 34% for 1 turn.
+6503	Infi-nut	Attacks the current target and increases self damage reduction by 37% for 1 turn.
+6504	Infi-nut	Attacks the current target and increases self-damage reduction by 40% for 1 turn.
+6505	Infi-nut	Attacks the current target and increases own damage reduction by 43% for 1 turn.
+6601	Magnifying Grass	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+6602	Magnifying Grass	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+6603	Magnifying Grass	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+6604	Magnifying Grass	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+6605	Magnifying Grass	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+6701	Jalapeno	Consumes 35% of current health to deal heavy damage to all enemies in the front row.
+6702	Jalapeno	Consumes 30% of current health to deal massive damage to all enemies in the forward row.
+6703	Jalapeno	Consumes 25% of current health to deal heavy damage to all enemies in the front row.
+6704	Jalapeno	Sacrifices 20% of current health to deal massive damage to all enemies in the front row.
+6705	Jalapeno	Reduces current HP by 15% to deal massive damage to all enemies in the front row.
+6901	Winter Melon	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+6902	Winter Melon	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+6903	Winter Melon	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+6904	Winter Melon	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+6905	Winter Melon	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+7201	Impear	Attacks the last enemy in the front row and silences them for 2 turns.
+7202	Impear	Attacks the last enemy in the front row and silences them for 2 turns.
+7203	Impear	Attacks the last enemy in the front row and silences them for 2 turns.
+7204	Impear	Attacks the last enemy in the front row and silences them for 2 turns.
+7205	Impear	Attacks the last enemy in the front row and silences them for 2 turns.
+7401	Nitro-shroom	Attacks the current target and gains a 16% crit bonus for 2 turns.
+7402	Nitro-shroom	Attacks the current target and grants a 20% critical hit bonus for 2 turns.
+7403	Nitro-shroom	Attacks the current target and gains a 24% Critical Hit bonus for 2 turns.
+7404	Nitro-shroom	Attacks the current target and grants a 28% critical strike bonus for 2 turns.
+7405	Nitro-shroom	Attacks the current target and gains a 32% critical hit bonus for 2 turns.
+7501	Chomper	Attacks and banishes the current target, making it disappear for 1 turn.
+7502	Chomper	Attacks and banishes the current target, making it disappear for 1 turn.
+7503	Chomper	Attacks and banishes the current target, making it disappear for 1 turn.
+7504	Chomper	Attacks and banishes the current target, making it disappear for 1 turn.
+7505	Chomper	Attacks and banishes the current target, making it disappear for 1 turn.
+7601	Tile Turnip	Heals 1 allied unit with the lowest health percentage.
+7602	Tile Turnip	Heals 2 allied units with the lowest HP percentage.
+7603	Tile Turnip	Heals the 3 allied units with the lowest percentage of health.
+7604	Tile Turnip	Heals the 4 allied units with the lowest HP percentage.
+7605	Tile Turnip	Heals the 5 allied units with the lowest HP percentage.
+7701	Melon-pult	Attacks the current target and deals 50% splash damage to surrounding units.
+7702	Melon-pult	Attacks the current target and deals 50% splash damage to surrounding units.
+7703	Melon-pult	Attacks the current target and deals 50% splash damage to surrounding units.
+7704	Melon-pult	Attacks the current target and deals 50% splash damage to surrounding units.
+7705	Melon-pult	Attacks the current target and deals 50% splash damage to surrounding units.
+7801	Cattail	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+7802	Cattail	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+7803	Cattail	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+7804	Cattail	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+7805	Cattail	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+7901	Ganoderma	Grants 2 energy to 3 random allied units whose energy is not full, with a 65% success rate.
+7902	Ganoderma	Grant 2 energy to 3 random allies whose energy is not full, with a 70% success rate.
+7903	Ganoderma	Grants 2 energy to 3 random allied units whose energy is not full, with a 75% success rate.
+7904	Ganoderma	Grants 2 energy to 3 random allied units whose energy is not full, with an 80% success rate.
+7905	Ganoderma	Grants 2 energy to 3 random allies whose energy is not full, with an 85% success rate.
+8001	Banana Tree	Deals multi-hit damage to all enemies in the front row, with a 30% chance to fully restore energy.
+8002	Banana Tree	Deals multi-hit damage to all enemies in the front row, with a 35% chance to fully restore energy.
+8003	Banana Tree	Deals multi-hit attacks to all enemies in the horizontal row ahead, with a 40% chance to fully restore energy.
+8004	Banana Tree	Performs multi-hit attacks on all enemies in the front row, with a 50% chance to fully recover energy.
+8005	Banana Tree	Deals multi-stage attacks to all enemies in the front row, with a 66% chance to fully restore energy.
+8101	Oxygen Algae	Heals the 3 allied units with the lowest HP percentage, and restores 2% of their HP per turn for 2 turns.
+8102	Oxygen Algae	Heals the 3 allied units with the lowest HP percentage, and restores 2% of their HP per turn for 2 turns.
+8103	Oxygen Algae	Heals 3 allied units with the lowest HP percentage and grants them 3% HP regeneration per turn for 2 turns.
+8104	Oxygen Algae	Heals the 3 allied units with the lowest HP percentage, and restores 4% of their HP per turn for 2 turns.
+8105	Oxygen Algae	Heals the 3 allied units with the lowest HP percentages, making them recover 5% HP per turn for 2 turns.
+8301	Electric Sea-shroom	Attacks the last enemy in the front row and drains 1 energy block.
+8302	Electric Sea-shroom	Attacks the last enemy in the front row and drains 1 energy block.
+8303	Electric Sea-shroom	Attacks the last enemy in the front row and drains 1 energy block.
+8304	Electric Sea-shroom	Attacks the last enemy in the front row and drains 1 energy block.
+8305	Electric Sea-shroom	Attacks the last enemy in the front row and drains 2 energy from them.
+8501	Starfruit	Deal heavy damage to the current target and gain 100% lifesteal.
+8502	Starfruit	Deal heavy damage to the current target and gain 100% lifesteal.
+8503	Starfruit	Deal heavy damage to the current target and gain 100% lifesteal.
+8504	Starfruit	Deal heavy damage to the current target and gain 100% lifesteal.
+8505	Starfruit	Deal heavy damage to the current target and gain 100% lifesteal.
+8601	Lychee Drill	Performs a single-target attack and grants all allied units 8% damage reduction for 1 turn.
+8602	Lychee Drill	Unleash a single-target attack and grant all allies 12% damage reduction for 1 turn.
+8603	Lychee Drill	Performs a single-target attack and grants all allies 16% damage reduction for 1 turn.
+8604	Lychee Drill	Performs a single-target attack and grants all allies 20% damage reduction for 1 turn.
+8605	Lychee Drill	Unleash a single-target attack and grant all allies 24% damage reduction for 1 turn.
+8701	Sea Anemone	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+8702	Sea Anemone	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+8703	Sea Anemone	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+8704	Sea Anemone	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+8705	Sea Anemone	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+8801	Potato Mine	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+8802	Potato Mine	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+8803	Potato Mine	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+8804	Potato Mine	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+8805	Potato Mine	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+8901	Rose Swordfighter	Prioritizes attacking the enemy captain and gains 35% Lifesteal. Using this skill costs no energy.
+8902	Rose Swordfighter	Prioritizes attacking the enemy captain, grants 40% lifesteal, and consumes no energy when using skills.
+8903	Rose Swordfighter	Prioritizes attacking the enemy captain, gains 45% lifesteal, and consumes no energy when casting skills.
+8904	Rose Swordfighter	Prioritizes attacking the enemy captain, gains 50% Lifesteal, and consumes no energy when using skills.
+8905	Rose Swordfighter	Prioritizes attacking the enemy captain and gains 55% Lifesteal. Using this skill costs no energy.
+9001	Clivia	Heals all allied units and cleanses teammates of immobilization and silence effects.
+9002	Clivia	Heals all allied units and cleanses teammates of immobilization and silence effects.
+9003	Clivia	Heals all allied units and cleanses teammates of immobilization and silence effects.
+9004	Clivia	Heals all allied units and cleanses teammates of immobilization and silence effects.
+9005	Clivia	Heals all allied units and cleanses teammates of immobilization and silence effects.
+9101	Sap-fling	Flings 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+9102	Sap-fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+9103	Sap-fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+9104	Sap-fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+9105	Sap-fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+9201	Acid Lemon	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+9202	Acid Lemon	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+9203	Acid Lemon	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+9204	Acid Lemon	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+9205	Acid Lemon	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+9301	Magic-shroom	Attacks the current target with a 10% chance to immobilize it for 1 turn. Skill activation costs no energy.
+9302	Magic-shroom	Attacks the current target with a 15% chance to immobilize them for 1 turn. This skill costs no energy to activate.
+9303	Magic-shroom	Attacks the current target and has a 20% chance to immobilize them for 1 turn, consuming no energy when using skills.
+9304	Magic-shroom	Attacks the current target and has a 25% chance to immobilize them for 1 turn, consuming no energy when using skills.
+9305	Magic-shroom	Attacks the current target with a 33% chance to immobilize them for 1 turn. Using this skill costs no energy.
+9401	Fire Peashooter	Fires a fire pea, dealing damage to the current target and reducing its defense by 15% for 2 turns.
+9402	Fire Peashooter	发射火焰豌豆，对当前目标造成伤害并使其防御下降18%，持续2回合
+9403	Fire Peashooter	Fires a fire pea, dealing damage to the current target and reducing their defense by 21% for 2 turns.
+9404	Fire Peashooter	Fires a fire pea, dealing damage to the current target and reducing its defense by 24% for 2 turns.
+9405	Fire Peashooter	Fires a fire pea, dealing damage to the current target and reducing their defense by 27% for 2 turns.
+9501	Ghost Pepper	Lets out a terrifying screech, dealing damage to 1 random enemy unit with energy and reducing its energy by 1 segment.
+9502	Ghost Pepper	Lets out a terrifying screech, dealing damage to 2 random enemies with energy and draining 1 energy from them.
+9503	Ghost Pepper	Emit a terrifying screech, dealing damage to 3 random enemies with energy and reducing their energy by 1 segment.
+9504	Ghost Pepper	Lets out a terrifying screech, randomly dealing damage to 4 enemy units with energy and draining 1 energy from them.
+9505	Ghost Pepper	Lets out a terrifying screech, randomly dealing damage to 5 enemy units with energy and reducing their energy by 1 bar.
+9601	Guacodile	Attack the last enemy in the front horizontal row, causing them to bleed 10% per turn for 3 turns.
+9602	Guacodile	Attacks the last enemy in the front row, causing them to bleed for 12% per turn for 3 turns.
+9603	Guacodile	Attacks the rearmost enemy in the front row, causing them to bleed for 14% health each turn for 3 turns.
+9604	Guacodile	Attacks the last enemy in the front row, causing them to bleed for 16% per turn for 3 turns.
+9605	Guacodile	Attack the last enemy in the front horizontal row, causing them to bleed 18% per turn for 3 turns.
+9701	Hurrikale	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+9702	Hurrikale	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+9703	Hurrikale	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+9704	Hurrikale	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+9705	Hurrikale	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+9801	Lantern	Prioritizes attacking 2 random units in the enemy's middle and back rows, with a 30% chance to immobilize them for 2 turns.
+9802	Lantern	Prioritizes attacking 2 random units in the enemy's middle and back rows, with a 30% chance to immobilize them for 2 turns.
+9803	Lantern	Prioritizes attacking 3 random units in the middle and rear of the enemy formation, with a 30% chance to immobilize them for 2 turns.
+9804	Lantern	Prioritizes attacking 4 random units in the middle and rear of the enemy formation, with a 30% chance to stun them for 2 turns.
+9805	Lantern	Prioritizes attacking 5 random units in the middle and back of the enemy formation, with a 30% chance to immobilize them for 2 turns.
+9901	AKernel-pult Archer	Attacks the current target and inflicts 15% vulnerability for 2 turns. Restores 2 energy at the end of the turn.
+9902	AKernel-pult Archer	Attacks the current target, inflicting 20% vulnerability for 2 turns, and restores 2 energy at the end of the turn.
+9903	AKernel-pult Archer	Attacks the current target and inflicts 25% vulnerability for 2 turns, restoring 2 energy at the end of the turn.
+9904	AKernel-pult Archer	Attacks the current target, inflicting 30% vulnerability for 2 turns, and restores 2 energy at the end of the turn.
+9905	AKernel-pult Archer	Attacks the current target and inflicts 35% vulnerability for 2 turns. Restores 2 energy at the end of the turn.
+50001	Sunflower	Endless Trial
+50002	Twin Sunflower	Endless Trial
+50003	Spikeweed	Endless Trial
+50004	Bell Pepper-pult	Endless Trial
+50005	Kung Fu Carrot	Endless Trial
+50006	Toadstool	Endless Trial
+50007	Bell Grass	Endless Trial
+50008	Red Stinger	Endless Trial
+50009	A.K.E.E.	Endless Trial
+50010	Peashooter	Endless Trial
+50011	Repeater	Endless Trial
+50012	Electric Blueberry	Endless Trial
+50013	Wall-nut	Endless Trial
+50014	Cabbage-pult	Endless Trial
+50015	Potato Mine	Endless Trial
+50016	Bloomerang	Endless Trial
+50017	Iceberg Lettuce	Endless Trial
+50018	Bonk Choy	Endless Trial
+50019	Grave Buster	Endless Trial
+50020	Magic Beanstalk	Endless Trial
+50021	Bruce Bamboo	Endless Trial
+50022	Carrocket	Endless Trial
+50023	Explodelion	Endless Trial
+50024	Venus Flytrap	Endless Trial
+50025	Squash	Endless Trial
+50026	Snapdragon	Endless Trial
+50027	Spikeweed	Endless Trial
+50028	Spikeweed	Endless Trial
+50029	Kernel-pult	Endless Trial
+50030	Spring Bean	Endless Trial
+50031	Threepeater	Endless Trial
+50032	Coconut Cannon	Endless Trial
+50033	Pomegranate-pult	Endless Trial
+50034	Durian	Endless Trial
+50035	Snow Pea	Endless Trial
+50036	Repeater	Endless Trial
+50037	Pea Pod	Endless Trial
+50038	Tall-nut	Endless Trial
+50039	Cherry Bomb	Endless Trial
+50040	Stallia	Endless Trial
+50041	Torchwood	Endless Trial
+50042	Lightning Reed	Endless Trial
+50043	Starfruit	Endless Trial
+50044	Laser Bean	Endless Trial
+50045	Citron	Endless Trial
+50046	Infi-nut	Endless Trial
+50047	Magnifying Grass	Endless Trial
+50048	Jalapeno	Endless Trial
+50049	Winter Melon	Endless Trial
+50050	Impear	Endless Trial
+50051	Nitro-shroom	Endless Trial
+50052	Chomper	Endless Trial
+50053	Tile Turnip	Endless Trial
+50054	Melon-pult	Endless Trial
+50055	Cattail	Endless Trial
+50056	Ganoderma	Endless Trial
+50057	Banana Tree	Endless Trial
+50058	Oxygen Algae	Endless Trial
+50059	Electric Sea-shroom	Endless Trial
+50060	Starfruit	Endless Trial
+50061	Lychee Drill	Endless Trial
+50062	Sea Anemone	Endless Trial
+50063	Potato Mine	Endless Trial
+50064	Rose Swordfighter	Endless Trial
+50065	Clivia	Endless Trial
+50066	Sap-fling	Endless Trial
+50067	Acid Lemon	Endless Trial
+50068	Magic-shroom	Endless Trial
+50069	Fire Peashooter	Endless Trial
+50070	Ghost Pepper	Endless Trial
+50071	Guacodile	Endless Trial
+50072	Hurrikale	Endless Trial
+50073	Lantern	Endless Trial
+50074	AKernel-pult Archer	Endless Trial
+50075	Sunflower	Endless Trial
+50076	Twin Sunflower	Endless Trial
+50077	Spikeweed	Endless Trial
+50078	Bell Pepper-pult	Endless Trial
+50079	Kung Fu Carrot	Endless Trial
+50080	Toadstool	Endless Trial
+50081	Bell Grass	Endless Trial
+50082	Red Stinger	Endless Trial
+50083	A.K.E.E.	Endless Trial
+50084	Peashooter	Endless Trial
+50085	Repeater	Endless Trial
+50086	Electric Blueberry	Endless Trial
+50087	Wall-nut	Endless Trial
+50088	Cabbage-pult	Endless Trial
+50089	Potato Mine	Endless Trial
+50090	Bloomerang	Endless Trial
+50091	Iceberg Lettuce	Endless Trial
+50092	Bonk Choy	Endless Trial
+50093	Grave Buster	Endless Trial
+50094	Magic Beanstalk	Endless Trial
+50095	Bruce Bamboo	Endless Trial
+50096	Carrocket	Endless Trial
+50097	Explodelion	Endless Trial
+50098	Venus Flytrap	Endless Trial
+50099	Squash	Endless Trial
+50100	Snapdragon	Endless Trial
+50101	Spikeweed	Endless Trial
+50102	Spikeweed	Endless Trial
+50103	Kernel-pult	Endless Trial
+50104	Spring Bean	Endless Trial
+50105	Threepeater	Endless Trial
+50106	Coconut Cannon	Endless Trial
+50107	Pomegranate-pult	Endless Trial
+50108	Durian	Endless Trial
+50109	Snow Pea	Endless Trial
+50110	Repeater	Endless Trial
+50111	Pea Pod	Endless Trial
+50112	Tall-nut	Endless Trial
+50113	Cherry Bomb	Endless Trial
+50114	Stallia	Endless Trial
+50115	Torchwood	Endless Trial
+50116	Lightning Reed	Endless Trial
+50117	Starfruit	Endless Trial
+50118	Laser Bean	Endless Trial
+50119	Citron	Endless Trial
+50120	Infi-nut	Endless Trial
+50121	Magnifying Grass	Endless Trial
+50122	Jalapeno	Endless Trial
+50123	Winter Melon	Endless Trial
+50124	Impear	Endless Trial
+50125	Nitro-shroom	Endless Trial
+50126	Chomper	Endless Trial
+50127	Tile Turnip	Endless Trial
+50128	Melon-pult	Endless Trial
+50129	Cattail	Endless Trial
+50130	Ganoderma	Endless Trial
+50131	Banana Tree	Endless Trial
+50132	Oxygen Algae	Endless Trial
+50133	Electric Sea-shroom	Endless Trial
+50134	Starfruit	Endless Trial
+50135	Lychee Drill	Endless Trial
+50136	Sea Anemone	Endless Trial
+50137	Potato Mine	Endless Trial
+50138	Rose Swordfighter	Endless Trial
+50139	Clivia	Endless Trial
+50140	Sap-fling	Endless Trial
+50141	Acid Lemon	Endless Trial
+50142	Magic-shroom	Endless Trial
+50143	Fire Peashooter	Endless Trial
+50144	Ghost Pepper	Endless Trial
+50145	Guacodile	Endless Trial
+50146	Hurrikale	Endless Trial
+50147	Lantern	Endless Trial
+50148	AKernel-pult Archer	Endless Trial
+50149	Sunflower	Endless Trial
+50150	Twin Sunflower	Endless Trial
+50151	Spikeweed	Endless Trial
+50152	Bell Pepper-pult	Endless Trial
+50153	Kung Fu Carrot	Endless Trial
+50154	Toadstool	Endless Trial
+50155	Bell Grass	Endless Trial
+50156	Red Stinger	Endless Trial
+50157	A.K.E.E.	Endless Trial
+50158	Peashooter	Endless Trial
+50159	Repeater	Endless Trial
+50160	Electric Blueberry	Endless Trial
+50161	Wall-nut	Endless Trial
+50162	Cabbage-pult	Endless Trial
+50163	Potato Mine	Endless Trial
+50164	Bloomerang	Endless Trial
+50165	Iceberg Lettuce	Endless Trial
+50166	Bonk Choy	Endless Trial
+50167	Grave Buster	Endless Trial
+50168	Magic Beanstalk	Endless Trial
+50169	Bruce Bamboo	Endless Trial
+50170	Carrocket	Endless Trial
+50171	Explodelion	Endless Trial
+50172	Venus Flytrap	Endless Trial
+50173	Squash	Endless Trial
+50174	Snapdragon	Endless Trial
+50175	Spikeweed	Endless Trial
+50176	Spikeweed	Endless Trial
+50177	Kernel-pult	Endless Trial
+50178	Spring Bean	Endless Trial
+50179	Threepeater	Endless Trial
+50180	Coconut Cannon	Endless Trial
+50181	Pomegranate-pult	Endless Trial
+50182	Durian	Endless Trial
+50183	Snow Pea	Endless Trial
+50184	Repeater	Endless Trial
+50185	Pea Pod	Endless Trial
+50186	Tall-nut	Endless Trial
+50187	Cherry Bomb	Endless Trial
+50188	Stallia	Endless Trial
+50189	Torchwood	Endless Trial
+50190	Lightning Reed	Endless Trial
+50191	Starfruit	Endless Trial
+50192	Laser Bean	Endless Trial
+50193	Citron	Endless Trial
+50194	Infi-nut	Endless Trial
+50195	Magnifying Grass	Endless Trial
+50196	Jalapeno	Endless Trial
+50197	Winter Melon	Endless Trial
+50198	Impear	Endless Trial
+50199	Nitro-shroom	Endless Trial
+50200	Chomper	Endless Trial
+50201	Tile Turnip	Endless Trial
+50202	Melon-pult	Endless Trial
+50203	Cattail	Endless Trial
+50204	Ganoderma	Endless Trial
+50205	Banana Tree	Endless Trial
+50206	Oxygen Algae	Endless Trial
+50207	Electric Sea-shroom	Endless Trial
+50208	Starfruit	Endless Trial
+50209	Lychee Drill	Endless Trial
+50210	Sea Anemone	Endless Trial
+50211	Potato Mine	Endless Trial
+50212	Rose Swordfighter	Endless Trial
+50213	Clivia	Endless Trial
+50214	Sap-fling	Endless Trial
+50215	Acid Lemon	Endless Trial
+50216	Magic-shroom	Endless Trial
+50217	Fire Peashooter	Endless Trial
+50218	Ghost Pepper	Endless Trial
+50219	Guacodile	Endless Trial
+50220	Hurrikale	Endless Trial
+50221	Lantern	Endless Trial
+50222	AKernel-pult Archer	Endless Trial
+50223	Sunflower	Endless Trial
+50224	Twin Sunflower	Endless Trial
+50225	Spikeweed	Endless Trial
+50226	Bell Pepper-pult	Endless Trial
+50227	Kung Fu Carrot	Endless Trial
+50228	Toadstool	Endless Trial
+50229	Bell Grass	Endless Trial
+50230	Red Stinger	Endless Trial
+50231	A.K.E.E.	Endless Trial
+50232	Peashooter	Endless Trial
+50233	Repeater	Endless Trial
+50234	Electric Blueberry	Endless Trial
+50235	Wall-nut	Endless Trial
+50236	Cabbage-pult	Endless Trial
+50237	Potato Mine	Endless Trial
+50238	Bloomerang	Endless Trial
+50239	Iceberg Lettuce	Endless Trial
+50240	Bonk Choy	Endless Trial
+50241	Grave Buster	Endless Trial
+50242	Magic Beanstalk	Endless Trial
+50243	Bruce Bamboo	Endless Trial
+50244	Carrocket	Endless Trial
+50245	Explodelion	Endless Trial
+50246	Venus Flytrap	Endless Trial
+50247	Squash	Endless Trial
+50248	Snapdragon	Endless Trial
+50249	Spikeweed	Endless Trial
+50250	Spikeweed	Endless Trial
+50251	Kernel-pult	Endless Trial
+50252	Spring Bean	Endless Trial
+50253	Threepeater	Endless Trial
+50254	Coconut Cannon	Endless Trial
+50255	Pomegranate-pult	Endless Trial
+50256	Durian	Endless Trial
+50257	Snow Pea	Endless Trial
+50258	Repeater	Endless Trial
+50259	Pea Pod	Endless Trial
+50260	Tall-nut	Endless Trial
+50261	Cherry Bomb	Endless Trial
+50262	Stallia	Endless Trial
+50263	Torchwood	Endless Trial
+50264	Lightning Reed	Endless Trial
+50265	Starfruit	Endless Trial
+50266	Laser Bean	Endless Trial
+50267	Citron	Endless Trial
+50268	Infi-nut	Endless Trial
+50269	Magnifying Grass	Endless Trial
+50270	Jalapeno	Endless Trial
+50271	Winter Melon	Endless Trial
+50272	Impear	Endless Trial
+50273	Nitro-shroom	Endless Trial
+50274	Chomper	Endless Trial
+50275	Tile Turnip	Endless Trial
+50276	Melon-pult	Endless Trial
+50277	Cattail	Endless Trial
+50278	Ganoderma	Endless Trial
+50279	Banana Tree	Endless Trial
+50280	Oxygen Algae	Endless Trial
+50281	Electric Sea-shroom	Endless Trial
+50282	Starfruit	Endless Trial
+50283	Lychee Drill	Endless Trial
+50284	Sea Anemone	Endless Trial
+50285	Potato Mine	Endless Trial
+50286	Rose Swordfighter	Endless Trial
+50287	Clivia	Endless Trial
+50288	Sap-fling	Endless Trial
+50289	Acid Lemon	Endless Trial
+50290	Magic-shroom	Endless Trial
+50291	Fire Peashooter	Endless Trial
+50292	Ghost Pepper	Endless Trial
+50293	Guacodile	Endless Trial
+50294	Hurrikale	Endless Trial
+50295	Lantern	Endless Trial
+50296	AKernel-pult Archer	Endless Trial
+51101	Sunflower	Heals the 3 allied units with the lowest percentage of health.
+51102	Sunflower	Heals the 3 allied units with the lowest percentage of health.
+51103	Sunflower	Heals the 3 allied units with the lowest percentage of health.
+51104	Sunflower	Heals the 3 allied units with the lowest percentage of health.
+51105	Sunflower	Heals the 3 allied units with the lowest percentage of health.
+51111	Twin Sunflower	Heals all allied units.
+51112	Twin Sunflower	Heals all allied units.
+51113	Twin Sunflower	Heals all allied units.
+51114	Twin Sunflower	Heals all allied units.
+51115	Twin Sunflower	Heals all allied units.
+51121	Spikeweed	Randomly attacks 3 enemy units, reducing their damage and healing output by 10% for 2 turns.
+51122	Spikeweed	Randomly attacks 3 enemy units, reducing their damage and healing capacity by 20% for 2 turns.
+51123	Spikeweed	Randomly attacks 3 enemy units, reducing their damage and healing capabilities by 30% for 2 turns.
+51124	Spikeweed	Randomly attacks 3 enemy units, reducing their damage and healing capabilities by 40% for 2 turns.
+51125	Spikeweed	Attacks 3 random enemy units, reducing their damage dealt and healing output by 50% for 2 turns.
+51131	Bell Pepper-pult	Attacks all enemies in the front row, with a 60% chance to cause them to bleed for 10% of their HP per turn for 3 turns.
+51132	Bell Pepper-pult	Attacks all enemies in the front row, with a 60% chance to cause them to bleed for 12% damage per turn for 3 turns.
+51133	Bell Pepper-pult	Attacks all enemies in the forward row, with a 60% chance to cause 14% bleed damage per turn for 3 turns.
+51134	Bell Pepper-pult	Attacks all enemies in the front row and has a 60% chance to cause them to bleed for 16% damage per turn for 3 turns.
+51135	Bell Pepper-pult	Attacks all enemies in the front row, with a 60% chance to cause them to bleed for 18% per turn for 3 turns.
+51141	Pumpkin Witch	Attacks 3 random enemy units with a 10% chance to stun them for 1 turn.
+51142	Pumpkin Witch	Randomly attacks 3 enemy units with a 20% chance to Root them for 1 turn.
+51143	Pumpkin Witch	Randomly attacks 3 enemy units with a 30% chance to immobilize them for 1 turn.
+51144	Pumpkin Witch	Attacks 3 random enemy units with a 40% chance to immobilize them for 1 turn.
+51145	Pumpkin Witch	Randomly attacks 3 enemy units with a 50% chance to immobilize them for 1 turn.
+51151	Kung Fu Carrot	Boosts the 2 allied units with the lowest HP percentages, granting them a shield and a 10% damage reflection effect for 2 turns.
+51152	Kung Fu Carrot	Buffs 2 allies with the lowest health percentages, granting them a shield and 15% thorn damage for 2 turns.
+51153	Kung Fu Carrot	Buffs 3 allies with the lowest HP percentage, granting them a shield and 20% thorns effect for 2 turns.
+51154	Kung Fu Carrot	Empowers 3 allied units with the lowest HP percentage, granting them a shield and 25% damage reflection for 2 turns.
+51155	Kung Fu Carrot	Boosts the 4 allied units with the lowest HP percentages, granting them a shield and a 30% damage reflection effect for 2 turns.
+51161	Toadstool	Attacks the current target, increasing our team's Max HP by 10% and damage reduction by 15% for 2 turns.
+51162	Toadstool	Attacks the current target, increases all allies' max HP by 12% and damage reduction by 20% for 2 turns.
+51163	Toadstool	Attacks the current target, increases all allies' Max HP by 15% and Damage Reduction by 25% for 2 turns.
+51164	Toadstool	Attacks the current target, and increases all allies' Max HP by 18% and Damage Reduction by 30% for 2 turns.
+51165	Toadstool	Attacks the current target, increases max health of all allies by 20% and damage reduction by 35% for 2 turns.
+51171	Bell Grass	Attacks 5 random enemy targets with a 12% chance to exile them for 1 turn. Restores 2 energy at the end of the turn.
+51172	Bell Grass	Randomly attacks 5 enemy units with a 14% chance to exile them for 1 turn, recovering 2 energy at the end of the turn.
+51173	Bell Grass	Randomly attacks 5 enemy units with a 16% chance to exile them for 1 turn, and recovers 2 energy at the end of the turn.
+51174	Bell Grass	Randomly attacks 5 enemy units and has an 18% chance to exile them for 1 turn. Restores 2 energy at the end of the turn.
+51175	Bell Grass	Randomly attacks 5 enemy units with a 20% chance to exile them for 1 turn, and restores 2 energy at the end of the turn.
+51181	Red Stinger	Attacks the current target, causing 5% bleed damage per turn for 2 turns, and grants a 10% damage bonus for 1 turn.
+51182	Red Stinger	Attacks the current target, causing it to bleed for 10% HP per turn for 2 turns, and grants a 20% damage bonus for 1 turn.
+51183	Red Stinger	Attacks the current target, causing it to bleed for 15% HP per turn for 2 turns, and grants a 30% damage bonus for 1 turn.
+51184	Red Stinger	Attacks the current target, causes it to bleed for 20% HP per turn for 2 turns, and gains a 40% damage bonus for 1 turn.
+51185	Red Stinger	Attacks the current target, inflicting 25% bleeding per turn for 2 turns and granting a 50% damage bonus for 1 turn.
+51191	A.K.E.E.	Attacks all enemies in the front row with a 10% chance to immobilize them for 1 turn. Restores 2 energy at the end of the turn.
+51192	A.K.E.E.	Attack all enemies in the front row horizontally with a 20% chance to stun them for 1 turn. Recover 2 energy at the end of the turn.
+51193	A.K.E.E.	Attacks all enemies in the front row with a 30% chance to immobilize them for 1 turn, and restores 2 energy at the end of the turn.
+51194	A.K.E.E.	Attacks all enemies in the front row with a 40% chance to immobilize them for 1 turn. Restores 2 energy at the end of the turn.
+51195	A.K.E.E.	Attacks all enemies in the same horizontal row ahead with a 50% chance to immobilize them for 1 turn, and restores 2 energy at the end of the turn.
+51201	Peashooter	Continuously fires a barrage of peas, dealing massive damage to the current target.
+51202	Peashooter	Continuously fires a barrage of peas, dealing massive damage to the current target.
+51203	Peashooter	Continuously fires a barrage of peas, dealing massive damage to the current target.
+51204	Peashooter	Continuously fires a barrage of peas, dealing massive damage to the current target.
+51205	Peashooter	Continuously fires a barrage of peas, dealing massive damage to the current target.
+51211	Repeater	Deals damage to the current target with a 50% chance to Root them for 2 turns.
+51212	Repeater	Deals damage to the current target and has a 55% chance to immobilize them for 2 turns.
+51213	Repeater	Deals damage to the current target with a 60% chance to immobilize them for 2 turns.
+51214	Repeater	Deals damage to the current target with a 65% chance to immobilize them for 2 turns.
+51215	Repeater	Deals damage to the current target with a 70% chance to immobilize them for 2 turns.
+51221	Electric Blueberry	Prioritizes attacking 5 random units in the middle and rear columns, reducing their damage and healing output by 15% for 1 turn.
+51222	Electric Blueberry	Prioritizes attacking 5 random units in the middle and rear of the formation, reducing their damage and healing capacity by 25% for 1 turn.
+51223	Electric Blueberry	Prioritizes attacking 5 random units in the middle and rear columns, reducing their damage and healing output by 35% for 1 turn.
+51224	Electric Blueberry	Prioritizes attacking 5 random units in the middle and rear rows, reducing their damage and healing capacity by 45% for 1 turn.
+51225	Electric Blueberry	Prioritizes attacking 5 random units in the middle and back rows, reducing their damage and healing output by 55% for 1 turn.
+51231	Agave	Attacks all enemy units, inflicting 10% Vulnerable for 1 turn. Restores 2 energy at the end of the turn.
+51232	Agave	Attacks all enemy units, inflicting 20% increased damage taken for 1 turn, and restores 2 energy at the end of the turn.
+51233	Agave	Attacks all enemy units, inflicting 30% Vulnerable for 1 turn. Restores 2 energy at the end of the turn.
+51234	Agave	Attacks all enemy units, inflicting 40% vulnerability for 1 turn, and restores 2 energy at the end of the turn.
+51235	Agave	Attacks all enemy units, inflicting 50% vulnerability for 1 turn, and recovers 2 energy at the end of the turn.
+51241	Moonflower	Heals all allies with moonlight power, clears teammates' immobilization and silence statuses, and grants them a 10% damage bonus for 1 turn.
+51242	Moonflower	Heal all allies with moonlight, cleanse teammates' stun and silence effects, and grant them a 20% damage bonus for 1 turn.
+51243	Moonflower	Heals all allies with the power of moonlight, removes immobilization and silence from teammates, and grants them a 30% damage bonus for 1 turn.
+51244	Moonflower	Heal all allies with moonlight, cleanse teammates' stun and silence effects, and grant them a 40% damage bonus for 1 turn.
+51245	Moonflower	Heals all allies with the power of moonlight, cleanses allies of stun and silence effects, and grants them a 50% damage bonus for 1 turn.
+51251	Aceparagus	Lashes out a powerful strike at the current target, granting an extra 10% Critical Hit and 10% damage bonus for this attack.
+51252	Aceparagus	Lauches a powerful strike at the current target, gaining an extra 20% critical hit rate and 15% damage bonus for this attack.
+51253	Aceparagus	Lashes out with a powerful blow at the current target, gaining an additional 30% critical hit rate and 20% damage bonus for this attack.
+51254	Aceparagus	Lashes out a powerful strike at the current target, granting this attack an extra 40% critical chance and 25% damage bonus.
+51255	Aceparagus	Delivers a heavy blow to the current target, gaining an additional 50% crit and 30% damage bonus for this attack.
+51301	Wall-nut	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+51302	Wall-nut	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+51303	Wall-nut	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+51304	Wall-nut	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+51305	Wall-nut	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+51401	Cabbage-pult	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+51402	Cabbage-pult	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+51403	Cabbage-pult	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+51404	Cabbage-pult	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+51405	Cabbage-pult	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+51501	Potato Mine	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+51502	Potato Mine	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+51503	Potato Mine	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+51504	Potato Mine	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+51505	Potato Mine	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+51601	Bloomerang	Deals damage to all enemy units in the forward row.
+51602	Bloomerang	Deals damage to all enemy units in the forward row.
+51603	Bloomerang	Deals damage to all enemy units in the forward row.
+51604	Bloomerang	Deals damage to all enemy units in the forward row.
+51605	Bloomerang	Deals damage to all enemy units in the forward row.
+51701	Iceberg Lettuce	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+51702	Iceberg Lettuce	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+51703	Iceberg Lettuce	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+51704	Iceberg Lettuce	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+51705	Iceberg Lettuce	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+51801	Bonk Choy	Attacks the current target and increases Dodge by 1000 for 1 turn.
+51802	Bonk Choy	Attacks the current target and increases dodge by 1500 for 1 turn.
+51803	Bonk Choy	Attacks the current target and increases Dodge by 2000 for 1 turn.
+51804	Bonk Choy	Attacks the current target and increases Evasion by 2500 for 1 turn.
+51805	Bonk Choy	Attacks the current target and increases Dodge by 3000 for 1 turn.
+51901	Grave Buster	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+51902	Grave Buster	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+51903	Grave Buster	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+51904	Grave Buster	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+51905	Grave Buster	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+52001	Magic Beanstalk	Fires a massive energy orb at the current target, dealing extra damage to shields.
+52002	Magic Beanstalk	Fires a massive energy orb at the current target, dealing extra damage to shields.
+52003	Magic Beanstalk	Fires a massive energy orb at the current target, dealing extra damage to shields.
+52004	Magic Beanstalk	Fires a massive energy orb at the current target, dealing extra damage to shields.
+52005	Magic Beanstalk	Fires a massive energy orb at the current target, dealing extra damage to shields.
+53101	Bruce Bamboo	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+53102	Bruce Bamboo	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+53103	Bruce Bamboo	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+53104	Bruce Bamboo	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+53105	Bruce Bamboo	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+53201	Carrocket	Fires a rocket at the opponent, randomly striking 3 enemy units.
+53202	Carrocket	Fires a rocket at the opponent, randomly striking 3 enemy units.
+53203	Carrocket	Fires a rocket at the opponent, randomly striking 3 enemy units.
+53204	Carrocket	Fires a rocket at the opponent, randomly striking 3 enemy units.
+53205	Carrocket	Fires a rocket at the opponent, randomly striking 3 enemy units.
+53301	Explodelion	Spins wildly, dealing damage to all enemy units in the current target's column.
+53302	Explodelion	Spins wildly, dealing damage to all enemy units in the current target's column.
+53303	Explodelion	Spins wildly, dealing damage to all enemy units in the current target's column.
+53304	Explodelion	Spins wildly, dealing damage to all enemy units in the current target's column.
+53305	Explodelion	Spins wildly, dealing damage to all enemy units in the current target's column.
+53601	Venus Flytrap	Deals damage to the current target and causes it to bleed for 10% HP per turn for 3 turns.
+53602	Venus Flytrap	Deals damage to the current target and causes them to bleed for 12% per turn for 3 turns.
+53603	Venus Flytrap	Deals damage to the current target and inflicts 14% bleeding per turn for 3 turns.
+53604	Venus Flytrap	Deals damage to the current target and inflicts 16% bleeding per turn for 3 turns.
+53605	Venus Flytrap	Deals damage to the current target, causing them to bleed for 18% per turn for 3 turns.
+53701	Squash	Slams the current target, dealing damage and reducing its defense by 15% for 1 turn.
+53702	Squash	Slams the current target, dealing damage and reducing its defense by 18% for 1 turn.
+53703	Squash	Slam down hard on the current target, dealing damage and reducing its defense by 21% for 1 turn.
+53704	Squash	Slam the current target, dealing damage and reducing its defense by 24% for 1 turn.
+53705	Squash	Slams the current target, dealing damage and reducing its defense by 27% for 1 turn.
+53901	Snapdragon	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+53902	Snapdragon	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+53903	Snapdragon	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+53904	Snapdragon	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+53905	Snapdragon	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+54101	Spikeweed	Attacks the current target and gains 50% lifesteal.
+54102	Spikeweed	Attacks the current target and gains 55% lifesteal.
+54103	Spikeweed	Attacks the current target and gains 60% lifesteal.
+54104	Spikeweed	Attacks the current target and gains 65% lifesteal.
+54105	Spikeweed	Attacks the current target and gains 70% lifesteal.
+54201	Spikeweed	Attacks the current target and gains 35% reflect damage for 1 turn.
+54202	Spikeweed	Attacks the current target and gains 40% damage reflection for 1 turn.
+54203	Spikeweed	Attacks the current target and gains a 45% damage reflection effect for 1 turn.
+54204	Spikeweed	Attacks the current target and gains 50% Thorns (Damage Reflection) for 1 turn.
+54205	Spikeweed	Attacks the current target and gains 55% damage reflection for 1 turn.
+54301	Kernel-pult	Hurls Kernel-pult mash to randomly strike 2 targets.
+54302	Kernel-pult	Hurls Kernel-pult mash to randomly strike 2 targets.
+54303	Kernel-pult	Hurls Kernel-pult mash to randomly strike 2 targets.
+54304	Kernel-pult	Hurls Kernel-pult mash to randomly strike 2 targets.
+54305	Kernel-pult	Hurls Kernel-pult mash to randomly strike 2 targets.
+54401	Spring Bean	Jumps up and shakes the ground, dealing damage to all enemy units.
+54402	Spring Bean	Jump up and shake the ground, dealing damage to all enemies.
+54403	Spring Bean	Jump up and shake the ground, dealing damage to all enemies.
+54404	Spring Bean	Jump up and shake the ground, dealing damage to all enemies.
+54405	Spring Bean	Jump up and shake the ground, dealing damage to all enemies.
+54501	Threepeater	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+54502	Threepeater	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+54503	Threepeater	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+54504	Threepeater	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+54505	Threepeater	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+54601	Coconut Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+54602	Coconut Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+54603	Coconut Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+54604	Coconut Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+54605	Coconut Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+54701	Pomegranate-pult	Attacks the current target and increases own attack by 10% for 2 turns.
+54702	Pomegranate-pult	Attacks the current target and increases own attack by 12% for 2 turns.
+54703	Pomegranate-pult	Attacks the current target and increases own Attack by 15% for 2 turns.
+54704	Pomegranate-pult	Attacks the current target and increases own attack by 18% for 2 turns.
+54705	Pomegranate-pult	Attacks the current target and increases own attack by 20% for 2 turns.
+54901	Durian	Attacks the current target and increases all allies' max HP by 10% for 2 turns.
+54902	Durian	Attack the current target and increase max HP of all allies by 12% for 2 turns.
+54903	Durian	Attacks the current target and increases all allies' max HP by 15% for 2 turns.
+54904	Durian	Attacks the current target and increases Max HP of all allies by 18% for 2 turns.
+54905	Durian	Attack the current target and increase max HP of all allies by 20% for 2 turns.
+55301	Snow Pea	Attacks the current target and immobilizes them for 1 turn.
+55302	Snow Pea	Attacks the current target and immobilizes them for 1 turn.
+55303	Snow Pea	Attacks the current target and immobilizes them for 1 turn.
+55304	Snow Pea	Attacks the current target and immobilizes them for 1 turn.
+55305	Snow Pea	Attacks the current target and immobilizes them for 1 turn.
+55401	Repeater	Randomly selects 2 front-row enemies and deals damage to each.
+55402	Repeater	Randomly selects 2 front-row enemies and deals damage to each.
+55403	Repeater	Randomly selects 2 front-row enemies and deals damage to each.
+55404	Repeater	Randomly selects 2 front-row enemies and deals damage to each.
+55405	Repeater	Randomly selects 2 front-row enemies and deals damage to each.
+55501	Pea Pod	Deals heavy damage to the current target and decreases its defense by 15% for 1 turn.
+55502	Pea Pod	Deal heavy damage to the current target and reduce its defense by 18% for 1 turn.
+55503	Pea Pod	Deals heavy damage to the current target and decreases its defense by 21% for 1 turn.
+55504	Pea Pod	Deals massive damage to the current target and reduces its defense by 24% for 1 turn.
+55505	Pea Pod	Deals heavy damage to the current target and reduces its defense by 27% for 1 turn.
+55601	Tall-nut	Equips a steel helmet, gaining a shield equal to 50% of current health.
+55602	Tall-nut	Equips a steel helmet, gaining a shield equal to 50% of current health.
+55603	Tall-nut	Equips a steel helmet, gaining a shield equal to 50% of current health.
+55604	Tall-nut	Equips a steel helmet, gaining a shield equal to 50% of current health.
+55605	Tall-nut	Equips a steel helmet, gaining a shield equal to 50% of current health.
+55701	Cherry Bomb	Massive explosion, dealing massive damage to the current target.
+55702	Cherry Bomb	Massive explosion, dealing massive damage to the current target.
+55703	Cherry Bomb	Massive explosion, dealing massive damage to the current target.
+55704	Cherry Bomb	Massive explosion, dealing massive damage to the current target.
+55705	Cherry Bomb	Massive explosion, dealing massive damage to the current target.
+55901	Stallia	Deals massive damage to the current target and reduces the damage capability of all units behind it by 12% for 1 turn.
+55902	Stallia	Deals massive damage to the current target and reduces the damage of all units behind it by 14% for 1 turn.
+55903	Stallia	Deals massive damage to the current target and reduces the damage capability of all units behind it by 16% for 1 turn.
+55904	Stallia	Deals heavy damage to the current target and reduces the attack power of all units behind it by 18% for 1 turn.
+55905	Stallia	Deals heavy damage to the current target and weakens the damage output of all units behind it by 20% for 1 turn.
+56001	Torchwood	Increase damage output of allies at the rear of the formation by 20% for 1 turn.
+56002	Torchwood	Increases damage dealt by allies in the back row by 25% for 1 turn.
+56003	Torchwood	提高友方阵尾单位伤害能力30%，效果持续1回合
+56004	Torchwood	Increases damage dealt by allies at the back of the formation by 35% for 1 turn.
+56005	Torchwood	Increases the damage of the ally at the rear of the formation by 40% for 1 turn.
+56101	Lightning Reed	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+56102	Lightning Reed	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+56103	Lightning Reed	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+56104	Lightning Reed	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+56105	Lightning Reed	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+56201	Starfruit	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+56202	Starfruit	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+56203	Starfruit	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+56204	Starfruit	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+56205	Starfruit	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+56301	Laser Bean	Deals damage to all units in the same horizontal row ahead, with a 35% chance to immobilize targets for 2 turns.
+56302	Laser Bean	Deals damage to all units in the front row, with a 38% chance to stun targets for 2 turns.
+56303	Laser Bean	Deals damage to all units in the forward row, with a 42% chance to stun targets for 2 turns.
+56304	Laser Bean	Deals damage to all units in the front row, with a 46% chance to immobilize the targets for 2 turns.
+56305	Laser Bean	Deals damage to all units in the front row, with a 50% chance to immobilize the targets for 2 turns.
+56401	Citron	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+56402	Citron	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+56403	Citron	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+56404	Citron	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+56405	Citron	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+56501	Infi-nut	Attack the current target and increase self damage reduction by 31% for 1 turn.
+56502	Infi-nut	Attacks the current target and increases own Damage Reduction by 34% for 1 turn.
+56503	Infi-nut	Attacks the current target and increases self damage reduction by 37% for 1 turn.
+56504	Infi-nut	Attacks the current target and increases self-damage reduction by 40% for 1 turn.
+56505	Infi-nut	Attacks the current target and increases own damage reduction by 43% for 1 turn.
+56601	Magnifying Grass	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+56602	Magnifying Grass	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+56603	Magnifying Grass	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+56604	Magnifying Grass	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+56605	Magnifying Grass	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+56701	Jalapeno	Consumes 35% of current health to deal heavy damage to all enemies in the front row.
+56702	Jalapeno	Consumes 30% of current health to deal massive damage to all enemies in the forward row.
+56703	Jalapeno	Consumes 25% of current health to deal heavy damage to all enemies in the front row.
+56704	Jalapeno	Sacrifices 20% of current health to deal massive damage to all enemies in the front row.
+56705	Jalapeno	Reduces current HP by 15% to deal massive damage to all enemies in the front row.
+56901	Winter Melon	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+56902	Winter Melon	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+56903	Winter Melon	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+56904	Winter Melon	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+56905	Winter Melon	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+57201	Impear	Attacks the last enemy in the front row and silences them for 2 turns.
+57202	Impear	Attacks the last enemy in the front row and silences them for 2 turns.
+57203	Impear	Attacks the last enemy in the front row and silences them for 2 turns.
+57204	Impear	Attacks the last enemy in the front row and silences them for 2 turns.
+57205	Impear	Attacks the last enemy in the front row and silences them for 2 turns.
+57401	Nitro-shroom	Attacks the current target and increases self-critical hit rate by 16% for 2 turns.
+57402	Nitro-shroom	Attacks the current target and increases own Critical Hit by 20% for 2 turns.
+57403	Nitro-shroom	Attacks the current target and increases self-crit rate by 24% for 2 turns.
+57404	Nitro-shroom	Attacks the current target and increases own Critical Strike chance by 28% for 2 turns.
+57405	Nitro-shroom	Attacks the current target and increases own critical strike rate by 32% for 2 turns.
+57501	Chomper	Attacks and banishes the current target, making it disappear for 1 turn.
+57502	Chomper	Attacks and banishes the current target, making it disappear for 1 turn.
+57503	Chomper	Attacks and banishes the current target, making it disappear for 1 turn.
+57504	Chomper	Attacks and banishes the current target, making it disappear for 1 turn.
+57505	Chomper	Attacks and banishes the current target, making it disappear for 1 turn.
+57601	Tile Turnip	Heals 1 allied unit with the lowest health percentage.
+57602	Tile Turnip	Heals 2 allied units with the lowest HP percentage.
+57603	Tile Turnip	Heals the 3 allied units with the lowest percentage of health.
+57604	Tile Turnip	Heals the 4 allied units with the lowest HP percentage.
+57605	Tile Turnip	Heals the 5 allied units with the lowest HP percentage.
+57701	Melon-pult	Attacks the current target and deals 50% splash damage to surrounding units.
+57702	Melon-pult	Attacks the current target and deals 50% splash damage to surrounding units.
+57703	Melon-pult	Attacks the current target and deals 50% splash damage to surrounding units.
+57704	Melon-pult	Attacks the current target and deals 50% splash damage to surrounding units.
+57705	Melon-pult	Attacks the current target and deals 50% splash damage to surrounding units.
+57801	Cattail	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+57802	Cattail	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+57803	Cattail	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+57804	Cattail	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+57805	Cattail	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+57901	Ganoderma	Grants 2 energy to 3 random allied units whose energy is not full, with a 65% success rate.
+57902	Ganoderma	Grant 2 energy to 3 random allies whose energy is not full, with a 70% success rate.
+57903	Ganoderma	Grants 2 energy to 3 random allied units whose energy is not full, with a 75% success rate.
+57904	Ganoderma	Grants 2 energy to 3 random allied units whose energy is not full, with an 80% success rate.
+57905	Ganoderma	Grants 2 energy to 3 random allies whose energy is not full, with an 85% success rate.
+58001	Banana Tree	Deals multi-hit damage to all enemies in the front row, with a 30% chance to fully restore energy.
+58002	Banana Tree	Deals multi-hit damage to all enemies in the front row, with a 35% chance to fully restore energy.
+58003	Banana Tree	Deals multi-hit attacks to all enemies in the horizontal row ahead, with a 40% chance to fully restore energy.
+58004	Banana Tree	Performs multi-hit attacks on all enemies in the front row, with a 50% chance to fully recover energy.
+58005	Banana Tree	Deals multi-stage attacks to all enemies in the front row, with a 66% chance to fully restore energy.
+58101	Oxygen Algae	Heals the 3 allied units with the lowest HP percentage, and restores 2% of their HP per turn for 2 turns.
+58102	Oxygen Algae	Heals the 3 allied units with the lowest HP percentage, and restores 2% of their HP per turn for 2 turns.
+58103	Oxygen Algae	Heals 3 allied units with the lowest HP percentage and grants them 3% HP regeneration per turn for 2 turns.
+58104	Oxygen Algae	Heals the 3 allied units with the lowest HP percentage, and restores 4% of their HP per turn for 2 turns.
+58105	Oxygen Algae	Heals the 3 allied units with the lowest HP percentages, making them recover 5% HP per turn for 2 turns.
+58301	Electric Sea-shroom	Attacks the rearmost enemy in the front row and drains 1 energy from them.
+58302	Electric Sea-shroom	Attacks the rearmost enemy in the front row and drains 1 energy from them.
+58303	Electric Sea-shroom	Attacks the rearmost enemy in the front row and drains 1 energy from them.
+58304	Electric Sea-shroom	Attacks the rearmost enemy in the front row and drains 1 energy from them.
+58305	Electric Sea-shroom	Attacks the last enemy in the front row and drains 2 energy from them.
+58501	Starfruit	Deal heavy damage to the current target and gain 100% lifesteal.
+58502	Starfruit	Deal heavy damage to the current target and gain 100% lifesteal.
+58503	Starfruit	Deal heavy damage to the current target and gain 100% lifesteal.
+58504	Starfruit	Deal heavy damage to the current target and gain 100% lifesteal.
+58505	Starfruit	Deal heavy damage to the current target and gain 100% lifesteal.
+58601	Lychee Drill	Performs a single-target attack and increases all allies' Damage Reduction by 8% for 1 turn.
+58602	Lychee Drill	Unleashes a single-target attack while increasing damage reduction for all allied units by 12% for 1 turn.
+58603	Lychee Drill	Performs a single-target attack and increases damage reduction for all allies by 16% for 1 turn.
+58604	Lychee Drill	Unleashes a single-target attack and increases damage reduction for all allies by 20% for 1 turn.
+58605	Lychee Drill	Performs a single-target attack and increases all allies' damage reduction by 24% for 1 turn.
+58701	Sea Anemone	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+58702	Sea Anemone	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+58703	Sea Anemone	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+58704	Sea Anemone	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+58705	Sea Anemone	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+58801	Potato Mine	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+58802	Potato Mine	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+58803	Potato Mine	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+58804	Potato Mine	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+58805	Potato Mine	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+58901	Rose Swordfighter	Prioritizes attacking the enemy captain and gains 35% Lifesteal. Using this skill costs no energy.
+58902	Rose Swordfighter	Prioritizes attacking the enemy captain, grants 40% lifesteal, and consumes no energy when using skills.
+58903	Rose Swordfighter	Prioritizes attacking the enemy captain, gains 45% lifesteal, and consumes no energy when casting skills.
+58904	Rose Swordfighter	Prioritizes attacking the enemy captain, gains 50% Lifesteal, and consumes no energy when using skills.
+58905	Rose Swordfighter	Prioritizes attacking the enemy captain and gains 55% Lifesteal. Using this skill costs no energy.
+59001	Clivia	Heals all allied units and cleanses teammates of immobilization and silence effects.
+59002	Clivia	Heals all allied units and cleanses teammates of immobilization and silence effects.
+59003	Clivia	Heals all allied units and cleanses teammates of immobilization and silence effects.
+59004	Clivia	Heals all allied units and cleanses teammates of immobilization and silence effects.
+59005	Clivia	Heals all allied units and cleanses teammates of immobilization and silence effects.
+59101	Sap-fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+59102	Sap-fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+59103	Sap-fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+59104	Sap-fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+59105	Sap-fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+59201	Acid Lemon	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+59202	Acid Lemon	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+59203	Acid Lemon	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+59204	Acid Lemon	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+59205	Acid Lemon	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+59301	Magic-shroom	Attacks the current target with a 10% chance to immobilize it for 1 turn. Skill activation costs no energy.
+59302	Magic-shroom	Attacks the current target with a 15% chance to immobilize them for 1 turn. This skill costs no energy to activate.
+59303	Magic-shroom	Attacks the current target and has a 20% chance to immobilize them for 1 turn, consuming no energy when using skills.
+59304	Magic-shroom	Attacks the current target and has a 25% chance to immobilize them for 1 turn, consuming no energy when using skills.
+59305	Magic-shroom	Attacks the current target with a 33% chance to immobilize them for 1 turn. Using this skill costs no energy.
+59401	Fire Peashooter	Fires a flaming pea, dealing damage to the current target and reducing its defense by 15% for 2 turns.
+59402	Fire Peashooter	Fires a fire pea, dealing damage to the current target and reducing its defense by 18% for 2 turns.
+59403	Fire Peashooter	Fires a flaming pea, dealing damage to the current target and reducing its defense by 21% for 2 turns.
+59404	Fire Peashooter	Fires a fire pea, dealing damage to the current target and reducing its defense by 24% for 2 turns.
+59405	Fire Peashooter	Fires a flaming pea, dealing damage to the current target and reducing their defense by 27% for 2 turns.
+59501	Ghost Pepper	Lets out a terrifying screech, dealing damage to 1 random enemy unit with energy and reducing its energy by 1 segment.
+59502	Ghost Pepper	Lets out a terrifying screech, dealing damage to 2 random enemy units with energy and reducing their energy by 1 segment.
+59503	Ghost Pepper	Lets out a terrifying screech, dealing damage to 3 random enemy units with energy and reducing their energy by 1 segment.
+59504	Ghost Pepper	Emits a terrifying screech, randomly damaging 4 enemy units with energy and reducing their energy by 1 segment.
+59505	Ghost Pepper	Lets out a terrifying screech, randomly damaging 5 enemy units with energy and draining 1 energy from them.
+59601	Guacodile	Attack the last enemy in the front horizontal row, causing them to bleed 10% per turn for 3 turns.
+59602	Guacodile	Attacks the last enemy in the front row, causing them to bleed for 12% per turn for 3 turns.
+59603	Guacodile	Attacks the rearmost enemy in the front row, causing them to bleed for 14% health each turn for 3 turns.
+59604	Guacodile	Attacks the last enemy in the front row, causing them to bleed for 16% per turn for 3 turns.
+59605	Guacodile	Attack the last enemy in the front horizontal row, causing them to bleed 18% per turn for 3 turns.
+59701	Hurrikale	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+59702	Hurrikale	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+59703	Hurrikale	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+59704	Hurrikale	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+59705	Hurrikale	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+59801	Lantern	Prioritizes attacking 2 random units in the enemy's middle and back rows, with a 30% chance to immobilize them for 2 turns.
+59802	Lantern	Prioritizes attacking 2 random units in the enemy's middle and back rows, with a 30% chance to immobilize them for 2 turns.
+59803	Lantern	Prioritizes attacking 3 random units in the middle and rear of the enemy formation, with a 30% chance to immobilize them for 2 turns.
+59804	Lantern	Prioritizes attacking 4 random units in the middle and rear of the enemy formation, with a 30% chance to stun them for 2 turns.
+59805	Lantern	Prioritizes attacking 5 random units in the middle and back of the enemy formation, with a 30% chance to immobilize them for 2 turns.
+59901	AKernel-pult Archer	Attacks the current target and inflicts 15% vulnerability for 2 turns. Restores 2 energy at the end of the turn.
+59902	AKernel-pult Archer	Attacks the current target, inflicting 20% vulnerability for 2 turns, and restores 2 energy at the end of the turn.
+59903	AKernel-pult Archer	Attacks the current target and inflicts 25% vulnerability for 2 turns, restoring 2 energy at the end of the turn.
+59904	AKernel-pult Archer	Attacks the current target, inflicting 30% vulnerability for 2 turns, and restores 2 energy at the end of the turn.
+59905	AKernel-pult Archer	Attacks the current target and inflicts 35% vulnerability for 2 turns. Restores 2 energy at the end of the turn.
+101105	Sunflower	Heals the 3 allied units with the lowest percentage of health.
+101115	Twin Sunflower	Heals all allied units.
+101125	Spikeweed	Attacks 3 random enemy units, reducing their damage dealt and healing output by 50% for 2 turns.
+101135	Bell Pepper-pult	Attacks all enemies in the front row, with a 60% chance to cause them to bleed for 18% per turn for 3 turns.
+101145	Pumpkin Witch	Randomly attacks 3 enemy units with a 50% chance to immobilize them for 1 turn.
+101155	Kung Fu Carrot	Boosts the 4 allied units with the lowest HP percentages, granting them a shield and a 30% damage reflection effect for 2 turns.
+101165	Toadstool	Attacks the current target, granting all allies a 20% HP bonus and 35% damage reduction for 2 turns.
+101175	Bell Grass	Randomly attacks 5 enemy units with a 20% chance to exile them for 1 turn, and restores 2 energy at the end of the turn.
+101185	Red Stinger	Attacks the current target, inflicting 25% bleeding per turn for 2 turns and granting a 50% damage bonus for 1 turn.
+101195	A.K.E.E.	Attacks all enemies in the same horizontal row ahead with a 50% chance to immobilize them for 1 turn, and restores 2 energy at the end of the turn.
+101205	Peashooter	Continuously fires a barrage of peas, dealing massive damage to the current target.
+101215	Repeater	Deals damage to the current target with a 70% chance to immobilize them for 2 turns.
+101225	Electric Blueberry	Prioritizes attacking 5 random units in the middle and back rows, reducing their damage and healing output by 55% for 1 turn.
+101235	Agave	Attacks all enemy units, inflicting 50% vulnerability for 1 turn, and recovers 2 energy at the end of the turn.
+101245	Moonflower	Heals all allies with the power of moonlight, cleanses allies of stun and silence effects, and grants them a 50% damage bonus for 1 turn.
+101255	Aceparagus	Delivers a heavy blow to the current target, gaining an additional 50% crit and 30% damage bonus for this attack.
+101305	Wall-nut	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+101405	Cabbage-pult	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+101505	Potato Mine	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+101605	Bloomerang	Deals damage to all enemy units in the forward row.
+101705	Iceberg Lettuce	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+101805	Bonk Choy	Attacks the current target and increases Dodge by 3000 for 1 turn.
+101905	Grave Buster	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+102005	Magic Beanstalk	Fires a massive energy orb at the current target, dealing extra damage to shields.
+103105	Bruce Bamboo	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+103205	Carrocket	Fires a rocket at the opponent, randomly striking 3 enemy units.
+103305	Explodelion	Spins wildly, dealing damage to all enemy units in the current target's column.
+103605	Venus Flytrap	Deals damage to the current target, causing them to bleed for 18% per turn for 3 turns.
+103705	Squash	Slams the current target, dealing damage and reducing its defense by 27% for 1 turn.
+103905	Snapdragon	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+104105	Spikeweed	Attacks the current target and gains 70% lifesteal.
+104205	Spikeweed	Attacks the current target and gains 55% damage reflection for 1 turn.
+104305	Kernel-pult	Hurls Kernel-pult mash to randomly strike 2 targets.
+104405	Spring Bean	Jump up and shake the ground, dealing damage to all enemies.
+104505	Threepeater	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+104605	Coconut Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+104705	Pomegranate-pult	Attacks the current target and gains a 20% attack bonus for 2 turns.
+104905	Durian	Attacks the current target and grants all allied units a 20% HP bonus for 2 turns.
+105305	Snow Pea	Attacks the current target and immobilizes them for 1 turn.
+105405	Repeater	Randomly selects 2 front-row enemies and deals damage to each.
+105505	Pea Pod	Deals heavy damage to the current target and reduces its defense by 27% for 1 turn.
+105605	Tall-nut	Equips a steel helmet, gaining a shield equal to 50% of current health.
+105705	Cherry Bomb	Massive explosion, dealing massive damage to the current target.
+105905	Stallia	Deals heavy damage to the current target and weakens the damage output of all units behind it by 20% for 1 turn.
+106005	Torchwood	Increases the damage of the ally at the rear of the formation by 40% for 1 turn.
+106105	Lightning Reed	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+106205	Starfruit	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+106305	Laser Bean	Deals damage to all units in the front row, with a 50% chance to immobilize the targets for 2 turns.
+106405	Citron	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+106505	Infi-nut	Attacks the current target and increases own damage reduction by 43% for 1 turn.
+106605	Magnifying Grass	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+106705	Jalapeno	Reduces current HP by 15% to deal massive damage to all enemies in the front row.
+106905	Winter Melon	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+107205	Impear	Attacks the last enemy in the front row and silences them for 2 turns.
+107405	Nitro-shroom	Attacks the current target and gains a 32% critical hit bonus for 2 turns.
+107505	Chomper	Attacks and banishes the current target, making it disappear for 1 turn.
+107605	Tile Turnip	Heals the 5 allied units with the lowest HP percentage.
+107705	Melon-pult	Attacks the current target and deals 50% splash damage to surrounding units.
+107805	Cattail	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+107905	Ganoderma	Grants 2 energy to 3 random allies whose energy is not full, with an 85% success rate.
+108005	Banana Tree	Deals multi-stage attacks to all enemies in the front row, with a 66% chance to fully restore energy.
+108105	Oxygen Algae	Heals the 3 allied units with the lowest HP percentages, making them recover 5% HP per turn for 2 turns.
+108305	Electric Sea-shroom	Attacks the last enemy in the front row and drains 2 energy from them.
+108505	Starfruit	Deal heavy damage to the current target and gain 100% lifesteal.
+108605	Lychee Drill	Unleash a single-target attack and grant all allies 24% damage reduction for 1 turn.
+108705	Sea Anemone	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+108805	Potato Mine	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+108905	Rose Swordfighter	Prioritizes attacking the enemy captain and gains 55% Lifesteal. Using this skill costs no energy.
+109005	Clivia	Heals all allied units and cleanses teammates of immobilization and silence effects.
+109105	Sap-fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+109205	Acid Lemon	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+109305	Magic-shroom	Attacks the current target with a 33% chance to immobilize them for 1 turn. Using this skill costs no energy.
+109405	Fire Peashooter	Fires a fire pea, dealing damage to the current target and reducing their defense by 27% for 2 turns.
+109505	Ghost Pepper	Lets out a terrifying screech, randomly dealing damage to 5 enemy units with energy and reducing their energy by 1 bar.
+109605	Guacodile	Attack the last enemy in the front horizontal row, causing them to bleed 18% per turn for 3 turns.
+109705	Hurrikale	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+109805	Lantern	Prioritizes attacking 5 random units in the middle and back of the enemy formation, with a 30% chance to immobilize them for 2 turns.
+109905	AKernel-pult Archer	Attacks the current target and inflicts 35% vulnerability for 2 turns. Restores 2 energy at the end of the turn.
+201105	Sunflower	Heals the 3 allied units with the lowest percentage of health.
+201115	Twin Sunflower	Heals all allied units.
+201125	Spikeweed	Attacks 3 random enemy units, reducing their damage dealt and healing output by 50% for 2 turns.
+201135	Bell Pepper-pult	Attacks all enemies in the front row, with a 60% chance to cause them to bleed for 18% per turn for 3 turns.
+201145	Pumpkin Witch	Randomly attacks 3 enemy units with a 50% chance to immobilize them for 1 turn.
+201155	Kung Fu Carrot	Boosts the 4 allied units with the lowest HP percentages, granting them a shield and a 30% damage reflection effect for 2 turns.
+201165	Toadstool	Attacks the current target, granting all allies a 20% HP bonus and 35% damage reduction for 2 turns.
+201175	Bell Grass	Randomly attacks 5 enemy units with a 20% chance to exile them for 1 turn, and restores 2 energy at the end of the turn.
+201185	Red Stinger	Attacks the current target, inflicting 25% bleeding per turn for 2 turns and granting a 50% damage bonus for 1 turn.
+201195	A.K.E.E.	Attacks all enemies in the same horizontal row ahead with a 50% chance to immobilize them for 1 turn, and restores 2 energy at the end of the turn.
+201205	Peashooter	Continuously fires a barrage of peas, dealing massive damage to the current target.
+201215	Repeater	Deals damage to the current target with a 70% chance to immobilize them for 2 turns.
+201225	Electric Blueberry	Prioritizes attacking 5 random units in the middle and back rows, reducing their damage and healing output by 55% for 1 turn.
+201235	Agave	Attacks all enemy units, inflicting 50% vulnerability for 1 turn, and recovers 2 energy at the end of the turn.
+201245	Moonflower	Heals all allies with the power of moonlight, cleanses allies of stun and silence effects, and grants them a 50% damage bonus for 1 turn.
+201255	Aceparagus	Delivers a heavy blow to the current target, gaining an additional 50% crit and 30% damage bonus for this attack.
+201305	Wall-nut	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+201405	Cabbage-pult	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+201505	Potato Mine	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+201605	Bloomerang	Deals damage to all enemy units in the forward row.
+201705	Iceberg Lettuce	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+201805	Bonk Choy	Attacks the current target and increases Dodge by 3000 for 1 turn.
+201905	Grave Buster	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+202005	Magic Beanstalk	Fires a massive energy orb at the current target, dealing extra damage to shields.
+203105	Bruce Bamboo	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+203205	Carrocket	Fires a rocket at the opponent, randomly striking 3 enemy units.
+203305	Explodelion	Spins wildly, dealing damage to all enemy units in the current target's column.
+203605	Venus Flytrap	Deals damage to the current target, causing them to bleed for 18% per turn for 3 turns.
+203705	Squash	Slams the current target, dealing damage and reducing its defense by 27% for 1 turn.
+203905	Snapdragon	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+204105	Spikeweed	Attacks the current target and gains 70% lifesteal.
+204205	Spikeweed	Attacks the current target and gains 55% damage reflection for 1 turn.
+204305	Kernel-pult	Hurls Kernel-pult mash to randomly strike 2 targets.
+204405	Spring Bean	Jump up and shake the ground, dealing damage to all enemies.
+204505	Threepeater	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+204605	Coconut Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+204705	Pomegranate-pult	Attacks the current target and gains a 20% attack bonus for 2 turns.
+204905	Durian	Attacks the current target and grants all allied units a 20% HP bonus for 2 turns.
+205305	Snow Pea	Attacks the current target and immobilizes them for 1 turn.
+205405	Repeater	Randomly selects 2 front-row enemies and deals damage to each.
+205505	Pea Pod	Deals heavy damage to the current target and reduces its defense by 27% for 1 turn.
+205605	Tall-nut	Equips a steel helmet, gaining a shield equal to 50% of current health.
+205705	Cherry Bomb	Massive explosion, dealing massive damage to the current target.
+205905	Stallia	Deals heavy damage to the current target and weakens the damage output of all units behind it by 20% for 1 turn.
+206005	Torchwood	Increases the damage of the ally at the rear of the formation by 40% for 1 turn.
+206105	Lightning Reed	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+206205	Starfruit	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+206305	Laser Bean	Deals damage to all units in the front row, with a 50% chance to immobilize the targets for 2 turns.
+206405	Citron	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+206505	Infi-nut	Attacks the current target and increases own damage reduction by 43% for 1 turn.
+206605	Magnifying Grass	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+206705	Jalapeno	Reduces current HP by 15% to deal massive damage to all enemies in the front row.
+206905	Winter Melon	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+207205	Impear	Attacks the last enemy in the front row and silences them for 2 turns.
+207405	Nitro-shroom	Attacks the current target and gains a 32% critical hit bonus for 2 turns.
+207505	Chomper	Attacks and banishes the current target, making it disappear for 1 turn.
+207605	Tile Turnip	Heals the 5 allied units with the lowest HP percentage.
+207705	Melon-pult	Attacks the current target and deals 50% splash damage to surrounding units.
+207805	Cattail	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+207905	Ganoderma	Grants 2 energy to 3 random allies whose energy is not full, with an 85% success rate.
+208005	Banana Tree	Deals multi-stage attacks to all enemies in the front row, with a 66% chance to fully restore energy.
+208105	Oxygen Algae	Heals the 3 allied units with the lowest HP percentages, making them recover 5% HP per turn for 2 turns.
+208305	Electric Sea-shroom	Attacks the last enemy in the front row and drains 2 energy from them.
+208505	Starfruit	Deal heavy damage to the current target and gain 100% lifesteal.
+208605	Lychee Drill	Unleash a single-target attack and grant all allies 24% damage reduction for 1 turn.
+208705	Sea Anemone	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+208805	Potato Mine	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+208905	Rose Swordfighter	Prioritizes attacking the enemy captain and gains 55% Lifesteal. Using this skill costs no energy.
+209005	Clivia	Heals all allied units and cleanses teammates of immobilization and silence effects.
+209105	Sap-fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+209205	Acid Lemon	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+209305	Magic-shroom	Attacks the current target with a 33% chance to immobilize them for 1 turn. Using this skill costs no energy.
+209405	Fire Peashooter	Fires a fire pea, dealing damage to the current target and reducing their defense by 27% for 2 turns.
+209505	Ghost Pepper	Lets out a terrifying screech, randomly dealing damage to 5 enemy units with energy and reducing their energy by 1 bar.
+209605	Guacodile	Attack the last enemy in the front horizontal row, causing them to bleed 18% per turn for 3 turns.
+209705	Hurrikale	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+209805	Lantern	Prioritizes attacking 5 random units in the middle and back of the enemy formation, with a 30% chance to immobilize them for 2 turns.
+209905	AKernel-pult Archer	Attacks the current target and inflicts 35% vulnerability for 2 turns. Restores 2 energy at the end of the turn.
+301105	Sunflower	Heals the 3 allied units with the lowest percentage of health.
+301115	Twin Sunflower	Heals all allied units.
+301125	Spikeweed	Attacks 3 random enemy units, reducing their damage dealt and healing output by 50% for 2 turns.
+301135	Bell Pepper-pult	Attacks all enemies in the front row, with a 60% chance to cause them to bleed for 18% per turn for 3 turns.
+301145	Pumpkin Witch	Randomly attacks 3 enemy units with a 50% chance to immobilize them for 1 turn.
+301155	Kung Fu Carrot	Boosts the 4 allied units with the lowest HP percentages, granting them a shield and a 30% damage reflection effect for 2 turns.
+301165	Toadstool	Attacks the current target, granting all allies a 20% HP bonus and 35% damage reduction for 2 turns.
+301175	Bell Grass	Randomly attacks 5 enemy units with a 20% chance to exile them for 1 turn, and restores 2 energy at the end of the turn.
+301185	Red Stinger	Attacks the current target, inflicting 25% bleeding per turn for 2 turns and granting a 50% damage bonus for 1 turn.
+301195	A.K.E.E.	Attacks all enemies in the same horizontal row ahead with a 50% chance to immobilize them for 1 turn, and restores 2 energy at the end of the turn.
+301205	Peashooter	Continuously fires a barrage of peas, dealing massive damage to the current target.
+301215	Repeater	Deals damage to the current target with a 70% chance to immobilize them for 2 turns.
+301225	Electric Blueberry	Prioritizes attacking 5 random units in the middle and back rows, reducing their damage and healing output by 55% for 1 turn.
+301235	Agave	Attacks all enemy units, inflicting 50% vulnerability for 1 turn, and recovers 2 energy at the end of the turn.
+301245	Moonflower	Heals all allies with the power of moonlight, cleanses allies of stun and silence effects, and grants them a 50% damage bonus for 1 turn.
+301255	Aceparagus	Delivers a heavy blow to the current target, gaining an additional 50% crit and 30% damage bonus for this attack.
+301305	Wall-nut	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+301405	Cabbage-pult	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+301505	Potato Mine	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+301605	Bloomerang	Deals damage to all enemy units in the forward row.
+301705	Iceberg Lettuce	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+301805	Bonk Choy	Attacks the current target and increases Dodge by 3000 for 1 turn.
+301905	Grave Buster	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+302005	Magic Beanstalk	Fires a massive energy orb at the current target, dealing extra damage to shields.
+303105	Bruce Bamboo	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+303205	Carrocket	Fires a rocket at the opponent, randomly striking 3 enemy units.
+303305	Explodelion	Spins wildly, dealing damage to all enemy units in the current target's column.
+303605	Venus Flytrap	Deals damage to the current target, causing them to bleed for 18% per turn for 3 turns.
+303705	Squash	Slams the current target, dealing damage and reducing its defense by 27% for 1 turn.
+303905	Snapdragon	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+304105	Spikeweed	Attacks the current target and gains 70% lifesteal.
+304205	Spikeweed	Attacks the current target and gains 55% damage reflection for 1 turn.
+304305	Kernel-pult	Hurls Kernel-pult mash to randomly strike 2 targets.
+304405	Spring Bean	Jump up and shake the ground, dealing damage to all enemies.
+304505	Threepeater	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+304605	Coconut Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+304705	Pomegranate-pult	Attacks the current target and gains a 20% attack bonus for 2 turns.
+304905	Durian	Attacks the current target and grants all allied units a 20% HP bonus for 2 turns.
+305305	Snow Pea	Attacks the current target and immobilizes them for 1 turn.
+305405	Repeater	Randomly selects 2 front-row enemies and deals damage to each.
+305505	Pea Pod	Deals heavy damage to the current target and reduces its defense by 27% for 1 turn.
+305605	Tall-nut	Equips a steel helmet, gaining a shield equal to 50% of current health.
+305705	Cherry Bomb	Massive explosion, dealing massive damage to the current target.
+305905	Stallia	Deals heavy damage to the current target and weakens the damage output of all units behind it by 20% for 1 turn.
+306005	Torchwood	Increases the damage of the ally at the rear of the formation by 40% for 1 turn.
+306105	Lightning Reed	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+306205	Starfruit	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+306305	Laser Bean	Deals damage to all units in the front row, with a 50% chance to immobilize the targets for 2 turns.
+306405	Citron	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+306505	Infi-nut	Attacks the current target and increases own damage reduction by 43% for 1 turn.
+306605	Magnifying Grass	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+306705	Jalapeno	Reduces current HP by 15% to deal massive damage to all enemies in the front row.
+306905	Winter Melon	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+307205	Impear	Attacks the last enemy in the front row and silences them for 2 turns.
+307405	Nitro-shroom	Attacks the current target and gains a 32% critical hit bonus for 2 turns.
+307505	Chomper	Attacks and banishes the current target, making it disappear for 1 turn.
+307605	Tile Turnip	Heals the 5 allied units with the lowest HP percentage.
+307705	Melon-pult	Attacks the current target and deals 50% splash damage to surrounding units.
+307805	Cattail	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+307905	Ganoderma	Grants 2 energy to 3 random allies whose energy is not full, with an 85% success rate.
+308005	Banana Tree	Deals multi-stage attacks to all enemies in the front row, with a 66% chance to fully restore energy.
+308105	Oxygen Algae	Heals the 3 allied units with the lowest HP percentages, making them recover 5% HP per turn for 2 turns.
+308305	Electric Sea-shroom	Attacks the last enemy in the front row and drains 2 energy from them.
+308505	Starfruit	Deal heavy damage to the current target and gain 100% lifesteal.
+308605	Lychee Drill	Unleash a single-target attack and grant all allies 24% damage reduction for 1 turn.
+308705	Sea Anemone	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+308805	Potato Mine	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+308905	Rose Swordfighter	Prioritizes attacking the enemy captain and gains 55% Lifesteal. Using this skill costs no energy.
+309005	Clivia	Heals all allied units and cleanses teammates of immobilization and silence effects.
+309105	Sap-fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+309205	Acid Lemon	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+309305	Magic-shroom	Attacks the current target with a 33% chance to immobilize them for 1 turn. Using this skill costs no energy.
+309405	Fire Peashooter	Fires a fire pea, dealing damage to the current target and reducing their defense by 27% for 2 turns.
+309505	Ghost Pepper	Lets out a terrifying screech, randomly dealing damage to 5 enemy units with energy and reducing their energy by 1 bar.
+309605	Guacodile	Attack the last enemy in the front horizontal row, causing them to bleed 18% per turn for 3 turns.
+309705	Hurrikale	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+309805	Lantern	Prioritizes attacking 5 random units in the middle and back of the enemy formation, with a 30% chance to immobilize them for 2 turns.
+309905	AKernel-pult Archer	Attacks the current target and inflicts 35% vulnerability for 2 turns. Restores 2 energy at the end of the turn.
+401105	Sunflower	Heals the 3 allied units with the lowest percentage of health.
+401115	Twin Sunflower	Heals all allied units.
+401125	Spikeweed	Attacks 3 random enemy units, reducing their damage dealt and healing output by 50% for 2 turns.
+401135	Bell Pepper-pult	Attacks all enemies in the front row, with a 60% chance to cause them to bleed for 18% per turn for 3 turns.
+401145	Pumpkin Witch	Randomly attacks 3 enemy units with a 50% chance to immobilize them for 1 turn.
+401155	Kung Fu Carrot	Boosts the 4 allied units with the lowest HP percentages, granting them a shield and a 30% damage reflection effect for 2 turns.
+401165	Toadstool	Attacks the current target, granting all allies a 20% HP bonus and 35% damage reduction for 2 turns.
+401175	Bell Grass	Randomly attacks 5 enemy units with a 20% chance to exile them for 1 turn, and restores 2 energy at the end of the turn.
+401185	Red Stinger	Attacks the current target, inflicting 25% bleeding per turn for 2 turns and granting a 50% damage bonus for 1 turn.
+401195	A.K.E.E.	Attacks all enemies in the same horizontal row ahead with a 50% chance to immobilize them for 1 turn, and restores 2 energy at the end of the turn.
+401205	Peashooter	Continuously fires a barrage of peas, dealing massive damage to the current target.
+401215	Repeater	Deals damage to the current target with a 70% chance to immobilize them for 2 turns.
+401225	Electric Blueberry	Prioritizes attacking 5 random units in the middle and back rows, reducing their damage and healing output by 55% for 1 turn.
+401235	Agave	Attacks all enemy units, inflicting 50% vulnerability for 1 turn, and recovers 2 energy at the end of the turn.
+401245	Moonflower	Heals all allies with the power of moonlight, cleanses allies of stun and silence effects, and grants them a 50% damage bonus for 1 turn.
+401255	Aceparagus	Delivers a heavy blow to the current target, gaining an additional 50% crit and 30% damage bonus for this attack.
+401305	Wall-nut	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+401405	Cabbage-pult	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+401505	Potato Mine	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+401605	Bloomerang	Deals damage to all enemy units in the forward row.
+401705	Iceberg Lettuce	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+401805	Bonk Choy	Attacks the current target and increases Dodge by 3000 for 1 turn.
+401905	Grave Buster	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+402005	Magic Beanstalk	Fires a massive energy orb at the current target, dealing extra damage to shields.
+403105	Bruce Bamboo	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+403205	Carrocket	Fires a rocket at the opponent, randomly striking 3 enemy units.
+403305	Explodelion	Spins wildly, dealing damage to all enemy units in the current target's column.
+403605	Venus Flytrap	Deals damage to the current target, causing them to bleed for 18% per turn for 3 turns.
+403705	Squash	Slams the current target, dealing damage and reducing its defense by 27% for 1 turn.
+403905	Snapdragon	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+404105	Spikeweed	Attacks the current target and gains 70% lifesteal.
+404205	Spikeweed	Attacks the current target and gains 55% damage reflection for 1 turn.
+404305	Kernel-pult	Hurls Kernel-pult mash to randomly strike 2 targets.
+404405	Spring Bean	Jump up and shake the ground, dealing damage to all enemies.
+404505	Threepeater	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+404605	Coconut Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+404705	Pomegranate-pult	Attacks the current target and gains a 20% attack bonus for 2 turns.
+404905	Durian	Attacks the current target and grants all allied units a 20% HP bonus for 2 turns.
+405305	Snow Pea	Attacks the current target and immobilizes them for 1 turn.
+405405	Repeater	Randomly selects 2 front-row enemies and deals damage to each.
+405505	Pea Pod	Deals heavy damage to the current target and reduces its defense by 27% for 1 turn.
+405605	Tall-nut	Equips a steel helmet, gaining a shield equal to 50% of current health.
+405705	Cherry Bomb	Massive explosion, dealing massive damage to the current target.
+405905	Stallia	Deals heavy damage to the current target and weakens the damage output of all units behind it by 20% for 1 turn.
+406005	Torchwood	Increases the damage of the ally at the rear of the formation by 40% for 1 turn.
+406105	Lightning Reed	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+406205	Starfruit	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+406305	Laser Bean	Deals damage to all units in the front row, with a 50% chance to immobilize the targets for 2 turns.
+406405	Citron	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+406505	Infi-nut	Attacks the current target and increases own damage reduction by 43% for 1 turn.
+406605	Magnifying Grass	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+406705	Jalapeno	Reduces current HP by 15% to deal massive damage to all enemies in the front row.
+406905	Winter Melon	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+407205	Impear	Attacks the last enemy in the front row and silences them for 2 turns.
+407405	Nitro-shroom	Attacks the current target and gains a 32% critical hit bonus for 2 turns.
+407505	Chomper	Attacks and banishes the current target, making it disappear for 1 turn.
+407605	Tile Turnip	Heals the 5 allied units with the lowest HP percentage.
+407705	Melon-pult	Attacks the current target and deals 50% splash damage to surrounding units.
+407805	Cattail	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+407905	Ganoderma	Grants 2 energy to 3 random allies whose energy is not full, with an 85% success rate.
+408005	Banana Tree	Deals multi-stage attacks to all enemies in the front row, with a 66% chance to fully restore energy.
+408105	Oxygen Algae	Heals the 3 allied units with the lowest HP percentages, making them recover 5% HP per turn for 2 turns.
+408305	Electric Sea-shroom	Attacks the last enemy in the front row and drains 2 energy from them.
+408505	Starfruit	Deal heavy damage to the current target and gain 100% lifesteal.
+408605	Lychee Drill	Unleash a single-target attack and grant all allies 24% damage reduction for 1 turn.
+408705	Sea Anemone	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+408805	Potato Mine	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+408905	Rose Swordfighter	Prioritizes attacking the enemy captain and gains 55% Lifesteal. Using this skill costs no energy.
+409005	Clivia	Heals all allied units and cleanses teammates of immobilization and silence effects.
+409105	Sap-fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+409205	Acid Lemon	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+409305	Magic-shroom	Attacks the current target with a 33% chance to immobilize them for 1 turn. Using this skill costs no energy.
+409405	Fire Peashooter	Fires a fire pea, dealing damage to the current target and reducing their defense by 27% for 2 turns.
+409505	Ghost Pepper	Lets out a terrifying screech, randomly dealing damage to 5 enemy units with energy and reducing their energy by 1 bar.
+409605	Guacodile	Attack the last enemy in the front horizontal row, causing them to bleed 18% per turn for 3 turns.
+409705	Hurrikale	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+409805	Lantern	Prioritizes attacking 5 random units in the middle and back of the enemy formation, with a 30% chance to immobilize them for 2 turns.
+409905	AKernel-pult Archer	Attacks the current target and inflicts 35% vulnerability for 2 turns. Restores 2 energy at the end of the turn.
+501105	Sunflower	Heals the 3 allied units with the lowest percentage of health.
+501115	Twin Sunflower	Heals all allied units.
+501125	Spikeweed	Attacks 3 random enemy units, reducing their damage dealt and healing output by 50% for 2 turns.
+501135	Bell Pepper-pult	Attacks all enemies in the front row, with a 60% chance to cause them to bleed for 18% per turn for 3 turns.
+501145	Pumpkin Witch	Randomly attacks 3 enemy units with a 50% chance to immobilize them for 1 turn.
+501155	Kung Fu Carrot	Boosts the 4 allied units with the lowest HP percentages, granting them a shield and a 30% damage reflection effect for 2 turns.
+501165	Toadstool	Attacks the current target, granting all allies a 20% HP bonus and 35% damage reduction for 2 turns.
+501175	Bell Grass	Randomly attacks 5 enemy units with a 20% chance to exile them for 1 turn, and restores 2 energy at the end of the turn.
+501185	Red Stinger	Attacks the current target, inflicting 25% bleeding per turn for 2 turns and granting a 50% damage bonus for 1 turn.
+501195	A.K.E.E.	Attacks all enemies in the same horizontal row ahead with a 50% chance to immobilize them for 1 turn, and restores 2 energy at the end of the turn.
+501205	Peashooter	Continuously fires a barrage of peas, dealing massive damage to the current target.
+501215	Repeater	Deals damage to the current target with a 70% chance to immobilize them for 2 turns.
+501225	Electric Blueberry	Prioritizes attacking 5 random units in the middle and back rows, reducing their damage and healing output by 55% for 1 turn.
+501235	Agave	Attacks all enemy units, inflicting 50% vulnerability for 1 turn, and recovers 2 energy at the end of the turn.
+501245	Moonflower	Heals all allies with the power of moonlight, cleanses allies of stun and silence effects, and grants them a 50% damage bonus for 1 turn.
+501255	Aceparagus	Delivers a heavy blow to the current target, gaining an additional 50% crit and 30% damage bonus for this attack.
+501305	Wall-nut	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+501405	Cabbage-pult	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+501505	Potato Mine	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+501605	Bloomerang	Deals damage to all enemy units in the forward row.
+501705	Iceberg Lettuce	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+501805	Bonk Choy	Attacks the current target and increases Dodge by 3000 for 1 turn.
+501905	Grave Buster	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+502005	Magic Beanstalk	Fires a massive energy orb at the current target, dealing extra damage to shields.
+503105	Bruce Bamboo	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+503205	Carrocket	Fires a rocket at the opponent, randomly striking 3 enemy units.
+503305	Explodelion	Spins wildly, dealing damage to all enemy units in the current target's column.
+503605	Venus Flytrap	Deals damage to the current target, causing them to bleed for 18% per turn for 3 turns.
+503705	Squash	Slams the current target, dealing damage and reducing its defense by 27% for 1 turn.
+503905	Snapdragon	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+504105	Spikeweed	Attacks the current target and gains 70% lifesteal.
+504205	Spikeweed	Attacks the current target and gains 55% damage reflection for 1 turn.
+504305	Kernel-pult	Hurls Kernel-pult mash to randomly strike 2 targets.
+504405	Spring Bean	Jump up and shake the ground, dealing damage to all enemies.
+504505	Threepeater	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+504605	Coconut Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+504705	Pomegranate-pult	Attacks the current target and gains a 20% attack bonus for 2 turns.
+504905	Durian	Attacks the current target and grants all allied units a 20% HP bonus for 2 turns.
+505305	Snow Pea	Attacks the current target and immobilizes them for 1 turn.
+505405	Repeater	Randomly selects 2 front-row enemies and deals damage to each.
+505505	Pea Pod	Deals heavy damage to the current target and reduces its defense by 27% for 1 turn.
+505605	Tall-nut	Equips a steel helmet, gaining a shield equal to 50% of current health.
+505705	Cherry Bomb	Massive explosion, dealing massive damage to the current target.
+505905	Stallia	Deals heavy damage to the current target and weakens the damage output of all units behind it by 20% for 1 turn.
+506005	Torchwood	Increases the damage of the ally at the rear of the formation by 40% for 1 turn.
+506105	Lightning Reed	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+506205	Starfruit	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+506305	Laser Bean	Deals damage to all units in the front row, with a 50% chance to immobilize the targets for 2 turns.
+506405	Citron	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+506505	Infi-nut	Attacks the current target and increases own damage reduction by 43% for 1 turn.
+506605	Magnifying Grass	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+506705	Jalapeno	Reduces current HP by 15% to deal massive damage to all enemies in the front row.
+506905	Winter Melon	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+507205	Impear	Attacks the last enemy in the front row and silences them for 2 turns.
+507405	Nitro-shroom	Attacks the current target and gains a 32% critical hit bonus for 2 turns.
+507505	Chomper	Attacks and banishes the current target, making it disappear for 1 turn.
+507605	Tile Turnip	Heals the 5 allied units with the lowest HP percentage.
+507705	Melon-pult	Attacks the current target and deals 50% splash damage to surrounding units.
+507805	Cattail	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+507905	Ganoderma	Grants 2 energy to 3 random allies whose energy is not full, with an 85% success rate.
+508005	Banana Tree	Deals multi-stage attacks to all enemies in the front row, with a 66% chance to fully restore energy.
+508105	Oxygen Algae	Heals the 3 allied units with the lowest HP percentages, making them recover 5% HP per turn for 2 turns.
+508305	Electric Sea-shroom	Attacks the last enemy in the front row and drains 2 energy from them.
+508505	Starfruit	Deal heavy damage to the current target and gain 100% lifesteal.
+508605	Lychee Drill	Unleash a single-target attack and grant all allies 24% damage reduction for 1 turn.
+508705	Sea Anemone	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+508805	Potato Mine	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+508905	Rose Swordfighter	Prioritizes attacking the enemy captain and gains 55% Lifesteal. Using this skill costs no energy.
+509005	Clivia	Heals all allied units and cleanses teammates of immobilization and silence effects.
+509105	Sap-fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+509205	Acid Lemon	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+509305	Magic-shroom	Attacks the current target with a 33% chance to immobilize them for 1 turn. Using this skill costs no energy.
+509405	Fire Peashooter	Fires a fire pea, dealing damage to the current target and reducing their defense by 27% for 2 turns.
+509505	Ghost Pepper	Lets out a terrifying screech, randomly dealing damage to 5 enemy units with energy and reducing their energy by 1 bar.
+509605	Guacodile	Attack the last enemy in the front horizontal row, causing them to bleed 18% per turn for 3 turns.
+509705	Hurrikale	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+509805	Lantern	Prioritizes attacking 5 random units in the middle and back of the enemy formation, with a 30% chance to immobilize them for 2 turns.
+509905	AKernel-pult Archer	Attacks the current target and inflicts 35% vulnerability for 2 turns. Restores 2 energy at the end of the turn.
+127	Conehead Mummy	Conehead Mummy Zombie
+137	Buckethead Mummy	Buckethead Zombie
+147	Flag Mummy	Can boost zombie morale and restore health.
+157	Ra Zombie	Absorbs plants' stamina
+167	Camel Zombie	Regular Zombie
+177	Explorer Zombie	Uses a torch to burn everything to ashes.
+187	Tomb Raiser Zombie	Throws tombstones to attack 3 targets.
+197	Pharaoh Mummy	A zombie hiding inside a giant coffin.
+317	Sergeant Zombie	Regular Soldier
+327	Bowl-Head Sergeant	Found a bowl to wear on my head, better than nothing!
+337	Iron Helm Sergeant	Ever since I got this iron helm, plants can't slap my face anymore!
+357	Archer Zombie	Excels at firing sneak arrows from the back row, but is very fragile.
+377	Shield Guard Zombie	Shield is nearly impervious to blades and firearms.
+387	Cart Peddler Zombie	Little pigs always seem to fall off the cart.
+407	Cavalry Zombie	Thinks riding a hobby horse makes them cavalry.
+417	Token Zombie	The token is the sign of a massive wave of zombies.
+437	Drunken Zombie	Wine-loving Zombie
+447	Barrel Roller Zombie	Wine-loving Zombie
+457	Seagull Zombie	Wine-loving Zombie
+467	Pirate Gargantuar	Wine-loving Zombie
+487	Jester Zombie	Wine-loving Zombie
+497	Monkey Zombie	Wine-loving Zombie
+507	Flag Sailor Zombie	Wine-loving Zombie
+518	Jetpack Zombie	Jetpack Zombie
+528	EM Shield Zombie	EM Shield Zombie
+538	EM Shield Zombie	EM Shield Zombie
+548	Mecha Conehead Zombie	Mecha Conehead Zombie
+558	Disco 3000	Disco 3000
+568	Jetpack Dancer	Jetpack Dancer
+578	Mecha-Football Zombie	Mecha-Football Zombie
+588	Mecha-Gargantuar	Mecha-Gargantuar
+836	Seahorse Zombie	Undersea Dragon Palace Medic Zombie
+837	Clam Fairy Zombie	Clam Fairy Zombie
+838	Prime Minister Turtle Zombie	Prime Minister Turtle Zombie
+840	Pufferfish Zombie	Pufferfish Zombie
+898	Split Pea Zombie	Split Pea Zombie
+900	Deep Sea Gargantuar	Deep Sea Gargantuar
+968	Kelp Zombie	Submarine Dragon Palace Basic Zombie
+978	Shrimp Soldier Zombie	Shrimp-shell Protected Zombie
+988	Snail Shell Zombie	Snail shell-protected zombie
+1001	Seahorse Zombie	Undersea Dragon Palace Medic Zombie
+1018	Jellyfish Zombie	Jellyfish Zombie
+1028	Clam Fairy Zombie	Clam Fairy Zombie
+1038	Deep Sea Yaksha Zombie	Deep Sea Yaksha Zombie
+128	Conehead Mummy	Conehead Mummy Zombie
+138	Buckethead Mummy	Buckethead Zombie
+148	Flag Mummy	Can boost zombie morale and restore health.
+158	Ra Zombie	Absorbs plants' stamina
+168	Camel Zombie	Regular Zombie
+178	Explorer Zombie	Uses a torch to burn everything to ashes.
+188	Tomb Raiser Zombie	Throws tombstones to attack 3 targets.
+198	Pharaoh Mummy	A zombie hiding inside a giant coffin.
+318	Sergeant Zombie	Regular Soldier
+328	Bowl-Head Sergeant	Found a bowl to wear on my head, better than nothing!
+338	Iron Helm Sergeant	Ever since I got this iron helm, plants can't slap my face anymore!
+358	Archer Zombie	Excels at firing sneak arrows from the back row, but is very fragile.
+378	Shield Guard Zombie	Shield is nearly impervious to blades and firearms.
+388	Cart Peddler Zombie	Little pigs always seem to fall off the cart.
+408	Cavalry Zombie	Thinks riding a hobby horse makes them cavalry.
+418	Token Zombie	The token is the sign of a massive wave of zombies.
+438	Drunken Zombie	Wine-loving Zombie
+448	Barrel Roller Zombie	Wine-loving Zombie
+458	Seagull Zombie	Wine-loving Zombie
+468	Pirate Gargantuar	Wine-loving Zombie
+488	Jester Zombie	Wine-loving Zombie
+498	Monkey Zombie	Wine-loving Zombie
+508	Flag Sailor Zombie	Wine-loving Zombie
+1000001	Monk Zombie	Puppet: Monk Zombie (1000001)
+1000002	Bomb Zombie	Puppet: Bomb Zombie (1000002)
+2000001	Drunken Master Zombie	Puppet: Drunken Fist Zombie (2000001)
+2000002	Flag Zombie	Puppet: Flag Zombie (2000002)
+3000001	Sledgehammer Zombie	Puppet: Sledgehammer Zombie (3000001)
+3000002	Broadsword Zombie	Puppet: Broadsword Zombie (3000002)
+4000001	Qi Gong Puppet	Puppet: Qi Gong Puppet (4000001)
+4000002	Explorer Zombie	Puppet: Conehead Zombie (4000002)
+5000001	Drunk Zombie	Puppet: Drunk Zombie (5000001)
+5000002	Jetpack Zombie	Puppet: Jetpack Zombie (5000002)
+2000005	Soldier Zombie	Puppet: Soldier Zombie (2000005)
+1000005	Gong Zombie	Puppet: Gong Zombie (1000005)
+3000005	Staff Copper Zombie	Puppet: Monk Staff Copper Zombie (3000005)
+4000005	Giga-Gargantuar	Puppet: Ice Gargantuar (4000005)
+4000006	Overlord Blade King	Puppet: Tyrant Blade General (4000006)
+3000006	Caveman	Puppet: Cave Man (3000006)
+2000006	Frost Flag Bearer	Puppet: Frost Flag Bearer (2000006)
+4000007	Frost Barbarian	Puppet: Frost Barbarian (4000007)
+2000007	Glacier Hunter	Puppet: Glacier Hunter (2000007)
+3000007	Raven Knight	Puppet: Raven Knight (3000007)

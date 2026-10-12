@@ -1,0 +1,28 @@
+{
+  "issue": "resource-02-fangs",
+  "files": [
+    {
+      "relative": "pvzol本地/webroot/image/talent/talent/2402.png",
+      "old_sha256": "bedec3f473565cd5407c7b9715849579c0db0c63359d1f6f3e227742717d4453",
+      "new_sha256": "f1848f84fdab9909c40d005e949d9820cc547469b4d0796360c748a291bf8ced",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\webroot\\image\\talent\\talent\\2402.png"
+    },
+    {
+      "relative": "pvzol本地/webroot/image/talent/talent/2403.png",
+      "old_sha256": "4c09755d093d13e75c8b71b2f22653a61dc01222047f340322d6d42a35fdaec5",
+      "new_sha256": "2525ed11295f48dac08f9562bf1d28c863848297cc3a9660c68a7b1db2ba2efc",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\webroot\\image\\talent\\talent\\2403.png"
+    },
+    {
+      "relative": "pvzol本地/webroot/resource-repair-manifest.json",
+      "old_sha256": "eb5b28b7b978700e8f1201b356bfe9d4af32ba2b8bf7c1c2ff6b8dfcfa6f89c1",
+      "new_sha256": "ae600389128d2e88459382243b051d10f04fe7a3ea125efb9b3fe7a958a71d94",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\webroot\\resource-repair-manifest.json"
+    }
+  ],
+  "tests": [
+    "test_25_talent_fangs: 2 passed; actual glyph areas differ, metadata confirms successive bite-damage talents",
+    "test_21_resource_images: 3 passed; all52 resource routes, CRC/alpha/dimensions/manifest verified",
+    "Two updated glyphs visually reviewed at native50x50 and enlarged150x150; live Flash UI remains unverified"
+  ]
+}

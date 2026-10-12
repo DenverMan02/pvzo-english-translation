@@ -1,0 +1,18 @@
+[
+  {
+    "file": "Game_p.swf",
+    "input_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+    "output_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e",
+    "output_md5": "136f07596f913cef93d35343a83626ec",
+    "size": 2403661,
+    "candidate": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\tower\\Game_p.tower.swf"
+  },
+  {
+    "file": "ModuleTD_p.swf",
+    "input_sha256": "77334d656ef2901535328d8e3f9d5a865bc3ac3f3709867d1e59012cd5c9834e",
+    "output_sha256": "a13f2bbc3751a9beb6b9de87691ae51f2eb0da62a41ffbf19fe4f5c7fa9de3c8",
+    "output_md5": "1c16b189d057f81f222aab0f948139bd",
+    "size": 502264,
+    "candidate": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\tower\\ModuleTD_p.tower.swf"
+  }
+]

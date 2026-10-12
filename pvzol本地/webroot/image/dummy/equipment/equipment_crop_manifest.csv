@@ -1,0 +1,7 @@
+﻿type,name,source_crop,empty_variant
+1,helmet,x=270 y=1180 w=53 h=53,grayscale-alpha-from-crop
+2,jacket,x=6 y=1180 w=44 h=52,grayscale-alpha-from-crop
+3,axe,x=213 y=1181 w=52 h=53,grayscale-alpha-from-crop
+4,boots,x=54 y=1183 w=51 h=51,grayscale-alpha-from-crop
+5,gloves,x=160 y=1183 w=52 h=51,grayscale-alpha-from-crop
+6,shorts,x=107 y=1182 w=51 h=53,grayscale-alpha-from-crop

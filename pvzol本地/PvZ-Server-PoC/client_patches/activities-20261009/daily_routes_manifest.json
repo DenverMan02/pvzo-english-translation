@@ -1,0 +1,11 @@
+{
+  "source": "D:\\pvzol本地最新最新ol\\修复备份\\20261009-本轮问题修复\\webroot\\ModuleWelfareHall.swf",
+  "output": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\client_patches\\activities-20261009\\ModuleWelfareHall.daily-routes.swf",
+  "sha256": "31d779c983e7864fc684d9be8b09f848039effa0afa9ef2e6e88855db444235b",
+  "md5": "a087401d4b3414aa911050e89685a336",
+  "size": 42314,
+  "method_id": 567,
+  "prefix_size": 28,
+  "old_body_preserved": true,
+  "unchanged_methods": 632
+}

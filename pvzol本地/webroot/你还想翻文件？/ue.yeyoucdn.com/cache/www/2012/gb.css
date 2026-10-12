@@ -1,0 +1,34 @@
+.topbar{ width:100%; min-width:960px; z-index:600; height:29px; padding-bottom:6px; font-size:12px; background:#fff url(../../../images/www/2012/gb-b.png) 0 -177px repeat-x}
+.topbar a{ color:#666}
+.topbar a:hover{ color:#666; text-decoration:underline}
+.topbar-in{ position:relative; width:920px; margin:0 auto; padding:0 20px; line-height:29px}
+.topbar-c1{ float:left}
+.topbar-c1 .sep{ margin:0 8px 0 6px; color:#b7b7b7}
+.topbar-c1 .bt-phone{ margin-left:30px}
+.topbar-c2{ float:right}
+.topbar-c2 .fun-user{ position:absolute!important; top:0; right:123px; width:auto!important}
+.topbar-c2 .sel-box{ float:left; display:inline-block; height:21px; line-height:1.231; cursor:pointer}
+.topbar-c2 .sel-box-in{ display:inline-block; overflow:hidden; position:relative; height:19px}
+.topbar-c2 .sel-txt{ height:15px; overflow:hidden; padding-top:2px; color:#252525; line-height:21px; border:0; background:none; cursor:pointer}
+.topbar-c2 .sel-bt{ display:none}
+.topbar-c2 .logined-box,.topbar-c2 .unlogin-box{ float:left; margin-top:4px}
+.topbar-c2 .bt-login{ float:left; margin:1px 0 0 5px}
+.topbar-c2 .bt-login:hover{ text-decoration:none}
+.topbar-c2 .reg-box{ float:left; margin-left:15px}
+.topbar-c2 .link-w{ float:right; height:15px; margin-top:7px; padding-left:18px; line-height:15px; border-left:1px dotted #666}
+
+.i-phone,.bt-login,.bt-login .t{ display:inline-block; overflow:hidden; background:url(../../../images/www/2012/gb-b.png) no-repeat}
+.i-phone{ width:10px; height:15px; margin:6px 4px 8px 0; background-position:-45px -62px; vertical-align:middle}
+.bt-login{ height:19px; padding-left:6px; background-position:0 -42px; cursor:pointer}
+.bt-login .t{ display:inline-block; width:auto; _width:0; *overflow:visible; height:19px; padding-top:2px; padding-right:6px; margin:0; line-height:1.231; color:#fff; white-space:nowrap; border:0; background-position:right -42px; cursor:pointer}
+@-moz-document url-prefix(){.bt-login input.t{padding:0 6px 2px 0}}
+
+
+.foot-links{ width:960px; margin:0 auto; margin-top:10px; border-top:2px solid #458FCE}
+.foot-links-in{ *zoom:1; border:1px solid #D4E1F1; border-top:0}
+.foot-links .hd{ height:42px; padding:0 15px; line-height:42px; background:#F6F9FE}
+.foot-links .bd{ padding:10px}
+.foot-links table{ width:100%}
+.foot-links td{ height:24px; padding:0 5px; line-height:24px; text-align:left; }
+.foot-links a{ color:#666}
+

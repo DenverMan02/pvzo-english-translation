@@ -1,0 +1,113 @@
+{
+  "note": "All 42 newly drawn icons/backgrounds withdrawn at user request. Plant research had already been withdrawn, including its original-star export. Only 9 source-derived assets remain: 8 same-plant base renders and 1 original-currency rescale. No custom-drawn artwork remains in the active repair.",
+  "assets": [
+    {
+      "path": "/swf/icons/card/10060_0.png",
+      "size": [
+        330,
+        240
+      ],
+      "meaning": "植物/傀儡图标 10060 的完整基础模型",
+      "method": "same_plant_base_render",
+      "source": "swf/icons/card/card_icon_10060.swf#sprite53",
+      "dimension_evidence": "同目录现存PNG均330x240；完整模型裁边留2px透明，基础外观不冒充原服饰图",
+      "sha256": "944ea122fb2016a15f9ad12b92d441aa72fbc0a39caf69af2dda1a368b769804"
+    },
+    {
+      "path": "/swf/icons/card/10070_0.png",
+      "size": [
+        330,
+        240
+      ],
+      "meaning": "植物/傀儡图标 10070 的完整基础模型",
+      "method": "same_plant_base_render",
+      "source": "swf/icons/card/card_icon_10070.swf#sprite41",
+      "dimension_evidence": "同目录现存PNG均330x240；完整模型裁边留2px透明，基础外观不冒充原服饰图",
+      "sha256": "c04ab68f2e35c5e2b54039a7c074d0334f9507880e5ba1b212b0349fa7fe9813"
+    },
+    {
+      "path": "/swf/icons/card/10040_0.png",
+      "size": [
+        330,
+        240
+      ],
+      "meaning": "植物/傀儡图标 10040 的完整基础模型",
+      "method": "same_plant_base_render",
+      "source": "swf/icons/card/card_icon_10040.swf#sprite44",
+      "dimension_evidence": "同目录现存PNG均330x240；完整模型裁边留2px透明，基础外观不冒充原服饰图",
+      "sha256": "f6a2bc9e1a5ee37afcc71ffe41690cb92f8595b71075018c8bf8acd74ca10d8c"
+    },
+    {
+      "path": "/swf/icons/card/470_4701.png",
+      "size": [
+        330,
+        240
+      ],
+      "meaning": "植物/傀儡图标 470 的完整基础模型",
+      "method": "same_plant_base_render",
+      "source": "swf/icons/card/card_icon_470.swf#sprite76",
+      "dimension_evidence": "同目录现存PNG均330x240；完整模型裁边留2px透明，基础外观不冒充原服饰图",
+      "sha256": "8a19b0e55fa689a7fb3e204d5e8796410372509e00cbd07b5d539ac46ed237a0"
+    },
+    {
+      "path": "/swf/icons/card/smallIcon/125_1251.png",
+      "size": [
+        330,
+        240
+      ],
+      "meaning": "植物/傀儡图标 125 的完整基础模型",
+      "method": "same_plant_base_render",
+      "source": "swf/icons/card/card_icon_125.swf#sprite79",
+      "dimension_evidence": "同目录现存PNG均330x240；完整模型裁边留2px透明，基础外观不冒充原服饰图",
+      "sha256": "17a72d10fdd196915e17f32e64582f223b884a326948f6b2a25df60a2ae86e93"
+    },
+    {
+      "path": "/swf/icons/card/750_7501.png",
+      "size": [
+        330,
+        240
+      ],
+      "meaning": "植物/傀儡图标 750 的完整基础模型",
+      "method": "same_plant_base_render",
+      "source": "swf/icons/card/card_icon_750.swf#sprite61",
+      "dimension_evidence": "同目录现存PNG均330x240；完整模型裁边留2px透明，基础外观不冒充原服饰图",
+      "sha256": "92a68602e207d8e5d58c30025ea126b263bf9dffabaec6e546dd43ef7a43bd22"
+    },
+    {
+      "path": "/swf/icons/card/113_1131.png",
+      "size": [
+        330,
+        240
+      ],
+      "meaning": "植物/傀儡图标 113 的完整基础模型",
+      "method": "same_plant_base_render",
+      "source": "swf/icons/card/card_icon_113.swf#sprite41",
+      "dimension_evidence": "同目录现存PNG均330x240；完整模型裁边留2px透明，基础外观不冒充原服饰图",
+      "sha256": "3617e2dce4706fc6108b668c6cc32ce287eb8d178459bf8e80c95b748f2b808d"
+    },
+    {
+      "path": "/swf/icons/card/920_9201.png",
+      "size": [
+        330,
+        240
+      ],
+      "meaning": "植物/傀儡图标 920 的完整基础模型",
+      "method": "same_plant_base_render",
+      "source": "swf/icons/card/card_icon_920.swf#sprite45",
+      "dimension_evidence": "同目录现存PNG均330x240；完整模型裁边留2px透明，基础外观不冒充原服饰图",
+      "sha256": "82d6c5f35513c6eef6872125bac2ede0079022b077021e91eb27b3d88532b8c8"
+    },
+    {
+      "path": "/image/puzzle/ICON.png",
+      "size": [
+        24,
+        24
+      ],
+      "meaning": "拼图点（ItemInfo id2020）",
+      "method": "same_currency_rescale",
+      "source": "image/item/2020.png",
+      "dimension_evidence": "CardPuzzleGroupPanel/Icon 明确24x24",
+      "sha256": "ce5c9167bf2c50909dc4bf18e04dcf110e54f666de579333941eb2d27eb42a00"
+    }
+  ]
+}

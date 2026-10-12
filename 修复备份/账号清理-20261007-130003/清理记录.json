@@ -1,0 +1,258 @@
+{
+  "players.db": {
+    "deleted_accounts": [
+      [
+        2,
+        2,
+        "吵闹的莫尼卡"
+      ],
+      [
+        700000123,
+        700000123,
+        "Player123"
+      ],
+      [
+        700000200,
+        700000200,
+        "高瘦的艾美"
+      ],
+      [
+        700000201,
+        700000201,
+        "Player201"
+      ],
+      [
+        700000208,
+        700000208,
+        "Player208"
+      ],
+      [
+        700000998,
+        700000998,
+        "Player998"
+      ],
+      [
+        700009990,
+        700009990,
+        "Player9990"
+      ],
+      [
+        700009991,
+        700009991,
+        "Player9991"
+      ],
+      [
+        700009992,
+        700009992,
+        "Player9992"
+      ],
+      [
+        700009993,
+        700009993,
+        "Player9993"
+      ],
+      [
+        700009994,
+        700009994,
+        "Player9994"
+      ],
+      [
+        700009995,
+        700009995,
+        "Player9995"
+      ],
+      [
+        700009996,
+        700009996,
+        "Player9996"
+      ],
+      [
+        700009998,
+        700009998,
+        "Player9998"
+      ],
+      [
+        700009999,
+        700009999,
+        "Player9999"
+      ],
+      [
+        990899017,
+        990899017,
+        "Player99017"
+      ],
+      [
+        991472996,
+        991472996,
+        "Player72996"
+      ],
+      [
+        992442787,
+        992442787,
+        "Player42787"
+      ],
+      [
+        992670800,
+        992670800,
+        "Player70800"
+      ]
+    ],
+    "deleted_rows": {
+      "players": 19,
+      "plants": 78,
+      "td_passed": 13,
+      "td_gates": 4,
+      "items": 190,
+      "cards": 34,
+      "formation": 12,
+      "garden_pots": 8,
+      "friends": 1,
+      "gene_test_stages": 1,
+      "equipment_state": 1,
+      "zombie_island_box": 1,
+      "puppets": 1,
+      "town_login_gifts": 3,
+      "hotspot_event_state": 5,
+      "local_children_day": 2,
+      "local_guild_members": 1,
+      "local_guild_players": 1,
+      "main_quest_progress": 598,
+      "local_treasure": 1,
+      "local_noend_fuben": 1,
+      "local_noend_votes": 1,
+      "local_aux_quest": 1,
+      "local_seven_day": 1
+    }
+  },
+  "PvZ-Server-PoC\\players.db": {
+    "deleted_accounts": [
+      [
+        2,
+        2,
+        "吵闹的莫尼卡"
+      ],
+      [
+        700000123,
+        700000123,
+        "Player123"
+      ],
+      [
+        700000200,
+        700000200,
+        "高瘦的艾美"
+      ],
+      [
+        700000201,
+        700000201,
+        "Player201"
+      ],
+      [
+        700000208,
+        700000208,
+        "Player208"
+      ],
+      [
+        700000998,
+        700000998,
+        "Player998"
+      ],
+      [
+        700009990,
+        700009990,
+        "Player9990"
+      ],
+      [
+        700009991,
+        700009991,
+        "Player9991"
+      ],
+      [
+        700009992,
+        700009992,
+        "Player9992"
+      ],
+      [
+        700009993,
+        700009993,
+        "Player9993"
+      ],
+      [
+        700009994,
+        700009994,
+        "Player9994"
+      ],
+      [
+        700009995,
+        700009995,
+        "Player9995"
+      ],
+      [
+        700009996,
+        700009996,
+        "Player9996"
+      ],
+      [
+        700009998,
+        700009998,
+        "Player9998"
+      ],
+      [
+        700009999,
+        700009999,
+        "Player9999"
+      ],
+      [
+        990899017,
+        990899017,
+        "Player99017"
+      ],
+      [
+        991472996,
+        991472996,
+        "Player72996"
+      ],
+      [
+        992442787,
+        992442787,
+        "Player42787"
+      ],
+      [
+        992670800,
+        992670800,
+        "Player70800"
+      ]
+    ],
+    "deleted_rows": {
+      "players": 19,
+      "plants": 78,
+      "td_passed": 13,
+      "td_gates": 4,
+      "items": 189,
+      "cards": 30,
+      "formation": 12,
+      "garden_pots": 8,
+      "friends": 1,
+      "gene_test_stages": 1,
+      "equipment_state": 1,
+      "zombie_island_box": 1,
+      "puppets": 1,
+      "town_login_gifts": 3,
+      "hotspot_event_state": 5,
+      "local_children_day": 2,
+      "local_guild_members": 1,
+      "local_guild_players": 1,
+      "main_quest_progress": 600,
+      "local_treasure": 1,
+      "local_noend_fuben": 1,
+      "local_noend_votes": 1,
+      "local_aux_quest": 1,
+      "local_seven_day": 1
+    }
+  },
+  "backup": "D:\\pvzol本地最新最新ol\\修复备份\\账号清理-20261007-130003",
+  "preserved_login_accounts": [
+    "001",
+    "700000204"
+  ],
+  "preserved_system_bots": 50
+}

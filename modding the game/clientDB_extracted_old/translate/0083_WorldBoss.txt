@@ -1,0 +1,4 @@
+id	bossName	desc
+999	Dr. Zomboss	<font color="#ff0000">Dr. Zomboss</font> excels at using technological inventions to create bombs that deal massive damage to enemies.<br>  Event Time: Daily 00:00-23:00
+998	Emperor Qin	<font color="#ff0000">Emperor Qin Shi Huang</font> doesn't need to fight personally—he summons Terracotta Zombie Warriors to charge into battle.<br>  Event Time: Daily 00:00-23:00
+1000	Overlord Blade King	<font color="#ff0000">Blade Lord</font> has astonishing attack power, and his ultimate skill is often a one-hit KO.<br>  Event Time: Daily 00:00-23:00

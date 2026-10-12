@@ -1,0 +1,4 @@
+id	levelMin	name	desc	buffDesc	levelMinForOldUser
+1	20	静谧林地	需要等级{levelMin}开启	<br><font color="#00ff00">『矿区争夺』</font><br>矿区金币每8小时收获<br>	13
+2	30	战歌平原	需要等级{levelMin}开启	<br><font color="#00ff00">『矿区争夺』</font><br>矿区金币每8小时收获<br><font color="#00ff00">『植物大作战』</font><br>每晚20:30-21:00开启<br>抢占游乐场和马戏团	20
+3	45	迷雾边境	需要等级{levelMin}开启	<br><font color="#00ff00">『跨服远征』</font><br>每周开战<br>加入三大阵营<br>成功主宰战场	45

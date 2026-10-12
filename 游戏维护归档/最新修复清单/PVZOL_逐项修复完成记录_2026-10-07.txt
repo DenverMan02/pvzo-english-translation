@@ -1,0 +1,209 @@
+﻿植物大战僵尸OL：修复方案复评与逐项实施记录
+日期：2026-10-07（Asia/Shanghai）
+目标目录：D:\pvzol本地最新最新ol
+
+执行结论
+原检查21项问题已按顺序实施；复核又发现3处关联边界，作为第22—24步单独修复。共24步，全部完成测试、独立备份及原目录部署。
+第20、21项采用资源降级/功能替代：原坚果装饰和缺失美术未完整恢复，原生Flash画面仍未验收。程序测试通过不能替代该视觉验收。
+所有修复均按“单项修改—单项测试—备份部署—再开始下一项”执行；辅助代理只做只读审查，没有并行修改游戏。
+本记录为已实施状态。先前《Bug检查与修复方案》保留为修复前历史检查，不能据其“未改源码”描述判断当前状态。
+
+方案复评与排序理由
+先处理启动器和存档入口，避免非法值、误清经验、错误账号或旧窗口覆盖；随后处理数据库锁、重复发放/扣费和体力规则；再处理战斗、养成、背包和资源。
+不采用以下过宽/不准确处理：全部整数限32位；所有实验室属性统一除100；清空旧卡再授予；以任意同名数字图或透明图片冒充恢复；以已有主背景替代小卡框。
+资源重绘尺寸经客户端代码复核：天赋小卡框56×46、VIP提示条194×69、拼图板423×352且内部405×338透明、组合/技能徽章25×25、品质框27×27。
+发现预览遗漏、永久塔防期限缩短和编辑器过期权益同级设置失效后，每项均单独复现、修复和部署。
+
+逐项实施（编号是实际执行顺序；原检查编号另列）
+
+01. 编辑器接受负数属性，导致下一次登录无限循环（原检查01）
+状态：已修复、测试通过、已部署
+采用方案：统一校验等级及无符号字段；负数varint立即报错。保留合法64位卡经验，未把所有协议整数误限为32位。
+本项验证：test_01_numeric_safety: 4 passed；test_launcher_lifecycle passed；test_profile_editor passed
+变更文件：pvzol本地/launcher.py；pvzol本地/PvZ-Server-PoC/gm.py；pvzol本地/PvZ-Server-PoC/pvz_poc_server.py；pvzol本地/PvZ-Server-PoC/admin_server.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\01-L1
+
+02. 超出等级表的目标等级会将全部植物卡重置为 1 级（原检查02）
+状态：已修复、测试通过、已部署
+采用方案：只接受真实1—300等级表中的目标；无效目标不写卡。全部卡等级/经验在一个事务提交，失败回滚。
+本项验证：test_02_cardlevel: 3 passed
+变更文件：pvzol本地/PvZ-Server-PoC/gm.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\02-L2
+
+03. 启动器的账号上限与游戏登录协议不一致（原检查03）
+状态：已修复、测试通过、已部署
+采用方案：按现客户端账号传输uint32统一接受1—4294967295，拒绝溢出及0；角色ID等其他64位字段保留原协议。
+本项验证：test_03_uin: 3 passed；test_launcher_lifecycle: 27 passed
+变更文件：pvzol本地/launcher.py；pvzol本地/PvZ-Server-PoC/gm.py；pvzol本地/PvZ-Server-PoC/admin_server.py；pvzol本地/PvZ-Server-PoC/pvz_poc_server.py；pvzol本地/PvZ-Server-PoC/tests/test_launcher_lifecycle.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\03-L3
+
+04. 编辑器快操作后的新数值会被应用更改覆盖成打开时的旧值（原检查04）
+状态：已修复、测试通过、已部署
+采用方案：只提交用户修改的字段；快捷操作刷新未修改字段；使用原值比较识别其他窗口修改，冲突拒绝整批。
+本项验证：test_04_editor_conflict: 3 passed；test_01_numeric_safety: 4 passed
+变更文件：pvzol本地/launcher.py；pvzol本地/PvZ-Server-PoC/gm.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\04-L4
+
+05. 钻石不足时未设置钻石卡，启动器却提示已设置（原检查05）
+状态：已修复、测试通过、已部署
+采用方案：钻石卡扣费和开通同一事务；不足时返回失败状态，启动器不再显示已设置。
+本项验证：test_05_diamond: 4 passed
+变更文件：pvzol本地/PvZ-Server-PoC/gm.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\05-L5
+
+06. 应用更改静默忽略非数字字段并显示已保存（原检查06）
+状态：已修复、测试通过、已部署
+采用方案：先验证完整表单及个人资料，再一次提交；非法数字明确报错；头像文件及数据库失败共同回滚。
+本项验证：test_01..06: 22 passed；test_profile_editor: 14 passed
+变更文件：pvzol本地/launcher.py；pvzol本地/PvZ-Server-PoC/gm.py；pvzol本地/PvZ-Server-PoC/profile_editor.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\06-L6
+
+07. 完成植物拼图时写锁冲突，拼图无法进阶并阻塞整个游戏服务（原检查07）
+状态：已修复、测试通过、已部署
+采用方案：同一玩家数据库的主线任务写入复用现有连接与事务，避免嵌套独立连接互相等待；不同数据库保留独立连接。
+本项验证：test_07_quest_transaction: 3 passed；test_puzzle_flow: 13 passed
+变更文件：pvzol本地/PvZ-Server-PoC/main_quest_local.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\07-economy-01
+
+08. 一键升级重复经验豆条目能重复计经验，实际只扣一次库存（原检查09）
+状态：已修复、测试通过、已部署
+采用方案：先合并重复豆条目，再统一检查库存和扣物/加经验；超库存拒绝，不再重复计经验。
+本项验证：test_08_beans: 3 passed
+变更文件：pvzol本地/PvZ-Server-PoC/pvz_poc_server.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\08-economy-03
+
+09. 初始塔防植物卡拆解后被重新免费授予，可无限刷碎片（原检查08）
+状态：已修复、测试通过、已部署
+采用方案：新增一次性授予记录；卡拆解后不再免费再授予。已有卡等级/经验保持，旧存档缺卡允许一次兼容授予后记账。
+本项验证：test_09_starter_grant: 2 passed；test_recycle_swap passed
+变更文件：pvzol本地/PvZ-Server-PoC/pvz_poc_server.py；pvzol本地/PvZ-Server-PoC/player_store.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\09-economy-02
+
+10. 同一账号两个游戏窗口用旧钱包买装备能量珠，第二包免费（原检查10）
+状态：已修复、测试通过、已部署
+采用方案：买珠先在事务内读取最新钱包/购买次数，再扣费和发物，第二窗口不会使用旧余额免费买。
+本项验证：test_10_bead_wallet: 2 passed
+变更文件：pvzol本地/PvZ-Server-PoC/pvz_poc_server.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\10-economy-04
+
+11. 同账号双窗口可重复领取一次性等级礼包（原检查13）
+状态：已修复、测试通过、已部署
+采用方案：等级礼包领取资格与奖励在同一事务确认；另一个窗口读取已领取状态后拒绝重复领取。
+本项验证：test_11_welfare: 2 passed
+变更文件：pvzol本地/PvZ-Server-PoC/pvz_poc_server.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\11-economy-07
+
+12. 普通冒险体力不足仍开战并发奖（原检查14）
+状态：已修复、测试通过、已部署
+采用方案：普通冒险实际扣体力失败即返回错误与体力同步，不开战、不发奖励；异常回滚扣费。
+本项验证：test_12_energy: 3 passed
+变更文件：pvzol本地/PvZ-Server-PoC/pvz_poc_server.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\12-combat-01
+
+13. 竞技场和天梯实际队长与阵容界面选择不一致（原检查15）
+状态：已修复、测试通过、已部署
+采用方案：竞技场实际使用队伍2队长、天梯使用队伍3队长；家园和普通冒险继续使用自身队长。战前预览由第22步补齐。
+本项验证：test_13_captain: both modes + adventure passed
+变更文件：pvzol本地/PvZ-Server-PoC/pvz_poc_server.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\13-combat-02
+
+14. 竞技场与天梯重新打开记录后无法回放原战斗（原检查16）
+状态：已修复、测试通过、已部署
+采用方案：历史记录保留当时真实战报ID及时间，重新打开后按原ID获取同一份战报。旧记录没有真实ID时标记不可用，不伪造ID。
+本项验证：test_14_report_history: arena/rank reopen and query passed
+变更文件：pvzol本地/PvZ-Server-PoC/pvz_poc_server.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\14-combat-03
+
+15. 天梯用满挑战次数后仍返回缺recorder的空成功包（原检查17）
+状态：已修复、测试通过、已部署
+采用方案：次数用尽返回客户端已有7705错误，避免成功包缺recorder；拒绝的请求不增加挑战日常任务。
+本项验证：test_15_rank_quota passed；test_14_report_history passed
+变更文件：pvzol本地/PvZ-Server-PoC/pvz_poc_server.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\15-combat-04
+
+16. 火爆辣椒5901至5905自伤造成服务器与客户端护盾不同步（原检查18）
+状态：已修复、测试通过、已部署
+采用方案：5901—5905自伤实际扣HP时清除护盾及层数，并在回放中记录负护盾变化，与原生客户端行为一致。
+本项验证：test_16_selfcost_shield: all 5 tiers passed；test_captain_shield passed
+变更文件：pvzol本地/PvZ-Server-PoC/pvz_poc_server.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\16-combat-05
+
+17. 联盟批准待处理申请不再校验人数上限（原检查19）
+状态：已修复、测试通过、已部署
+采用方案：批准申请前锁定事务并重读联盟人数；已满拒绝，保留待批准申请。两个申请争最后一席只通过一个。
+本项验证：test_17_guild_capacity: last-seat double approval passed
+变更文件：pvzol本地/PvZ-Server-PoC/guild_local.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\17-combat-06
+
+18. 实验室暴击/闪避/命中/韧性瓶正常升级扣费但不增加实际属性（原检查11）
+状态：已修复、测试通过、已部署
+采用方案：补齐实验室命中、闪避、暴击、韧性的实际属性映射；按各配置原始单位计算，避免误用主属性的换算。
+本项验证：test_18_lab_secondary: four real upgrades + exact effective stat units passed
+变更文件：pvzol本地/PvZ-Server-PoC/pvz_poc_server.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\18-economy-05
+
+19. 多类背包消耗品点击使用仅返回成功，没有消耗或实际效果（原检查12）
+状态：已修复、测试通过、已部署
+采用方案：体力药、期限塔防卡、VIP卡、黄金原液及傀儡卡实际扣物并生效；校验等级/数量，拒绝未支持效果；异常回滚。新增期限字段兼容旧永久VIP。
+本项验证：test_19_consumables: 7 passed；test_06_editor_atomic: 5 passed；test_vip_bulk_sweep: 8 passed；test_adventure_drop_chest: 5 passed
+变更文件：pvzol本地/PvZ-Server-PoC/pvz_poc_server.py；pvzol本地/PvZ-Server-PoC/player_store.py；pvzol本地/PvZ-Server-PoC/item_use_repairs.py；pvzol本地/PvZ-Server-PoC/gm.py；pvzol本地/PvZ-Server-PoC/admin_server.py；pvzol本地/PvZ-Server-PoC/consistency_repairs.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\19-economy-06
+
+20. 坚果战斗自定义部件缺失，当前仍返回404（原检查20）
+状态：降级修复已部署，原图/原生画面待补充验收
+采用方案：原坚果部件确实不在资源包中。只移除缺失装饰的加载绑定，使用同一全息坚果的真实基础模型；服饰拥有状态、选择ID和属性加成保留。同步SWF结构、哈希别名和fileVer。
+本项验证：test_20_nuts_resources: 2 passed；FFDec SWF parse and XML export passed；Native updateAvatar empty-child loading branch verified; Flash UI access approval timed out
+变更文件：pvzol本地/webroot/ModuleAvatarConfig.swf；pvzol本地/webroot/fileVer.xml；pvzol本地/webroot/ModuleAvatarConfig_db6128ab924d3fdce35817839dac8f1f.swf；pvzol本地/webroot/ModuleAvatarConfig_ceede5b498631ea2c8f56594a9bb8b49.swf
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\20-resource-01
+
+21. 52个实际图片请求仍只返回透明占位图（原检查21）
+状态：降级修复已部署，原图/原生画面待补充验收
+采用方案：52个实际请求新增有效PNG：8个同植物/傀儡基础模型完整导出，2个同用途资源（星及拼图点）导出/缩放，42个按真实用途和客户端尺寸重绘。不是原图完整恢复。
+本项验证：test_21_resource_images: 3 passed; all52 real HTTP payloads + PNG CRC/alpha/dimensions；All52 generated assets visually inspected in contact sheet；8 same-plant base renders + 2 same-purpose sources + 42 reconstructed artworks; exact original artwork not claimed; Flash live UI unverified
+变更文件：pvzol本地/webroot/swf/icons/card/10060_0.png；pvzol本地/webroot/swf/icons/card/10070_0.png；pvzol本地/webroot/swf/icons/card/10040_0.png；pvzol本地/webroot/swf/icons/card/470_4701.png；pvzol本地/webroot/swf/icons/card/smallIcon/125_1251.png；pvzol本地/webroot/swf/icons/card/750_7501.png；pvzol本地/webroot/swf/icons/card/113_1131.png；pvzol本地/webroot/swf/icons/card/920_9201.png；pvzol本地/webroot/image/talent/ui/starSmall.png；pvzol本地/webroot/image/puzzle/ICON.png；pvzol本地/webroot/image/talent/talent/2304.png；pvzol本地/webroot/image/talent/talent/2303.png；pvzol本地/webroot/image/talent/talent/2003.png；pvzol本地/webroot/image/talent/talent/2002.png；pvzol本地/webroot/image/talent/talent/2001.png；pvzol本地/webroot/image/talent/talent/2602.png；pvzol本地/webroot/image/talent/talent/2501.png；pvzol本地/webroot/image/talent/talent/2502.png；pvzol本地/webroot/image/talent/talent/2403.png；pvzol本地/webroot/image/talent/talent/2402.png；pvzol本地/webroot/image/card/feature/1.png；pvzol本地/webroot/image/card/feature/3.png；pvzol本地/webroot/image/card/feature/5.png；pvzol本地/webroot/image/card/feature/11.png；pvzol本地/webroot/image/card/feature/123.png；pvzol本地/webroot/image/card/feature/111.png；pvzol本地/webroot/image/card/feature/117.png；pvzol本地/webroot/image/card/feature/118.png；pvzol本地/webroot/image/card/feature/109.png；pvzol本地/webroot/image/card/feature/113.png；pvzol本地/webroot/image/card/feature/102.png；pvzol本地/webroot/image/card/feature/105.png；pvzol本地/webroot/image/card/feature_bg/1.png；pvzol本地/webroot/image/card/feature_bg/2.png；pvzol本地/webroot/image/card/feature_bg/3.png；pvzol本地/webroot/image/card/feature_bg/4.png；pvzol本地/webroot/image/card/feature_bg/5.png；pvzol本地/webroot/image/card/skill/1.png；pvzol本地/webroot/image/card/skill/2.png；pvzol本地/webroot/image/talent/ui/talentBJ.png；pvzol本地/webroot/swf/fuben/union_fuben_bk.png；pvzol本地/webroot/swf/fuben/fuben_name_back.png；pvzol本地/webroot/image/card/VIP_TIP_BG.png；pvzol本地/webroot/image/item/ui/itemSlot_bg.png；pvzol本地/webroot/image/puzzle/LIST_BG.png；pvzol本地/webroot/image/puzzle/CELL_BG.png；pvzol本地/webroot/image/puzzle/CELL_TITLE_BG.png；pvzol本地/webroot/image/ui/armyInfo.png；pvzol本地/webroot/image/item/ui/borderWhite.png；pvzol本地/webroot/swf/fuben/icon_rect.png；pvzol本地/webroot/image/puzzle/PUZZLE_FRAME.png；pvzol本地/webroot/swf/fuben/union_fuben_curStage.png；pvzol本地/webroot/resource-repair-manifest.json
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\21-resource-02
+
+22. 队长修复补充：战前预览仍读取家园队长（原检查15）
+状态：已修复、测试通过、已部署
+采用方案：补齐竞技场和天梯GetFightInfo战前预览的队长来源；有对手/无对手分支均与实际战斗一致。
+本项验证：test_22_captain_preview: all6 home/arena/rank preview cases passed；test_13_captain passed；test_14_report_history passed
+变更文件：pvzol本地/PvZ-Server-PoC/pvz_poc_server.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\22-combat-02-preview
+
+23. 消耗品修复补充：永久塔防权益使用期限卡后会被缩短（原检查12）
+状态：已修复、测试通过、已部署
+采用方案：已有永久塔防权益时拒绝期限卡并保留库存，不把永久变成30天/7天；首次开通与有限期限续期仍有效。
+本项验证：test_23_td_permanent: 2 passed; both limited cards preserve permanent privilege and stock, new/finite privilege stacks；test_19_consumables: 7 passed
+变更文件：pvzol本地/PvZ-Server-PoC/item_use_repairs.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\23-economy-06-permanent
+
+24. 启动器期限权益显示与同级重新设置失效（VIP/塔防）（原检查04）
+状态：已修复、测试通过、已部署
+采用方案：期限VIP/塔防按当前有效状态显示；保留数据库真实值作为冲突快照；同级明确选择也提交。外部续期后旧编辑器不能覆盖新期限。
+本项验证：test_24_editor_expiry: 6 passed with real apply_main callbacks + save transactions；test_04_editor_conflict: 3 passed；test_06_editor_atomic: 5 passed；test_launcher_lifecycle: 27 passed
+变更文件：pvzol本地/launcher.py；pvzol本地/PvZ-Server-PoC/gm.py
+本项备份：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956\24-L4-expiry
+
+最终累计验证
+32个脚本全部通过；其中154个unittest用例，另有拆解/交换脚本全部检查通过。最终统计实际值：32脚本/154单元测试。
+68个部署文件与验证副本SHA256一致；54个Python源文件语法解析通过；50个未修改基线文件哈希保持。
+新增数据库字段/授予表在真实存档的隔离副本上迁移，原有玩家、卡、物品、植物数据保持不变。
+原存档以只读模式检查：quick_check=ok，52条玩家记录，基础货币/经验/体力负值记录0；检查前后文件哈希一致。所有部署脚本明确排除players.db与guild_local.db。
+原players.db最终SHA256：8a6659399b23dfc2235f0d1975dea9cbb0a3400e5d6f51ff34d030ac002d8009
+结束时本次相关服务端口80/843/8080/8081/9001均未监听，隔离验收进程已结束。
+现有旧测试中的过期mock/历史基线问题已在原检查中单独归类；这里没有用这些过期断言冒充当前功能验证。
+
+实际生效与剩余验证
+请关闭已经打开的旧启动器窗口，再重新双击D:\pvzol本地最新最新ol\一键启动游戏.exe。该EXE通过runpy.run_path加载外部launcher.py，重开即可载入新版，无需重打包EXE。
+下次正常启动会进行增量数据库迁移，为期限VIP和一次性卡授予增加字段/表，不重建或清空已有存档。
+原生Flash窗口访问授权等待超时，因此未完成真实游戏画面验收；已经完成SWF结构解析、原生加载分支核对、PNG文件/透明区/尺寸/HTTP返回和资源预览图检查。
+全息坚果现使用自身基础外观，缺失服饰原稿未恢复。52张PNG中的重绘/同用途来源不等同原美术恢复；每张来源及尺寸依据见resource-repair-manifest.json。
+战报继续沿用现有进程内缓存：本次解决重新打开记录的错误ID，不扩展为永久历史存储。服务器重启或缓存淘汰后的老战报仍可能不可用。
+本次未完成全界面逐按钮实玩、Mac启动与长时间稳定性测试，不承诺游戏已不存在其他Bug。
+
+备份与回退
+全部步骤备份根目录：D:\pvzol本地最新最新ol\修复备份\逐项修复-20261007-135956
+每一步change.json记录目标路径、修复前/后SHA256；原文件副本按原目录结构保存。
+回退时先关闭游戏服务，按需要从最后一步向前恢复；对同一文件存在多次改动时，不能随意跳过后续步骤直接覆盖旧版。
+原本不存在的新增文件在该步没有before副本；只有在其当前哈希仍等于该步修复后哈希时，才按change.json判断移除。原存档不属于这些代码/资源回退文件。
+附件：逐项修复与验证证据.zip（最终变更文件、每步清单/差异、测试及日志，未包含原玩家数据库）；资源修复预览.png（52张图片功能替代预览）。

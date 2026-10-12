@@ -1,0 +1,27 @@
+{
+  "scope": "Workspace server copy only; puzzle flow and purchase regressions; SQLite connections restricted to isolated test directory.",
+  "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-08\\d-pvzol-ol\\work\\battle-order\\server",
+  "clientdb": "C:\\Users\\komi\\Documents\\Codex\\2026-10-08\\d-pvzol-ol\\work\\battle-order\\webroot\\clientDB.txt",
+  "modules": [
+    {
+      "module": "test_puzzle_flow",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "test_puzzle_purchase",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "tests": 22,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "isolated_database_count": 23,
+  "server_code_changed": false
+}

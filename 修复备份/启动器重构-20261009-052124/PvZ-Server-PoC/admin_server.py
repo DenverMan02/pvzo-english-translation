@@ -1,0 +1,1158 @@
+#!/usr/bin/env python3
+"""植物大战僵尸 OL 本地 GM 管理后台。
+
+仅监听 127.0.0.1，直接复用 player_store.py / gm.py 中的存档与关卡逻辑。
+除 Python 标准库外不需要额外依赖。
+"""
+
+import argparse
+import contextlib
+import datetime as _dt
+import html
+import http.server
+import os
+import secrets
+import socket
+import sqlite3
+import sys
+import time
+import traceback
+from urllib.parse import parse_qs, urlencode, urlsplit
+
+if getattr(sys, "frozen", False):
+    # PyInstaller 打包后 __file__ 指向临时解包目录，备份/数据应落在 exe 同级目录。
+    HERE = os.path.dirname(os.path.abspath(sys.executable))
+else:
+    HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+
+import gm  # noqa: E402
+import player_store as store  # noqa: E402
+
+
+ADMIN_HOST = "127.0.0.1"
+ADMIN_PORT = 8081
+MAX_POST_BYTES = 64 * 1024
+CSRF_TOKEN = secrets.token_urlsafe(32)
+BACKUP_DIR = os.path.join(HERE, "backups", "admin")
+
+
+class ValidationError(ValueError):
+    pass
+
+
+def _client_name_map(table, id_field="id", name_field="name"):
+    result = {}
+    for row in gm._clientdb_dicts(table):
+        try:
+            key = int(row.get(id_field, ""))
+        except (TypeError, ValueError):
+            continue
+        name = (row.get(name_field) or "").strip()
+        if key > 0:
+            result[key] = name or str(key)
+    return result
+
+
+ITEM_ROWS = gm._clientdb_dicts("ItemInfo.txt")
+ITEM_NAMES = {}
+for _item_row in ITEM_ROWS:
+    try:
+        _item_id = int(_item_row.get("id") or 0)
+    except (TypeError, ValueError):
+        continue
+    if _item_id > 0:
+        ITEM_NAMES[_item_id] = (_item_row.get("name") or str(_item_id)).strip()
+PLANT_NAMES = _client_name_map("tdPlantTypeInfo.txt")
+CARD_NAMES = _client_name_map("battleCard.txt")
+CARD_BASE_NAMES = _client_name_map("battleCard.txt", id_field="tdId")
+LEVEL_ROWS = [
+    row for row in gm._clientdb_dicts("levelselectInfo.txt")
+    if (row.get("challengeLevelId", "0") or "0") in ("0", "")
+]
+LEVEL_KEYS = {
+    (int(row.get("stageId") or 0), int(row.get("levelId") or 0),
+     int(row.get("subLevelId") or 0))
+    for row in LEVEL_ROWS
+    if (row.get("stageId") or "0").isdigit()
+    and (row.get("levelId") or "0").isdigit()
+    and (row.get("subLevelId") or "0").isdigit()
+}
+
+# ItemInfo 混合了真正背包物品、账号货币、卡牌展示物、装备实例、
+# 试剂实例以及一批只用于埋点的“购买原因”。后台必须按真实模型分流，
+# 否则会把装备/卡牌伪造成客户端无法解释的普通堆栈。
+CURRENCY_GRANTS = {
+    1: ("coin", "金币"),
+    3: ("sun", "阳光"),
+    4: ("present_ticket", "钻石"),
+    6: ("friend_point", "友情点"),
+    7: ("fame", "声望"),
+    9: ("energy", "体力"),
+    37: ("ticket", "金钻"),
+    39: ("contrib_val", "个人贡献"),
+    40: ("light", "便携光源"),
+    41: ("puppet_skill_val", "傀儡技能点"),
+    42: ("puppet_energy", "傀儡能量"),
+}
+SPECIAL_STACK_IDS = {2, 38, 43}  # 繁荣度、洗炼幸运点、威望：服务器明确按 bag stack 消耗
+
+ITEM_KIND_LABELS = {
+    "stack": "背包道具",
+    "currency": "账号货币",
+    "card": "植物卡",
+    "equipment": "装备",
+    "reagent": "试剂",
+}
+
+ITEM_TYPE_LABELS = {
+    1: "通用", 2: "材料/消耗品", 4: "植物卡", 5: "植物碎片",
+    6: "经验豆", 7: "装备", 8: "实验室材料", 9: "叶绿素",
+    10: "拼图", 11: "试剂", 12: "能量石", 13: "基因/傀儡材料",
+    14: "培养液", 15: "傀儡展示项", 16: "远征资源",
+}
+
+
+def _row_int(row, key, default=0):
+    try:
+        return int(row.get(key) or default)
+    except (TypeError, ValueError):
+        return default
+
+
+def _item_grant_kind(row):
+    item_id = _row_int(row, "id")
+    item_type = _row_int(row, "type")
+    if item_id in CURRENCY_GRANTS:
+        return "currency"
+    if item_id == 5:  # 植物经验在本服务器没有账号级数据模型
+        return None
+    if item_type == 4:
+        card_spec = str(row.get("cardItemId") or "")
+        return "card" if card_spec.split(":", 1)[0].isdigit() else None
+    if item_type == 7:
+        return "equipment"
+    if item_type == 11:
+        # 60001 试剂残渣是“药粉”转换物，不是可装备的试剂实例。
+        return "reagent" if item_id != 60001 else None
+    if item_type == 15:  # ItemInfo id != dummyZombieInfo.baseId，不能直接建傀儡
+        return None
+    if item_type == 1:
+        # type=1 的低 ID 大部分是付费/操作埋点；只放行真正声明了堆叠上限的物品。
+        return "stack" if _row_int(row, "stackNum") > 0 else (
+            "stack" if item_id in SPECIAL_STACK_IDS else None)
+    if item_type in (2, 5, 6, 8, 9, 10, 12, 13, 14, 16):
+        return "stack"
+    return None
+
+
+ITEM_CATALOG = []
+for _row in ITEM_ROWS:
+    _kind = _item_grant_kind(_row)
+    _iid = _row_int(_row, "id")
+    if not _kind or _iid <= 0:
+        continue
+    _entry = {
+        "id": _iid,
+        "ids": (_iid,),
+        "name": (_row.get("name") or str(_iid)).strip(),
+        "desc": (_row.get("desc") or "").replace("<br>", " · ").strip(),
+        "gain_way": (_row.get("gainWay") or "").strip(),
+        "type": _row_int(_row, "type"),
+        "sub_type": _row_int(_row, "subType"),
+        "quality": max(0, _row_int(_row, "quality")),
+        "min_level": max(0, _row_int(_row, "minLvRequired")),
+        "stack_num": max(0, _row_int(_row, "stackNum")),
+        "card_spec": str(_row.get("cardItemId") or "").strip(),
+        "kind": _kind,
+    }
+    _entry["search"] = ("%s %s %s %s" % (
+        _entry["id"], _entry["name"], _entry["desc"], _entry["gain_way"])).casefold()
+    ITEM_CATALOG.append(_entry)
+ITEM_CATALOG.sort(key=lambda item: item["id"])
+ITEM_CATALOG_BY_ID = {item["id"]: item for item in ITEM_CATALOG}
+
+# These two authored IDs describe the same equipment-energy gift. Group only
+# the catalog display; grants and existing inventory retain their exact IDs.
+# Compare every client field so a future configuration change separates them.
+_item_rows_by_id = {_row_int(row, "id"): row for row in ITEM_ROWS}
+_same_gift_ids = (3726, 3734)
+if all(iid in ITEM_CATALOG_BY_ID for iid in _same_gift_ids):
+    _same_gift_rows = [{key: value for key, value in _item_rows_by_id[iid].items()
+                        if key != "id"} for iid in _same_gift_ids]
+    if _same_gift_rows[0] == _same_gift_rows[1]:
+        _same_gift = dict(ITEM_CATALOG_BY_ID[3726], ids=_same_gift_ids)
+        _same_gift["search"] += " 3734"
+        ITEM_CATALOG = [_same_gift if item["id"] == 3726 else item
+                        for item in ITEM_CATALOG if item["id"] != 3734]
+
+
+PUZZLE_GROUP_ITEMS = {}
+for _row in ITEM_ROWS:
+    _iid = _row_int(_row, "id")
+    if _row_int(_row, "type") == 10 and _row_int(_row, "subType") == 1001:
+        PUZZLE_GROUP_ITEMS.setdefault(_iid // 100, {})[_iid] = _row
+
+# Derive the shared material and board size from the actual puzzle costs.
+PUZZLE_SHARED_MATERIALS = {}
+for _row in gm._clientdb_dicts("cardPuzzle.txt"):
+    _costs = [part.split(":", 1)[0] for part in
+              str(_row.get("originalCostItem") or "").split(";") if part]
+    _cells = _row_int(_row, "puzzleWidth") * _row_int(_row, "puzzleHeight")
+    if _cells > 1 and len(_costs) == _cells and len(set(_costs)) == 1 and _costs[0].isdigit():
+        _iid = int(_costs[0])
+        if _iid in PUZZLE_GROUP_ITEMS.get(_iid // 100, {}):
+            PUZZLE_SHARED_MATERIALS[_iid] = _cells
+
+
+def _invalid_puzzle_details(item_id):
+    group, offset = divmod(item_id, 100)
+    configured = PUZZLE_GROUP_ITEMS.get(group, {})
+    if not configured or item_id in configured:
+        return None
+    if group in (610, 620) and 1 <= offset <= 16:
+        ids = sorted(configured)
+        if ids == list(range(ids[0], ids[-1] + 1)):
+            allowed = "%s–%s" % (ids[0], ids[-1]) if len(ids) > 1 else str(ids[0])
+        else:
+            allowed = "、".join(map(str, ids))
+        color = "白色" if group == 610 else "绿色"
+        return ("无效拼图编号（ID %s）" % item_id,
+                "%s拼图 · 当前合法编号 %s · 保留原始数量" % (color, allowed))
+    base_id = group * 100 + 1
+    if 660 <= group <= 679 and 2 <= offset <= 25 and set(configured) == {base_id}:
+        cells = PUZZLE_SHARED_MATERIALS.get(base_id)
+        if cells:
+            return ("无效拼图编号（ID %s）" % item_id,
+                    "%s · 本阶 %s 格共用 ID %s · 保留原始数量" %
+                    (ITEM_NAMES[base_id], cells, base_id))
+    return None
+
+
+def _inventory_item_details(item_id):
+    """Resolve historical bag entries without inventing grantable items.
+
+    Old saves contain plant IDs and card prototype IDs in the stack table.
+    These names are verifiable in their own client tables, but they are not
+    ItemInfo entries and must not be added to the ordinary item catalog.
+    """
+    if item_id in ITEM_NAMES:
+        return ITEM_NAMES[item_id], ""
+    if item_id in PLANT_NAMES:
+        return PLANT_NAMES[item_id], "塔防植物编号 · 旧背包记录"
+    if item_id in CARD_BASE_NAMES:
+        return CARD_BASE_NAMES[item_id], "植物卡原型编号 · 旧背包记录"
+    puzzle_details = _invalid_puzzle_details(item_id)
+    if puzzle_details:
+        return puzzle_details
+    return "未收录物品（ID %s）" % item_id, "当前客户端未定义 · 保留原始数量"
+
+
+def _inventory_item_html(item_id):
+    name, detail = _inventory_item_details(item_id)
+    return esc(name) + ('<div class="sub">%s</div>' % esc(detail) if detail else "")
+
+
+EDIT_FIELDS = (
+    ("name", "角色名", "text", None, None),
+    ("level", "账号等级", "number", 1, max(gm.player_level_values())),
+    ("exp", "经验", "number", 0, 2_000_000_000),
+    ("coin", "金币", "number", 0, 2_000_000_000),
+    ("sun", "阳光", "number", 0, 2_000_000_000),
+    ("energy", "体力", "number", 0, 2_000_000_000),
+    ("ticket", "蓝钻", "number", 0, 2_000_000_000),
+    ("present_ticket", "金钻", "number", 0, 2_000_000_000),
+    ("fame", "声望", "number", 0, 2_000_000_000),
+    ("friend_point", "好友点", "number", 0, 2_000_000_000),
+)
+
+
+def esc(value):
+    return html.escape(str(value), quote=True)
+
+
+def _connect():
+    con = sqlite3.connect(store.DB_PATH, timeout=15)
+    con.row_factory = sqlite3.Row
+    return con
+
+
+@contextlib.contextmanager
+def _connection():
+    """sqlite3.Connection 的 with 只提交事务，这里额外确保句柄被关闭。"""
+    con = _connect()
+    try:
+        yield con
+    finally:
+        con.close()
+
+
+def _player(uin):
+    with _connection() as con:
+        row = con.execute("SELECT * FROM players WHERE uin=?", (int(uin),)).fetchone()
+        return dict(row) if row else None
+
+
+def _require_player(uin):
+    player = _player(uin)
+    if not player:
+        raise ValidationError("账号 %s 不存在，请先在首页创建。" % uin)
+    return player
+
+
+def _integer(form, key, minimum=None, maximum=None, label=None):
+    raw = (form.get(key, [""])[0] or "").strip()
+    title = label or key
+    if key == "uin":
+        try:
+            return gm.validate_uin(raw)
+        except ValueError as exc:
+            raise ValidationError(str(exc))
+    try:
+        value = int(raw)
+    except (TypeError, ValueError):
+        raise ValidationError("%s 必须是整数。" % title)
+    if minimum is not None and value < minimum:
+        raise ValidationError("%s 不能小于 %s。" % (title, minimum))
+    if maximum is not None and value > maximum:
+        raise ValidationError("%s 不能大于 %s。" % (title, maximum))
+    return value
+
+
+def _format_time(value):
+    try:
+        value = int(value or 0)
+        if value <= 0:
+            return "—"
+        return _dt.datetime.fromtimestamp(value).strftime("%Y-%m-%d %H:%M")
+    except (TypeError, ValueError, OSError):
+        return "—"
+
+
+def _backup_database(reason):
+    os.makedirs(BACKUP_DIR, exist_ok=True)
+    safe_reason = "".join(c if c.isalnum() or c in "-_" else "-" for c in reason)[:48]
+    stamp = _dt.datetime.now().strftime("%Y%m%d-%H%M%S-%f")
+    destination = os.path.join(BACKUP_DIR, "%s-%s.db" % (stamp, safe_reason or "backup"))
+    source = sqlite3.connect(store.DB_PATH, timeout=30)
+    target = sqlite3.connect(destination)
+    try:
+        source.backup(target)
+    finally:
+        target.close()
+        source.close()
+    return destination
+
+
+def _reset_player(uin):
+    """删除所有含 uin 列的该玩家数据，再用服务器原生逻辑创建新手档。"""
+    backup = _backup_database("before-reset-%s" % uin)
+    con = _connect()
+    try:
+        con.execute("BEGIN IMMEDIATE")
+        tables = [row[0] for row in con.execute(
+            "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'")]
+        affected = []
+        for table in tables:
+            # table 来自 sqlite_master，引号翻倍后再用，不接受外部输入。
+            quoted = '"' + table.replace('"', '""') + '"'
+            columns = {row[1] for row in con.execute("PRAGMA table_info(%s)" % quoted)}
+            if "uin" not in columns:
+                continue
+            cur = con.execute("DELETE FROM %s WHERE uin=?" % quoted, (uin,))
+            if cur.rowcount:
+                affected.append((table, cur.rowcount))
+        con.commit()
+    except Exception:
+        con.rollback()
+        raise
+    finally:
+        con.close()
+    store.close_thread_db()
+    store.get_or_create_player(uin)
+    store.close_thread_db()
+    return backup, affected
+
+
+def _port_open(port):
+    try:
+        with socket.create_connection(("127.0.0.1", port), timeout=0.08):
+            return True
+    except OSError:
+        return False
+
+
+BASE_CSS = r"""
+:root{color-scheme:dark;--bg:#11180d;--panel:#1c2815;--panel2:#24351a;--line:#38502a;
+--text:#edf5e6;--muted:#9eaf91;--green:#8bd450;--green2:#b8ed8f;--red:#ef795e;--gold:#e6bc55}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#10170c,#182311 55%,#11180d);
+color:var(--text);font:15px/1.5 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+a{color:var(--green2);text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:1160px;margin:auto;padding:0 22px}
+header{border-bottom:1px solid var(--line);background:#131d0fdd;position:sticky;top:0;z-index:2;backdrop-filter:blur(8px)}
+.head{display:flex;gap:18px;align-items:center;padding:14px 0}.brand{font-weight:800;font-size:19px;color:#fff}.tag{color:var(--muted);font-size:12px}
+nav{margin-left:auto;display:flex;gap:14px}.main{padding:28px 0 52px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.card{background:linear-gradient(145deg,var(--panel),#172110);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:0 12px 32px #0003}
+.span12{grid-column:span 12}.span8{grid-column:span 8}.span7{grid-column:span 7}.span6{grid-column:span 6}.span5{grid-column:span 5}.span4{grid-column:span 4}
+h1{font-size:26px;margin:0 0 18px}h2{font-size:18px;margin:0 0 14px}h3{font-size:14px;margin:18px 0 8px;color:var(--green2)}
+.sub{color:var(--muted);font-size:13px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.metric{background:#10180c;border:1px solid #304522;border-radius:11px;padding:13px}
+.metric b{display:block;font-size:22px;color:#fff}.metric span{color:var(--muted);font-size:12px}.status{display:inline-flex;align-items:center;gap:6px;padding:3px 9px;border-radius:99px;background:#0f180b;border:1px solid var(--line);font-size:12px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--red)}.dot.on{background:var(--green);box-shadow:0 0 8px var(--green)}
+form{margin:0}.row{display:flex;gap:10px;align-items:end;flex-wrap:wrap}.field{min-width:120px;flex:1}.field.small{max-width:145px}.field label{display:block;color:var(--muted);font-size:12px;margin:0 0 4px}
+input,select{width:100%;border:1px solid #3b522d;background:#0e160a;color:var(--text);border-radius:8px;padding:9px 10px;font:inherit;outline:none}
+input:focus,select:focus{border-color:var(--green)}button,.btn{display:inline-block;border:0;border-radius:8px;padding:9px 14px;background:var(--green);color:#14200e;font-weight:750;cursor:pointer;font:inherit}
+button:hover,.btn:hover{filter:brightness(1.08);text-decoration:none}.secondary{background:#304524;color:var(--text)}.danger{background:#a94331;color:white}.smallbtn{padding:5px 9px;font-size:12px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:9px 8px;border-bottom:1px solid #304324;vertical-align:middle}th{color:var(--muted);font-weight:600}tr:last-child td{border-bottom:0}.num{font-variant-numeric:tabular-nums}.scroll{overflow:auto}
+.flash{border-radius:10px;padding:11px 14px;margin:0 0 18px;border:1px solid #53773a;background:#23381a}.flash.error{border-color:#8d493b;background:#3b201a;color:#ffd7ce}
+.pills{display:flex;gap:7px;flex-wrap:wrap}.pill{border:1px solid #3b542c;background:#10190c;border-radius:99px;padding:4px 9px;font-size:12px}.empty{color:var(--muted);padding:20px 0;text-align:center}
+.warning{border-left:3px solid var(--gold);padding:9px 12px;background:#2a2413;color:#f3d78d;font-size:13px;border-radius:5px}.dangerbox{border-color:#783c31;background:#241613}
+footer{color:#78876d;font-size:12px;padding:20px 0;border-top:1px solid #293b20}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}.right{text-align:right}.nowrap{white-space:nowrap}
+@media(max-width:780px){.span8,.span7,.span6,.span5,.span4{grid-column:span 12}.metrics{grid-template-columns:repeat(2,1fr)}nav .optional{display:none}.wrap{padding:0 13px}.main{padding-top:18px}}
+"""
+
+
+def _page(title, content, flash_message="", flash_kind="ok"):
+    flash = ""
+    if flash_message:
+        flash = '<div class="flash%s">%s</div>' % (
+            " error" if flash_kind == "error" else "", esc(flash_message))
+    return """<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>%s · PvZ OL 后台</title>
+<style>%s</style></head><body><header><div class="wrap head"><a class="brand" href="/">🌻 PvZ OL 后台</a>
+<span class="tag">仅限本机</span><nav><a href="/">账号</a><a class="optional" href="http://127.0.0.1:8080/" target="_blank" rel="noreferrer">游戏网页</a></nav></div></header>
+<main class="wrap main">%s%s</main><footer><div class="wrap">本地 GM 工具 · 所有操作直接写入 players.db · 重要操作会先备份</div></footer></body></html>""" % (
+        esc(title), BASE_CSS, flash, content)
+
+
+def _csrf_input():
+    return '<input type="hidden" name="csrf" value="%s">' % esc(CSRF_TOKEN)
+
+
+def _redirect_url(path, message="", kind="ok"):
+    if not message:
+        return path
+    sep = "&" if "?" in path else "?"
+    return path + sep + urlencode({"msg": message, "kind": kind})
+
+
+def _catalog_url(uin, values=None):
+    values = values or {}
+
+    def first(*keys):
+        for key in keys:
+            raw = values.get(key, [""])
+            if isinstance(raw, list):
+                raw = raw[0] if raw else ""
+            if raw not in (None, ""):
+                return str(raw)
+        return ""
+
+    params = {"uin": str(int(uin))}
+    query = first("catalog_q", "q").strip()[:60]
+    item_kind = first("catalog_kind", "item_kind").strip()
+    page = first("catalog_page", "page").strip()
+    if query:
+        params["q"] = query
+    if item_kind in ITEM_KIND_LABELS:
+        params["item_kind"] = item_kind
+    if page.isdigit() and int(page) > 1:
+        params["page"] = str(int(page))
+    return "/items?" + urlencode(params)
+
+
+class AdminHandler(http.server.BaseHTTPRequestHandler):
+    server_version = "PvZLocalAdmin/1.0"
+
+    def _security_headers(self):
+        self.send_header("Cache-Control", "no-store")
+        self.send_header("X-Content-Type-Options", "nosniff")
+        self.send_header("X-Frame-Options", "DENY")
+        self.send_header("Referrer-Policy", "no-referrer")
+        self.send_header(
+            "Content-Security-Policy",
+            "default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; "
+            "form-action 'self'; base-uri 'none'; frame-ancestors 'none'",
+        )
+
+    def _send(self, status, body, content_type="text/html; charset=utf-8"):
+        data = body.encode("utf-8") if isinstance(body, str) else body
+        self.send_response(status)
+        self.send_header("Content-Type", content_type)
+        self.send_header("Content-Length", str(len(data)))
+        self._security_headers()
+        self.end_headers()
+        if self.command != "HEAD":
+            self.wfile.write(data)
+
+    def _redirect(self, path, message="", kind="ok"):
+        self.send_response(303)
+        self.send_header("Location", _redirect_url(path, message, kind))
+        self._security_headers()
+        self.end_headers()
+
+    def _request_allowed(self):
+        host = self.headers.get("Host", "")
+        try:
+            hostname = urlsplit("//" + host).hostname
+        except ValueError:
+            hostname = None
+        if (hostname or "").lower() not in ("127.0.0.1", "localhost", "::1"):
+            self._send(421, "非法 Host", "text/plain; charset=utf-8")
+            return False
+        return True
+
+    def _post_form(self):
+        try:
+            length = int(self.headers.get("Content-Length", "0"))
+        except ValueError:
+            raise ValidationError("无效请求长度。")
+        if length <= 0 or length > MAX_POST_BYTES:
+            raise ValidationError("请求内容过大或为空。")
+        content_type = self.headers.get("Content-Type", "").split(";", 1)[0].strip().lower()
+        if content_type != "application/x-www-form-urlencoded":
+            raise ValidationError("仅支持标准表单提交。")
+        # Safari、WebView 等 macOS 内嵌浏览器可能把本地页面的 Origin 发送为
+        # ``null`` 或应用自定义来源。Origin 只能作为浏览器提示，不能作为这里
+        # 的安全边界；真正的写入保护由仅监听回环地址、Host 白名单和下面的
+        # 随机 CSRF 令牌共同提供。
+        raw = self.rfile.read(length).decode("utf-8", "strict")
+        form = parse_qs(raw, keep_blank_values=True, max_num_fields=80)
+        token = (form.get("csrf", [""])[0] or "")
+        if not secrets.compare_digest(token, CSRF_TOKEN):
+            raise ValidationError("页面已过期，请刷新后重试。")
+        return form
+
+    def _message(self, query):
+        return (query.get("msg", [""])[0], query.get("kind", ["ok"])[0])
+
+    def do_HEAD(self):
+        self.do_GET()
+
+    def do_GET(self):
+        if not self._request_allowed():
+            return
+        parsed = urlsplit(self.path)
+        query = parse_qs(parsed.query)
+        try:
+            if parsed.path == "/healthz":
+                self._send(200, "ok\n", "text/plain; charset=utf-8")
+            elif parsed.path == "/":
+                self._dashboard(query)
+            elif parsed.path == "/player":
+                uin = _integer(query, "uin", 1, 9_223_372_036_854_775_807, "UIN")
+                self._player_page(uin, query)
+            elif parsed.path == "/items":
+                uin = _integer(query, "uin", 1, 9_223_372_036_854_775_807, "UIN")
+                self._items_page(uin, query)
+            else:
+                self._send(404, _page("未找到", '<div class="card"><h1>页面不存在</h1><a href="/">返回首页</a></div>'))
+        except ValidationError as exc:
+            self._send(400, _page("输入错误", '<div class="card"><h1>输入错误</h1><p>%s</p><a href="/">返回首页</a></div>' % esc(exc)))
+        except Exception:
+            traceback.print_exc()
+            self._send(500, _page("后台错误", '<div class="card"><h1>后台出错</h1><p>请查看启动器日志。</p></div>'))
+        finally:
+            store.close_thread_db()
+
+    def do_POST(self):
+        if not self._request_allowed():
+            return
+        parsed = urlsplit(self.path)
+        try:
+            form = self._post_form()
+            handlers = {
+                "/player/create": self._create_player,
+                "/player/new": self._new_player,
+                "/player/update": self._update_player,
+                "/player/item": self._edit_item,
+                "/player/grant-item": self._grant_item,
+                "/player/plant": self._edit_plant,
+                "/player/progress": self._edit_progress,
+                "/player/cards": self._edit_cards,
+                "/player/diamond": self._edit_diamond,
+                "/player/friend": self._edit_friend,
+                "/player/reset": self._reset_account,
+                "/backup": self._manual_backup,
+            }
+            handler = handlers.get(parsed.path)
+            if not handler:
+                self._send(404, "未找到", "text/plain; charset=utf-8")
+                return
+            handler(form)
+        except ValidationError as exc:
+            uin = ""
+            try:
+                uin = str(int((form.get("uin", [""])[0] or "")))
+            except Exception:
+                pass
+            if parsed.path in ("/player/create", "/player/new"):
+                target = "/"
+            elif parsed.path == "/player/grant-item" and uin:
+                target = _catalog_url(int(uin), form)
+            else:
+                target = "/player?uin=" + uin if uin else "/"
+            self._redirect(target, str(exc), "error")
+        except Exception:
+            traceback.print_exc()
+            self._send(500, _page("后台错误", '<div class="card"><h1>操作失败</h1><p>未写入不完整数据，请查看启动器日志。</p></div>'))
+        finally:
+            store.close_thread_db()
+
+    def _dashboard(self, query):
+        search = (query.get("q", [""])[0] or "").strip()
+        with _connection() as con:
+            total = con.execute("SELECT COUNT(*) FROM players").fetchone()[0]
+            cards = con.execute("SELECT COUNT(*) FROM cards").fetchone()[0]
+            items = con.execute("SELECT COALESCE(SUM(count),0) FROM items").fetchone()[0]
+            sql = ("SELECT uin,name,level,coin,sun,ticket,present_ticket,vip_level,td_stage,td_level,td_sub,last_login "
+                   "FROM players")
+            args = []
+            if search:
+                sql += " WHERE CAST(uin AS TEXT) LIKE ? OR name LIKE ?"
+                term = "%" + search.replace("%", "\\%").replace("_", "\\_") + "%"
+                args = [term, term]
+                sql += " ESCAPE '\\'"
+            sql += " ORDER BY last_login DESC, uin DESC LIMIT 200"
+            players = [dict(row) for row in con.execute(sql, args)]
+
+        rows = "".join(
+            "<tr><td><a class=\"mono nowrap\" href=\"/player?uin=%s\">%s</a></td>"
+            "<td><b>%s</b></td><td class=\"num\">Lv.%s</td><td class=\"num\">%s</td>"
+            "<td class=\"num\">%s / %s</td><td>VIP%s</td><td>%s-%s-%s</td><td class=\"nowrap sub\">%s</td></tr>" % (
+                p["uin"], p["uin"], esc(p["name"]), p["level"], p["coin"],
+                p["ticket"], p["present_ticket"], p["vip_level"], p["td_stage"],
+                p["td_level"], p["td_sub"], _format_time(p["last_login"]))
+            for p in players
+        ) or '<tr><td colspan="8" class="empty">没有匹配的账号</td></tr>'
+        web_on, game_on = _port_open(8080), _port_open(9001)
+        message, kind = self._message(query)
+        content = """
+<h1>账号管理</h1>
+<div class="grid"><section class="card span12"><div class="metrics">
+<div class="metric"><b>%s</b><span>账号数</span></div><div class="metric"><b>%s</b><span>植物卡</span></div>
+<div class="metric"><b>%s</b><span>背包物品总数</span></div><div class="metric"><b><span class="status"><i class="dot%s"></i>网页 :8080</span> <span class="status"><i class="dot%s"></i>游戏 :9001</span></b><span>服务状态</span></div>
+</div></section>
+<section class="card span8"><h2>玩家列表</h2><form method="get" action="/" class="row"><div class="field"><label>搜索 UIN 或角色名</label><input name="q" value="%s" placeholder="例如 700000200"></div><button type="submit">搜索</button><a class="btn secondary" href="/">全部</a></form>
+<div class="scroll" style="margin-top:14px"><table><thead><tr><th>UIN</th><th>角色</th><th>等级</th><th>金币</th><th>蓝钻 / 金钻</th><th>VIP</th><th>塔防进度</th><th>最近登录</th></tr></thead><tbody>%s</tbody></table></div></section>
+<aside class="card span4"><h2>打开已有账号</h2><p class="sub">输入启动器里使用的账号编号，打开已有存档。</p>
+<form method="post" action="/player/create">%s<div class="field"><label>账号编号（UIN）</label><input class="mono" name="uin" inputmode="numeric" pattern="[0-9]+" maxlength="19" required placeholder="700000200"></div><button class="secondary" style="margin-top:10px;width:100%%" type="submit">打开账号</button></form>
+<h3>新建账号</h3><p class="sub">输入未使用的纯数字编号，创建独立的新手存档。重复编号会提示错误，已有存档会保留。</p>
+<form method="post" action="/player/new">%s<div class="field"><label>新账号编号（UIN）</label><input class="mono" name="uin" inputmode="numeric" pattern="[0-9]+" maxlength="19" required placeholder="例如 700000205"></div><button style="margin-top:10px;width:100%%" type="submit">新建账号</button></form>
+<h3>数据库</h3><p class="sub mono">%s</p><form method="post" action="/backup">%s<button class="secondary" style="width:100%%" type="submit">立即备份 players.db</button></form></aside></div>""" % (
+            total, cards, items, " on" if web_on else "", " on" if game_on else "",
+            esc(search), rows, _csrf_input(), _csrf_input(), esc(os.path.basename(store.DB_PATH)), _csrf_input())
+        self._send(200, _page("账号管理", content, message, kind))
+
+    def _items_page(self, uin, query):
+        player = _require_player(uin)
+        search = (query.get("q", [""])[0] or "").strip()[:60]
+        item_kind = (query.get("item_kind", [""])[0] or "").strip()
+        if item_kind not in ITEM_KIND_LABELS:
+            item_kind = ""
+        try:
+            page_number = max(1, int((query.get("page", ["1"])[0] or "1")))
+        except ValueError:
+            page_number = 1
+
+        needle = search.casefold()
+        matches = [item for item in ITEM_CATALOG
+                   if (not item_kind or item["kind"] == item_kind)
+                   and (not needle or needle in item["search"])]
+        per_page = 50
+        total_pages = max(1, (len(matches) + per_page - 1) // per_page)
+        page_number = min(page_number, total_pages)
+        visible = matches[(page_number - 1) * per_page:page_number * per_page]
+
+        stack_counts = dict(store.get_items(uin))
+        equipment_counts = {}
+        for equipment in store.get_equipments(uin):
+            iid = int(equipment["item_id"])
+            equipment_counts[iid] = equipment_counts.get(iid, 0) + 1
+        card_counts = {}
+        for _uid, card_id, _level, _exp in store.get_cards(uin):
+            card_counts[int(card_id)] = card_counts.get(int(card_id), 0) + 1
+        reagent_counts = {}
+        for reagent in store.get_reagents(uin):
+            base_id = int(reagent["base_id"])
+            reagent_counts[base_id] = reagent_counts.get(base_id, 0) + 1
+
+        def owned_count(item):
+            if item["kind"] == "currency":
+                return int(player.get(CURRENCY_GRANTS[item["id"]][0], 0) or 0)
+            if item["kind"] == "equipment":
+                return equipment_counts.get(item["id"], 0)
+            if item["kind"] == "reagent":
+                return reagent_counts.get(item["id"], 0)
+            if item["kind"] == "card":
+                try:
+                    card_id = int(item["card_spec"].split(":", 1)[0])
+                except (TypeError, ValueError):
+                    return 0
+                return card_counts.get(card_id, 0)
+            return sum(stack_counts.get(iid, 0) for iid in item["ids"])
+
+        rows = []
+        for item in visible:
+            kind_label = ITEM_KIND_LABELS[item["kind"]]
+            type_label = ITEM_TYPE_LABELS.get(item["type"], "类型 %s" % item["type"])
+            details = []
+            if item["desc"]:
+                details.append(item["desc"])
+            if item["gain_way"]:
+                details.append("来源：" + item["gain_way"])
+            if item["kind"] == "card":
+                details.append("将创建真实卡牌实例，不会生成假背包堆栈")
+            elif item["kind"] in ("equipment", "reagent"):
+                details.append("每个数量都会创建独立实例")
+            limit = 2_000_000_000 if item["kind"] == "currency" else (
+                50 if item["kind"] in ("card", "equipment", "reagent") else
+                (item["stack_num"] or 2_000_000_000))
+            id_html = "<b>%s</b>" % item["id"]
+            owned_html = "<b>%s</b>" % owned_count(item)
+            grant_id_input = '<input type="hidden" name="item_id" value="%s">' % item["id"]
+            if len(item["ids"]) > 1:
+                id_html += '<div class="sub">同款 ID：%s</div>' % "、".join(
+                    str(iid) for iid in item["ids"][1:])
+                owned_html += '<div class="sub">%s</div>' % " · ".join(
+                    "%s：%s" % (iid, stack_counts.get(iid, 0)) for iid in item["ids"])
+                selected_id = int(search) if search in tuple(map(str, item["ids"])) else item["id"]
+                id_options = "".join('<option value="%s"%s>%s</option>' % (
+                    iid, " selected" if iid == selected_id else "", iid) for iid in item["ids"])
+                grant_id_input = ('<div class="field small"><label>道具 ID</label>'
+                                  '<select name="item_id">%s</select></div>') % id_options
+            rows.append(f"""
+<tr><td class="mono nowrap">{id_html}</td><td><b>{esc(item['name'])}</b><div class="sub">{esc(' · '.join(details))}</div></td>
+<td><span class="pill">{esc(kind_label)}</span><div class="sub">{esc(type_label)} · 品质 {item['quality']} · 需 Lv.{item['min_level']}</div></td>
+<td class="num">{owned_html}</td><td><form method="post" action="/player/grant-item" class="row">{_csrf_input()}
+<input type="hidden" name="uin" value="{uin}">{grant_id_input}
+<input type="hidden" name="catalog_q" value="{esc(search)}"><input type="hidden" name="catalog_kind" value="{esc(item_kind)}"><input type="hidden" name="catalog_page" value="{page_number}">
+<div class="field small"><label>数量</label><input name="quantity" type="number" min="1" max="{limit}" value="1" required></div><button type="submit">发放</button></form></td></tr>""")
+        rows_html = "".join(rows) or '<tr><td colspan="5" class="empty">没有找到可安全发放的道具</td></tr>'
+
+        options = ['<option value=""%s>全部可发放项</option>' %
+                   (" selected" if not item_kind else "")]
+        options.extend('<option value="%s"%s>%s</option>' %
+                       (key, " selected" if item_kind == key else "", esc(label))
+                       for key, label in ITEM_KIND_LABELS.items())
+
+        page_links = []
+        for number in range(max(1, page_number - 2), min(total_pages, page_number + 2) + 1):
+            url = "/items?" + urlencode({
+                "uin": uin, "q": search, "item_kind": item_kind, "page": number})
+            if number == page_number:
+                page_links.append('<span class="pill"><b>%s</b></span>' % number)
+            else:
+                page_links.append('<a class="pill" href="%s">%s</a>' % (esc(url), number))
+        previous = ""
+        following = ""
+        if page_number > 1:
+            previous = '<a class="btn secondary smallbtn" href="%s">← 上一页</a>' % esc(
+                "/items?" + urlencode({"uin": uin, "q": search, "item_kind": item_kind,
+                                        "page": page_number - 1}))
+        if page_number < total_pages:
+            following = '<a class="btn secondary smallbtn" href="%s">下一页 →</a>' % esc(
+                "/items?" + urlencode({"uin": uin, "q": search, "item_kind": item_kind,
+                                        "page": page_number + 1}))
+        pager = '<div class="row" style="justify-content:center;margin-top:16px">%s%s%s</div>' % (
+            previous, "".join(page_links), following)
+
+        message, flash_kind = self._message(query)
+        content = f"""
+<p class="sub"><a href="/player?uin={uin}">← 返回 {esc(player['name'])}</a></p>
+<h1>具体道具发放 <span class="sub mono">UIN {uin}</span></h1>
+<div class="warning" style="margin-bottom:16px">此页从客户端 ItemInfo 读取真实名称和描述。普通道具、货币、植物卡、装备和试剂会分别写入正确的数据模型；无法安全建模的傀儡展示项和植物经验已自动排除。</div>
+<section class="card"><form method="get" action="/items" class="row"><input type="hidden" name="uin" value="{uin}">
+<div class="field"><label>按道具名、ID、描述或来源搜索</label><input name="q" value="{esc(search)}" placeholder="例如：塔防钥匙、4001、经验豆、试剂"></div>
+<div class="field small"><label>发放类型</label><select name="item_kind">{''.join(options)}</select></div><button type="submit">搜索</button><a class="btn secondary" href="/items?uin={uin}">清空</a></form>
+<p class="sub" style="margin-bottom:0">共 {len(matches)} 项·第 {page_number}/{total_pages} 页。发放后请重新进入游戏，或让对应功能刷新背包。</p></section>
+<section class="card" style="margin-top:16px"><div class="scroll"><table><thead><tr><th>ID</th><th>道具</th><th>类型</th><th>已有</th><th>发放数量</th></tr></thead><tbody>{rows_html}</tbody></table></div>{pager}</section>"""
+        self._send(200, _page("具体道具发放", content, message, flash_kind))
+
+    def _player_page(self, uin, query):
+        player = _require_player(uin)
+        plants = store.get_player_plants(uin)
+        bag = store.get_items(uin)
+        cards = store.get_cards(uin)
+        friends = store.get_friends(uin)
+        with _connection() as con:
+            td_count = con.execute("SELECT COUNT(*) FROM td_passed WHERE uin=?", (uin,)).fetchone()[0]
+            td_stars = con.execute("SELECT COALESCE(SUM(star),0) FROM td_passed WHERE uin=?", (uin,)).fetchone()[0]
+
+        edit_inputs = []
+        for key, label, kind, minimum, maximum in EDIT_FIELDS:
+            attrs = ""
+            if kind == "number":
+                attrs = ' min="%s" max="%s" step="1"' % (minimum, maximum)
+            edit_inputs.append(
+                '<div class="field"><label>%s</label><input name="%s" type="%s" value="%s"%s required></div>' %
+                (esc(label), esc(key), kind, esc(player.get(key, "")), attrs))
+        edit_inputs.append(
+            '<div class="field"><label>VIP 等级</label><select name="vip_level">%s</select></div>' %
+            "".join('<option value="%s"%s>%s</option>' %
+                    (v, " selected" if int(player.get("vip_level", 0)) == v else "", "关闭" if v == 0 else "VIP%d" % v)
+                    for v in range(4)))
+        edit_inputs.append(
+            '<div class="field"><label>塔防特权</label><select name="td_privilege"><option value="0"%s>关闭</option><option value="1"%s>开启</option></select></div>' %
+            (" selected" if not int(player.get("td_privilege", 0)) else "",
+             " selected" if int(player.get("td_privilege", 0)) else ""))
+
+        bag_rows = "".join(
+            '<tr><td class="mono">%s</td><td>%s</td><td class="num"><b>%s</b></td></tr>' %
+            (iid, _inventory_item_html(iid), count)
+            for iid, count in bag
+        )
+        bag_rows += "".join(
+            '<tr><td class="mono">%s</td><td>%s（装备 UID %s）</td><td class="num"><b>1</b></td></tr>' %
+            (equipment["item_id"], esc(ITEM_NAMES.get(equipment["item_id"], "未知装备")),
+             equipment["uid"])
+            for equipment in store.get_equipments(uin)
+        )
+        bag_rows = bag_rows or '<tr><td colspan="3" class="empty">背包为空</td></tr>'
+        plant_pills = "".join(
+            '<span class="pill"><span class="mono">%s</span> %s</span>' %
+            (pid, esc(PLANT_NAMES.get(pid, "未知植物"))) for pid in plants
+        ) or '<span class="empty">暂无塔防植物</span>'
+        card_rows = "".join(
+            '<tr><td class="mono">%s</td><td class="mono">%s</td><td>%s</td><td>Lv.%s</td><td>%s</td></tr>' %
+            (uid, cid, esc(CARD_NAMES.get(cid, "未知卡牌")), level, exp)
+            for uid, cid, level, exp in cards
+        ) or '<tr><td colspan="5" class="empty">该账号还没有植物卡</td></tr>'
+        friend_rows = "".join(
+            '<tr><td class="mono">%s</td><td>%s</td><td>%s %s · Lv.%s</td>'
+            '<td>%s / %s / %s</td><td><form method="post" action="/player/friend">%s'
+            '<input type="hidden" name="uin" value="%s"><input type="hidden" name="operation" value="remove">'
+            '<input type="hidden" name="friend_role_id" value="%s"><button class="danger smallbtn" type="submit">移除</button></form></td></tr>' %
+            (f["friend_role_id"], esc(f["friend_name"]), f["help_plant_id"],
+             esc(PLANT_NAMES.get(f["help_plant_id"], "未知植物")), f["help_plant_level"],
+             f["diamond_blue_lvl"], f["diamond_yellow_lvl"], f["diamond_xinyue_lvl"],
+             _csrf_input(), uin, f["friend_role_id"])
+            for f in friends
+        ) or '<tr><td colspan="5" class="empty">暂无好友</td></tr>'
+        message, kind = self._message(query)
+        content = """
+<p class="sub"><a href="/">← 返回账号列表</a></p><h1>%s <span class="sub mono">UIN %s</span></h1>
+<div class="grid"><section class="card span12"><div class="metrics">
+<div class="metric"><b>Lv.%s</b><span>账号等级</span></div><div class="metric"><b>%s</b><span>金币</span></div>
+<div class="metric"><b>%s / %s</b><span>蓝钻 / 金钻</span></div><div class="metric"><b>%s 关 · %s 星</b><span>塔防进度</span></div></div></section>
+<section class="card span7"><h2>基础属性</h2><form method="post" action="/player/update">%s<input type="hidden" name="uin" value="%s"><div class="row">%s</div><button style="margin-top:14px" type="submit">保存基础属性</button></form><p class="sub">等级会限制植物卡等级，并决定城镇建筑和后续章节是否开放。重新进入游戏后生效。</p></section>
+<aside class="card span5"><h2>快速通关</h2><p class="sub">按客户端关卡表补齐之前的关卡、星级、门和奖励植物。</p>
+<form method="post" action="/player/progress">%s<input type="hidden" name="uin" value="%s"><div class="row"><div class="field small"><label>章节</label><input name="stage" type="number" min="1" value="%s" required></div><div class="field small"><label>关卡</label><input name="level" type="number" min="1" value="%s" required></div><div class="field small"><label>小关（留空=整关）</label><input name="sub" type="number" min="1"></div></div><button style="margin-top:10px" type="submit">通关至此</button></form>
+<h3>当前记录</h3><p><b>%s-%s-%s</b> · %s 关 · %s 星</p></aside>
+<section class="card span6"><h2>背包物品</h2><p><a class="btn" href="/items?uin=%s">🎁 打开具体道具库</a></p><p class="sub">道具库可按中文名称或 ID 搜索，并会正确区分普通道具、植物卡、装备和试剂。下方入口仅用于调整普通堆叠道具。</p><p class="sub">旧背包记录会按植物资料核对名称；未收录编号会保留原始数量。植物解锁和植物卡实例请查看对应区域。</p><form method="post" action="/player/item" class="row">%s<input type="hidden" name="uin" value="%s"><div class="field"><label>物品 ID</label><input name="item_id" type="number" min="1" required></div><div class="field"><label>增减数量（可为负）</label><input name="delta" type="number" value="1" required></div><button type="submit">应用</button></form><div class="scroll" style="margin-top:14px;max-height:330px"><table><thead><tr><th>ID</th><th>名称</th><th>数量</th></tr></thead><tbody>%s</tbody></table></div></section>
+<section class="card span6"><h2>塔防植物</h2><form method="post" action="/player/plant" class="row">%s<input type="hidden" name="uin" value="%s"><div class="field"><label>植物 ID</label><input name="plant_id" type="number" min="1" list="plant-ids" required><datalist id="plant-ids">%s</datalist></div><div class="field small"><label>操作</label><select name="operation"><option value="add">解锁</option><option value="remove">移除</option></select></div><button type="submit">应用</button></form><div class="pills" style="margin-top:16px">%s</div></section>
+<section class="card span8"><h2>植物卡</h2><form method="post" action="/player/cards" class="row">%s<input type="hidden" name="uin" value="%s"><div class="field"><label>卡牌 UID（留空=全部）</label><input name="uid" type="number" min="1"></div><div class="field small"><label>目标等级</label><input name="level" type="number" min="1" max="999" required></div><button type="submit">设置等级</button></form><div class="scroll" style="margin-top:14px;max-height:330px"><table><thead><tr><th>UID</th><th>卡牌 ID</th><th>名称</th><th>等级</th><th>经验</th></tr></thead><tbody>%s</tbody></table></div></section>
+<aside class="card span4 dangerbox"><h2>重置该账号</h2><div class="warning">先停止游戏再重置。后台会自动备份整个数据库，然后删除该 UIN 在所有玩法表中的记录，并重建一份新手存档。</div>
+<form method="post" action="/player/reset" style="margin-top:13px">%s<input type="hidden" name="uin" value="%s"><div class="field"><label>输入 %s 确认</label><input name="confirm_uin" class="mono" autocomplete="off" required></div><label class="sub" style="display:block;margin:10px 0"><input name="ack" type="checkbox" value="yes" style="width:auto" required> 我知道该账号会回到初始状态</label><button class="danger" type="submit">备份并重置</button></form></aside></div>""" % (
+            esc(player["name"]), uin, player["level"], player["coin"], player["ticket"],
+            player["present_ticket"], td_count, td_stars, _csrf_input(), uin,
+            "".join(edit_inputs), _csrf_input(), uin, player["td_stage"], player["td_level"],
+            player["td_stage"], player["td_level"], player["td_sub"], td_count, td_stars,
+            uin, _csrf_input(), uin, bag_rows, _csrf_input(), uin,
+            "".join('<option value="%s">%s %s</option>' % (pid, pid, esc(name))
+                    for pid, name in sorted(PLANT_NAMES.items())), plant_pills,
+            _csrf_input(), uin, card_rows, _csrf_input(), uin, uin)
+        plant_options = "".join(
+            '<option value="%s">%s %s</option>' % (pid, pid, esc(name))
+            for pid, name in sorted(PLANT_NAMES.items()))
+        content += """
+<div class="grid" style="margin-top:16px"><section class="card span5"><h2>钻石卡</h2><p class="sub">登录时通过会员信息同步给客户端。0 表示未开通对应类型。</p>
+<form method="post" action="/player/diamond">%s<input type="hidden" name="uin" value="%s"><div class="row"><div class="field small"><label>显示卡片</label><select name="flag"><option value="0"%s>关闭</option><option value="1"%s>开启</option></select></div><div class="field small"><label>蓝钻等级</label><input name="blue" type="number" min="0" max="99" value="%s" required></div><div class="field small"><label>黄钻等级</label><input name="yellow" type="number" min="0" max="99" value="%s" required></div><div class="field small"><label>心悦等级</label><input name="xinyue" type="number" min="0" max="99" value="%s" required></div></div><button style="margin-top:10px" type="submit">保存钻石卡</button></form></section>
+<section class="card span7"><h2>好友与好友卡</h2><form method="post" action="/player/friend">%s<input type="hidden" name="uin" value="%s"><input type="hidden" name="operation" value="add"><div class="row"><div class="field"><label>好友角色 ID</label><input name="friend_role_id" type="number" min="1" required></div><div class="field"><label>好友名称</label><input name="friend_name" maxlength="24" required></div><div class="field"><label>好友卡植物 ID</label><input name="plant_id" type="number" min="1" list="friend-plant-ids" required><datalist id="friend-plant-ids">%s</datalist></div><div class="field small"><label>植物等级</label><input name="plant_level" type="number" min="1" max="999" value="1" required></div></div><div class="row" style="margin-top:8px"><div class="field small"><label>显示钻石卡</label><select name="diamond_flag"><option value="1">开启</option><option value="0">关闭</option></select></div><div class="field small"><label>蓝钻</label><input name="blue" type="number" min="0" max="99" value="0" required></div><div class="field small"><label>黄钻</label><input name="yellow" type="number" min="0" max="99" value="0" required></div><div class="field small"><label>心悦</label><input name="xinyue" type="number" min="0" max="99" value="0" required></div><button type="submit">添加 / 更新</button></div></form>
+<div class="scroll" style="margin-top:14px;max-height:300px"><table><thead><tr><th>角色 ID</th><th>名称</th><th>好友卡</th><th>蓝 / 黄 / 心悦</th><th></th></tr></thead><tbody>%s</tbody></table></div></section></div>""" % (
+            _csrf_input(), uin,
+            " selected" if not int(player.get("diamond_flag", 0)) else "",
+            " selected" if int(player.get("diamond_flag", 0)) else "",
+            int(player.get("diamond_blue_lvl", 0) or 0),
+            int(player.get("diamond_yellow_lvl", 0) or 0),
+            int(player.get("diamond_xinyue_lvl", 0) or 0),
+            _csrf_input(), uin, plant_options, friend_rows)
+        self._send(200, _page("玩家 %s" % uin, content, message, kind))
+
+    def _create_player(self, form):
+        uin = _integer(form, "uin", 1, 9_223_372_036_854_775_807, "UIN")
+        _require_player(uin)
+        self._redirect("/player?uin=%s" % uin, "已打开现有存档。")
+
+    def _new_player(self, form):
+        uin = _integer(form, "uin", 1, 9_223_372_036_854_775_807, "UIN")
+        try:
+            store.create_new_player(uin)
+        except ValueError as exc:
+            raise ValidationError(str(exc))
+        self._redirect("/player?uin=%s" % uin,
+                       "已创建新账号 %s 和独立新手存档。启动器输入该编号即可进入游戏。" % uin)
+
+    def _update_player(self, form):
+        uin = _integer(form, "uin", 1, 9_223_372_036_854_775_807, "UIN")
+        _require_player(uin)
+        values = {}
+        name = (form.get("name", [""])[0] or "").strip()
+        if not name or len(name) > 24 or any(ord(ch) < 32 for ch in name):
+            raise ValidationError("角色名需为 1–24 个可见字符。")
+        values["name"] = name
+        for key, label, kind, minimum, maximum in EDIT_FIELDS:
+            if kind == "number":
+                values[key] = _integer(form, key, minimum, maximum, label)
+        try:
+            gm.validate_player_fields(values)
+        except ValueError as exc:
+            raise ValidationError(str(exc))
+        vip = _integer(form, "vip_level", 0, 3, "VIP 等级")
+        privilege = _integer(form, "td_privilege", 0, 1, "塔防特权")
+        values.update(vip_level=vip, vip_card_id=0, vip_endtime=0, td_privilege=privilege,
+                      td_privilege_endtime=int(time.time()) + 86400 * 3650 if privilege else 0)
+        store.save_player(uin, **values)
+        self._redirect("/player?uin=%s" % uin, "基础属性已保存，重新进入游戏后生效。")
+
+    def _edit_item(self, form):
+        uin = _integer(form, "uin", 1, None, "UIN")
+        _require_player(uin)
+        item_id = _integer(form, "item_id", 1, 99_999_999, "物品 ID")
+        delta = _integer(form, "delta", -2_000_000_000, 2_000_000_000, "增减数量")
+        if delta == 0:
+            raise ValidationError("增减数量不能为 0。")
+        catalog_item = ITEM_CATALOG_BY_ID.get(item_id)
+        if delta > 0 and (not catalog_item or catalog_item["kind"] != "stack"):
+            raise ValidationError("该 ID 不是普通堆叠道具。请使用“具体道具库”按正确类型发放。")
+        current = store.get_item_count(uin, item_id)
+        if delta > 0 and catalog_item["stack_num"] and current + delta > catalog_item["stack_num"]:
+            raise ValidationError("%s 的堆叠上限为 %s，当前已有 %s。" %
+                                  (catalog_item["name"], catalog_item["stack_num"], current))
+        new_count = store.add_item(uin, item_id, delta)
+        if item_id == 43:  # 威望同时在玩家列中缓存一份，保持两者一致。
+            store.save_player(uin, prestige=new_count)
+        name, _detail = _inventory_item_details(item_id)
+        self._redirect("/player?uin=%s" % uin,
+                       "%s（ID %s）当前数量：%s。" % (name, item_id, new_count))
+
+    def _grant_item(self, form):
+        uin = _integer(form, "uin", 1, None, "UIN")
+        player = _require_player(uin)
+        item_id = _integer(form, "item_id", 1, 99_999_999, "道具 ID")
+        item = ITEM_CATALOG_BY_ID.get(item_id)
+        if not item:
+            raise ValidationError("道具 ID %s 不存在，或属于无法安全发放的客户端展示项。" % item_id)
+        hard_limit = 50 if item["kind"] in ("card", "equipment", "reagent") else 2_000_000_000
+        if item["kind"] == "stack" and item["stack_num"]:
+            hard_limit = item["stack_num"]
+        quantity = _integer(form, "quantity", 1, hard_limit, "发放数量")
+
+        if item["kind"] == "currency":
+            field, label = CURRENCY_GRANTS[item_id]
+            current = int(player.get(field, 0) or 0)
+            if current + quantity > 2_000_000_000:
+                raise ValidationError("%s 发放后会超过后台安全上限。" % label)
+            new_count = current + quantity
+            updates = {field: new_count}
+            if field in ("puppet_skill_val", "puppet_energy"):
+                updates[field + "_ts"] = int(time.time())
+            store.save_player(uin, **updates)
+            summary = "%s +%s，当前为 %s" % (label, quantity, new_count)
+        elif item["kind"] == "stack":
+            current = store.get_item_count(uin, item_id)
+            if item["stack_num"] and current + quantity > item["stack_num"]:
+                raise ValidationError("%s 的堆叠上限为 %s，当前已有 %s。" %
+                                      (item["name"], item["stack_num"], current))
+            new_count = store.add_item(uin, item_id, quantity)
+            if item_id == 43:
+                store.save_player(uin, prestige=new_count)
+            summary = "%s +%s，背包当前为 %s" % (item["name"], quantity, new_count)
+        elif item["kind"] == "equipment":
+            for _ in range(quantity):
+                uid = store.next_equipment_uid(uin)
+                store.add_equipment(uin, uid, item_id)
+            total = sum(1 for equipment in store.get_equipments(uin)
+                        if int(equipment["item_id"]) == item_id)
+            summary = "%s装备实例 +%s，当前为 %s 件" % (item["name"], quantity, total)
+        elif item["kind"] == "card":
+            try:
+                card_id = int(item["card_spec"].split(":", 1)[0])
+            except (TypeError, ValueError):
+                raise ValidationError("该卡牌道具没有有效的 battleCard 映射。")
+            if card_id not in CARD_NAMES:
+                raise ValidationError("卡牌 ID %s 不在客户端 battleCard 表中。" % card_id)
+            taken = {int(uid) for uid, _cid, _level, _exp in store.get_cards(uin)}
+            for _ in range(quantity):
+                uid = 10_000_000 + card_id
+                while uid in taken:
+                    uid += 1
+                taken.add(uid)
+                store.add_card(uin, uid, card_id, 1)
+            total = sum(1 for _uid, cid, _level, _exp in store.get_cards(uin)
+                        if int(cid) == card_id)
+            summary = "%s卡牌实例 +%s，当前为 %s 张" % (item["name"], quantity, total)
+        elif item["kind"] == "reagent":
+            for _ in range(quantity):
+                uid = store.next_reagent_uid(uin)
+                store.add_reagent(uin, uid, item_id, level=1, position=0, slot_id=0)
+            total = sum(1 for reagent in store.get_reagents(uin)
+                        if int(reagent["base_id"]) == item_id)
+            summary = "%s试剂实例 +%s，当前为 %s 个" % (item["name"], quantity, total)
+        else:
+            raise ValidationError("该道具类型尚不支持发放。")
+
+        self._redirect(_catalog_url(uin, form), summary + "。重新进入游戏后可见。")
+
+    def _edit_plant(self, form):
+        uin = _integer(form, "uin", 1, None, "UIN")
+        _require_player(uin)
+        plant_id = _integer(form, "plant_id", 1, 99_999_999, "植物 ID")
+        operation = (form.get("operation", [""])[0] or "").strip()
+        if operation == "add":
+            if plant_id not in PLANT_NAMES:
+                raise ValidationError("植物 ID %s 不在客户端塔防植物表中。" % plant_id)
+            store.unlock_plant(uin, plant_id)
+            message = "已解锁 %s（%s）。" % (PLANT_NAMES[plant_id], plant_id)
+        elif operation == "remove":
+            store.remove_plant(uin, plant_id)
+            message = "已移除塔防植物 %s。" % plant_id
+        else:
+            raise ValidationError("无效的植物操作。")
+        self._redirect("/player?uin=%s" % uin, message)
+
+    def _edit_progress(self, form):
+        uin = _integer(form, "uin", 1, None, "UIN")
+        _require_player(uin)
+        stage = _integer(form, "stage", 1, 999, "章节")
+        level = _integer(form, "level", 1, 999, "关卡")
+        raw_sub = (form.get("sub", [""])[0] or "").strip()
+        candidates = sorted(key[2] for key in LEVEL_KEYS if key[:2] == (stage, level))
+        if not candidates:
+            raise ValidationError("客户端中不存在章节 %s 的第 %s 关。" % (stage, level))
+        sub = max(candidates) if not raw_sub else _integer(form, "sub", 1, 999, "小关")
+        if (stage, level, sub) not in LEVEL_KEYS:
+            raise ValidationError("客户端中不存在关卡 %s-%s-%s。" % (stage, level, sub))
+        gm.passto(uin, stage, level, sub)
+        self._redirect("/player?uin=%s" % uin,
+                       "已按游戏逻辑通关至 %s-%s-%s，并补齐门和奖励植物。" % (stage, level, sub))
+
+    def _edit_cards(self, form):
+        uin = _integer(form, "uin", 1, None, "UIN")
+        player = _require_player(uin)
+        target = _integer(form, "level", 1, 999, "卡牌等级")
+        raw_uid = (form.get("uid", [""])[0] or "").strip()
+        uid = _integer(form, "uid", 1, None, "卡牌 UID") if raw_uid else None
+        cards = [card for card in store.get_cards(uin) if uid is None or card[0] == uid]
+        if not cards:
+            raise ValidationError("没有找到可修改的植物卡。")
+        # 复用服务器的经验曲线和账号等级上限，避免写出客户端无法解释的等级。
+        import pvz_poc_server as game
+        game.load_card_level_curve()
+        exact = next((total for level, total, _next in game._CARD_LEVEL_CURVE if level == target), None)
+        if exact is None:
+            raise ValidationError("经验表中不存在卡牌等级 %s。" % target)
+        changed = []
+        for card_uid, card_id, _old_level, _old_exp in cards:
+            new_level, kept_exp = game.card_level_from_exp(exact, card_id, int(player["level"]))
+            store.set_card_level(uin, card_uid, new_level, kept_exp)
+            changed.append(new_level)
+        actual = min(changed) if changed else target
+        suffix = "（受账号等级上限限制，实际为 %s 级）" % actual if actual != target else ""
+        self._redirect("/player?uin=%s" % uin,
+                       "已修改 %s 张植物卡的等级%s。" % (len(changed), suffix))
+
+    def _edit_diamond(self, form):
+        uin = _integer(form, "uin", 1, None, "UIN")
+        _require_player(uin)
+        flag = _integer(form, "flag", 0, 1, "钻石卡开关")
+        blue = _integer(form, "blue", 0, 99, "蓝钻等级")
+        yellow = _integer(form, "yellow", 0, 99, "黄钻等级")
+        xinyue = _integer(form, "xinyue", 0, 99, "心悦等级")
+        store.save_player(
+            uin, diamond_flag=flag, diamond_blue_lvl=blue,
+            diamond_yellow_lvl=yellow, diamond_xinyue_lvl=xinyue)
+        self._redirect(
+            "/player?uin=%s" % uin,
+            "钻石卡已保存：显示=%s，蓝钻=%s，黄钻=%s，心悦=%s。重新进入游戏后生效。" %
+            (flag, blue, yellow, xinyue))
+
+    def _edit_friend(self, form):
+        uin = _integer(form, "uin", 1, None, "UIN")
+        _require_player(uin)
+        operation = (form.get("operation", [""])[0] or "").strip()
+        role_id = _integer(form, "friend_role_id", 1, 9_223_372_036_854_775_807,
+                           "好友角色 ID")
+        if operation == "remove":
+            store.remove_friend(uin, role_id)
+            self._redirect("/player?uin=%s" % uin, "已移除好友 %s。" % role_id)
+            return
+        if operation != "add":
+            raise ValidationError("无效的好友操作。")
+        if role_id == uin:
+            raise ValidationError("不能把自己添加为好友。")
+        name = (form.get("friend_name", [""])[0] or "").strip()
+        if not name or len(name) > 24 or any(ord(ch) < 32 for ch in name):
+            raise ValidationError("好友名称需为 1–24 个可见字符。")
+        plant_id = _integer(form, "plant_id", 1, 99_999_999, "好友卡植物 ID")
+        if plant_id not in PLANT_NAMES:
+            raise ValidationError("植物 ID %s 不在客户端塔防植物表中。" % plant_id)
+        plant_level = _integer(form, "plant_level", 1, 999, "好友卡等级")
+        diamond_flag = _integer(form, "diamond_flag", 0, 1, "好友钻石卡开关")
+        blue = _integer(form, "blue", 0, 99, "好友蓝钻")
+        yellow = _integer(form, "yellow", 0, 99, "好友黄钻")
+        xinyue = _integer(form, "xinyue", 0, 99, "好友心悦")
+        store.add_friend(
+            uin, role_id, name, plant_id, plant_level,
+            diamond_flag, blue, yellow, xinyue)
+        self._redirect(
+            "/player?uin=%s" % uin,
+            "已添加 / 更新好友 %s（%s），重新进入游戏后生效。" % (name, role_id))
+
+    def _reset_account(self, form):
+        uin = _integer(form, "uin", 1, None, "UIN")
+        _require_player(uin)
+        confirm = (form.get("confirm_uin", [""])[0] or "").strip()
+        acknowledged = (form.get("ack", [""])[0] or "") == "yes"
+        if confirm != str(uin) or not acknowledged:
+            raise ValidationError("确认 UIN 不匹配，重置已取消。")
+        backup, affected = _reset_player(uin)
+        count = sum(rows for _table, rows in affected)
+        self._redirect("/player?uin=%s" % uin,
+                       "账号已重置为新手档，共清理 %s 条记录。备份：%s" %
+                       (count, os.path.basename(backup)))
+
+    def _manual_backup(self, form):
+        destination = _backup_database("manual")
+        self._redirect("/", "数据库已备份：%s" % os.path.basename(destination))
+
+    def log_message(self, fmt, *args):
+        sys.stdout.write("[admin] %s - %s\n" % (self.address_string(), fmt % args))
+        sys.stdout.flush()
+
+
+class AdminServer(http.server.ThreadingHTTPServer):
+    daemon_threads = True
+    # macOS 在刚关闭浏览器连接后会短暂保留 TIME_WAIT，允许立即重启。
+    # Windows 的 SO_REUSEADDR 语义不同，保持严格模式以避免两个后台同时监听。
+    allow_reuse_address = sys.platform != "win32"
+
+
+def serve(port=ADMIN_PORT, db_path=None):
+    if db_path:
+        store.set_db_path(os.path.abspath(db_path))
+    store.init_db()
+    httpd = AdminServer((ADMIN_HOST, int(port)), AdminHandler)
+    print("[admin] 本地 GM 后台: http://%s:%d" % (ADMIN_HOST, int(port)))
+    print("[admin] 数据库: %s" % store.DB_PATH)
+    sys.stdout.flush()
+    with httpd:
+        httpd.serve_forever()
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description="PvZ OL 本地 GM 管理后台")
+    parser.add_argument("--port", type=int, default=ADMIN_PORT, help="本机监听端口")
+    parser.add_argument("--db", help="players.db 路径（主要用于测试）")
+    args = parser.parse_args(argv)
+    if not 1 <= args.port <= 65535:
+        parser.error("port must be in 1..65535")
+    try:
+        serve(args.port, args.db)
+    except KeyboardInterrupt:
+        print("\n[admin] 已停止")
+    except OSError as exc:
+        print("[admin] 无法监听 127.0.0.1:%s: %s" % (args.port, exc))
+        raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()

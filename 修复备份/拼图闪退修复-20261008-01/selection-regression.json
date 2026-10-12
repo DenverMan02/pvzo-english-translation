@@ -1,0 +1,61 @@
+{
+  "scope": "Isolated bytecode behavior test, not full Flash execution.",
+  "artifact": "C:\\Users\\komi\\Documents\\Codex\\2026-10-08\\d-pvzol-ol\\work\\puzzle-crash\\fixed\\ModuleCard.swf",
+  "sha256": "a8c2ba52139fee775512ac9fbaa41503e253f05854b49cfbc9df0d71e441c3b0",
+  "method_id": 1105,
+  "code_bytes": 94,
+  "tests": 10,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "executed_scenarios": 84,
+  "board_sizes": [
+    9,
+    16,
+    25
+  ],
+  "per_cell_candidate_scenarios": 50,
+  "maximum_executed_steps": 670,
+  "maximum_observed_operand_stack": 2,
+  "complete_opcode_coverage": true,
+  "covered_opcodes": [
+    "coerce",
+    "getlex",
+    "getlocal0",
+    "getlocal1",
+    "getlocal2",
+    "getproperty",
+    "ifeq",
+    "iffalse",
+    "ifge",
+    "inclocal_i",
+    "initproperty",
+    "jump",
+    "label",
+    "pushbyte",
+    "pushnull",
+    "pushscope",
+    "returnvoid",
+    "setlocal1",
+    "setlocal2"
+  ],
+  "control_flow": {
+    "reachable_instructions": 44,
+    "maximum_operand_stack": 2,
+    "declared_maximum_operand_stack": 3,
+    "scope_depth_initial": 7,
+    "scope_depth_maximum": 8
+  },
+  "original_missing_label_detected": true,
+  "mocks": [
+    "panel data",
+    "CardPuzzlePiece",
+    "selectedPiece setter",
+    "CardGlobals constant"
+  ],
+  "limitations": [
+    "No Flash rendering or event system",
+    "No full AVM2 runtime/verifier",
+    "No server traffic or live player data"
+  ]
+}

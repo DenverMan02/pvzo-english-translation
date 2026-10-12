@@ -1,0 +1,3700 @@
+原版卡牌、属性单位、洗炼
+Original client combat power evidence
+Read-only audit; game files were not modified by this extraction.
+ABC parser corrections are isolated in workspace/work/original_abc_audit.py.
+Method info is zero-based; trait metadata follows trait payload; branch/switch offsets are signed 24-bit.
+Formula: atk//2 + defense + hp//6 + ability + critical//2 + hit//2 + dodge//2 + tough//2.
+Signature: 8 int arguments, Boolean flag=false, return int. Rates default=0. True flag divides primary subtotal by 100 before adding rates.
+Baptize.power: floor(raw_atk/100/2)+floor(raw_def/100)+floor(raw_hp/100/6)+floor(raw_ability/100).
+Actor HUD receives Cmd_SyncFightPower_SC.fightPower. No original collection/best formation aggregation rule recovered.
+No method named formatUpdate exists in BaptizeAttribute; transformation is inherited Attribute.getAttribute(type,true).
+
+FILE D:\pvzol本地最新最新ol\pvzol本地\webroot\Game.swf
+SHA256 7394f37d8b4a65b49b60997324fcc8c9cf4878738030d264e24d0304a6ead2db
+
+com.qq::GameGloble.::caculateFightPower method 863
+      0  getlocal0        
+      1  pushscope        
+      2  pushbyte         0
+      4  convert_d        
+      5  dup              
+      6  setlocal         10
+      8  getlex           ::Math
+     12  getlocal1        
+     13  pushbyte         2
+     15  divide           
+     16  callproperty     ::floor, 1
+     21  add              
+     22  convert_d        
+     23  dup              
+     24  setlocal         10
+     26  getlocal2        
+     27  add              
+     28  convert_d        
+     29  dup              
+     30  setlocal         10
+     32  getlex           ::Math
+     36  getlocal3        
+     37  pushbyte         6
+     39  divide           
+     40  callproperty     ::floor, 1
+     45  add              
+     46  convert_d        
+     47  dup              
+     48  setlocal         10
+     50  getlocal         4
+     52  add              
+     53  convert_d        
+     54  setlocal         10
+     56  getlocal         9
+     58  iffalse          -> 70
+     62  getlocal         10
+     64  pushbyte         100
+     66  divide           
+     67  convert_d        
+     68  setlocal         10
+     70  getlocal         10
+     72  getlex           ::Math
+     76  getlocal         5
+     78  pushbyte         2
+     80  divide           
+     81  callproperty     ::floor, 1
+     86  add              
+     87  convert_d        
+     88  dup              
+     89  setlocal         10
+     91  getlex           ::Math
+     95  getlocal         6
+     97  pushbyte         2
+     99  divide           
+    100  callproperty     ::floor, 1
+    105  add              
+    106  convert_d        
+    107  dup              
+    108  setlocal         10
+    110  getlex           ::Math
+    114  getlocal         7
+    116  pushbyte         2
+    118  divide           
+    119  callproperty     ::floor, 1
+    124  add              
+    125  convert_d        
+    126  dup              
+    127  setlocal         10
+    129  getlex           ::Math
+    133  getlocal         8
+    135  pushbyte         2
+    137  divide           
+    138  callproperty     ::floor, 1
+    143  add              
+    144  convert_d        
+    145  dup              
+    146  setlocal         10
+    148  returnvalue      
+
+com.qq::GameGloble.::fightPower2PropVal method 862
+      0  getlocal0        
+      1  pushscope        
+      2  jump             -> 44
+      6  label            
+      7  getlocal2        
+      8  pushbyte         2
+     10  multiply         
+     11  convert_d        
+     12  setlocal2        
+     13  jump             -> 194
+     17  label            
+     18  getlocal2        
+     19  pushbyte         6
+     21  multiply         
+     22  convert_d        
+     23  setlocal2        
+     24  jump             -> 194
+     28  label            
+     29  getlocal2        
+     30  pushbyte         2
+     32  multiply         
+     33  convert_d        
+     34  setlocal2        
+     35  jump             -> 194
+     39  label            
+     40  jump             -> 194
+     44  getlocal1        
+     45  setlocal3        
+     46  getlex           com.qq.modules.main.model.vo::Attribute
+     49  getproperty      ::ATTACK
+     53  getlocal3        
+     54  ifstrictne       -> 64
+     58  pushbyte         0
+     60  jump             -> 166
+     64  getlex           com.qq.modules.main.model.vo::Attribute
+     67  getproperty      ::HP
+     71  getlocal3        
+     72  ifstrictne       -> 82
+     76  pushbyte         1
+     78  jump             -> 166
+     82  getlex           com.qq.modules.main.model.vo::Attribute
+     85  getproperty      ::CRITICAL
+     89  getlocal3        
+     90  ifstrictne       -> 100
+     94  pushbyte         2
+     96  jump             -> 166
+    100  getlex           com.qq.modules.main.model.vo::Attribute
+    103  getproperty      ::DODGE
+    107  getlocal3        
+    108  ifstrictne       -> 118
+    112  pushbyte         3
+    114  jump             -> 166
+    118  getlex           com.qq.modules.main.model.vo::Attribute
+    121  getproperty      ::HIT
+    125  getlocal3        
+    126  ifstrictne       -> 136
+    130  pushbyte         4
+    132  jump             -> 166
+    136  getlex           com.qq.modules.main.model.vo::Attribute
+    139  getproperty      ::TOUGH
+    143  getlocal3        
+    144  ifstrictne       -> 154
+    148  pushbyte         5
+    150  jump             -> 166
+    154  jump             -> 164
+    158  pushbyte         6
+    160  jump             -> 166
+    164  pushbyte         6
+    166  kill             3
+    168  lookupswitch     default -> 39; cases [6, 17, 28, 28, 28, 28, 39]
+    194  getlex           ::Math
+    198  getlocal2        
+    199  callproperty     ::round, 1
+    203  returnvalue      
+Attribute constants {'::ATTACK': 1, '::DEFENSE': 2, '::HP': 3, '::SHIELD': 4, '::ABILITY': 5, '::HIT': 6, '::DODGE': 7, '::CRITICAL': 8, '::TOUGH': 9, '::IMMUNE': 10, '::PERCENT_ATTACK': 11, '::PERCENT_DEFENSE': 12, '::PERCENT_HP': 13, '::PERCENT_SHIELD': 14, '::PERCENT_ABILITY': 15, '::PERCENT_HIT': 16, '::PERCENT_DODGE': 17, '::PERCENT_CRITICAL': 18, '::PERCENT_TOUGH': 19, '::PERCENT_IMMUNE': 20, '::ATTRIBUTE_BEGIN': 0, '::ATTRIBUTE_END': 21}
+
+com.qq.modules.main.model.vo::Attribute.::checkNeedTransform method 2192
+      0  getlocal0        
+      1  pushscope        
+      2  jump             -> 14
+      6  label            
+      7  pushtrue         
+      8  returnvalue      
+      9  label            
+     10  jump             -> 110
+     14  getlocal1        
+     15  setlocal2        
+     16  getlex           ::ATTACK
+     20  getlocal2        
+     21  ifstrictne       -> 31
+     25  pushbyte         0
+     27  jump             -> 88
+     31  getlex           ::DEFENSE
+     35  getlocal2        
+     36  ifstrictne       -> 46
+     40  pushbyte         1
+     42  jump             -> 88
+     46  getlex           ::HP
+     50  getlocal2        
+     51  ifstrictne       -> 61
+     55  pushbyte         2
+     57  jump             -> 88
+     61  getlex           ::ABILITY
+     65  getlocal2        
+     66  ifstrictne       -> 76
+     70  pushbyte         3
+     72  jump             -> 88
+     76  jump             -> 86
+     80  pushbyte         4
+     82  jump             -> 88
+     86  pushbyte         4
+     88  kill             2
+     90  lookupswitch     default -> 9; cases [6, 6, 6, 6, 9]
+    110  pushfalse        
+    111  returnvalue      
+
+com.qq.modules.main.model.vo::Attribute.::getAttribute method 2197
+      0  getlocal0        
+      1  pushscope        
+      2  pushnan          
+      3  setlocal3        
+      4  getlocal0        
+      5  getproperty      com.qq.modules.main.model.vo:Attribute::m_dicValue
+      8  getlocal1        
+      9  callproperty     http://adobe.com/AS3/2006/builtin::hasOwnProperty, 1
+     14  iffalse          -> 60
+     18  getlocal0        
+     19  getproperty      com.qq.modules.main.model.vo:Attribute::m_dicValue
+     22  getlocal1        
+     23  getproperty      <runtime>
+     27  convert_d        
+     28  setlocal3        
+     29  getlocal2        
+     30  convert_b        
+     31  dup              
+     32  iffalse          -> 48
+     36  pop              
+     37  findpropstrict   ::checkNeedTransform
+     41  getlocal1        
+     42  callproperty     ::checkNeedTransform, 1
+     47  convert_b        
+     48  iffalse          -> 58
+     52  getlocal3        
+     53  pushbyte         100
+     55  divide           
+     56  convert_d        
+     57  setlocal3        
+     58  getlocal3        
+     59  returnvalue      
+     60  pushbyte         0
+     62  returnvalue      
+
+com.qq.modules.card.model.vo::CardItemVO.::ability method 3516
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      ::_dto
+      6  getproperty      ::ability
+      9  returnvalue      
+
+com.qq.modules.card.model.vo::CardItemVO.::attack method 3514
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      ::_dto
+      6  getproperty      ::attack
+      9  returnvalue      
+
+com.qq.modules.card.model.vo::CardItemVO.::critical method 3524
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      ::_dto
+      6  getproperty      ::critical
+      9  returnvalue      
+
+com.qq.modules.card.model.vo::CardItemVO.::defense method 3515
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      ::_dto
+      6  getproperty      ::defense
+      9  returnvalue      
+
+com.qq.modules.card.model.vo::CardItemVO.::dodge method 3526
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      ::_dto
+      6  getproperty      ::dodge
+      9  returnvalue      
+
+com.qq.modules.card.model.vo::CardItemVO.::hit method 3527
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      ::_dto
+      6  getproperty      ::hit
+      9  returnvalue      
+
+com.qq.modules.card.model.vo::CardItemVO.::hp method 3520
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      ::_dto
+      6  getproperty      ::hp
+      9  returnvalue      
+
+com.qq.modules.card.model.vo::CardItemVO.::orderPower method 3562
+      0  getlocal0        
+      1  pushscope        
+      2  pushnull         
+      3  coerce           PVZ.Cmd::Dto_CardPower
+      6  setlocal2        
+      7  pushbyte         0
+      9  convert_u        
+     10  setlocal1        
+     11  pushbyte         0
+     13  setlocal3        
+     14  jump             -> 83
+     18  label            
+     19  getlocal0        
+     20  getproperty      ::dto
+     23  getproperty      ::powerEle
+     26  getlocal3        
+     27  getproperty      <runtime>
+     31  coerce           PVZ.Cmd::Dto_CardPower
+     34  setlocal2        
+     35  getlocal2        
+     36  getproperty      ::ele
+     39  getlex           PVZ.Cmd::E_PowerEle
+     42  getproperty      ::E_PowerEle_nature
+     46  equals           
+     47  dup              
+     48  iftrue           -> 65
+     52  pop              
+     53  getlocal2        
+     54  getproperty      ::ele
+     57  getlex           PVZ.Cmd::E_PowerEle
+     60  getproperty      ::E_PowerEle_equip
+     64  equals           
+     65  iffalse          -> 81
+     69  getlocal1        
+     70  getlocal2        
+     71  getproperty      ::value
+     74  callproperty     ::toNumber, 0
+     78  add              
+     79  convert_u        
+     80  setlocal1        
+     81  inclocal_i       3
+     83  getlocal3        
+     84  getlocal0        
+     85  getproperty      ::dto
+     88  getproperty      ::powerEle
+     91  getproperty      ::length
+     94  iflt             -> 18
+     98  getlocal1        
+     99  returnvalue      
+
+com.qq.modules.card.model.vo::CardItemVO.::power method 3522
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      ::_dto
+      6  getproperty      ::power
+      9  returnvalue      
+
+com.qq.modules.card.model.vo::CardItemVO.::tough method 3525
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      ::_dto
+      6  getproperty      ::tough
+      9  returnvalue      
+
+EXCERPT com.qq.modules.login.service::LoginService.::serverDataHandler method 7392
+   1799  getlocal1        
+   1800  getproperty      ::socketData
+   1803  getlex           PVZ.Cmd::Cmd_SyncFightPower_SC
+   1806  astypelate       
+   1807  coerce           PVZ.Cmd::Cmd_SyncFightPower_SC
+   1810  setlocal2        
+   1811  getlocal0        
+   1812  getproperty      ::actorModel
+   1815  getlocal2        
+   1816  getproperty      ::fightPower
+   1819  setproperty      ::actorFightPower
+   1822  getlex           com.qq.utils::CommandDispatcher
+   1825  getlex           com.qq::CommandName
+   1828  getproperty      ::ChangeFightPower
+   1832  callpropvoid     ::send, 1
+   1837  jump             -> 4031
+   1841  label            
+
+SIGNATURE method863: params=['::int', '::int', '::int', '::int', '::int', '::int', '::int', '::int', '::Boolean'] return=::int optional defaults=[0, 0, 0, 0, False]
+
+FILE D:\pvzol本地最新最新ol\pvzol本地\webroot\Game_p.swf
+SHA256 c0f9e141be0386cc0ab8282962bebc8b84e47cddbe0e992bbf783945fbaa0af1
+
+com.qq::GameGloble.::caculateFightPower method 863
+      0  getlocal0        
+      1  pushscope        
+      2  pushbyte         0
+      4  convert_d        
+      5  dup              
+      6  setlocal         10
+      8  getlex           ::Math
+     12  getlocal1        
+     13  pushbyte         2
+     15  divide           
+     16  callproperty     ::floor, 1
+     21  add              
+     22  convert_d        
+     23  dup              
+     24  setlocal         10
+     26  getlocal2        
+     27  add              
+     28  convert_d        
+     29  dup              
+     30  setlocal         10
+     32  getlex           ::Math
+     36  getlocal3        
+     37  pushbyte         6
+     39  divide           
+     40  callproperty     ::floor, 1
+     45  add              
+     46  convert_d        
+     47  dup              
+     48  setlocal         10
+     50  getlocal         4
+     52  add              
+     53  convert_d        
+     54  setlocal         10
+     56  getlocal         9
+     58  iffalse          -> 70
+     62  getlocal         10
+     64  pushbyte         100
+     66  divide           
+     67  convert_d        
+     68  setlocal         10
+     70  getlocal         10
+     72  getlex           ::Math
+     76  getlocal         5
+     78  pushbyte         2
+     80  divide           
+     81  callproperty     ::floor, 1
+     86  add              
+     87  convert_d        
+     88  dup              
+     89  setlocal         10
+     91  getlex           ::Math
+     95  getlocal         6
+     97  pushbyte         2
+     99  divide           
+    100  callproperty     ::floor, 1
+    105  add              
+    106  convert_d        
+    107  dup              
+    108  setlocal         10
+    110  getlex           ::Math
+    114  getlocal         7
+    116  pushbyte         2
+    118  divide           
+    119  callproperty     ::floor, 1
+    124  add              
+    125  convert_d        
+    126  dup              
+    127  setlocal         10
+    129  getlex           ::Math
+    133  getlocal         8
+    135  pushbyte         2
+    137  divide           
+    138  callproperty     ::floor, 1
+    143  add              
+    144  convert_d        
+    145  dup              
+    146  setlocal         10
+    148  returnvalue      
+
+com.qq::GameGloble.::fightPower2PropVal method 862
+      0  getlocal0        
+      1  pushscope        
+      2  jump             -> 44
+      6  label            
+      7  getlocal2        
+      8  pushbyte         2
+     10  multiply         
+     11  convert_d        
+     12  setlocal2        
+     13  jump             -> 194
+     17  label            
+     18  getlocal2        
+     19  pushbyte         6
+     21  multiply         
+     22  convert_d        
+     23  setlocal2        
+     24  jump             -> 194
+     28  label            
+     29  getlocal2        
+     30  pushbyte         2
+     32  multiply         
+     33  convert_d        
+     34  setlocal2        
+     35  jump             -> 194
+     39  label            
+     40  jump             -> 194
+     44  getlocal1        
+     45  setlocal3        
+     46  getlex           com.qq.modules.main.model.vo::Attribute
+     49  getproperty      ::ATTACK
+     53  getlocal3        
+     54  ifstrictne       -> 64
+     58  pushbyte         0
+     60  jump             -> 166
+     64  getlex           com.qq.modules.main.model.vo::Attribute
+     67  getproperty      ::HP
+     71  getlocal3        
+     72  ifstrictne       -> 82
+     76  pushbyte         1
+     78  jump             -> 166
+     82  getlex           com.qq.modules.main.model.vo::Attribute
+     85  getproperty      ::CRITICAL
+     89  getlocal3        
+     90  ifstrictne       -> 100
+     94  pushbyte         2
+     96  jump             -> 166
+    100  getlex           com.qq.modules.main.model.vo::Attribute
+    103  getproperty      ::DODGE
+    107  getlocal3        
+    108  ifstrictne       -> 118
+    112  pushbyte         3
+    114  jump             -> 166
+    118  getlex           com.qq.modules.main.model.vo::Attribute
+    121  getproperty      ::HIT
+    125  getlocal3        
+    126  ifstrictne       -> 136
+    130  pushbyte         4
+    132  jump             -> 166
+    136  getlex           com.qq.modules.main.model.vo::Attribute
+    139  getproperty      ::TOUGH
+    143  getlocal3        
+    144  ifstrictne       -> 154
+    148  pushbyte         5
+    150  jump             -> 166
+    154  jump             -> 164
+    158  pushbyte         6
+    160  jump             -> 166
+    164  pushbyte         6
+    166  kill             3
+    168  lookupswitch     default -> 39; cases [6, 17, 28, 28, 28, 28, 39]
+    194  getlex           ::Math
+    198  getlocal2        
+    199  callproperty     ::round, 1
+    203  returnvalue      
+
+FILE D:\pvzol本地最新最新ol\pvzol本地\webroot\ModuleCard.swf
+SHA256 a8c2ba52139fee775512ac9fbaa41503e253f05854b49cfbc9df0d71e441c3b0
+
+com.qq.modules.plantBaptize.model::BaptizeAttribute.::power method 367
+      0  getlocal0        
+      1  pushscope        
+      2  getlex           ::Math
+      5  findpropstrict   ::getAttribute
+      8  getlex           ::ATTACK
+     11  pushtrue         
+     12  callproperty     ::getAttribute, 2
+     16  pushbyte         2
+     18  divide           
+     19  callproperty     ::floor, 1
+     23  getlex           ::Math
+     26  findpropstrict   ::getAttribute
+     29  getlex           ::DEFENSE
+     32  pushtrue         
+     33  callproperty     ::getAttribute, 2
+     37  callproperty     ::floor, 1
+     41  add              
+     42  getlex           ::Math
+     45  findpropstrict   ::getAttribute
+     48  getlex           ::HP
+     51  pushtrue         
+     52  callproperty     ::getAttribute, 2
+     56  pushbyte         6
+     58  divide           
+     59  callproperty     ::floor, 1
+     63  add              
+     64  getlex           ::Math
+     67  findpropstrict   ::getAttribute
+     70  getlex           ::ABILITY
+     73  pushtrue         
+     74  callproperty     ::getAttribute, 2
+     78  callproperty     ::floor, 1
+     82  add              
+     83  returnvalue      
+
+FILE D:\pvzol本地最新最新ol\pvzol本地\webroot\ModuleCardFruit.swf
+SHA256 c4300653925b899d89546f7ed8207f6041883e776b4414db325c7dd8db69e982
+
+com.qq.modules.cardFruit.model.templates.ce::CardFruitInfoTemplateCE.::critical method 57
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      com.qq.modules.cardFruit.model.templates.ce:CardFruitInfoTemplateCE::_critical
+      5  returnvalue      
+
+com.qq.modules.cardFruit.model.templates.ce::CardFruitInfoTemplateCE.::dodge method 56
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      com.qq.modules.cardFruit.model.templates.ce:CardFruitInfoTemplateCE::_dodge
+      5  returnvalue      
+
+com.qq.modules.cardFruit.model.templates.ce::CardFruitInfoTemplateCE.::hit method 55
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      com.qq.modules.cardFruit.model.templates.ce:CardFruitInfoTemplateCE::_hit
+      5  returnvalue      
+
+com.qq.modules.cardFruit.model.templates.ce::CardFruitInfoTemplateCE.::tough method 58
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      com.qq.modules.cardFruit.model.templates.ce:CardFruitInfoTemplateCE::_tough
+      5  returnvalue      
+
+com.qq.modules.cardFruit.model.templates.ce::CardFruitInfoTemplate.::ability method 74
+      0  getlocal0        
+      1  pushscope        
+      2  findpropstrict   ::int
+      4  getlex           com.qq.modules.cardFruit.model.templates.ce:CardFruitInfoTemplateCE::_ability
+      6  pushbyte         100
+      8  divide           
+      9  callproperty     ::int, 1
+     12  returnvalue      
+
+com.qq.modules.cardFruit.model.templates.ce::CardFruitInfoTemplate.::attack method 71
+      0  getlocal0        
+      1  pushscope        
+      2  findpropstrict   ::int
+      4  getlex           com.qq.modules.cardFruit.model.templates.ce:CardFruitInfoTemplateCE::_attack
+      6  pushbyte         100
+      8  divide           
+      9  callproperty     ::int, 1
+     12  returnvalue      
+
+com.qq.modules.cardFruit.model.templates.ce::CardFruitInfoTemplate.::defence method 72
+      0  getlocal0        
+      1  pushscope        
+      2  findpropstrict   ::int
+      4  getlex           com.qq.modules.cardFruit.model.templates.ce:CardFruitInfoTemplateCE::_defence
+      6  pushbyte         100
+      8  divide           
+      9  callproperty     ::int, 1
+     12  returnvalue      
+
+com.qq.modules.cardFruit.model.templates.ce::CardFruitInfoTemplate.::life method 73
+      0  getlocal0        
+      1  pushscope        
+      2  findpropstrict   ::int
+      4  getlex           com.qq.modules.cardFruit.model.templates.ce:CardFruitInfoTemplateCE::_life
+      6  pushbyte         100
+      8  divide           
+      9  callproperty     ::int, 1
+     12  returnvalue      
+
+EXCERPT com.qq.modules.cardFruit.view.components::CardFruitMainViewMediator.::refreshLevelInfo method 149
+    147  dup              
+    148  pushbyte         0
+    150  dup              
+    151  dup              
+    152  pushbyte         0
+    154  newarray         10
+    156  coerce           ::Array
+    158  setlocal1        
+    159  jump             -> 336
+    163  findpropstrict   ::Array
+    165  constructprop    ::Array, 0
+    168  coerce           ::Array
+    170  setlocal1        
+    171  getlex           com.qq::GameGloble
+    174  getlocal0        
+    175  getproperty      ::curCardFruitInfo
+    178  getproperty      ::attack
+    180  getlocal0        
+    181  getproperty      ::curCardFruitInfo
+    184  getproperty      ::defence
+    186  getlocal0        
+    187  getproperty      ::curCardFruitInfo
+    190  getproperty      ::life
+    192  getlocal0        
+    193  getproperty      ::curCardFruitInfo
+    196  getproperty      ::ability
+    198  getlocal0        
+    199  getproperty      ::curCardFruitInfo
+    202  getproperty      ::critical
+    204  getlocal0        
+    205  getproperty      ::curCardFruitInfo
+    208  getproperty      ::hit
+    210  getlocal0        
+    211  getproperty      ::curCardFruitInfo
+    214  getproperty      ::dodge
+    216  getlocal0        
+    217  getproperty      ::curCardFruitInfo
+    220  getproperty      ::tough
+    222  pushfalse        
+    223  callproperty     ::caculateFightPower, 9
+    227  convert_i        
+    228  setlocal         8
+    230  getlocal1        
+    231  getlocal         8
+
+原版基因百分比单位
+Source: D:\pvzol本地最新最新ol\pvzol本地\webroot\ModuleCardDNA.swf
+SHA256: 11523200232bb4face00d795b9b5b79889fc04d96bed39faf59de211c8b2cb43
+
+=== com.qq.modules.cardDNA.model::CardDNAModel.::getDNAInfoBYQuilty method 116
+      0  getlocal0        
+      1  pushscope        
+      2  pushnull         
+      3  coerce           PVZ.Cmd::Dto_CardGene
+      5  setlocal         5
+      7  getlocal0        
+      8  getproperty      ::dnaInfoList
+     11  getproperty      ::length
+     14  convert_i        
+     15  setlocal2        
+     16  pushbyte         0
+     18  setlocal3        
+     19  jump             -> 49
+     21  op_0x0           
+     22  op_0x0           
+     23  label            
+     24  getlocal0        
+     25  getproperty      ::dnaInfoList
+     28  getlocal3        
+     29  getproperty      <runtime>
+     32  coerce           PVZ.Cmd::Dto_CardGene
+     34  setlocal         5
+     36  getlocal1        
+     37  getlocal         5
+     39  getproperty      ::geneId
+     42  ifnle            -> 47
+     44  op_0x0           
+     45  op_0x0           
+     46  getlocal         5
+     48  returnvalue      
+     49  inclocal_i       3
+     51  getlocal3        
+     52  getlocal2        
+     53  iflt             -> 24
+     58  ifne             -> 5254
+     60  ifne             -> 1343550
+     62  coerce           PVZ.Cmd::Dto_CardGene
+     64  dup              
+     65  setlocal         4
+     67  pushbyte         0
+     69  setproperty      ::factorLevel
+     72  getlocal         4
+     74  pushbyte         0
+     76  setproperty      ::factorExp
+     79  getlocal         4
+     81  getlocal1        
+     82  setproperty      ::geneId
+     85  getlocal         4
+     87  pushbyte         0
+     89  setproperty      ::level
+     92  getlocal         4
+     94  returnvalue      
+
+=== com.qq.modules.cardDNA.model::CardDNAModel.::getDNASelectTip method 106
+      0  getlocal0        
+      1  pushscope        
+      2  pushnull         
+      3  coerce           ::Array
+      5  setlocal         6
+      7  pushbyte         0
+      9  setlocal         7
+     11  pushbyte         0
+     13  setlocal         8
+     15  pushbyte         0
+     17  setlocal         9
+     19  pushnull         
+     20  coerce           com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfo
+     22  setlocal         10
+     24  pushnull         
+     25  coerce_s         
+     26  setlocal         11
+     28  pushstring       ''
+     30  setlocal         4
+     32  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+     34  callproperty     ::getInstance, 0
+     38  getlocal1        
+     39  getlocal2        
+     40  callproperty     ::getDNAInfo, 2
+     43  coerce           com.qq.modules.cardDNA.model::CardDNAInfo
+     45  dup              
+     46  setlocal         5
+     48  pushnull         
+     49  ifeq             -> 150
+     51  op_0x0           
+     52  op_0x0           
+     53  getlocal         5
+     55  callproperty     ::getChooseList, 0
+     59  coerce           ::Array
+     61  dup              
+     62  setlocal         6
+     64  getproperty      ::length
+     67  convert_i        
+     68  setlocal         7
+     70  pushbyte         0
+     72  setlocal         8
+     74  jump             -> 142
+     76  op_0x0           
+     77  op_0x0           
+     78  label            
+     79  getlocal         6
+     81  getlocal         8
+     83  getproperty      <runtime>
+     86  convert_i        
+     87  setlocal         9
+     89  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+     91  callproperty     ::getInstance, 0
+     95  getlocal         9
+     97  pushbyte         1
+     99  getlocal3        
+    100  callproperty     ::getDNAChoose, 3
+    103  coerce           com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfo
+    105  setlocal         10
+    107  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+    109  callproperty     ::getInstance, 0
+    113  getlocal         10
+    115  getproperty      ::typeNameID
+    118  callproperty     ::getChooseTypeName, 1
+    122  coerce_s         
+    123  setlocal         11
+    125  getlocal         4
+    127  pushstring       '*'
+    130  getlocal         11
+    132  pushstring       '<br>'
+    135  callproperty     http://adobe.com/AS3/2006/builtin::concat, 3
+    139  coerce_s         
+    140  setlocal         4
+    142  inclocal_i       8
+    144  getlocal         8
+    146  getlocal         7
+    148  iflt             -> 79
+    153  getsuper         onCmd_Card_ResetGene_SC
+
+=== com.qq.modules.cardDNA.model::CardDNAModel.::getDNAState method 117
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal1        
+      3  pushnull         
+      4  ifne             -> 10
+      6  op_0x0           
+      7  op_0x0           
+      8  getlex           ::DNA_State_Not_Active
+     11  returnvalue      
+     12  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+     14  callproperty     ::getInstance, 0
+     18  getlocal1        
+     19  getproperty      ::factorLevel
+     22  callproperty     ::isMaxFactorLevel, 1
+     25  iffalse          -> 31
+     27  op_0x0           
+     28  op_0x0           
+     29  getlex           ::DNA_State_Not_Active
+     32  returnvalue      
+     33  getlocal1        
+     34  getproperty      ::level
+     37  pushbyte         0
+     39  ifne             -> 45
+     41  op_0x0           
+     42  op_0x0           
+     43  getlex           ::DNA_State_Ready_Active
+     46  returnvalue      
+     47  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+     49  callproperty     ::getInstance, 0
+     53  getlocal1        
+     54  getproperty      ::attribute
+     57  callproperty     ::hasThisDNA, 1
+     60  iftrue           -> 66
+     62  op_0x0           
+     63  op_0x0           
+     64  getlex           ::DNA_Need_Reset
+     67  returnvalue      
+     68  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+     70  callproperty     ::getInstance, 0
+     74  getlocal1        
+     75  getproperty      ::attribute
+     78  getlocal1        
+     79  getproperty      ::level
+     82  callproperty     ::isMaxChooseLevel, 2
+     85  iftrue           -> 91
+     87  op_0x0           
+     88  op_0x0           
+     89  getlex           ::DNA_Has_Active
+     92  returnvalue      
+     93  getlex           ::DNA_Update_Max
+     96  returnvalue      
+
+=== com.qq.modules.cardDNA.model::CardDNAModel.::getDNAToolTip method 107
+      0  getlocal0        
+      1  pushscope        
+      2  pushnull         
+      3  coerce_s         
+      4  setlocal         8
+      6  pushnull         
+      7  coerce           com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfo
+      9  setlocal         11
+     11  pushbyte         0
+     13  setlocal         13
+     15  pushnull         
+     16  coerce_s         
+     17  setlocal         14
+     19  pushnull         
+     20  coerce           ::Array
+     22  setlocal         15
+     24  pushbyte         0
+     26  setlocal         16
+     28  pushbyte         0
+     30  setlocal         17
+     32  pushnull         
+     33  coerce_s         
+     34  setlocal         18
+     36  pushbyte         0
+     38  setlocal         19
+     40  pushbyte         0
+     42  setlocal         20
+     44  pushnull         
+     45  coerce_s         
+     46  setlocal         21
+     48  pushnull         
+     49  coerce           ::Array
+     51  setlocal         22
+     53  pushbyte         0
+     55  setlocal         23
+     57  pushnull         
+     58  coerce           ::Array
+     60  setlocal         24
+     62  pushnull         
+     63  coerce           com.qq.modules.main.model.settings.battle.ce::BattleLineupCardTemp
+     66  setlocal         25
+     68  pushnull         
+     69  coerce           com.qq.modules.bag.model.vo::ItemVO
+     72  setlocal         26
+     74  pushbyte         0
+     76  setlocal         27
+     78  pushbyte         0
+     80  setlocal         28
+     82  pushnull         
+     83  coerce_s         
+     84  setlocal         29
+     86  pushnull         
+     87  coerce           ::Array
+     89  setlocal         30
+     91  pushbyte         0
+     93  setlocal         31
+     95  pushnull         
+     96  coerce           ::Array
+     98  setlocal         32
+    100  pushnull         
+    101  coerce           com.qq.modules.main.model.settings.battle.ce::BattleLineupCardTemp
+    104  setlocal         33
+    106  pushnull         
+    107  coerce           com.qq.modules.bag.model.vo::ItemVO
+    110  setlocal         34
+    112  pushbyte         0
+    114  setlocal         35
+    116  pushnull         
+    117  coerce           com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfo
+    119  setlocal         36
+    121  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+    123  callproperty     ::getInstance, 0
+    127  getlocal1        
+    128  getlocal2        
+    129  callproperty     ::getDNAInfo, 2
+    132  coerce           com.qq.modules.cardDNA.model::CardDNAInfo
+    134  setlocal         9
+    136  pushbyte         0
+    138  setlocal         10
+    140  pushstring       ''
+    142  setlocal         12
+    144  getlocal         9
+    146  pushnull         
+    147  ifne             -> 153
+    149  op_0x0           
+    150  op_0x0           
+    151  jump             -> 969
+    153  throw            
+    154  op_0x0           
+    155  getlocal3        
+    156  pushbyte         0
+    158  ifne             -> 581
+    161  op_0x0           
+    162  pushstring       ''
+    164  setlocal         14
+    166  getlocal         9
+    168  callproperty     ::getChooseList, 0
+    172  coerce           ::Array
+    174  dup              
+    175  setlocal         15
+    177  getproperty      ::length
+    180  convert_i        
+    181  setlocal         16
+    183  pushbyte         0
+    185  setlocal         17
+    187  jump             -> 510
+    189  bkpt             
+    190  op_0x0           
+    191  label            
+    192  getlocal         15
+    194  getlocal         17
+    196  getproperty      <runtime>
+    199  convert_i        
+    200  setlocal         19
+    202  getlex           ::Math
+    205  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+    207  callproperty     ::getInstance, 0
+    211  getlocal         19
+    213  callproperty     ::getMaxChooseLevel, 1
+    216  getlocal         4
+    218  pushbyte         1
+    220  add              
+    221  callproperty     ::min, 2
+    225  convert_i        
+    226  setlocal         20
+    228  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+    230  callproperty     ::getInstance, 0
+    234  getlocal         19
+    236  getlocal         20
+    238  getlocal         6
+    240  callproperty     ::getDNAChoose, 3
+    243  coerce           com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfo
+    245  setlocal         11
+    247  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+    249  callproperty     ::getInstance, 0
+    253  getlocal         11
+    255  getproperty      ::typeNameID
+    258  callproperty     ::getChooseTypeName, 1
+    262  coerce_s         
+    263  setlocal         21
+    265  getlocal         14
+    267  pushstring       '*'
+    270  getlocal         21
+    272  pushstring       '<br>'
+    275  callproperty     http://adobe.com/AS3/2006/builtin::concat, 3
+    279  coerce_s         
+    280  setlocal         14
+    282  getlocal         11
+    284  getproperty      ::needPlantLV
+    287  getlocal         10
+    289  ifngt            -> 299
+    291  op_0x0           
+    292  op_0x0           
+    293  getlocal         11
+    295  getproperty      ::needPlantLV
+    298  convert_i        
+    299  setlocal         10
+    301  getlocal         12
+    303  pushnull         
+    304  equals           
+    305  dup              
+    306  iftrue           -> 317
+    308  op_0x0           
+    309  op_0x0           
+    310  pop              
+    311  getlocal         12
+    313  getproperty      ::length
+    316  pushbyte         0
+    318  equals           
+    319  iffalse          -> 509
+    322  op_0x0           
+    323  getlocal         11
+    325  getproperty      ::needItemList
+    328  coerce           ::Array
+    330  dup              
+    331  setlocal         22
+    333  getproperty      ::length
+    336  convert_i        
+    337  setlocal         13
+    339  pushbyte         0
+    341  setlocal         23
+    343  jump             -> 398
+    345  op_0x0           
+    346  op_0x0           
+    347  label            
+    348  getlocal         22
+    350  getlocal         23
+    352  getproperty      <runtime>
+    355  coerce           ::Array
+    357  setlocal         24
+    359  getlocal         12
+    361  getlex           com.qq.modules.bag.model::ItemTemplateFactory
+    364  getproperty      ::instance
+    367  getlocal         24
+    369  pushbyte         0
+    371  getproperty      <runtime>
+    374  callproperty     ::getBagItemName, 1
+    378  pushstring       ' x '
+    381  getlocal         24
+    383  pushbyte         1
+    385  getproperty      <runtime>
+    388  pushstring       '<br>'
+    391  callproperty     http://adobe.com/AS3/2006/builtin::concat, 4
+    395  coerce_s         
+    396  setlocal         12
+    398  inclocal_i       23
+    400  getlocal         23
+    402  getlocal         13
+    404  iflt             -> 348
+    409  op_0xb           
+    410  getproperty      ::needClipNum
+    413  pushbyte         0
+    415  ifngt            -> 508
+    417  op_0x0           
+    418  op_0x0           
+    419  getlex           com.qq.modules.main.model::SettingsModel
+    422  getproperty      ::instance
+    425  getproperty      ::battleCardSettings
+    428  getlocal         5
+    430  callproperty     ::getBattleCardTempById, 1
+    434  coerce           com.qq.modules.main.model.settings.battle.ce::BattleLineupCardTemp
+    437  dup              
+    438  setlocal         25
+    440  pushnull         
+    441  ifeq             -> 508
+    443  op_0x0           
+    444  op_0x0           
+    445  getlocal         25
+    447  getproperty      ::recycleItem
+    450  coerce           com.qq.modules.bag.model.vo::ItemVO
+    453  setlocal         26
+    455  getlocal         11
+    457  getproperty      ::needClipNum
+    460  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+    462  callproperty     ::getInstance, 0
+    466  getlocal         25
+    468  getproperty      ::rarity
+    471  callproperty     ::getParamByRareVal, 1
+    474  multiply         
+    475  convert_i        
+    476  setlocal         27
+    478  getlocal         12
+    480  getlex           com.qq.modules.bag.model::ItemTemplateFactory
+    483  getproperty      ::instance
+    486  getlocal         26
+    488  getproperty      ::itemId
+    491  callproperty     ::getBagItemName, 1
+    495  pushstring       ' x '
+    498  getlocal         27
+    500  pushstring       '<br>'
+    503  callproperty     http://adobe.com/AS3/2006/builtin::concat, 4
+    507  coerce_s         
+    508  setlocal         12
+    510  inclocal_i       17
+    512  getlocal         17
+    514  getlocal         16
+    516  iflt             -> 192
+    521  dxnslate         
+    522  getlocal         10
+    524  ifnge            -> 542
+    526  op_0x0           
+    527  op_0x0           
+    528  pushstring       "<font color='#00FF00'>"
+    531  getlocal         10
+    533  add              
+    534  pushstring       '</font>'
+    537  add              
+    538  setlocal         18
+    540  jump             -> 554
+    542  op_0x0           
+    543  op_0x0           
+    544  pushstring       "<font color='#FF0000'>"
+    547  getlocal         10
+    549  add              
+    550  pushstring       '</font>'
+    553  add              
+    554  setlocal         18
+    556  getlex           tencent.base.utils::StringUtil
+    559  getlex           com.qq.modules.cardDNA::CardDNAConst
+    562  getproperty      ::DNA_Not_Active_Tip
+    565  getlocal         14
+    567  getlocal         18
+    569  getlocal         12
+    571  callproperty     ::substitute, 4
+    575  coerce_s         
+    576  setlocal         8
+    578  jump             -> 970
+    581  op_0x0           
+    582  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+    584  callproperty     ::getInstance, 0
+    588  getlocal3        
+    589  getlocal         4
+    591  pushbyte         1
+    593  add              
+    594  getlocal         6
+    596  callproperty     ::getDNAChoose, 3
+    599  coerce           com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfo
+    601  dup              
+    602  setlocal         11
+    604  pushnull         
+    605  ifeq             -> 908
+    607  bkpt             
+    608  op_0x0           
+    609  getlocal         12
+    611  pushnull         
+    612  equals           
+    613  dup              
+    614  iftrue           -> 625
+    616  op_0x0           
+    617  op_0x0           
+    618  pop              
+    619  getlocal         12
+    621  getproperty      ::length
+    624  pushbyte         0
+    626  equals           
+    627  iffalse          -> 817
+    630  op_0x0           
+    631  getlocal         11
+    633  getproperty      ::needItemList
+    636  coerce           ::Array
+    638  dup              
+    639  setlocal         30
+    641  getproperty      ::length
+    644  convert_i        
+    645  setlocal         13
+    647  pushbyte         0
+    649  setlocal         31
+    651  jump             -> 706
+    653  op_0x0           
+    654  op_0x0           
+    655  label            
+    656  getlocal         30
+    658  getlocal         31
+    660  getproperty      <runtime>
+    663  coerce           ::Array
+    665  setlocal         32
+    667  getlocal         12
+    669  getlex           com.qq.modules.bag.model::ItemTemplateFactory
+    672  getproperty      ::instance
+    675  getlocal         32
+    677  pushbyte         0
+    679  getproperty      <runtime>
+    682  callproperty     ::getBagItemName, 1
+    686  pushstring       ' x '
+    689  getlocal         32
+    691  pushbyte         1
+    693  getproperty      <runtime>
+    696  pushstring       '<br>'
+    699  callproperty     http://adobe.com/AS3/2006/builtin::concat, 4
+    703  coerce_s         
+    704  setlocal         12
+    706  inclocal_i       31
+    708  getlocal         31
+    710  getlocal         13
+    712  iflt             -> 656
+    717  op_0xb           
+    718  getproperty      ::needClipNum
+    721  pushbyte         0
+    723  ifngt            -> 816
+    725  op_0x0           
+    726  op_0x0           
+    727  getlex           com.qq.modules.main.model::SettingsModel
+    730  getproperty      ::instance
+    733  getproperty      ::battleCardSettings
+    736  getlocal         5
+    738  callproperty     ::getBattleCardTempById, 1
+    742  coerce           com.qq.modules.main.model.settings.battle.ce::BattleLineupCardTemp
+    745  dup              
+    746  setlocal         33
+    748  pushnull         
+    749  ifeq             -> 816
+    751  op_0x0           
+    752  op_0x0           
+    753  getlocal         33
+    755  getproperty      ::recycleItem
+    758  coerce           com.qq.modules.bag.model.vo::ItemVO
+    761  setlocal         34
+    763  getlocal         11
+    765  getproperty      ::needClipNum
+    768  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+    770  callproperty     ::getInstance, 0
+    774  getlocal         25
+    776  getproperty      ::rarity
+    779  callproperty     ::getParamByRareVal, 1
+    782  multiply         
+    783  convert_i        
+    784  setlocal         35
+    786  getlocal         12
+    788  getlex           com.qq.modules.bag.model::ItemTemplateFactory
+    791  getproperty      ::instance
+    794  getlocal         34
+    796  getproperty      ::itemId
+    799  callproperty     ::getBagItemName, 1
+    803  pushstring       ' x '
+    806  getlocal         35
+    808  pushstring       '<br>'
+    811  callproperty     http://adobe.com/AS3/2006/builtin::concat, 4
+    815  coerce_s         
+    816  setlocal         12
+    818  getlocal         11
+    820  getproperty      ::realAddProp
+    823  convert_i        
+    824  setlocal         28
+    826  getlocal         7
+    828  getlocal         10
+    830  ifnge            -> 848
+    832  op_0x0           
+    833  op_0x0           
+    834  pushstring       "<font color='#00FF00'>"
+    837  getlocal         10
+    839  add              
+    840  pushstring       '</font>'
+    843  add              
+    844  setlocal         29
+    846  jump             -> 860
+    848  op_0x0           
+    849  op_0x0           
+    850  pushstring       "<font color='#FF0000'>"
+    853  getlocal         10
+    855  add              
+    856  pushstring       '</font>'
+    859  add              
+    860  setlocal         29
+    862  getlex           tencent.base.utils::StringUtil
+    865  getlex           com.qq.modules.cardDNA::CardDNAConst
+    868  getproperty      ::DNA_Update_Tip
+    871  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+    873  callproperty     ::getInstance, 0
+    877  getlocal         11
+    879  getproperty      ::typeNameID
+    882  callproperty     ::getChooseTypeName, 1
+    886  getlex           com.qq.modules.cardDNA::CardDNAConst
+    889  getlocal         28
+    891  callproperty     ::getDNAPropStr, 1
+    895  getlocal         29
+    897  getlocal         12
+    899  callproperty     ::substitute, 5
+    903  coerce_s         
+    904  setlocal         8
+    906  jump             -> 969
+    908  op_0x0           
+    909  op_0x0           
+    910  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+    912  callproperty     ::getInstance, 0
+    916  getlocal3        
+    917  getlocal         4
+    919  getlocal         6
+    921  callproperty     ::getDNAChoose, 3
+    924  coerce           com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfo
+    926  setlocal         36
+    928  getlex           tencent.base.utils::StringUtil
+    931  getlex           com.qq.modules.cardDNA::CardDNAConst
+    934  getproperty      ::DNA_Update_Max
+    937  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+    939  callproperty     ::getInstance, 0
+    943  getlocal         36
+    945  getproperty      ::typeNameID
+    948  callproperty     ::getChooseTypeName, 1
+    952  getlex           com.qq.modules.cardDNA::CardDNAConst
+    955  getlocal         36
+    957  getproperty      ::realTotalAddProp
+    960  callproperty     ::getDNAPropStr, 1
+    964  callproperty     ::substitute, 3
+    968  coerce_s         
+    969  setlocal         8
+    971  getlocal         8
+    973  returnvalue      
+
+=== com.qq.modules.cardDNA.model::CardDNAModel.::getDefaultChooseQuiltyType method 114
+      0  getlocal0        
+      1  pushscope        
+      2  pushnull         
+      3  coerce           PVZ.Cmd::Dto_CardGene
+      5  setlocal         4
+      7  getlocal0        
+      8  getproperty      _isInit
+     11  iftrue           -> 16
+     13  op_0x0           
+     14  op_0x0           
+     15  pushbyte         0
+     17  returnvalue      
+     18  pushbyte         1
+     20  setlocal1        
+     21  getlocal0        
+     22  getproperty      ::dnaInfoList
+     25  getproperty      ::length
+     28  convert_i        
+     29  setlocal2        
+     30  pushbyte         0
+     32  setlocal3        
+     33  jump             -> 105
+     35  op_0x0           
+     36  op_0x0           
+     37  label            
+     38  getlocal0        
+     39  getproperty      ::dnaInfoList
+     42  getlocal3        
+     43  getproperty      <runtime>
+     46  coerce           PVZ.Cmd::Dto_CardGene
+     48  setlocal         4
+     50  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+     52  callproperty     ::getInstance, 0
+     56  getlocal         4
+     58  getproperty      ::attribute
+     61  getlocal         4
+     63  getproperty      ::level
+     66  callproperty     ::isMaxChooseLevel, 2
+     69  iftrue           -> 86
+     71  op_0x0           
+     72  op_0x0           
+     73  getlocal         4
+     75  getproperty      ::geneId
+     78  convert_i        
+     79  setlocal1        
+     80  jump             -> 111
+     82  op_0x0           
+     83  op_0x0           
+     84  jump             -> 103
+     86  op_0x0           
+     87  op_0x0           
+     88  getlocal1        
+     89  getlocal         4
+     91  getproperty      ::geneId
+     94  ifnle            -> 103
+     96  op_0x0           
+     97  op_0x0           
+     98  getlocal         4
+    100  getproperty      ::geneId
+    103  convert_i        
+    104  setlocal1        
+    105  inclocal_i       3
+    107  getlocal3        
+    108  getlocal2        
+    109  iflt             -> 39
+
+=== com.qq.modules.cardDNA.model::CardDNAModel.::getFactorToolTip method 108
+      0  getlocal0        
+      1  pushscope        
+      2  pushnull         
+      3  coerce_s         
+      4  setlocal         7
+      6  pushbyte         0
+      8  setlocal         8
+     10  pushnull         
+     11  coerce_s         
+     12  setlocal         9
+     14  pushbyte         0
+     16  setlocal         10
+     18  pushbyte         0
+     20  setlocal         11
+     22  pushnull         
+     23  coerce_s         
+     24  setlocal         12
+     26  pushnull         
+     27  coerce           ::Array
+     29  setlocal         13
+     31  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+     33  callproperty     ::getInstance, 0
+     37  getlocal1        
+     38  getlocal2        
+     39  getlocal3        
+     40  getlocal         4
+     42  callproperty     ::getFactorByCardTypeAndQuilty, 4
+     45  coerce           com.qq.modules.cardDNA.model::CardDNAFactorInfo
+     47  dup              
+     48  setlocal         6
+     50  pushnull         
+     51  ifeq             -> 258
+     54  op_0x0           
+     55  getlex           com.qq::GameGloble
+     58  getlocal         6
+     60  getproperty      ::realAttack
+     63  getlocal         6
+     65  getproperty      ::realDefence
+     68  getlocal         6
+     70  getproperty      ::realLife
+     73  getlocal         6
+     75  getproperty      ::realAbility
+     78  getlocal         6
+     80  getproperty      ::realCritical
+     83  getlocal         6
+     85  getproperty      ::realHit
+     88  getlocal         6
+     90  getproperty      ::realDodge
+     93  getlocal         6
+     95  getproperty      ::realTough
+     98  callproperty     ::caculateFightPower, 8
+    102  convert_i        
+    103  setlocal         8
+    105  pushstring       ''
+    107  setlocal         9
+    109  getlocal         6
+    111  getproperty      ::needItemList
+    114  getproperty      ::length
+    117  convert_i        
+    118  setlocal         10
+    120  pushbyte         0
+    122  setlocal         11
+    124  jump             -> 182
+    126  op_0x0           
+    127  op_0x0           
+    128  label            
+    129  getlocal         6
+    131  getproperty      ::needItemList
+    134  getlocal         11
+    136  getproperty      <runtime>
+    139  coerce           ::Array
+    141  setlocal         13
+    143  getlocal         9
+    145  getlex           com.qq.modules.bag.model::ItemTemplateFactory
+    148  getproperty      ::instance
+    151  getlocal         13
+    153  pushbyte         0
+    155  getproperty      <runtime>
+    158  callproperty     ::getBagItemName, 1
+    162  pushstring       ' x '
+    165  getlocal         13
+    167  pushbyte         1
+    169  getproperty      <runtime>
+    172  pushstring       '<br>'
+    175  callproperty     http://adobe.com/AS3/2006/builtin::concat, 4
+    179  coerce_s         
+    180  setlocal         9
+    182  inclocal_i       11
+    184  getlocal         11
+    186  getlocal         10
+    188  iflt             -> 129
+    193  setsuper         _paramList
+    195  dxns             'pvzService'
+    197  istype           ::void
+    199  ifnge            -> 220
+    201  op_0x0           
+    202  op_0x0           
+    203  pushstring       "<font color='#00FF00'>"
+    206  getlocal         6
+    208  getproperty      ::needPlantLV
+    211  add              
+    212  pushstring       '</font>'
+    215  add              
+    216  setlocal         12
+    218  jump             -> 235
+    220  op_0x0           
+    221  op_0x0           
+    222  pushstring       "<font color='#FF0000'>"
+    225  getlocal         6
+    227  getproperty      ::needPlantLV
+    230  add              
+    231  pushstring       '</font>'
+    234  add              
+    235  setlocal         12
+    237  getlex           tencent.base.utils::StringUtil
+    240  getlex           com.qq.modules.cardDNA::CardDNAConst
+    243  getproperty      ::Factor_Tip
+    246  getlocal         8
+    248  getlocal         12
+    250  getlocal         9
+    252  callproperty     ::substitute, 4
+    256  coerce_s         
+    257  setlocal         7
+    259  getlocal         7
+    261  returnvalue      
+
+=== com.qq.modules.cardDNA.model::CardDNAModel.::getMaxOpenQuiltyType method 113
+      0  getlocal0        
+      1  pushscope        
+      2  pushnull         
+      3  coerce           PVZ.Cmd::Dto_CardGene
+      5  setlocal         4
+      7  getlocal0        
+      8  getproperty      _isInit
+     11  iftrue           -> 16
+     13  op_0x0           
+     14  op_0x0           
+     15  pushbyte         0
+     17  returnvalue      
+     18  pushbyte         1
+     20  setlocal1        
+     21  getlocal0        
+     22  getproperty      ::dnaInfoList
+     25  getproperty      ::length
+     28  convert_i        
+     29  setlocal2        
+     30  pushbyte         0
+     32  setlocal3        
+     33  jump             -> 106
+     35  op_0x0           
+     36  op_0x0           
+     37  label            
+     38  getlocal0        
+     39  getproperty      ::dnaInfoList
+     42  getlocal3        
+     43  getproperty      <runtime>
+     46  coerce           PVZ.Cmd::Dto_CardGene
+     48  dup              
+     49  setlocal         4
+     51  getproperty      ::level
+     54  pushbyte         0
+     56  ifngt            -> 87
+     58  op_0x0           
+     59  op_0x0           
+     60  getlex           ::Math
+     63  getlocal         4
+     65  getproperty      ::geneId
+     68  pushbyte         1
+     70  add              
+     71  getlex           com.qq.modules.cardDNA.model::CardDNADataFactory
+     73  callproperty     ::getInstance, 0
+     77  getproperty      ::totalDNAQuilty
+     79  callproperty     ::min, 2
+     83  convert_i        
+     84  setlocal1        
+     85  jump             -> 104
+     87  op_0x0           
+     88  op_0x0           
+     89  getlocal1        
+     90  getlocal         4
+     92  getproperty      ::geneId
+     95  ifnle            -> 104
+     97  op_0x0           
+     98  op_0x0           
+     99  getlocal         4
+    101  getproperty      ::geneId
+    104  convert_i        
+    105  setlocal1        
+    106  inclocal_i       3
+    108  getlocal3        
+    109  getlocal2        
+    110  iflt             -> 39
+
+=== com.qq.modules.cardDNA.model::CardDNAModel.::getMaxQuiltyType method 115
+      0  getlocal0        
+      1  pushscope        
+      2  pushnull         
+      3  coerce           PVZ.Cmd::Dto_CardGene
+      5  setlocal         4
+      7  getlocal0        
+      8  getproperty      _isInit
+     11  iftrue           -> 16
+     13  op_0x0           
+     14  op_0x0           
+     15  pushbyte         0
+     17  returnvalue      
+     18  pushbyte         0
+     20  setlocal1        
+     21  getlocal0        
+     22  getproperty      ::dnaInfoList
+     25  getproperty      ::length
+     28  convert_i        
+     29  setlocal2        
+     30  pushbyte         0
+     32  setlocal3        
+     33  jump             -> 77
+     35  op_0x0           
+     36  op_0x0           
+     37  label            
+     38  getlocal0        
+     39  getproperty      ::dnaInfoList
+     42  getlocal3        
+     43  getproperty      <runtime>
+     46  coerce           PVZ.Cmd::Dto_CardGene
+     48  dup              
+     49  setlocal         4
+     51  getproperty      ::level
+     54  pushbyte         0
+     56  ifngt            -> 75
+     58  op_0x0           
+     59  op_0x0           
+     60  getlocal1        
+     61  getlocal         4
+     63  getproperty      ::geneId
+     66  ifnle            -> 75
+     68  op_0x0           
+     69  op_0x0           
+     70  getlocal         4
+     72  getproperty      ::geneId
+     75  convert_i        
+     76  setlocal1        
+     77  inclocal_i       3
+     79  getlocal3        
+     80  getlocal2        
+     81  iflt             -> 39
+
+=== com.qq.modules.cardDNA.model::CardDNAModel.::isInit method 111
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      _isInit
+      6  returnvalue      
+
+=== com.qq.modules.cardDNA.model::CardDNAModel.::reset method 110
+      0  getlocal0        
+      1  pushscope        
+      2  pushnull         
+      3  coerce           PVZ.Cmd::Dto_CardAttributeTerm
+      6  setlocal         4
+      8  pushnull         
+      9  coerce           PVZ.Cmd::Dto_CardAttributeTerm
+     12  setlocal         5
+     14  getlocal1        
+     15  pushnull         
+     16  ifeq             -> 512
+     19  op_0x0           
+     20  getlocal0        
+     21  getlex           com.qq::GameGloble
+     24  getproperty      ::actorModel
+     27  getproperty      ::battleCardModel
+     30  getlocal1        
+     31  callproperty     ::getBattleCardFullInfo, 1
+     35  initproperty     ::cardVO
+     38  getlocal0        
+     39  getproperty      ::cardVO
+     42  pushnull         
+     43  ifeq             -> 63
+     45  op_0x0           
+     46  op_0x0           
+     47  getlocal0        
+     48  getlocal0        
+     49  getproperty      ::cardVO
+     52  getproperty      ::pvpPlantTemplate
+     55  getproperty      ::fruitType
+     58  initproperty     ::cardType
+     61  jump             -> 80
+     63  op_0x0           
+     64  op_0x0           
+     65  findpropstrict   org.as3commons.logging.api::getLogger
+     68  pushstring       'cardDNA'
+     71  callproperty     org.as3commons.logging.api::getLogger, 1
+     75  pushstring       '没有找到该卡牌'
+     78  callpropvoid     org.as3commons.logging.api:ILogger::error, 1
+     82  getlocal0        
+     83  getlocal1        
+     84  setproperty      ::cardUID
+     87  getlocal0        
+     88  getlocal2        
+     89  setproperty      ::dnaInfoList
+     92  getlocal0        
+     93  findpropstrict   ::Array
+     95  constructprop    ::Array, 0
+     98  initproperty     ::cardAllPorpAddition
+    101  getlocal3        
+    102  pushnull         
+    103  ifeq             -> 507
+    106  op_0x0           
+    107  getlocal3        
+    108  getproperty      ::baseValue
+    111  coerce           PVZ.Cmd::Dto_CardAttributeTerm
+    114  setlocal         4
+    116  getlocal3        
+    117  getproperty      ::percent
+    120  coerce           PVZ.Cmd::Dto_CardAttributeTerm
+    123  setlocal         5
+    125  getlocal         4
+    127  pushnull         
+    128  equals           
+    129  not              
+    130  dup              
+    131  iffalse          -> 139
+    133  op_0x0           
+    134  op_0x0           
+    135  pop              
+    136  getlocal         5
+    138  pushnull         
+    139  equals           
+    140  not              
+    141  iffalse          -> 506
+    143  bkpt             
+    144  op_0x0           
+    145  getlocal         4
+    147  getproperty      ::attack
+    150  pushbyte         0
+    152  ifeq             -> 189
+    154  op_0x0           
+    155  op_0x0           
+    156  getlocal0        
+    157  getproperty      ::cardAllPorpAddition
+    160  getlex           com.qq.modules.cardDNA::CardDNAConst
+    163  getproperty      ::Attr_Attack
+    166  findpropstrict   ::int
+    168  getlocal         4
+    170  getproperty      ::attack
+    173  pushdouble       0.01
+    175  multiply         
+    176  getlocal         5
+    178  getproperty      ::attack
+    181  multiply         
+    182  pushdouble       0.0001
+    184  multiply         
+    185  callproperty     ::int, 1
+    188  setproperty      <runtime>
+    191  getlocal         4
+    193  getproperty      ::defense
+    196  pushbyte         0
+    198  ifeq             -> 235
+    200  op_0x0           
+    201  op_0x0           
+    202  getlocal0        
+    203  getproperty      ::cardAllPorpAddition
+    206  getlex           com.qq.modules.cardDNA::CardDNAConst
+    209  getproperty      ::Attr_Defense
+    212  findpropstrict   ::int
+    214  getlocal         4
+    216  getproperty      ::defense
+    219  pushdouble       0.01
+    221  multiply         
+    222  getlocal         5
+    224  getproperty      ::defense
+    227  multiply         
+    228  pushdouble       0.0001
+    230  multiply         
+    231  callproperty     ::int, 1
+    234  setproperty      <runtime>
+    237  getlocal         4
+    239  getproperty      ::hp
+    242  pushnull         
+    243  ifeq             -> 288
+    245  op_0x0           
+    246  op_0x0           
+    247  getlocal0        
+    248  getproperty      ::cardAllPorpAddition
+    251  getlex           com.qq.modules.cardDNA::CardDNAConst
+    254  getproperty      ::Attr_HP
+    257  findpropstrict   ::int
+    259  getlocal         4
+    261  getproperty      ::hp
+    264  callproperty     ::toNumber, 0
+    268  pushdouble       0.01
+    270  multiply         
+    271  getlocal         5
+    273  getproperty      ::hp
+    276  callproperty     ::toNumber, 0
+    280  multiply         
+    281  pushdouble       0.0001
+    283  multiply         
+    284  callproperty     ::int, 1
+    287  setproperty      <runtime>
+    290  getlocal         4
+    292  getproperty      ::ability
+    295  pushbyte         0
+    297  ifeq             -> 334
+    299  op_0x0           
+    300  op_0x0           
+    301  getlocal0        
+    302  getproperty      ::cardAllPorpAddition
+    305  getlex           com.qq.modules.cardDNA::CardDNAConst
+    308  getproperty      ::Attr_Ability
+    311  findpropstrict   ::int
+    313  getlocal         4
+    315  getproperty      ::ability
+    318  pushdouble       0.01
+    320  multiply         
+    321  getlocal         5
+    323  getproperty      ::ability
+    326  multiply         
+    327  pushdouble       0.0001
+    329  multiply         
+    330  callproperty     ::int, 1
+    333  setproperty      <runtime>
+    336  getlocal         4
+    338  getproperty      ::hit
+    341  pushbyte         0
+    343  ifeq             -> 377
+    345  op_0x0           
+    346  op_0x0           
+    347  getlocal0        
+    348  getproperty      ::cardAllPorpAddition
+    351  getlex           com.qq.modules.cardDNA::CardDNAConst
+    354  getproperty      ::Attr_Hit
+    357  findpropstrict   ::int
+    359  getlocal         4
+    361  getproperty      ::hit
+    364  getlocal         5
+    366  getproperty      ::hit
+    369  multiply         
+    370  pushdouble       0.0001
+    372  multiply         
+    373  callproperty     ::int, 1
+    376  setproperty      <runtime>
+    379  getlocal         4
+    381  getproperty      ::dodge
+    384  pushbyte         0
+    386  ifeq             -> 420
+    388  op_0x0           
+    389  op_0x0           
+    390  getlocal0        
+    391  getproperty      ::cardAllPorpAddition
+    394  getlex           com.qq.modules.cardDNA::CardDNAConst
+    397  getproperty      ::Attr_Dodge
+    400  findpropstrict   ::int
+    402  getlocal         4
+    404  getproperty      ::dodge
+    407  getlocal         5
+    409  getproperty      ::dodge
+    412  multiply         
+    413  pushdouble       0.0001
+    415  multiply         
+    416  callproperty     ::int, 1
+    419  setproperty      <runtime>
+    422  getlocal         4
+    424  getproperty      ::critical
+    427  pushbyte         0
+    429  ifeq             -> 463
+    431  op_0x0           
+    432  op_0x0           
+    433  getlocal0        
+    434  getproperty      ::cardAllPorpAddition
+    437  getlex           com.qq.modules.cardDNA::CardDNAConst
+    440  getproperty      ::Attr_Critical
+    443  findpropstrict   ::int
+    445  getlocal         4
+    447  getproperty      ::critical
+    450  getlocal         5
+    452  getproperty      ::critical
+    455  multiply         
+    456  pushdouble       0.0001
+    458  multiply         
+    459  callproperty     ::int, 1
+    462  setproperty      <runtime>
+    465  getlocal         4
+    467  getproperty      ::tough
+    470  pushbyte         0
+    472  ifeq             -> 506
+    474  op_0x0           
+    475  op_0x0           
+    476  getlocal0        
+    477  getproperty      ::cardAllPorpAddition
+    480  getlex           com.qq.modules.cardDNA::CardDNAConst
+    483  getproperty      ::Attr_Tough
+    486  findpropstrict   ::int
+    488  getlocal         4
+    490  getproperty      ::tough
+    493  getlocal         5
+    495  getproperty      ::tough
+    498  multiply         
+    499  pushdouble       0.0001
+    501  multiply         
+    502  callproperty     ::int, 1
+    505  setproperty      <runtime>
+    508  getlocal0        
+    509  pushtrue         
+    510  initproperty     _isInit
+    513  returnvoid       
+
+=== com.qq.modules.cardDNA.model::CardDNAModel.::updateDNAInfo method 112
+      0  getlocal0        
+      1  pushscope        
+      2  pushnull         
+      3  coerce           PVZ.Cmd::Dto_CardGene
+      5  setlocal         6
+      7  getlocal0        
+      8  getproperty      ::dnaInfoList
+     11  pushnull         
+     12  ifne             -> 33
+     14  op_0x0           
+     15  op_0x0           
+     16  findpropstrict   org.as3commons.logging.api::getLogger
+     19  pushstring       'cardDNA'
+     22  callproperty     org.as3commons.logging.api::getLogger, 1
+     26  pushstring       '卡牌DNA数据还未初始化'
+     29  callpropvoid     org.as3commons.logging.api:ILogger::error, 1
+     33  pushfalse        
+     34  returnvalue      
+     35  getlocal1        
+     36  getlocal0        
+     37  getproperty      ::cardUID
+     40  callproperty     ::compare, 1
+     44  iftrue           -> 65
+     46  op_0x0           
+     47  op_0x0           
+     48  findpropstrict   org.as3commons.logging.api::getLogger
+     51  pushstring       'cardDNA'
+     54  callproperty     org.as3commons.logging.api::getLogger, 1
+     58  pushstring       '卡牌DNA更新内容非原有卡牌'
+     61  callpropvoid     org.as3commons.logging.api:ILogger::error, 1
+     65  pushfalse        
+     66  returnvalue      
+     67  getlocal0        
+     68  getproperty      ::dnaInfoList
+     71  getproperty      ::length
+     74  convert_i        
+     75  setlocal3        
+     76  pushtrue         
+     77  setlocal         4
+     79  pushbyte         0
+     81  setlocal         5
+     83  jump             -> 128
+     85  op_0x0           
+     86  op_0x0           
+     87  label            
+     88  getlocal0        
+     89  getproperty      ::dnaInfoList
+     92  getlocal         5
+     94  getproperty      <runtime>
+     97  coerce           PVZ.Cmd::Dto_CardGene
+     99  dup              
+    100  setlocal         6
+    102  getproperty      ::geneId
+    105  getlocal2        
+    106  getproperty      ::geneId
+    109  ifne             -> 126
+    111  op_0x0           
+    112  op_0x0           
+    113  pushfalse        
+    114  setlocal         4
+    116  getlocal0        
+    117  getproperty      ::dnaInfoList
+    120  getlocal         5
+    122  getlocal2        
+    123  setproperty      <runtime>
+    126  pushtrue         
+    127  returnvalue      
+    128  inclocal_i       5
+    130  getlocal         5
+    132  getlocal3        
+    133  iflt             -> 88
+    138  getsuper         com.qq.modules.cardDNA.model.templates.ce::CardDNATestResetPrice
+    140  label            
+    141  op_0x0           
+    142  op_0x0           
+    143  getlocal0        
+    144  getproperty      ::dnaInfoList
+    147  getlocal2        
+    148  callpropvoid     http://adobe.com/AS3/2006/builtin::push, 1
+    152  pushfalse        
+    153  returnvalue      
+
+
+原版基因选择
+Source: D:\pvzol本地最新最新ol\pvzol本地\webroot\ModuleCardDNA.swf
+SHA256: 11523200232bb4face00d795b9b5b79889fc04d96bed39faf59de211c8b2cb43
+
+=== com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfoCE.::addProp method 280
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_addProp
+      6  returnvalue      
+
+=== com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfoCE.::id method 276
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_id
+      6  returnvalue      
+
+=== com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfoCE.::level method 279
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_level
+      6  returnvalue      
+
+=== com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfoCE.::load method 275
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getlocal1        
+      4  getproperty      Dto_CardAttribute
+      7  initproperty     com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_id
+     10  getlocal0        
+     11  getlocal1        
+     12  getproperty      Dto_CardAttribute
+     15  initproperty     com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_type
+     18  getlocal0        
+     19  getlocal1        
+     20  getproperty      Dto_CardAttribute
+     23  initproperty     com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_typeNameID
+     26  getlocal0        
+     27  getlocal1        
+     28  getproperty      Dto_CardAttribute
+     31  initproperty     com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_level
+     34  getlocal0        
+     35  getlocal1        
+     36  getproperty      Dto_CardAttribute
+     39  initproperty     com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_addProp
+     42  getlocal0        
+     43  getlocal1        
+     44  getproperty      Dto_CardAttribute
+     47  initproperty     com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_totalAddProp
+     50  getlocal0        
+     51  getlocal1        
+     52  getproperty      Dto_CardAttribute
+     55  initproperty     com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_needItemStr
+     58  getlocal0        
+     59  getlocal1        
+     60  getproperty      Dto_CardAttribute
+     63  initproperty     com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_needClipNum
+     66  getlocal0        
+     67  getlocal1        
+     68  getproperty      Dto_CardAttribute
+     71  initproperty     com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_needPlantLV
+     74  returnvoid       
+
+=== com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfoCE.::needClipNum method 283
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_needClipNum
+      6  returnvalue      
+
+=== com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfoCE.::needItemStr method 282
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_needItemStr
+      6  returnvalue      
+
+=== com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfoCE.::needPlantLV method 284
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_needPlantLV
+      6  returnvalue      
+
+=== com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfoCE.::totalAddProp method 281
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_totalAddProp
+      6  returnvalue      
+
+=== com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfoCE.::type method 277
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_type
+      6  returnvalue      
+
+=== com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfoCE.::typeNameID method 278
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_typeNameID
+      6  returnvalue      
+
+=== com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfo.::needItemList method 291
+      0  getlocal0        
+      1  pushscope        
+      2  pushnull         
+      3  coerce           ::Array
+      5  setlocal         4
+      7  getlex           com.qq::GameGloble
+     10  getlex           com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_needItemStr
+     13  callproperty     ::itemStrConvert, 1
+     17  coerce           ::Array
+     19  setlocal1        
+     20  getlocal1        
+     21  getproperty      ::length
+     24  convert_i        
+     25  setlocal2        
+     26  pushbyte         0
+     28  setlocal3        
+     29  jump             -> 75
+     31  op_0x0           
+     32  op_0x0           
+     33  label            
+     34  getlocal1        
+     35  getlocal3        
+     36  getproperty      <runtime>
+     39  coerce           ::Array
+     41  dup              
+     42  setlocal         4
+     44  pushbyte         1
+     46  getlex           ::Math
+     49  pushbyte         0
+     51  findpropstrict   ::int
+     53  getlocal         4
+     55  pushbyte         1
+     57  getproperty      <runtime>
+     60  getlocal0        
+     61  getproperty      ::paramVal
+     64  multiply         
+     65  callproperty     ::int, 1
+     68  callproperty     ::max, 2
+     72  setproperty      <runtime>
+     75  inclocal_i       3
+     77  getlocal3        
+     78  getlocal2        
+     79  iflt             -> 35
+
+=== com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfo.::realAddProp method 289
+      0  getlocal0        
+      1  pushscope        
+      2  getlex           com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_addProp
+      5  getlocal0        
+      6  getproperty      ::paramVal
+      9  multiply         
+     10  returnvalue      
+
+=== com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfo.::realTotalAddProp method 290
+      0  getlocal0        
+      1  pushscope        
+      2  getlex           com.qq.modules.cardDNA.model.templates.ce:CardDNAChooseInfoCE::_totalAddProp
+      5  getlocal0        
+      6  getproperty      ::paramVal
+      9  multiply         
+     10  returnvalue      
+
+=== com.qq.modules.cardDNA.model.templates.ce::CardDNAChooseInfo.::setParam method 288
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getlocal1        
+      4  initproperty     ::paramVal
+      7  returnvoid       
+
+
+原版傀儡公式
+com.qq.modules.dummy.model::DummyEquipmentInfo.::fightPower method 39103
+      0  getlocal0        
+      1  pushscope        
+      2  pushnull         
+      3  coerce_s         
+      4  setlocal2        
+      5  pushbyte         0
+      7  setlocal3        
+      8  getlocal0        
+      9  getproperty      ::_template
+     13  pushnull         
+     14  ifne             -> 21
+     18  pushbyte         0
+     20  returnvalue      
+     21  getlocal0        
+     22  getlocal0        
+     23  getproperty      ::quilty
+     27  getlocal0        
+     28  getproperty      ::level
+     31  callproperty     ::getPropList, 2
+     36  coerce           ::Array
+     38  setlocal1        
+     39  getlocal1        
+     40  pushnull         
+     41  ifne             -> 48
+     45  pushbyte         0
+     47  returnvalue      
+     48  pushbyte         0
+     50  setlocal         4
+     52  getlocal1        
+     53  coerce_a         
+     54  setlocal         5
+     56  jump             -> 83
+     60  label            
+     61  getlocal         5
+     63  getlocal         4
+     65  nextname         
+     66  coerce_s         
+     67  setlocal2        
+     68  getlocal1        
+     69  getlocal2        
+     70  pushbyte         6
+     72  getlocal1        
+     73  getlocal2        
+     74  getproperty      <runtime>
+     78  multiply         
+     79  setproperty      <runtime>
+     83  hasnext2         5, 4
+     86  iftrue           -> 60
+     90  kill             5
+     92  kill             4
+     94  getlex           com.qq::GameGloble
+     97  getlocal1        
+     98  getlex           com.qq.modules.dummy::DummyConst
+    102  getproperty      ::Attr_Attack
+    106  getproperty      <runtime>
+    110  getlocal1        
+    111  getlex           com.qq.modules.dummy::DummyConst
+    115  getproperty      ::Attr_Defense
+    119  getproperty      <runtime>
+    123  getlocal1        
+    124  getlex           com.qq.modules.dummy::DummyConst
+    128  getproperty      ::Attr_HP
+    132  getproperty      <runtime>
+    136  getlocal1        
+    137  getlex           com.qq.modules.dummy::DummyConst
+    141  getproperty      ::Attr_Ability
+    145  getproperty      <runtime>
+    149  getlocal1        
+    150  getlex           com.qq.modules.dummy::DummyConst
+    154  getproperty      ::Attr_Critical
+    158  getproperty      <runtime>
+    162  getlocal1        
+    163  getlex           com.qq.modules.dummy::DummyConst
+    167  getproperty      ::Attr_Hit
+    171  getproperty      <runtime>
+    175  getlocal1        
+    176  getlex           com.qq.modules.dummy::DummyConst
+    180  getproperty      ::Attr_Dodge
+    184  getproperty      <runtime>
+    188  getlocal1        
+    189  getlex           com.qq.modules.dummy::DummyConst
+    193  getproperty      ::Attr_Tough
+    197  getproperty      <runtime>
+    201  pushtrue         
+    202  callproperty     ::caculateFightPower, 9
+    207  convert_i        
+    208  setlocal3        
+    209  getlocal3        
+    210  returnvalue      
+
+com.qq.modules.dummy.model::DummyEquipmentInfo.::getDisplayEquipmentPropList method 39104
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getlocal1        
+      4  getlocal2        
+      5  callproperty     ::getPropList, 2
+     10  coerce           ::Array
+     12  setlocal3        
+     13  getlocal3        
+     14  getlex           com.qq.modules.dummy::DummyConst
+     18  getproperty      ::Attr_Attack
+     22  findpropstrict   ::int
+     24  getlocal3        
+     25  getlex           com.qq.modules.dummy::DummyConst
+     29  getproperty      ::Attr_Attack
+     33  getproperty      <runtime>
+     37  pushbyte         100
+     39  divide           
+     40  callproperty     ::int, 1
+     43  setproperty      <runtime>
+     47  getlocal3        
+     48  getlex           com.qq.modules.dummy::DummyConst
+     52  getproperty      ::Attr_Defense
+     56  findpropstrict   ::int
+     58  getlocal3        
+     59  getlex           com.qq.modules.dummy::DummyConst
+     63  getproperty      ::Attr_Defense
+     67  getproperty      <runtime>
+     71  pushbyte         100
+     73  divide           
+     74  callproperty     ::int, 1
+     77  setproperty      <runtime>
+     81  getlocal3        
+     82  getlex           com.qq.modules.dummy::DummyConst
+     86  getproperty      ::Attr_HP
+     90  findpropstrict   ::int
+     92  getlocal3        
+     93  getlex           com.qq.modules.dummy::DummyConst
+     97  getproperty      ::Attr_HP
+    101  getproperty      <runtime>
+    105  pushbyte         100
+    107  divide           
+    108  callproperty     ::int, 1
+    111  setproperty      <runtime>
+    115  getlocal3        
+    116  getlex           com.qq.modules.dummy::DummyConst
+    120  getproperty      ::Attr_Ability
+    124  findpropstrict   ::int
+    126  getlocal3        
+    127  getlex           com.qq.modules.dummy::DummyConst
+    131  getproperty      ::Attr_Ability
+    135  getproperty      <runtime>
+    139  pushbyte         100
+    141  divide           
+    142  callproperty     ::int, 1
+    145  setproperty      <runtime>
+    149  getlocal3        
+    150  returnvalue      
+
+com.qq.modules.dummy.model::DummyEquipmentInfo.::getPropList method 39105
+      0  getlocal0        
+      1  pushscope        
+      2  findpropstrict   ::Array
+      4  constructprop    ::Array, 0
+      7  coerce           ::Array
+      9  setlocal3        
+     10  getlex           com.qq.modules.dummy.model::DummyDataFactory
+     13  callproperty     ::getInstance, 0
+     17  getlocal0        
+     18  getproperty      ::_type
+     22  getlocal1        
+     23  callproperty     ::getEquipmentInfoBy, 2
+     28  coerce           com.qq.modules.dummy.model::DummyEquipmentTemplate
+     31  dup              
+     32  setlocal         4
+     34  pushnull         
+     35  ifeq             -> 219
+     39  getlocal3        
+     40  getlex           com.qq.modules.dummy::DummyConst
+     44  getproperty      ::Attr_Attack
+     48  getlocal         4
+     50  getproperty      ::baseAttack
+     54  pushbyte         6
+     56  multiply         
+     57  setproperty      <runtime>
+     61  getlocal3        
+     62  getlex           com.qq.modules.dummy::DummyConst
+     66  getproperty      ::Attr_Defense
+     70  getlocal         4
+     72  getproperty      ::baseDefense
+     76  pushbyte         6
+     78  multiply         
+     79  setproperty      <runtime>
+     83  getlocal3        
+     84  getlex           com.qq.modules.dummy::DummyConst
+     88  getproperty      ::Attr_HP
+     92  getlocal         4
+     94  getproperty      ::baseHp
+     98  pushbyte         6
+    100  multiply         
+    101  setproperty      <runtime>
+    105  getlocal3        
+    106  getlex           com.qq.modules.dummy::DummyConst
+    110  getproperty      ::Attr_Ability
+    114  getlocal         4
+    116  getproperty      ::baseAbilty
+    120  pushbyte         6
+    122  multiply         
+    123  setproperty      <runtime>
+    127  getlocal3        
+    128  getlex           com.qq.modules.dummy::DummyConst
+    132  getproperty      ::Attr_Hit
+    136  getlocal         4
+    138  getproperty      ::baseHit
+    142  pushbyte         6
+    144  multiply         
+    145  setproperty      <runtime>
+    149  getlocal3        
+    150  getlex           com.qq.modules.dummy::DummyConst
+    154  getproperty      ::Attr_Dodge
+    158  getlocal         4
+    160  getproperty      ::baseDodge
+    164  pushbyte         6
+    166  multiply         
+    167  setproperty      <runtime>
+    171  getlocal3        
+    172  getlex           com.qq.modules.dummy::DummyConst
+    176  getproperty      ::Attr_Critical
+    180  getlocal         4
+    182  getproperty      ::baseCritical
+    186  pushbyte         6
+    188  multiply         
+    189  setproperty      <runtime>
+    193  getlocal3        
+    194  getlex           com.qq.modules.dummy::DummyConst
+    198  getproperty      ::Attr_Tough
+    202  getlocal         4
+    204  getproperty      ::baseTough
+    208  pushbyte         6
+    210  multiply         
+    211  setproperty      <runtime>
+    215  jump             -> 339
+    219  getlocal3        
+    220  getlex           com.qq.modules.dummy::DummyConst
+    224  getproperty      ::Attr_Attack
+    228  pushbyte         0
+    230  setproperty      <runtime>
+    234  getlocal3        
+    235  getlex           com.qq.modules.dummy::DummyConst
+    239  getproperty      ::Attr_Defense
+    243  pushbyte         0
+    245  setproperty      <runtime>
+    249  getlocal3        
+    250  getlex           com.qq.modules.dummy::DummyConst
+    254  getproperty      ::Attr_HP
+    258  pushbyte         0
+    260  setproperty      <runtime>
+    264  getlocal3        
+    265  getlex           com.qq.modules.dummy::DummyConst
+    269  getproperty      ::Attr_Ability
+    273  pushbyte         0
+    275  setproperty      <runtime>
+    279  getlocal3        
+    280  getlex           com.qq.modules.dummy::DummyConst
+    284  getproperty      ::Attr_Hit
+    288  pushbyte         0
+    290  setproperty      <runtime>
+    294  getlocal3        
+    295  getlex           com.qq.modules.dummy::DummyConst
+    299  getproperty      ::Attr_Dodge
+    303  pushbyte         0
+    305  setproperty      <runtime>
+    309  getlocal3        
+    310  getlex           com.qq.modules.dummy::DummyConst
+    314  getproperty      ::Attr_Critical
+    318  pushbyte         0
+    320  setproperty      <runtime>
+    324  getlocal3        
+    325  getlex           com.qq.modules.dummy::DummyConst
+    329  getproperty      ::Attr_Tough
+    333  pushbyte         0
+    335  setproperty      <runtime>
+    339  getlocal0        
+    340  getlocal0        
+    341  getproperty      ::quilty
+    345  getlocal2        
+    346  callproperty     ::getGrowList, 2
+    351  coerce           ::Array
+    353  setlocal         5
+    355  getlocal3        
+    356  getlex           com.qq.modules.dummy::DummyConst
+    360  getproperty      ::Attr_Attack
+    364  getlocal3        
+    365  getlex           com.qq.modules.dummy::DummyConst
+    369  getproperty      ::Attr_Attack
+    373  getproperty      <runtime>
+    377  getlocal         5
+    379  getlex           com.qq.modules.dummy::DummyConst
+    383  getproperty      ::Attr_Attack
+    387  getproperty      <runtime>
+    391  add              
+    392  setproperty      <runtime>
+    396  getlocal3        
+    397  getlex           com.qq.modules.dummy::DummyConst
+    401  getproperty      ::Attr_Defense
+    405  getlocal3        
+    406  getlex           com.qq.modules.dummy::DummyConst
+    410  getproperty      ::Attr_Defense
+    414  getproperty      <runtime>
+    418  getlocal         5
+    420  getlex           com.qq.modules.dummy::DummyConst
+    424  getproperty      ::Attr_Defense
+    428  getproperty      <runtime>
+    432  add              
+    433  setproperty      <runtime>
+    437  getlocal3        
+    438  getlex           com.qq.modules.dummy::DummyConst
+    442  getproperty      ::Attr_HP
+    446  getlocal3        
+    447  getlex           com.qq.modules.dummy::DummyConst
+    451  getproperty      ::Attr_HP
+    455  getproperty      <runtime>
+    459  getlocal         5
+    461  getlex           com.qq.modules.dummy::DummyConst
+    465  getproperty      ::Attr_HP
+    469  getproperty      <runtime>
+    473  add              
+    474  setproperty      <runtime>
+    478  getlocal3        
+    479  getlex           com.qq.modules.dummy::DummyConst
+    483  getproperty      ::Attr_Ability
+    487  getlocal3        
+    488  getlex           com.qq.modules.dummy::DummyConst
+    492  getproperty      ::Attr_Ability
+    496  getproperty      <runtime>
+    500  getlocal         5
+    502  getlex           com.qq.modules.dummy::DummyConst
+    506  getproperty      ::Attr_Ability
+    510  getproperty      <runtime>
+    514  add              
+    515  setproperty      <runtime>
+    519  getlocal3        
+    520  getlex           com.qq.modules.dummy::DummyConst
+    524  getproperty      ::Attr_Hit
+    528  getlocal3        
+    529  getlex           com.qq.modules.dummy::DummyConst
+    533  getproperty      ::Attr_Hit
+    537  getproperty      <runtime>
+    541  getlocal         5
+    543  getlex           com.qq.modules.dummy::DummyConst
+    547  getproperty      ::Attr_Hit
+    551  getproperty      <runtime>
+    555  add              
+    556  setproperty      <runtime>
+    560  getlocal3        
+    561  getlex           com.qq.modules.dummy::DummyConst
+    565  getproperty      ::Attr_Dodge
+    569  getlocal3        
+    570  getlex           com.qq.modules.dummy::DummyConst
+    574  getproperty      ::Attr_Dodge
+    578  getproperty      <runtime>
+    582  getlocal         5
+    584  getlex           com.qq.modules.dummy::DummyConst
+    588  getproperty      ::Attr_Dodge
+    592  getproperty      <runtime>
+    596  add              
+    597  setproperty      <runtime>
+    601  getlocal3        
+    602  getlex           com.qq.modules.dummy::DummyConst
+    606  getproperty      ::Attr_Critical
+    610  getlocal3        
+    611  getlex           com.qq.modules.dummy::DummyConst
+    615  getproperty      ::Attr_Critical
+    619  getproperty      <runtime>
+    623  getlocal         5
+    625  getlex           com.qq.modules.dummy::DummyConst
+    629  getproperty      ::Attr_Critical
+    633  getproperty      <runtime>
+    637  add              
+    638  setproperty      <runtime>
+    642  getlocal3        
+    643  getlex           com.qq.modules.dummy::DummyConst
+    647  getproperty      ::Attr_Tough
+    651  getlocal3        
+    652  getlex           com.qq.modules.dummy::DummyConst
+    656  getproperty      ::Attr_Tough
+    660  getproperty      <runtime>
+    664  getlocal         5
+    666  getlex           com.qq.modules.dummy::DummyConst
+    670  getproperty      ::Attr_Tough
+    674  getproperty      <runtime>
+    678  add              
+    679  setproperty      <runtime>
+    683  getlocal3        
+    684  returnvalue      
+
+com.qq.modules.dummy.model::DummyZombieInfo.::fightPower method 39160
+      0  getlocal0        
+      1  pushscope        
+      2  pushbyte         0
+      4  setlocal1        
+      5  getlocal0        
+      6  callproperty     ::getAllPropList, 0
+     11  coerce           ::Array
+     13  setlocal2        
+     14  getlocal2        
+     15  pushnull         
+     16  ifne             -> 23
+     20  pushbyte         0
+     22  returnvalue      
+     23  getlex           com.qq::GameGloble
+     26  getlocal2        
+     27  getlex           com.qq.modules.dummy::DummyConst
+     31  getproperty      ::Attr_Attack
+     35  getproperty      <runtime>
+     39  getlocal2        
+     40  getlex           com.qq.modules.dummy::DummyConst
+     44  getproperty      ::Attr_Defense
+     48  getproperty      <runtime>
+     52  getlocal2        
+     53  getlex           com.qq.modules.dummy::DummyConst
+     57  getproperty      ::Attr_HP
+     61  getproperty      <runtime>
+     65  getlocal2        
+     66  getlex           com.qq.modules.dummy::DummyConst
+     70  getproperty      ::Attr_Ability
+     74  getproperty      <runtime>
+     78  getlocal2        
+     79  getlex           com.qq.modules.dummy::DummyConst
+     83  getproperty      ::Attr_Critical
+     87  getproperty      <runtime>
+     91  getlocal2        
+     92  getlex           com.qq.modules.dummy::DummyConst
+     96  getproperty      ::Attr_Hit
+    100  getproperty      <runtime>
+    104  getlocal2        
+    105  getlex           com.qq.modules.dummy::DummyConst
+    109  getproperty      ::Attr_Dodge
+    113  getproperty      <runtime>
+    117  getlocal2        
+    118  getlex           com.qq.modules.dummy::DummyConst
+    122  getproperty      ::Attr_Tough
+    126  getproperty      <runtime>
+    130  pushtrue         
+    131  callproperty     ::caculateFightPower, 9
+    136  convert_i        
+    137  setlocal1        
+    138  getlocal1        
+    139  returnvalue      
+
+com.qq.modules.dummy.model::DummyZombieInfo.::fightPowerOnlyEquipment method 39162
+      0  getlocal0        
+      1  pushscope        
+      2  pushbyte         0
+      4  setlocal1        
+      5  getlocal0        
+      6  callproperty     ::getEquipmentPropList, 0
+     11  coerce           ::Array
+     13  setlocal2        
+     14  getlocal2        
+     15  pushnull         
+     16  ifne             -> 23
+     20  pushbyte         0
+     22  returnvalue      
+     23  getlex           com.qq::GameGloble
+     26  getlocal2        
+     27  getlex           com.qq.modules.dummy::DummyConst
+     31  getproperty      ::Attr_Attack
+     35  getproperty      <runtime>
+     39  getlocal2        
+     40  getlex           com.qq.modules.dummy::DummyConst
+     44  getproperty      ::Attr_Defense
+     48  getproperty      <runtime>
+     52  getlocal2        
+     53  getlex           com.qq.modules.dummy::DummyConst
+     57  getproperty      ::Attr_HP
+     61  getproperty      <runtime>
+     65  getlocal2        
+     66  getlex           com.qq.modules.dummy::DummyConst
+     70  getproperty      ::Attr_Ability
+     74  getproperty      <runtime>
+     78  getlocal2        
+     79  getlex           com.qq.modules.dummy::DummyConst
+     83  getproperty      ::Attr_Critical
+     87  getproperty      <runtime>
+     91  getlocal2        
+     92  getlex           com.qq.modules.dummy::DummyConst
+     96  getproperty      ::Attr_Hit
+    100  getproperty      <runtime>
+    104  getlocal2        
+    105  getlex           com.qq.modules.dummy::DummyConst
+    109  getproperty      ::Attr_Dodge
+    113  getproperty      <runtime>
+    117  getlocal2        
+    118  getlex           com.qq.modules.dummy::DummyConst
+    122  getproperty      ::Attr_Tough
+    126  getproperty      <runtime>
+    130  pushtrue         
+    131  callproperty     ::caculateFightPower, 9
+    136  convert_i        
+    137  setlocal1        
+    138  getlocal1        
+    139  returnvalue      
+
+com.qq.modules.dummy.model::DummyZombieInfo.::fightPowerOnlySelf method 39161
+      0  getlocal0        
+      1  pushscope        
+      2  pushbyte         0
+      4  setlocal1        
+      5  getlocal0        
+      6  callproperty     ::getPropList, 0
+     11  coerce           ::Array
+     13  setlocal2        
+     14  getlocal2        
+     15  pushnull         
+     16  ifne             -> 23
+     20  pushbyte         0
+     22  returnvalue      
+     23  getlex           com.qq::GameGloble
+     26  getlocal2        
+     27  getlex           com.qq.modules.dummy::DummyConst
+     31  getproperty      ::Attr_Attack
+     35  getproperty      <runtime>
+     39  getlocal2        
+     40  getlex           com.qq.modules.dummy::DummyConst
+     44  getproperty      ::Attr_Defense
+     48  getproperty      <runtime>
+     52  getlocal2        
+     53  getlex           com.qq.modules.dummy::DummyConst
+     57  getproperty      ::Attr_HP
+     61  getproperty      <runtime>
+     65  getlocal2        
+     66  getlex           com.qq.modules.dummy::DummyConst
+     70  getproperty      ::Attr_Ability
+     74  getproperty      <runtime>
+     78  getlocal2        
+     79  getlex           com.qq.modules.dummy::DummyConst
+     83  getproperty      ::Attr_Critical
+     87  getproperty      <runtime>
+     91  getlocal2        
+     92  getlex           com.qq.modules.dummy::DummyConst
+     96  getproperty      ::Attr_Hit
+    100  getproperty      <runtime>
+    104  getlocal2        
+    105  getlex           com.qq.modules.dummy::DummyConst
+    109  getproperty      ::Attr_Dodge
+    113  getproperty      <runtime>
+    117  getlocal2        
+    118  getlex           com.qq.modules.dummy::DummyConst
+    122  getproperty      ::Attr_Tough
+    126  getproperty      <runtime>
+    130  pushtrue         
+    131  callproperty     ::caculateFightPower, 9
+    136  convert_i        
+    137  setlocal1        
+    138  getlocal1        
+    139  returnvalue      
+
+com.qq.modules.dummy.model::DummyZombieInfo.::getAllPropList method 39165
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      ::_template
+      7  pushnull         
+      8  ifne             -> 14
+     12  pushnull         
+     13  returnvalue      
+     14  getlocal0        
+     15  callproperty     ::getPropList, 0
+     20  coerce           ::Array
+     22  setlocal1        
+     23  getlocal1        
+     24  pushnull         
+     25  ifne             -> 31
+     29  pushnull         
+     30  returnvalue      
+     31  getlocal0        
+     32  callproperty     ::getEquipmentPropList, 0
+     37  coerce           ::Array
+     39  setlocal2        
+     40  getlocal2        
+     41  pushnull         
+     42  ifeq             -> 366
+     46  getlocal1        
+     47  getlex           com.qq.modules.dummy::DummyConst
+     51  getproperty      ::Attr_Attack
+     55  getlocal1        
+     56  getlex           com.qq.modules.dummy::DummyConst
+     60  getproperty      ::Attr_Attack
+     64  getproperty      <runtime>
+     68  getlocal2        
+     69  getlex           com.qq.modules.dummy::DummyConst
+     73  getproperty      ::Attr_Attack
+     77  getproperty      <runtime>
+     81  add              
+     82  setproperty      <runtime>
+     86  getlocal1        
+     87  getlex           com.qq.modules.dummy::DummyConst
+     91  getproperty      ::Attr_Defense
+     95  getlocal1        
+     96  getlex           com.qq.modules.dummy::DummyConst
+    100  getproperty      ::Attr_Defense
+    104  getproperty      <runtime>
+    108  getlocal2        
+    109  getlex           com.qq.modules.dummy::DummyConst
+    113  getproperty      ::Attr_Defense
+    117  getproperty      <runtime>
+    121  add              
+    122  setproperty      <runtime>
+    126  getlocal1        
+    127  getlex           com.qq.modules.dummy::DummyConst
+    131  getproperty      ::Attr_HP
+    135  getlocal1        
+    136  getlex           com.qq.modules.dummy::DummyConst
+    140  getproperty      ::Attr_HP
+    144  getproperty      <runtime>
+    148  getlocal2        
+    149  getlex           com.qq.modules.dummy::DummyConst
+    153  getproperty      ::Attr_HP
+    157  getproperty      <runtime>
+    161  add              
+    162  setproperty      <runtime>
+    166  getlocal1        
+    167  getlex           com.qq.modules.dummy::DummyConst
+    171  getproperty      ::Attr_Ability
+    175  getlocal1        
+    176  getlex           com.qq.modules.dummy::DummyConst
+    180  getproperty      ::Attr_Ability
+    184  getproperty      <runtime>
+    188  getlocal2        
+    189  getlex           com.qq.modules.dummy::DummyConst
+    193  getproperty      ::Attr_Ability
+    197  getproperty      <runtime>
+    201  add              
+    202  setproperty      <runtime>
+    206  getlocal1        
+    207  getlex           com.qq.modules.dummy::DummyConst
+    211  getproperty      ::Attr_Hit
+    215  getlocal1        
+    216  getlex           com.qq.modules.dummy::DummyConst
+    220  getproperty      ::Attr_Hit
+    224  getproperty      <runtime>
+    228  getlocal2        
+    229  getlex           com.qq.modules.dummy::DummyConst
+    233  getproperty      ::Attr_Hit
+    237  getproperty      <runtime>
+    241  add              
+    242  setproperty      <runtime>
+    246  getlocal1        
+    247  getlex           com.qq.modules.dummy::DummyConst
+    251  getproperty      ::Attr_Dodge
+    255  getlocal1        
+    256  getlex           com.qq.modules.dummy::DummyConst
+    260  getproperty      ::Attr_Dodge
+    264  getproperty      <runtime>
+    268  getlocal2        
+    269  getlex           com.qq.modules.dummy::DummyConst
+    273  getproperty      ::Attr_Dodge
+    277  getproperty      <runtime>
+    281  add              
+    282  setproperty      <runtime>
+    286  getlocal1        
+    287  getlex           com.qq.modules.dummy::DummyConst
+    291  getproperty      ::Attr_Critical
+    295  getlocal1        
+    296  getlex           com.qq.modules.dummy::DummyConst
+    300  getproperty      ::Attr_Critical
+    304  getproperty      <runtime>
+    308  getlocal2        
+    309  getlex           com.qq.modules.dummy::DummyConst
+    313  getproperty      ::Attr_Critical
+    317  getproperty      <runtime>
+    321  add              
+    322  setproperty      <runtime>
+    326  getlocal1        
+    327  getlex           com.qq.modules.dummy::DummyConst
+    331  getproperty      ::Attr_Tough
+    335  getlocal1        
+    336  getlex           com.qq.modules.dummy::DummyConst
+    340  getproperty      ::Attr_Tough
+    344  getproperty      <runtime>
+    348  getlocal2        
+    349  getlex           com.qq.modules.dummy::DummyConst
+    353  getproperty      ::Attr_Tough
+    357  getproperty      <runtime>
+    361  add              
+    362  setproperty      <runtime>
+    366  getlocal1        
+    367  returnvalue      
+
+com.qq.modules.dummy.model::DummyZombieInfo.::getDisplayEquipmentPropList method 39167
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  callproperty     ::getEquipmentPropList, 0
+      8  coerce           ::Array
+     10  setlocal1        
+     11  getlocal1        
+     12  getlex           com.qq.modules.dummy::DummyConst
+     16  getproperty      ::Attr_Attack
+     20  findpropstrict   ::int
+     22  getlocal1        
+     23  getlex           com.qq.modules.dummy::DummyConst
+     27  getproperty      ::Attr_Attack
+     31  getproperty      <runtime>
+     35  pushbyte         100
+     37  divide           
+     38  callproperty     ::int, 1
+     41  setproperty      <runtime>
+     45  getlocal1        
+     46  getlex           com.qq.modules.dummy::DummyConst
+     50  getproperty      ::Attr_Defense
+     54  findpropstrict   ::int
+     56  getlocal1        
+     57  getlex           com.qq.modules.dummy::DummyConst
+     61  getproperty      ::Attr_Defense
+     65  getproperty      <runtime>
+     69  pushbyte         100
+     71  divide           
+     72  callproperty     ::int, 1
+     75  setproperty      <runtime>
+     79  getlocal1        
+     80  getlex           com.qq.modules.dummy::DummyConst
+     84  getproperty      ::Attr_HP
+     88  findpropstrict   ::int
+     90  getlocal1        
+     91  getlex           com.qq.modules.dummy::DummyConst
+     95  getproperty      ::Attr_HP
+     99  getproperty      <runtime>
+    103  pushbyte         100
+    105  divide           
+    106  callproperty     ::int, 1
+    109  setproperty      <runtime>
+    113  getlocal1        
+    114  getlex           com.qq.modules.dummy::DummyConst
+    118  getproperty      ::Attr_Ability
+    122  findpropstrict   ::int
+    124  getlocal1        
+    125  getlex           com.qq.modules.dummy::DummyConst
+    129  getproperty      ::Attr_Ability
+    133  getproperty      <runtime>
+    137  pushbyte         100
+    139  divide           
+    140  callproperty     ::int, 1
+    143  setproperty      <runtime>
+    147  getlocal1        
+    148  returnvalue      
+
+com.qq.modules.dummy.model::DummyZombieInfo.::getDisplayPropList method 39169
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  callproperty     ::getPropList, 0
+      8  coerce           ::Array
+     10  setlocal1        
+     11  getlocal1        
+     12  getlex           com.qq.modules.dummy::DummyConst
+     16  getproperty      ::Attr_Attack
+     20  findpropstrict   ::int
+     22  getlocal1        
+     23  getlex           com.qq.modules.dummy::DummyConst
+     27  getproperty      ::Attr_Attack
+     31  getproperty      <runtime>
+     35  pushbyte         100
+     37  divide           
+     38  callproperty     ::int, 1
+     41  setproperty      <runtime>
+     45  getlocal1        
+     46  getlex           com.qq.modules.dummy::DummyConst
+     50  getproperty      ::Attr_Defense
+     54  findpropstrict   ::int
+     56  getlocal1        
+     57  getlex           com.qq.modules.dummy::DummyConst
+     61  getproperty      ::Attr_Defense
+     65  getproperty      <runtime>
+     69  pushbyte         100
+     71  divide           
+     72  callproperty     ::int, 1
+     75  setproperty      <runtime>
+     79  getlocal1        
+     80  getlex           com.qq.modules.dummy::DummyConst
+     84  getproperty      ::Attr_HP
+     88  findpropstrict   ::int
+     90  getlocal1        
+     91  getlex           com.qq.modules.dummy::DummyConst
+     95  getproperty      ::Attr_HP
+     99  getproperty      <runtime>
+    103  pushbyte         100
+    105  divide           
+    106  callproperty     ::int, 1
+    109  setproperty      <runtime>
+    113  getlocal1        
+    114  getlex           com.qq.modules.dummy::DummyConst
+    118  getproperty      ::Attr_Ability
+    122  findpropstrict   ::int
+    124  getlocal1        
+    125  getlex           com.qq.modules.dummy::DummyConst
+    129  getproperty      ::Attr_Ability
+    133  getproperty      <runtime>
+    137  pushbyte         100
+    139  divide           
+    140  callproperty     ::int, 1
+    143  setproperty      <runtime>
+    147  getlocal1        
+    148  returnvalue      
+
+com.qq.modules.dummy.model::DummyZombieInfo.::getEquipmentPropList method 39166
+      0  getlocal0        
+      1  pushscope        
+      2  pushnull         
+      3  coerce_s         
+      4  setlocal2        
+      5  pushnull         
+      6  coerce           com.qq.modules.dummy.model::DummyEquipmentInfo
+      9  setlocal3        
+     10  pushnull         
+     11  coerce           ::Array
+     13  setlocal         4
+     15  findpropstrict   ::Array
+     17  constructprop    ::Array, 0
+     20  coerce           ::Array
+     22  setlocal1        
+     23  getlocal1        
+     24  getlex           com.qq.modules.dummy::DummyConst
+     28  getproperty      ::Attr_Attack
+     32  pushbyte         0
+     34  setproperty      <runtime>
+     38  getlocal1        
+     39  getlex           com.qq.modules.dummy::DummyConst
+     43  getproperty      ::Attr_Defense
+     47  pushbyte         0
+     49  setproperty      <runtime>
+     53  getlocal1        
+     54  getlex           com.qq.modules.dummy::DummyConst
+     58  getproperty      ::Attr_HP
+     62  pushbyte         0
+     64  setproperty      <runtime>
+     68  getlocal1        
+     69  getlex           com.qq.modules.dummy::DummyConst
+     73  getproperty      ::Attr_Ability
+     77  pushbyte         0
+     79  setproperty      <runtime>
+     83  getlocal1        
+     84  getlex           com.qq.modules.dummy::DummyConst
+     88  getproperty      ::Attr_Hit
+     92  pushbyte         0
+     94  setproperty      <runtime>
+     98  getlocal1        
+     99  getlex           com.qq.modules.dummy::DummyConst
+    103  getproperty      ::Attr_Dodge
+    107  pushbyte         0
+    109  setproperty      <runtime>
+    113  getlocal1        
+    114  getlex           com.qq.modules.dummy::DummyConst
+    118  getproperty      ::Attr_Critical
+    122  pushbyte         0
+    124  setproperty      <runtime>
+    128  getlocal1        
+    129  getlex           com.qq.modules.dummy::DummyConst
+    133  getproperty      ::Attr_Tough
+    137  pushbyte         0
+    139  setproperty      <runtime>
+    143  getlocal0        
+    144  getproperty      ::_template
+    148  pushnull         
+    149  ifne             -> 155
+    153  getlocal1        
+    154  returnvalue      
+    155  getlocal0        
+    156  getproperty      ::_equipmentList
+    160  pushnull         
+    161  ifeq             -> 567
+    165  pushbyte         0
+    167  setlocal         5
+    169  getlocal0        
+    170  getproperty      ::_equipmentList
+    174  coerce_a         
+    175  setlocal         6
+    177  jump             -> 556
+    181  label            
+    182  getlocal         6
+    184  getlocal         5
+    186  nextname         
+    187  coerce_s         
+    188  setlocal2        
+    189  getlocal0        
+    190  getproperty      ::_equipmentList
+    194  getlocal2        
+    195  getproperty      <runtime>
+    199  coerce           com.qq.modules.dummy.model::DummyEquipmentInfo
+    202  setlocal3        
+    203  getlocal3        
+    204  pushnull         
+    205  ifeq             -> 556
+    209  getlocal3        
+    210  getlocal3        
+    211  getproperty      ::quilty
+    215  getlocal3        
+    216  getproperty      ::level
+    219  callproperty     ::getPropList, 2
+    224  coerce           ::Array
+    226  setlocal         4
+    228  getlocal1        
+    229  getlex           com.qq.modules.dummy::DummyConst
+    233  getproperty      ::Attr_Attack
+    237  getlocal1        
+    238  getlex           com.qq.modules.dummy::DummyConst
+    242  getproperty      ::Attr_Attack
+    246  getproperty      <runtime>
+    250  getlocal         4
+    252  getlex           com.qq.modules.dummy::DummyConst
+    256  getproperty      ::Attr_Attack
+    260  getproperty      <runtime>
+    264  add              
+    265  setproperty      <runtime>
+    269  getlocal1        
+    270  getlex           com.qq.modules.dummy::DummyConst
+    274  getproperty      ::Attr_Defense
+    278  getlocal1        
+    279  getlex           com.qq.modules.dummy::DummyConst
+    283  getproperty      ::Attr_Defense
+    287  getproperty      <runtime>
+    291  getlocal         4
+    293  getlex           com.qq.modules.dummy::DummyConst
+    297  getproperty      ::Attr_Defense
+    301  getproperty      <runtime>
+    305  add              
+    306  setproperty      <runtime>
+    310  getlocal1        
+    311  getlex           com.qq.modules.dummy::DummyConst
+    315  getproperty      ::Attr_HP
+    319  getlocal1        
+    320  getlex           com.qq.modules.dummy::DummyConst
+    324  getproperty      ::Attr_HP
+    328  getproperty      <runtime>
+    332  getlocal         4
+    334  getlex           com.qq.modules.dummy::DummyConst
+    338  getproperty      ::Attr_HP
+    342  getproperty      <runtime>
+    346  add              
+    347  setproperty      <runtime>
+    351  getlocal1        
+    352  getlex           com.qq.modules.dummy::DummyConst
+    356  getproperty      ::Attr_Ability
+    360  getlocal1        
+    361  getlex           com.qq.modules.dummy::DummyConst
+    365  getproperty      ::Attr_Ability
+    369  getproperty      <runtime>
+    373  getlocal         4
+    375  getlex           com.qq.modules.dummy::DummyConst
+    379  getproperty      ::Attr_Ability
+    383  getproperty      <runtime>
+    387  add              
+    388  setproperty      <runtime>
+    392  getlocal1        
+    393  getlex           com.qq.modules.dummy::DummyConst
+    397  getproperty      ::Attr_Hit
+    401  getlocal1        
+    402  getlex           com.qq.modules.dummy::DummyConst
+    406  getproperty      ::Attr_Hit
+    410  getproperty      <runtime>
+    414  getlocal         4
+    416  getlex           com.qq.modules.dummy::DummyConst
+    420  getproperty      ::Attr_Hit
+    424  getproperty      <runtime>
+    428  add              
+    429  setproperty      <runtime>
+    433  getlocal1        
+    434  getlex           com.qq.modules.dummy::DummyConst
+    438  getproperty      ::Attr_Dodge
+    442  getlocal1        
+    443  getlex           com.qq.modules.dummy::DummyConst
+    447  getproperty      ::Attr_Dodge
+    451  getproperty      <runtime>
+    455  getlocal         4
+    457  getlex           com.qq.modules.dummy::DummyConst
+    461  getproperty      ::Attr_Dodge
+    465  getproperty      <runtime>
+    469  add              
+    470  setproperty      <runtime>
+    474  getlocal1        
+    475  getlex           com.qq.modules.dummy::DummyConst
+    479  getproperty      ::Attr_Critical
+    483  getlocal1        
+    484  getlex           com.qq.modules.dummy::DummyConst
+    488  getproperty      ::Attr_Critical
+    492  getproperty      <runtime>
+    496  getlocal         4
+    498  getlex           com.qq.modules.dummy::DummyConst
+    502  getproperty      ::Attr_Critical
+    506  getproperty      <runtime>
+    510  add              
+    511  setproperty      <runtime>
+    515  getlocal1        
+    516  getlex           com.qq.modules.dummy::DummyConst
+    520  getproperty      ::Attr_Tough
+    524  getlocal1        
+    525  getlex           com.qq.modules.dummy::DummyConst
+    529  getproperty      ::Attr_Tough
+    533  getproperty      <runtime>
+    537  getlocal         4
+    539  getlex           com.qq.modules.dummy::DummyConst
+    543  getproperty      ::Attr_Tough
+    547  getproperty      <runtime>
+    551  add              
+    552  setproperty      <runtime>
+    556  hasnext2         6, 5
+    559  iftrue           -> 181
+    563  kill             6
+    565  kill             5
+    567  getlocal1        
+    568  returnvalue      
+
+com.qq.modules.dummy.model::DummyZombieInfo.::getPropList method 39168
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  getproperty      ::_template
+      7  pushnull         
+      8  ifne             -> 14
+     12  pushnull         
+     13  returnvalue      
+     14  getlex           com.qq.modules.dummy.model::DummyDataFactory
+     17  callproperty     ::getInstance, 0
+     21  getlocal0        
+     22  getproperty      ::_template
+     26  getproperty      ::type
+     29  getlocal0        
+     30  getproperty      ::_template
+     34  getproperty      ::rarity
+     37  getlocal0        
+     38  getproperty      ::quilty
+     42  callproperty     ::getPropInfoByID, 3
+     47  coerce           com.qq.modules.dummy.model.templates.ce::DummyPropTemplateCE
+     50  setlocal1        
+     51  getlocal1        
+     52  pushnull         
+     53  ifne             -> 59
+     57  pushnull         
+     58  returnvalue      
+     59  getlex           com.qq.modules.dummy.model::DummyDataFactory
+     62  callproperty     ::getInstance, 0
+     66  getlocal0        
+     67  getproperty      ::star
+     70  callproperty     ::getDummyStarPercentBuffByID, 1
+     75  convert_d        
+     76  setlocal2        
+     77  findpropstrict   ::Array
+     79  constructprop    ::Array, 0
+     82  coerce           ::Array
+     84  setlocal3        
+     85  getlocal3        
+     86  getlex           com.qq.modules.dummy::DummyConst
+     90  getproperty      ::Attr_Attack
+     94  findpropstrict   ::int
+     96  getlocal1        
+     97  getproperty      ::baseAttack
+    101  getlocal0        
+    102  getproperty      ::level
+    105  getlocal1        
+    106  getproperty      ::growAttack
+    109  multiply         
+    110  add              
+    111  getlocal2        
+    112  multiply         
+    113  callproperty     ::int, 1
+    116  pushbyte         6
+    118  multiply         
+    119  setproperty      <runtime>
+    123  getlocal3        
+    124  getlex           com.qq.modules.dummy::DummyConst
+    128  getproperty      ::Attr_Defense
+    132  findpropstrict   ::int
+    134  getlocal1        
+    135  getproperty      ::baseDefense
+    139  getlocal0        
+    140  getproperty      ::level
+    143  getlocal1        
+    144  getproperty      ::growDefense
+    147  multiply         
+    148  add              
+    149  getlocal2        
+    150  multiply         
+    151  callproperty     ::int, 1
+    154  pushbyte         6
+    156  multiply         
+    157  setproperty      <runtime>
+    161  getlocal3        
+    162  getlex           com.qq.modules.dummy::DummyConst
+    166  getproperty      ::Attr_HP
+    170  findpropstrict   ::int
+    172  getlocal1        
+    173  getproperty      ::baseHp
+    177  getlocal0        
+    178  getproperty      ::level
+    181  getlocal1        
+    182  getproperty      ::growHp
+    185  multiply         
+    186  add              
+    187  getlocal2        
+    188  multiply         
+    189  callproperty     ::int, 1
+    192  pushbyte         6
+    194  multiply         
+    195  setproperty      <runtime>
+    199  getlocal3        
+    200  getlex           com.qq.modules.dummy::DummyConst
+    204  getproperty      ::Attr_Ability
+    208  findpropstrict   ::int
+    210  getlocal1        
+    211  getproperty      ::baseAbilty
+    215  getlocal0        
+    216  getproperty      ::level
+    219  getlocal1        
+    220  getproperty      ::growAbilty
+    224  multiply         
+    225  add              
+    226  getlocal2        
+    227  multiply         
+    228  callproperty     ::int, 1
+    231  pushbyte         6
+    233  multiply         
+    234  setproperty      <runtime>
+    238  getlocal3        
+    239  getlex           com.qq.modules.dummy::DummyConst
+    243  getproperty      ::Attr_Hit
+    247  findpropstrict   ::int
+    249  getlocal1        
+    250  getproperty      ::baseHit
+    254  getlocal0        
+    255  getproperty      ::level
+    258  getlocal1        
+    259  getproperty      ::growHit
+    262  multiply         
+    263  add              
+    264  getlocal2        
+    265  multiply         
+    266  callproperty     ::int, 1
+    269  pushbyte         6
+    271  multiply         
+    272  setproperty      <runtime>
+    276  getlocal3        
+    277  getlex           com.qq.modules.dummy::DummyConst
+    281  getproperty      ::Attr_Dodge
+    285  findpropstrict   ::int
+    287  getlocal1        
+    288  getproperty      ::baseDodge
+    292  getlocal0        
+    293  getproperty      ::level
+    296  getlocal1        
+    297  getproperty      ::growDodge
+    300  multiply         
+    301  add              
+    302  getlocal2        
+    303  multiply         
+    304  callproperty     ::int, 1
+    307  pushbyte         6
+    309  multiply         
+    310  setproperty      <runtime>
+    314  getlocal3        
+    315  getlex           com.qq.modules.dummy::DummyConst
+    319  getproperty      ::Attr_Critical
+    323  findpropstrict   ::int
+    325  getlocal1        
+    326  getproperty      ::baseCritical
+    330  getlocal0        
+    331  getproperty      ::level
+    334  getlocal1        
+    335  getproperty      ::growCritical
+    338  multiply         
+    339  add              
+    340  getlocal2        
+    341  multiply         
+    342  callproperty     ::int, 1
+    345  pushbyte         6
+    347  multiply         
+    348  setproperty      <runtime>
+    352  getlocal3        
+    353  getlex           com.qq.modules.dummy::DummyConst
+    357  getproperty      ::Attr_Tough
+    361  findpropstrict   ::int
+    363  getlocal1        
+    364  getproperty      ::baseTough
+    368  getlocal0        
+    369  getproperty      ::level
+    372  getlocal1        
+    373  getproperty      ::growTough
+    376  multiply         
+    377  add              
+    378  getlocal2        
+    379  multiply         
+    380  callproperty     ::int, 1
+    383  pushbyte         6
+    385  multiply         
+    386  setproperty      <runtime>
+    390  getlocal3        
+    391  returnvalue      
+
+com.qq.modules.dummy.model::DummyZombieInfo.::powerList method 39159
+      0  getlocal0        
+      1  pushscope        
+      2  pushnull         
+      3  returnvalue      
+
+com.qq.modules.dummy.model::DummyEquipmentInfo.::getGrowList method 39106
+      0  getlocal0        
+      1  pushscope        
+      2  findpropstrict   ::Array
+      4  constructprop    ::Array, 0
+      7  coerce           ::Array
+      9  setlocal3        
+     10  getlex           ::Math
+     14  getlex           com.qq.modules.dummy.model::DummyDataFactory
+     17  callproperty     ::getInstance, 0
+     21  callproperty     ::getEquipmentMaxQuilty, 0
+     26  getlocal1        
+     27  callproperty     ::min, 2
+     32  convert_i        
+     33  setlocal1        
+     34  pushbyte         0
+     36  setlocal         4
+     38  getlex           com.qq.modules.dummy.model::DummyDataFactory
+     41  callproperty     ::getInstance, 0
+     45  getlocal0        
+     46  getproperty      ::quilty
+     50  callproperty     ::getEquipmentQuiltyInfoByQuiltyID, 1
+     55  coerce           com.qq.modules.dummy.model::DummyEquipmentQuiltyTemplate
+     58  dup              
+     59  setlocal         5
+     61  pushnull         
+     62  ifeq             -> 75
+     66  getlocal         5
+     68  getproperty      ::maxLV
+     72  convert_i        
+     73  setlocal         4
+     75  getlex           ::Math
+     79  getlocal         4
+     81  getlocal2        
+     82  callproperty     ::min, 2
+     87  convert_i        
+     88  setlocal2        
+     89  getlex           com.qq.modules.dummy.model::DummyDataFactory
+     92  callproperty     ::getInstance, 0
+     96  getlocal0        
+     97  getproperty      ::_type
+    101  getlocal1        
+    102  callproperty     ::getEquipmentInfoBy, 2
+    107  coerce           com.qq.modules.dummy.model::DummyEquipmentTemplate
+    110  dup              
+    111  setlocal         6
+    113  pushnull         
+    114  ifeq             -> 307
+    118  getlocal3        
+    119  getlex           com.qq.modules.dummy::DummyConst
+    123  getproperty      ::Attr_Attack
+    127  getlocal2        
+    128  getlocal         6
+    130  getproperty      ::growAttack
+    133  multiply         
+    134  pushbyte         6
+    136  multiply         
+    137  setproperty      <runtime>
+    141  getlocal3        
+    142  getlex           com.qq.modules.dummy::DummyConst
+    146  getproperty      ::Attr_Defense
+    150  getlocal2        
+    151  getlocal         6
+    153  getproperty      ::growDefense
+    156  multiply         
+    157  pushbyte         6
+    159  multiply         
+    160  setproperty      <runtime>
+    164  getlocal3        
+    165  getlex           com.qq.modules.dummy::DummyConst
+    169  getproperty      ::Attr_HP
+    173  getlocal2        
+    174  getlocal         6
+    176  getproperty      ::growHp
+    179  multiply         
+    180  pushbyte         6
+    182  multiply         
+    183  setproperty      <runtime>
+    187  getlocal3        
+    188  getlex           com.qq.modules.dummy::DummyConst
+    192  getproperty      ::Attr_Ability
+    196  getlocal2        
+    197  getlocal         6
+    199  getproperty      ::growAbilty
+    203  multiply         
+    204  pushbyte         6
+    206  multiply         
+    207  setproperty      <runtime>
+    211  getlocal3        
+    212  getlex           com.qq.modules.dummy::DummyConst
+    216  getproperty      ::Attr_Hit
+    220  getlocal2        
+    221  getlocal         6
+    223  getproperty      ::growHit
+    226  multiply         
+    227  pushbyte         6
+    229  multiply         
+    230  setproperty      <runtime>
+    234  getlocal3        
+    235  getlex           com.qq.modules.dummy::DummyConst
+    239  getproperty      ::Attr_Dodge
+    243  getlocal2        
+    244  getlocal         6
+    246  getproperty      ::growDodge
+    249  multiply         
+    250  pushbyte         6
+    252  multiply         
+    253  setproperty      <runtime>
+    257  getlocal3        
+    258  getlex           com.qq.modules.dummy::DummyConst
+    262  getproperty      ::Attr_Critical
+    266  getlocal2        
+    267  getlocal         6
+    269  getproperty      ::growCritical
+    272  multiply         
+    273  pushbyte         6
+    275  multiply         
+    276  setproperty      <runtime>
+    280  getlocal3        
+    281  getlex           com.qq.modules.dummy::DummyConst
+    285  getproperty      ::Attr_Tough
+    289  getlocal2        
+    290  getlocal         6
+    292  getproperty      ::growTough
+    295  multiply         
+    296  pushbyte         6
+    298  multiply         
+    299  setproperty      <runtime>
+    303  jump             -> 427
+    307  getlocal3        
+    308  getlex           com.qq.modules.dummy::DummyConst
+    312  getproperty      ::Attr_Attack
+    316  pushbyte         0
+    318  setproperty      <runtime>
+    322  getlocal3        
+    323  getlex           com.qq.modules.dummy::DummyConst
+    327  getproperty      ::Attr_Defense
+    331  pushbyte         0
+    333  setproperty      <runtime>
+    337  getlocal3        
+    338  getlex           com.qq.modules.dummy::DummyConst
+    342  getproperty      ::Attr_HP
+    346  pushbyte         0
+    348  setproperty      <runtime>
+    352  getlocal3        
+    353  getlex           com.qq.modules.dummy::DummyConst
+    357  getproperty      ::Attr_Ability
+    361  pushbyte         0
+    363  setproperty      <runtime>
+    367  getlocal3        
+    368  getlex           com.qq.modules.dummy::DummyConst
+    372  getproperty      ::Attr_Hit
+    376  pushbyte         0
+    378  setproperty      <runtime>
+    382  getlocal3        
+    383  getlex           com.qq.modules.dummy::DummyConst
+    387  getproperty      ::Attr_Dodge
+    391  pushbyte         0
+    393  setproperty      <runtime>
+    397  getlocal3        
+    398  getlex           com.qq.modules.dummy::DummyConst
+    402  getproperty      ::Attr_Critical
+    406  pushbyte         0
+    408  setproperty      <runtime>
+    412  getlocal3        
+    413  getlex           com.qq.modules.dummy::DummyConst
+    417  getproperty      ::Attr_Tough
+    421  pushbyte         0
+    423  setproperty      <runtime>
+    427  getlocal3        
+    428  returnvalue      
+
+com.qq.modules.dummy.model::DummyDataFactory.::getDummyStarPercentBuffByID method 41517
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  callpropvoid     ::initDummyStarData, 0
+      8  getlocal0        
+      9  getproperty      ::_dummyStarInfoMap
+     13  getlocal1        
+     14  getproperty      <runtime>
+     18  coerce           com.qq.modules.dummy.model.templates.ce::DummyZombieStarTemplateCE
+     22  setlocal2        
+     23  getlocal2        
+     24  pushnull         
+     25  ifne             -> 32
+     29  pushbyte         1
+     31  returnvalue      
+     32  getlocal2        
+     33  getproperty      ::percentBuff
+     36  pushdouble       0.0001
+     38  multiply         
+     39  returnvalue      
+
+com.qq.modules.dummy.model::DummyDataFactory.::getEquipmentInfoBy method 41513
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  callpropvoid     ::initEquipmentData, 0
+      8  getlocal1        
+      9  pushbyte         100
+     11  multiply         
+     12  getlocal2        
+     13  add              
+     14  convert_i        
+     15  setlocal3        
+     16  getlocal0        
+     17  getproperty      ::_equipmentMap
+     21  getlocal3        
+     22  getproperty      <runtime>
+     26  coerce           com.qq.modules.dummy.model::DummyEquipmentTemplate
+     29  dup              
+     30  setlocal         4
+     32  returnvalue      
+
+com.qq.modules.dummy.model::DummyDataFactory.::getPropInfoByID method 41509
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal0        
+      3  callpropvoid     ::initPropData, 0
+      8  getlocal1        
+      9  pushint          100000
+     12  multiply         
+     13  getlocal2        
+     14  pushshort        1000
+     17  multiply         
+     18  add              
+     19  getlocal3        
+     20  add              
+     21  convert_i        
+     22  setlocal         4
+     24  getlocal0        
+     25  getproperty      ::_propMap
+     29  getlocal         4
+     31  getproperty      <runtime>
+     35  coerce           com.qq.modules.dummy.model.templates.ce::DummyPropTemplateCE
+     38  dup              
+     39  setlocal         5
+     41  returnvalue      
+
+盾量独立于战力公式
+com.qq.modules.balance::BalanceConst.::calculateAttribute method 6122
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal2        
+      3  pushbyte         0
+      5  ifngt            -> 23
+      9  getlocal1        
+     10  pushbyte         100
+     12  getlocal2        
+     13  pushshort        10000
+     16  divide           
+     17  add              
+     18  multiply         
+     19  pushbyte         100
+     21  divide           
+     22  returnvalue      
+     23  getlocal1        
+     24  returnvalue      
+EXCERPT com.qq.modules.balance::BalanceConst.::createCard method 6121
+    904  getlex           com.qq.modules.main.model.vo::Attribute
+    907  getproperty      ::HP
+    911  pushtrue         
+    912  callproperty     ::getAttribute, 2
+    916  getlocal2        
+    917  getlex           com.qq.modules.main.model.vo::Attribute
+    920  getproperty      ::PERCENT_HP
+    924  callproperty     ::getAttribute, 1
+    928  callproperty     ::calculateAttribute, 2
+    933  callproperty     ::fromNumber, 1
+    938  setproperty      ::hp
+    941  getlocal         10
+    943  getlex           com.tencent.protobuf::UInt64
+    945  findpropstrict   ::calculateAttribute
+    949  getlocal2        
+    950  getlex           com.qq.modules.main.model.vo::Attribute
+    953  getproperty      ::SHIELD
+    957  pushtrue         
+    958  callproperty     ::getAttribute, 2
+    962  getlocal2        
+    963  getlex           com.qq.modules.main.model.vo::Attribute
+    966  getproperty      ::PERCENT_SHIELD
+    970  callproperty     ::getAttribute, 1
+    974  callproperty     ::calculateAttribute, 2
+    979  callproperty     ::fromNumber, 1
+    984  setproperty      ::shield
+    987  getlocal         10
+    989  findpropstrict   ::calculateAttribute
+    993  getlocal2        
+    994  getlex           com.qq.modules.main.model.vo::Attribute
+com.qq.modules.balance::BalanceConst.::getBaseAttribute method 6118
+      0  getlocal0        
+      1  pushscope        
+      2  getlocal1        
+      3  getlex           com.qq.modules.balance::BalanceConst
+      6  getproperty      ::NEED_CARD_LEVEL
+     10  getlocal2        
+     11  multiply         
+     12  add              
+     13  returnvalue      

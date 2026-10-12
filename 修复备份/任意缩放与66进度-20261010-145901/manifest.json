@@ -1,0 +1,42 @@
+{
+  "target": "D:\\pvzol本地最新最新ol\\pvzol本地",
+  "backup_parent": "D:/pvzol本地最新最新ol/修复备份",
+  "files": [
+    {
+      "relative": "launcher_game_window.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-7\\work\\launcher_fix\\launcher_game_window.py",
+      "before": "e31c06bd0156efc3b4817450ff142da66c1eddc6b9709c73dd35711d8922b73f",
+      "after": "fd0b4ca023cf03f9e61ab6cc98735ac234fe807d3fc989b69b5532fe05bab663"
+    },
+    {
+      "relative": "launcher_service.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-7\\work\\launcher_fix\\launcher_service.py",
+      "before": "8c076d419d98c63911f03ac052f62de938ab54b7bb1eb16e1e1d1477f5cf9328",
+      "after": "7fb4c9700a6adeaa287a97486c8efa4c13f3b3b387174fc0850f14abc6440da4"
+    },
+    {
+      "relative": "PvZ-Server-PoC/player_store.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-7\\work\\startup_fix\\PvZ-Server-PoC\\player_store.py",
+      "before": "bbd92670bb9134d1e956ede8f65b6ea7f4898de11f3d2b218dbf7df9a3f5e89b",
+      "after": "011eda79b484e22d0558a4bfde667f830bde68544124a3ce09aa3ea89c864ccf"
+    },
+    {
+      "relative": "PvZ-Server-PoC/tests/test_launcher_game_window.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-7\\work\\launcher_fix\\PvZ-Server-PoC\\tests\\test_launcher_game_window.py",
+      "before": "8344b47bdef10befe2bd4669474d7625363ba50d290af2c90473bdce5c6b4a30",
+      "after": "190445993521dcfbdc07e0f350cc59faef07383e86ceb43374cbed7a1e7a0f0d"
+    },
+    {
+      "relative": "PvZ-Server-PoC/tests/test_player_store_startup.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-7\\work\\startup_fix\\PvZ-Server-PoC\\tests\\test_player_store_startup.py",
+      "before": null,
+      "after": "7e42ecb967879a63d0528fe6af6700516cfaa1b6dad44921e8e7f35ac9fad924"
+    },
+    {
+      "relative": "PvZ-Server-PoC/tests/test_launcher_startup_failure.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-7\\work\\launcher_fix\\PvZ-Server-PoC\\tests\\test_launcher_startup_failure.py",
+      "before": null,
+      "after": "24db49ead3d49e122a7ba8ba41274df8d829994fab4a083332a5e70a1f5c7cbd"
+    }
+  ]
+}

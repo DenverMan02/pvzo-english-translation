@@ -1,0 +1,16 @@
+id	name
+1	Sun VIP 1
+2	Fortune VIP 2
+3	Golden Pot VIP 3
+4	Sun VIP 1
+5	Fortune VIP 2
+6	Golden Pot VIP 3
+7	Sun VIP 1
+8	Fortune VIP 2
+9	Golden Pot VIP 3
+10	Sun VIP 1
+11	Fortune VIP 2
+12	Golden Pot VIP 3
+13	Sun VIP 1
+14	Fortune VIP 2
+15	Golden Pot VIP 3

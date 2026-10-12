@@ -1,0 +1,18 @@
+--- pvz_poc_server.py.before
++++ pvz_poc_server.py
+@@ -403,6 +403,7 @@
+     "iAllServerRankArenaRankFreeChallengeTimes", "sAllServerRankArenaRankPayChallengeFee",
+     "iNoEndFubenFightHistoryStageCount",
+     "iVIPSpecialPlant",   # TD friend-card screen reads this as the VIP plantId (see overrides)
++    "iDailyTDCardCoin",   # 时光之旅抽卡按钮直接读取此配置；缺失会在进入抽卡界面时报 #1009
+     "iFreeFillSignTimes", # daily sign-in: SignInProxy.freeRemainCount (make-up allowance) — else #1009
+     "iVIPLabTechDesc",    # laboratory: LabMainCt reads .value as the VIP-bottle tooltip while building
+                           #   its UI — a missing template makes vipLabTechDesc do .value on null -> #1009
+@@ -440,6 +441,7 @@
+     # Minimum town level for the four equipment positions, indexed by EquipType.
+     "sEquipmentUnlock": "1,1;2,1;3,1;4,1",
+     "iVIPSpecialPlant": "6900",   # Winter Melon
++    "iDailyTDCardCoin": "0",  # 本地抽卡接口免费，按钮显示的花费与服务端一致
+     # Mystery Card Pack (神秘卡包): sMysteryCardItem feeds CardBarProxy's ItemVO.createByString (needs
+     # a valid "itemId:num"); the luck-bar max + price drive the HUD.
+     "sMysteryCardItem": "1103:1",       # 神秘抽奖券 (MysteriousTicket)

@@ -1,0 +1,545 @@
+{
+  "kind": "reviewed_complete_map_flow",
+  "files": [
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/worldmap_local.py",
+      "before": "723880b0a71f82a6c9c403d602ccfcd1b8c0f2d0f12fa811991c3ab12d27c436",
+      "after": "211e669eefcd010fb158215f13bbb4c142061dd4320587c9d54f7cb2018add34"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/worldmap_resources.py",
+      "before": "452155f713d0e63d9db1e4c0a08d239a3bdfa440257474561e28daf5c1fe6564",
+      "after": "a46ae892d12878a698102c4973bc8d9f003ca524ced2a07b0536751064e63248"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/missing_features_local.py",
+      "before": "b04b0a01a2f40fb1af142f01d18c519661acf95e5dc19b300d0fbc479a533a8e",
+      "after": "03bc2eb9631bceffb561550f3129e3bd9f1cb1e34ea5509e6016c8e6a7dbfd3c"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/pvz_poc_server.py",
+      "before": "23ff8d36574dd4bf855fe4ebe23515ad439b37cc626504e6efd438c20dca9d7c",
+      "after": "1920e90ebbae96aad3b98c8b4d6d4624fcaba57473cafa305612c6627ccefc8e"
+    },
+    {
+      "path": "pvzol本地/webroot/assets/map/maoxian_2/sl.png",
+      "before": "efe770c6c291941a79d044c6659c65e4ad04619efa0bfd417632c18784dc99eb",
+      "after": "551278967b01434364ae13ab05a7d7dc4fffe86c5603aefb14b0f0a5db90e35c"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/worldmap_test_support.py",
+      "before": "639990849f8dfa2aafb1c6d4152055b002203717b45563d4b03a9acf4a78bcc4",
+      "after": "7224f654a05479936c62c445074c9ed7b7d22157a3e64125b4e32a755b9b5a64"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_complete_flow_20261011.py",
+      "before": null,
+      "after": "2414fc9b274b6786aa1fa6fbca3b49350046065d6c36339765c646bc4e276444"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_ep13_contracts_20261011.py",
+      "before": null,
+      "after": "4f3ba536ca9707f3e7b24d4686bda1af57b0b23cf0157691415fac3b3914b322"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_protocol.py",
+      "before": "bbbd1cdf259a132e06df8466ff689f4fd4086917206bd4dd8f329e334d3702e5",
+      "after": "ee32126818e2c8cdcd2feb1f726e387834deed1a20963e5717d0424004fab3d5"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_resources.py",
+      "before": "4fcc8f96b0369b40853357775601bf83a61d78e70f5b28488d5c16e14ff48531",
+      "after": "66ba22a12b57aabc035a2e4754b311afb141731ad6e1a3a87f0052812bbeac07"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_replay_contract.py",
+      "before": "9d25ad5e6d61bb2606786b44a1c8d5e91e9bee90731b78404000a2d8f250c649",
+      "after": "588124b487275b117ca3589edee3f5d7a35d06a9c4adeae2a18bdd4627f57429"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_mine_sync_20261010.py",
+      "before": "bb4db5290a55b233d3b32e5bf145e1ef74c0bd00f30a5e08d6f7157cba1fefa9",
+      "after": "0f88aca08c1d5b5ee9c4a46aa940afd494402605697f0f463eafb9039ba82609"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_mine_history_20261010.py",
+      "before": "3c79f1748d2a280e658561394bd2f56c932cf135672f3ed76c3ffd9b3b5f2164",
+      "after": "94689554b8ce77c18b0ea7047da5bf4f5ca90fa5bc42272fe3ab6d7759250f91"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_mine_march_hooks_20261010.py",
+      "before": "96e5918b27d3a643460edbeef40eb8f813fd14170c335b7901999ae138b6c28f",
+      "after": "e4ca639fa88631d0ccc884d850377e303131d7bd13dcb430b4ffa3635fe36095"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_mine_march_boundaries_20261010.py",
+      "before": "1bf50c06b78b86f45ab2bc30e67a2c93012c71b54105a2ea58fa21c47fcc225d",
+      "after": "5e752f7c57d4e561de1a9d170b9ff68f06b99d83b14b9855c9f96d2936e729c5"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/live_assets_sha256.json",
+      "before": "6cededace0efe254344316c96cb30c13be7e9627b9875e3797b309b6690d27ad",
+      "after": "46c8f6fcaf6ffb55b03d4c2c287d45f9a11606005876bdcc25533167ab8dee06"
+    }
+  ],
+  "protected": [
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_consts.py",
+      "sha256": "bbe55d90d215f3058cbc30fc48fee1376bb354fbb112c2e688eef8c43bfb15f9"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_consts2.py",
+      "sha256": "3f9fe76a515264c18ebf7739572d3ae9db4622052971d707c7b357d5b5a4a3b1"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_dbdump.py",
+      "sha256": "7d5c7bb35db5afe5714d1e616d6538ef79a543ee8f3793ae51f06e584ea2446a"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_dumpmethod.py",
+      "sha256": "b6ea030f38c2cfd54eba2966148c83c16aabfc81621c22eeb99130ebb25000ca"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_find_item.py",
+      "sha256": "c951986227fd8e3490885bccaeb79209c7d65b8fcb7ede5e5ab3ea4344f453ea"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_findall.py",
+      "sha256": "ecdbbdd50e220b7d79ec6bc9325e89c8c07204f97756d345e52b042542fd6228"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_findcall.py",
+      "sha256": "05ceabc317a438618fd5845a765c0694513c16bfb1b5ab7049ea0e5b077bb4d6"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_findclass.py",
+      "sha256": "0e0d5b74377822ec75007fe5cad09617c6df2adc806c40d9c3fea39bf4ad0378"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_findmethod.py",
+      "sha256": "26c5ce38a18f5141a684e7deeb3b0aae4c8f52fdfc412363290066fe5cb1970b"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_findstr.py",
+      "sha256": "2065de9fb1cb8640e8a04f3939d0f4036a01f735afb35299cec26ca128c85eb0"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_findstr2.py",
+      "sha256": "79807e764984397c81fa0f6bcfaf8e0b1b9ff6e6175438fcebb02b7ad1925728"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_items.py",
+      "sha256": "edeb728b463c363e02c0a4e4f7ab158284cb98aa65897724dd981a31213e8cc4"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_np.py",
+      "sha256": "ab88826ccff1d5b102d5f0e515877662e57b5c16d2b040c1829b3bab64443fb4"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_probe_sweep.py",
+      "sha256": "4e093a7de1f90c53acb775af3373312948f48fd86ad75240f3a1e88288a1cbd3"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_run_tests.py",
+      "sha256": "2cd17e6029aee204d68416524fd2b9e08ca5629ec259f5f33f147baa0afdfeab"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_tables.py",
+      "sha256": "ef42d2a9d1f1ad170696a84fee3e67e3201e3b9907758376265e9469aab4a7b8"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_tables2.py",
+      "sha256": "f64f30647334a2e80bb9251d8017e529d9c700c7872207602ec5af312ec9e2d5"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_vipdump.py",
+      "sha256": "066cd40b8b0cf43d5218e21b4f0b4abcce91e935992ddcd684b2a3ab5fa528e3"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/_vipdump2.py",
+      "sha256": "0ee60ec7c405e3c07015741bbe12e8bfc0f033fe253afef05f9c208ec55d0a02"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/account_management.py",
+      "sha256": "22154a3d522845e0e3071495e94fa95e66520cbb65a7122e0c9c8c7b44853005"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/activities_repairs_20261009.py",
+      "sha256": "b47274a4b5c301322c8d05416957627132072b69e79576841a8f2b245c7323e9"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/add_plants.py",
+      "sha256": "683d1c86cb616efdc1be390cd27ee21bbcbb843b25308f81a7da6e57ceb6c8be"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/admin_server.py",
+      "sha256": "660ba210e73e2dffeb570c8d7f7301c67290542994b7908120dd35cf9ea8fde0"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/adventure_archive_formations.json",
+      "sha256": "66107fa3184a5e7cfba57664dbadf6a87844689cb99728fbf6ea82ecd025a42d"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/adventure_archive_formations.py",
+      "sha256": "6ab6a95ad916d2168ca14be385ff95e071494ae3f02ef9dc997d2314ae69db0a"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/adventure_evidence_rules.py",
+      "sha256": "2f705414778942ced872b7d96e9eb9986dc80f174a53a2baf39378fb5f5481a3"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/bots_local.py",
+      "sha256": "cc1b003b161e695c3c3b1656935a5ea9a6b3e378cd7f12977a49fab3b31c6e74"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/card_market_rules.py",
+      "sha256": "daa4ab42b8b812fd55d08ab5d7bf8f06aa633bc60a3a2cb486e107f4f3c43c9e"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/chest_reward_repairs.py",
+      "sha256": "4510f90245a004cd601e221eb20e62a48b4d59ea155bb48312c1091aab43c7c7"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/clientdata_local.py",
+      "sha256": "7cd4873e3eb398ff56bd20526c82692ebe4da5f6bb1a0dfe801cb57f79aafc53"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/combat_effects.py",
+      "sha256": "41ebeac181a3bd775f3edd2db7b5d83009a240a6267c7c94b5bc0ae440719e73"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/consistency_repairs.py",
+      "sha256": "d2a228d399289dc376ffe6018e5e7431ac3795f3a37a020d7b6bfc9498e61b75"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/dailytd_start_transition.py",
+      "sha256": "09515260b4bddd0f3f01d4d4522eee6486a0b594336cf7f3a9f7445d7c0337a2"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/display_rules_repairs_20261009.py",
+      "sha256": "fbe5d21524c7d972897b9b88807948b89eb49c57b8d3957de943ec664753eb8b"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/endless_rules_repairs_20261009.py",
+      "sha256": "1a4bea105aa641338e48661026b5a1810f3d56f224927d84af6015e41804be2f"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/friend_energy_repairs.py",
+      "sha256": "8035fecb803905ccd20391c0564c1087b8f60875bae59a498f1a3c3cf9b655e5"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/gm.py",
+      "sha256": "627e540c4df14150f1a0f7197c3e7e335613271db765bec5835beacb6a82d454"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/gold_exchange_local.py",
+      "sha256": "9bbb5334e421e9b075d6a6e80433d654c049ddaeecca031dc68452c0251aea16"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/guard_local.py",
+      "sha256": "be35d63f6dfddb9e5b95ee97dbfc96a4b0f151333ee7957541232ed4195dc003"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/guild_cohesion_repairs.py",
+      "sha256": "1bd0714c8a83d784859e91071339cd72f9aa2728b01945add6bdf501b17e7aac"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/guild_damage_repairs.py",
+      "sha256": "85262c72d602b2c3458efd11f6fb2507e26c67a8d35f1a0db805db8835a6fc7a"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/guild_leader_repairs.py",
+      "sha256": "cae0e3f8fc5c6675d16728ef6a93a19a318fa3a60900a5a99028d7cfc7b657b3"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/guild_local.db",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/guild_local.py",
+      "sha256": "24b9311d0505fb5e6aabfeb51a31dcec453c55451e29372149467ccda08d50df"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/guild_modes_local.py",
+      "sha256": "b7a46452fcc17304960eb731e00d6506487640d19ebcd216da019746ffc26ddc"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/historical_activities.py",
+      "sha256": "0ebc4397dc92ce8147b3123eeb1ab5c4527c75a255caa11e8f61e9cb25f20ab0"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/hotspot_events.py",
+      "sha256": "bce7c8e2f150b1feb37fb6160ff4ae638aecc1a62ff3add6b1022b7d25799173"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/item_use_repairs.py",
+      "sha256": "0af88c85a0e5f6f968fac6923e49fbc2a31b238e4317d3703e9e8f6febb2f99f"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/jar_local.py",
+      "sha256": "724d8516416b8d1be45c92231e0155d825beb31b97f3e8b9988c03b68845b0f1"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/launcher_guard.py",
+      "sha256": "e48808fdc96981574a3328a2e80d9abb65e8a6fcb60d99cdeb956d27e264302f"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/main_quest_local.py",
+      "sha256": "ed9d26b7600eff30a1cc67ce761377903af94169bf88ed06d356672c98bc99e6"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/npc_lineups.py",
+      "sha256": "d0ae683af1d4d8524675b37fe9e20234205d4e9d80a4e041fc9ec9845de7f246"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/plant_test_repairs_20261011.py",
+      "sha256": "494fe3d053c634661551eafbcb1e1686926b549e6f19a5191711e01001f4e322"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/player_store.py",
+      "sha256": "011eda79b484e22d0558a4bfde667f830bde68544124a3ce09aa3ea89c864ccf"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/players.db",
+      "sha256": "f7003ea3010c22f659c97f63b3a696f72e8a275698e173cee119eb1a7ccd8fcd"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/profile_editor.py",
+      "sha256": "11494d46516b88466274a5dd4351dd28209d8506085b3e32ee3d8fe940cc46a5"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/puppet_skill_repairs.py",
+      "sha256": "aba971860f9976089d00b25edde411f6a5da4160ceab36431177ce83397c9006"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/rewards_rules_repairs_20261009.py",
+      "sha256": "71537ad2630934d35be97e582cfdbee7cbc24196f759bcb9024e2c82825eb49e"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/run_all.py",
+      "sha256": "49d334a2cc5fe417367f27963dddb52b492d0bec032f42f8d43256d5da658d34"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/serve_client.py",
+      "sha256": "ca03a206595202a5036d5f962c963af1849d77efc698ec086e8dddc24b238716"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/social_repairs.py",
+      "sha256": "56d5e51d8ba54c750b14850040708e134e64f1f6bdb02a692b44ccfa695c2242"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tools_puppet_battle_cards.py",
+      "sha256": "d6743eb3f89197f0118b9a270ba7c67c42519c06c94ebfbf1b0acb7e07d2cec3"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/town_login_rewards.py",
+      "sha256": "50c06843ffac55615e26c982acba745ea2c88d7df521e2e077d7185826087cb7"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/treasure_local.py",
+      "sha256": "9eda7f3f9e6fb4e4c92192caa244767f389a4a2b4c12007de32ac5f47b29cfda"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/trial_road_repairs_20261011.py",
+      "sha256": "6bc733a2c6b849e396d2ac21c82a6975d2f17cb3471a6c6096319f5ef777779c"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/worldmap_repairs.py",
+      "sha256": "17577c41a9df416c7361cac232ad7ffe7f14c2646c2825509de6c62630c1df41"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/zombie_island_repairs_20261011.py",
+      "sha256": "efc30070d395de131b24a7f7240cfbbb6c5ab0174cfc20fa7a53274cebe93ac8"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/zombie_island_reward_repairs_20261011.py",
+      "sha256": "8b624107f7061e53da67bcaf4ada042618d4e0f73d1296c38dbe31ee67389d53"
+    },
+    {
+      "path": "pvzol本地/webroot/assets/map/maoxian_2/battleBg.jpg",
+      "sha256": "b2d9cf54ed01beb0554c731881bea00e793de010d5c3a351166e5be5d973417e"
+    },
+    {
+      "path": "pvzol本地/webroot/assets/map/maoxian_2/cd.png",
+      "sha256": "c4105013fc9a5f15402ba0cf0b653dd4c2b778fea8000bbf16cdda9d82e3acf3"
+    },
+    {
+      "path": "pvzol本地/webroot/assets/map/maoxian_2/cp.png",
+      "sha256": "656094d21183742d9c8165970e5a62b6eba71fbfa8241a241d6c65bfdda45efc"
+    },
+    {
+      "path": "pvzol本地/webroot/assets/map/maoxian_2/gm.png",
+      "sha256": "c8b1f4965b2d34ab194f133ca03db05adb0c8ac2efb49d6fb5b6974636ef0d34"
+    },
+    {
+      "path": "pvzol本地/webroot/assets/map/maoxian_2/gm2.png",
+      "sha256": "af6db2853161c6fbc2f294df8687d1a3bc468f6a6ae59f1646a851d146a70230"
+    },
+    {
+      "path": "pvzol本地/webroot/assets/map/maoxian_2/js.png",
+      "sha256": "6ee04c760bb176ad60df97c4e016381f2826512288fb16f00240aee25f529092"
+    },
+    {
+      "path": "pvzol本地/webroot/assets/map/maoxian_2/kcp.png",
+      "sha256": "ca14ef8e312844e988a9252a2af9b99f5fc3e27484df1d357de808b71abd0e5f"
+    },
+    {
+      "path": "pvzol本地/webroot/assets/map/maoxian_2/ks.png",
+      "sha256": "5ef79e00ea8829813c9c9fa8e72dbd1916985bbb48a4846b7606904447fbf807"
+    },
+    {
+      "path": "pvzol本地/webroot/assets/map/maoxian_2/nt.png",
+      "sha256": "e097015c63b5d56581592133d222994338ad9bf4a1efc9770f9c6d2e25757d5c"
+    },
+    {
+      "path": "pvzol本地/webroot/assets/map/maoxian_2/nt2.png",
+      "sha256": "53b6b3bcda91dca32366183b29234b361a974dd206fffcd5215b59d05faf5ce0"
+    },
+    {
+      "path": "pvzol本地/webroot/assets/map/maoxian_2/nt3.png",
+      "sha256": "53b6b3bcda91dca32366183b29234b361a974dd206fffcd5215b59d05faf5ce0"
+    },
+    {
+      "path": "pvzol本地/webroot/assets/map/maoxian_2/sl2.png",
+      "sha256": "6647efc9698d5e32c1c344ba805649f61f2fb05c7d810484af807ab82d9231e9"
+    },
+    {
+      "path": "pvzol本地/webroot/assets/map/maoxian_2/st.png",
+      "sha256": "c7633c9e8988991f3774f3571d869c33fbd260af445d8c5b6f74cbb453979dfe"
+    },
+    {
+      "path": "pvzol本地/webroot/assets/map/maoxian_2/td.png",
+      "sha256": "16211fdf9c4155ebb2119d6648091bf265346e5b85101163d376dc13a50a2a0b"
+    },
+    {
+      "path": "pvzol本地/webroot/assets/map/maoxian_2/ts.png",
+      "sha256": "1c40470a0536d6a161ef6c27cca98b7a75e70bef0ecc1d39c207890a834de585"
+    },
+    {
+      "path": "pvzol本地/webroot/assets/map/maoxian_2/xz.png",
+      "sha256": "02e07d26757eb1bba0c5cdcb4d978187db7f5c65aaf1dd3265cbdaef9c4a58ab"
+    },
+    {
+      "path": "pvzol本地/webroot/assets/map/maoxian_2/ys.png",
+      "sha256": "8ffa1f20af31093b75e48dc328fe4403e80e395befb2242dfdafd11cdb843142"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p.swf",
+      "sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_041205df680ecb63e34f6da5bacbfcf1.swf",
+      "sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_04d85414d9f7ef6add82a525a0475506.swf",
+      "sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_136f07596f913cef93d35343a83626ec.swf",
+      "sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_2f31414da4c6b9aff9be96e68029c65b.swf",
+      "sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_44d757b4fb708f31dad7a2394a1a360f.swf",
+      "sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_69140ebbd2987948f780ae0440e57a78.swf",
+      "sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_867dbb7ffa06e76c8e280fe312d5a976.swf",
+      "sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_c874590c49beaaf924c0395036c85119.swf",
+      "sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_cb7af05d4d2ddbe204ea4926772f3b92.swf",
+      "sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_ddd80a273668f4e746bbaa442bfc55f0.swf",
+      "sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_e90cc556a5e9f63b73ffa23b6fe21c34.swf",
+      "sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "path": "pvzol本地/webroot/ModuleChat.swf",
+      "sha256": "ab88f5e8abfc11c0e610be3ff45af86429974757dcfcdb933d91b8aa322fc399"
+    },
+    {
+      "path": "pvzol本地/webroot/ModuleChat_058398f2830b5da8574a0cc15acffc56.swf",
+      "sha256": "ab88f5e8abfc11c0e610be3ff45af86429974757dcfcdb933d91b8aa322fc399"
+    },
+    {
+      "path": "pvzol本地/webroot/ModuleChat_a4c202dcdf4bfd9bbbf32575e7fa35eb.swf",
+      "sha256": "ab88f5e8abfc11c0e610be3ff45af86429974757dcfcdb933d91b8aa322fc399"
+    },
+    {
+      "path": "pvzol本地/webroot/ModuleEmbattle.swf",
+      "sha256": "a487b9a0406cd43feb172262ab0c3d0d3c4951e80f353804049ebc306098fff6"
+    },
+    {
+      "path": "pvzol本地/webroot/ModuleEmbattle_f42a60f5aad35cab3164ccf9ac3886b4.swf",
+      "sha256": "a487b9a0406cd43feb172262ab0c3d0d3c4951e80f353804049ebc306098fff6"
+    },
+    {
+      "path": "pvzol本地/webroot/ModuleMail.swf",
+      "sha256": "f70997d18fdd5d2301a994598d92c87daf12021094b2a99fd1d15f435fa4e6a1"
+    },
+    {
+      "path": "pvzol本地/webroot/ModuleMail_edc4cd1adaa07e86e1f0db160e4d6a5b.swf",
+      "sha256": "f70997d18fdd5d2301a994598d92c87daf12021094b2a99fd1d15f435fa4e6a1"
+    },
+    {
+      "path": "pvzol本地/webroot/ModuleMap.swf",
+      "sha256": "64256a27b17a1d74acc78aeeabb264d7d3104c8235d65af7d86b1b9dc196e258"
+    },
+    {
+      "path": "pvzol本地/webroot/ModuleMap_0a3b3b897717fd3b1ff829f1111e1994.swf",
+      "sha256": "64256a27b17a1d74acc78aeeabb264d7d3104c8235d65af7d86b1b9dc196e258"
+    },
+    {
+      "path": "pvzol本地/webroot/ModuleMine.swf",
+      "sha256": "851ab97d486158fd02b5a1d90e82b9ae06090765f3dd7932952dfdf038bc77cc"
+    },
+    {
+      "path": "pvzol本地/webroot/ModuleMine_c6429dc757b1087659b5a1f6afa797dc.swf",
+      "sha256": "851ab97d486158fd02b5a1d90e82b9ae06090765f3dd7932952dfdf038bc77cc"
+    },
+    {
+      "path": "pvzol本地/webroot/ModulePlantTalent.swf",
+      "sha256": "8fce4eaf8552e42afd298458d1a8754c67fad8dfcf4498c44bd0e98d9543e43a"
+    },
+    {
+      "path": "pvzol本地/webroot/ModulePlantTalent_8770cae1776bf322c07fbdd0f8500c52.swf",
+      "sha256": "8fce4eaf8552e42afd298458d1a8754c67fad8dfcf4498c44bd0e98d9543e43a"
+    },
+    {
+      "path": "pvzol本地/webroot/ModulePlantTalent_e282f8e8c8b0b9e8a91c333e26fa2021.swf",
+      "sha256": "8fce4eaf8552e42afd298458d1a8754c67fad8dfcf4498c44bd0e98d9543e43a"
+    },
+    {
+      "path": "pvzol本地/webroot/ModulePlantTalent_eb8ad789b02db98106ecf31e05d12fc3.swf",
+      "sha256": "8fce4eaf8552e42afd298458d1a8754c67fad8dfcf4498c44bd0e98d9543e43a"
+    },
+    {
+      "path": "pvzol本地/webroot/swf/map/res.swf",
+      "sha256": "b3e494f20e362b0618dd81cb8c139106f72d7c3d88c8c255642ae4e51c222857"
+    },
+    {
+      "path": "pvzol本地/webroot/swf/map/res_1ea50c43fea67eecefaf31d79af17ee6.swf",
+      "sha256": "b3e494f20e362b0618dd81cb8c139106f72d7c3d88c8c255642ae4e51c222857"
+    }
+  ],
+  "database_written": false,
+  "game_opened": false
+}

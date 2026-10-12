@@ -1,0 +1,46 @@
+卡牌对战部队总先攻修复记录
+完成时间：2026-10-10 14:41:48（Asia/Shanghai）
+游戏目录：D:\pvzol本地最新最新ol
+
+问题原因
+1. build_enemy_card 与 _enemy_card_dto 未发送原版 Dto_EnemyCardInfo.powerEle（字段9）中的总先攻，战前界面因此显示0。
+2. 玩家及敌方单位漏算基础等级先攻，NPC生成器还将 speed 写死为0。
+
+源码依据与修复
+原版 Game.swf：CardItemVO.speed 调用 SpeedTemplateFactory.getSpeedForPlant(level)，精确查 speedPlantLevel.txt 的 level/speed。1级=50、30级=1500、300级=15000；缺少配置的等级返回0。
+原版 BattleCardFormationVO.totalSpeed 与 CommEmbattleProxy.getEnemySpeed 均汇总每卡 powerEle 中 ele=0 的 speed；客户端不会自动补等级基础值。
+已补齐双方基础等级先攻，沿用当前洗炼、威望、傀儡加成；敌方预览发送单个总计元素，并与战报、实际开局顺序保持一致。
+密藏复用公共编码，避免总计元素重复；初始隐藏且未存活的秦兵不计入开局总先攻。
+现有资料未包含官方服务端NPC专属先攻数值：僵尸使用同一等级表是本地共享规则，不能视为完整复原官方每只僵尸的运营数值。
+
+验证结果
+新增先攻专项：PASS（12 项）
+战斗行动顺序：PASS（15 项）
+战前预览：PASS
+威望及属性显示：PASS（5 项）
+世界Boss：PASS（8 项）
+密藏战斗：PASS（2 项）
+僵尸岛：PASS
+原版战力公式：PASS（7 项）
+NPC生成及阵容一致性：PASS（8 项）
+已安装源码最终验证：PASS（12 项）
+共9组相关回归通过（57项unittest及战前预览、僵尸岛协议检查）；写入后专项12项再次通过。
+验证覆盖300个等级、主要敌方生成器、基础与成长加成不重复、显式0保留、战前/战报总先攻一致、先手及回放一致。
+本次验证为源码、协议及模拟战斗回归，未进行Flash界面点击验证。
+
+已安装文件
+guard_local.py
+npc_lineups.py
+pvz_poc_server.py
+tests/test_display_rules_20261009.py
+tests/test_enemy_initiative_20261010.py
+tests/test_npc_generation.py
+tests/test_worldboss_mechanics.py
+
+原文件备份
+D:\pvzol本地最新最新ol\修复备份\敌方总先攻-20261010-144037
+该目录按相对路径保存原文件并包含manifest.json。需要回退时把原文件复制回PvZ-Server-PoC对应位置；新增专项测试不影响运行。
+源码安装后的哈希与已验证草稿一致。players.db、guild_local.db的哈希前后相同，本次未修改存档。
+
+生效方式
+在启动器停止本地服务器，再重新启动游戏；重新进入卡牌战前布阵界面查看先攻值。

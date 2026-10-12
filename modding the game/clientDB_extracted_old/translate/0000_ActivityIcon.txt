@@ -1,0 +1,82 @@
+id	desc
+10	Privilege Events
+11	Hot Events
+12	Launch Celebration Gift
+13	Small Investment, Big Returns
+10001	Blue Diamond VIPs can enjoy the following privileges:<br/>1. Daily Privilege Pack<br/>2. Blue Diamond Novice Pack<br/>3. Blue Diamond VIP Badge<br/>4. Blue Diamond Level-Up Reward<br/>5. Blue Diamond Annual Pack<br/>6. 20% off Diamond Top-ups
+10002	System Announcement
+10003	Daily Check-In
+10004	Official Events
+10005	Download Mini-Client for Diamonds
+10006	Top-up Rewards
+10007	Activity
+10008	Login Rewards
+10009	Limited-Time Gifts
+10010	Daily Online Rewards
+10011	Log in to enjoy the following privileges:<br/>1. Novice Registration Pack<br/>2. Daily Activity Pack<br/>3. Weekly Luxury Pack<br/>4. Game Growth Pack
+10012	Yellow Diamond VIPs can enjoy the following privileges:<br/>1. Daily Privilege Pack<br/>2. Yellow Diamond Novice Pack<br/>3. Yellow Diamond VIP Badge<br/>4. Yellow Diamond Level-Up Reward<br/>5. Yellow Diamond Annual Pack<br/>6. 20% off Diamond Top-ups
+10013	Log in to enjoy the following privileges:<br/>1. Novice Registration Pack<br/>2. Daily Activity Pack<br/>3. Weekly Luxury Pack<br/>4. Game Growth Pack
+10014	3366 Gift Pack
+10015	iPlay Pack
+10017	Mini-Client Daily Benefits
+10018	QQ VIP Pack
+10019	Browser Gift Pack
+10020	TGP Privileges
+10021	Tencent PC Manager Event
+10022	QT Privileges
+10023	King of the Night Club Event
+10024	Goddess Special Gift Pack
+10025	Xinyue Privileges
+10050	First Top-Up Bonus
+10051	Super Value Group Buy
+10052	7-Day Gift Pack
+10053	Free Plants
+10054	11.11 Plant Carnival Gift
+10055	Special Benefits
+10056	Welcome back!
+10057	Plant Gift
+10058	Limited-Time Special Events
+10059	12.12 Winter Warmth Gift
+10060	7-Day Launch Celebration
+10061	Pinball Master
+10062	Participation Rewards
+10063	Lantern Festival Lucky Spin
+10064	Slot Plant
+10065	Scratch Card
+10066	Plant Tournament
+10067	Spring Login Gift
+10068	Benefits Hall
+10069	Come and Challenge Yourself!
+10070	Love Plants, Love Adventure
+10071	Special Events
+10072	Dave's Labor Day
+10073	Light up the cutest Peashooter icon ever<br/>Free to light, never goes out
+10074	Space War
+10075	Double Novice Gifts
+10076	Plant Dragon Boat Race
+10077	Endless Surprises
+10078	Imperial Tomb Treasure Hunt Limited-Time Event
+10079	Spending Rewards
+10080	Summer Special Gift
+10081	Word Collection: Dragon Palace Tour
+10082	Super Card Flip
+10083	Cool Summer, Plants Accompany You
+10084	The wind is blowing, make a wish~
+10085	Battle of the Coconut Cannon
+10086	Server Merge Carnival Week
+10087	Mid-Autumn Festival Login Gifts
+10088	Latest Events
+10089	Wishing You Good Fortune and a Happy Spring Festival
+10090	Pumpkin Smash
+10091	Ultimate Lineup: Time Travel
+10092	Server-Wide Flash Sale
+10093	Happy Thanksgiving!
+10094	Dave's Bank: Financial Helper
+10095	Launch Celebration Gift
+10096	Red Envelope Grab
+10098	Spending Rewards
+10099	Login for Rewards
+10100	Penny's Bargain Shop - Open for a Limited Time
+10101	Plant Carnival
+10102	Vasebreaker Final Decision
+10103	Egyptian Treasure

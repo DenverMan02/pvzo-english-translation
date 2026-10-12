@@ -1,0 +1,5 @@
+id	desc
+1025	Regular Fertilizer
+1026	Intermediate Fertilizer
+1008	Advanced Fertilizer
+1028	Presidential Fertilizer

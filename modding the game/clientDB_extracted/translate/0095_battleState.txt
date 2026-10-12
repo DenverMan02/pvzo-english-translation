@@ -1,0 +1,358 @@
+id	name	desc
+100	Frozen	Unable to act this turn
+200	Paralysis	Unable to act this turn
+201	Paralysis	Unable to act this turn
+300	Shield Wall	Defense increased by 100%
+400	Poisoned	Minor damage per turn
+500	Enrage	Instantly gain 1 Sun
+503	Super Enrage	Gain 3 energy immediately
+600	Charge	Attack increased
+700	Rend	Minor damage per turn
+800	Stun	Unable to act for 2 turns
+900	Attack boosted	Attack increased
+901	Exile	Useless on the lawn
+1401	Accuracy increased	Slightly increase accuracy
+1402	Accuracy increased	Accuracy slightly increased
+1403	Accuracy increased	Accuracy moderately increased
+1404	Accuracy increased	Significantly increase accuracy
+1405	Accuracy increased	Accuracy massively increased
+1501	Accuracy decreased	Accuracy Slightly Down
+1502	Accuracy decreased	Accuracy slightly decreased
+1503	Accuracy decreased	Accuracy moderately decreased
+1504	Accuracy decreased	Accuracy Significantly Down
+1505	Accuracy decreased	Accuracy massively decreased
+1601	Evasion increased	Evasion slightly increased
+1602	Evasion increased	Evasion slightly increased
+1603	Evasion increased	Evasion moderately increased
+1604	Evasion increased	Evasion massively increased
+1605	Evasion increased	Massively increase dodge
+1701	Evasion decreased	Evasion slightly decreased
+1702	Evasion decreased	Minor Evasion Decrease
+1703	Evasion decreased	Moderately decrease dodge
+1704	Evasion decreased	Evasion heavily decreased
+1705	Evasion decreased	Evasion massively decreased
+1801	Critical rate increased	Crit rate slightly increased
+1802	Critical rate increased	Critical chance slightly increased
+1803	Critical rate increased	Moderately increase critical chance
+1804	Critical rate increased	Critical chance massively increased
+1805	Critical rate increased	Critical Chance drastically increased
+1901	Crit rate decreased	Crit rate slightly decreased
+1902	Crit rate decreased	Critical Chance Slightly Down
+1903	Crit rate decreased	Moderate Critical Decrease
+1904	Crit rate decreased	Critical Chance Significantly Down
+1905	Crit rate decreased	Critical Chance drastically decreased
+2001	Toughness increased	Slight Toughness Increase
+2002	Toughness increased	Toughness slightly increased
+2003	Toughness increased	Moderately increase toughness
+2004	Toughness increased	Toughness Significantly Up
+2005	Toughness increased	Toughness massively increased
+2101	Decrease Toughness	Slight Toughness Decrease
+2102	Decrease Toughness	Slightly decrease toughness
+2103	Decrease Toughness	Toughness moderately decreased
+2104	Decrease Toughness	Toughness significantly decreased
+2105	Decrease Toughness	Massively decrease toughness
+2201	Shield increased	Shield Slightly Up
+2202	Shield increased	Slightly increase shield
+2203	Shield increased	Shield moderately increased
+2204	Shield increased	Shield massively increased
+2205	Shield increased	Shield massively increased
+2701	Attack increased	Attack slightly increased
+2702	Attack increased	Slightly increase attack
+2703	Attack increased	Attack moderately increased
+2704	Attack increased	Attack massively increased
+2705	Attack increased	Attack massively increased
+2801	Attack Down	Attack slightly decreased
+2802	Attack Down	Attack slightly decreased
+2803	Attack Down	Attack moderately decreased
+2804	Attack Down	Attack greatly decreased
+2805	Attack Down	Attack massively decreased
+2901	Defense increased	Defense slightly increased
+2902	Defense increased	Defense slightly increased
+2903	Defense increased	Defense moderately increased
+2904	Defense increased	Major Defense Increase
+2905	Defense increased	Defense enormously increased
+3001	Defense Down	Slightly decrease defense
+3002	Defense Down	Defense slightly decreased
+3003	Defense Down	Defense moderately decreased
+3004	Defense Down	Major Defense Decrease
+3005	Defense Down	Defense Massively Down
+3101	Energy increased	Energy slightly increased
+3102	Energy increased	Skill energy slightly increased
+3103	Energy increased	Energy moderately increased
+3104	Energy increased	Major Skill Energy Increase
+3105	Energy increased	Skill energy massively increased
+3201	Decrease Skill Energy	Energy slightly decreased
+3202	Decrease Skill Energy	Skill Energy slightly decreased
+3203	Decrease Skill Energy	Skill energy moderately decreased
+3204	Decrease Skill Energy	Energy greatly decreased
+3205	Decrease Skill Energy	Energy severely decreased
+11401	Accuracy increased	+1000 Accuracy
+11402	Accuracy increased	Accuracy increased by 1500
+11403	Accuracy increased	Accuracy +2000
+11404	Accuracy increased	Accuracy increased by 2500
+11405	Accuracy increased	Accuracy increased by 3000
+11501	Accuracy decreased	Accuracy decreased by 1000
+11502	Accuracy decreased	Accuracy decreased by 1500
+11503	Accuracy decreased	Accuracy decreased by 2000
+11504	Accuracy decreased	Accuracy decreased by 2500
+11505	Accuracy decreased	Accuracy decreased by 3000
+11601	Evasion increased	Evasion increased by 1000
+11602	Evasion increased	Increase dodge by 1500
+11603	Evasion increased	+2000 Evasion
+11604	Evasion increased	Evasion +2500
+11605	Evasion increased	Evasion increased by 3000
+11701	Evasion decreased	Evasion decreased by 1000
+11702	Evasion decreased	Evasion decreased by 1500
+11703	Evasion decreased	Evasion -2000
+11704	Evasion decreased	Evasion -2500
+11705	Evasion decreased	Evasion decreased by 3000
+11801	Critical rate increased	Critical chance increased by 1000
+11802	Critical rate increased	Critical rate increased by 1500
+11803	Critical rate increased	Critical Chance +2000
+11804	Critical rate increased	Critical strike increased by 2500
+11805	Critical rate increased	Crit rate increased by 3000
+11901	Crit rate decreased	Critical Chance -1000
+11902	Crit rate decreased	Critical Chance decreased by 1500
+11903	Crit rate decreased	Critical strike decreased by 2000
+11904	Crit rate decreased	-2500 Critical Rate
+11905	Crit rate decreased	Critical rate decreased by 3000
+12001	Toughness increased	Toughness increased by 1000
+12002	Toughness increased	Toughness +1500
+12003	Toughness increased	Toughness increased by 2000
+12004	Toughness increased	Increase toughness by 2500
+12005	Toughness increased	Tenacity increased by 3000
+12101	Decrease Toughness	Toughness -1000
+12102	Decrease Toughness	Toughness decreased by 1500
+12103	Decrease Toughness	Decrease toughness by 2000
+12104	Decrease Toughness	Toughness decreased by 2500
+12105	Decrease Toughness	Toughness decreased by 3000
+12201	Shield increased	+10% Shield
+12202	Shield increased	Shield increased by 15%
+12203	Shield increased	Shield increased by 20%
+12204	Shield increased	Shield increased by 25%
+12205	Shield increased	Shield +30%
+12701	Attack increased	Attack increased by 10%
+12702	Attack increased	Attack increased by 15%
+12703	Attack increased	Attack increased by 20%
+12704	Attack increased	Attack increased by 25%
+12705	Attack increased	Attack increased by 30%
+12801	Attack Down	Decrease attack by 10%
+12802	Attack Down	-15% Attack
+12803	Attack Down	Attack decreased by 20%
+12804	Attack Down	Attack decreased by 25%
+12805	Attack Down	Attack decreased by 30%
+12901	Defense increased	Defense increased by 10%
+12902	Defense increased	Defense increased by 15%
+12903	Defense increased	Defense increased by 20%
+12904	Defense increased	Defense increased by 25%
+12905	Defense increased	+30% Defense
+13001	Defense Down	Defense reduced by 15%
+13002	Defense Down	Decrease defense by 18%
+13003	Defense Down	Defense decreased by 21%
+13004	Defense Down	Defense decreased by 24%
+13005	Defense Down	Decrease defense by 27%
+13101	Energy increased	Energy increased by 13%
+13102	Energy increased	Skill Energy increased by 15%
+13103	Energy increased	Skill energy increased by 17%
+13104	Energy increased	Skill energy increased by 19%
+13105	Energy increased	Skill energy increased by 21%
+13201	Decrease Skill Energy	Energy decreased by 15%
+13202	Decrease Skill Energy	Skill energy decreased by 18%
+13203	Decrease Skill Energy	Skill power decreased by 21%
+13204	Decrease Skill Energy	Energy decreased by 23%
+13205	Decrease Skill Energy	Decrease skill energy by 25%
+13401	Shield increased	+10% Shield
+13402	Shield increased	Shield increased by 15%
+13403	Shield increased	Shield increased by 20%
+13404	Shield increased	Shield increased by 25%
+13405	Shield increased	Shield +30%
+13501	Decrease Health	Reduce current health by 35%
+13502	Decrease Health	Current health reduced by 30%
+13503	Decrease Health	Reduce current health by 25%
+13504	Decrease Health	Reduce current health by 20%
+13505	Decrease Health	Current HP reduced by 15%
+13701	Reflect Damage	Reflects 35% damage
+13702	Reflect Damage	Reflect 40% Damage
+13703	Reflect Damage	Reflects 45% damage
+13704	Reflect Damage	Reflect 50% damage
+13705	Reflect Damage	Reflect 55% damage
+13801	Lifesteal	Lifesteal 50%
+13802	Lifesteal	Lifesteal 55%
+13803	Lifesteal	60% Lifesteal
+13804	Lifesteal	65% Lifesteal
+13805	Lifesteal	Lifesteal 70%
+13901	Bleed 10%	Takes 10% bleed damage each turn
+13902	Bleed 12%	Bleeds for 12% max health each turn
+13903	Bleed 14%	Bleed 14% per turn
+13904	Bleed 16%	Bleed 16% per turn
+13905	Bleed 18%	Bleeding 18% per turn
+14001	Damage boosted	Damage increased by 20%
+14002	Damage boosted	Damage increased by 25%
+14003	Damage boosted	Damage increased by 30%
+14004	Damage boosted	Damage increased by 35%
+14005	Damage boosted	Damage increased by 40%
+14101	Damage Reduction	Damage dealt reduced by 12%
+14102	Damage Reduction	Damage dealt reduced by 14%
+14103	Damage Reduction	Damage dealt reduced by 16%
+14104	Damage Reduction	Damage dealt reduced by 18%
+14105	Damage Reduction	Damage dealt reduced by 20%
+14201	Armor	-31% Damage Taken
+14202	Armor	Damage received reduced by 34%
+14203	Armor	Damage taken reduced by 37%
+14204	Armor	Damage taken reduced by 40%
+14205	Armor	Damage received reduced by 43%
+14301	Lifesteal	100% Lifesteal
+14302	Lifesteal	100% Lifesteal
+14303	Lifesteal	100% Lifesteal
+14304	Lifesteal	100% Lifesteal
+14305	Lifesteal	100% Lifesteal
+14401	Critical rate increased	Crit rate increased by 16%
+14402	Critical rate increased	Critical strike increased by 20%
+14403	Critical rate increased	+24% Critical Rate
+14404	Critical rate increased	+28% Critical Rate
+14405	Critical rate increased	Increase critical chance by 32%
+14501	Resilience	Damage taken reduced by 8%
+14502	Resilience	Damage taken reduced by 12%
+14503	Resilience	Reduce damage taken by 16%
+14504	Resilience	Damage taken reduced by 20%
+14505	Resilience	Damage taken reduced by 24%
+14601	Energy reduced	Energy reduced by 1
+14602	Energy reduced	Energy reduced by 1
+14603	Energy reduced	Energy reduced by 1
+14604	Energy reduced	Energy reduced by 1
+14605	Energy reduced	Lose 2 Energy
+14701	Energy increased	Gain 2 Energy
+14702	Energy increased	Gain 2 Energy
+14703	Energy increased	Gain 2 Energy
+14704	Energy increased	Gain 2 Energy
+14705	Energy increased	Gain 2 Energy
+14801	Oxygen recovery	Regenerate 2% HP per turn
+14802	Oxygen recovery	Regenerate 2% HP per turn
+14803	Oxygen recovery	Recovers 3% health per turn
+14804	Oxygen recovery	Regenerate 4% HP per turn
+14805	Oxygen recovery	Recovers 5% health per turn
+14901	Attack increased	Attack increased by 10%
+14902	Attack increased	Attack increased by 12%
+14903	Attack increased	Attack increased by 15%
+14904	Attack increased	Attack increased by 18%
+14905	Attack increased	Attack increased by 20%
+15001	Health boosted	Max health increased by 10%
+15002	Health boosted	Increase max health by 12%
+15003	Health boosted	Max Health +15%
+15004	Health boosted	Max Health +18%
+15005	Health boosted	Max Health increased by 20%
+15101	Defense Down	Defense reduced by 15%
+15102	Defense Down	Decrease defense by 18%
+15103	Defense Down	Defense decreased by 21%
+15104	Defense Down	Defense decreased by 24%
+15105	Defense Down	Decrease defense by 27%
+15201	Vulnerable	Damage received increased by 15%
+15202	Vulnerable	Damage taken increased by 20%
+15203	Vulnerable	+25% Damage Taken
+15204	Vulnerable	Damage taken increased by 30%
+15205	Vulnerable	Damage taken increased by 35%
+15301	Vulnerable	Damage received increased by 15%
+15302	Vulnerable	Damage taken increased by 20%
+15303	Vulnerable	+25% Damage Taken
+15304	Vulnerable	Damage taken increased by 30%
+15305	Vulnerable	Damage taken increased by 35%
+15401	Reflect Damage	Reflect 10% damage
+15402	Reflect Damage	Reflect 15% damage
+15403	Reflect Damage	Reflect 20% damage
+15404	Reflect Damage	Reflect 25% damage
+15405	Reflect Damage	Reflect 30% damage
+16001	Paralysis	Unable to act this turn
+16011	Debuff	Damage and healing reduced by 15%
+16012	Debuff	Damage and healing reduced by 25%
+16013	Debuff	Damage and healing capability reduced by 35%
+16014	Debuff	Damage and healing capability reduced by 45%
+16015	Debuff	Decrease damage and healing capacity by 55%
+16101	Boss Damage Immunity	Damage taken reduced
+16201	Lifesteal	Lifesteal 30%
+16202	Lifesteal	35% Lifesteal
+16203	Lifesteal	Life steal 40%
+16204	Lifesteal	Lifesteal 45%
+16205	Lifesteal	Lifesteal 50%
+17021	Silence	Unable to activate skills
+17022	Silence	Unable to activate skills
+17023	Silence	Unable to activate skills
+17024	Silence	Unable to activate skills
+17025	Silence	Unable to activate skills
+18901	Lifesteal	35% Lifesteal
+18902	Lifesteal	Life steal 40%
+18903	Lifesteal	Lifesteal 45%
+18904	Lifesteal	Lifesteal 50%
+18905	Lifesteal	Lifesteal 55%
+19001	Mysterious Curse	Equipment, Laboratory, Sprouts Lab, and Tree of Wisdom effects disabled
+19101	Debuff	Damage and healing capacity reduced by 10%
+19102	Debuff	Damage and healing capability decreased by 20%
+19103	Debuff	Damage and healing capability reduced by 30%
+19104	Debuff	Damage and healing reduced by 40%
+19105	Debuff	Damage and healing capability decreased by 50%
+19201	Bleed	Takes 10% bleed damage each turn
+19202	Bleed	Bleeds for 12% max health each turn
+19203	Bleed	Bleed 14% per turn
+19204	Bleed	Bleed 16% per turn
+19205	Bleed	Bleeding 18% per turn
+19305	Silence	Unable to activate skills
+19405	Bleed	Bleed 100% per turn
+19501	Health Boost / Damage Reduction	Max Health increased by 10%, damage taken reduced by 15%
+19502	Health Boost / Damage Reduction	Increase max health by 12% and reduce damage taken by 20%
+19503	Health Boost / Damage Reduction	Max HP increased by 15%, damage taken reduced by 25%
+19504	Health Boost / Damage Reduction	Max HP increased by 18%, damage taken reduced by 30%
+19505	Health Boost / Damage Reduction	Increase max health by 20% and reduce damage taken by 35%
+19601	Damage boosted	Damage increased by 10%
+19602	Damage boosted	Damage increased by 20%
+19603	Damage boosted	Damage increased by 30%
+19604	Damage boosted	Damage increased by 40%
+19605	Damage boosted	Increase damage by 50%
+19701	Silence	Unable to activate skills
+19702	Silence	Unable to activate skills
+19703	Silence	Unable to activate skills
+19704	Silence	Unable to activate skills
+19705	Silence	Unable to activate skills
+19801	Bleed	Bleed 5% each turn
+19802	Bleed	Takes 10% bleed damage each turn
+19803	Bleed	Bleed 15% HP per turn
+19804	Bleed	Bleeding 20% per turn
+19805	Bleed	Takes 25% bleed damage each turn
+19901	Auto-Regen	Regenerate 6.0% Max HP per turn
+19902	Auto-Regen	Restores 6.5% of Max HP each turn
+19903	Auto-Regen	Restore 7.0% of max health each turn
+19904	Auto-Regen	Restore 7.5% of max health each turn
+19905	Auto-Regen	Regenerate 8.0% of Max HP per turn
+19906	Auto-Regen	Restores 8.5% of Max HP each turn
+19907	Auto-Regen	Regenerate 9.0% Max HP per turn
+19908	Auto-Regen	Recovers 9.5% of max health per turn
+19909	Auto-Regen	Regenerate 10.0% of Max HP per turn
+19910	Auto-Regen	Regenerate 10.5% of Max HP per turn
+19911	Auto-Regen	Restores 11.0% of max health per turn
+19912	Auto-Regen	Restores 11.5% of Max HP each turn
+19913	Auto-Regen	Restores 12.0% max health each turn
+19914	Auto-Regen	Restores 12.5% of max health per turn
+19915	Auto-Regen	Restores 13.0% max health each turn
+19921	Vulnerable	+10% Vulnerable each turn
+19922	Vulnerable	Takes 20% more damage each turn
+19923	Vulnerable	Takes 30% more damage each turn
+19924	Vulnerable	Takes 40% more damage each turn
+19925	Vulnerable	50% vulnerability per turn
+19926	Bleed	Bleed 6% HP per turn
+19927	Bleed	Bleed 7% each turn
+19928	Bleed	Bleed 8% each turn
+19929	Bleed	Bleed 9% each turn
+19930	Bleed	Takes 10% bleed damage each turn
+19931	Damage boosted	Damage increased by 10%
+19932	Damage boosted	Damage increased by 20%
+19933	Damage boosted	Damage increased by 30%
+19934	Damage boosted	Damage increased by 40%
+19935	Damage boosted	Increase damage by 50%
+19936	Reflect Damage	Reflect 10% damage
+19937	Reflect Damage	Reflect 20% damage
+19938	Reflect Damage	Reflect 30% damage
+19939	Reflect Damage	Reflect 40% Damage
+19940	Reflect Damage	Reflect 50% damage
+19951	Damage boosted	Damage increased by 10%
+19952	Damage boosted	Damage increased by 15%
+19953	Damage boosted	Damage increased by 20%
+19954	Damage boosted	Damage increased by 25%
+19955	Damage boosted	Damage increased by 30%

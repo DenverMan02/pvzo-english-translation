@@ -1,0 +1,354 @@
+"""Regression checks for 勇闯僵尸岛 (the zombie island ladder + its item-exchange shop).
+
+The island used to be completely unimplemented: the client's Cmd_ZombieIsland_* / Cmd_NewZombieIsland_*
+requests fell through to the generic empty _SC, so the panel had no islands/chests, every plant looked
+dead inside it (Dto_CardBaseInfo.zombieIslandHp was never sent) and 兑换商店 stayed empty. These checks
+pin the server-side contract: both panel tabs, the guard squads (identical in the pre-fight preview and
+the fight), the chest economy, the daily restart, the sweep and the medal shop.
+"""
+import os
+import sys
+import tempfile
+from unittest.mock import patch
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(HERE))
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+import player_store as store  # noqa: E402
+
+store.DB_PATH = os.path.join(tempfile.mkdtemp(prefix="pvz_island_"), "test.db")
+store.init_db()
+import pvz_poc_server as srv  # noqa: E402
+
+UIN = 700002468
+FAILED = []
+
+
+def check(label, ok, extra=""):
+    if not ok:
+        FAILED.append(label)
+    print("%-4s %s %s" % ("PASS" if ok else "FAIL", label, extra))
+
+
+def island_target(mode):
+    """Dto_BattleTarget{type} — an island target carries only its BattleTargetType (9 / 21)."""
+    return srv.pb_bytes(1, srv.pb_varint_field(1, srv._zi_target_type(mode)))
+
+
+def preview_card_ids(sc_body):
+    """The cardIds the pre-fight window paints (Dto_EnemyCardInfo.cardId(2) of each enemyCard field 4)."""
+    return [srv.parse_varint_fields(raw).get(2)
+            for raw in srv.parse_repeated_submessages(sc_body, 4)]
+
+
+def reward_box_entries(sc_body):
+    """[(levelId, boxId, hasTaken)] of a GetIslandInfo_SC rewardBox/rewardState list (field 1)."""
+    out = []
+    for raw in srv.parse_repeated_submessages(sc_body, 1):
+        f = srv.parse_varint_fields(raw)
+        out.append((f.get(1), f.get(2), f.get(3, 0)))
+    return out
+
+
+def idnums(body, field=1):
+    """[(id, num)] of a repeated Dto_IdNum field."""
+    out = []
+    for raw in srv.parse_repeated_submessages(body, field):
+        f = srv.parse_varint_fields(raw)
+        out.append((f.get(1), f.get(2)))
+    return out
+
+
+def main():
+    player, _new = store.get_or_create_player(UIN)
+    player["plants"] = store.get_player_plants(UIN)
+    srv.ensure_player_cards(player)
+    store.save_player(UIN, level=24, coin=1000)
+    player["level"] = 24
+
+    # --- 1. the island ladder comes from clientDB -----------------------------------------
+    check("12 islands from ZombieIslandTemplate.txt", srv.zi_island_count() == 12,
+          srv.zi_island_count())
+    check("ZombieIslandLevel.txt loaded", len(srv.load_zombie_island_levels()) >= 12,
+          len(srv.load_zombie_island_levels()))
+
+    # --- 2. the guard squad is deterministic and ramps ------------------------------------
+    lvl1 = srv._zi_enemy_units(srv._ZI_NORMAL, 1)
+    lvl1_again = srv._zi_enemy_units(srv._ZI_NORMAL, 1)
+    lvl12 = srv._zi_enemy_units(srv._ZI_NORMAL, 12)
+    adv12 = srv._zi_enemy_units(srv._ZI_ADV, 12)
+    check("island squad is stable", [(u["pos"], u["card_id"]) for u in lvl1]
+          == [(u["pos"], u["card_id"]) for u in lvl1_again])
+    check("island squad is harder later",
+          sum(u["power"] for u in lvl12) > sum(u["power"] for u in lvl1),
+          (sum(u["power"] for u in lvl1), sum(u["power"] for u in lvl12)))
+    check("advanced tab is the harder climb",
+          sum(u["power"] for u in adv12) > sum(u["power"] for u in lvl12))
+    check("squad size within the enemy slots", 3 <= len(lvl12) <= len(srv._ENEMY_POS), len(lvl12))
+    check("leader first + zombie level from the table",
+          lvl1[0]["is_leader"] and lvl1[0]["level"] == srv.load_zombie_island_levels().get(1, 1),
+          lvl1[0]["level"])
+
+    # --- 3. GetIslandInfo (both tabs) ------------------------------------------------------
+    sc = srv.handle_zi_getinfo(b"", player, srv._ZI_NORMAL)
+    boxes = reward_box_entries(sc)
+    check("island info lists every chest", len(boxes) == 12 * srv._ZI_BOXES, len(boxes))
+    check("island info fights island 1 first", srv.parse_varint_fields(sc).get(2) == 1,
+          srv.parse_varint_fields(sc))
+    check("no chest is open before any clear", all(not b[2] for b in boxes))
+    adv_fields = srv.parse_varint_fields(srv.handle_zi_getinfo(b"", player, srv._ZI_ADV))
+    check("adv island info carries the daily restarts",
+          adv_fields.get(4) == srv._ZI_DAILY_REFRESH and adv_fields.get(3) == 0, adv_fields)
+
+    # --- 4. the pre-fight preview shows the fight's own guards ------------------------------
+    expected = [u["card_id"] for u in srv._zi_enemy_units(srv._ZI_NORMAL, 1)]
+    sc = srv.handle_battle_getfightinfo(island_target(srv._ZI_NORMAL), player)
+    check("island preview == island guards", preview_card_ids(sc) == expected, preview_card_ids(sc))
+    left, right = srv._zi_fight_units(player, srv._ZI_NORMAL, 1)
+    check("island fight fields the previewed guards", [u["card_id"] for u in right] == expected,
+          [u["card_id"] for u in right])
+    check("island fight fields the player's plants", bool(left), len(left))
+
+    # --- 5. taking a chest before the island is cleared is refused -------------------------
+    msgs = srv.handle_zi_takereward(srv.pb_varint_field(1, 1) + srv.pb_varint_field(2, 1), player,
+                                    srv._ZI_NORMAL)
+    fields = srv.parse_varint_fields(msgs[0][1])
+    check("uncleared island chest refused (NotQualified)",
+          fields.get(3) == 3 and not idnums(msgs[0][1], 4), fields)
+
+    # --- 6. a WIN clears the island: chest opens, medals are paid, climb advances ----------
+    real_resolve = srv.run_battle
+    srv.run_battle = lambda left, right, **kw: (True, 0, 0, [])
+    try:
+        msgs = srv.handle_zi_fight(srv.pb_varint_field(1, 1), player, srv._ZI_NORMAL)
+    finally:
+        srv.run_battle = real_resolve
+    sc_name, body = msgs[0]
+    check("island fight answers Cmd_ZombieIsland_Fight_SC",
+          sc_name == "PVZ.Cmd.Cmd_ZombieIsland_Fight_SC", sc_name)
+    check("island fight echoes the island id", srv.parse_varint_fields(body).get(1) == 1)
+    check("island fight sends a report", len(srv.parse_repeated_submessages(body, 2)) == 1)
+    info_sc = next((b for n, b in msgs
+                    if n == "PVZ.Cmd.Cmd_ZombieIsland_GetIslandInfo_SC"), None)
+    check("normal island progress is pushed after a win",
+          info_sc is not None and srv.parse_varint_fields(info_sc).get(2) == 2,
+          srv.parse_varint_fields(info_sc) if info_sc else None)
+    check("win pays 冒险勋章", store.get_item_count(UIN, srv._ZI_MEDAL_ITEM) > 0,
+          store.get_item_count(UIN, srv._ZI_MEDAL_ITEM))
+    _lvl, _mx, _used, _day, _boxes, _pre, _rl = store.island_progress(UIN, srv._ZI_NORMAL)
+    check("win advances the climb", (_lvl, _mx) == (2, 1), (_lvl, _mx))
+    boxes = reward_box_entries(srv.handle_zi_getinfo(b"", player, srv._ZI_NORMAL))
+    check("cleared island's chests are open",
+          all(b[2] == 0 for b in boxes if b[0] in (1, 2)), boxes[:3])
+
+    # --- 7. claiming the chest pays out once ----------------------------------------------
+    medals_before = store.get_item_count(UIN, srv._ZI_MEDAL_ITEM)
+    import chest_reward_repairs
+    with patch.object(chest_reward_repairs.random, 'choice',
+                      side_effect=lambda pool: next(row for row in pool if row[0] == 53900)) as choice:
+        msgs = srv.handle_zi_takereward(srv.pb_varint_field(1, 1) + srv.pb_varint_field(2, 1), player,
+                                        srv._ZI_NORMAL)
+    check("guard chest draws exactly one random reward", choice.call_count == 1, choice.call_count)
+    fields = srv.parse_varint_fields(msgs[0][1])
+    check("cleared chest claimed", fields.get(3) == 1 and bool(idnums(msgs[0][1], 4)), fields)
+    check("chest pays medals", store.get_item_count(UIN, srv._ZI_MEDAL_ITEM) > medals_before)
+    # The guard chest must NOT hand out a nested 僵尸岛宝箱 item any more (it used to fill
+    # the backpack with unopened chests); its loot is paid out directly instead.
+    check("chest no longer drops a nested 僵尸岛宝箱",
+          store.get_item_count(UIN, srv._ZI_CHEST_ITEM) == 0,
+          store.get_item_count(UIN, srv._ZI_CHEST_ITEM))
+    check("chest pays the guard chest's own loot",
+          store.get_item_count(UIN, 53900) > 0, store.get_item_count(UIN, 53900))
+    fields = srv.parse_varint_fields(srv.handle_zi_takereward(
+        srv.pb_varint_field(1, 1) + srv.pb_varint_field(2, 1), player, srv._ZI_NORMAL)[0][1])
+    check("chest cannot be claimed twice", fields.get(3) == 2, fields)
+
+    # --- 8. the adv tab keeps its own climb and its own wire shape -------------------------
+    srv.run_battle = lambda left, right, **kw: (True, 0, 0, [])
+    try:
+        msgs = srv.handle_zi_fight(srv.pb_varint_field(1, 1), player, srv._ZI_ADV)
+    finally:
+        srv.run_battle = real_resolve
+    check("adv fight answers Cmd_NewZombieIsland_Fight_SC",
+          msgs[0][0] == "PVZ.Cmd.Cmd_NewZombieIsland_Fight_SC", msgs[0][0])
+    info_sc = next((b for n, b in msgs
+                    if n == "PVZ.Cmd.Cmd_NewZombieIsland_GetIslandInfo_SC"), None)
+    check("adv island progress is pushed after a win",
+          info_sc is not None and srv.parse_varint_fields(info_sc).get(2) == 2,
+          srv.parse_varint_fields(info_sc) if info_sc else None)
+    _al, _am, _au, _ad, _ab, _ap, _ar = store.island_progress(UIN, srv._ZI_ADV)
+    check("adv climb is independent of normal", (_al, _am) == (2, 1) and (_lvl, _mx) == (2, 1),
+          (_al, _am, _lvl, _mx))
+    msgs = srv.handle_newzi_takeallreward(b"", player)
+    check("adv take-all answers its own SC",
+          msgs[0][0] == "PVZ.Cmd.Cmd_NewZombieIsland_TakeAllReward_SC", msgs[0][0])
+    check("adv take-all hands over the adv chests", bool(idnums(msgs[0][1], 1)), idnums(msgs[0][1], 1))
+
+    # --- 9. the daily restart rolls the climb back to island 1 ----------------------------
+    # The reply must be Cmd_ZombieIsland_GetRefreshInfo_SC, NEVER Cmd_ZombieIsland_RefreshChallenge_SC:
+    # the client's onCmdHandler() branch for the latter reads refreshTimes/remainTimes off the
+    # GetRefreshInfo_SC local (still null) and throws TypeError #1009, killing the island panel.
+    restart_msgs = srv.handle_zi_refreshchallenge(b"", player, srv._ZI_NORMAL)
+    check("restart answers GetRefreshInfo_SC (RefreshChallenge_SC crashes the client)",
+          restart_msgs[0][0] == "PVZ.Cmd.Cmd_ZombieIsland_GetRefreshInfo_SC", restart_msgs[0][0])
+    fields = srv.parse_varint_fields(restart_msgs[0][1])
+    check("restart accepted once", fields.get(1) == 1 and fields.get(2) == 0, fields)
+    # 重新开始 must also re-open the ladder's chests, otherwise every chest stays flagged as
+    # 已领取 and the restarted climb is a dead end.
+    check("restart re-opens the cleared island's chests",
+          (1, 1) not in store.island_boxes(UIN, srv._ZI_NORMAL),
+          store.island_boxes(UIN, srv._ZI_NORMAL))
+    _lvl, _mx, _used, _day, _boxes, _pre, _rl = store.island_progress(UIN, srv._ZI_NORMAL)
+    check("restart resets the climb, keeps the record", (_lvl, _mx) == (1, 1), (_lvl, _mx))
+    boxes = reward_box_entries(srv.handle_zi_getinfo(b"", player, srv._ZI_NORMAL))
+    check("the restarted chests are claimable again",
+          all(b[2] == 0 for b in boxes if b[0] == 1), boxes[:3])
+    fields = srv.parse_varint_fields(
+        srv.handle_zi_refreshchallenge(b"", player, srv._ZI_NORMAL)[0][1])
+    check("second restart refused the same day", fields.get(1) == 1 and fields.get(2) == 0, fields)
+    adv_restart = srv.handle_zi_refreshchallenge(b"", player, srv._ZI_ADV)
+    check("adv restart answers its own GetIslandInfo_SC (no adv RefreshChallenge SC exists)",
+          adv_restart[0][0] == "PVZ.Cmd.Cmd_NewZombieIsland_GetIslandInfo_SC", adv_restart[0][0])
+
+    # --- 10. the sweep pays every cleared island once a day --------------------------------
+    sweep = srv.parse_repeated_submessages(srv.handle_zi_sweep(b"", player)[0][1], 1)
+    check("sweep lists the cleared islands", len(sweep) == 1, len(sweep))
+    check("sweep pays medals", bool(idnums(sweep[0], 2)), idnums(sweep[0], 2))
+    check("sweep answers Cmd_ZombieIsland_Sweep_SC",
+          srv.handle_zi_sweep(b"", player)[0][0] == "PVZ.Cmd.Cmd_ZombieIsland_Sweep_SC")
+    check("second sweep the same day is empty",
+          srv.parse_repeated_submessages(srv.handle_zi_sweep(b"", player)[0][1], 1) == [])
+
+    # --- 11. the arranged lineup (SetPreCard) drives the island battle ---------------------
+    uids = [uid for uid, _cid, _lvl2, _e in store.get_cards(UIN)][:3]
+    srv._PENDING_PREVIEW.pop(UIN, None)
+    srv.handle_zi_setprecard(b"".join(srv.pb_varint_field(1, uid) for uid in uids), player,
+                             srv._ZI_NORMAL)
+    fields = srv.parse_varint_fields(srv.handle_zi_getprecard(b"", player, srv._ZI_NORMAL))
+    check("pre-cards round-trip", fields.get(2) == 1
+          and store.island_precards(UIN, srv._ZI_NORMAL) == uids,
+          store.island_precards(UIN, srv._ZI_NORMAL))
+    left, _right = srv._zi_fight_units(player, srv._ZI_NORMAL, 1)
+    check("island fight fields the arranged lineup", [u["uid"] for u in left] == uids,
+          [u["uid"] for u in left])
+    check("adv pre-cards stay separate", store.island_precards(UIN, srv._ZI_ADV) == [])
+
+    # --- 11b. the island fields at most _ZI_LINEUP_MAX plants ------------------------------
+    # The island RESULT window (FightResultZombieIslandMediator.update_card, ModuleBattle.swf) indexes a
+    # fixed 6-slot card Vector with the report's card index, so a 7th plant throws
+    # `RangeError: Error #1125: 索引 6 超出范围 6` the moment the battle ends (battleEndHandler ->
+    # FightChestsWDMedator -> FightResultZombieIslandMediator.reset -> update_card) and the result screen
+    # never opens. The prepare view itself lets you arrange more (a live save held 16), so the CAP lives
+    # in _zi_player_placements.
+    srv.load_battle_cards()
+    plant_ids = [cid for cid, c in srv._BATTLE_CARDS.items() if c.get("tdId")][:srv._ZI_LINEUP_MAX + 2]
+    uids_big = [900000000 + i for i in range(len(plant_ids))]
+    for uid, cid in zip(uids_big, plant_ids):
+        store.add_card(UIN, uid, cid)
+    check("test owns more plants than the island fields",
+          len(uids_big) > srv._ZI_LINEUP_MAX, len(uids_big))
+    srv.handle_zi_setprecard(b"".join(srv.pb_varint_field(1, uid) for uid in uids_big), player,
+                             srv._ZI_NORMAL)
+    check("a longer arranged list still round-trips",
+          store.island_precards(UIN, srv._ZI_NORMAL) == uids_big)
+    left, _right = srv._zi_fight_units(player, srv._ZI_NORMAL, 1)
+    check("island fields at most %d plants" % srv._ZI_LINEUP_MAX,
+          [u["uid"] for u in left] == uids_big[:srv._ZI_LINEUP_MAX], [u["uid"] for u in left])
+    real_resolve2 = srv.run_battle
+    srv.run_battle = lambda _l, _r, **kw: (False, 0, 0, [])     # a loss keeps the climb put
+    try:
+        island_lvl = store.island_progress(UIN, srv._ZI_NORMAL)[0]
+        body = srv.handle_zi_fight(srv.pb_varint_field(1, island_lvl), player, srv._ZI_NORMAL)[0][1]
+    finally:
+        srv.run_battle = real_resolve2
+    report = srv.parse_repeated_submessages(body, 2)[0]
+    self_cards = srv.parse_repeated_submessages(srv.parse_repeated_submessages(report, 2)[0], 2)
+    check("the island report's self side fits the result window",
+          len(self_cards) <= srv._ZI_LINEUP_MAX, len(self_cards))
+
+    # --- 12. the island formation is pushed back as Dto_FormationInfo ----------------------
+    msgs = srv.handle_zi_getformation(b"", player, srv._ZI_NORMAL)
+    check("get-formation answers SyncFormation_SC",
+          msgs[0][0] == "PVZ.Cmd.Cmd_ZombieIsland_SyncFormation_SC", msgs[0][0])
+    check("sync formation carries cardPos", bool(srv.parse_repeated_submessages(msgs[0][1], 1)))
+
+    # --- 13. no plant looks dead inside the island -----------------------------------------
+    pkg = srv.handle_card_getpackage(b"", player)
+    fulls = srv.parse_repeated_submessages(pkg, 1)                  # all(1) = [Dto_CardFullInfo]
+    bases = [srv.parse_varint_fields(srv.parse_repeated_submessages(raw, 1)[0])  # .base(1)
+             for raw in fulls]
+    check("cards carry an island HP", bool(bases) and all(b.get(8, 0) > 0 for b in bases),
+          [(b.get(2), b.get(8)) for b in bases][:3])
+    check("cards carry the adv island HP", all(b.get(14, 0) > 0 for b in bases))
+
+    # --- 14. the island shop spends 冒险勋章 ------------------------------------------------
+    store.add_item(UIN, srv._ZI_MEDAL_ITEM, 300)
+    sc = srv.handle_exchangestore_itemlist(srv.pb_varint_field(1, 2), player)
+    entries = [srv.parse_varint_fields(raw) for raw in srv.parse_repeated_submessages(sc, 1)]
+    check("island shop lists its wares", len(entries) == len(srv._ZI_SHOP), len(entries))
+    check("shop prices are 冒险勋章",
+          all(e.get(5) == srv._ZI_MEDAL_ITEM and e.get(6, 0) > 0 for e in entries),
+          [(e.get(3), e.get(5), e.get(6)) for e in entries])
+    check("shop window shows a next-refresh time", srv.parse_varint_fields(sc).get(2, 0) > 0)
+    entry = srv._ZI_SHOP[3]                                     # 小经验豆 x1 for 10 medals
+    before = store.get_item_count(UIN, entry[2])
+    medals_before = store.get_item_count(UIN, srv._ZI_MEDAL_ITEM)
+    msgs = srv.handle_exchangestore_exchange(srv.pb_varint_field(1, entry[0]), player)
+    check("exchange answers its own SC",
+          msgs[0][0] == "PVZ.Cmd.Cmd_ExchangeStore_Exchange_SC", msgs[0][0])
+    check("exchange hands the item over", store.get_item_count(UIN, entry[2]) == before + entry[3],
+          store.get_item_count(UIN, entry[2]))
+    check("exchange charges the medals",
+          store.get_item_count(UIN, srv._ZI_MEDAL_ITEM) == medals_before - entry[5],
+          store.get_item_count(UIN, srv._ZI_MEDAL_ITEM))
+    srv.handle_exchangestore_exchange(srv.pb_varint_field(1, entry[0]), player)
+    check("one purchase per entry per day",
+          store.get_item_count(UIN, srv._ZI_MEDAL_ITEM) == medals_before - entry[5],
+          store.get_item_count(UIN, srv._ZI_MEDAL_ITEM))
+    msgs = srv.handle_exchangestore_refresh(srv.pb_varint_field(1, 2), player)
+    restocked = [srv.parse_varint_fields(raw)
+                 for raw in srv.parse_repeated_submessages(msgs[1][1], 1)]
+    check("shop refresh re-stocks the entries",
+          msgs[0][0] == "PVZ.Cmd.Cmd_ExchangeStore_Refresh_SC"
+          and not any(e.get(7) for e in restocked), [e.get(7) for e in restocked])
+    check("the island window advertises 冒险勋章 as its coin",
+          srv.parse_varint_fields(msgs[1][1]).get(4) == srv._ZI_MEDAL_ITEM,
+          srv.parse_varint_fields(msgs[1][1]).get(4))
+    check("an unstocked store answers an empty list",
+          srv.handle_exchangestore_itemlist(srv.pb_varint_field(1, 7), player) == b"")
+
+    # --- 15. an island target on the generic battle entry routes to the island -------------
+    adv_before = store.island_progress(UIN, srv._ZI_ADV)[0]
+    srv.run_battle = lambda left, right, **kw: (False, 0, 0, [])
+    try:
+        msgs = srv.handle_battle_fight(island_target(srv._ZI_ADV), player)
+    finally:
+        srv.run_battle = real_resolve
+    check("generic battle entry routes the island target",
+          msgs[0][0] == "PVZ.Cmd.Cmd_NewZombieIsland_Fight_SC", msgs[0][0])
+    check("a lost island fight does not advance the climb",
+          store.island_progress(UIN, srv._ZI_ADV)[0] == adv_before, adv_before)
+    check("a lost island fight still reports",
+          len(srv.parse_repeated_submessages(msgs[0][1], 2)) == 1)
+
+    # --- 16. every island command is wired up ---------------------------------------------
+    for name in ("Cmd_ZombieIsland_GetIslandInfo_CS", "Cmd_ZombieIsland_GetRefreshInfo_CS",
+                 "Cmd_ZombieIsland_RefreshChallenge_CS", "Cmd_ZombieIsland_GetPreCard_CS",
+                 "Cmd_ZombieIsland_SetPreCard_CS", "Cmd_ZombieIsland_GetFormation_CS",
+                 "Cmd_ZombieIsland_SetFormation_CS", "Cmd_ZombieIsland_Fight_CS",
+                 "Cmd_ZombieIsland_Sweep_CS", "Cmd_ZombieIsland_TakeReward_CS",
+                 "Cmd_NewZombieIsland_GetIslandInfo_CS", "Cmd_NewZombieIsland_RefreshChallenge_CS",
+                 "Cmd_NewZombieIsland_GetPreCard_CS", "Cmd_NewZombieIsland_SetPreCard_CS",
+                 "Cmd_NewZombieIsland_GetFormation_CS", "Cmd_NewZombieIsland_SetFormation_CS",
+                 "Cmd_NewZombieIsland_Fight_CS", "Cmd_NewZombieIsland_TakeReward_CS",
+                 "Cmd_NewZombieIsland_TakeAllReward_CS", "Cmd_ExchangeStore_ItemList_CS",
+                 "Cmd_ExchangeStore_Exchange_CS", "Cmd_ExchangeStore_Refresh_CS"):
+        check("%s registered" % name, callable(srv.REQUEST_HANDLERS.get("PVZ.Cmd." + name)))
+
+    print("zombie island: %s" % ("FAIL %s" % FAILED if FAILED else "PASS"))
+    return 1 if FAILED else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

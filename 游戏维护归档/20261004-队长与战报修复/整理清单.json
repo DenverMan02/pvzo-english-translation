@@ -1,0 +1,387 @@
+[
+  {
+    "source": "D:\\pvzol本地最新最新ol\\交接记录-GPT修复进度.md",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\交接记录-GPT修复进度.md",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\冒险繁荣度修复说明-20260929.md",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\冒险繁荣度修复说明-20260929.md",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\神秘卡包修复说明-20260929.md",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\神秘卡包修复说明-20260929.md",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\backups",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\backups",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\_codex_arena_bg_backup_20261003_030522",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\_codex_arena_bg_backup_20261003_030522",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\_codex_asra_column_backup_20261003_041528",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\_codex_asra_column_backup_20261003_041528",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\_codex_assetfill_backup_20261003_003426",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\_codex_assetfill_backup_20261003_003426",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\_codex_backup_item1-4_20261001_172924",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\_codex_backup_item1-4_20261001_172924",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\_codex_backup_item1-4_20261001_172952",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\_codex_backup_item1-4_20261001_172952",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\_codex_backup_item1-4_exe_20261001_173143",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\_codex_backup_item1-4_exe_20261001_173143",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\_codex_backup_signature_exe_20261001_1923",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\_codex_backup_signature_exe_20261001_1923",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\_codex_hole_broken_snapshot_20261003_172540",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\_codex_hole_broken_snapshot_20261003_172540",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\_codex_hole_hitarea_backup_20261003_171547",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\_codex_hole_hitarea_backup_20261003_171547",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\_codex_lab_fix_backup_20261001_202924",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\_codex_lab_fix_backup_20261001_202924",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\_codex_lab_oldanchor_full_backup_20261001_204409",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\_codex_lab_oldanchor_full_backup_20261001_204409",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\_codex_lab_oldanchor127_full_backup_20261001_204706",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\_codex_lab_oldanchor127_full_backup_20261001_204706",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\_codex_launcher_port_backup_20261003_034305",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\_codex_launcher_port_backup_20261003_034305",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\_codex_modulehole_badhash_backup_20261003_175325",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\_codex_modulehole_badhash_backup_20261003_175325",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\_codex_rankarena_battlebg_backup_20261003_032746",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\_codex_rankarena_battlebg_backup_20261003_032746",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\_codex_rankarena_bg_revert_20261003_040816",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\_codex_rankarena_bg_revert_20261003_040816",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\_codex_star_gem_backup_20261003_022326",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\_codex_star_gem_backup_20261003_022326",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\backups",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\backups",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\build_exe",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\build_exe",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\flashplayer_sa - 副本.exe",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\flashplayer_sa - 副本.exe",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\guard_local.py.pre_restore_original_20261003.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\guard_local.py.pre_restore_original_20261003.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\guard_local.py.pre_rob_round3_20261003_092716.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\guard_local.py.pre_rob_round3_20261003_092716.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\guard_local.py.pre_rob_round4_20261003.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\guard_local.py.pre_rob_round4_20261003.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\guard_local.py.pre_round4_20261003_120754.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\guard_local.py.pre_round4_20261003_120754.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\main_quest_local.py.pre-playerdb-refactor-20260924.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\main_quest_local.py.pre-playerdb-refactor-20260924.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\player_store.py.pre_deepseek_selective_20260919.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\player_store.py.pre_deepseek_selective_20260919.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\player_store.py.pre_ds_merge_20260919_090525.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\player_store.py.pre_ds_merge_20260919_090525.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\players.db.pre_ds_merge_20260919_090525.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\players.db.pre_ds_merge_20260919_090525.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\players.db.pre_gene_test_20260918.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\players.db.pre_gene_test_20260918.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\players.db.pre_refine_20260919_084257.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\players.db.pre_refine_20260919_084257.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\players.db.pre-power-fruit-20260921.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\players.db.pre-power-fruit-20260921.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\players.db.pre-quest-20260924.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\players.db.pre-quest-20260924.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py.bak-signature-20261001-192210",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py.bak-signature-20261001-192210",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py.pre_deepseek_selective_20260919.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py.pre_deepseek_selective_20260919.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py.pre_ds_merge_20260919_090525.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py.pre_ds_merge_20260919_090525.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py.pre-alliance-map-integration-20260924.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py.pre-alliance-map-integration-20260924.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py.pre-dailytd-black-screen-20260924.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py.pre-dailytd-black-screen-20260924.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py.pre-quest-reward-integration-review-20260924.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py.pre-quest-reward-integration-review-20260924.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_error_armor_prestige.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_error_armor_prestige.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919_092826.err.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919_092826.err.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919_092826.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919_092826.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-103954.err.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-103954.err.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-103954.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-103954.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-110236.err.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-110236.err.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-110236.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-110236.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-110628.err.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-110628.err.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-110628.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-110628.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-114936.err.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-114936.err.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-114936.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-114936.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-115556.err.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-115556.err.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-115556.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-115556.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-115907.err.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-115907.err.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-115907.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-115907.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-130322.err.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-130322.err.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-130322.out.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-130322.out.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-131321.err.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-131321.err.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-131321.out.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-131321.out.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-131530.err.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-131530.err.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-131530.out.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_20260919-131530.out.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_armor_prestige.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_armor_prestige.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_avatar_20260920-211305.err.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_avatar_20260920-211305.err.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\server_runtime_avatar_20260920-211305.out.log",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\server_runtime_avatar_20260920-211305.out.log",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\tmp_abc.bin",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\PvZ-Server-PoC\\tmp_abc.bin",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\_codex_hole_v6_backup_20261003_173852",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\webroot\\_codex_hole_v6_backup_20261003_173852",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\备份",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\webroot\\备份",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\clientDB.txt.pre_hidden_activities_20260926.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\webroot\\clientDB.txt.pre_hidden_activities_20260926.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\clientDB.txt.pre_puppet_cards_20260919.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\webroot\\clientDB.txt.pre_puppet_cards_20260919.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\fileVer.xml.round4_20261003_120754.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\webroot\\fileVer.xml.round4_20261003_120754.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\loader_p.swf.orig",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\webroot\\loader_p.swf.orig",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard.swf.before-board-fix.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\webroot\\ModuleCard.swf.before-board-fix.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleHole.swf.mousegate_20261003_184519.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\webroot\\ModuleHole.swf.mousegate_20261003_184519.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleHole.swf.noauto_round4_20261003_120754.bak",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\pvzol本地\\webroot\\ModuleHole.swf.noauto_round4_20261003_120754.bak",
+    "status": "moved"
+  },
+  {
+    "source": "D:\\pvzol本地最新最新ol\\ruffle-experiment",
+    "destination": "D:\\pvzol本地最新最新ol\\游戏维护归档\\20261004-队长与战报修复\\ruffle-experiment",
+    "status": "moved"
+  }
+]

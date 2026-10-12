@@ -1,0 +1,22 @@
+Read-only original-client formation audit
+Input: D:\pvzol本地最新最新ol\pvzol本地\webroot\Game.swf
+Cross-check: Game_p.swf; same relevant instructions and class behavior.
+Tool: JPEXS FFDec 26.3.0, exported selected scripts to work/original_formation/decompiled.
+No D: files modified.
+
+EmbattleViewMediator.as 139-160 creates teamMaxNum hidden FormationBtn controls, labels each by array index + 1.
+EmbattleViewMediator.as 256-274 MODE_HOME/MODE_MAP displays one button for every getAttackBattleTeam() entry; data and defendBtn.data are actual teamId.
+ActorBattleCardModel.as 474-489 getAttackBattleTeam excludes isDefenceTeam only.
+BattleCardFormationVO.as 86-92 defines isDefenceTeam by teamId >= E_WARTEAM_OUTPOSTMIN.
+Assets/src/PVZ/Cmd/E_WARTEAM.as: ATTACKBASE=1000, ATTACKMIN=1001, ATTACKMAX=1999; OUTPOSTMIN=2001.
+The enum suggests original attack team IDs 1001.., but actual UI accepts any teamId < 2001. It does not specifically filter 1..5 or 1001..1005.
+FormationBtn.as has no locked state or level configuration. Undisplayed slots remain invisible.
+
+Original GetFormation_SC: formation field1, repeated team field2, teamMaxNum field3, defaultTeamId field4.
+LoginService.serverDataHandler bytecode offsets 2139..2182 consumes team, teamMaxNum, defaultTeamId; defaultTeamId 0 falls back to first received team.
+Original SyncNewFormation_SC: unlockTeamNum field1, teamMaxNum field2, repeated teamIdList field3.
+LoginService.syncNewFormationHandler bytecode offset24 consumes teamIdList only.
+ActorBattleCardModel.as 694-711 turns each new ID into empty Dto_FormationInfo with cardPos=[], formationId=0, totalPower=0, status=home, then merges teams.
+EmbattleViewMediator.as 103-106 onLevelChange refreshes nutrition/dummy UI only. Closing/reopening home formation is the original reliable point to display newly merged teams.
+
+Thresholds are not decided in FormationBtn/EmbattleViewMediator. Original client needs the server to supply only unlocked team IDs in team and/or SyncNewFormation teamIdList. Check original levelupOpenInfo and team-count config separately for numeric level thresholds.

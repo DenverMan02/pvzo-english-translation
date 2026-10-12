@@ -1,0 +1,149 @@
+{
+  "task": "地图出征与矿场修复-20261010",
+  "files": [
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/worldmap_local.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/worldmap_local.py",
+      "before": "31e496823e8a82be0206250b524f171d4fb5a8e4e4a44369fc27ec87770d826a",
+      "after": "1f0154a8bf63b81a563d4370ec4cb662c197fbbd3c511d5c7e746ea83fd250e8"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/worldmap_repairs.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/worldmap_repairs.py",
+      "before": "410d73825d7bae7aa0b4bf3539a65f86197fcca1ae4d7e42df596dd03cbd1a94",
+      "after": "17577c41a9df416c7361cac232ad7ffe7f14c2646c2825509de6c62630c1df41"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/worldmap_resources.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/worldmap_resources.py",
+      "before": "049d2872e9bdf2f16f0550444e93a8f005cc59c5701dbcfaf69b1c3ef184e397",
+      "after": "93e1aa97c6844b656cc522e26eea08ef2c805240f0ee888ab39e95f952245743"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_bot_towns.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/tests/test_worldmap_bot_towns.py",
+      "before": "426c3b4a95a58e143f555850f7b1b9a97050a2de7b87d383a863ecb142447007",
+      "after": "95a136b5fc0c25d755742eaaa1e2082aa01246e480d378153e82cf49e9e461dc"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_current_combat.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/tests/test_worldmap_current_combat.py",
+      "before": "377ad3de29ce95e110faa9291ebc002c2eababbcd293fd738227fe73499d0cb2",
+      "after": "06a1bb02392601c096e4082e77ae40b3007e652a9f445d27aa256334d9c65a76"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_declare_boundaries_20261010.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/tests/test_worldmap_declare_boundaries_20261010.py",
+      "before": null,
+      "after": "41f8c1a1884199f3a5852c42d9d17a98f37635dd5450c0df7a79eaa3315f03af"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_local_cities.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/tests/test_worldmap_local_cities.py",
+      "before": "9c51acab536299b1184539ed0d0b2a37be4cee02142eb4684d1a4446cfccf71c",
+      "after": "32bab06bcd68a7ba54e38fe59f63feced88c772550a10be61705981fe1712634"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_mine_history_20261010.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/tests/test_worldmap_mine_history_20261010.py",
+      "before": null,
+      "after": "be60e09c89bbf9eb4562e439a30828a6512b97c6d5e7a0324696a2e0df384080"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_protocol.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/tests/test_worldmap_protocol.py",
+      "before": "1bb5a171d7ce327e190dca06cff16766e8bb2ec13e69c5220383fa718c4deba6",
+      "after": "9d3e47c84c8a1de762bf1429c12f0570b99a3d5a1f6a4c144f9b012aa7a4bdc1"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_replay_contract.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/tests/test_worldmap_replay_contract.py",
+      "before": "73c10442bb52919a7d0af6ac308284fd6d3f2521bd1145a1b0297c6c22cc620a",
+      "after": "073349dee082661ffd9c8b87bec979559c6207894bccc2e634e81a70844a342f"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_resources.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/tests/test_worldmap_resources.py",
+      "before": "feffb6ee47cd2575b945c7ae71e16ee4c46b895781d26cb1a8ab784ea79a69a8",
+      "after": "47a1db9c3b9cd6b0aaf6b74b264e76db18e19d29b4f090734454b2c59df6015a"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_tcp.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/tests/test_worldmap_tcp.py",
+      "before": "e2596d705e37ae54d7937f472c65ca14b716ca2b8e16f0c53917ec95640a0331",
+      "after": "2eb4749f7673bc03e619bf649295d2efcd534bb765687958140ceb5c564828fc"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_war_lifecycle.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/tests/test_worldmap_war_lifecycle.py",
+      "before": null,
+      "after": "cfb0592bb079c424ada2a6ee34a0500f25498c0682451016f0cfaae7ca7e0cee"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p.swf",
+      "source": "map_assets_audit/assets/Game_p.swf",
+      "before": "e6066c03d6aba5f48e8299fe363c0c5107bd33eadbca69d60547989dc460c4b9",
+      "after": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_041205df680ecb63e34f6da5bacbfcf1.swf",
+      "source": "map_assets_audit/assets/Game_p_041205df680ecb63e34f6da5bacbfcf1.swf",
+      "before": "e6066c03d6aba5f48e8299fe363c0c5107bd33eadbca69d60547989dc460c4b9",
+      "after": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_04d85414d9f7ef6add82a525a0475506.swf",
+      "source": "map_assets_audit/assets/Game_p_04d85414d9f7ef6add82a525a0475506.swf",
+      "before": "e6066c03d6aba5f48e8299fe363c0c5107bd33eadbca69d60547989dc460c4b9",
+      "after": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_136f07596f913cef93d35343a83626ec.swf",
+      "source": "map_assets_audit/assets/Game_p_136f07596f913cef93d35343a83626ec.swf",
+      "before": "e6066c03d6aba5f48e8299fe363c0c5107bd33eadbca69d60547989dc460c4b9",
+      "after": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_2f31414da4c6b9aff9be96e68029c65b.swf",
+      "source": "map_assets_audit/assets/Game_p_2f31414da4c6b9aff9be96e68029c65b.swf",
+      "before": "e6066c03d6aba5f48e8299fe363c0c5107bd33eadbca69d60547989dc460c4b9",
+      "after": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_44d757b4fb708f31dad7a2394a1a360f.swf",
+      "source": "map_assets_audit/assets/Game_p_44d757b4fb708f31dad7a2394a1a360f.swf",
+      "before": "e6066c03d6aba5f48e8299fe363c0c5107bd33eadbca69d60547989dc460c4b9",
+      "after": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_867dbb7ffa06e76c8e280fe312d5a976.swf",
+      "source": "map_assets_audit/assets/Game_p_867dbb7ffa06e76c8e280fe312d5a976.swf",
+      "before": "e6066c03d6aba5f48e8299fe363c0c5107bd33eadbca69d60547989dc460c4b9",
+      "after": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_c874590c49beaaf924c0395036c85119.swf",
+      "source": "map_assets_audit/assets/Game_p_c874590c49beaaf924c0395036c85119.swf",
+      "before": "e6066c03d6aba5f48e8299fe363c0c5107bd33eadbca69d60547989dc460c4b9",
+      "after": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_cb7af05d4d2ddbe204ea4926772f3b92.swf",
+      "source": "map_assets_audit/assets/Game_p_cb7af05d4d2ddbe204ea4926772f3b92.swf",
+      "before": "e6066c03d6aba5f48e8299fe363c0c5107bd33eadbca69d60547989dc460c4b9",
+      "after": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_ddd80a273668f4e746bbaa442bfc55f0.swf",
+      "source": "map_assets_audit/assets/Game_p_ddd80a273668f4e746bbaa442bfc55f0.swf",
+      "before": "e6066c03d6aba5f48e8299fe363c0c5107bd33eadbca69d60547989dc460c4b9",
+      "after": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_e90cc556a5e9f63b73ffa23b6fe21c34.swf",
+      "source": "map_assets_audit/assets/Game_p_e90cc556a5e9f63b73ffa23b6fe21c34.swf",
+      "before": "e6066c03d6aba5f48e8299fe363c0c5107bd33eadbca69d60547989dc460c4b9",
+      "after": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "checked_at_local_date": "2026-10-08",
+  "purpose": "只读核查保留的原版客户端与当前客户端是否会重排卡牌行动；区分客户端证据与服务端排序推断。",
+  "files": [
+    {
+      "label": "retained original-labelled client snapshot",
+      "path": "C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\_work\\ModuleBattle_orig.swf",
+      "bytes": 38765,
+      "sha256": "58b776a45c87653c9486e27b1b7d35ec707a1aa7e60625c1f0ec93f6dcc9a69a"
+    },
+    {
+      "label": "current plain-name client",
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleBattle.swf",
+      "bytes": 38765,
+      "sha256": "58b776a45c87653c9486e27b1b7d35ec707a1aa7e60625c1f0ec93f6dcc9a69a"
+    },
+    {
+      "label": "current versioned client",
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleBattle_de6857fc48024c51ba03a935ddbe24be.swf",
+      "bytes": 38765,
+      "sha256": "58b776a45c87653c9486e27b1b7d35ec707a1aa7e60625c1f0ec93f6dcc9a69a"
+    }
+  ],
+  "swf_files_byte_identical": true,
+  "method_extraction_tool": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\client_tools\\abcdis.py",
+  "class": "com.qq.modules.battle.command::BattleActionStateCommand",
+  "methods": [
+    {
+      "name": "actionReady",
+      "method_index": 22,
+      "code_bytes": 1629,
+      "sha256_original": "4be0db0fee4c4cd0ab07f0df06aaa8674e9e44a3723aca010f02a38f4bfa076e",
+      "sha256_current_plain": "4be0db0fee4c4cd0ab07f0df06aaa8674e9e44a3723aca010f02a38f4bfa076e",
+      "sha256_current_versioned": "4be0db0fee4c4cd0ab07f0df06aaa8674e9e44a3723aca010f02a38f4bfa076e",
+      "all_equal": true
+    },
+    {
+      "name": "actionRun",
+      "method_index": 23,
+      "code_bytes": 81,
+      "sha256_original": "3be918028e63334e61c02e781c0d4dd586f7c026ebb1c9e95c27549da1c94c7b",
+      "sha256_current_plain": "3be918028e63334e61c02e781c0d4dd586f7c026ebb1c9e95c27549da1c94c7b",
+      "sha256_current_versioned": "3be918028e63334e61c02e781c0d4dd586f7c026ebb1c9e95c27549da1c94c7b",
+      "all_equal": true,
+      "bytecode_evidence": "offset 16: getproperty cacheRoundPlanList; offset 19: callproperty Array.shift; offset 76: callpropvoid IPlan.doPlan"
+    },
+    {
+      "name": "planCallBack",
+      "method_index": 24,
+      "code_bytes": 34,
+      "sha256_original": "8c13351eb7f3b23728b7cf5bd501349c6c9b7a0b55002e6a573bea67920064cd",
+      "sha256_current_plain": "8c13351eb7f3b23728b7cf5bd501349c6c9b7a0b55002e6a573bea67920064cd",
+      "sha256_current_versioned": "8c13351eb7f3b23728b7cf5bd501349c6c9b7a0b55002e6a573bea67920064cd",
+      "all_equal": true
+    }
+  ],
+  "source_evidence": [
+    {
+      "path": "C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\_work\\mb_script\\scripts\\com\\qq\\modules\\battle\\command\\BattleActionStateCommand.as",
+      "lines": "89-97",
+      "fact": "读取当前回合 action.length，并按递增数组下标读取 action[i]，没有按左右阵营重新分组。"
+    },
+    {
+      "path": "C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\_work\\mb_script\\scripts\\com\\qq\\modules\\battle\\command\\BattleActionStateCommand.as",
+      "lines": "111-132",
+      "fact": "单个攻击构建 SerialPlan，按 action 数组的顺序 push 到当前回合计划队列。"
+    },
+    {
+      "path": "C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\_work\\mb_script\\scripts\\com\\qq\\modules\\battle\\command\\BattleActionStateCommand.as",
+      "lines": "237-246,249-257",
+      "fact": "actionRun 从计划队列 shift 取队首并执行；执行回调完成后再取下一项。"
+    },
+    {
+      "path": "C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\gamep_decompiled\\scripts\\com\\qq\\modules\\battle\\model\\BattleFightModel.as",
+      "lines": "314-320",
+      "fact": "getNextRound 从 fightReplay 数组 shift 取下一回合，按服务器给出的回合顺序播放。"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\Assets\\src\\PVZ\\Cmd\\Dto_FightRound.as",
+      "lines": "18-22,76-79,113",
+      "fact": "Dto_FightRound 的 field 2 是唯一 repeated action 数组，写入和解析均保留序列顺序。"
+    },
+    {
+      "path": "C:\\Users\\komi\\Documents\\Codex\\2026-09-29\\new-chat-3\\_work\\mb_script\\scripts\\com\\qq\\modules\\battle\\view\\BattleUILayerMediator.as",
+      "lines": "275,290",
+      "fact": "战斗界面分别显示 leftSide.totalSpeed 与 rightSide.totalSpeed，表明战报携带队伍总先攻用于显示；本条不能单独证明原服排序公式。"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\游戏维护归档\\最新修复清单\\战斗逻辑修复说明.txt",
+      "section": "原版资料与数值限制",
+      "fact": "此前修复记录明确说明没有原版服务端完整计算公式，本地实现不能称为原服数值精确复刻。"
+    }
+  ],
+  "conclusions": [
+    "保留的原版标记 SWF、当前普通文件名 SWF 和当前版本文件名 SWF 全文件 SHA256 一致。",
+    "客户端按服务端回合中的统一 action 序列逐次播放；客户端没有把两方行动重新分组。",
+    "一方全部卡牌先打完的行为应在本地服务器行动队列生成处修复，并同时用于胜负计算和回放。"
+  ],
+  "limits": [
+    "原版客户端协议和播放代码不包含原版服务器的完整行动排序公式。",
+    "不能仅凭客户端 totalSpeed 显示字段确认原服在总先攻相同时、死亡后、同阵营内部的完整排序细则。",
+    "双方逐卡交替是此次用户明确指定的修复目标；修复可保留现有本地总先攻比较及阵内次序，但不得宣称它们已被原服务器源码证实。",
+    "保留文件的 orig 名称及所在旧工作区是现有证据来源，不构成官方来源或最初下载文件的额外认证。"
+  ]
+}

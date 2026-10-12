@@ -1,0 +1,14 @@
+{
+  "issue": "economy-05",
+  "files": [
+    {
+      "relative": "pvzol本地/PvZ-Server-PoC/pvz_poc_server.py",
+      "old_sha256": "a091de9341cf5331e87dea37f470f83aee17594876c8b139a9a8da4c27e4b35c",
+      "new_sha256": "a6891ae4597bc0168df76733fe8049058a7b7d89c9903b2eb0a8037a37002ea6",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\PvZ-Server-PoC\\pvz_poc_server.py"
+    }
+  ],
+  "tests": [
+    "test_18_lab_secondary: four real upgrades + exact effective stat units passed"
+  ]
+}

@@ -1,0 +1,4 @@
+backup=D:\pvzol本地最新最新ol\pvzol本地\_codex_arena_bg_backup_20261003_030522
+added=webroot\swf\arenaEntrance\bg.jpg
+added=webroot\swf\rankArena\bg.png
+arena_bottom.swf=unchanged

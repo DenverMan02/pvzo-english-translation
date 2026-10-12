@@ -1,0 +1,262 @@
+[
+  {
+    "bottle": 1,
+    "icon": 10000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor32_01_67d6726eddc451dac2281d5ba1fd5266d11632a3.jpg",
+    "native": true
+  },
+  {
+    "bottle": 2,
+    "icon": 20000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor32_02_1eda2dd3572c11df3a0fae93742762d0f603c2ac.jpg",
+    "native": true
+  },
+  {
+    "bottle": 3,
+    "icon": 30000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor32_03_ba5fcf385343fbf27cf2b793a77eca8064388fac.jpg",
+    "native": true
+  },
+  {
+    "bottle": 4,
+    "icon": 40000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor32_04_2a4d4d58d109b3de8d66f5d8dbbf6c81810a4cac.jpg",
+    "native": true
+  },
+  {
+    "bottle": 5,
+    "icon": 50000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor32_05_5b7c412f070828389bd4cda4af99a9014d08f1ad.jpg",
+    "native": true
+  },
+  {
+    "bottle": 6,
+    "icon": 60000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor32_06_46f0e587e950352a0cb834b84443fbf2b3118bad.jpg",
+    "native": true
+  },
+  {
+    "bottle": 7,
+    "icon": 70000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor32_07_f1b2141349540923d1b172ce8558d109b2de49ad.jpg",
+    "native": true
+  },
+  {
+    "bottle": 8,
+    "icon": 80000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor32_08_3ea40633c895d143fbaef59364f082025baf07ad.jpg",
+    "native": true
+  },
+  {
+    "bottle": 10,
+    "icon": 100000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor32_09_1ed32803918fa0ec921f75bd319759ee3c6ddbae.jpg",
+    "native": true
+  },
+  {
+    "bottle": 11,
+    "icon": 110000,
+    "native_components": [
+      "floor32_02",
+      "floor33_01",
+      "floor32_02",
+      2
+    ],
+    "native": false
+  },
+  {
+    "bottle": 12,
+    "icon": 120000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor33_01_ef106f7eca806538df3fb5a380dda144ac3482a9.jpg",
+    "native": true
+  },
+  {
+    "bottle": 13,
+    "icon": 130000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor33_02_078a41510fb30f24104efdb3df95d143ac4b03a9.jpg",
+    "native": true
+  },
+  {
+    "bottle": 14,
+    "icon": 140000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor33_03_29f86dfb43166d22eca30424512309f79152d2aa.jpg",
+    "native": true
+  },
+  {
+    "bottle": 15,
+    "icon": 150000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor33_04_dbec111b9d16fdfa55b8d75ea38f8c5495ee7baa.jpg",
+    "native": true
+  },
+  {
+    "bottle": 16,
+    "icon": 160000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor33_05_a83c5894a4c27d1eeff12a740cd5ad6edcc438aa.jpg",
+    "native": true
+  },
+  {
+    "bottle": 17,
+    "icon": 170000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor33_06_841a5918367adab433070af39cd4b31c8601e4ab.jpg",
+    "native": true
+  },
+  {
+    "bottle": 20,
+    "icon": 200000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor33_07_4ad00a39b6003af3fd6dcdd0222ac65c1138b6ab.jpg",
+    "native": true
+  },
+  {
+    "bottle": 21,
+    "icon": 210000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor33_08_75200254564e9258dee2975e8b82d158cdbf4eab.jpg",
+    "native": true
+  },
+  {
+    "bottle": 22,
+    "icon": 220000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor33_09_ac15d624ab18972b9fec117af1cd7b899f510aab.jpg",
+    "native": true
+  },
+  {
+    "bottle": 23,
+    "icon": 230000,
+    "native_components": [
+      "floor32_04",
+      "floor33_09",
+      "floor34_08",
+      3
+    ],
+    "native": false
+  },
+  {
+    "bottle": 24,
+    "icon": 240000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor34_01_4ff95d8ba61ea8d3e0f265b4800a304e241f58b5.jpg",
+    "native": true
+  },
+  {
+    "bottle": 25,
+    "icon": 250000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor34_02_76452d1fbe096b6347c94fe01b338744eaf8acb6.jpg",
+    "native": true
+  },
+  {
+    "bottle": 26,
+    "icon": 260000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor34_03_7deae601213fb80e9201706721d12f2eb83894b6.jpg",
+    "native": true
+  },
+  {
+    "bottle": 27,
+    "icon": 270000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor34_04_0e889810b912c8fcf720e77deb039245d78821b6.jpg",
+    "native": true
+  },
+  {
+    "bottle": 30,
+    "icon": 300000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor34_05_76566c19ebc4b7452b47a6a6d8fc1e178b8215b6.jpg",
+    "native": true
+  },
+  {
+    "bottle": 31,
+    "icon": 310000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor34_06_664f8e0fd9f9d72adab701adc32a2834359bbbb7.jpg",
+    "native": true
+  },
+  {
+    "bottle": 32,
+    "icon": 320000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor34_07_70d44e2397dda1447ada7d02a5b7d0a20df486b7.jpg",
+    "native": true
+  },
+  {
+    "bottle": 33,
+    "icon": 330000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor34_08_87ee7464034f78f096d98b436e310a55b2191cb7.jpg",
+    "native": true
+  },
+  {
+    "bottle": 34,
+    "icon": 340000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor34_09_3f15b2224f4a20a4e3cc2d7787529822730ed0b0.jpg",
+    "native": true
+  },
+  {
+    "bottle": 35,
+    "icon": 350000,
+    "native_components": [
+      "floor32_07",
+      "floor35_01",
+      "floor35_07",
+      4
+    ],
+    "native": false
+  },
+  {
+    "bottle": 36,
+    "icon": 360000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor35_01_7b0bf7381f30e9243e6b8d815b086e061c95f7b3.jpg",
+    "native": true
+  },
+  {
+    "bottle": 37,
+    "icon": 370000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor35_02_9553ea2ac65c10389fb1df72a5119313b17e89b3.jpg",
+    "native": true
+  },
+  {
+    "bottle": 40,
+    "icon": 400000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor35_03_1b0a163d70cf3bc7b4cedc5cc600baa1cc112ab3.jpg",
+    "native": true
+  },
+  {
+    "bottle": 41,
+    "icon": 410000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor35_04_04f32836afc379316ea69799fcc4b74542a911b3.jpg",
+    "native": true
+  },
+  {
+    "bottle": 42,
+    "icon": 420000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor35_05_c20ab463f6246b60bfc0a3c4fcf81a4c500fa2bc.jpg",
+    "native": true
+  },
+  {
+    "bottle": 43,
+    "icon": 430000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor35_06_4c4dfa1f95cad1c88372ed97683e6709c83d51bc.jpg",
+    "native": true
+  },
+  {
+    "bottle": 44,
+    "icon": 440000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor35_07_ab29bf59252dd42a95c0101b143b5bb5c8eab8bd.jpg",
+    "native": true
+  },
+  {
+    "bottle": 45,
+    "icon": 450000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor35_08_d3522cdeb48f8c546a1ad49f2d292df5e1fe7fbd.jpg",
+    "native": true
+  },
+  {
+    "bottle": 46,
+    "icon": 460000,
+    "source": "D:\\植物PVZ素材\\tieba\\实验室药品、素材\\floor35_09_fb977bc27d1ed21b30013f55ba6eddc450da3fbd.jpg",
+    "native": true
+  },
+  {
+    "bottle": 47,
+    "icon": 470000,
+    "native_components": [
+      "floor35_09",
+      "floor35_09",
+      "floor34_09",
+      5
+    ],
+    "native": false
+  }
+]

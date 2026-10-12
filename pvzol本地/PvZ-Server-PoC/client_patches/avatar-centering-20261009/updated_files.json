@@ -1,0 +1,101 @@
+{
+  "backup": "D:\\pvzol本地最新最新ol\\修复备份\\20261009-详情头像精确居中-095344",
+  "changes": [
+    {
+      "file": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p.swf",
+      "old_sha256": "9032470712748a889dfbe538a2dbe18afb63b86be5e65a897b9d3b1a7461e949",
+      "new_sha256": "571f9d79a72a01d56f1f771b4f1c26710df485c471bcfb7cc4f51f6c2ec32121"
+    },
+    {
+      "file": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_041205df680ecb63e34f6da5bacbfcf1.swf",
+      "old_sha256": "9032470712748a889dfbe538a2dbe18afb63b86be5e65a897b9d3b1a7461e949",
+      "new_sha256": "571f9d79a72a01d56f1f771b4f1c26710df485c471bcfb7cc4f51f6c2ec32121"
+    },
+    {
+      "file": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_04d85414d9f7ef6add82a525a0475506.swf",
+      "old_sha256": "9032470712748a889dfbe538a2dbe18afb63b86be5e65a897b9d3b1a7461e949",
+      "new_sha256": "571f9d79a72a01d56f1f771b4f1c26710df485c471bcfb7cc4f51f6c2ec32121"
+    },
+    {
+      "file": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_2f31414da4c6b9aff9be96e68029c65b.swf",
+      "old_sha256": "9032470712748a889dfbe538a2dbe18afb63b86be5e65a897b9d3b1a7461e949",
+      "new_sha256": "571f9d79a72a01d56f1f771b4f1c26710df485c471bcfb7cc4f51f6c2ec32121"
+    },
+    {
+      "file": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_867dbb7ffa06e76c8e280fe312d5a976.swf",
+      "old_sha256": "9032470712748a889dfbe538a2dbe18afb63b86be5e65a897b9d3b1a7461e949",
+      "new_sha256": "571f9d79a72a01d56f1f771b4f1c26710df485c471bcfb7cc4f51f6c2ec32121"
+    },
+    {
+      "file": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_c874590c49beaaf924c0395036c85119.swf",
+      "old_sha256": "9032470712748a889dfbe538a2dbe18afb63b86be5e65a897b9d3b1a7461e949",
+      "new_sha256": "571f9d79a72a01d56f1f771b4f1c26710df485c471bcfb7cc4f51f6c2ec32121"
+    },
+    {
+      "file": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_cb7af05d4d2ddbe204ea4926772f3b92.swf",
+      "old_sha256": "9032470712748a889dfbe538a2dbe18afb63b86be5e65a897b9d3b1a7461e949",
+      "new_sha256": "571f9d79a72a01d56f1f771b4f1c26710df485c471bcfb7cc4f51f6c2ec32121"
+    },
+    {
+      "file": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_ddd80a273668f4e746bbaa442bfc55f0.swf",
+      "old_sha256": "9032470712748a889dfbe538a2dbe18afb63b86be5e65a897b9d3b1a7461e949",
+      "new_sha256": "571f9d79a72a01d56f1f771b4f1c26710df485c471bcfb7cc4f51f6c2ec32121"
+    },
+    {
+      "file": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_e90cc556a5e9f63b73ffa23b6fe21c34.swf",
+      "old_sha256": "9032470712748a889dfbe538a2dbe18afb63b86be5e65a897b9d3b1a7461e949",
+      "new_sha256": "571f9d79a72a01d56f1f771b4f1c26710df485c471bcfb7cc4f51f6c2ec32121"
+    },
+    {
+      "file": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_n.swf",
+      "old_sha256": "b3e9dad1c05dcb1149253919dc224e21720159deb1e337ddbb7c529ce089893c",
+      "new_sha256": "df6f8ca784c8f955daa7cc1b22fc09af41aeed7ad5a028b142b9b39a5ccd11b1"
+    },
+    {
+      "file": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_n_4d53e0052a8b9a17f19cf626f29c10bc.swf",
+      "old_sha256": "b3e9dad1c05dcb1149253919dc224e21720159deb1e337ddbb7c529ce089893c",
+      "new_sha256": "df6f8ca784c8f955daa7cc1b22fc09af41aeed7ad5a028b142b9b39a5ccd11b1"
+    },
+    {
+      "file": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game.swf",
+      "old_sha256": "b3e9dad1c05dcb1149253919dc224e21720159deb1e337ddbb7c529ce089893c",
+      "new_sha256": "df6f8ca784c8f955daa7cc1b22fc09af41aeed7ad5a028b142b9b39a5ccd11b1"
+    }
+  ],
+  "verification": [
+    {
+      "source": "Game_p.swf",
+      "sha256_before": "9032470712748a889dfbe538a2dbe18afb63b86be5e65a897b9d3b1a7461e949",
+      "sha256_after": "571f9d79a72a01d56f1f771b4f1c26710df485c471bcfb7cc4f51f6c2ec32121",
+      "changed_method": "com.qq.modules.mapinfo.view.components.MapInfoRoleWndCE.InitializeComponent",
+      "changed_method_id": 39289,
+      "total_method_bodies_verified": 47299,
+      "before": {
+        "x": 5,
+        "y": 5
+      },
+      "after": {
+        "x": 6.5,
+        "y": 6.5
+      },
+      "abc_growth_bytes": 2
+    },
+    {
+      "source": "Game_n.swf",
+      "sha256_before": "b3e9dad1c05dcb1149253919dc224e21720159deb1e337ddbb7c529ce089893c",
+      "sha256_after": "df6f8ca784c8f955daa7cc1b22fc09af41aeed7ad5a028b142b9b39a5ccd11b1",
+      "changed_method": "com.qq.modules.mapinfo.view.components.MapInfoRoleWndCE.InitializeComponent",
+      "changed_method_id": 38425,
+      "total_method_bodies_verified": 46031,
+      "before": {
+        "x": 5,
+        "y": 5
+      },
+      "after": {
+        "x": 6.5,
+        "y": 6.5
+      },
+      "abc_growth_bytes": 2
+    }
+  ]
+}

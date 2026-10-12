@@ -1,0 +1,49 @@
+{
+  "deployed_at": "2026-10-11T07:44:32",
+  "server_root": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC",
+  "backup_root": "D:\\pvzol本地最新最新ol\\修复备份\\竞技场随机刷新与即时结算-20261011-074432",
+  "save_unchanged": true,
+  "save_file_written": false,
+  "files": [
+    {
+      "path": "pvz_poc_server.py",
+      "original_sha256": "0EDCA5B9FF2B881991A6433B4AF92EFABCF7831B9855C60D92AB5754FCC25A76",
+      "new_sha256": "CDBB22DEF3EC2AD0A518638850A74F92C620364818B6CC18E98563B590D734D9"
+    },
+    {
+      "path": "ladder_rules_repairs_20261011.py",
+      "original_sha256": "457D89F93DE5BB32C7D20C12300F8AF41ACE5DFA4EF28CC3591A955721A36898",
+      "new_sha256": "49E8B37F9F30CA984E89E4D48DFF3980A8A9AE5CABBF497772B9184111AD0E2F"
+    },
+    {
+      "path": "arena_consistency_repairs_20261011.py",
+      "original_sha256": "19BA462CF92F1781437BA86C03179BBBE3D17C58D990DA1D4F6A7319C9D7DE51",
+      "new_sha256": "5FDA6BC11DBEF2F974DDA3D6BBBB9FD7420AA5B877002B927361180AB7093E5A"
+    },
+    {
+      "path": "cross_arena_refresh_repairs_20261011.py",
+      "original_sha256": null,
+      "new_sha256": "9DD18C24BD98B03513C4CD86B401A7F37D926A0989FB9402E37AE57D90E7B263"
+    },
+    {
+      "path": "tests\\test_arena_consistency_20261011.py",
+      "original_sha256": "F325F49C5DC27C7CD035803170A7725F6700E4BB25041BE98DCBF8EE63479784",
+      "new_sha256": "69B4782610826A0C4639A043BEE26351712D30F4786AD448A3E533AC5935E9A7"
+    },
+    {
+      "path": "tests\\test_arena_refresh_20261011.py",
+      "original_sha256": null,
+      "new_sha256": "61CA222646024D2646F71FD715CD6B6D6B87CCBB0E562F8DD38465F625B85D20"
+    },
+    {
+      "path": "tests\\test_cross_arena_tcp_20261011.py",
+      "original_sha256": null,
+      "new_sha256": "C752A6DC58E018C9E6DA4C5381C8E51DE7CA8F0495649A148D4A935663BB88EB"
+    },
+    {
+      "path": "tests\\test_ordinary_arena_tcp_20261011.py",
+      "original_sha256": null,
+      "new_sha256": "4072A0310CB9B4E8E877E603653F7A72C032F67B6BD9F95FC5A48CBF9FA551F8"
+    }
+  ]
+}

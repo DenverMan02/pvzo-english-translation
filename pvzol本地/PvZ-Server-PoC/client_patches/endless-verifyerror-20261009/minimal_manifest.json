@@ -1,0 +1,23 @@
+{
+  "original_sha256": "fe207771de5e16a39d815e485f9f88ab28acebaf0917b466daf9082cc8e46ca2",
+  "patched_sha256": "f90140d8b9b1f6f4bfdfc3262c217904a555c9948f8ff824b047ccd093f89580",
+  "methods": [
+    {
+      "classname": "com.qq.modules.endlessFuben.view.EndlessFubenViewMediator",
+      "name": "onClickBtnRefresh",
+      "id": 177
+    },
+    {
+      "classname": "com.qq.modules.endlessFuben.model.EndlessFubenModel",
+      "name": "getLeftResetTimes",
+      "id": 75
+    }
+  ],
+  "body_count": 383,
+  "unchanged_body_count": 381,
+  "changed_tooltip_string_index": 548,
+  "appended_strings": [
+    1054,
+    1055
+  ]
+}

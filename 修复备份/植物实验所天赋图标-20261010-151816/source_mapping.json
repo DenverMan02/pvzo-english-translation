@@ -1,0 +1,1519 @@
+[
+  {
+    "talent_id": 1101,
+    "stage_id": 1,
+    "plant_id": 1100,
+    "plant": "Sunflower",
+    "talent_index": 1,
+    "name": "赢在起点",
+    "icon_id": 1101,
+    "original": {
+      "archive_entry": "第一章/Sunflower/1.png",
+      "size": [
+        73,
+        71
+      ],
+      "sha256": "90b739aaef932b23a33519040f10264878899f8cf36d4748e3c1aee9d2d56b8f",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Sunflower/1.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Sunflower/超清512/1.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "d4aa6fd0d3409a5aee5cd02c95c6b0f45fdaa65edb6bd3d07e96ce1c95984eb9",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Sunflower/1.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1101.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "d3c522e2390620bfc54b42aed4ad540ccbc48f4079594858f820c6fe903c787a"
+      }
+    ]
+  },
+  {
+    "talent_id": 1102,
+    "stage_id": 1,
+    "plant_id": 1100,
+    "plant": "Sunflower",
+    "talent_index": 2,
+    "name": "买三送一",
+    "icon_id": 1102,
+    "original": {
+      "archive_entry": "第一章/Sunflower/2.png",
+      "size": [
+        80,
+        80
+      ],
+      "sha256": "3997b102c1fce96a44fe8494a9a0136fcdc540ee08bd7ef1d148b925d3765f6b",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Sunflower/2.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Sunflower/超清512/2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "5cce32c772a889709d9f10ecae65377f1e8cb108f81ec8a2effc565528a77e8d",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Sunflower/2.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1102.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "321c7e3920ba33d6c8013b6fca822cb06a3cf34607f5b33a023518b22773dae6"
+      }
+    ]
+  },
+  {
+    "talent_id": 1103,
+    "stage_id": 1,
+    "plant_id": 1100,
+    "plant": "Sunflower",
+    "talent_index": 3,
+    "name": "塞翁失马",
+    "icon_id": 1103,
+    "original": {
+      "archive_entry": "第一章/Sunflower/3.png",
+      "size": [
+        83,
+        79
+      ],
+      "sha256": "1e16c7ec69592bde07cd7ec6816d9d7918943891c312cfd518aa544cc3e62644",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Sunflower/3.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Sunflower/超清512/3.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "d1fdabd88f4049dfa83608530c446a2c7089fd8344bae139aff16b1dd23aa547",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Sunflower/3.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1103.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "c878aab1831401f5f20867394282aa55f8c2eb3154f47418df216bebe09e6635"
+      }
+    ]
+  },
+  {
+    "talent_id": 1104,
+    "stage_id": 1,
+    "plant_id": 1100,
+    "plant": "Sunflower",
+    "talent_index": 4,
+    "name": "超值回馈",
+    "icon_id": 1104,
+    "original": {
+      "archive_entry": "第一章/Sunflower/4 .png",
+      "size": [
+        79,
+        80
+      ],
+      "sha256": "366627c935d4c089fbd30a793551e688a7cd01adf68ed654a0b651df3727573d",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Sunflower/4 .png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Sunflower/超清512/4 .png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "a5b30f26b4c559b8e9903625f9cf4b2883a848311eaf90b2d90c5c7b23235221",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Sunflower/4 .png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1104.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "6588ce9f6752476104ac99e89a0de9a53f486d6fa7ebe1cbce35a2323c95db43"
+      }
+    ]
+  },
+  {
+    "talent_id": 1105,
+    "stage_id": 1,
+    "plant_id": 1100,
+    "plant": "Sunflower",
+    "talent_index": 5,
+    "name": "同胞兄弟",
+    "icon_id": 1105,
+    "original": {
+      "archive_entry": "第一章/Sunflower/5.png",
+      "size": [
+        80,
+        81
+      ],
+      "sha256": "b3fe39dbcb3b6364172c872cb88e37342310df9eae0d05e13f6f3e0528bf7601",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Sunflower/5.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Sunflower/超清512/5.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "d5fc040d1d110dbf096de36f9200c0257157f696e2eca08ce09b8c8df5ede908",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Sunflower/5.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1105.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "290e13bd2bf4edface7e270b4fe0536aed27d47b5df80f917caa156d4a25c35a"
+      }
+    ]
+  },
+  {
+    "talent_id": 1201,
+    "stage_id": 1,
+    "plant_id": 1200,
+    "plant": "Peashooter",
+    "talent_index": 1,
+    "name": "好的开始",
+    "icon_id": 1201,
+    "original": {
+      "archive_entry": "第一章/Peashooter/1.png",
+      "size": [
+        126,
+        124
+      ],
+      "sha256": "b3b85e8f30b87242ef1852fdce6e7b3526bb34957472665d9d11a71c05543bb9",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Peashooter/1.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Peashooter/超清512/1.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "641ae375bc12132e8f45f7b9655cbee2942619ed62c59264a0d4e1a7a4cc3f19",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Peashooter/1.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1201.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "566b077c9859ac7bb5ce6fbaef493bed5c746b56164e6d9d43239f59299778a5"
+      }
+    ]
+  },
+  {
+    "talent_id": 1202,
+    "stage_id": 1,
+    "plant_id": 1200,
+    "plant": "Peashooter",
+    "talent_index": 2,
+    "name": "成吨子弹",
+    "icon_id": 1202,
+    "original": {
+      "archive_entry": "第一章/Peashooter/2.png",
+      "size": [
+        125,
+        127
+      ],
+      "sha256": "cd7c33a235b59392b4e5522214f0d5e8aa0c0565fd55e3e18c9c932d9f312c2e",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Peashooter/2.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Peashooter/超清512/2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "905918675b44b12de44821d20604056a24206e5e829aea8d107118afedeab81e",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Peashooter/2.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1202.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "dc559b49be52694f5aa5a3c9c9f5e3f0a365b14de27e7e08cc81929d6340b774"
+      }
+    ]
+  },
+  {
+    "talent_id": 1203,
+    "stage_id": 1,
+    "plant_id": 1200,
+    "plant": "Peashooter",
+    "talent_index": 3,
+    "name": "好事成双",
+    "icon_id": 1203,
+    "original": {
+      "archive_entry": "第一章/Peashooter/3.png",
+      "size": [
+        122,
+        123
+      ],
+      "sha256": "32814139bfffb726401ff9b96816abf4c70af50f0c81010b075eebd01cb1bfba",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Peashooter/3.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Peashooter/超清512/3.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "fe6a762f9bc23e7d48cbf198c4e164c9441e2fe8ac837bd15894157413946261",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Peashooter/3.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1203.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "08e62b830562fa8e8ef0c5e953b7d7b843a5f8b31541ba2caee7f15810f9cfd7"
+      }
+    ]
+  },
+  {
+    "talent_id": 1204,
+    "stage_id": 1,
+    "plant_id": 1200,
+    "plant": "Peashooter",
+    "talent_index": 4,
+    "name": "以战养战",
+    "icon_id": 1204,
+    "original": {
+      "archive_entry": "第一章/Peashooter/4.png",
+      "size": [
+        124,
+        121
+      ],
+      "sha256": "1354f7dbe78536696866bb37103caa09971ea83ad2fa885c988b6316afb22e2f",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Peashooter/4.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Peashooter/超清512/4.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "ecd34950ab9d969bbb9d00bae76388c3dffba2c28061419da8f91cb714935168",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Peashooter/4.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1204.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "1029059183fd9457fee95febbac477354f5e899e2e460affbb9da0946f430cfc"
+      }
+    ]
+  },
+  {
+    "talent_id": 1301,
+    "stage_id": 1,
+    "plant_id": 1300,
+    "plant": "Wallnut",
+    "talent_index": 1,
+    "name": "生命接力",
+    "icon_id": 1301,
+    "original": {
+      "archive_entry": "第一章/Wallnut/1.png",
+      "size": [
+        127,
+        123
+      ],
+      "sha256": "a5a53129396deb9463df3a23c3e38e5a55b9cf87e26ff8a08455a8cd04ad6105",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Wallnut/1.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Wallnut/超清512/1.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "83c3ae98470c08c13045c99aacec5e250467ad8e0ff35100ab67b5a62bd8f882",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Wallnut/1.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1301.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "abde7a7ecbe567998eb0b3636be23ceb797fb70dad7473342cbd7c89f14194be"
+      }
+    ]
+  },
+  {
+    "talent_id": 1302,
+    "stage_id": 1,
+    "plant_id": 1300,
+    "plant": "Wallnut",
+    "talent_index": 2,
+    "name": "强健体魄",
+    "icon_id": 1302,
+    "original": {
+      "archive_entry": "第一章/Wallnut/2.png",
+      "size": [
+        119,
+        120
+      ],
+      "sha256": "502cc71edf87ac40790cb66ebe7b7234b4367b9b243b30b5a23247987214ff9e",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Wallnut/2.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Wallnut/超清512/2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "0832419d2cc145fe3ed1f9a219b4db013467491158cec2882b3c55da597c5221",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Wallnut/2.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1302.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "18601f337eab1d46791d5fd4ffe342de801d8258dec6c9aee305d4d48f45e3bf"
+      }
+    ]
+  },
+  {
+    "talent_id": 1501,
+    "stage_id": 1,
+    "plant_id": 1500,
+    "plant": "Potato Mine",
+    "talent_index": 1,
+    "name": "快速武装",
+    "icon_id": 1501,
+    "original": {
+      "archive_entry": "第一章/Potato Mine/1.png",
+      "size": [
+        126,
+        129
+      ],
+      "sha256": "7a3f27c0871642bbfeb2ddc9a1415c5f308f4318486d87aef5550ab8aad77e61",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Potato Mine/1.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Potato Mine/超清512/1.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "3c3af204315a4172d58536a81afa57b14eb2b278438deb3c7da71e1fcf4b6d77",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Potato Mine/1.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1501.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "24986f0f38d0476440d54d7101d5d57e2aa592e5dfd82087b5d4530e5c6c72cd"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1501.jpg",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "13df007e11df5be5e719ec72952fa61667037b668ab4b1be9f1eb60adac0177c"
+      }
+    ]
+  },
+  {
+    "talent_id": 1502,
+    "stage_id": 1,
+    "plant_id": 1500,
+    "plant": "Potato Mine",
+    "talent_index": 2,
+    "name": "无本经营",
+    "icon_id": 1502,
+    "original": {
+      "archive_entry": "第一章/Potato Mine/2.png",
+      "size": [
+        124,
+        122
+      ],
+      "sha256": "bdbae60e707c7ce211b36b5a4d3a697a3af035c14a1b2d606cc989e7e36bf3e8",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Potato Mine/2.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Potato Mine/超清512/2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "a4e632a2354f0095a7ae7bee513f70a831c968caa57bf2c5a322b6326d4778d8",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Potato Mine/2.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1502.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "24986f0f38d0476440d54d7101d5d57e2aa592e5dfd82087b5d4530e5c6c72cd"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1502.jpg",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "13df007e11df5be5e719ec72952fa61667037b668ab4b1be9f1eb60adac0177c"
+      }
+    ]
+  },
+  {
+    "talent_id": 2101,
+    "stage_id": 1,
+    "plant_id": 3100,
+    "plant": "Bambruce",
+    "talent_index": 1,
+    "name": "强健体魄",
+    "icon_id": 2101,
+    "original": {
+      "archive_entry": "第一章/Bambruce/1.png",
+      "size": [
+        91,
+        88
+      ],
+      "sha256": "5b2f1143f7ca5b9ba2d61d7a650b4294d18e14cb5293195e8ca0f3107bae0655",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Bambruce/1.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Bambruce/超清512/1.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "a3b6741054c86a4a49d1546bac30b720a0fb5582f88049b78036ce5b83f30e6d",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Bambruce/1.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\2101.png",
+        "size": [
+          48,
+          50
+        ],
+        "sha256": "60015f49ab431c3bde96a5043bccf96a7236797396181c59a161875ecb6f54bd"
+      }
+    ]
+  },
+  {
+    "talent_id": 2102,
+    "stage_id": 1,
+    "plant_id": 3100,
+    "plant": "Bambruce",
+    "talent_index": 2,
+    "name": "精神抖擞",
+    "icon_id": 2102,
+    "original": {
+      "archive_entry": "第一章/Bambruce/2.png",
+      "size": [
+        88,
+        87
+      ],
+      "sha256": "7634bb88753c8dec547095446b6284622a7a089a8661e32a3b0316f7cf0e97fb",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Bambruce/2.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Bambruce/超清512/2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "16031c977c5b237cb722459010d854c3c4185ba1a1ec4abb913f2dff5e6e21bd",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Bambruce/2.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\2102.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "6df490752cf5441b1d02a0d7f6b4fcb418ea7967528d966a61c11865230081a9"
+      }
+    ]
+  },
+  {
+    "talent_id": 2103,
+    "stage_id": 1,
+    "plant_id": 3100,
+    "plant": "Bambruce",
+    "talent_index": 3,
+    "name": "粗枝大叶",
+    "icon_id": 2103,
+    "original": {
+      "archive_entry": "第一章/Bambruce/3.png",
+      "size": [
+        87,
+        86
+      ],
+      "sha256": "976cf3451952a9cd9a1141cb43ded2c40b4e9d473784169660f84a48b4181960",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Bambruce/3.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Bambruce/超清512/3.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "60405ccc484b0fdc7a18c8062cbc774473cb05cbf117ac9e22d0649eb745ae18",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Bambruce/3.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\2103.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "e9d74ba010707dc9aa9615752a38aaf5e2747c44bb33ee49fc8cb62a986d701b"
+      }
+    ]
+  },
+  {
+    "talent_id": 2104,
+    "stage_id": 1,
+    "plant_id": 3100,
+    "plant": "Bambruce",
+    "talent_index": 4,
+    "name": "生龙活虎",
+    "icon_id": 2104,
+    "original": {
+      "archive_entry": "第一章/Bambruce/4.png",
+      "size": [
+        86,
+        86
+      ],
+      "sha256": "43c249b4db32ee8648ffb4c078949d65e7ab37178111a1a3aae6e239bdd4d957",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Bambruce/4.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Bambruce/超清512/4.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "95b01d0475059fe77689717ad489509df9c356fd64403f37025de5187bbf4dfb",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Bambruce/4.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\2104.png",
+        "size": [
+          50,
+          51
+        ],
+        "sha256": "6e13cc9aa3871c604f5bfc0fb7eeb7c205efadaad8d5b87edf22dadcf37908bf"
+      }
+    ]
+  },
+  {
+    "talent_id": 2201,
+    "stage_id": 1,
+    "plant_id": 3200,
+    "plant": "Carrotillery",
+    "talent_index": 1,
+    "name": "强健体魄",
+    "icon_id": 2201,
+    "original": {
+      "archive_entry": "第一章/Carrotillery/1.png",
+      "size": [
+        90,
+        84
+      ],
+      "sha256": "759d9c0b8280a3124aff359135a6bb54f99c25c54c4a4428a4f7e22460f11498",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Carrotillery/1.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Carrotillery/超清512/1.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "fa2f4554f6d4d6712eea2445e156687e6f31998f5f43a8e0fb87b2d57ae6c905",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Carrotillery/1.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\2201.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "787bbe17283914879475729bbd2a7b7621e66e7d8efd7ccdbd27b4813668e93b"
+      }
+    ]
+  },
+  {
+    "talent_id": 2202,
+    "stage_id": 1,
+    "plant_id": 3200,
+    "plant": "Carrotillery",
+    "talent_index": 2,
+    "name": "精神抖擞",
+    "icon_id": 2202,
+    "original": {
+      "archive_entry": "第一章/Carrotillery/2.png",
+      "size": [
+        87,
+        90
+      ],
+      "sha256": "52ccc45f451ee6e42fa0ca361ef629b3086839ff3e9e8f3f9e8e07383a5b80a1",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Carrotillery/2.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Carrotillery/超清512/2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "c0d8508aaef42a2da52e1614daeb58e92defe5594a5aca94214edd156284f3d3",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Carrotillery/2.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\2202.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "51456d92b2527a2f42bca5ac46524bcd374e1fbfe259c96d157702a5a4e03bdd"
+      }
+    ]
+  },
+  {
+    "talent_id": 2203,
+    "stage_id": 1,
+    "plant_id": 3200,
+    "plant": "Carrotillery",
+    "talent_index": 3,
+    "name": "粗枝大叶",
+    "icon_id": 2203,
+    "original": {
+      "archive_entry": "第一章/Carrotillery/3.png",
+      "size": [
+        87,
+        88
+      ],
+      "sha256": "7dc14119db904813e3ef48cb5f7f3456df334a831c50a00c1d9a67e59cd04f2b",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Carrotillery/3.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Carrotillery/超清512/3.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "82d7769968cb69b4ac47441dc2a55c618289794a0a2d287cb0ca4cec09c7cb6a",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Carrotillery/3.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\2203.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "6eff0c5b2934967a7526c4cf77c2633618f4337230168a849fa571776a2d6e6b"
+      }
+    ]
+  },
+  {
+    "talent_id": 2204,
+    "stage_id": 1,
+    "plant_id": 3200,
+    "plant": "Carrotillery",
+    "talent_index": 4,
+    "name": "双发导弹",
+    "icon_id": 2204,
+    "original": {
+      "archive_entry": "第一章/Carrotillery/4.png",
+      "size": [
+        85,
+        87
+      ],
+      "sha256": "682b4bbfb6f2c199bdb059f98a20a2245f7df7244310444025c28103624a4ff7",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Carrotillery/4.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Carrotillery/超清512/4.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "404f04894cec6b7b8855d6db7c5ae4cc01b86cf9d10602c0dadaa43e1c81a954",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Carrotillery/4.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\2204.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "30cd7433d98bf5121459c2fbb43c35cc8cae5e15c90cd3be2cbeefe6f7720254"
+      }
+    ]
+  },
+  {
+    "talent_id": 2001,
+    "stage_id": 1,
+    "plant_id": 4700,
+    "plant": "Pomegranate-pult",
+    "talent_index": 1,
+    "name": "人品爆发",
+    "icon_id": 2001,
+    "original": {
+      "archive_entry": "第一章/Pomegranate-pult/1.png",
+      "size": [
+        89,
+        85
+      ],
+      "sha256": "b139e45d43ce8b787f754c39c119f11618d7608c3e1c512de1563f1202b4ea4d",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Pomegranate-pult/1.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Pomegranate-pult/超清512/1.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "af038f3b0eb431cc511759a7c8f9227c882c57db9b2ee26bb460cb4757b6ec38",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Pomegranate-pult/1.png"
+    },
+    "existing": []
+  },
+  {
+    "talent_id": 2002,
+    "stage_id": 1,
+    "plant_id": 4700,
+    "plant": "Pomegranate-pult",
+    "talent_index": 2,
+    "name": "减速魔法",
+    "icon_id": 2002,
+    "original": {
+      "archive_entry": "第一章/Pomegranate-pult/2.png",
+      "size": [
+        85,
+        80
+      ],
+      "sha256": "3930332f9faae45b0ace3b89b36f29487fd9ebffb6e9e3f7181315c319d9437c",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Pomegranate-pult/2.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Pomegranate-pult/超清512/2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "9408c4859b82905f0871dc61acc4d68c1222ea75214451450b50df7e536aa0bf",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Pomegranate-pult/2.png"
+    },
+    "existing": []
+  },
+  {
+    "talent_id": 2003,
+    "stage_id": 1,
+    "plant_id": 4700,
+    "plant": "Pomegranate-pult",
+    "talent_index": 3,
+    "name": "跳楼降价",
+    "icon_id": 2003,
+    "original": {
+      "archive_entry": "第一章/Pomegranate-pult/3.png",
+      "size": [
+        84,
+        85
+      ],
+      "sha256": "8ca2861a7db2ac9913d52e550f3117c781e80506a83e73737fa373f65cc4e112",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Pomegranate-pult/3.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Pomegranate-pult/超清512/3.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "c4cee3b54b1cf9118450e4b7c8ada91d29354deaf018ff78b5446efee49c3998",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Pomegranate-pult/3.png"
+    },
+    "existing": []
+  },
+  {
+    "talent_id": 2301,
+    "stage_id": 1,
+    "plant_id": 3300,
+    "plant": "Dandelion",
+    "talent_index": 1,
+    "name": "强健体魄",
+    "icon_id": 2301,
+    "original": {
+      "archive_entry": "第一章/Dandelion/1.png",
+      "size": [
+        89,
+        88
+      ],
+      "sha256": "9aee522b066e92007e067cb3ed58d6343a86a28ae4a53fdd7b1dbf5c69244bf9",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Dandelion/1.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Dandelion/超清512/1.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "6780c535fe93b0be3cf7398dae9df62e08895253b13f1cdc879550743d074236",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Dandelion/1.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\2301.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "93bf203cfc46ebcba1a3bbe6ad80206d7793ab13d3f9289fc2fa4be8323220d8"
+      }
+    ]
+  },
+  {
+    "talent_id": 2302,
+    "stage_id": 1,
+    "plant_id": 3300,
+    "plant": "Dandelion",
+    "talent_index": 2,
+    "name": "精神抖擞",
+    "icon_id": 2302,
+    "original": {
+      "archive_entry": "第一章/Dandelion/2.png",
+      "size": [
+        85,
+        82
+      ],
+      "sha256": "af0e826c7632b32914f0396119ecfdfd8e99d19f9662960b2a9a01eb51232446",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Dandelion/2.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Dandelion/超清512/2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "7365d02a6186c5b0babcc685e4b992cb486046078757cf9a1912b1474c665c38",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Dandelion/2.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\2302.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "a901d99c655b55b0f144a2680ea6b86b3a70cdd0e11aab32018b331e836b1345"
+      }
+    ]
+  },
+  {
+    "talent_id": 2303,
+    "stage_id": 1,
+    "plant_id": 3300,
+    "plant": "Dandelion",
+    "talent_index": 3,
+    "name": "粗枝大叶",
+    "icon_id": 2303,
+    "original": {
+      "archive_entry": "第一章/Dandelion/3.png",
+      "size": [
+        86,
+        83
+      ],
+      "sha256": "29e4b4532feeded8e7243eeffea6a074fb379f0b9f56262d91e325db0e259af7",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Dandelion/3.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Dandelion/超清512/3.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "767cfffe99ef4f50a5ff0d6b9ba50ec555e965625f05ff8ee925eb6038ea7346",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Dandelion/3.png"
+    },
+    "existing": []
+  },
+  {
+    "talent_id": 2304,
+    "stage_id": 1,
+    "plant_id": 3300,
+    "plant": "Dandelion",
+    "talent_index": 4,
+    "name": "生龙活虎",
+    "icon_id": 2304,
+    "original": {
+      "archive_entry": "第一章/Dandelion/4.png",
+      "size": [
+        86,
+        82
+      ],
+      "sha256": "15b1724b149fbbd855ac50f637d40cb3fb860b2d0ebbc1308cacc9117ae4a9e8",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Dandelion/4.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Dandelion/超清512/4.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "b936f1672e7eb904810af83483c97ea772d4b7db68bd1708260f927159d204aa",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Dandelion/4.png"
+    },
+    "existing": []
+  },
+  {
+    "talent_id": 2401,
+    "stage_id": 1,
+    "plant_id": 3600,
+    "plant": "Venus Flytrap",
+    "talent_index": 1,
+    "name": "提高防御",
+    "icon_id": 2401,
+    "original": {
+      "archive_entry": "第一章/Venus Flytrap/1.png",
+      "size": [
+        105,
+        106
+      ],
+      "sha256": "fc4604f791fd35301d274caca7528b692a0ab6e92119c70f26d546b0997453a2",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Venus Flytrap/1.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Venus Flytrap/超清512/1.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "fe3f9c047ca8716694564c498011ffcfdd49f1b5e73a5073dcea1dab2adb24e9",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Venus Flytrap/1.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\2401.png",
+        "size": [
+          48,
+          49
+        ],
+        "sha256": "f71392729a2b2f02ff75854735dc6f9fde651d26a1db58fb9df4791851a14d4b"
+      }
+    ]
+  },
+  {
+    "talent_id": 2402,
+    "stage_id": 1,
+    "plant_id": 3600,
+    "plant": "Venus Flytrap",
+    "talent_index": 2,
+    "name": "锋利尖牙",
+    "icon_id": 2402,
+    "original": {
+      "archive_entry": "第一章/Venus Flytrap/2.png",
+      "size": [
+        106,
+        106
+      ],
+      "sha256": "eb43f68249dc8b63c6b5190f9af88ec54f9c29720689c8fd5634a3b3f094a91b",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Venus Flytrap/2.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Venus Flytrap/超清512/2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "cff52e9bad3442a0cf7dc1d928eaa807efc3680f43a767bd11234c2027fc90d8",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Venus Flytrap/2.png"
+    },
+    "existing": []
+  },
+  {
+    "talent_id": 2403,
+    "stage_id": 1,
+    "plant_id": 3600,
+    "plant": "Venus Flytrap",
+    "talent_index": 3,
+    "name": "刀锋利齿",
+    "icon_id": 2403,
+    "original": {
+      "archive_entry": "第一章/Venus Flytrap/3.png",
+      "size": [
+        104,
+        106
+      ],
+      "sha256": "35fdb3491a0eebcacef71519f8e6c9654d1b93f0b78f0d61cc43976a8c88ab14",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Venus Flytrap/3.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Venus Flytrap/超清512/3.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "f04e939d3dfba41f0f39df062d6134796768542acb14fae454e0f3bcd1a7a74c",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Venus Flytrap/3.png"
+    },
+    "existing": []
+  },
+  {
+    "talent_id": 2501,
+    "stage_id": 1,
+    "plant_id": 3400,
+    "plant": "Wax Gourd",
+    "talent_index": 1,
+    "name": "快速生长",
+    "icon_id": 2501,
+    "original": {
+      "archive_entry": "第一章/Wax Gourd/1.png",
+      "size": [
+        106,
+        103
+      ],
+      "sha256": "8a5877b09daf46f952ad0959799c70906bfb50acf87c952f7e77f16346fcef42",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Wax Gourd/1.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Wax Gourd/超清512/1.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "5518cdba03a1c45e34bfb813732591ab84fc1dc8b8fc28abab4a7443e41bbb59",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Wax Gourd/1.png"
+    },
+    "existing": []
+  },
+  {
+    "talent_id": 2502,
+    "stage_id": 1,
+    "plant_id": 3400,
+    "plant": "Wax Gourd",
+    "talent_index": 2,
+    "name": "冬瓜爆炸",
+    "icon_id": 2502,
+    "original": {
+      "archive_entry": "第一章/Wax Gourd/2.png",
+      "size": [
+        101,
+        101
+      ],
+      "sha256": "962b171c4ca081f100587530e3778b573bb87906c8c440e161f9e3347b2ee104",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Wax Gourd/2.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Wax Gourd/超清512/2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "046ad094993a080f8eb3023711e8042530d75a85925b33658976ae7e84e29257",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Wax Gourd/2.png"
+    },
+    "existing": []
+  },
+  {
+    "talent_id": 2601,
+    "stage_id": 1,
+    "plant_id": 3500,
+    "plant": "Lawn",
+    "talent_index": 1,
+    "name": "强健体魄",
+    "icon_id": 2601,
+    "original": {
+      "archive_entry": "第一章/Lawn/1.png",
+      "size": [
+        108,
+        104
+      ],
+      "sha256": "2e1600c032703ec9b32fbf82932ca196ff79e6808a49a2e5e411ccae2f7f2d21",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Lawn/1.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Lawn/超清512/1.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "8543f99bd1259d4aed4c27cf72233f5528bbbb741e5d67cd4785fcaf8c5f0050",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Lawn/1.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\2601.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "66bd03b0656d01bc4592ae7e1f85de1003624862e7d3c602b8d0bb4c612f33d1"
+      }
+    ]
+  },
+  {
+    "talent_id": 2602,
+    "stage_id": 1,
+    "plant_id": 3500,
+    "plant": "Lawn",
+    "talent_index": 2,
+    "name": "春草又生",
+    "icon_id": 2602,
+    "original": {
+      "archive_entry": "第一章/Lawn/2.png",
+      "size": [
+        105,
+        105
+      ],
+      "sha256": "8fe13b578294820955c0404358f4722e23367f8e84c3a3a84edea362337b85c3",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第一章/Lawn/2.png"
+    },
+    "highres": {
+      "archive_entry": "第一章/Lawn/超清512/2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "cea2cb677cdbeed3de8083a1da9434e45f0dbe26672122d095efb6b194ab32cb",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第一章/Lawn/2.png"
+    },
+    "existing": []
+  },
+  {
+    "talent_id": 1601,
+    "stage_id": 2,
+    "plant_id": 1600,
+    "plant": "Bloomerang",
+    "talent_index": 1,
+    "name": "骆驼杀手",
+    "icon_id": 1601,
+    "original": {
+      "archive_entry": "第二章/Bloomerang/1.png",
+      "size": [
+        119,
+        117
+      ],
+      "sha256": "3ac9532c4f17a4aacd46ab5306e8222859cbd4dfbd7477d6c4e662530f75ac04",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第二章/Bloomerang/1.png"
+    },
+    "highres": {
+      "archive_entry": "第二章/Bloomerang/超清512/1.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "d851e6a8e135893625108b3edc10a5740d2c68798ebf179c5e855f87104f84e2",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第二章/Bloomerang/1.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1601.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "0fcfad69374ad32a5265f98696c82f72232fbcf98484cc595fc2205b339354ea"
+      }
+    ]
+  },
+  {
+    "talent_id": 1801,
+    "stage_id": 2,
+    "plant_id": 1800,
+    "plant": "Bonk Choy",
+    "talent_index": 1,
+    "name": "左右开弓",
+    "icon_id": 1801,
+    "original": {
+      "archive_entry": "第二章/Bonk Choy/1.png",
+      "size": [
+        120,
+        116
+      ],
+      "sha256": "516416b8eab47a886d6370248e80e154eacfe223db2aee5d646158ae2616c683",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第二章/Bonk Choy/1.png"
+    },
+    "highres": {
+      "archive_entry": "第二章/Bonk Choy/超清512/1.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "4852a930da34abc369c9dfd59d91af3f2d08f83dd9778f84aeac186c521ebc23",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第二章/Bonk Choy/1.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1801.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "c9e39ae696ca2e731c22932702680f510be43cb11500a66de64359c1040c676a"
+      }
+    ]
+  },
+  {
+    "talent_id": 1802,
+    "stage_id": 2,
+    "plant_id": 1800,
+    "plant": "Bonk Choy",
+    "talent_index": 2,
+    "name": "愤怒打击",
+    "icon_id": 1802,
+    "original": {
+      "archive_entry": "第二章/Bonk Choy/2.png",
+      "size": [
+        118,
+        118
+      ],
+      "sha256": "b6b8a673c22085042fe2189e22a4e38b663cc9453ee565fbac3eaa0dfdbdde58",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第二章/Bonk Choy/2.png"
+    },
+    "highres": {
+      "archive_entry": "第二章/Bonk Choy/超清512/2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "35967c8383622f82a5cae76861fe80db3c5b55c13e5bf5000d00638f1485a9c4",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第二章/Bonk Choy/2.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1802.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "0e550235268300f18cf37cf2806fd8feb4ecde6d938cef6e338c1f4b035d92d1"
+      }
+    ]
+  },
+  {
+    "talent_id": 1803,
+    "stage_id": 2,
+    "plant_id": 1800,
+    "plant": "Bonk Choy",
+    "talent_index": 3,
+    "name": "敏锐天性",
+    "icon_id": 1803,
+    "original": {
+      "archive_entry": "第二章/Bonk Choy/3.png",
+      "size": [
+        114,
+        118
+      ],
+      "sha256": "0c2d118f41be5194ab618e26a369ad64cf68e2c12df3dfce4c0ada61cce61bd9",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第二章/Bonk Choy/3.png"
+    },
+    "highres": {
+      "archive_entry": "第二章/Bonk Choy/超清512/3.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "84b150ef511a71cb91d03ded66feac1f2b6f0b47e6ebd7453fed0d63430bb253",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第二章/Bonk Choy/3.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1803.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "fe6c4f28700a36d0b25276e34765d6109427f333e40c2000a9a83a3b9aadbb6e"
+      }
+    ]
+  },
+  {
+    "talent_id": 1901,
+    "stage_id": 2,
+    "plant_id": 1900,
+    "plant": "Grave Buster",
+    "talent_index": 1,
+    "name": "变废为宝",
+    "icon_id": 1901,
+    "original": {
+      "archive_entry": "第二章/Grave Buster/1.png",
+      "size": [
+        83,
+        79
+      ],
+      "sha256": "12c410a07ca650c36053765f39973d9511729ba1380eaa9568f47fdd50ac452c",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第二章/Grave Buster/1.png"
+    },
+    "highres": {
+      "archive_entry": "第二章/Grave Buster/超清512/1.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "1d896a0e8d61b8fcf37c357ba0334d00dfaf545b263c120c9fb460bcdc7f46d7",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第二章/Grave Buster/1.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1901.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "edcfdbdda1d6e7fb38b1b332c24584afa6ffe55fee2fbe0028a68261d6e1906e"
+      }
+    ]
+  },
+  {
+    "talent_id": 1701,
+    "stage_id": 2,
+    "plant_id": 1700,
+    "plant": "Iceberg Lettuce",
+    "talent_index": 1,
+    "name": "范围冰冻",
+    "icon_id": 1701,
+    "original": {
+      "archive_entry": "第二章/Iceberg Lettuce/1.png",
+      "size": [
+        80,
+        80
+      ],
+      "sha256": "159758db677014daca1dae05f4d068a9b675eae1d8be92e14346cb3887b13d81",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第二章/Iceberg Lettuce/1.png"
+    },
+    "highres": {
+      "archive_entry": "第二章/Iceberg Lettuce/超清512/1.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "d01bb6d810d100e184a157ca4c1d485985fbf051445fec2ae3d85d2c633d99f5",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第二章/Iceberg Lettuce/1.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1701.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "ff5e182cabeb72a637f73587968cd717c5039928e4921c5134e2183826acf592"
+      }
+    ]
+  },
+  {
+    "talent_id": 1702,
+    "stage_id": 2,
+    "plant_id": 1700,
+    "plant": "Iceberg Lettuce",
+    "talent_index": 2,
+    "name": "冰火不容",
+    "icon_id": 1702,
+    "original": {
+      "archive_entry": "第二章/Iceberg Lettuce/2.png",
+      "size": [
+        78,
+        79
+      ],
+      "sha256": "a4594a7150e77786c193d66e8c588454cedd118f64b2a77608aa10e5e0b03277",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第二章/Iceberg Lettuce/2.png"
+    },
+    "highres": {
+      "archive_entry": "第二章/Iceberg Lettuce/超清512/2.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "e76fa55aa3227e1ea385d92f50e4bf38196b7ab813660a24ef9a8deb4e64d0d2",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第二章/Iceberg Lettuce/2.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1702.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "733e3fb4988ec3d477223f35086630ac3527e944e0d8e3f2d93fec56beaa3c1b"
+      }
+    ]
+  },
+  {
+    "talent_id": 1401,
+    "stage_id": 2,
+    "plant_id": 1400,
+    "plant": "Cabbage-pult",
+    "talent_index": 1,
+    "name": "墓碑杀手",
+    "icon_id": 1401,
+    "original": {
+      "archive_entry": "第二章/Cabbage-pult/1.png",
+      "size": [
+        106,
+        106
+      ],
+      "sha256": "1c35c55ca94198f487d1a5f39698d39d41ec1f4865ed6c7280058d71a9e1dc81",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/第二章/Cabbage-pult/1.png"
+    },
+    "highres": {
+      "archive_entry": "第二章/Cabbage-pult/超清512/1.png",
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "e0fd5de4f5e5f22ef6e2d8b12266dfde3a408dc6a4722596112f57d0ee093ffc",
+      "extracted_path": "C:/Users/komi/Documents/Codex/2026-10-10/d-pvzol-ol-8/work/icon-audit/remasters/第二章/Cabbage-pult/1.png"
+    },
+    "existing": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\image\\talent\\talent\\1401.png",
+        "size": [
+          50,
+          50
+        ],
+        "sha256": "4170673451b87d2429467be4e29949507b24a0b13568d392e882f789de746e0d"
+      }
+    ]
+  }
+]

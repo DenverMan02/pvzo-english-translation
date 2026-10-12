@@ -1,0 +1,131 @@
+{
+  "task": "地图出征与矿场修复-20261010",
+  "files": [
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/worldmap_local.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/worldmap_local.py",
+      "before": "18be1ad43bf31ceeff046ad244f12d23eae4643e8bef956c87b58089b16ccf48",
+      "after": "156331a2cdcba2bb47da9398330eef04f8062533beccca870a684cd393984fcf"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/worldmap_repairs.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/worldmap_repairs.py",
+      "before": "d5ca7e074c14b7d9702e206a42d058ab38e12f436bdea9c25e82a4d5b749f404",
+      "after": "2c8483f4971352613f03f7930a80c1680c6a121f90dd5b8f72f9ea33e1beba6e"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/worldmap_resources.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/worldmap_resources.py",
+      "before": "e9b4c62a869665f0c29edd017c524dc8d069d4862fcf3b0f237d333452b45890",
+      "after": "049d2872e9bdf2f16f0550444e93a8f005cc59c5701dbcfaf69b1c3ef184e397"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_bot_towns.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/tests/test_worldmap_bot_towns.py",
+      "before": null,
+      "after": "5b28bd8b8240eebaebb118ed9d045ef02aa69688231a2ee0f425a6809855afa5"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_mine_sync_20261010.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/tests/test_worldmap_mine_sync_20261010.py",
+      "before": null,
+      "after": "510384080bed99bf2adde780ed5a6d813bede506284c57fab1f25075cbae6fb6"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_resources.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/tests/test_worldmap_resources.py",
+      "before": "658519625a2fa89cc8db0827e1d304555b88c947c3e1457df9d7d0662dec1787",
+      "after": "feffb6ee47cd2575b945c7ae71e16ee4c46b895781d26cb1a8ab784ea79a69a8"
+    },
+    {
+      "path": "pvzol本地/PvZ-Server-PoC/tests/test_worldmap_local_cities.py",
+      "source": "mapfix/pvzol本地/PvZ-Server-PoC/tests/test_worldmap_local_cities.py",
+      "before": "c804eaf536c8c0800129857b5b6e9331967051db23cd2749ac6459d6ce520b68",
+      "after": "dd19436c3cb7978b7203b5b59ccdc29d7215f4c953427834b6a45add9cd14316"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p.swf",
+      "source": "map_assets_audit/assets/Game_p.swf",
+      "before": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e",
+      "after": "726da417e3522fe7087ad2eba4f60aae0792fc3f47061b24f5b7cd59a13fab39"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_041205df680ecb63e34f6da5bacbfcf1.swf",
+      "source": "map_assets_audit/assets/Game_p_041205df680ecb63e34f6da5bacbfcf1.swf",
+      "before": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e",
+      "after": "726da417e3522fe7087ad2eba4f60aae0792fc3f47061b24f5b7cd59a13fab39"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_04d85414d9f7ef6add82a525a0475506.swf",
+      "source": "map_assets_audit/assets/Game_p_04d85414d9f7ef6add82a525a0475506.swf",
+      "before": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e",
+      "after": "726da417e3522fe7087ad2eba4f60aae0792fc3f47061b24f5b7cd59a13fab39"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_136f07596f913cef93d35343a83626ec.swf",
+      "source": "map_assets_audit/assets/Game_p_136f07596f913cef93d35343a83626ec.swf",
+      "before": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e",
+      "after": "726da417e3522fe7087ad2eba4f60aae0792fc3f47061b24f5b7cd59a13fab39"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_2f31414da4c6b9aff9be96e68029c65b.swf",
+      "source": "map_assets_audit/assets/Game_p_2f31414da4c6b9aff9be96e68029c65b.swf",
+      "before": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e",
+      "after": "726da417e3522fe7087ad2eba4f60aae0792fc3f47061b24f5b7cd59a13fab39"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_44d757b4fb708f31dad7a2394a1a360f.swf",
+      "source": "map_assets_audit/assets/Game_p_44d757b4fb708f31dad7a2394a1a360f.swf",
+      "before": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e",
+      "after": "726da417e3522fe7087ad2eba4f60aae0792fc3f47061b24f5b7cd59a13fab39"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_867dbb7ffa06e76c8e280fe312d5a976.swf",
+      "source": "map_assets_audit/assets/Game_p_867dbb7ffa06e76c8e280fe312d5a976.swf",
+      "before": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e",
+      "after": "726da417e3522fe7087ad2eba4f60aae0792fc3f47061b24f5b7cd59a13fab39"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_c874590c49beaaf924c0395036c85119.swf",
+      "source": "map_assets_audit/assets/Game_p_c874590c49beaaf924c0395036c85119.swf",
+      "before": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e",
+      "after": "726da417e3522fe7087ad2eba4f60aae0792fc3f47061b24f5b7cd59a13fab39"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_cb7af05d4d2ddbe204ea4926772f3b92.swf",
+      "source": "map_assets_audit/assets/Game_p_cb7af05d4d2ddbe204ea4926772f3b92.swf",
+      "before": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e",
+      "after": "726da417e3522fe7087ad2eba4f60aae0792fc3f47061b24f5b7cd59a13fab39"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_ddd80a273668f4e746bbaa442bfc55f0.swf",
+      "source": "map_assets_audit/assets/Game_p_ddd80a273668f4e746bbaa442bfc55f0.swf",
+      "before": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e",
+      "after": "726da417e3522fe7087ad2eba4f60aae0792fc3f47061b24f5b7cd59a13fab39"
+    },
+    {
+      "path": "pvzol本地/webroot/Game_p_e90cc556a5e9f63b73ffa23b6fe21c34.swf",
+      "source": "map_assets_audit/assets/Game_p_e90cc556a5e9f63b73ffa23b6fe21c34.swf",
+      "before": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e",
+      "after": "726da417e3522fe7087ad2eba4f60aae0792fc3f47061b24f5b7cd59a13fab39"
+    },
+    {
+      "path": "pvzol本地/webroot/ModuleAvatarConfig.swf",
+      "source": "map_assets_audit/assets/ModuleAvatarConfig.swf",
+      "before": "aa2745b74a0a17311db0fd90049b4fa25a97acb364be57eeadb52c8483052032",
+      "after": "3157653dfd4a3d5a76520e6f8dde872c48c62180031551f4c30a18a7a2b5f710"
+    },
+    {
+      "path": "pvzol本地/webroot/ModuleAvatarConfig_ceede5b498631ea2c8f56594a9bb8b49.swf",
+      "source": "map_assets_audit/assets/ModuleAvatarConfig_ceede5b498631ea2c8f56594a9bb8b49.swf",
+      "before": "aa2745b74a0a17311db0fd90049b4fa25a97acb364be57eeadb52c8483052032",
+      "after": "3157653dfd4a3d5a76520e6f8dde872c48c62180031551f4c30a18a7a2b5f710"
+    },
+    {
+      "path": "pvzol本地/webroot/ModuleAvatarConfig_db6128ab924d3fdce35817839dac8f1f.swf",
+      "source": "map_assets_audit/assets/ModuleAvatarConfig_db6128ab924d3fdce35817839dac8f1f.swf",
+      "before": "aa2745b74a0a17311db0fd90049b4fa25a97acb364be57eeadb52c8483052032",
+      "after": "3157653dfd4a3d5a76520e6f8dde872c48c62180031551f4c30a18a7a2b5f710"
+    }
+  ]
+}

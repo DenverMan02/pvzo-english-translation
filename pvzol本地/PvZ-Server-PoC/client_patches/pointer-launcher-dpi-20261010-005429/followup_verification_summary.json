@@ -1,0 +1,343 @@
+{
+  "passed": true,
+  "automated_test_count": 19,
+  "native_ui_smoke_count": 3,
+  "actual_windows_scale_tested": {
+    "dpi": 144,
+    "percent": 150,
+    "source_ui": true,
+    "rebuilt_frozen_exe": true,
+    "os_scaling_unchanged": true
+  },
+  "fractional_layout_test": {
+    "simulated_dpi": 115,
+    "simulated_scale": 1.1979166666666667,
+    "actual_os_window_dpi": 144,
+    "actual_dotnet_and_edge_created": true,
+    "windows_120_percent_setting_tested": false
+  },
+  "frozen_manifest": {
+    "passed": true,
+    "path": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\dpi-tests\\frozen-launcher.manifest",
+    "dpi_awareness": "PerMonitorV2, PerMonitor",
+    "legacy_dpi_aware": "true/pm"
+  },
+  "frozen_exe": {
+    "path": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\dpi-fix\\dist\\PvZLauncherUI\\PvZLauncherUI.exe",
+    "sha256": "492051d79ceb9ef9e39f9d7fc767898997dab79ee6db0742ecc2692071f0ab8e"
+  },
+  "dpi_helper": {
+    "passed": true,
+    "test_count": 8,
+    "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\dpi-fix\\staged\\launcher_dpi.py",
+    "api_injected": true,
+    "system_settings_changed": false,
+    "fractional_dpi_simulated": [
+      114,
+      115,
+      116
+    ],
+    "failures": [],
+    "errors": []
+  },
+  "ui_geometry": {
+    "passed": true,
+    "test_count": 4,
+    "physical_geometry_scenarios": 52,
+    "dpi_change_geometry_scenarios": 18,
+    "main_initialization_scenarios": 2,
+    "fractional_120_percent_dpi": [
+      114,
+      115,
+      116
+    ],
+    "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\dpi-fix\\staged\\ui_shell.py",
+    "actual_os_scaling_changed": false,
+    "errors": [],
+    "failures": []
+  },
+  "source_native_ui": {
+    "ok": true,
+    "name": "candidate-ui",
+    "account_requests_sent": 0,
+    "system_settings_changed": false,
+    "registry_changed": false,
+    "simulated_dpi": null,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "owned_pid": 24608,
+    "owned_process_exited": true,
+    "requests": [
+      [
+        "GET",
+        "/api/state"
+      ],
+      [
+        "GET",
+        "/"
+      ],
+      [
+        "GET",
+        "/favicon.ico"
+      ],
+      [
+        "GET",
+        "/api/state"
+      ]
+    ],
+    "native": {
+      "dpi": {
+        "ok": true,
+        "mode": "per_monitor_v2",
+        "source": "set_context",
+        "attempts": [
+          {
+            "api": "set_context",
+            "mode": "per_monitor_v2",
+            "status": "set",
+            "error": 0
+          }
+        ]
+      },
+      "shown": {
+        "pid": 46392,
+        "hwnd": 10293492,
+        "work_area": [
+          0,
+          0,
+          3840,
+          2088
+        ],
+        "bounds": [
+          960,
+          399,
+          1920,
+          1290
+        ],
+        "tray_visible": true
+      },
+      "dpi_fixture": {
+        "os_window_dpi": 144,
+        "simulated_dpi": null,
+        "simulation_scope": "BrowserForm logical-to-physical Size conversion only",
+        "system_settings_changed": false
+      },
+      "closed": {
+        "tray_visible": false,
+        "tray_disposed": true,
+        "worker_alive": false,
+        "activation_alive": false,
+        "window_record_removed": true
+      }
+    },
+    "centered": true,
+    "in_work_area": true,
+    "clean_exit": true
+  },
+  "frozen_native_ui": {
+    "ok": true,
+    "name": "candidate-frozen-ui",
+    "account_requests_sent": 0,
+    "system_settings_changed": false,
+    "registry_changed": false,
+    "simulated_dpi": null,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "owned_pid": 51664,
+    "owned_process_exited": true,
+    "requests": [
+      [
+        "GET",
+        "/api/state"
+      ],
+      [
+        "GET",
+        "/"
+      ],
+      [
+        "GET",
+        "/favicon.ico"
+      ],
+      [
+        "GET",
+        "/api/state"
+      ]
+    ],
+    "native": {
+      "dpi": {
+        "ok": true,
+        "mode": "per_monitor_v2",
+        "source": "existing",
+        "attempts": [
+          {
+            "api": "set_context",
+            "mode": "per_monitor_v2",
+            "status": "failed",
+            "error": 5
+          }
+        ]
+      },
+      "shown": {
+        "pid": 51664,
+        "hwnd": 18878866,
+        "work_area": [
+          0,
+          0,
+          3840,
+          2088
+        ],
+        "bounds": [
+          960,
+          399,
+          1920,
+          1290
+        ],
+        "tray_visible": true
+      },
+      "closed": {
+        "tray_visible": false,
+        "tray_disposed": true,
+        "worker_alive": false,
+        "activation_alive": false,
+        "window_record_removed": true
+      }
+    },
+    "centered": true,
+    "in_work_area": true,
+    "clean_exit": true
+  },
+  "fractional_native_ui": {
+    "ok": true,
+    "name": "candidate-fractional115",
+    "account_requests_sent": 0,
+    "system_settings_changed": false,
+    "registry_changed": false,
+    "simulated_dpi": 115,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "owned_pid": 47808,
+    "owned_process_exited": true,
+    "requests": [
+      [
+        "GET",
+        "/api/state"
+      ],
+      [
+        "GET",
+        "/"
+      ],
+      [
+        "GET",
+        "/favicon.ico"
+      ],
+      [
+        "GET",
+        "/api/state"
+      ]
+    ],
+    "native": {
+      "dpi": {
+        "ok": true,
+        "mode": "per_monitor_v2",
+        "source": "set_context",
+        "attempts": [
+          {
+            "api": "set_context",
+            "mode": "per_monitor_v2",
+            "status": "set",
+            "error": 0
+          }
+        ]
+      },
+      "shown": {
+        "pid": 52264,
+        "hwnd": 1836630,
+        "work_area": [
+          0,
+          0,
+          3840,
+          2088
+        ],
+        "bounds": [
+          1153,
+          529,
+          1533,
+          1030
+        ],
+        "tray_visible": true
+      },
+      "dpi_fixture": {
+        "os_window_dpi": 144,
+        "simulated_dpi": 115,
+        "simulation_scope": "BrowserForm logical-to-physical Size conversion only",
+        "system_settings_changed": false
+      },
+      "closed": {
+        "tray_visible": false,
+        "tray_disposed": true,
+        "worker_alive": false,
+        "activation_alive": false,
+        "window_record_removed": true
+      }
+    },
+    "centered": true,
+    "in_work_area": true,
+    "clean_exit": true
+  },
+  "pointer_structure": {
+    "passed": true,
+    "test_count": 3,
+    "before_after_stack_methods": 26,
+    "unchanged_methods": 7988,
+    "checksize_real_vm_scenarios": 10,
+    "real_windows_rendering_tested": false,
+    "failures": [],
+    "errors": []
+  },
+  "pointer_actual_bytecode": {
+    "passed": true,
+    "test_count": 4,
+    "true_avm2_callback_cases": 825,
+    "true_avm2_reference_cases": 825,
+    "true_avm2_native_cursor_cases": 50,
+    "true_avm2_area_branch_cases": 10,
+    "old_bytecode_error_reproductions": 13,
+    "actual_nested_tile_method": "TDGameInfo.getRoadTileByScreenPos (method1058)",
+    "native_display_transforms": "synthetic SystemManager and MixLayer affine interfaces",
+    "tile_map": "synthetic 5 roads x 9 Rectangle tiles; actual bytecode enumeration and contains calls",
+    "window_sizes": [
+      [
+        1440,
+        900
+      ],
+      [
+        1920,
+        1080
+      ],
+      [
+        3840,
+        2088
+      ],
+      [
+        2162,
+        1360
+      ],
+      [
+        800,
+        600
+      ]
+    ],
+    "internal_scale": 1.3333333333333333,
+    "scene_x": -50,
+    "real_flash_gpu_tested": false,
+    "real_accounts_used": false,
+    "candidate_sha256": "8b80432e9997467fea10ffeb12827fb9a653c335919363ac5118f5098fd8ed8c",
+    "failures": [],
+    "errors": []
+  },
+  "no_real_accounts_or_game_consumption": true,
+  "windows_registry_and_scaling_unchanged": true
+}

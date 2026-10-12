@@ -1,0 +1,431 @@
+id	text
+11	Click on the Peashooter
+21	Click on the Sunflower
+31	Point at the Peashooter and click
+101	Welcome to our home, my friends!
+102	I'm Crazy Dave, your new neighbor! Come on, let me show you how we fight zombies!
+103	Wow! A brand new world! This is... Qin Shi Huang's Underground Palace..! Do you think he left any tacos lying around?
+104	I wonder what secrets these strange tunnels might hold.
+105	This conveyor belt doesn't look like a taco at all...
+201	Qin's illusion might be scary, but for the sake of my tacos, I'll defeat him!
+202	Those zombies look CRAZY! Quickly, defeat them!
+301	Who knew we could defeat Qin Shi Huang himself so easily? That Plantfood power was crazy!
+302	Remember, Plantfood is valuable and in limited supply, so only use it when absolutely necessary! Or when you see a zombie carrying a taco.
+401	Our neighbors are willing to lend you their plants.
+402	Remember to return them when we're done!\nAlthough we don't really know these neighbors yet...
+403	Neighbor, I won the revival match!
+404	Hey buddy, over there! They sent out a really strong zombie!
+405	Don't worry! I'll be cheering you on from inside this submarine!
+406	For the taco, you must win!
+407	Hey, I actually won my comeback match alright.
+408	I know you! Aren't you that RV I sell things to players from, or the one Zomboss smashes?
+409	Oh, come on, speak properly!
+410	Penny, I was wrong
+411	Back to the point, we are desperately short on sun. Let's gather some so we can be prepared for danger in times of peace.
+412	Alright buddy, it's all up to you!
+1001	Where is this?\nIt looks like danger is lurking everywhere.
+1002	Per your instructions, to find a place with lots of tacos.\nSo, here we are.
+1003	According to the program's design, once you find the taco, we can go home.
+1004	But there are zombies everywhere, and not a single taco in sight.
+1005	Let's wipe out the zombie outposts here first!
+1010	Select stage
+1020	Start Battle
+7001	There's a mysterious door here!\nI wonder if there are zombies behind the door, or more zombies...
+7002	I really want to open the door and take a look!
+7010	Unlock Gate
+7020	Unlocking requires stage achievements
+3001	What is that building for?
+3002	The Plant Lab seems to be finished. We can learn plant talent abilities here.
+3003	Talents?
+3004	Right, follow me
+3010	Click Plant Lab
+3020	Learn Plant Talents
+3030	Close Talent panel
+3041	Sun can be used to learn talents, gather it up!
+3042	Once we learn new talents, we can enjoy smashing zombies even more!
+3050	Enter Tower Defense Stage
+3051	Sun is an important resource used to learn talents
+3052	You can tap to select new talents to better fight zombies.
+3053	Return to Town
+3054	Tap the Peashooter to cast skills
+3055	Collect leaves to replenish energy
+3056	"Clear Tower Defense stage "Ancient Egypt" 6-1"
+3057	"Clear Tower Defense "Egyptian Desert" 4-1"
+3301	Enter Plant Puzzle
+3302	Select the plant puzzle pieces you want to assemble
+3303	Assemble Puzzle Pieces
+3304	Collect Plant Sprouts
+3305	Complete Plant Jigsaw
+3306	Select a plant
+3307	Enter Dressing Room
+3308	Costume already owned
+3309	Enhance Costume
+3310	Enter Nursery
+3311	Summon Nutritionist
+3312	Pick up reagent
+3313	Use Plant Food
+3314	Select the formation slot to equip with Plant Food
+3315	Drag nutrient solution to the formation's nutrient slot
+3316	Obtain more Plant Food
+3317	Upgrade Plant Food
+8001	I've had enough! Why are we still fighting zombies endlessly?!
+8002	(Uh... he looks like he needs a little soothing)
+8003	Come back to the town with me first
+8004	Are you talking about the taco?
+8009	Defeat zombies for extra rewards!\nCheck back often for more rewards
+8010	Open Rewards Panel
+8020	Claim Reward
+2001	The farm has been built. It's time to plant these precious plant buddies!
+2002	Just plant it to continuously produce sun, much easier than fighting zombies!
+2010	Click to zoom in on the farm
+2020	Unlock Plot
+2030	Confirm Unlock
+2031	Click to zoom in on the farm
+2040	Select Sunflower
+2050	Plant a Sunflower
+2051	Click to zoom in on the farm
+2052	Good job!\nIt can be harvested in a few hours!
+2053	What? Taking too long?\nLet me check if there are any extra Golden Watering Cans in the warehouse.
+2060	Switch to Inventory
+2070	Select Gold Watering Can
+2080	Accelerate Sunflower growth
+2081	Click to zoom in on the farm
+2091	The Golden Watering Can accelerated the Sunflower's growth. Now hover your mouse over the Sunflower to collect sun and Sunflower seeds.
+2092	Then let's check the market to see what treasures we can trade these Sunflower seeds for.
+2094	Hover the mouse over the plant
+2095	Click to zoom in on the farm
+2100	Enter Market
+2110	Click exchange
+2130	Close Market panel
+10001	You can even borrow friends' plants to grow on your farm!
+10002	What? Why borrow plants from friends?\nBecause I'm crazy!
+10010	Click to zoom in on the farm
+10020	Unlock Plot
+10030	Confirm Unlock
+10041	Click to zoom in on the farm
+10050	Switch Friend Plant
+10051	Select Friend Plant
+10060	Select Friend Plant
+10070	Plant a friend's plant
+11050	We seem to be in a bit of trouble. There's a door ahead that can't be opened with a Star Key!
+11060	Hey, don't we have a good plan?! (Eating tacos furiously)
+11070	I really can't do anything with you, follow me.
+11080	Return to town first
+11001	Adventure? Is this what you wanted me to see?
+11002	Maybe you can find the key to unlock the stage here
+11003	What are you waiting for? Grab the taco and let's go!
+11010	"Clear Adventure "Ancient Egypt" 10-1"
+11020	Enter Chapter 1
+11030	Select this stage
+11040	Start Battle
+11041	Our Combat Power
+11042	Enemy Combat Power
+16001	Plant cards can be powered up through enhancement!
+16002	Plant card upgrades take place at my house.\nChlorophyll is consumed during upgrades.
+16010	Enter my house
+16020	Cards that need upgrading
+16030	Enter Upgrade feature
+16040	Select consumable materials
+16050	Start Upgrade
+16060	Leave my house
+16061	Upgrade complete!\nPlant cards are even stronger now!
+16062	Note that upgrading high-star cards also requires high-star materials, otherwise the upgrade may fail.
+16070	Continue Adventure
+13001	Why did you bring me back here again? And what is that building?
+13002	We can recruit all kinds of powerful plant cards in the tavern.\nThe only catch is the owner only accepts diamonds!
+13010	Enter Tavern
+13020	Draw Plant Card Packs
+13030	Tap to flip
+13040	Add to card album
+13050	Exit Tavern
+13051	I think I pulled a pretty good card!
+13052	Looks like I can bring some more diamonds to try my luck!
+13053	I need to get this card onto the battlefield right away.
+13060	Tap to enlarge empty plots
+13070	Pick Up Seed Card
+13080	Tap to Deploy
+13090	Click to Exit
+13091	With powerful cards, defeating zombies will be as easy as squishing a burger
+13100	Continue Adventure
+20001	I just got a shovel from Adventure mode.
+20002	I'm going to equip my plants
+20010	Enter my house
+20020	Select Card
+20030	Select the weapon slot
+20040	Equip Gear
+20050	Leave my house
+20051	Bosses in Adventure mode usually drop equipment.
+20052	Even the same equipment can have different stats. Remember to equip the ones with the best attributes!
+20053	As the adventure progresses, you will also obtain more powerful equipment!
+20060	Continue Adventure
+15001	The lab is open! A fresh batch of genuine experimental flasks has arrived, each capable of significantly boosting your combat power!
+15002	Let's check out the lab.
+15010	Enter Lab
+15020	Upgrade Experimental Flask
+15030	Enter Lab
+15031	Upgrading experimental flasks will boost your overall combat power. In addition, you can craft new experimental flasks.
+15032	Crafting experimental flasks requires materials.\nI'll send you some materials this time.
+15033	From now on, you need to challenge Elite Bosses in Adventure Mode to obtain some rare materials.
+15040	Enter Crafting Mode
+15050	Select Critical Experiment Potion
+15060	Craft Flask
+24001	Hey! Look what I found! It's a bit hard to chew!
+24002	I think it's probably a... key fragment!\nWe still need 9 more, let's defeat the rest of the zombies!
+24003	I forgot to ask why I only have these few plants left.
+24004	Umm... I think... probably... yeah... that's it.
+24005	Don't leave, you haven't explained anything yet!
+21001	Finally collected all 10 fragments!
+21002	I can't wait to open that damn door.
+21003	Enter Stage
+21004	Consume key shards to unlock
+25001	A new building has been unlocked!
+25002	The Alliance is now unlocked
+25003	Are there tacos in the Alliance?
+25004	……
+25005	Enter Alliance
+25006	Choose an alliance you like and apply to join
+25007	If you don't have a favorite league or want to create your own, you can also do it here.
+26001	Hey, there's an uninvited guest over there.
+26002	I have to chase him away, or he'll cause trouble in my town.
+26003	Click here
+26004	Select this stage
+26005	Start Challenge
+27001	What is this strange building?
+27002	This is the Arena, where your cultivated plants can find opponents to battle
+27003	I'm not interested in finding any opponents.
+27004	Maybe we can find some new plants.
+27005	Hmm... alright, let's go check it out
+27006	Tap to start battle
+28001	Map? What's that?
+28002	You can find other towns on the map and make friends with them
+28003	Shall we go say hi now?
+28004	Click Map
+28005	This is the World Map. There are 2 world maps, and you need to reach the required town level to unlock new maps.
+28006	What are those 4 mines next to it for?
+28007	The 4 mines around the town belong to you. You can dispatch troops to occupy them and continuously harvest coins.
+29001	You still haven't told me what the watchtower is for.
+29002	The watchtower is used to deal with those scoundrels trying to rob the town bank.
+29003	Units that can be deployed for defense in the watchtower
+29004	You don't have a defense force yet
+30001	You went and unlocked another building without permission
+30002	This is called the Treasury, containing all your coins. The coin capacity increases as the town level goes up.
+30003	Is that all? I could devour this Treasury in a minute
+30004	Click Vault
+30005	Forgot to mention, your minecart can also collect from the Treasury
+30006	I always feel like I'm short on stamina and coins. Penny, you've got to do something!
+30007	Let me think, maybe we can buy VIP and beat stages as easily as eating a taco.
+30008	Well then, let me see!
+30009	Tap VIP
+30010	VIP has 3 tiers. First-time activation of VIP3 grants a 4-Star Winter Melon.
+30011	Let me study this
+31001	I think I got a lot of pieces, but they don't look very delicious
+31002	These puzzle pieces can be exchanged for complete plants in the Tavern!
+31003	Exchange at the tavern? How come I didn't notice!
+31004	Click Tavern
+31005	Click exchange
+31006	Select Cabbage-pult
+31007	Tap the Recruit button
+32001	What is this strange building?
+32002	This is Zombie Island, where you can bring your plants on a grand adventure.
+32003	Maybe you can get some nice treasures~
+32004	Click to start the first adventure!
+32005	Defeat enemies on the island to claim treasure
+100001	Dave's Words
+100002	Hover mouse to collect sun
+100003	Tap the Peashooter
+100004	Place a Peashooter on an empty tile
+200001	Select stage
+200002	Start Battle
+200003	Tap the Sunflower
+200004	Place the Sunflower on the empty lawn
+200005	Tap the Peashooter
+200006	Place a Peashooter on an empty tile
+200007	Hover mouse to collect sun
+200008	Ra Zombie will absorb falling suns, make sure to collect them in time.
+200009	Potato Mine is a great defensive weapon, but it takes some arming time after planting.
+200010	Use high-HP Wall-nuts to block zombies when necessary
+300001	Select stage
+300002	Start Battle
+300003	Use Ultimate Skill
+300004	Hover mouse to collect Plant Food
+300005	Use Ultimate Skill
+300006	Remember to unleash Ultimate skills frequently
+400001	Return to town first
+500001	Click to Complete Quest
+500002	Claim Reward
+600001	Open 7-Day Gift
+700001	Click Plant Lab
+700002	Sun can be used to learn talents, gather it up!
+700003	Learn Plant Talents
+800001	Return to Town
+900001	Enter Tower Defense Stage
+900002	Select stage
+900003	Start Battle
+900004	Tap the plant
+1000001	Return to Town
+1100001	Click to zoom in on the farm
+1100002	Unlock Plot
+1100003	Confirm Unlock
+1100004	Select Sunflower
+1100005	Plant a Sunflower
+1100006	Switch to Inventory
+1100007	Select watering can
+1100008	Speed Up Plant Growth
+1100009	Hover over plants to harvest
+1100010	Click to zoom in on the farm
+1100011	Enter Market
+1100012	Click exchange
+1100013	Close Market panel
+1100014	Return to Town
+1200001	"Clear Tower Defense "Egyptian Desert" 4-1"
+1200002	Select stage
+1200003	Start Battle
+1300001	Return to stages to unlock side quests
+1300002	Unlock Gate
+1300003	Unlocking requires stage achievements
+1400001	"Clear Tower Defense stage "Ancient Egypt" 6-1"
+1400002	Select stage
+1400003	Start Battle
+1400004	Select stage
+1400005	Start Battle
+1500001	Return to Town
+1500002	Enter Tavern
+1500003	Draw Friendship Card Pack Free
+1500004	Tap to flip
+1500005	Store in card album
+1500006	Enter Card Collection
+1500007	Confirm use
+1500008	Draw 1 Mini Card Pack
+1600001	Enter my house
+1600002	Select plant
+1600003	Tap the Upgrade button
+1600004	消耗经验豆给植物增加经验
+1600005	Select plant
+1600006	Enter Enhancement Screen
+1600007	Insert the corresponding level of Plant Food
+1600008	Upgrade plant
+1600009	Continue upgrading until it reaches +5
+1600010	Return to Seed Bank
+1600011	Select plant
+1600012	Enter Star-Up
+1600013	Click dismantle button
+1600014	Recycle Corn Plant
+1600015	Upgrade plant stars
+1600016	Confirm Star-Up Result
+1700001	Enter Formation
+1700002	Pick Up Seed Card
+1700003	Tap an empty slot to deploy
+1700004	Click to Exit
+1800001	Enter Lab
+1800002	Upgrade Experimental Flask
+1800003	Enter Crafting Mode
+1800004	Select the Critical Flask
+1800005	Craft Critical Flask
+1900001	Enter Events
+1900002	Select this stage
+1900003	Deploy
+1900004	Start Battle
+2000001	Enter Alliance
+2100001	Enter Arena
+2200000	Learn map gameplay
+2200001	Select target and deploy
+2300001	Enter Treasury
+2400001	Tap VIP
+2500001	Enter Zombie Island and complete a challenge
+2500002	Prepare to start the adventure on Zombie Island
+2500003	Tap the chest
+2600001	Enter Nursery
+2600002	Summon Nutritionist
+2600003	Pick up reagent
+2600004	Enter Reagent Usage screen
+2600005	Select the formation slot to equip with Plant Food
+2600006	Tap Reagent
+2600009	Then tap the equipment slot to equip the reagent
+2600007	Upgrade Reagent
+2600008	Upgrade Reagent
+2700001	Enter Watchtower
+2800001	Coins can be exchanged here
+2900001	Open World Switch Panel
+3000001	Participate in Endless Tower Defense challenges
+3700004	Return to town first
+3100002	Select Adventure stage
+3100003	Select Friend Plant
+3100004	Place Friendship Plant
+3100005	Start Battle
+3100006	Keys are necessary items to unlock main tower defense stages
+3200001	Select Adventure stage
+3200002	Start Battle
+3200003	Select Adventure stage
+3200004	Select Adventure stage
+3200005	Select Adventure stage
+3200006	Puzzle pieces are essential items for increasing combat power.
+3200007	Return to town and piece together my home
+3200008	Enter my house
+3200009	Select a plant
+3200010	Plant Puzzle
+3200011	Select the plant puzzle pieces you want to assemble
+3200012	Assemble Puzzle Pieces
+3200013	Select the plant puzzle pieces you want to assemble
+3200014	Collect puzzle pieces through Adventure mode
+3200015	Current Puzzle Stage
+3300001	"Clear Adventure stage "Ancient Egypt" 6-1"
+3300002	Select Adventure stage
+3300003	Return to the town to learn Quick Puzzle Assembly
+3300004	Enter my house
+3300005	Select plant
+3300006	Plant Puzzle
+3300007	One-tap assemble all eligible puzzle pieces
+3300008	Enter my house
+3300009	Select plant
+3300010	Plant Puzzle
+3300011	Quick-assemble all puzzles with sufficient pieces
+3300012	Back to my house
+3300013	Return to Town
+4200001	Enter my house
+4200002	Select plant
+4200003	Enter Dressing Room
+4200004	Select the second appearance
+4200005	Enhance appearance to grant plants permanent stats
+4200006	Back to my house
+4200007	Return to Town
+3400001	Select Adventure stage
+3500001	Select Adventure stage
+3600001	Select Adventure stage
+3700001	Select Adventure stage
+3700002	Return to Town
+3800001	Return to the stage to unlock the main tower defense storyline
+3800002	Unlock Gate
+3800003	Keys are required to unlock main Tower Defense stages
+3700003	"Clear "Ancient Egypt" up to 10-1"
+3900001	Complete regular Adventure to unlock Elite Adventure
+3900002	"Select "Elite"
+4000001	Enter Tavern
+4000002	Recruit plants in the Almanac
+4000003	Select Peashooter
+4000004	Recruit Peashooter
+4100001	Raise your town level by completing adventures and stages
+4300001	The Trial Path is an important way to obtain Puzzle Points.
+4500001	Check Mail
+4500002	Claim Attachment
+4600001	Enter the Greenhouse to gain plant EXP
+4600002	Open Seed List
+4600003	Select a plant to complete planting
+4600004	Fertilize plants
+4600005	Hover the mouse over sun to collect
+4600006	Upgrading flower pots increases XP production.
+4600007	Free pets must be activated every 10 hours
+4600008	Claim accumulated XP beans
+4600009	Advanced pets automatically collect XP permanently.
+4700001	Enter the tree house to upgrade the World Tree
+4700002	Cultivate the Tree of Wisdom to level 2
+4800001	Check Benefits Hall
+4900001	View First-Recharge Gift
+5000001	View free plants
+5100001	View Beginner Rewards
+5200001	Set Garrison Troops
+5300001	"Switch to "My Cards"
+5300002	Choose powerful plants and set up your formation wisely
+5400001	Return to Town
+5500001	Completing activity goals is a crucial way to level up
+5600001	View Launch Events
+5700001	Complete daily quests to quickly upgrade your town.

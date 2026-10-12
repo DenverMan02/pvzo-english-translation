@@ -1,0 +1,6 @@
+id	name
+1	City
+2	Mine Site
+3	Circus
+4	Playground
+11	City (Unbuilt)

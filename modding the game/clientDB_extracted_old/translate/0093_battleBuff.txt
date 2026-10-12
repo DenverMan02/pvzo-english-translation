@@ -1,0 +1,25 @@
+id	name
+1001	Frozen
+1002	Paralysis
+1003	Poisoned
+1004	Lifesteal
+1005	Damage Reflection
+1006	Silence
+1007	Stunned
+1008	Exile
+2001	Critical Rate Increased
+2002	Critical Rate Decreased
+2003	Defense Increased
+2004	Defense Decreased
+2005	HP Recovery
+2006	HP Decreased
+2007	Skill Damage Increased
+2008	Skill Damage Decreased
+2009	Basic Attack Increased
+2010	Basic Attack Decreased
+2011	Evasion increased
+2012	Evasion decreased
+2013	HP Increased
+2014	Mysterious Curse
+2015	Golden Body
+2016	Vulnerable

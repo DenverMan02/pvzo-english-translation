@@ -1,0 +1,60 @@
+{
+  "issue": "card-missing-native",
+  "files": [
+    {
+      "relative": "pvzol本地/webroot/swf/icons/card/10209_0.png",
+      "old_sha256": null,
+      "new_sha256": "c6d645e8307a5db244f3f60d8ae9fe9f9a668af2db109cea5005d8b2cb0f44df",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\webroot\\swf\\icons\\card\\10209_0.png"
+    },
+    {
+      "relative": "pvzol本地/webroot/swf/icons/card/card_icon_10209.swf",
+      "old_sha256": null,
+      "new_sha256": "3263281a47b70ea4614f06d39c25d5becbe5f2e7215e152f13485e5be69f1be2",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\webroot\\swf\\icons\\card\\card_icon_10209.swf"
+    },
+    {
+      "relative": "pvzol本地/webroot/swf/icons/card/card_icon_10209_e0ae5983ae3dda2581bafc9f22d5b370.swf",
+      "old_sha256": null,
+      "new_sha256": "3263281a47b70ea4614f06d39c25d5becbe5f2e7215e152f13485e5be69f1be2",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\webroot\\swf\\icons\\card\\card_icon_10209_e0ae5983ae3dda2581bafc9f22d5b370.swf"
+    },
+    {
+      "relative": "pvzol本地/webroot/swf/icons/card/card_icon_10209_.swf",
+      "old_sha256": null,
+      "new_sha256": "3263281a47b70ea4614f06d39c25d5becbe5f2e7215e152f13485e5be69f1be2",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\webroot\\swf\\icons\\card\\card_icon_10209_.swf"
+    },
+    {
+      "relative": "pvzol本地/webroot/swf/icons/card/card_icon_10212.swf",
+      "old_sha256": null,
+      "new_sha256": "00b39c9685bd28aa01b1400669bb1c88634e86744edd622a6434c8fdddb938fb",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\webroot\\swf\\icons\\card\\card_icon_10212.swf"
+    },
+    {
+      "relative": "pvzol本地/webroot/swf/icons/card/card_icon_10212_e2c348fb42300ced19baa55c91a8d28b.swf",
+      "old_sha256": null,
+      "new_sha256": "00b39c9685bd28aa01b1400669bb1c88634e86744edd622a6434c8fdddb938fb",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\webroot\\swf\\icons\\card\\card_icon_10212_e2c348fb42300ced19baa55c91a8d28b.swf"
+    },
+    {
+      "relative": "pvzol本地/webroot/swf/icons/card/card_icon_10212_.swf",
+      "old_sha256": null,
+      "new_sha256": "00b39c9685bd28aa01b1400669bb1c88634e86744edd622a6434c8fdddb938fb",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\webroot\\swf\\icons\\card\\card_icon_10212_.swf"
+    },
+    {
+      "relative": "pvzol本地/webroot/card-art-repair-manifest.json",
+      "old_sha256": "2e0ab124270f1b53be96d8757a96c99c3c9eff4ec895f4006285c4d508cd8c6d",
+      "new_sha256": "43decf1f0da5a693449912170e689729ae2ce67d9413bc4013e8282b84e86131",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\webroot\\card-art-repair-manifest.json"
+    },
+    {
+      "relative": "pvzol本地/webroot/fileVer.xml",
+      "old_sha256": "14a551f3beb16f7626fb6c7ccf55de0c00eb77bcc173ddbb2fa6d25c779eac69",
+      "new_sha256": "ad81c56e4e5dfae5fba1795c6e2f484fcad593a2dac76498bc38b5ed096299b8",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\webroot\\fileVer.xml"
+    }
+  ],
+  "tests": "4 tests passed; FFDec renders both AS3 SWFs; embedded original pixels, card geometry and 7 PNG/SWF URLs verified"
+}

@@ -1,0 +1,147 @@
+[
+  {
+    "file": "Game_p.swf",
+    "source_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+    "candidate_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e",
+    "declarations_types_defaults_metadata_byte_identical": true,
+    "class_inheritance_interfaces_traits_byte_identical": true,
+    "namespace_identity_and_constant_pools_unchanged": true,
+    "scope_locals_exceptions_traits_unchanged": true,
+    "introduced_unresolved_private_or_protected_references": 0,
+    "existing_external_protected_references": 0,
+    "changed_bodies": [
+      {
+        "abc": 0,
+        "method": 3058,
+        "before_length": 67,
+        "after_length": 67
+      },
+      {
+        "abc": 0,
+        "method": 5687,
+        "before_length": 154,
+        "after_length": 164
+      }
+    ]
+  },
+  {
+    "file": "ModuleTD_p.swf",
+    "source_sha256": "77334d656ef2901535328d8e3f9d5a865bc3ac3f3709867d1e59012cd5c9834e",
+    "candidate_sha256": "a13f2bbc3751a9beb6b9de87691ae51f2eb0da62a41ffbf19fe4f5c7fa9de3c8",
+    "declarations_types_defaults_metadata_byte_identical": true,
+    "class_inheritance_interfaces_traits_byte_identical": true,
+    "namespace_identity_and_constant_pools_unchanged": true,
+    "scope_locals_exceptions_traits_unchanged": true,
+    "introduced_unresolved_private_or_protected_references": 0,
+    "existing_external_protected_references": 711,
+    "changed_bodies": [
+      {
+        "abc": 0,
+        "method": 290,
+        "before_length": 687,
+        "after_length": 687
+      }
+    ]
+  },
+  {
+    "file": "ModuleAct3years.swf",
+    "source_sha256": "b7393d4715ea0f6e28c5ba0ff37cdc5ff0d847d9ef21e1fed11cb9cfc66078f5",
+    "candidate_sha256": "82c26e1d1be63dd78ba10df24b8b77d0748daa2309ca777e0d55c255cd1d150d",
+    "declarations_types_defaults_metadata_byte_identical": true,
+    "class_inheritance_interfaces_traits_byte_identical": true,
+    "namespace_identity_and_constant_pools_unchanged": true,
+    "scope_locals_exceptions_traits_unchanged": true,
+    "introduced_unresolved_private_or_protected_references": 0,
+    "existing_external_protected_references": 114,
+    "changed_bodies": [
+      {
+        "abc": 0,
+        "method": 454,
+        "before_length": 358,
+        "after_length": 358
+      }
+    ]
+  },
+  {
+    "file": "ModuleBag.swf",
+    "source_sha256": "7c4bff923b38a0b98fbb52a674d72653e8abc351d38b17ab0faf11ca594a4a9a",
+    "candidate_sha256": "e59ce295423dd781d169f0b2d31ad114851f99d8f5b6ea19981acbc8b59d0219",
+    "declarations_types_defaults_metadata_byte_identical": true,
+    "class_inheritance_interfaces_traits_byte_identical": true,
+    "namespace_identity_and_constant_pools_unchanged": true,
+    "scope_locals_exceptions_traits_unchanged": true,
+    "introduced_unresolved_private_or_protected_references": 0,
+    "existing_external_protected_references": 83,
+    "changed_bodies": [
+      {
+        "abc": 0,
+        "method": 235,
+        "before_length": 101,
+        "after_length": 101
+      },
+      {
+        "abc": 0,
+        "method": 333,
+        "before_length": 350,
+        "after_length": 350
+      }
+    ]
+  },
+  {
+    "file": "ModuleCard.swf",
+    "source_sha256": "a8c2ba52139fee775512ac9fbaa41503e253f05854b49cfbc9df0d71e441c3b0",
+    "candidate_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912",
+    "declarations_types_defaults_metadata_byte_identical": true,
+    "class_inheritance_interfaces_traits_byte_identical": true,
+    "namespace_identity_and_constant_pools_unchanged": true,
+    "scope_locals_exceptions_traits_unchanged": true,
+    "introduced_unresolved_private_or_protected_references": 0,
+    "existing_external_protected_references": 504,
+    "changed_bodies": [
+      {
+        "abc": 0,
+        "method": 779,
+        "before_length": 354,
+        "after_length": 354
+      }
+    ]
+  },
+  {
+    "file": "ModuleChat.swf",
+    "source_sha256": "8ce176b6d90c32ae263d2c304f56ad0deac47160bd0b237c617deb856a3aa49d",
+    "candidate_sha256": "ab88f5e8abfc11c0e610be3ff45af86429974757dcfcdb933d91b8aa322fc399",
+    "declarations_types_defaults_metadata_byte_identical": true,
+    "class_inheritance_interfaces_traits_byte_identical": true,
+    "namespace_identity_and_constant_pools_unchanged": true,
+    "scope_locals_exceptions_traits_unchanged": true,
+    "introduced_unresolved_private_or_protected_references": 0,
+    "existing_external_protected_references": 122,
+    "changed_bodies": [
+      {
+        "abc": 0,
+        "method": 150,
+        "before_length": 358,
+        "after_length": 358
+      }
+    ]
+  },
+  {
+    "file": "ModuleUnion.swf",
+    "source_sha256": "0eadbc0247b7c6be7644d134538fc10f1faa240ec045fcd6e43bb5725916b2dc",
+    "candidate_sha256": "671f8c5786905b86bb339202918df941c505ac5aa0392fba7743239e25c749d2",
+    "declarations_types_defaults_metadata_byte_identical": true,
+    "class_inheritance_interfaces_traits_byte_identical": true,
+    "namespace_identity_and_constant_pools_unchanged": true,
+    "scope_locals_exceptions_traits_unchanged": true,
+    "introduced_unresolved_private_or_protected_references": 0,
+    "existing_external_protected_references": 360,
+    "changed_bodies": [
+      {
+        "abc": 0,
+        "method": 1019,
+        "before_length": 352,
+        "after_length": 352
+      }
+    ]
+  }
+]

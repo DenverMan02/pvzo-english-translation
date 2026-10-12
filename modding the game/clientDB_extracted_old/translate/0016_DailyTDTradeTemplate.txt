@@ -1,0 +1,28 @@
+id	desc
+1	Pomegranate-pult Puzzle Piece
+2	Torchwood Puzzle Piece
+3	Hurrikale Puzzle Piece
+4	Acid Lemon Puzzle Piece
+5	Starfruit Puzzle Piece
+6	Iceberg Lettuce Puzzle Piece
+7	Infi-nut Puzzle Piece
+8	Tile Turnip Puzzle Piece
+9	Melon-pult Puzzle Piece
+10	Twin Sunflower Puzzle Piece
+11	Bonk Choy Puzzle Piece
+12	Bruce Bamboo Puzzle Piece
+13	Carrocket Puzzle Piece
+14	Explodelion Puzzle Piece
+15	Threepeater Puzzle Piece
+16	Pea Pod Puzzle Piece
+17	Cherry Bomb Puzzle Piece
+18	Plant Bottle Cap
+19	Plant Domino
+20	Crucifix
+21	Small Experience Bean
+22	Experience Bean
+23	Luring Experience Bean
+24	Advanced Fertilizer
+25	Super Fertilizer
+26	3-Star Chlorophyll
+27	4-Star Chlorophyll

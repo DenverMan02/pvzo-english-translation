@@ -1,0 +1,763 @@
+id	name	desc
+1	Super Missile Strike	Fires a giant missile, dealing massive damage to all targets.
+2	Terra Cotta Warrior Summon	Summons terracotta warriors to attack
+3	Overlord Slash	Unleashes a powerful execution on the current target, causing them to bleed 100% per turn, and restores 2 energy at the end of the turn
+4	Powerful Assassination	Randomly attacks one enemy unit, dealing massive damage to it.
+5	Overlord Slash	Enraged Strike, unleashes a mighty execution on the current target
+6	Basic Attack	Ultimate attack, dealing massive damage to the current target and reducing its current health by 100%.
+7	King Qin Sword Qi	Releases a ferocious sword aura, severely injuring all enemy units.
+8	Missile Strike	Fires a giant missile, dealing massive damage to all enemy units
+41	Enhances basic attacks	Deals damage to the current target, scaling with Skill Power.
+42	Enhances basic attacks	Deals damage to the current target, scaling with Skill Power.
+43	Enhances basic attacks	Deals damage to the current target, scaling with Skill Power.
+44	Enhances basic attacks	Deals damage to the current target, scaling with Skill Power.
+45	Enhances basic attacks	Deals damage to the current target, scaling with Skill Power.
+51	Basic Attack	Deals damage to the current target
+52	Basic Attack	Deals damage to the current target
+53	Basic Attack	Deals damage to the current target
+54	Basic Attack	Deals damage to the current target
+55	Basic Attack	Deals damage to the current target
+61	Basic Heal	Heals 1 allied unit with the lowest health percentage.
+62	Basic Heal	Heals 1 allied unit with the lowest health percentage.
+63	Basic Heal	Heals 1 allied unit with the lowest health percentage.
+64	Basic Heal	Heals 1 allied unit with the lowest health percentage.
+65	Basic Heal	Heals 1 allied unit with the lowest health percentage.
+71	Charge	Gain 60% attack bonus for 2 turns.
+72	Charge	Gain 60% attack bonus for 2 turns.
+73	Charge	Gain 60% attack bonus for 2 turns.
+74	Charge	Gain 60% attack bonus for 2 turns.
+75	Charge	Gain 60% attack bonus for 2 turns.
+81	Petal Attack	Deals damage to the current target and surrounding area
+82	Petal Attack	Deals damage to the current target and surrounding area
+83	Petal Attack	Deals damage to the current target and surrounding area
+84	Petal Attack	Deals damage to the current target and surrounding area
+85	Petal Attack	Deals damage to the current target and surrounding area
+91	Column Attack	Deals damage to all units in the current target's column.
+92	Column Attack	Deals damage to all units in the current target's column.
+93	Column Attack	Deals damage to all units in the current target's column.
+94	Column Attack	Deals damage to all units in the current target's column.
+95	Column Attack	Deals damage to all units in the current target's column.
+101	Junior Pea Spit	Continuously fires a barrage of peas, dealing massive damage to the current target.
+102	Intermediate Pea Spit	Continuously fires a barrage of peas, dealing massive damage to the current target.
+103	Advanced Peashooter Spit	Continuously fires a barrage of peas, dealing massive damage to the current target.
+104	Expert Pea Spit	Continuously fires a barrage of peas, dealing massive damage to the current target.
+105	Master Pea Spit	Continuously fires a barrage of peas, dealing massive damage to the current target.
+111	Pomegranate Attack	Enhanced basic attack, deals damage to the current target.
+112	Pomegranate Attack	Enhanced basic attack, deals damage to the current target.
+113	Pomegranate Attack	Enhanced basic attack, deals damage to the current target.
+114	Pomegranate Attack	Enhanced basic attack, deals damage to the current target.
+115	Pomegranate Attack	Enhanced basic attack, deals damage to the current target.
+121	Heal	Restores a certain amount of health to self
+122	Heal	Restores a certain amount of health to self
+123	Heal	Restores a certain amount of health to self
+124	Heal	Restores a certain amount of health to self
+125	Heal	Restores a certain amount of health to self
+201	Junior Repeater	Deals damage to the current target with a 50% chance to Root them for 2 turns.
+202	Intermediate Double Giant Bean	Deals damage to the current target and has a 55% chance to immobilize them for 2 turns.
+203	Advanced Mega Double-Pea	Deals damage to the current target with a 60% chance to immobilize them for 2 turns.
+204	Expert Twin Giant Bean	Deals damage to the current target with a 65% chance to immobilize them for 2 turns.
+205	Master Twin Giant Beans	Deals damage to the current target with a 70% chance to immobilize them for 2 turns.
+301	Beginner Wall-nut Roll	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+302	Intermediate Wall-nut Bowling	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+303	Advanced Wall-nut Rolling	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+304	Expert Wall-nut Bowling	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+305	Master Wall-nut Bowling	Randomly attacks 1 target each in the enemy's front, middle, and back rows.
+401	Junior Sunshine Healing	Heals the 3 allied units with the lowest percentage of health.
+402	Intermediate Sunlight Heal	Heals the 3 allied units with the lowest percentage of health.
+403	Advanced Sun Heal	Heals the 3 allied units with the lowest percentage of health.
+404	Expert Sunny Healing	Heals the 3 allied units with the lowest percentage of health.
+405	Master Sunlight Healing	Heals the 3 allied units with the lowest percentage of health.
+501	Novice Potato Self-Destruct	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+502	Intermediate Potato Mine	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+503	Advanced Potato Detonation	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+504	Expert Potato Self-Destruct	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+505	Master Potato Mine	Moves forward and explodes upon reaching an enemy unit, dealing damage to all surrounding enemies.
+601	Basic Frantic Spin	Deals damage to all enemy units in the forward row.
+602	Intermediate Frantic Spin	Deals damage to all enemy units in the forward row.
+603	Advanced Crazy Spin	Deals damage to all enemy units in the forward row.
+604	Expert Crazy Spin	Deals damage to all enemy units in the forward row.
+605	Master Crazy Spin	Deals damage to all enemy units in the forward row.
+701	Novice Cabbage Barrage	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+702	Intermediate Cabbage Bombardment	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+703	Advanced Cabbage Bombardment	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+704	Expert Cabbage Bombardment	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+705	Grandmaster Cabbage Bombardment	Throws a giant cabbage, dealing damage to all units at the enemy's back row.
+801	Novice Sunny Blessing	Heals all allied units.
+802	Intermediate Sunny Day	Heals all allied units.
+803	Advanced Sunlight Shower	Heals all allied units.
+804	Expert Sunlight Shower	Heals all allied units.
+805	Master Sunny Day	Heals all allied units.
+901	Novice Boxing Flurry	Attacks the current target and increases Dodge by 1000 for 1 turn.
+902	Intermediate Boxing Flurry	Attacks the current target and increases dodge by 1500 for 1 turn.
+903	Advanced Punch Flurry	Attacks the current target and increases Dodge by 2000 for 1 turn.
+904	Expert Punching Fury	Attacks the current target and increases Evasion by 2500 for 1 turn.
+905	Grandmaster Flurry Punches	Attacks the current target and increases Dodge by 3000 for 1 turn.
+1001	Novice Deep Freeze	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+1002	Intermediate Deep Freeze	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+1003	Advanced Extreme Freeze	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+1004	Expert Deep Freeze	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+1005	Master Extreme Freeze	Deals damage to all enemies, with a 15% chance to immobilize the target for 1 turn.
+1101	Novice Devouring Magic	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+1102	Intermediate Devour Magic	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+1103	Advanced Devour Magic	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+1104	Expert Devouring Magic	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+1105	Master Devour Magic	Grave Buster delivers a mighty blow, dealing heavy damage to the current target.
+1201	Novice Magical Energy	Fires a massive energy orb at the current target, dealing extra damage to shields.
+1202	Intermediate Magic Energy	Fires a massive energy orb at the current target, dealing extra damage to shields.
+1203	Advanced Magic Energy	Fires a massive energy orb at the current target, dealing extra damage to shields.
+1204	Expert Magical Energy	Fires a massive energy orb at the current target, dealing extra damage to shields.
+1205	Master Magic Energy	Fires a massive energy orb at the current target, dealing extra damage to shields.
+1301	Fierce Bite	Unleashes a whirlwind for a frantic attack, dealing damage to the current target
+1302	Fierce Bite	Unleashes a whirlwind for a frantic attack, dealing damage to the current target
+1303	Fierce Bite	Unleashes a whirlwind for a frantic attack, dealing damage to the current target
+1304	Fierce Bite	Unleashes a whirlwind for a frantic attack, dealing damage to the current target
+1305	Fierce Bite	Unleashes a whirlwind for a frantic attack, dealing damage to the current target
+1307	Fierce Bite	Unleashes a whirlwind for a frantic attack, dealing damage to the current target
+1309	Fierce Bite	Unleashes a whirlwind for a frantic attack, dealing damage to the current target
+1401	Rallying Cry	Wave a small flag to inspire zombies, healing the 3 friendly units with the lowest HP percentage.
+1402	Rallying Cry	Wave a small flag to inspire zombies, healing the 3 friendly units with the lowest HP percentage.
+1403	Rallying Cry	Wave a small flag to inspire zombies, healing the 3 friendly units with the lowest HP percentage.
+1404	Rallying Cry	Wave a small flag to inspire zombies, healing the 3 friendly units with the lowest HP percentage.
+1405	Rallying Cry	Wave a small flag to inspire zombies, healing the 3 friendly units with the lowest HP percentage.
+1501	Burn Everything	Swings a torch to burn everything, dealing massive damage to the current target.
+1502	Burn Everything	Swings a torch to burn everything, dealing massive damage to the current target.
+1503	Burn Everything	Swings a torch to burn everything, dealing massive damage to the current target.
+1504	Burn Everything	Swings a torch to burn everything, dealing massive damage to the current target.
+1505	Burn Everything	Swings a torch to burn everything, dealing massive damage to the current target.
+1507	Burn Everything	Swings a torch to burn everything, dealing massive damage to the current target.
+1509	Burn Everything	Swings a torch to burn everything, dealing massive damage to the current target.
+1601	Gravestone Summon	Randomly throws 3 bones at the feet of enemy units, then spawns gravestones to attack them from the ground.
+1602	Gravestone Summon	Randomly throws 3 bones at the feet of enemy units, then spawns gravestones to attack them from the ground.
+1603	Gravestone Summon	Randomly throws 3 bones at the feet of enemy units, then spawns gravestones to attack them from the ground.
+1604	Gravestone Summon	Randomly throws 3 bones at the feet of enemy units, then spawns gravestones to attack them from the ground.
+1605	Gravestone Summon	Randomly throws 3 bones at the feet of enemy units, then spawns gravestones to attack them from the ground.
+1607	Gravestone Summon	Randomly throws 3 bones at the enemy target's feet, then summons tombstones to attack from the ground.
+1609	Gravestone Summon	Randomly throws 3 bones at the enemy target's feet, then summons tombstones to attack from the ground.
+1701	Sun Steal	Extracts sun from plants to deal damage to all units in the same row ahead. Cannot be cast without a target.
+1702	Sun Steal	Extracts sun from plants to deal damage to all units in the same row ahead. Cannot be cast without a target.
+1703	Sun Steal	Extracts sun from plants to deal damage to all units in the same row ahead. Cannot be cast without a target.
+1704	Sun Steal	Extracts sun from plants to deal damage to all units in the same row ahead. Cannot be cast without a target.
+1705	Sun Steal	Extracts sun from plants to deal damage to all units in the same row ahead. Cannot be cast without a target.
+1707	Sun Steal	Extracts sun from plants to deal damage to all units in the same row ahead. Cannot be cast without a target.
+1709	Sun Steal	Extracts sun from plants to deal damage to all units in the same row ahead. Cannot be cast without a target.
+1801	Novice Nunchaku Strike	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+1802	Intermediate Nunchaku Strike	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+1803	Advanced Nunchaku Strike	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+1804	Expert Nunchaku Strike	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+1805	Master Nunchuck Strike	Transforms into a small dragon, unleashing a frantic barrage on the front and middle formations. Cannot be cast if there are no targets.
+1901	Basic Rocket Missile	Fires a rocket at the opponent, randomly striking 3 enemy units.
+1902	Intermediate Rocket Missile	Fires a rocket at the opponent, randomly striking 3 enemy units.
+1903	Advanced Rocket Missile	Fires a rocket at the opponent, randomly striking 3 enemy units.
+1904	Expert Rocket Missile	Fires a rocket at the opponent, randomly striking 3 enemy units.
+1905	Master Rocket Missile	Fires a rocket at the opponent, randomly striking 3 enemy units.
+2001	Novice Windmill Petal	Spins wildly, dealing damage to all enemy units in the current target's column.
+2002	Intermediate Bloomerang Petals	Spins wildly, dealing damage to all enemy units in the current target's column.
+2003	Advanced Windmill Petal	Spins wildly, dealing damage to all enemy units in the current target's column.
+2004	Expert Windmill Petals	Spins wildly, dealing damage to all enemy units in the current target's column.
+2005	Grandmaster Bloomerang Petals	Spins wildly, dealing damage to all enemy units in the current target's column.
+2101	Novice Gravity Crush	Slams the current target, dealing damage and reducing its defense by 15% for 1 turn.
+2102	Intermediate Gravity Crush	Slams the current target, dealing damage and reducing its defense by 18% for 1 turn.
+2103	Advanced Gravity Crush	Slam down hard on the current target, dealing damage and reducing its defense by 21% for 1 turn.
+2104	Expert Gravity Crush	Slam the current target, dealing damage and reducing its defense by 24% for 1 turn.
+2105	Master Gravity Crush	Slams the current target, dealing damage and reducing its defense by 27% for 1 turn.
+2201	Junior Amazing Predation	Deals damage to the current target and causes it to bleed for 10% HP per turn for 3 turns.
+2202	Intermediate Terrifying Predation	Deals damage to the current target and causes them to bleed for 12% per turn for 3 turns.
+2203	Advanced Apex Predation	Deals damage to the current target and inflicts 14% bleeding per turn for 3 turns.
+2204	Expert Apex Predator	Deals damage to the current target and inflicts 16% bleeding per turn for 3 turns.
+2205	Master Stunning Predation	Deals damage to the current target, causing them to bleed for 18% per turn for 3 turns.
+2301	Zombie Token	Wave the token, inspire zombies, and heal all allied units.
+2302	Zombie Token	Wave the token, inspire zombies, and heal all allied units.
+2303	Zombie Token	Wave the token, inspire zombies, and heal all allied units.
+2304	Zombie Token	Wave the token, inspire zombies, and heal all allied units.
+2305	Zombie Token	Wave the token, inspire zombies, and heal all allied units.
+2401	Spear Swing	Zombies use weapons to frantically attack, dealing damage to the current target
+2402	Spear Swing	Zombies use weapons to frantically attack, dealing damage to the current target
+2403	Spear Swing	Zombies use weapons to frantically attack, dealing damage to the current target
+2404	Spear Swing	Zombies use weapons to frantically attack, dealing damage to the current target
+2405	Spear Swing	Zombies use weapons to frantically attack, dealing damage to the current target
+2407	Spear Swing	Zombies use weapons to frantically attack, dealing damage to the current target
+2409	Spear Swing	Zombies use weapons to frantically attack, dealing damage to the current target
+2501	Shield Slam	Uses a giant shield to slam the frontline, unleashing a frantic assault on the front and middle columns. Cannot be cast without a target.
+2502	Shield Slam	Uses a giant shield to slam the frontline, unleashing a frantic assault on the front and middle columns. Cannot be cast without a target.
+2503	Shield Slam	Uses a giant shield to slam the frontline, unleashing a frantic assault on the front and middle columns. Cannot be cast without a target.
+2504	Shield Slam	Uses a giant shield to slam the frontline, unleashing a frantic assault on the front and middle columns. Cannot be cast without a target.
+2505	Shield Slam	Uses a giant shield to slam the frontline, unleashing a frantic assault on the front and middle columns. Cannot be cast without a target.
+2601	Stampede of Pigs	Summon endless crazy pigs to attack all enemies
+2602	Stampede of Pigs	Summon endless crazy pigs to attack all enemies
+2603	Stampede of Pigs	Summon endless crazy pigs to attack all enemies
+2604	Stampede of Pigs	Summon endless crazy pigs to attack all enemies
+2605	Stampede of Pigs	Summon endless crazy pigs to attack all enemies
+2701	Zombie Rush	Ride a Pogo Zombie to ram the target, dealing damage to the target and all units behind it
+2702	Zombie Rush	Ride a Pogo Zombie to ram the target, dealing damage to the target and all units behind it
+2703	Zombie Rush	Ride a Pogo Zombie to ram the target, dealing damage to the target and all units behind it
+2704	Zombie Rush	Ride a Pogo Zombie to ram the target, dealing damage to the target and all units behind it
+2705	Zombie Rush	Ride a Pogo Zombie to ram the target, dealing damage to the target and all units behind it
+2707	Zombie Rush	Ride a Pogo Zombie to ram the target, dealing damage to the target and all units behind it
+2709	Zombie Rush	Ride a Pogo Zombie to ram the target, dealing damage to the target and all units behind it
+2801	Flame Arrow	Fires a flaming arrow to attack the rear of the enemy formation.
+2802	Flame Arrow	Fires a flaming arrow to attack the rear of the enemy formation.
+2803	Flame Arrow	Fires a flaming arrow to attack the rear of the enemy formation.
+2804	Flame Arrow	Fires a flaming arrow to attack the rear of the enemy formation.
+2805	Flame Arrow	Fires a flaming arrow to attack the rear of the enemy formation.
+2807	Flame Arrow	Fires 3 flame arrows, attacking the rearmost enemies.
+2809	Flame Arrow	Fires 3 flame arrows, attacking the rearmost enemies.
+2901	Drunken Flame	Breathes fire at the target, dealing damage to the current target and all units in its vertical column.
+2902	Drunken Flame	Breathes fire at the target, dealing damage to the current target and all units in its vertical column.
+2903	Drunken Flame	Breathes fire at the target, dealing damage to the current target and all units in its vertical column.
+2904	Drunken Flame	Breathes fire at the target, dealing damage to the current target and all units in its vertical column.
+2905	Drunken Flame	Breathes fire at the target, dealing damage to the current target and all units in its vertical column.
+2907	Drunken Flame	Breathes fire at the target, dealing damage to the current target and all units in its vertical column.
+2909	Drunken Flame	Breathes fire at the target, dealing damage to the current target and all units in its vertical column.
+3001	Cosmic Strike	Swing the money bag to frantically attack the current target
+3002	Cosmic Strike	Swing the money bag to frantically attack the current target
+3003	Cosmic Strike	Swing the money bag to frantically attack the current target
+3004	Cosmic Strike	Swing the money bag to frantically attack the current target
+3005	Cosmic Strike	Swing the money bag to frantically attack the current target
+3101	Zombie Spit	Spits terrifying green liquid, dealing damage to all units in the front row. Cannot be cast without a target.
+3102	Zombie Spit	Spits terrifying green liquid, dealing damage to all units in the front row. Cannot be cast without a target.
+3103	Zombie Spit	Spits terrifying green liquid, dealing damage to all units in the front row. Cannot be cast without a target.
+3104	Zombie Spit	Spits terrifying green liquid, dealing damage to all units in the front row. Cannot be cast without a target.
+3105	Zombie Spit	Spits terrifying green liquid, dealing damage to all units in the front row. Cannot be cast without a target.
+3201	Junior Corn Pitch	Hurls corn mash to randomly strike 2 targets.
+3202	Intermediate Corn Pitching	Hurls corn mash to randomly strike 2 targets.
+3203	Advanced Corn Pitching	Hurls corn mash to randomly strike 2 targets.
+3204	Expert Corn Throw	Hurls corn mash to randomly strike 2 targets.
+3205	Grandmaster Corn Throw	Hurls corn mash to randomly strike 2 targets.
+3301	Novice Snapdragon Breath	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+3302	Intermediate Dragon Breath	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+3303	Advanced Dragon Breath	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+3304	Expert Dragon Breath	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+3305	Master Dragon Breath	Leaps up and breathes fire, dealing heavy damage to enemies in the middle and rear positions.
+3401	Novice Rapid Freeze	Attacks the current target and immobilizes them for 1 turn.
+3402	Intermediate Rapid Freeze	Attacks the current target and immobilizes them for 1 turn.
+3403	Advanced Rapid Freeze	Attacks the current target and immobilizes them for 1 turn.
+3404	Expert Rapid Freeze	Attacks the current target and immobilizes them for 1 turn.
+3405	Grandmaster Rapid Freeze	Attacks the current target and immobilizes them for 1 turn.
+3501	Junior Two-Headed Shot	Randomly selects 2 front-row enemies and deals damage to each.
+3502	Intermediate Two-Headed Shot	Randomly selects 2 front-row enemies and deals damage to each.
+3503	Advanced Double-Headed Shot	Randomly selects 2 front-row enemies and deals damage to each.
+3504	Expert Two-Headed Shot	Randomly selects 2 front-row enemies and deals damage to each.
+3505	Master Two-Headed Shot	Randomly selects 2 front-row enemies and deals damage to each.
+3601	Novice Pea Shotgun	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+3602	Intermediate Peashooter Scatter	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+3603	Advanced Pea Shotgun	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+3604	Expert Peashooter Shotgun	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+3605	Master Pea Shotgun	Attacks the frontmost enemy in the top, middle, and bottom rows respectively.
+3701	Novice Peashooter Transformation	Deals heavy damage to the current target and decreases its defense by 15% for 1 turn.
+3702	Intermediate Peashooter Transformation	Deal heavy damage to the current target and reduce its defense by 18% for 1 turn.
+3703	Advanced Peashooter Transformation	Deals heavy damage to the current target and decreases its defense by 21% for 1 turn.
+3704	Expert Peashooter Transformation	Deals massive damage to the current target and reduces its defense by 24% for 1 turn.
+3705	Grandmaster Peashooter Transformation	Deals heavy damage to the current target and reduces its defense by 27% for 1 turn.
+3801	Beginner Giant Spikes	Attacks the current target and gains 50% lifesteal.
+3802	Intermediate Giant Spikes	Attacks the current target and gains 55% lifesteal.
+3803	Advanced Giant Spike	Attacks the current target and gains 60% lifesteal.
+3804	Expert Giant Spike	Attacks the current target and gains 65% lifesteal.
+3805	Master Giant Spike	Attacks the current target and gains 70% lifesteal.
+3901	Novice Spike Thorns	Attacks the current target and gains 35% reflect damage for 1 turn.
+3902	Intermediate Spike Thorns	Attacks the current target and gains 40% damage reflection for 1 turn.
+3903	Advanced Spike Retaliation	Attacks the current target and gains a 45% damage reflection effect for 1 turn.
+3904	Expert Spikeweed Retaliation	Attacks the current target and gains 50% Thorns (Damage Reflection) for 1 turn.
+3905	Grandmaster Spikeweed Retaliation	Attacks the current target and gains 55% damage reflection for 1 turn.
+4001	Novice Wall-nut Armor	Equips a steel helmet, gaining a shield equal to 50% of current health.
+4002	Intermediate Wall-nut Armor	Equips a steel helmet, gaining a shield equal to 50% of current health.
+4003	Advanced Wall-nut Armor	Equips a steel helmet, gaining a shield equal to 50% of current health.
+4004	Expert Wall-nut Armor	Equips a steel helmet, gaining a shield equal to 50% of current health.
+4005	Master Wall-nut Armor	Equips a steel helmet, gaining a shield equal to 50% of current health.
+4101	Novice Bomb Self-Destruct	Massive explosion, dealing massive damage to the current target.
+4102	Intermediate Bomb Self-Destruct	Massive explosion, dealing massive damage to the current target.
+4103	Advanced Bomb Self-Destruct	Massive explosion, dealing massive damage to the current target.
+4104	Expert Bomb Self-Destruct	Massive explosion, dealing massive damage to the current target.
+4105	Master Bomb Self-Destruct	Massive explosion, dealing massive damage to the current target.
+4201	Beginner Tremor Floor	Jumps up and shakes the ground, dealing damage to all enemy units.
+4202	Intermediate Tremor Ground	Jump up and shake the ground, dealing damage to all enemies.
+4203	Advanced Tremor Floor	Jump up and shake the ground, dealing damage to all enemies.
+4204	Expert Tremor Ground	Jump up and shake the ground, dealing damage to all enemies.
+4205	Master Ground Pound	Jump up and shake the ground, dealing damage to all enemies.
+4301	Novice Giant Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+4302	Intermediate Mega Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+4303	Advanced Mega Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+4304	Expert Mega Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+4305	Master Giant Cannon	Attacks the current target and recovers 2 energy at the end of the turn.
+4401	Junior Stench Explosion	Deals massive damage to the current target and reduces the damage capability of all units behind it by 12% for 1 turn.
+4402	Intermediate Stinky Blast	Deals massive damage to the current target and reduces the damage of all units behind it by 14% for 1 turn.
+4403	Advanced Stinky Gas Explosion	Deals massive damage to the current target and reduces the damage capability of all units behind it by 16% for 1 turn.
+4404	Expert Stinky Blast	Deals heavy damage to the current target and reduces the attack power of all units behind it by 18% for 1 turn.
+4405	Master Stench Explosion	Deals heavy damage to the current target and weakens the damage output of all units behind it by 20% for 1 turn.
+4501	Novice Blue Flame	Increase damage output of allies at the rear of the formation by 20% for 1 turn.
+4502	Intermediate Blue Flame	Increases damage dealt by allies in the back row by 25% for 1 turn.
+4503	Advanced Blue Flame	Increases damage output of allied units at the back of the formation by 30% for 1 turn.
+4504	Expert Blue Flame	Increases damage dealt by allies at the back of the formation by 35% for 1 turn.
+4505	Master Blue Flame	Increases the damage of the ally at the rear of the formation by 40% for 1 turn.
+4601	Basic Chain Lightning	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+4602	Intermediate Chain Lightning	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+4603	Advanced Chain Lightning	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+4604	Expert Chain Lightning	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+4605	Master Chain Lightning	Randomly attacks 1 unit each from the enemy's front, middle, and back rows.
+4701	Novice Star Attack	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+4702	Intermediate Star Attack	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+4703	Advanced Star Attack	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+4704	Expert Star Attack	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+4705	Master Star Attack	Fires 3 starfruits, dealing 3 instances of damage randomly to enemies in the middle and back rows.
+4801	Novice Laser Piercing	Deals damage to all units in the same horizontal row ahead, with a 35% chance to immobilize targets for 2 turns.
+4802	Intermediate Laser Pierce	Deals damage to all units in the front row, with a 38% chance to stun targets for 2 turns.
+4803	Advanced Laser Pierce	Deals damage to all units in the forward row, with a 42% chance to stun targets for 2 turns.
+4804	Expert Laser Pierce	Deals damage to all units in the front row, with a 46% chance to immobilize the targets for 2 turns.
+4805	Master Laser Pierce	Deals damage to all units in the front row, with a 50% chance to immobilize the targets for 2 turns.
+4901	Novice Giant Orb	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+4902	Intermediate Mega Orb	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+4903	Advanced Massive Orb	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+4904	Expert Giant Orb	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+4905	Master Massive Electric Orb	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+5001	Novice Dazzling Radiation	Attack the current target and increase self damage reduction by 31% for 1 turn.
+5002	Intermediate Dazzling Radiation	Attacks the current target and increases own Damage Reduction by 34% for 1 turn.
+5003	Advanced Dazzling Radiation	Attacks the current target and increases self damage reduction by 37% for 1 turn.
+5004	Expert Dazzling Radiation	Attacks the current target and increases self-damage reduction by 40% for 1 turn.
+5005	Master Dazzling Radiation	Attacks the current target and increases own damage reduction by 43% for 1 turn.
+5101	Novice Prism Laser	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+5102	Intermediate Colorful Laser	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+5103	Advanced Prism Laser	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+5104	Expert Prism Laser	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+5105	Grandmaster Prismatic Laser	Attacks the current target. If a kill is secured, attacks the next unit directly behind it with cumulative damage.
+5201	Explosive Roller	Push the roller to the center of the enemy formation to explode, dealing damage to the top, bottom, left, and right positions.
+5202	Explosive Roller	Push the roller to the center of the enemy formation to explode, dealing damage to the top, bottom, left, and right positions.
+5203	Explosive Roller	Push the roller to the center of the enemy formation to explode, dealing damage to the top, bottom, left, and right positions.
+5204	Explosive Roller	Push the roller to the center of the enemy formation to explode, dealing damage to the top, bottom, left, and right positions.
+5205	Explosive Roller	Push the roller to the center of the enemy formation to explode, dealing damage to the top, bottom, left, and right positions.
+5207	Explosive Roller	Push the roller to the center of the enemy lines and detonate, dealing damage to the top, bottom, left, and right adjacent positions
+5209	Explosive Roller	Push the roller to the center of the enemy lines and detonate, dealing damage to the top, bottom, left, and right adjacent positions
+5301	Straight-line Bite	Attacks the current target. If the target dies, attacks the next unit.
+5302	Straight-line Bite	Attacks the current target. If the target dies, attacks the next unit.
+5303	Straight-line Bite	Attacks the current target. If the target dies, attacks the next unit.
+5304	Straight-line Bite	Attacks the current target. If the target dies, attacks the next unit.
+5305	Straight-line Bite	Attacks the current target. If the target dies, attacks the next unit.
+5307	Straight-line Bite	Attacks the current target. If the target dies, attacks the next unit.
+5309	Straight-line Bite	Attacks the current target. If the target dies, attacks the next unit.
+5401	Throw Imp	Throws an Imp to attack enemies together.
+5402	Throw Imp	Throws an Imp to attack enemies together.
+5403	Throw Imp	Throws an Imp to attack enemies together.
+5404	Throw Imp	Throws an Imp to attack enemies together.
+5405	Throw Imp	Throws an Imp to attack enemies together.
+5407	Throw Imp	Throws an Imp to attack enemies together.
+5409	Throw Imp	Throws an Imp to attack enemies together.
+5501	Frenzied Bite	Unleashes a frenzied barrage on the current target.
+5502	Frenzied Bite	Unleashes a frenzied barrage on the current target.
+5503	Frenzied Bite	Unleashes a frenzied barrage on the current target.
+5504	Frenzied Bite	Unleashes a frenzied barrage on the current target.
+5505	Frenzied Bite	Unleashes a frenzied barrage on the current target.
+5507	Frenzied Bite	Unleashes a frenzied barrage on the current target.
+5509	Frenzied Bite	Unleashes a frenzied barrage on the current target.
+5601	Juggling Torch	Throws 3 torches sequentially, each randomly attacking an enemy unit
+5602	Juggling Torch	Throws 3 torches sequentially, each randomly attacking an enemy unit
+5603	Juggling Torch	Throws 3 torches sequentially, each randomly attacking an enemy unit
+5604	Juggling Torch	Throws 3 torches sequentially, each randomly attacking an enemy unit
+5605	Juggling Torch	Throws 3 torches sequentially, each randomly attacking an enemy unit
+5607	Juggling Torch	Throws 3 torches sequentially, each randomly attacking an enemy unit
+5609	Juggling Torch	Throws 3 torches sequentially, each randomly attacking an enemy unit
+5701	Monkey Attack	A monkey flies out and randomly grabs a plant, immobilizing it for 2 turns
+5702	Monkey Attack	A monkey flies out and randomly grabs a plant, immobilizing it for 2 turns
+5703	Monkey Attack	A monkey flies out and randomly grabs a plant, immobilizing it for 2 turns
+5704	Monkey Attack	A monkey flies out and randomly grabs a plant, immobilizing it for 2 turns
+5705	Monkey Attack	A monkey flies out and randomly grabs a plant, immobilizing it for 2 turns
+5707	Monkey Attack	A monkey flies out and randomly grabs a plant, immobilizing it for 2 turns
+5709	Monkey Attack	A monkey flies out and randomly grabs a plant, immobilizing it for 2 turns
+5801	Group Heal	Heals all allied units.
+5802	Group Heal	Heals all allied units.
+5803	Group Heal	Heals all allied units.
+5804	Group Heal	Heals all allied units.
+5805	Group Heal	Heals all allied units.
+5901	Basic Doom Explosion	Consumes 35% of current health to deal heavy damage to all enemies in the front row.
+5902	Intermediate Doom Explosion	Consumes 30% of current health to deal massive damage to all enemies in the forward row.
+5903	Advanced Doom Explosion	Consumes 25% of current health to deal heavy damage to all enemies in the front row.
+5904	Expert Doom Explosion	Sacrifices 20% of current health to deal massive damage to all enemies in the front row.
+5905	Master Doom Blast	Reduces current HP by 15% to deal massive damage to all enemies in the front row.
+6001	Novice Splash Attack	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+6002	Intermediate Splash Attack	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+6003	Advanced Splash Attack	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+6004	Expert Splash Attack	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+6005	Master Splash Attack	Attack the current target and deal 50% splash damage to surrounding units, with a 15% chance to stun damaged targets for 1 turn.
+6101	Air Raid	Attacks all units at the rear of the enemy formation.
+6102	Air Raid	Attacks all units at the rear of the enemy formation.
+6103	Air Raid	Attacks all units at the rear of the enemy formation.
+6104	Air Raid	Attacks all units at the rear of the enemy formation.
+6105	Air Raid	Attacks all units at the rear of the enemy formation.
+6201	Aegis Protection	Attacks the current target and grants a shield to nearby teammates for 3 turns.
+6202	Aegis Protection	Attacks the current target and grants a shield to nearby teammates for 3 turns.
+6203	Aegis Protection	Attacks the current target and grants a shield to nearby teammates for 3 turns.
+6204	Aegis Protection	Attacks the current target and grants a shield to nearby teammates for 3 turns.
+6205	Aegis Protection	Attacks the current target and grants a shield to nearby teammates for 3 turns.
+6301	Harassment Attack	Attacks the current target and reduces its defense.
+6302	Harassment Attack	Attacks the current target and reduces its defense.
+6303	Harassment Attack	Attacks the current target and reduces its defense.
+6304	Harassment Attack	Attacks the current target and reduces its defense.
+6305	Harassment Attack	Attacks the current target and reduces its defense.
+6401	Armor Protection	Attacks the current target and increases self damage reduction for 1 turn
+6402	Armor Protection	Attacks the current target and increases self damage reduction for 1 turn
+6403	Armor Protection	Attacks the current target and increases self damage reduction for 1 turn
+6404	Armor Protection	Attacks the current target and increases self damage reduction for 1 turn
+6405	Armor Protection	Attacks the current target and increases self damage reduction for 1 turn
+6501	Frantic Dance	Attacks all enemies and has a chance to reduce their evasion.
+6502	Frantic Dance	Attacks all enemies and has a chance to reduce their evasion.
+6503	Frantic Dance	Attacks all enemies and has a chance to reduce their evasion.
+6504	Frantic Dance	Attacks all enemies and has a chance to reduce their evasion.
+6505	Frantic Dance	Attacks all enemies and has a chance to reduce their evasion.
+6601	Aerial Dance	Attacks the current target with a chance to immobilize them.
+6602	Aerial Dance	Attacks the current target with a chance to immobilize them.
+6603	Aerial Dance	Attacks the current target with a chance to immobilize them.
+6604	Aerial Dance	Attacks the current target with a chance to immobilize them.
+6605	Aerial Dance	Attacks the current target with a chance to immobilize them.
+6701	Charge and Assault	Attacks all units in the enemy formation
+6702	Charge and Assault	Attacks all units in the enemy formation
+6703	Charge and Assault	Attacks all units in the enemy formation
+6704	Charge and Assault	Attacks all units in the enemy formation
+6705	Charge and Assault	Attacks all units in the enemy formation
+6801	Earth Bombardment	Attacks all units in the enemy's front and middle rows
+6802	Earth Bombardment	Attacks all units in the enemy's front and middle rows
+6803	Earth Bombardment	Attacks all units in the enemy's front and middle rows
+6804	Earth Bombardment	Attacks all units in the enemy's front and middle rows
+6805	Earth Bombardment	Attacks all units in the enemy's front and middle rows
+6901	Junior Fatal Devour	Attacks and banishes the current target, making it disappear for 1 turn.
+6902	Intermediate Fatal Devour	Attacks and banishes the current target, making it disappear for 1 turn.
+6903	Advanced Fatal Devour	Attacks and banishes the current target, making it disappear for 1 turn.
+6904	Expert Lethal Devour	Attacks and banishes the current target, making it disappear for 1 turn.
+6905	Grandmaster Lethal Devour	Attacks and banishes the current target, making it disappear for 1 turn.
+7001	Novice Inspiring Presence	Heals 1 allied unit with the lowest health percentage.
+7002	Intermediate Inspiring	Heals 2 allied units with the lowest HP percentage.
+7003	Advanced Inspiring Cheer	Heals the 3 allied units with the lowest percentage of health.
+7004	Expert Rallying Cry	Heals the 4 allied units with the lowest HP percentage.
+7005	Master Inspiring Presence	Heals the 5 allied units with the lowest HP percentage.
+7201	Junior Pulse Attack	Attacks the last enemy in the front row and silences them for 2 turns.
+7202	Intermediate Pulse Attack	Attacks the last enemy in the front row and silences them for 2 turns.
+7203	Advanced Pulse Attack	Attacks the last enemy in the front row and silences them for 2 turns.
+7204	Expert Pulse Attack	Attacks the last enemy in the front row and silences them for 2 turns.
+7205	Master Pulse Attack	Attacks the last enemy in the front row and silences them for 2 turns.
+7701	Novice Lethal Throw	Attacks the current target and deals 50% splash damage to surrounding units.
+7702	Intermediate Deadly Throw	Attacks the current target and deals 50% splash damage to surrounding units.
+7703	Advanced Deadly Throw	Attacks the current target and deals 50% splash damage to surrounding units.
+7704	Expert Deadly Throw	Attacks the current target and deals 50% splash damage to surrounding units.
+7705	Grandmaster Deadly Throw	Attacks the current target and deals 50% splash damage to surrounding units.
+7801	Junior Culling Strike	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+7802	Intermediate Elimination Strike	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+7803	Advanced Culling Strike	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+7804	Expert Elimination Strike	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+7805	Master Elimination Strike	Blade of Elimination: execute a target to trigger again, up to a Triple Kill.
+7901	Octopus Assault	Attacks all units at the rear of the enemy formation.
+7902	Octopus Assault	Attacks all units at the rear of the enemy formation.
+7903	Octopus Assault	Attacks all units at the rear of the enemy formation.
+7904	Octopus Assault	Attacks all units at the rear of the enemy formation.
+7905	Octopus Assault	Attacks all units at the rear of the enemy formation.
+8001	Shell Thorn Counter	Attacks the current target and summons Tangle Kelp, gaining 1 turn of damage reflection.
+8002	Shell Thorn Counter	Attacks the current target and summons Tangle Kelp, gaining 1 turn of damage reflection.
+8003	Shell Thorn Counter	Attacks the current target and summons Tangle Kelp, gaining 1 turn of damage reflection.
+8004	Shell Thorn Counter	Attacks the current target and summons Tangle Kelp, gaining 1 turn of damage reflection.
+8005	Shell Thorn Counter	Attacks the current target and summons Tangle Kelp, gaining 1 turn of damage reflection.
+8101	Infiltration Attack	Bypasses the current target and attacks the rearmost unit behind them.
+8102	Infiltration Attack	Bypasses the current target and attacks the rearmost unit behind them.
+8103	Infiltration Attack	Bypasses the current target and attacks the rearmost unit behind them.
+8104	Infiltration Attack	Bypasses the current target and attacks the rearmost unit behind them.
+8105	Infiltration Attack	Bypasses the current target and attacks the rearmost unit behind them.
+8201	Column Attack	Attacks all units in the current target's column.
+8202	Column Attack	Attacks all units in the current target's column.
+8203	Column Attack	Attacks all units in the current target's column.
+8204	Column Attack	Attacks all units in the current target's column.
+8205	Column Attack	Attacks all units in the current target's column.
+8301	Turtle Shell Attack	Attacks the current target and increases self Damage Reduction for 2 turns.
+8302	Turtle Shell Attack	Attacks the current target and increases self Damage Reduction for 2 turns.
+8303	Turtle Shell Attack	Attacks the current target and increases self Damage Reduction for 2 turns.
+8304	Turtle Shell Attack	Attacks the current target and increases self Damage Reduction for 2 turns.
+8305	Turtle Shell Attack	Attacks the current target and increases self Damage Reduction for 2 turns.
+8401	Yaksha's Healing	Attacks the current target and increases ally healing skills' effectiveness this turn.
+8402	Yaksha's Healing	Attacks the current target and increases ally healing skills' effectiveness this turn.
+8403	Yaksha's Healing	Attacks the current target and increases ally healing skills' effectiveness this turn.
+8404	Yaksha's Healing	Attacks the current target and increases ally healing skills' effectiveness this turn.
+8405	Yaksha's Healing	Attacks the current target and increases ally healing skills' effectiveness this turn.
+8501	Zombie Assassination	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+8502	Zombie Assassination	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+8503	Zombie Assassination	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+8504	Zombie Assassination	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+8505	Zombie Assassination	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+8601	Lobbed Attack	Prioritize attacking the enemy Captain
+8602	Lobbed Attack	Prioritize attacking the enemy Captain
+8603	Lobbed Attack	Prioritize attacking the enemy Captain
+8604	Lobbed Attack	Prioritize attacking the enemy Captain
+8605	Lobbed Attack	Prioritize attacking the enemy Captain
+8701	Junior Lifesteal Attack	Deal heavy damage to the current target and gain 100% lifesteal.
+8702	Intermediate Lifesteal Attack	Deal heavy damage to the current target and gain 100% lifesteal.
+8703	Advanced Lifesteal Attack	Deal heavy damage to the current target and gain 100% lifesteal.
+8704	Expert Lifesteal Attack	Deal heavy damage to the current target and gain 100% lifesteal.
+8705	Grandmaster Lifesteal Attack	Deal heavy damage to the current target and gain 100% lifesteal.
+8801	Junior Charged Attack	Attacks the current target and gains a 16% crit bonus for 2 turns.
+8802	Intermediate Charged Attack	Attacks the current target and grants a 20% critical hit bonus for 2 turns.
+8803	Advanced Charged Attack	Attacks the current target and gains a 24% Critical Hit bonus for 2 turns.
+8804	Expert Charged Attack	Attacks the current target and grants a 28% critical strike bonus for 2 turns.
+8805	Master Charged Attack	Attacks the current target and gains a 32% critical hit bonus for 2 turns.
+8811	Novice Bullying	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+8812	Intermediate Bullying	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+8813	Advanced Bullying	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+8814	Expert Bullying	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+8815	Grandmaster Bully	Attacks the enemy unit with the lowest health. Guaranteed critical hit if the target's health percentage is below 50%.
+8901	Basic Armor Attack	Performs a single-target attack and grants all allied units 8% damage reduction for 1 turn.
+8902	Intermediate Armor Attack	Unleash a single-target attack and grant all allies 12% damage reduction for 1 turn.
+8903	Advanced Armor Attack	Performs a single-target attack and grants all allies 16% damage reduction for 1 turn.
+8904	Expert Armor Strike	Performs a single-target attack and grants all allies 20% damage reduction for 1 turn.
+8905	Master Armored Attack	Unleash a single-target attack and grant all allies 24% damage reduction for 1 turn.
+9001	Novice Sunflower Sweep	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+9002	Intermediate Sunflower Sweep	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+9003	Advanced Sunflower Sweep	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+9004	Expert Sunflower Sweep	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+9005	Master Sunflower Sweep	Performs a heavy slam, dealing massive damage to all enemies in the front row.
+9101	Junior Electric Orb Attack	Attacks the last enemy in the front row and drains 1 energy block.
+9102	Intermediate Electric Orb Attack	Attacks the last enemy in the front row and drains 1 energy block.
+9103	Advanced Electric Orb Attack	Attacks the last enemy in the front row and drains 1 energy block.
+9104	Expert Plasma Ball Attack	Attacks the last enemy in the front row and drains 1 energy block.
+9105	Master Lightning Orb Attack	Attacks the last enemy in the front row and drains 2 energy from them.
+9121	Basic Angelic Guardian	Heals all allied units and cleanses teammates of immobilization and silence effects.
+9122	Intermediate Angelic Guard	Heals all allied units and cleanses teammates of immobilization and silence effects.
+9123	Advanced Angelic Guardian	Heals all allied units and cleanses teammates of immobilization and silence effects.
+9124	Expert Angel Guardian	Heals all allied units and cleanses teammates of immobilization and silence effects.
+9125	Master Angelic Guardian	Heals all allied units and cleanses teammates of immobilization and silence effects.
+9201	Novice Spirit Energy	Grants 2 energy to 3 random allied units whose energy is not full, with a 65% success rate.
+9202	Intermediate Spirit Energy	Grant 2 energy to 3 random allies whose energy is not full, with a 70% success rate.
+9203	Advanced Spiritual Energy	Grants 2 energy to 3 random allied units whose energy is not full, with a 75% success rate.
+9204	Expert Spirit Energy	Grants 2 energy to 3 random allied units whose energy is not full, with an 80% success rate.
+9205	Master Spirit Energy	Grants 2 energy to 3 random allies whose energy is not full, with an 85% success rate.
+9301	Junior Oxygen Therapy	Heals the 3 allied units with the lowest HP percentage, and restores 2% of their HP per turn for 2 turns.
+9302	Intermediate Oxygen Therapy	Heals the 3 allied units with the lowest HP percentage, and restores 2% of their HP per turn for 2 turns.
+9303	Advanced Oxygen Therapy	Heals 3 allied units with the lowest HP percentage and grants them 3% HP regeneration per turn for 2 turns.
+9304	Expert Oxygen Therapy	Heals the 3 allied units with the lowest HP percentage, and restores 4% of their HP per turn for 2 turns.
+9305	Master Oxygen Therapy	Heals the 3 allied units with the lowest HP percentages, making them recover 5% HP per turn for 2 turns.
+9401	Novice Banana Blade	Deals multi-hit damage to all enemies in the front row, with a 30% chance to fully restore energy.
+9402	Intermediate Banana Spin	Deals multi-hit damage to all enemies in the front row, with a 35% chance to fully restore energy.
+9403	Advanced Banana Leaf Spin	Deals multi-hit attacks to all enemies in the horizontal row ahead, with a 40% chance to fully restore energy.
+9404	Expert Banana Leaf Spin	Performs multi-hit attacks on all enemies in the front row, with a 50% chance to fully recover energy.
+9405	Grandmaster Banana Spin	Deals multi-stage attacks to all enemies in the front row, with a 66% chance to fully restore energy.
+9501	Novice Berry Attack	Attacks the current target and grants a 10% attack bonus for 2 turns.
+9502	Intermediate Berry Blast	Attacks the current target and grants a 12% attack bonus for 2 turns.
+9503	Advanced Jelly Bean Attack	Attacks the current target and grants a 15% attack bonus for 2 turns.
+9504	Expert Berry Attack	Attacks the current target and grants an 18% attack bonus for 2 turns.
+9505	Master Kernel Attack	Attacks the current target and gains a 20% attack bonus for 2 turns.
+9601	Junior Nut King's Tonic	Attacks the current target and grants all allied units a 10% health bonus for 2 turns.
+9602	Intermediate Nut King Blessing	Attacks the current target and grants all allies a 12% HP bonus for 2 turns.
+9603	Advanced Berry King Blessing	Attacks the current target and grants all allies a 15% HP bonus for 2 turns.
+9604	Expert Fruit Lord Nourishment	Attacks the current target and grants all allies an 18% health bonus for 2 turns.
+9605	Grandmaster Nut-King Blessing	Attacks the current target and grants all allied units a 20% HP bonus for 2 turns.
+9901	Novice Blood Thirst	Prioritizes attacking the enemy captain and gains 35% Lifesteal. Using this skill costs no energy.
+9902	Intermediate Blood Thirst	Prioritizes attacking the enemy captain, grants 40% lifesteal, and consumes no energy when using skills.
+9903	Advanced Blood Thirst	Prioritizes attacking the enemy captain, gains 45% lifesteal, and consumes no energy when casting skills.
+9904	Expert Bloodlust	Prioritizes attacking the enemy captain, gains 50% Lifesteal, and consumes no energy when using skills.
+9905	Grandmaster Blood Thirst	Prioritizes attacking the enemy captain and gains 55% Lifesteal. Using this skill costs no energy.
+10001	Junior High Morale	Slightly increases party ATK
+10002	Intermediate High Fighting Spirit	Slightly increases attack for all allies
+10003	Advanced High Morale	All allies' ATK moderately increased
+10004	Expert Battle Morale	All Allies' Attack Massively Increased
+10005	Master High Fighting Spirit	All allies' ATK massively increased
+10101	Novice Hard-Head	Slightly increases basic attack defense for all allies
+10102	Intermediate Stone Head	Slightly increases basic attack defense for all allies.
+10103	Advanced Stone Head	Moderately increase team basic attack defense
+10104	Expert Stone Head	Greatly increases basic attack defense for all allies.
+10105	Master Stone Head	Massively increase team basic defense
+10201	Junior Bombardment Expert	Minimally increase team accuracy
+10202	Intermediate Bomb Expert	Slightly increase team accuracy
+10203	Advanced Bomb Thrower	Moderate increase to all allies' accuracy
+10204	Expert Bomb-Throwing Master	Massively increases accuracy for all allies.
+10205	Master Bombardier	All allies' Accuracy Massively Increased
+10301	Beginner Sunflower Shield	Slightly increases shield for all allies
+10302	Intermediate Sun Shield	Grant all allies a small shield
+10303	Advanced Sun Shield	Grants a moderate shield to all allies.
+10304	Expert Sunflower Shield	Grants a massive shield to all allies
+10305	Master Sun Shield	Massive increase to team shield
+10401	Junior Hair-Trigger	Slightly increase team critical hit rate
+10402	Intermediate Hair-Trigger	Slightly increases critical strike chance for all allies.
+10403	Advanced Hair-Trigger	Moderately increases critical hit rate for all allies
+10404	Expert Hair-Trigger	Large increase to team critical hit rate
+10405	Master Hair-Trigger	All allies' Critical Hit Massively Increased
+10501	Novice Sharp Gaze	All allies' Evasion Slightly Increased
+10502	Intermediate Sharp Vision	All allies' Dodge slightly increased
+10503	Advanced Keen Eyesight	Moderately increases dodge for all allies.
+10504	Expert Keen Eye	All Allies' Evasion Massively Increased
+10505	Master Keen Eyesight	Massively increases party Dodge
+10601	Beginner Ice Body	10% chance to immobilize 2 enemy targets
+10602	Intermediate Ice Body	10% chance to immobilize 2 enemy targets
+10603	Advanced Ice Body	10% chance to immobilize 2 enemy targets
+10604	Expert Ice Body	10% chance to immobilize 2 enemy targets
+10605	Master Icy Body	10% chance to immobilize 2 enemy targets
+10801	Junior Skill Defense	Slightly increases skill defense for all allies
+10802	Intermediate Skill Defense	Slightly increase team skill defense
+10803	Advanced Skill Defense	Medium increase to team skill defense
+10804	Expert Skill Defense	Significantly increases skill defense for all allies
+10805	Master Skill Defense	Massively increases party Skill DEF
+10901	Junior Skill Master	All Allies' Energy Slightly Increased
+10902	Intermediate Skill Master	Slightly increases Skill Power for all allies
+10903	Advanced Skill Master	Medium increase to team energy
+10904	Expert Skill Master	Significantly increases party Energy
+10905	Grandmaster Skill Master	Massively increases party Energy
+11001	Novice Tough Green Leaf	Slightly increases Toughness for all allies.
+11002	Intermediate Resilient Leaf	All allies' Toughness slightly increased
+11003	Advanced Tough Green Leaf	Moderately increases toughness for all allies
+11004	Expert Resilient Leaf	Greatly increase team toughness
+11005	Grandmaster Toughness Leaf	Massively increases toughness for all allies.
+11101	Junior Oxygen Shield	Slightly increases shield for all allies
+11102	Intermediate Oxygen Shield	Grant all allies a small shield
+11103	Advanced Oxygen Shield	Grants a moderate shield to all allies.
+11104	Expert Oxygen Shield	Grants a massive shield to all allies
+11105	Master Oxygen Shield	Massive increase to team shield
+11205	Grandmaster Divine Shield	Grants self-damage reduction
+12101	Junior Sap Fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+12102	Intermediate Sap Fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+12103	Advanced Sap Fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+12104	Expert Sap Fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+12105	Master Sap Fling	Fling 2 saps, dealing damage twice to random targets in the middle and rear of the enemy formation. This skill costs no energy to activate.
+12111	Junior Acid Erosion	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+12112	Intermediate Acid Erosion	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+12113	Advanced Acid Erosion	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+12114	Expert Acid Erosion	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+12115	Master Acid Erosion	Attacks all units in the horizontal row ahead and dispels all buffs from the targets (excluding shields).
+12121	Novice Magic Game	Attacks the current target with a 10% chance to immobilize it for 1 turn. Skill activation costs no energy.
+12122	Intermediate Magic Trick	Attacks the current target with a 15% chance to immobilize them for 1 turn. This skill costs no energy to activate.
+12123	Advanced Magic Game	Attacks the current target and has a 20% chance to immobilize them for 1 turn, consuming no energy when using skills.
+12124	Expert Magic Game	Attacks the current target and has a 25% chance to immobilize them for 1 turn, consuming no energy when using skills.
+12125	Master Magic Game	Attacks the current target with a 33% chance to immobilize them for 1 turn. Using this skill costs no energy.
+12131	Beginner Flame Burn	Fires a fire pea, dealing damage to the current target and reducing its defense by 15% for 2 turns.
+12132	Intermediate Flame Burn	Fires a fire pea, dealing damage to the current target and reducing their defense by 18% for 2 turns.
+12133	Advanced Flame Scorch	Fires a fire pea, dealing damage to the current target and reducing their defense by 21% for 2 turns.
+12134	Expert Flame Burn	Fires a fire pea, dealing damage to the current target and reducing its defense by 24% for 2 turns.
+12135	Master Flame Burn	Fires a fire pea, dealing damage to the current target and reducing their defense by 27% for 2 turns.
+12141	Basic Terror Roar	Lets out a terrifying screech, dealing damage to 1 random enemy unit with energy and reducing its energy by 1 segment.
+12142	Intermediate Terror Roar	Lets out a terrifying screech, dealing damage to 2 random enemies with energy and draining 1 energy from them.
+12143	Advanced Dread Roar	Emit a terrifying screech, dealing damage to 3 random enemies with energy and reducing their energy by 1 segment.
+12144	Expert Dread Roar	Lets out a terrifying screech, randomly dealing damage to 4 enemy units with energy and draining 1 energy from them.
+12145	Grandmaster Dread Roar	Lets out a terrifying screech, randomly dealing damage to 5 enemy units with energy and reducing their energy by 1 bar.
+12151	Novice Alligator Bite	Attack the last enemy in the front horizontal row, causing them to bleed 10% per turn for 3 turns.
+12152	Intermediate Alligator Bite	Attacks the last enemy in the front row, causing them to bleed for 12% per turn for 3 turns.
+12153	Advanced Alligator Bite	Attacks the rearmost enemy in the front row, causing them to bleed for 14% health each turn for 3 turns.
+12154	Expert Alligator Bite	Attacks the last enemy in the front row, causing them to bleed for 16% per turn for 3 turns.
+12155	Grandmaster Alligator Bite	Attack the last enemy in the front horizontal row, causing them to bleed 18% per turn for 3 turns.
+12161	Novice Whirlwind Strangle	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+12162	Intermediate Whirlwind Strangulation	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+12163	Advanced Whirlwind Strangling	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+12164	Expert Whirlwind Strangling	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+12165	Grandmaster Whirlwind Execution	Deal heavy damage to the front-row enemies in each horizontal row. Recover 2 energy at the end of the turn.
+12171	Novice Gleam Attack	Prioritizes attacking 2 random units in the enemy's middle and back rows, with a 30% chance to immobilize them for 2 turns.
+12172	Intermediate Flare Attack	Prioritizes attacking 2 random units in the enemy's middle and back rows, with a 30% chance to immobilize them for 2 turns.
+12173	Advanced Gleam Attack	Prioritizes attacking 3 random units in the middle and rear of the enemy formation, with a 30% chance to immobilize them for 2 turns.
+12174	Expert Flash Attack	Prioritizes attacking 4 random units in the middle and rear of the enemy formation, with a 30% chance to stun them for 2 turns.
+12175	Master Glare Attack	Prioritizes attacking 5 random units in the middle and back of the enemy formation, with a 30% chance to immobilize them for 2 turns.
+12181	Junior Acorn Shot	Attacks the current target and inflicts 15% vulnerability for 2 turns. Restores 2 energy at the end of the turn.
+12182	Intermediate Oak Shot	Attacks the current target, inflicting 20% vulnerability for 2 turns, and restores 2 energy at the end of the turn.
+12183	Advanced Oak Shot	Attacks the current target and inflicts 25% vulnerability for 2 turns, restoring 2 energy at the end of the turn.
+12184	Expert Oak Shot	Attacks the current target, inflicting 30% vulnerability for 2 turns, and restores 2 energy at the end of the turn.
+12185	Master Oak Shot	Attacks the current target and inflicts 35% vulnerability for 2 turns. Restores 2 energy at the end of the turn.
+12191	Standard Shot	Attacks the rearmost enemy in the row ahead.
+12192	Standard Shot	Attacks the rearmost enemy in the row ahead.
+12193	Standard Shot	Attacks the rearmost enemy in the row ahead.
+12194	Standard Shot	Attacks the rearmost enemy in the row ahead.
+12195	Standard Shot	Attacks the rearmost enemy in the row ahead.
+12201	Novice Cursed Thorns	Randomly attacks 3 enemy units, reducing their damage and healing output by 10% for 2 turns.
+12202	Intermediate Cursed Thorns	Randomly attacks 3 enemy units, reducing their damage and healing capacity by 20% for 2 turns.
+12203	Advanced Cursed Brambles	Randomly attacks 3 enemy units, reducing their damage and healing capabilities by 30% for 2 turns.
+12204	Expert Cursed Brambles	Randomly attacks 3 enemy units, reducing their damage and healing capabilities by 40% for 2 turns.
+12205	Master Cursed Brambles	Attacks 3 random enemy units, reducing their damage dealt and healing output by 50% for 2 turns.
+12211	Beginner Blazing Burn	Attacks all enemies in the front row, with a 60% chance to cause them to bleed for 10% of their HP per turn for 3 turns.
+12212	Intermediate Flame Scorch	Attacks all enemies in the front row, with a 60% chance to cause them to bleed for 12% damage per turn for 3 turns.
+12213	Advanced Blaze Scorching	Attacks all enemies in the forward row, with a 60% chance to cause 14% bleed damage per turn for 3 turns.
+12214	Expert Flame Scorch	Attacks all enemies in the front row and has a 60% chance to cause them to bleed for 16% damage per turn for 3 turns.
+12215	Master Blazing Scorch	Attacks all enemies in the front row, with a 60% chance to cause them to bleed for 18% per turn for 3 turns.
+12311	Rampant Silence Attack	Deals damage to the first unit in the horizontal line ahead, scales with skill power, and has a chance to silence it for 1 turn.
+12312	Rampant Silence Attack	Deals damage to the first unit in the horizontal line ahead, scales with skill power, and has a chance to silence it for 1 turn.
+12313	Rampant Silence Attack	Deals damage to the first unit in the horizontal line ahead, scales with skill power, and has a chance to silence it for 1 turn.
+12314	Rampant Silence Attack	Deals damage to the first unit in the horizontal line ahead, scales with skill power, and has a chance to silence it for 1 turn.
+12315	Rampant Silence Attack	Deals damage to the first unit in the horizontal line ahead, scales with skill power, and has a chance to silence it for 1 turn.
+12321	Silencing Attack	Deals damage to the current target, scaled by energy, with a chance to silence them for 1 turn.
+12322	Silencing Attack	Deals damage to the current target, scaled by energy, with a chance to silence them for 1 turn.
+12323	Silencing Attack	Deals damage to the current target, scaled by energy, with a chance to silence them for 1 turn.
+12324	Silencing Attack	Deals damage to the current target, scaled by energy, with a chance to silence them for 1 turn.
+12325	Silencing Attack	Deals damage to the current target, scaled by energy, with a chance to silence them for 1 turn.
+12331	Novice Counter Barrier	Boosts the 2 allied units with the lowest HP percentages, granting them a shield and a 10% damage reflection effect for 2 turns.
+12332	Intermediate Counter Barrier	Buffs 2 allies with the lowest health percentages, granting them a shield and 15% thorn damage for 2 turns.
+12333	Advanced Retaliatory Barrier	Buffs 3 allies with the lowest HP percentage, granting them a shield and 20% thorns effect for 2 turns.
+12334	Expert Counter-Barrier	Empowers 3 allied units with the lowest HP percentage, granting them a shield and 25% damage reflection for 2 turns.
+12335	Master Counter Barrier	Boosts the 4 allied units with the lowest HP percentages, granting them a shield and a 30% damage reflection effect for 2 turns.
+12341	Exile Attack	Deals damage to the current target, scaled by energy, with a chance to banish them for 1 turn
+12342	Exile Attack	Deals damage to the current target, scaled by energy, with a chance to banish them for 1 turn
+12343	Exile Attack	Deals damage to the current target, scaled by energy, with a chance to banish them for 1 turn
+12344	Exile Attack	Deals damage to the current target, scaled by energy, with a chance to banish them for 1 turn
+12345	Exile Attack	Deals damage to the current target, scaled by energy, with a chance to banish them for 1 turn
+12351	Novice Invincible Golden Body	Attacks the current target, granting all allies 10% max HP bonus and 15% damage reduction for 2 turns.
+12352	Intermediate Invincible Body	Attacks the current target and grants all allies a 12% Max HP bonus and 20% Damage Reduction for 2 turns.
+12353	Advanced Invincible Golden Body	Attacks the current target and grants all allied units a 15% HP bonus and 25% damage reduction for 2 turns.
+12354	Expert Invincible Golden Body	Attacks the current target and grants all allies an 18% health bonus and 30% damage reduction for 2 turns.
+12355	Master Invincible Golden Body	Attacks the current target, granting all allies a 20% HP bonus and 35% damage reduction for 2 turns.
+12361	Junior Lost Heart	Attacks 5 random enemy targets with a 12% chance to exile them for 1 turn. Restores 2 energy at the end of the turn.
+12362	Intermediate Lost Heart	Randomly attacks 5 enemy units with a 14% chance to exile them for 1 turn, recovering 2 energy at the end of the turn.
+12363	Advanced Lost Heart	Randomly attacks 5 enemy units with a 16% chance to exile them for 1 turn, and recovers 2 energy at the end of the turn.
+12364	Expert Lost Heart	Randomly attacks 5 enemy units and has an 18% chance to exile them for 1 turn. Restores 2 energy at the end of the turn.
+12365	Master Lost Heart	Randomly attacks 5 enemy units with a 20% chance to exile them for 1 turn, and restores 2 energy at the end of the turn.
+12371	Horizontal Laser Attack	Attacks all enemies in the horizontal line ahead, scaled by energy.
+12372	Horizontal Laser Attack	Attacks all enemies in the horizontal line ahead, scaled by energy.
+12373	Horizontal Laser Attack	Attacks all enemies in the horizontal line ahead, scaled by energy.
+12374	Horizontal Laser Attack	Attacks all enemies in the horizontal line ahead, scaled by energy.
+12375	Horizontal Laser Attack	Attacks all enemies in the horizontal line ahead, scaled by energy.
+12381	Basic Crimson Stinger	Attacks the current target, causing 5% bleed damage per turn for 2 turns, and grants a 10% damage bonus for 1 turn.
+12382	Intermediate Crimson Stinger	Attacks the current target, causing it to bleed for 10% HP per turn for 2 turns, and grants a 20% damage bonus for 1 turn.
+12383	Advanced Crimson Stinger	Attacks the current target, causing it to bleed for 15% HP per turn for 2 turns, and grants a 30% damage bonus for 1 turn.
+12384	Expert Crimson Stinger	Attacks the current target, causes it to bleed for 20% HP per turn for 2 turns, and gains a 40% damage bonus for 1 turn.
+12385	Grandmaster Crimson Thorn	Attacks the current target, inflicting 25% bleeding per turn for 2 turns and granting a 50% damage bonus for 1 turn.
+12391	Horizontal Attack	Deals damage to the first unit in the same row ahead, scaled with skill power
+12392	Horizontal Attack	Deals damage to the first unit in the same row ahead, scaled with skill power
+12393	Horizontal Attack	Deals damage to the first unit in the same row ahead, scaled with skill power
+12394	Horizontal Attack	Deals damage to the first unit in the same row ahead, scaled with skill power
+12395	Horizontal Attack	Deals damage to the first unit in the same row ahead, scaled with skill power
+12401	Junior Airdrop Strike	Attacks all enemies in the front row with a 10% chance to immobilize them for 1 turn. Restores 2 energy at the end of the turn.
+12402	Intermediate Airdrop Strike	Attack all enemies in the front row horizontally with a 20% chance to stun them for 1 turn. Recover 2 energy at the end of the turn.
+12403	Advanced Airdrop Strike	Attacks all enemies in the front row with a 30% chance to immobilize them for 1 turn, and restores 2 energy at the end of the turn.
+12404	Expert Airdrop Strike	Attacks all enemies in the front row with a 40% chance to immobilize them for 1 turn. Restores 2 energy at the end of the turn.
+12405	Grandmaster Airdrop Strike	Attacks all enemies in the same horizontal row ahead with a 50% chance to immobilize them for 1 turn, and restores 2 energy at the end of the turn.
+12411	Lightning Attack	Deals damage to the current target, scaled by energy, and grants 50% lifesteal.
+12412	Lightning Attack	Deals damage to the current target, scaled by energy, and grants 50% lifesteal.
+12413	Lightning Attack	Deals damage to the current target, scaled by energy, and grants 50% lifesteal.
+12414	Lightning Attack	Deals damage to the current target, scaled by energy, and grants 50% lifesteal.
+12415	Lightning Attack	Deals damage to the current target, scaled by energy, and grants 50% lifesteal.
+12421	Novice Doom Thunderstorm	Prioritizes attacking 5 random units in the middle and rear columns, reducing their damage and healing output by 15% for 1 turn.
+12422	Intermediate Doom Thunderstorm	Prioritizes attacking 5 random units in the middle and rear of the formation, reducing their damage and healing capacity by 25% for 1 turn.
+12423	Advanced Doom Thunderstorm	Prioritizes attacking 5 random units in the middle and rear columns, reducing their damage and healing output by 35% for 1 turn.
+12424	Expert Ruin Thunderstorm	Prioritizes attacking 5 random units in the middle and rear rows, reducing their damage and healing capacity by 45% for 1 turn.
+12425	Master Ruin Thunderstorm	Prioritizes attacking 5 random units in the middle and back rows, reducing their damage and healing output by 55% for 1 turn.
+12431	Flash Blade	Deals damage to the current target, scaled by Skill Power, and causes them to bleed for 10% for 1 turn.
+12432	Flash Blade	Deals damage to the current target, scaled by Skill Power, and causes them to bleed for 10% for 1 turn.
+12433	Flash Blade	Deals damage to the current target, scaled by Skill Power, and causes them to bleed for 10% for 1 turn.
+12434	Flash Blade	Deals damage to the current target, scaled by Skill Power, and causes them to bleed for 10% for 1 turn.
+12435	Flash Blade	Deals damage to the current target, scaled by Skill Power, and causes them to bleed for 10% for 1 turn.
+12441	Basic Earth Sword	Attacks all enemy units, inflicting 10% Vulnerable for 1 turn. Restores 2 energy at the end of the turn.
+12442	Intermediate Earth Sword	Attacks all enemy units, inflicting 20% increased damage taken for 1 turn, and restores 2 energy at the end of the turn.
+12443	Advanced Earth Sword	Attacks all enemy units, inflicting 30% Vulnerable for 1 turn. Restores 2 energy at the end of the turn.
+12444	Expert Earth Sword	Attacks all enemy units, inflicting 40% vulnerability for 1 turn, and restores 2 energy at the end of the turn.
+12445	Grandmaster Earth Sword	Attacks all enemy units, inflicting 50% vulnerability for 1 turn, and recovers 2 energy at the end of the turn.
+12451	Moonlight Heal	Heals the ally with the lowest HP percentage and grants them 10% thorns effect for 1 turn.
+12452	Moonlight Heal	Heals the ally with the lowest HP percentage and grants them 20% damage reflection for 1 turn.
+12453	Moonlight Heal	Heals the ally with the lowest HP percentage and grants them 30% damage reflection for 1 turn
+12454	Moonlight Heal	Heals the allied unit with the lowest HP percentage and grants them 40% thorns effect for 1 turn.
+12455	Moonlight Heal	Heals the ally with the lowest HP percentage and grants them 50% Damage Reflection for 1 turn.
+12461	Junior Moonlight Prayer	Heals all allies with moonlight power, clears teammates' immobilization and silence statuses, and grants them a 10% damage bonus for 1 turn.
+12462	Intermediate Moonlight Prayer	Heal all allies with moonlight, cleanse teammates' stun and silence effects, and grant them a 20% damage bonus for 1 turn.
+12463	Advanced Moonlight Prayer	Heals all allies with the power of moonlight, removes immobilization and silence from teammates, and grants them a 30% damage bonus for 1 turn.
+12464	Expert Moonlight Prayer	Heal all allies with moonlight, cleanse teammates' stun and silence effects, and grant them a 40% damage bonus for 1 turn.
+12465	Master Moonlight Prayer	Heals all allies with the power of moonlight, cleanses allies of stun and silence effects, and grants them a 50% damage bonus for 1 turn.
+12471	Asparagus Attack	Deals damage to the first unit in the row ahead, scaling with Skill Power, with a chance to drain 1 bar of Energy.
+12472	Asparagus Attack	Deals damage to the first unit in the row ahead, scaling with Skill Power, with a chance to drain 1 bar of Energy.
+12473	Asparagus Attack	Deals damage to the first unit in the row ahead, scaling with Skill Power, with a chance to drain 1 bar of Energy.
+12474	Asparagus Attack	Deals damage to the first unit in the row ahead, scaling with Skill Power, with a chance to drain 1 bar of Energy.
+12475	Asparagus Attack	Deals damage to the first unit in the row ahead, scaling with Skill Power, with a chance to drain 1 bar of Energy.
+12481	Beginner Thunder Slam	Lashes out a powerful strike at the current target, granting an extra 10% Critical Hit and 10% damage bonus for this attack.
+12482	Intermediate Thunder Slam	Lauches a powerful strike at the current target, gaining an extra 20% critical hit rate and 15% damage bonus for this attack.
+12483	Advanced Thunder Slam	Lashes out with a powerful blow at the current target, gaining an additional 30% critical hit rate and 20% damage bonus for this attack.
+12484	Expert Thunder Slam	Lashes out a powerful strike at the current target, granting this attack an extra 40% critical chance and 25% damage bonus.
+12485	Master Thunder Slam	Delivers a heavy blow to the current target, gaining an additional 50% crit and 30% damage bonus for this attack.
+12491	Silencing Attack	Deals damage to the current target, scaled by energy, with a chance to silence them for 1 turn.
+12492	Silencing Attack	Deals damage to the current target, scaled by energy, with a chance to silence them for 1 turn.
+12493	Silencing Attack	Deals damage to the current target, scaled by energy, with a chance to silence them for 1 turn.
+12494	Silencing Attack	Deals damage to the current target, scaled by energy, with a chance to silence them for 1 turn.
+12495	Silencing Attack	Deals damage to the current target, scaled by energy, with a chance to silence them for 1 turn.
+12501	Novice Sorcery Blast	Attacks 3 random enemy units with a 10% chance to stun them for 1 turn.
+12502	Intermediate Sorcery Blast	Randomly attacks 3 enemy units with a 20% chance to Root them for 1 turn.
+12503	Advanced Hex Explosion	Randomly attacks 3 enemy units with a 30% chance to immobilize them for 1 turn.
+12504	Expert Wizardry Blast	Attacks 3 random enemy units with a 40% chance to immobilize them for 1 turn.
+12505	Master Sorcery Blast	Randomly attacks 3 enemy units with a 50% chance to immobilize them for 1 turn.

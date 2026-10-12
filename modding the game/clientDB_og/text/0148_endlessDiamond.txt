@@ -1,0 +1,2 @@
+id	diamond
+1	100

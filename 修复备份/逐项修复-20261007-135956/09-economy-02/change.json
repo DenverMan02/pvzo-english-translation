@@ -1,0 +1,21 @@
+{
+  "issue": "economy-02",
+  "files": [
+    {
+      "relative": "pvzol本地/PvZ-Server-PoC/pvz_poc_server.py",
+      "old_sha256": "db3078bd8fb0281e53d5c32a94b213ff8ff0ad4f42a74f086540d572fc7a8719",
+      "new_sha256": "9795132622ad3fb3b8cfc104cfa70522fd11918cfea91900b6492f4995fddbe3",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\PvZ-Server-PoC\\pvz_poc_server.py"
+    },
+    {
+      "relative": "pvzol本地/PvZ-Server-PoC/player_store.py",
+      "old_sha256": "6a20dcfcf631a96b2a5bb7eefc506a949ea9b0368cc961114d202fe7f944525d",
+      "new_sha256": "054365a7446440dc1736ce60bf134a97574c6045157f410ce5b85438890c5b12",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\PvZ-Server-PoC\\player_store.py"
+    }
+  ],
+  "tests": [
+    "test_09_starter_grant: 2 passed",
+    "test_recycle_swap passed"
+  ]
+}

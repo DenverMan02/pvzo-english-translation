@@ -1,0 +1,4 @@
+id	name	desc	buffDesc
+1	Tranquil Woodland	Requires level {levelMin} to unlock	<br><font color="#00ff00">"Mine Conquest"</font><br>Harvest coins from the mine every 8 hours<br>
+2	War Anthem Plains	Requires level {levelMin} to unlock	<br><font color="#00ff00">"Mine Conquest"</font><br>Harvest coins from the mine every 8 hours<br><font color="#00ff00">"Plant Showdown"</font><br>Open every night from 20:30 to 21:00<br>Capture the Playground and Circus
+3	Foggy Border	Requires level {levelMin} to unlock	<br><font color="#00ff00">"Cross-Server Expedition"</font><br>War begins weekly<br>Join one of three factions<br>Dominate the battlefield

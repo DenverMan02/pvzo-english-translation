@@ -1,0 +1,88 @@
+id	name	desc	introduction
+100000	Resource replacement zombie		
+110	Mummy Zombie	Regular mummified zombie.	Regular mummified zombie.
+120	Conehead Mummy	His conehead helmet makes him twice as tough as a regular mummy.	Where on earth did he get that traffic cone for a hat?
+130	Buckethead Mummy	His bucket helmet absorbs a great deal of damage.	Wears an iron bucket on his head, granting high toughness.
+150	Ra Zombie	Attempts to steal sun and keeps holding onto it.	Possesses the ability to steal sun.
+170	Explorer Zombie	Carries a torch capable of scorching plants.	Burns the plants in front of him, but is afraid of Iceberg Lettuce.
+140	Flag Mummy	The flag indicates a huge wave of zombies.	Signals the arrival of a huge wave of zombies.
+190	Pharaoh Zombie	Carries a bulky yet sturdy shell.	Has extremely high toughness, but is vulnerable to Pomegranate-pults.
+180	Tomb Raiser Zombie	Throws bones to create gravestones.	Spawns gravestones on empty tiles.
+160	Camel Zombie	Traveling together as a trio.	Three of them form a camel shape together. Vulnerable to Bloomerang.
+161	Camel Zombie	Traveling together as a trio.	Three of them form a camel shape together. Vulnerable to Bloomerang.
+162	Camel Zombie	Traveling together as a trio.	Three of them form a camel shape together. Vulnerable to Bloomerang.
+100	Browncoat Zombie	Regular Zombie	None
+101	Conehead Zombie	His conehead helmet makes him twice as tough as a regular zombie.	None
+102	Buckethead Zombie	His bucket helmet can absorb a massive amount of damage.	None
+103	Flag Zombie	The flag indicates a huge wave of zombies.	None
+200	Sphinx-inator	Quietly guarding the pyramid.	Summons zombies and breathes fireballs.
+165	Camel Zombie 1	Three's Company	Fears Bloomerang
+166	Camel Zombie 2	Three's Company	Fears Bloomerang
+167	Camel Zombie 3	Three's Company	Fears Bloomerang
+350	Archer Zombie	Excels at firing sneak arrows from the back row, but is very fragile.	An archer zombie, fears Wall-nuts and Carrot Rocket Launchers.
+360	Archer Zombie	Excels at firing sneak arrows from the back row, but is very fragile.	Looks just like the Archer Zombie, but can shoot fire arrows that incinerate plants.
+310	Sergeant Zombie	Regular Soldier	An ancient army soldier, doesn't look very capable.
+320	Bowl-Head Sergeant	Found a bowl to wear on my head, better than nothing!	Uses his rice bowl for defense.
+330	Iron Helm Sergeant	Ever since I got this iron helm, plants can't slap my face anymore!	The Iron Bucket is extremely sturdy and blocks many attacks.
+370	Shield Guard Zombie	His shield is nearly impenetrable, and he often marches alongside Archer Zombies.	Wields a shield and charges at the front.
+380	Cart Peddler Zombie	The cart is too small; the little pig always falls off.	A farmer coming to the market to sell piglets. The piglets will run down from the cart.
+390	Zombie Piglet	Escapes from the cart.	A fast-running little piglet that jumped off the old farmer's cart.
+400	Cavalry Zombie	Thinks riding a hobby horse makes them cavalry.	Riding a hobby horse through the trenches, he fancies himself a general.
+410	Token Zombie	The token is the sign of a massive wave of zombies.	A petty yamen runner holding a token to summon a large wave of zombies.
+420	Terracotta Warrior	Terracotta Warrior	None
+430	Drunk Zombie	Wine-loving Zombie	A drunken soldier who wanders into other lanes.
+500	Emperor Qin	Quietly guarding the Emperor Qin Shi Huang's Mausoleum.	Summons zombies and breathes fireballs.
+115	Desert Death Zombie	A mysterious desert zombie that creates strange quicksand.	None
+385	Supervisor Zombie	The detestable Boss Zombie.	None
+510	Pirate Zombie	A regular zombie from the pirate ship.	A buttery Regular Zombie from the pirate ship.
+520	Conehead Pirate	His pirate-emblazoned traffic cone makes him twice as tough as a regular Swashbuckler Zombie.	His pirate-emblazoned traffic cone makes him twice as tough as a regular Swashbuckler Zombie.
+530	Buckethead Pirate	The sturdy wooden barrel provides excellent protection from damage.	The sturdy barrel provides great protection to keep him safe from harm.
+540	Flag Sailor Zombie	Signals that a huge wave of zombies is coming.	Signals that a huge wave of zombies is coming.
+550	Bungee Zombie	Uses a rope swing to descend right into the middle of the lawn.	Uses a rope swing to descend right into the middle of the lawn.
+560	Pirate Captain	His parrot will snatch your plant and fly away to parts unknown.	His parrot will snatch your plant and fly away to parts unknown.
+570	Zombie Parrot	Quickly commands the Pirate Captain to steal one of your plants.	Quickly commands the Pirate Captain to steal one of your plants.
+580	Pirate Imp	He likes to squeeze into tight spaces, like a steamroller or a cannon barrel.	He likes to squeeze into tight spaces, like a steamroller or a cannon barrel.
+590	Pirate Gargantuar	Can crush all plants in its path (instant kill); throws an Imp zombie when health drops to a certain threshold.	Can crush all plants in its path (instant kill); throws an Imp zombie when health drops to a certain threshold.
+600	Seagull Zombie	Can cross low plants (Spikeweed, Spikerock, and Potato Mine) or water even without flooring.	Can cross low plants (Spikeweed, Spikerock, and Potato Mine) or water even without flooring.
+601	Seagull Zombie		Can cross low plants (Spikeweed, Spikerock, and Potato Mine) or water even without flooring.
+610	Barrel Roller Zombie	The roller not only crushes plants but also defends against plant attacks.	The roller not only crushes plants but also defends against plant attacks.
+620	Monkey Tamer Zombie		
+621	Zombie Monkey		
+630	Arsonist Zombie		
+640	Musketeer Zombie		
+1000	Yeti Zombie		
+650	Dr. Zomboss (Pirate Seas)		Besides summoning and launching massive hordes of zombies, he can also trample plants beneath his feet, ahead of him, or even across entire rows.
+700	Jetpack Zombie	A future zombie that can leap directly over low plants.	His greatest fear is Blover... Shh! Don't let them know I told you.
+710	EM Shield Zombie	A future zombie capable of generating a protective electromagnetic shield.	Judging by the name, this zombie knows how to use technology to protect itself—and maybe other zombies too?
+720	Mecha Conehead Zombie	Constructed with massive amounts of metal, this machine looks practically indestructible.	His mechanical armor is hard to break. Focus firepower or use powerful plants to deal with him.
+730	Disco 3000	A colossal machine piloted by two Imps, capable of summoning a horde of Jetpack Disco Zombies. Quite terrifying.	Disco-3000's radar has a strong attraction to Jetpack Zombies; destroying the radar will prevent Jetpack Zombies from appearing.
+740	Mecha-Football Zombie	This guy is purely here to disrupt your formation. Remember to save up sun and be ready to reorganize your defenses!	Pushes plants forward by one tile. Plants in the last row must be extra careful.
+750	Mecha-Gargantuar	Mecha-Gargantuar	Mecha-Gargantuar
+810	Future Zombie	A common zombie found in the future.	A regular zombie wrapped entirely in bandages.
+820	Conehead Future Zombie	His Traffic Cone helmet makes him twice as tough as a regular Future Zombie.	Where on earth did he get that traffic cone for a hat?
+830	Future Buckethead Zombie	His bucket helmet absorbs a great deal of damage.	Wears an iron bucket on his head, granting high toughness.
+840	Future Flag Zombie	The flag indicates a huge wave of zombies.	Signals the arrival of a huge wave of zombies.
+850	Robo-Bug	Small future zombies that appear in swarms to wreck your defense line.	Small zombie with very low health. They often swarm in groups to overwhelm enemies with sheer numbers. Better build a solid defense!
+860	EM Shield Zombie	A future zombie capable of generating a protective electromagnetic shield.	Judging by the name, this zombie knows how to use technology to protect itself—and maybe other zombies too?
+870	Jetpack Zombie	A future zombie that can leap directly over low plants.	His greatest fear is Blover... Shh! Don't let them know I told you.
+880	Mecha Conehead Zombie	Constructed with massive amounts of metal, this machine looks practically indestructible.	His mechanical armor is hard to break. Focus firepower or use powerful plants to deal with him.
+890	Disco 3000	A colossal machine piloted by two Imps, capable of summoning a horde of Jetpack Disco Zombies. Quite terrifying.	Disco-3000's radar has a strong attraction to Jetpack Zombies; destroying the radar will prevent Jetpack Zombies from appearing.
+891	Jetpack Disco Zombie	Aerial units summoned by Disco-3000 in massive quantities.	Wherever Disco-3000 is, they are there too—it's practically an illegal gathering. Honestly, bring out a Blover!
+900	Mecha-Football Zombie	This guy is purely here to disrupt your formation. Remember to save up sun and be ready to reorganize your defenses!	Pushes plants forward by one tile. Plants in the last row must be extra careful.
+910	Venom Zombie	A non-mechanical zombie that spits toxic venom in front of it.	Spits venom forward to harm plants. Quick, get me an antidote!
+920	Robo-Wolf Zombie	A robotic zombie that can run and vault over the first plant.	This running, vaulting robotic wolf had better be taken care of early!
+930	Mecha-Gargantuar	"The ultimate ""weapon"" of the Far Future. Aside from crushing plants and tossing Imps, this mech is equipped with laser eyes that can instantly vaporize plants."	Smashes plants, throws Imps, and can instantly obliterate a plant with a laser shot.
+940	Reaper Zombie	Look at those wide harvest wheels! Its attack range rivals that of a Snapdragon!	A robotic zombie with wide harvester wheels that attacks 3 plants in a single lane.
+950	Future Decrypter	In addition to his usual terrifying abilities, the Doctor has invented missiles that destroy Power Tiles this time.	Summons massive hordes of zombies, tramples plants beneath or ahead of him, fires missiles to destroy Power Tiles and plants, and surges forward across two rows.
+960	Underwater Zombie	A common zombie of the underwater world.	Basic zombie of the undersea world.
+970	Shrimp Soldier Zombie	His shrimp shell makes him twice as tough as a regular Kelp Zombie.	Where on earth did he get that shrimp shell for a hat?
+980	Snail Shell Zombie	His conch-shell helmet absorbs a massive amount of damage.	Wears a conch shell on its head, providing high defense.
+990	Flag Seahorse Zombie	The flag indicates a huge wave of zombies.	Signals the arrival of a huge wave of zombies.
+1100	Sphinx-inator	Quietly guarding the Emperor Qin Shi Huang's Mausoleum.	Summons zombies and breathes fireballs.
+1010	Jellyfish Zombie	Can cross low plants (Spikeweed, Spikerock, and Potato Mine) or water even without flooring.	Can cross low plants (Spikeweed, Spikerock, and Potato Mine) or water even without flooring.
+1020	Clam Fairy Zombie	Though Clam Fairy Zombie is a girl, she looks more menacing than other zombies when she closes her shell.	Closes its shell to deflect physical projectiles.
+1030	Deep Sea Yaksha Zombie	"Sea-Yaksha Zombie is a half-zombie, half-fish fellow. Don't let his honest and simple appearance fool you—his ""fork"" poses a massive threat."	Releases a water wave to slow down plant attack speed.
+1040	Zombie	Regular Zombie	Reserved for the tutorial
+1050	Conehead Zombie	His conehead helmet makes him twice as tough as a regular zombie.	Reserved for the tutorial
+1060	Buckethead Zombie	His bucket helmet can absorb a massive amount of damage.	Reserved for the tutorial
+1070	Flag Zombie	The flag indicates a huge wave of zombies.	Reserved for the tutorial

@@ -1,0 +1,7 @@
+id	name
+1	0.5 hours
+2	1 hour
+3	2 hours
+4	3 hours
+5	4 hours
+6	5 hours

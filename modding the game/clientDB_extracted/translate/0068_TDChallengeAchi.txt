@@ -1,0 +1,26 @@
+id	desc	name
+1	Max score 1000, points deducted for each Lawn Mower lost	Save Mowers
+2	Max score 1000, points deducted for each rocket MISS	Rocket MISS
+3	Max score 1000. Points are deducted for each Squash used.	Squash Saver
+4	The more sun collected, the higher your score	Produce Sun
+5	The more zombies you defeat, the higher your score	Zombie Slayer
+6	Max score 1000, points deducted for each plant lost	Plant Protector
+7	The fewer plants grown, the higher your score	Fewer Plants
+8	Max score 1000, points deducted for each zombie touching a flower	Flower Defender
+9	Fewer Wall-nuts used means a higher score	Fewer Wall-nuts
+10	Hitting more targets with a single Wall-nut means a higher score	Wall-nut Combo
+11	Max score 1000. Points are deducted for each MISS.	Few Mistakes
+12	The more Bonk Choy perfect kills, the higher your score	Perfect Kills
+13	The faster all gravestones are cleared, the higher your score	Clear the Obstacles
+14	Plant Match: The more matches made, the higher the score	Beghouled
+15	Higher plant match combos mean a higher score	Match Combo
+16	The more Seagull Zombies defeated, the higher your score	Kills
+17	The more Seagull Zombie combos you get, the higher your score	Combo Count
+18	More zombies killed with Sun Storms means a higher score	Sun Explosion
+19	Higher Sun Storm zombie kill combos mean a higher score	Super Explosion
+20	The more Yetis defeated, the higher your score	Yeti Slayer
+21	Points are deducted for each click MISS	MISS Count
+22	Points will be deducted if card flips exceed a certain amount	Memory Master
+23	Card Flip Streak	Card Flip Streak
+24	The more fireballs extinguished by Iceberg Lettuce, the higher your score	Fire Extinguisher Pro
+25	The more holes filled and resets used, the more points deducted	Fewer Power-ups

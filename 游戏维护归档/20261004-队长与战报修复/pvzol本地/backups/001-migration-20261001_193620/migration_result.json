@@ -1,0 +1,1878 @@
+{
+  "status": "MIGRATION_OK",
+  "timestamp": "20261001_193622",
+  "account": "001 (uin=1)",
+  "source_db": "D:\\pvzol本地最新\\pvzol本地\\PvZ-Server-PoC\\players.db",
+  "results": [
+    {
+      "source_db": "D:\\pvzol本地最新\\pvzol本地\\PvZ-Server-PoC\\players.db",
+      "target_db": "D:\\pvzol本地最新最新ol\\pvzol本地\\players.db",
+      "target_backup": "D:\\pvzol本地最新最新ol\\pvzol本地\\backups\\001-migration-20261001_193620\\pvzol本地.players.db.before.bak",
+      "affected_tables": [
+        {
+          "table": "bots_state",
+          "copied_columns": [
+            "uin",
+            "score",
+            "wins",
+            "losses",
+            "power"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_armor",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "armor_type",
+            "star",
+            "substar",
+            "level",
+            "exp"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_armor_gems",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "armor_type",
+            "gem_type",
+            "item_id"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_avatar",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "avatar_id",
+            "status",
+            "forge_level"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_baptize",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "attack",
+            "defense",
+            "hp",
+            "ability",
+            "total_times"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_baptize_pending",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "mode",
+            "rolls",
+            "attack",
+            "defense",
+            "hp",
+            "ability"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_fill",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "piece_index"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_forge",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "forge_level"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_fruits",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "quality",
+            "level"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_genes",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "gene_id",
+            "factor_level",
+            "factor_exp",
+            "attribute",
+            "level"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_refines",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "attack",
+            "defense",
+            "hp",
+            "ability",
+            "speed",
+            "pending_attack",
+            "pending_defense",
+            "pending_hp",
+            "pending_ability",
+            "pending_speed",
+            "pending_mode"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "cards",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "card_id",
+            "level",
+            "exp",
+            "fill_quality",
+            "evolve_level",
+            "armor_type"
+          ],
+          "source_rows": 25,
+          "target_rows_before": 4
+        },
+        {
+          "table": "equipment_sequences",
+          "copied_columns": [
+            "uin",
+            "next_uid"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "equipment_state",
+          "copied_columns": [
+            "uin",
+            "pool_id",
+            "current_energy",
+            "last_energy_at",
+            "current_exp",
+            "part_id",
+            "first_claimed",
+            "daily_claim_day",
+            "auto_use_bead",
+            "buy_count"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "equipments",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "item_id",
+            "card_uid",
+            "level",
+            "exp",
+            "grade_percent",
+            "is_clone"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "formation",
+          "copied_columns": [
+            "uin",
+            "team_id",
+            "pos_index",
+            "uid",
+            "owner_role_id"
+          ],
+          "source_rows": 4,
+          "target_rows_before": 4
+        },
+        {
+          "table": "formation_leader",
+          "copied_columns": [
+            "uin",
+            "team_id",
+            "uid"
+          ],
+          "source_rows": 1,
+          "target_rows_before": 0
+        },
+        {
+          "table": "friends",
+          "copied_columns": [
+            "uin",
+            "friend_role_id",
+            "friend_name",
+            "help_plant_id",
+            "help_plant_level",
+            "diamond_flag",
+            "diamond_blue_lvl",
+            "diamond_yellow_lvl",
+            "diamond_xinyue_lvl"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "fuben_boxes",
+          "copied_columns": [
+            "uin",
+            "chapter",
+            "mode"
+          ],
+          "source_rows": 2,
+          "target_rows_before": 0
+        },
+        {
+          "table": "fuben_passed",
+          "copied_columns": [
+            "uin",
+            "chapter",
+            "mode",
+            "stage",
+            "star"
+          ],
+          "source_rows": 22,
+          "target_rows_before": 0
+        },
+        {
+          "table": "garden_pots",
+          "copied_columns": [
+            "uin",
+            "field_id",
+            "seed_id",
+            "plant_time",
+            "fertilizer_id",
+            "last_fertilizer_time",
+            "level"
+          ],
+          "source_rows": 4,
+          "target_rows_before": 0
+        },
+        {
+          "table": "gene_test_stages",
+          "copied_columns": [
+            "uin",
+            "mode",
+            "stage",
+            "current_sub",
+            "max_sub",
+            "rewards"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "hotspot_event_state",
+          "copied_columns": [
+            "uin",
+            "event",
+            "data"
+          ],
+          "source_rows": 1,
+          "target_rows_before": 1
+        },
+        {
+          "table": "items",
+          "copied_columns": [
+            "uin",
+            "item_id",
+            "count"
+          ],
+          "source_rows": 89,
+          "target_rows_before": 36
+        },
+        {
+          "table": "local_aux_quest",
+          "copied_columns": [
+            "uin",
+            "aux_quest_id",
+            "target",
+            "finish_num",
+            "claimed"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_children_day",
+          "copied_columns": [
+            "uin",
+            "day",
+            "best",
+            "taken"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_client_data",
+          "copied_columns": [
+            "uin",
+            "key",
+            "value"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_guild_applications",
+          "copied_columns": [
+            "guild_id",
+            "uin",
+            "role_id",
+            "name",
+            "level",
+            "fight_power",
+            "apply_time"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_guild_dungeon_claims",
+          "copied_columns": [
+            "guild_id",
+            "uin",
+            "day",
+            "count"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_guild_dungeon_fights",
+          "copied_columns": [
+            "guild_id",
+            "uin",
+            "day",
+            "count"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_guild_members",
+          "copied_columns": [
+            "guild_id",
+            "uin",
+            "role_id",
+            "name",
+            "position",
+            "contrib",
+            "day_contrib",
+            "contrib_day",
+            "level",
+            "face_id",
+            "fight_power",
+            "joined_at"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_guild_players",
+          "copied_columns": [
+            "uin",
+            "last_quit_time",
+            "invite_count"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_guild_skills",
+          "copied_columns": [
+            "uin",
+            "skill_id",
+            "level"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_hitjar",
+          "copied_columns": [
+            "uin",
+            "day",
+            "daily_taken",
+            "selection",
+            "broken",
+            "history",
+            "reset_count",
+            "score",
+            "milestones_taken"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_mails",
+          "copied_columns": [
+            "mail_id",
+            "uin",
+            "source_type",
+            "mail_type",
+            "send_role_id",
+            "send_name",
+            "send_face_id",
+            "status",
+            "title",
+            "content",
+            "attachment",
+            "time"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_noend_fuben",
+          "copied_columns": [
+            "uin",
+            "begin_time",
+            "end_time",
+            "opened",
+            "mode_id",
+            "stage_id",
+            "history_max_stage_id",
+            "lose_times",
+            "report_id",
+            "has_take_reward",
+            "has_pass_next_stage",
+            "reset_times",
+            "best_stage_id",
+            "reward_stage_id",
+            "pre_card"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_noend_votes",
+          "copied_columns": [
+            "uin",
+            "mode",
+            "target_role_id",
+            "board_type",
+            "up_down"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_seven_day",
+          "copied_columns": [
+            "uin",
+            "login_day",
+            "has_reward",
+            "last_seen"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_treasure",
+          "copied_columns": [
+            "uin",
+            "day",
+            "claimed",
+            "used",
+            "house_id",
+            "map_id",
+            "end_at",
+            "last_map_id",
+            "last_time"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "main_quest_progress",
+          "copied_columns": [
+            "uin",
+            "quest_id",
+            "curr_step",
+            "claimed"
+          ],
+          "source_rows": 224,
+          "target_rows_before": 199
+        },
+        {
+          "table": "plants",
+          "copied_columns": [
+            "uin",
+            "plant_id"
+          ],
+          "source_rows": 12,
+          "target_rows_before": 4
+        },
+        {
+          "table": "players",
+          "copied_columns": [
+            "uin",
+            "role_id",
+            "name",
+            "level",
+            "exp",
+            "coin",
+            "sun",
+            "energy",
+            "friend_point",
+            "ticket",
+            "present_ticket",
+            "fame",
+            "buy_energy_num",
+            "buy_energy_day",
+            "energy_time",
+            "foster_ticket",
+            "lucky",
+            "contrib_val",
+            "light",
+            "last_pay_time",
+            "prestige",
+            "zone_id",
+            "td_stage",
+            "td_level",
+            "td_sub",
+            "face_id",
+            "avatar_plant_id",
+            "reg_time",
+            "server_open_time",
+            "created_at",
+            "last_login",
+            "sign_month",
+            "sign_total",
+            "sign_last",
+            "garden_exp",
+            "garden_bean",
+            "garden_seeds_granted",
+            "garden_goodwill",
+            "card_market_granted",
+            "mystery_luck",
+            "mystery_granted",
+            "mystery_board",
+            "lab_bottles",
+            "lab_mats_granted",
+            "wt_level",
+            "wt_exp",
+            "wt_free_used",
+            "wt_adv_used",
+            "wt_day",
+            "wt_granted",
+            "tr_max",
+            "tr_current",
+            "tr_battles_used",
+            "tr_restarts_used",
+            "tr_boxes",
+            "tr_day",
+            "vip_level",
+            "vip_day",
+            "vip_energy_taken",
+            "vip_ticket_taken",
+            "vip_gift_taken",
+            "vip_plant_granted",
+            "nutrition_temp",
+            "nutrition_gold",
+            "nutrition_bottle_exp",
+            "reagent_seq",
+            "td_privilege",
+            "td_privilege_endtime",
+            "diamond_flag",
+            "diamond_blue_lvl",
+            "diamond_yellow_lvl",
+            "diamond_xinyue_lvl",
+            "role_created",
+            "tutorial_active",
+            "tutorial_initialized",
+            "guide_keys",
+            "guide_finish_ids",
+            "gene_test_day",
+            "gene_test_remain",
+            "gene_test_restart_num",
+            "gene_test_last_stage",
+            "gene_test_pass_stage",
+            "gene_test_pass_elite",
+            "gene_test_sweep_day",
+            "baptize_day",
+            "baptize_used",
+            "baptize_granted",
+            "swap_granted",
+            "armor_prestige_granted",
+            "tr_hard_max",
+            "tr_hard_current",
+            "tr_hard_battles_used",
+            "tr_hard_restarts_used",
+            "tr_hard_boxes",
+            "tr_hard_day",
+            "welfare_level_taken",
+            "online_reward_data",
+            "question_data",
+            "daily_quest_data",
+            "welfare_resource_data",
+            "daily_td_data",
+            "noend_td_data",
+            "arena_data",
+            "rank_arena_data",
+            "avatar_skin_id",
+            "snowman_data",
+            "garden_pet_data",
+            "garden_autofertilizer",
+            "garden_autouse",
+            "garden_kettlelimit",
+            "garden_kettle_day",
+            "plant_coin_granted",
+            "plant_shop_page",
+            "puppet_energy",
+            "puppet_energy_ts",
+            "puppet_skill_val",
+            "puppet_skill_val_ts",
+            "puppet_lineup",
+            "puppet_easy_chapter",
+            "puppet_hard_chapter",
+            "puppet_fuben_day",
+            "puppet_extract",
+            "puppet_granted",
+            "puppet_buy_day",
+            "puppet_energy_buy",
+            "puppet_skill_buy",
+            "zi_level",
+            "zi_max",
+            "zi_adv_level",
+            "zi_adv_max",
+            "zi_boxes",
+            "zi_adv_boxes",
+            "zi_precards",
+            "zi_adv_precards",
+            "zi_last_role_level",
+            "zi_adv_last_role_level",
+            "zi_day",
+            "zi_refresh_used",
+            "zi_adv_day",
+            "zi_adv_refresh_used",
+            "zi_sweep_day",
+            "zi_shop_day",
+            "zi_shop_bought",
+            "plant_test_data",
+            "puppet_fuben_formation_set",
+            "worldboss_day",
+            "worldboss_state",
+            "guild_shop_day",
+            "guild_shop_bought",
+            "mystery_version",
+            "qq_face_url"
+          ],
+          "source_rows": 1,
+          "target_rows_before": 1
+        },
+        {
+          "table": "puppet_fuben",
+          "copied_columns": [
+            "uin",
+            "mode",
+            "chapter_id",
+            "stage_id",
+            "wave",
+            "times",
+            "day"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "puppets",
+          "copied_columns": [
+            "uin",
+            "base_id",
+            "exp",
+            "level",
+            "star",
+            "quality",
+            "active_skill",
+            "active_level",
+            "passive_skill",
+            "passive_level",
+            "spars"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "reagents",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "base_id",
+            "level",
+            "position",
+            "slot_id",
+            "exp"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "talents",
+          "copied_columns": [
+            "uin",
+            "talent_id"
+          ],
+          "source_rows": 13,
+          "target_rows_before": 0
+        },
+        {
+          "table": "td_gates",
+          "copied_columns": [
+            "uin",
+            "stage",
+            "gate_id"
+          ],
+          "source_rows": 10,
+          "target_rows_before": 0
+        },
+        {
+          "table": "td_passed",
+          "copied_columns": [
+            "uin",
+            "stage",
+            "level",
+            "sub",
+            "star",
+            "achievements"
+          ],
+          "source_rows": 16,
+          "target_rows_before": 0
+        },
+        {
+          "table": "town_login_gift_claims",
+          "copied_columns": [
+            "uin",
+            "day_index",
+            "claim_time"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "town_login_gifts",
+          "copied_columns": [
+            "uin",
+            "start_day"
+          ],
+          "source_rows": 1,
+          "target_rows_before": 1
+        },
+        {
+          "table": "zombie_island_box",
+          "copied_columns": [
+            "uin",
+            "mode",
+            "level_id",
+            "box_id"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "zombie_island_precard",
+          "copied_columns": [
+            "uin",
+            "mode",
+            "slot",
+            "uid"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        }
+      ],
+      "before_counts": {
+        "bots_state": 0,
+        "card_armor": 0,
+        "card_armor_gems": 0,
+        "card_avatar": 0,
+        "card_baptize": 0,
+        "card_baptize_pending": 0,
+        "card_fill": 0,
+        "card_forge": 0,
+        "card_fruits": 0,
+        "card_genes": 0,
+        "card_refines": 0,
+        "cards": 4,
+        "equipment_sequences": 0,
+        "equipment_state": 0,
+        "equipments": 0,
+        "formation": 4,
+        "formation_leader": 0,
+        "friends": 0,
+        "fuben_boxes": 0,
+        "fuben_passed": 0,
+        "garden_pots": 0,
+        "gene_test_stages": 0,
+        "hotspot_event_state": 1,
+        "items": 36,
+        "local_aux_quest": 0,
+        "local_children_day": 0,
+        "local_client_data": 0,
+        "local_guild_applications": 0,
+        "local_guild_dungeon_claims": 0,
+        "local_guild_dungeon_fights": 0,
+        "local_guild_members": 0,
+        "local_guild_players": 0,
+        "local_guild_skills": 0,
+        "local_hitjar": 0,
+        "local_mails": 0,
+        "local_noend_fuben": 0,
+        "local_noend_votes": 0,
+        "local_seven_day": 0,
+        "local_treasure": 0,
+        "main_quest_progress": 199,
+        "plants": 4,
+        "players": 1,
+        "puppet_fuben": 0,
+        "puppets": 0,
+        "reagents": 0,
+        "talents": 0,
+        "td_gates": 0,
+        "td_passed": 0,
+        "town_login_gift_claims": 0,
+        "town_login_gifts": 1,
+        "zombie_island_box": 0,
+        "zombie_island_precard": 0
+      },
+      "after_counts": {
+        "bots_state": 0,
+        "card_armor": 0,
+        "card_armor_gems": 0,
+        "card_avatar": 0,
+        "card_baptize": 0,
+        "card_baptize_pending": 0,
+        "card_fill": 0,
+        "card_forge": 0,
+        "card_fruits": 0,
+        "card_genes": 0,
+        "card_refines": 0,
+        "cards": 25,
+        "equipment_sequences": 0,
+        "equipment_state": 0,
+        "equipments": 0,
+        "formation": 4,
+        "formation_leader": 1,
+        "friends": 0,
+        "fuben_boxes": 2,
+        "fuben_passed": 22,
+        "garden_pots": 4,
+        "gene_test_stages": 0,
+        "hotspot_event_state": 1,
+        "items": 89,
+        "local_aux_quest": 0,
+        "local_children_day": 0,
+        "local_client_data": 0,
+        "local_guild_applications": 0,
+        "local_guild_dungeon_claims": 0,
+        "local_guild_dungeon_fights": 0,
+        "local_guild_members": 0,
+        "local_guild_players": 0,
+        "local_guild_skills": 0,
+        "local_hitjar": 0,
+        "local_mails": 0,
+        "local_noend_fuben": 0,
+        "local_noend_votes": 0,
+        "local_seven_day": 0,
+        "local_treasure": 0,
+        "main_quest_progress": 224,
+        "plants": 12,
+        "players": 1,
+        "puppet_fuben": 0,
+        "puppets": 0,
+        "reagents": 0,
+        "talents": 13,
+        "td_gates": 10,
+        "td_passed": 16,
+        "town_login_gift_claims": 0,
+        "town_login_gifts": 1,
+        "zombie_island_box": 0,
+        "zombie_island_precard": 0
+      },
+      "player": {
+        "uin": 1,
+        "role_id": 1,
+        "name": "星辰",
+        "level": 11,
+        "exp": 515,
+        "coin": 329275,
+        "energy": 210,
+        "last_login": 1790813993
+      },
+      "integrity_check": "ok",
+      "players_row_match": true
+    },
+    {
+      "source_db": "D:\\pvzol本地最新\\pvzol本地\\PvZ-Server-PoC\\players.db",
+      "target_db": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\players.db",
+      "target_backup": "D:\\pvzol本地最新最新ol\\pvzol本地\\backups\\001-migration-20261001_193620\\PvZ-Server-PoC.players.db.before.bak",
+      "affected_tables": [
+        {
+          "table": "bots_state",
+          "copied_columns": [
+            "uin",
+            "score",
+            "wins",
+            "losses",
+            "power"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_armor",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "armor_type",
+            "star",
+            "substar",
+            "level",
+            "exp"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_armor_gems",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "armor_type",
+            "gem_type",
+            "item_id"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_avatar",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "avatar_id",
+            "status",
+            "forge_level"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_baptize",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "attack",
+            "defense",
+            "hp",
+            "ability",
+            "total_times"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_baptize_pending",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "mode",
+            "rolls",
+            "attack",
+            "defense",
+            "hp",
+            "ability"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_fill",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "piece_index"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_forge",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "forge_level"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_fruits",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "quality",
+            "level"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_genes",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "gene_id",
+            "factor_level",
+            "factor_exp",
+            "attribute",
+            "level"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "card_refines",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "attack",
+            "defense",
+            "hp",
+            "ability",
+            "speed",
+            "pending_attack",
+            "pending_defense",
+            "pending_hp",
+            "pending_ability",
+            "pending_speed",
+            "pending_mode"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "cards",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "card_id",
+            "level",
+            "exp",
+            "fill_quality",
+            "evolve_level",
+            "armor_type"
+          ],
+          "source_rows": 25,
+          "target_rows_before": 4
+        },
+        {
+          "table": "equipment_sequences",
+          "copied_columns": [
+            "uin",
+            "next_uid"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "equipment_state",
+          "copied_columns": [
+            "uin",
+            "pool_id",
+            "current_energy",
+            "last_energy_at",
+            "current_exp",
+            "part_id",
+            "first_claimed",
+            "daily_claim_day",
+            "auto_use_bead",
+            "buy_count"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "equipments",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "item_id",
+            "card_uid",
+            "level",
+            "exp",
+            "grade_percent",
+            "is_clone"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "formation",
+          "copied_columns": [
+            "uin",
+            "team_id",
+            "pos_index",
+            "uid",
+            "owner_role_id"
+          ],
+          "source_rows": 4,
+          "target_rows_before": 4
+        },
+        {
+          "table": "formation_leader",
+          "copied_columns": [
+            "uin",
+            "team_id",
+            "uid"
+          ],
+          "source_rows": 1,
+          "target_rows_before": 0
+        },
+        {
+          "table": "friends",
+          "copied_columns": [
+            "uin",
+            "friend_role_id",
+            "friend_name",
+            "help_plant_id",
+            "help_plant_level",
+            "diamond_flag",
+            "diamond_blue_lvl",
+            "diamond_yellow_lvl",
+            "diamond_xinyue_lvl"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "fuben_boxes",
+          "copied_columns": [
+            "uin",
+            "chapter",
+            "mode"
+          ],
+          "source_rows": 2,
+          "target_rows_before": 0
+        },
+        {
+          "table": "fuben_passed",
+          "copied_columns": [
+            "uin",
+            "chapter",
+            "mode",
+            "stage",
+            "star"
+          ],
+          "source_rows": 22,
+          "target_rows_before": 0
+        },
+        {
+          "table": "garden_pots",
+          "copied_columns": [
+            "uin",
+            "field_id",
+            "seed_id",
+            "plant_time",
+            "fertilizer_id",
+            "last_fertilizer_time",
+            "level"
+          ],
+          "source_rows": 4,
+          "target_rows_before": 0
+        },
+        {
+          "table": "gene_test_stages",
+          "copied_columns": [
+            "uin",
+            "mode",
+            "stage",
+            "current_sub",
+            "max_sub",
+            "rewards"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "hotspot_event_state",
+          "copied_columns": [
+            "uin",
+            "event",
+            "data"
+          ],
+          "source_rows": 1,
+          "target_rows_before": 1
+        },
+        {
+          "table": "items",
+          "copied_columns": [
+            "uin",
+            "item_id",
+            "count"
+          ],
+          "source_rows": 89,
+          "target_rows_before": 36
+        },
+        {
+          "table": "local_aux_quest",
+          "copied_columns": [
+            "uin",
+            "aux_quest_id",
+            "target",
+            "finish_num",
+            "claimed"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_children_day",
+          "copied_columns": [
+            "uin",
+            "day",
+            "best",
+            "taken"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_client_data",
+          "copied_columns": [
+            "uin",
+            "key",
+            "value"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_guild_applications",
+          "copied_columns": [
+            "guild_id",
+            "uin",
+            "role_id",
+            "name",
+            "level",
+            "fight_power",
+            "apply_time"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_guild_dungeon_claims",
+          "copied_columns": [
+            "guild_id",
+            "uin",
+            "day",
+            "count"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_guild_dungeon_fights",
+          "copied_columns": [
+            "guild_id",
+            "uin",
+            "day",
+            "count"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_guild_members",
+          "copied_columns": [
+            "guild_id",
+            "uin",
+            "role_id",
+            "name",
+            "position",
+            "contrib",
+            "day_contrib",
+            "contrib_day",
+            "level",
+            "face_id",
+            "fight_power",
+            "joined_at"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_guild_players",
+          "copied_columns": [
+            "uin",
+            "last_quit_time",
+            "invite_count"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_guild_skills",
+          "copied_columns": [
+            "uin",
+            "skill_id",
+            "level"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_hitjar",
+          "copied_columns": [
+            "uin",
+            "day",
+            "daily_taken",
+            "selection",
+            "broken",
+            "history",
+            "reset_count",
+            "score",
+            "milestones_taken"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_mails",
+          "copied_columns": [
+            "mail_id",
+            "uin",
+            "source_type",
+            "mail_type",
+            "send_role_id",
+            "send_name",
+            "send_face_id",
+            "status",
+            "title",
+            "content",
+            "attachment",
+            "time"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_noend_fuben",
+          "copied_columns": [
+            "uin",
+            "begin_time",
+            "end_time",
+            "opened",
+            "mode_id",
+            "stage_id",
+            "history_max_stage_id",
+            "lose_times",
+            "report_id",
+            "has_take_reward",
+            "has_pass_next_stage",
+            "reset_times",
+            "best_stage_id",
+            "reward_stage_id",
+            "pre_card"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_noend_votes",
+          "copied_columns": [
+            "uin",
+            "mode",
+            "target_role_id",
+            "board_type",
+            "up_down"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_seven_day",
+          "copied_columns": [
+            "uin",
+            "login_day",
+            "has_reward",
+            "last_seen"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "local_treasure",
+          "copied_columns": [
+            "uin",
+            "day",
+            "claimed",
+            "used",
+            "house_id",
+            "map_id",
+            "end_at",
+            "last_map_id",
+            "last_time"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "main_quest_progress",
+          "copied_columns": [
+            "uin",
+            "quest_id",
+            "curr_step",
+            "claimed"
+          ],
+          "source_rows": 224,
+          "target_rows_before": 199
+        },
+        {
+          "table": "plants",
+          "copied_columns": [
+            "uin",
+            "plant_id"
+          ],
+          "source_rows": 12,
+          "target_rows_before": 4
+        },
+        {
+          "table": "players",
+          "copied_columns": [
+            "uin",
+            "role_id",
+            "name",
+            "level",
+            "exp",
+            "coin",
+            "sun",
+            "energy",
+            "friend_point",
+            "ticket",
+            "present_ticket",
+            "fame",
+            "buy_energy_num",
+            "buy_energy_day",
+            "energy_time",
+            "foster_ticket",
+            "lucky",
+            "contrib_val",
+            "light",
+            "last_pay_time",
+            "prestige",
+            "zone_id",
+            "td_stage",
+            "td_level",
+            "td_sub",
+            "face_id",
+            "avatar_plant_id",
+            "reg_time",
+            "server_open_time",
+            "created_at",
+            "last_login",
+            "sign_month",
+            "sign_total",
+            "sign_last",
+            "garden_exp",
+            "garden_bean",
+            "garden_seeds_granted",
+            "garden_goodwill",
+            "card_market_granted",
+            "mystery_luck",
+            "mystery_granted",
+            "mystery_board",
+            "lab_bottles",
+            "lab_mats_granted",
+            "wt_level",
+            "wt_exp",
+            "wt_free_used",
+            "wt_adv_used",
+            "wt_day",
+            "wt_granted",
+            "tr_max",
+            "tr_current",
+            "tr_battles_used",
+            "tr_restarts_used",
+            "tr_boxes",
+            "tr_day",
+            "vip_level",
+            "vip_day",
+            "vip_energy_taken",
+            "vip_ticket_taken",
+            "vip_gift_taken",
+            "vip_plant_granted",
+            "nutrition_temp",
+            "nutrition_gold",
+            "nutrition_bottle_exp",
+            "reagent_seq",
+            "td_privilege",
+            "td_privilege_endtime",
+            "diamond_flag",
+            "diamond_blue_lvl",
+            "diamond_yellow_lvl",
+            "diamond_xinyue_lvl",
+            "role_created",
+            "tutorial_active",
+            "tutorial_initialized",
+            "guide_keys",
+            "guide_finish_ids",
+            "gene_test_day",
+            "gene_test_remain",
+            "gene_test_restart_num",
+            "gene_test_last_stage",
+            "gene_test_pass_stage",
+            "gene_test_pass_elite",
+            "gene_test_sweep_day",
+            "baptize_day",
+            "baptize_used",
+            "baptize_granted",
+            "swap_granted",
+            "armor_prestige_granted",
+            "tr_hard_max",
+            "tr_hard_current",
+            "tr_hard_battles_used",
+            "tr_hard_restarts_used",
+            "tr_hard_boxes",
+            "tr_hard_day",
+            "welfare_level_taken",
+            "online_reward_data",
+            "question_data",
+            "daily_quest_data",
+            "welfare_resource_data",
+            "daily_td_data",
+            "noend_td_data",
+            "arena_data",
+            "rank_arena_data",
+            "avatar_skin_id",
+            "snowman_data",
+            "garden_pet_data",
+            "garden_autofertilizer",
+            "garden_autouse",
+            "garden_kettlelimit",
+            "garden_kettle_day",
+            "plant_coin_granted",
+            "plant_shop_page",
+            "puppet_energy",
+            "puppet_energy_ts",
+            "puppet_skill_val",
+            "puppet_skill_val_ts",
+            "puppet_lineup",
+            "puppet_easy_chapter",
+            "puppet_hard_chapter",
+            "puppet_fuben_day",
+            "puppet_extract",
+            "puppet_granted",
+            "puppet_buy_day",
+            "puppet_energy_buy",
+            "puppet_skill_buy",
+            "zi_level",
+            "zi_max",
+            "zi_adv_level",
+            "zi_adv_max",
+            "zi_boxes",
+            "zi_adv_boxes",
+            "zi_precards",
+            "zi_adv_precards",
+            "zi_last_role_level",
+            "zi_adv_last_role_level",
+            "zi_day",
+            "zi_refresh_used",
+            "zi_adv_day",
+            "zi_adv_refresh_used",
+            "zi_sweep_day",
+            "zi_shop_day",
+            "zi_shop_bought",
+            "plant_test_data",
+            "puppet_fuben_formation_set",
+            "worldboss_day",
+            "worldboss_state",
+            "guild_shop_day",
+            "guild_shop_bought",
+            "mystery_version",
+            "qq_face_url"
+          ],
+          "source_rows": 1,
+          "target_rows_before": 1
+        },
+        {
+          "table": "puppet_fuben",
+          "copied_columns": [
+            "uin",
+            "mode",
+            "chapter_id",
+            "stage_id",
+            "wave",
+            "times",
+            "day"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "puppets",
+          "copied_columns": [
+            "uin",
+            "base_id",
+            "exp",
+            "level",
+            "star",
+            "quality",
+            "active_skill",
+            "active_level",
+            "passive_skill",
+            "passive_level",
+            "spars"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "reagents",
+          "copied_columns": [
+            "uin",
+            "uid",
+            "base_id",
+            "level",
+            "position",
+            "slot_id",
+            "exp"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "talents",
+          "copied_columns": [
+            "uin",
+            "talent_id"
+          ],
+          "source_rows": 13,
+          "target_rows_before": 0
+        },
+        {
+          "table": "td_gates",
+          "copied_columns": [
+            "uin",
+            "stage",
+            "gate_id"
+          ],
+          "source_rows": 10,
+          "target_rows_before": 0
+        },
+        {
+          "table": "td_passed",
+          "copied_columns": [
+            "uin",
+            "stage",
+            "level",
+            "sub",
+            "star",
+            "achievements"
+          ],
+          "source_rows": 16,
+          "target_rows_before": 0
+        },
+        {
+          "table": "town_login_gift_claims",
+          "copied_columns": [
+            "uin",
+            "day_index",
+            "claim_time"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "town_login_gifts",
+          "copied_columns": [
+            "uin",
+            "start_day"
+          ],
+          "source_rows": 1,
+          "target_rows_before": 1
+        },
+        {
+          "table": "zombie_island_box",
+          "copied_columns": [
+            "uin",
+            "mode",
+            "level_id",
+            "box_id"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        },
+        {
+          "table": "zombie_island_precard",
+          "copied_columns": [
+            "uin",
+            "mode",
+            "slot",
+            "uid"
+          ],
+          "source_rows": 0,
+          "target_rows_before": 0
+        }
+      ],
+      "before_counts": {
+        "bots_state": 0,
+        "card_armor": 0,
+        "card_armor_gems": 0,
+        "card_avatar": 0,
+        "card_baptize": 0,
+        "card_baptize_pending": 0,
+        "card_fill": 0,
+        "card_forge": 0,
+        "card_fruits": 0,
+        "card_genes": 0,
+        "card_refines": 0,
+        "cards": 4,
+        "equipment_sequences": 0,
+        "equipment_state": 0,
+        "equipments": 0,
+        "formation": 4,
+        "formation_leader": 0,
+        "friends": 0,
+        "fuben_boxes": 0,
+        "fuben_passed": 0,
+        "garden_pots": 0,
+        "gene_test_stages": 0,
+        "hotspot_event_state": 1,
+        "items": 36,
+        "local_aux_quest": 0,
+        "local_children_day": 0,
+        "local_client_data": 0,
+        "local_guild_applications": 0,
+        "local_guild_dungeon_claims": 0,
+        "local_guild_dungeon_fights": 0,
+        "local_guild_members": 0,
+        "local_guild_players": 0,
+        "local_guild_skills": 0,
+        "local_hitjar": 0,
+        "local_mails": 0,
+        "local_noend_fuben": 0,
+        "local_noend_votes": 0,
+        "local_seven_day": 0,
+        "local_treasure": 0,
+        "main_quest_progress": 199,
+        "plants": 4,
+        "players": 1,
+        "puppet_fuben": 0,
+        "puppets": 0,
+        "reagents": 0,
+        "talents": 0,
+        "td_gates": 0,
+        "td_passed": 0,
+        "town_login_gift_claims": 0,
+        "town_login_gifts": 1,
+        "zombie_island_box": 0,
+        "zombie_island_precard": 0
+      },
+      "after_counts": {
+        "bots_state": 0,
+        "card_armor": 0,
+        "card_armor_gems": 0,
+        "card_avatar": 0,
+        "card_baptize": 0,
+        "card_baptize_pending": 0,
+        "card_fill": 0,
+        "card_forge": 0,
+        "card_fruits": 0,
+        "card_genes": 0,
+        "card_refines": 0,
+        "cards": 25,
+        "equipment_sequences": 0,
+        "equipment_state": 0,
+        "equipments": 0,
+        "formation": 4,
+        "formation_leader": 1,
+        "friends": 0,
+        "fuben_boxes": 2,
+        "fuben_passed": 22,
+        "garden_pots": 4,
+        "gene_test_stages": 0,
+        "hotspot_event_state": 1,
+        "items": 89,
+        "local_aux_quest": 0,
+        "local_children_day": 0,
+        "local_client_data": 0,
+        "local_guild_applications": 0,
+        "local_guild_dungeon_claims": 0,
+        "local_guild_dungeon_fights": 0,
+        "local_guild_members": 0,
+        "local_guild_players": 0,
+        "local_guild_skills": 0,
+        "local_hitjar": 0,
+        "local_mails": 0,
+        "local_noend_fuben": 0,
+        "local_noend_votes": 0,
+        "local_seven_day": 0,
+        "local_treasure": 0,
+        "main_quest_progress": 224,
+        "plants": 12,
+        "players": 1,
+        "puppet_fuben": 0,
+        "puppets": 0,
+        "reagents": 0,
+        "talents": 13,
+        "td_gates": 10,
+        "td_passed": 16,
+        "town_login_gift_claims": 0,
+        "town_login_gifts": 1,
+        "zombie_island_box": 0,
+        "zombie_island_precard": 0
+      },
+      "player": {
+        "uin": 1,
+        "role_id": 1,
+        "name": "星辰",
+        "level": 11,
+        "exp": 515,
+        "coin": 329275,
+        "energy": 210,
+        "last_login": 1790813993
+      },
+      "integrity_check": "ok",
+      "players_row_match": true
+    }
+  ]
+}

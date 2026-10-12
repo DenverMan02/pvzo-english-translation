@@ -1,0 +1,138 @@
+id	name
+100	Sun
+200	Plant produces sun
+300	Pea projectile explosion 1
+600	Winter Melon explosion
+700	Melon Projectile Explosion 2
+800	Melon Projectile Explosion 3
+900	Zombie ash effect
+1000	Potato explosion effect
+1100	Cherry Bomb explosion effect
+1200	Level complete wallet
+1300	Fire Bamboo projectile hit
+1400	Ancient Egypt Lawn Mower
+1500	Dirt Splash Animation 1
+1600	Dirt splash animation 2
+1700	Dirt splash animation 3
+1800	Zombie Head Drop
+1900	Zombie Arm Drop
+2000	Zombie loot drop
+2100	Bamboo Shoot launch effect
+2200	Whack-a-Zombie
+2300	Dave
+2400	Balloon Zombie explosion
+2500	Dr. Zomboss
+2600	Silver Coin
+2700	Coin
+2800	Zombie object being sucked away
+2900	Zombie Conehead Transformation
+3000	Boomerang hit effect
+3100	Torchlight Zombie plant ignition effect
+3200	Tombstone
+3300	Thrown bone
+3400	Gravestone Dirt Base Effect
+3500	Tombstone destruction effect
+3600	Plant Fuel
+3700	Plant Food effect
+3800	Lightning strike effect
+3900	Summoned land object
+4000	Whirlwind blowing objects
+4100	Popup zombie item
+4200	Beat Generation Conveyor Belt
+4300	Rhythm Master striker
+4400	Conveyor Belt Zombie Slide Effect
+4500	Standard Stage Lawn Mower
+4600	Beat Generation Conveyor Belt
+4700	Dave's little flower
+4800	Dave's Mold Colony
+4910	Rolling turf background 1
+4920	Scrolling turf 2 background
+4930	Rolling turf 3 background
+4940	Rolling turf background 4
+4950	Rolling turf 5 background
+4960	Tutorial level background
+4970	Turf rolling animation
+5000	Card flip animation
+5100	Rocket fire animation
+5200	Dragon Fruit hit zombie effect
+5300	Stage 1 Boss Skill Ground Indicator
+5400	Dusk Lobber Ultimate Hit Effect
+5500	Plant produces sun
+5600	Carrot Rocket explosion effect
+5700	Archery target effect
+5800	Carrot Missile Launcher Plant Food explosion effect
+5900	Dropped Seed Packet
+6000	First Emperor's Mausoleum Lawn Mower
+4210	Quicksand
+1001	Potato Mine Plant Food projectile
+6100	Bejeweled plant crater
+6200	Gem Disappear Effect
+6300	Dave's safe tile
+6400	Mast falling down
+6410	Mast falling over
+6500	Mast blocking invisible wall
+6600	Snapdragon fire breath
+6700	Snapdragon Plant Food fire breath
+6800	Snapdragon ground flame
+6900	Pirate Seas Lawn Mower
+7000	Pirate Seas splash
+7010	Pirate Seas wave 1
+7020	Pirate Seas Wave 2
+7100	Shooting minigame striker
+7200	Seagull
+7300	Rolling barrel
+7400	Spikeweed Ultimate Spike
+7500	Spikerock Plant Food spike
+7600	Coconut Cannon projectile explosion
+7700	Thrown torch
+7800	Ground fire
+7900	Coconut Cannon controller
+8000	Jalapeno flame
+8100	Quicksand
+8200	Winter Melon explosion
+8300	Winter Melon Plant Food explosion
+8400	Portal Zombie Teleport Effect
+8500	Shield Zombie Shield
+8600	Power Tile 1
+8700	Power tile 2
+8800	Power tile 3
+8900	Power Tile 4
+9000	Power Tile 5
+9100	Citron normal projectile explosion
+9200	Citron Plant Food projectile explosion
+9300	Impear explosion effect
+9400	Future Stage Lawn Mower
+9500	Impear Hit Effect
+9600	Sun bomb
+9700	Sun bomb trajectory
+9800	Yeti dropping key
+9900	Flying venom
+10000	Lingzhi bullet explosion
+10100	Gloom-shroom Detox Effect
+10200	Plantain bullet explosion
+10300	Mecha Gargantuar laser trajectory
+10400	Mecha-Gargantuar Laser Explosion
+10500	Hologram Wall-nut
+10600	Prism Grass standard projectile explosion
+10700	Prismatae Plant Ultimate Bullet Explosion
+10800	Prism Grass Plant Food beam connection
+10900	Prism Grass Plant Food strike line
+11000	Future Decorer missile impact explosion
+11100	Future Decorer missile
+11200	Future Decorer missile bullseye
+11300	Bubble Trail Effect
+11400	Normal bubble explosion effect
+11500	Electric bubble explosion effect
+11600	Clam Fairy bullet deflection effect
+11700	Sea Yaksha tornado
+11800	Oxygen Algae Supply Radius Effect
+11900	Oxygen Algae supply effect
+12000	East China Sea Dragon Palace Lawn Mower
+12100	Electric Pinecone standard projectile explosion
+12200	Electric Sea-conch Plant Food bullet explosion
+12300	Snow Pea projectile explosion
+12400	Fake pushcart
+12500	Snow Pea frozen path effect
+12600	Melon-pult Ultimate Explosion
+12700	Stallia Normal Projectile Explosion
+12800	Spikeweed Plant Food projectile explosion

@@ -1,0 +1,10 @@
+test_actual_bytecode_free_paid_and_negative_remaining_behavior (__main__.VerifyErrorRegression.test_actual_bytecode_free_paid_and_negative_remaining_behavior) ... ok
+test_all_other_bodies_scopes_and_class_traits_are_preserved (__main__.VerifyErrorRegression.test_all_other_bodies_scopes_and_class_traits_are_preserved) ... ok
+test_changed_methods_have_valid_stacks_and_scope_headers (__main__.VerifyErrorRegression.test_changed_methods_have_valid_stacks_and_scope_headers) ... ok
+test_installed_module_and_all_aliases_match_verified_candidate (__main__.VerifyErrorRegression.test_installed_module_and_all_aliases_match_verified_candidate) ... ok
+test_old_initializer_reproduces_underflow_and_original_is_valid (__main__.VerifyErrorRegression.test_old_initializer_reproduces_underflow_and_original_is_valid) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.019s
+
+OK

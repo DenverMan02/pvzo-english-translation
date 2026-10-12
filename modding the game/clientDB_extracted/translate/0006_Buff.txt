@@ -1,0 +1,29 @@
+id	name	desc
+1	Under Peace Treaty	During Peace Treaty, other players cannot declare war on you. Declaring war proactively will end the peace early.\n<font color='#FFDB31'>Remaining Time: {0}</font>
+2	Peace Treaty Cooldown	Entering cooldown after Peace Treaty ends. Peace items cannot be used again within 8 hours.<br><font color='#FFDB31'>Remaining Time: {0}</font>
+3	Castle	Yellow Diamond Bundle Castle\n<font color='#FFDB31'>Remaining Time: {0}</font>
+4	Under Beginner Protection	During Beginner Protection, other players cannot declare war on you. Declaring war proactively will end protection early.\n<font color='#FFDB31'>Protection Level: Below Level 13</font>\n<font color='#FFDB31'>Remaining Time: {0}</font>
+5	Under Peace Treaty	During Peace Treaty, other players cannot declare war on you. Declaring war proactively will end the peace early.\n<font color='#FFDB31'>Remaining Time: {0}</font>
+6	Wizard of Oz (14 Days)	<font color='#FFDB31'>Wizard of Oz Castle</font><br>Special Town Appearance (Claim 50 Stamina daily in the Welfare Hall)<br>Remaining Time: {0}
+7	Frozen (7 Days)	<font color='#FFDB31'>Frozen Castle</font><br>Special Town Appearance (Claim 7 Costume Crystals daily in the Rewards Hall)<br>Time Remaining: {0}
+8	Wizard of Oz (1 Day)	<font color='#FFDB31'>Wizard of Oz Castle</font><br>Special Town Appearance (Claim 50 Stamina daily in the Welfare Hall)<br>Remaining Time: {0}
+9	Wizard of Oz (7 Days)	<font color='#FFDB31'>Wizard of Oz Castle</font><br>Special Town Appearance (Claim 50 Stamina daily in the Welfare Hall)<br>Remaining Time: {0}
+10	Frozen (1 Day)	<font color='#FFDB31'>Frozen Castle</font><br>Special Town Appearance (Claim 7 Costume Crystals daily in the Rewards Hall)<br>Time Remaining: {0}
+11	Frozen (14 Days)	<font color='#FFDB31'>Frozen Castle</font><br>Special Town Appearance (Claim 7 Costume Crystals daily in the Rewards Hall)<br>Time Remaining: {0}
+12	Lunar New Year (1 Day)	<font color='#FFDB31'>Lunar New Year Castle</font><br>Special Town Appearance (Claim 10 EXP Beans daily in the Rewards Hall)<br>Time Remaining: {0}
+13	Lunar New Year (7 Days)	<font color='#FFDB31'>Lunar New Year Castle</font><br>Special Town Appearance (Claim 10 EXP Beans daily in the Rewards Hall)<br>Time Remaining: {0}
+14	Lunar New Year (14 Days)	<font color='#FFDB31'>Lunar New Year Castle</font><br>Special Town Appearance (Claim 10 EXP Beans daily in the Rewards Hall)<br>Time Remaining: {0}
+15	World Tree (7 Days)	<font color='#FFDB31'>World Tree Castle</font><br>Special Town Appearance (Claim 1 Alluring EXP Bean daily in the Welfare Hall)<br>Remaining Time: {0}
+16	Lord of the Rings (7 Days)	<font color='#FFDB31'>Lord of the Rings Castle</font><br>Special Town Appearance (Claim 600 Soil daily in the Welfare Hall)<br>Remaining Time: {0}
+17	Wizard of Oz Castle (1 Day)	<font color='#FFDB31'>Wizard of Oz Castle (Mini)</font><br>Special Town Appearance (Claim 1000 Coins daily in the Welfare Hall)<br>Remaining Time: {0}
+18	Wizard of Oz Castle (7 Days)	<font color='#FFDB31'>Wizard of Oz Castle (Mini)</font><br>Special Town Appearance (Claim 1000 Coins daily in the Welfare Hall)<br>Remaining Time: {0}
+19	Wizard of Oz Castle (14 Days)	<font color='#FFDB31'>Wizard of Oz Castle (Mini)</font><br>Special Town Appearance (Claim 1000 Coins daily in the Welfare Hall)<br>Remaining Time: {0}
+20	Frozen Castle (1 Day)	<font color='#FFDB31'>Frozen Castle (Mini)</font><br>Special Town Appearance (Claim 1000 Coins daily in the Welfare Hall)<br>Remaining Time: {0}
+21	Frozen Castle (7 Days)	<font color='#FFDB31'>Frozen Castle (Mini)</font><br>Special Town Appearance (Claim 1000 Coins daily in the Welfare Hall)<br>Remaining Time: {0}
+22	Frozen Castle (14 Days)	<font color='#FFDB31'>Frozen Castle (Mini)</font><br>Special Town Appearance (Claim 1000 Coins daily in the Welfare Hall)<br>Remaining Time: {0}
+23	Lunar New Year Castle (1 Day)	<font color='#FFDB31'>Lunar New Year Castle (Mini)</font><br>Special Town Appearance (Claim 1000 Coins daily in the Welfare Hall)<br>Remaining Time: {0}
+24	Lunar New Year Castle (7 Days)	<font color='#FFDB31'>Lunar New Year Castle (Mini)</font><br>Special Town Appearance (Claim 1000 Coins daily in the Welfare Hall)<br>Remaining Time: {0}
+25	Lunar New Year Castle (14 Days)	<font color='#FFDB31'>Lunar New Year Castle (Mini)</font><br>Special Town Appearance (Claim 1000 Coins daily in the Welfare Hall)<br>Remaining Time: {0}
+26	Machinarium Castle (7 Days)	<font color='#FFDB31'>Machinarium Castle - Apex Champion</font><br>Special Town Appearance (Claim 100,000 Coins daily in the Welfare Hall)<br>Remaining Time: {0}
+27	World Tree (3 Days)	<font color='#FFDB31'>World Tree Castle</font><br>Special Town Appearance (Claim 10 EXP Beans daily in the Welfare Hall)<br>Remaining Time: {0}
+28	Lord of the Rings (3 Days)	<font color='#FFDB31'>Lord of the Rings Castle</font><br>Special Town Appearance (Claim 1000 Soil daily in the Welfare Hall)<br>Remaining Time: {0}

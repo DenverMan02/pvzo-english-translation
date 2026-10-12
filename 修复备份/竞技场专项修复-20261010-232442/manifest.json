@@ -1,0 +1,75 @@
+{
+  "files": [
+    {
+      "relative": "pvz_poc_server.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-12\\work\\server\\pvz_poc_server.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py",
+      "before_sha256": "e96752b8274b8e734fb789198d609f63e634cb2e2cab78881cadc14f35013299",
+      "after_sha256": "9f42d332b0e4d943e6956c775cd62ee9c50f4fb6f2288ea8bbee9b2c0242d37c"
+    },
+    {
+      "relative": "bots_local.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-12\\work\\server\\bots_local.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\bots_local.py",
+      "before_sha256": "0606cd291fd9c7f1043a0b035125e3854ef20e3dfd94aff23e8bfedc8bff6029",
+      "after_sha256": "cc1b003b161e695c3c3b1656935a5ea9a6b3e378cd7f12977a49fab3b31c6e74"
+    },
+    {
+      "relative": "consistency_repairs.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-12\\work\\server\\consistency_repairs.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\consistency_repairs.py",
+      "before_sha256": "dd47ea0088c3b94df3f036840b882c762922ad089bda9480966eacdd981a543c",
+      "after_sha256": "d2a228d399289dc376ffe6018e5e7431ac3795f3a37a020d7b6bfc9498e61b75"
+    },
+    {
+      "relative": "worldmap_local.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-12\\work\\server\\worldmap_local.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\worldmap_local.py",
+      "before_sha256": "9473512c30921feae4daaa5b4f46be40a054b592f0d5b461f737b67f5003cb2b",
+      "after_sha256": "ecbcf48ccac793990cb721bb043f3467d57288e1fb4c7c7cf89116ae3740cdcd"
+    },
+    {
+      "relative": "tests/test_arena_repairs_20261010.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-12\\work\\server\\tests\\test_arena_repairs_20261010.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\tests\\test_arena_repairs_20261010.py",
+      "before_sha256": null,
+      "after_sha256": "144078511bb00d4f777b8cd15d307b1829e4c58c0b65f719d87fedbce34eeb28"
+    },
+    {
+      "relative": "tests/test_arena_failure_transport_20261010.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-12\\work\\server\\tests\\test_arena_failure_transport_20261010.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\tests\\test_arena_failure_transport_20261010.py",
+      "before_sha256": null,
+      "after_sha256": "ca7f444284313420cc49c64e39bc1f3afb2628454a959877ed7404990bcdc2b0"
+    },
+    {
+      "relative": "tests/test_gameplay_audit_20261007.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-12\\work\\server\\tests\\test_gameplay_audit_20261007.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\tests\\test_gameplay_audit_20261007.py",
+      "before_sha256": "38bc6ce4cdaeec52b19431f9d2216e64130d3e5872259e5854c2cbe68c813273",
+      "after_sha256": "06d6b8ad090f1bbc07bb5d8ca9389638fa974527fc04bca7d8503918ed95460a"
+    },
+    {
+      "relative": "tests/test_rewards_rules_20261009.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-12\\work\\server\\tests\\test_rewards_rules_20261009.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\tests\\test_rewards_rules_20261009.py",
+      "before_sha256": "4b5c9870927d88007def575b6e282b77b863f78184d09dd18b1cd9a299052d56",
+      "after_sha256": "a1521ed14871759f6a941b5465153ce35d972a1e564b242d8731bd222445a7bf"
+    },
+    {
+      "relative": "tests/test_live_combat.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-12\\work\\server\\tests\\test_live_combat.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\tests\\test_live_combat.py",
+      "before_sha256": "7c2ee92930cdb9d0f3a3b99d06fd9f6d6a5c1192326553e0b58dd2dda074d2fc",
+      "after_sha256": "e1d593b2f629e6db6f7b35dfb210d958d32fe29da1b670924ef32d4227f8cd5d"
+    }
+  ],
+  "protected_before": {
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\players.db": "3000bba8775660d4c65e5d4e3a181c2af6e80cc7771b36097afaa67124d8ffaf",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\players.db": "6848f3ae854411cdc89e006b05f5d55cff68b0c1cc4fbc26b37277fae14e77c6",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\guild_local.db": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p.swf": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_n.swf": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\clientDB.txt": "1f2fae0156a35eb842f590a4073a48a1752f8c49eea33c689449030caae39b8a"
+  }
+}

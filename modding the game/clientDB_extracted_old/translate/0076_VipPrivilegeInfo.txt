@@ -1,0 +1,55 @@
+id	name	desc	unit
+45	First-Purchase Pack	First-Purchase Pack：{0}	Worth 3880 Diamonds
+41	Tower Defense Exclusive Plants	Tower Defense operations can be used {0}	Winter Melon
+24	Daily Diamond Gift	Daily Diamond Gift：{0}	{0}Diamond
+13	Daily Energy Gift	Daily Energy Gift：{0} 	{0}Energy
+1	Adventure Battle Acceleration	Adventure battles can be sped up by up to 4x	
+14	Adventure Dungeons/Puppet Battlegrounds Sweep	Adventure Dungeons/Puppet Battlegrounds Sweep	
+19	Increased Stamina Limit	Increased Stamina Limit {0}	{0}
+4	Increased Stamina Purchase Cap	Increased Stamina Purchase Cap {0} 	{0} Times
+46	Daily Gold Purchase Cap	Daily Gold Purchase Cap {0}	{0} Times
+57	Daily World Chat Cap	Daily World Chat Cap {0}	{0} Times
+5	Daily Elite Adventure Limit Increased	Daily Elite Adventures Limit Increased {0} 	{0} Times
+12	Daily Event Dungeon Limit Increased	Daily Event Dungeon Limit Increased {0} 	{0} Times
+10	Free Monthly Check-In Attempts Increased	Free Monthly Check-In Attempts Increased {0} 	3 Times
+11	Double Rewards For Sign-In Activities	Double Rewards For Sign-In Activities {0} 	Double
+22	Increased Gold Mine Harvest	Increased Gold Mine Harvest {0}	{0}%
+18	Adventure Plant Experience Increased	Adventure Plant Experience Increased {0}	{0}%
+6	Adventure & Tower Defense Gold Coins Increased	Adventure & Tower Defense Gold Coins Increased {0}	{0}%
+43	Automatic Fertilization in Sunrooms	Automatic Fertilization in Sunrooms	
+49	Purchase Mystery Card Pack	Mystery Card Packs can be used to purchase rare plants.	
+44	Cultivate the World Tree as You Like 	Cultivate the World Tree as You Like	
+42	Automatic Battle	NEEDS MORE INFO, auto battling in adventure mode I think?	
+17	Nutrition Room Super Deals	The Nutrition Room can use super deals	
+23	Time Travel Quick Clear	Time Travel Quick Clear Price: {0}	{0} Diamonds
+53	Trial Path Paid Reset	The Trial Path can be reset with diamonds {0}	{0} Times
+63	Nightmare Trial Path Paid Reset	The Nightmare Difficulty of Trial Path can be reset with diamonds {0}	{0} Times
+51	Rampage Snowman Diamond Treasure Chest	Rampage Snowman can use Diamonds to open treasure chests {0}	{0} Times
+54	Rampage Snowman Paid Challenge	Rampage Snowman can be challenged with Diamonds {0}	{0} Times
+16	Unlock the 3rd chest on Zombie Island	Unlock the 3rd chest on Zombie Island	
+61	Apex Champion Gem Betting Amount Increased	Peak King Bet Diamond limit increased by {0}	{0} Diamonds
+47	Weekend Extra Pack	Weekend Extra Pack	
+25	Deployed Plant Attack + 100	Deployed Plant Attack + {0}	
+26	Equipped Plant Defense + 50	Deployed Plant Defense + {0}	
+27	Deployed Plant Health + 300	Deployed Plant Health + {0}	
+28	Deployed Plant Skill Power + 50	Deployed Plant Skill Power + {0}	
+2	Tower Defense Battle Speed Up	Tower Defense Battle Speed Up	
+3	Raid Instance	Adventure Stage Raid Unlocked	
+7	Farm Protection Time	Farm Protection Time + {0}	{0} hours
+8	Sparring Friendship Points Increase	Extra Friendship Points from Friendly Sparring: {0}	{0} pts
+9	Tower Defense Reuses Plant Avatar	Tower Defense Reuses Plant Avatar	
+15	Adventure Continuous Sweep	Adventure Continuous Sweep	
+20	Arena Cooldown Acceleration	Arena Cooldown Time Can Be Accelerated	
+21	Catch Thief / Farm Defense Speed Up	Catch Thief / Farm Defense Time {0}	No Cooldown
+29	Deployed Plant Critical	Critical + {0}	
+30	Equipped Plant Evasion	Dodge + {0}	
+31	Deployed Plant Hit	Hit + {0}	
+32	Equipped Plant Toughness	Toughness + {0}	
+48	Tower Defense Privilege Card (30 Days)	Reward Tower Defense Privilege Card (30 Days) x1	
+50	Nursery Gem Summon	Nursery Can Use Gems to Summon	
+52	Advanced World Tree Cultivation	World Tree Advanced Cultivation Available	
+55	Extra Daily Wish Free Tries	Extra Daily Wish Free Tries: {0}	{0} times
+58	Daily Normal Orchard Increase	Normal Orchard Daily Challenges + {0}	{0} times
+59	Daily Advanced Orchard Increase	Advanced Orchard Daily Challenges + {0}	{0} times
+60	Unlock Abyss Waters	Welfare Hall Can Challenge Abyss Waters Instance	
+62	Peak King Betting	Apex Champion Early Betting Allowed	

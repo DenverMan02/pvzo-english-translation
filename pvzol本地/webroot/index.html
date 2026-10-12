@@ -1,0 +1,2128 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>植物大战僵尸 Online</title>
+
+<!-- ===== 网站图标 Favicon（ICO 格式） ===== -->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<!--[if IE]>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<![endif]-->
+
+<style>
+  :root {
+    --text: #000000;
+    --muted: #555555;
+    --soft: #777777;
+    --accent: #0088ff;
+    --accent-deep: #0071dd;
+    --accent-soft: rgba(0,136,255,0.16);
+    --toggle-on: #34c759;
+    --toggle-off: rgba(120,120,120,0.2);
+    --danger: #c0532f;
+    --dim: rgba(41,41,58,0.23);
+    --dim-blur: 16px;
+    --glass-bg: rgba(250,250,250,0.4);
+    --glass-border: rgba(255,255,255,0.65);
+    --glass-highlight: rgba(255,255,255,0.5);
+    --glass-shadow-color: rgba(0,0,0,0.1);
+    --glass-inner-shadow: inset 0 -1px 2px rgba(0,0,0,0.08);
+    --glass-rim: linear-gradient(180deg,rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.1) 40%,transparent 70%);
+    --btn-surface: rgba(255,255,255,0.3);
+    --dialog-bg: rgba(250,250,250,0.6);
+    --dialog-accent: rgba(0,136,255,1);
+    --input-bg: rgba(255,255,255,0.55);
+    --field-border: rgba(10,20,40,0.16);
+  }
+  html[data-theme="dark"] {
+    --text: #ffffff;
+    --muted: #b7bec6;
+    --soft: #8a94a0;
+    --accent: #0091ff;
+    --accent-deep: #1f9cff;
+    --accent-soft: rgba(0,145,255,0.22);
+    --toggle-on: #30d158;
+    --toggle-off: rgba(120,120,128,0.36);
+    --danger: #f07a5a;
+    --dim: rgba(12,12,12,0.56);
+    --dim-blur: 8px;
+    --glass-bg: rgba(18,18,18,0.4);
+    --glass-border: rgba(255,255,255,0.14);
+    --glass-highlight: rgba(255,255,255,0.16);
+    --glass-shadow-color: rgba(0,0,0,0.35);
+    --glass-inner-shadow: inset 0 -1px 2px rgba(0,0,0,0.2);
+    --glass-rim: linear-gradient(180deg,rgba(255,255,255,0.16) 0%,rgba(255,255,255,0.04) 40%,transparent 70%);
+    --btn-surface: rgba(18,18,18,0.4);
+    --dialog-bg: rgba(18,18,18,0.4);
+    --dialog-accent: rgba(0,145,255,1);
+    --input-bg: rgba(28,30,34,0.6);
+    --field-border: rgba(255,255,255,0.16);
+  }
+
+  /* ===== 关服提醒横幅 ===== */
+  .shutdown-banner {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+    color: #fff;
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 4px 20px rgba(192, 57, 43, 0.4);
+    animation: slideDown 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+  .shutdown-banner .close-btn {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+  .shutdown-banner .close-btn:hover {
+    background: rgba(255,255,255,0.3);
+  }
+  .shutdown-banner .countdown {
+    display: inline-block;
+    background: rgba(0,0,0,0.25);
+    padding: 2px 14px;
+    border-radius: 12px;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 80px;
+  }
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-100%); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ===== 登录页关服提醒 ===== */
+  .shutdown-login-banner {
+    display: none;
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    animation: fadeIn 0.5s ease both;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 100%; height: 100%;
+    background: #ffffff;
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft YaHei", "PingFang SC", sans-serif;
+    font-size: 13px;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  html[data-theme="dark"] body { background: #000000; }
+
+  .glass {
+    position: relative;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    -webkit-backdrop-filter: blur(16px) saturate(1.5);
+    backdrop-filter: blur(16px) saturate(1.5);
+    box-shadow: inset 0 1px 0 var(--glass-highlight), var(--glass-inner-shadow), 0 24px 48px var(--glass-shadow-color);
+  }
+  .glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: var(--glass-rim);
+    z-index: 1;
+  }
+  .glass > * { position: relative; z-index: 2; }
+
+  #topCapsule {
+    display: none;
+    position: fixed;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 90;
+    height: 48px;
+    width: 320px;
+    padding: 0;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    -webkit-backdrop-filter: blur(16px) saturate(1.5);
+    backdrop-filter: blur(16px) saturate(1.5);
+    border-radius: 24px;
+    box-shadow: inset 0 1px 0 var(--glass-highlight), var(--glass-inner-shadow), 0 24px 48px var(--glass-shadow-color);
+    animation: capsuleIn 0.6s cubic-bezier(0.34,1.56,0.64,1) both;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+    overflow: hidden;
+  }
+  #topCapsule::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    pointer-events: none;
+    background: var(--glass-rim);
+    z-index: 1;
+  }
+  @keyframes capsuleIn {
+    from { opacity: 0; transform: translateX(-50%) translateY(-16px) scale(0.85); }
+    to { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+  }
+  .cs-tab {
+    position: relative;
+    z-index: 3;
+    float: left;
+    width: 33.333%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--muted);
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+  }
+  .cs-tab.active { color: #ffffff; }
+  .cs-indicator {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    bottom: 4px;
+    z-index: 2;
+    width: calc((100% - 8px) / 3);
+    border-radius: 20px;
+    background: linear-gradient(160deg, var(--accent), var(--accent-deep));
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0.45), inset 0 -2px 4px rgba(0,0,0,0.18), 0 6px 18px rgba(0,130,255,0.45);
+    transition: transform 0.45s cubic-bezier(0.34,1.56,0.64,1);
+    will-change: transform;
+  }
+  .cs-indicator.at-online { transform: translateX(100%); }
+  .cs-indicator.at-me { transform: translateX(200%); }
+
+  #authWrap {
+    display: table;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+  }
+  #authCell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .authCard {
+    display: inline-block;
+    width: 320px;
+    text-align: left;
+    padding: 24px 26px 20px;
+    border-radius: 28px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    -webkit-backdrop-filter: blur(16px) saturate(1.5);
+    backdrop-filter: blur(16px) saturate(1.5);
+    box-shadow: inset 0 1px 0 var(--glass-highlight), var(--glass-inner-shadow), 0 24px 48px var(--glass-shadow-color);
+    position: relative;
+    overflow: hidden;
+    animation: popIn 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+  }
+  .authCard::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 28px;
+    pointer-events: none;
+    background: var(--glass-rim);
+    z-index: 1;
+  }
+  .authCard > * { position: relative; z-index: 2; }
+  @keyframes popIn {
+    from { opacity: 0; transform: translateY(22px) scale(0.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .authCard .cardTitle { font-size: 17px; font-weight: bold; margin-bottom: 2px; }
+  .authCard .cardSub { font-size: 11px; color: var(--muted); margin-bottom: 16px; }
+
+  .authTabs {
+    position: relative;
+    display: flex;
+    margin-bottom: 16px;
+    padding: 4px;
+    background: var(--glass-bg);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .authTabs::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    pointer-events: none;
+    background: var(--glass-rim);
+    z-index: 1;
+  }
+  .authTab {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 7px 0;
+    font-size: 13px;
+    color: var(--muted);
+    cursor: pointer;
+    border-radius: 15px;
+    transition: color 0.35s ease;
+  }
+  .authTab.active {
+    color: #fff;
+    font-weight: 600;
+  }
+  .authIndicator {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    bottom: 4px;
+    z-index: 1;
+    width: calc(50% - 4px);
+    border-radius: 15px;
+    background: linear-gradient(160deg, var(--accent), var(--accent-deep));
+    box-shadow: 0 4px 14px rgba(0,130,255,0.4);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform;
+  }
+  .authIndicator.at-reg { transform: translateX(100%); }
+
+  .field { margin-bottom: 14px; }
+  .field label { display: block; font-size: 11px; margin-bottom: 5px; color: var(--muted); }
+  .field input {
+    width: 100%;
+    padding: 9px 12px;
+    font-size: 13px;
+    color: var(--text);
+    border: 1px solid var(--field-border);
+    background: var(--input-bg);
+    outline: none;
+    border-radius: 12px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+  .field input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+
+  .liquid-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    border-radius: 999px;
+    -webkit-backdrop-filter: blur(16px) saturate(1.5);
+    backdrop-filter: blur(16px) saturate(1.5);
+    box-shadow: inset 0 1px 0 var(--glass-highlight), var(--glass-inner-shadow), 0 24px 48px var(--glass-shadow-color);
+    overflow: hidden;
+    will-change: transform;
+    transition: filter 0.2s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    width: 100%;
+  }
+  .liquid-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    pointer-events: none;
+    background: var(--glass-rim);
+    z-index: 1;
+  }
+  .liquid-btn > * { position: relative; z-index: 2; }
+  .liquid-btn:hover { filter: brightness(1.08); }
+  .liquid-btn:disabled { opacity: 0.5; cursor: default; filter: none; }
+  .liquid-btn.primary {
+    background: linear-gradient(160deg, var(--accent), var(--accent-deep));
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 8px 20px rgba(0,130,255,0.35);
+  }
+  .liquid-btn.primary::before { display: none; }
+  .liquid-btn.primary:hover { filter: brightness(1.06); box-shadow: 0 10px 26px rgba(0,130,255,0.45); }
+  .liquid-btn.primary:disabled { background: var(--soft); box-shadow: none; color: rgba(255,255,255,0.8); }
+
+  .msg { font-size: 11px; margin-top: 10px; min-height: 14px; color: var(--text); }
+  .msg.err { font-weight: bold; color: var(--danger); }
+  .msg.ok { color: var(--toggle-on); }
+
+  .hint {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 14px;
+    line-height: 1.7;
+  }
+  .hint a { color: var(--accent); text-decoration: none; }
+
+  #menu {
+    display: none;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+  }
+  #menuTop {
+    height: 54px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+  }
+  #menuTop .brand {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--text);
+  }
+  #menuTop .rightLinks {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  #menuTop .rightLinks a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  #menuTop .rightLinks a:hover { color: var(--text); }
+  #menuTop .rightLinks .meLink {
+    font-weight: 500;
+    color: var(--accent);
+  }
+  #menuTop .rightLinks .meLink:hover { color: var(--accent-deep); }
+
+  #menuCell { display: table; width: 100%; height: 100%; margin-top: -40px; }
+  #menuCellInner { display: table-cell; vertical-align: middle; text-align: center; }
+
+  .startBtn {
+    display: inline-block;
+    position: relative;
+    width: 360px;
+    height: 92px;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    color: var(--text);
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 92px;
+    text-align: center;
+    letter-spacing: 6px;
+    border-radius: 46px;
+    -webkit-backdrop-filter: blur(16px) saturate(1.5);
+    backdrop-filter: blur(16px) saturate(1.5);
+    box-shadow: inset 0 1px 0 var(--glass-highlight), var(--glass-inner-shadow), 0 24px 48px var(--glass-shadow-color);
+    overflow: hidden;
+    will-change: transform;
+    animation: floatY 5s ease-in-out infinite;
+    transition: filter 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  .startBtn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 46px;
+    pointer-events: none;
+    background: var(--glass-rim);
+    z-index: 1;
+  }
+  .startBtn > * { position: relative; z-index: 2; }
+  .startBtn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(105deg, transparent, rgba(255,255,255,0.65), transparent);
+    transform: skewX(-20deg);
+    animation: shimmer 4.2s ease-in-out infinite;
+    z-index: 3;
+  }
+  @keyframes shimmer {
+    0% { left: -80%; }
+    55%, 100% { left: 130%; }
+  }
+  @keyframes floatY {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+  }
+  .startBtn:hover { filter: brightness(1.08); }
+
+  .noticeBox {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    margin-top: -110px;
+    width: 300px;
+    height: 220px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    text-align: left;
+    overflow: hidden;
+    border-radius: 24px;
+    -webkit-backdrop-filter: blur(16px) saturate(1.5);
+    backdrop-filter: blur(16px) saturate(1.5);
+    box-shadow: inset 0 1px 0 var(--glass-highlight), var(--glass-inner-shadow), 0 24px 48px var(--glass-shadow-color);
+    animation: popIn 0.55s cubic-bezier(0.34,1.56,0.64,1) both 0.1s;
+  }
+  .noticeBox::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    pointer-events: none;
+    background: var(--glass-rim);
+    z-index: 1;
+  }
+  .noticeBox > * { position: relative; z-index: 2; }
+  .noticeBox .nbTitle {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 9px 14px;
+    color: #fff;
+    background: linear-gradient(160deg, var(--accent), var(--accent-deep));
+  }
+  .noticeBox .nbBody {
+    padding: 12px 14px;
+    font-size: 12px;
+    line-height: 1.75;
+    color: var(--text);
+    height: 180px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  .noticeBox .nbBody .empty { color: var(--soft); }
+
+  #meMask {
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: none;
+    overflow-y: auto;
+    animation: fadeIn 0.3s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  #meMask .meTop {
+    height: 54px;
+    padding: 12px 16px 0;
+    text-align: center;
+  }
+  #meMask .meTop h2 { font-size: 16px; font-weight: bold; letter-spacing: 2px; }
+  #meMask .meTop .backBtn {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    padding: 7px 18px;
+    font-size: 12px;
+    color: var(--text);
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    cursor: pointer;
+    font-family: inherit;
+    border-radius: 999px;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    box-shadow: inset 0 1px 0 var(--glass-highlight), 0 24px 48px var(--glass-shadow-color);
+    transition: filter 0.2s ease;
+    will-change: transform;
+    -webkit-tap-highlight-color: transparent;
+  }
+  #meMask .meTop .backBtn:hover { filter: brightness(1.05); }
+  #meMask .meBody {
+    padding: 20px;
+    padding-top: 66px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .meSection {
+    position: relative;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    padding: 16px 18px;
+    margin-bottom: 16px;
+    border-radius: 22px;
+    -webkit-backdrop-filter: blur(16px) saturate(1.5);
+    backdrop-filter: blur(16px) saturate(1.5);
+    box-shadow: inset 0 1px 0 var(--glass-highlight), var(--glass-inner-shadow), 0 24px 48px var(--glass-shadow-color);
+    overflow: hidden;
+    animation: riseIn 0.5s ease both;
+  }
+  .meSection::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 22px;
+    pointer-events: none;
+    background: var(--glass-rim);
+    z-index: 1;
+  }
+  .meSection > * { position: relative; z-index: 2; }
+  @keyframes riseIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .meSection h3 { font-size: 14px; font-weight: bold; margin-bottom: 12px; color: var(--accent); }
+
+  .meRow { margin-bottom: 10px; }
+  .meRow label {
+    display: inline-block;
+    width: 110px;
+    font-size: 12px;
+    vertical-align: top;
+    color: var(--muted);
+  }
+  .meRow input, .meRow select {
+    padding: 8px 10px;
+    font-size: 12px;
+    color: var(--text);
+    border: 1px solid var(--field-border);
+    background: var(--input-bg);
+    outline: none;
+    width: 260px;
+    font-family: inherit;
+    border-radius: 10px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+  }
+  .meRow input:focus, .meRow select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+  .meRow input.wide { width: 320px; }
+
+  .meBtn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    font-size: 13px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    background: linear-gradient(160deg, var(--accent), var(--accent-deep));
+    border-radius: 999px;
+    box-shadow: 0 6px 16px rgba(0,130,255,0.32);
+    transition: filter 0.25s ease, box-shadow 0.25s ease;
+    will-change: transform;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  .meBtn:hover { filter: brightness(1.06); box-shadow: 0 8px 20px rgba(0,130,255,0.42); }
+  .meBtn:disabled { background: var(--soft); color: rgba(255,255,255,0.8); box-shadow: none; cursor: default; }
+
+  .meMsg { font-size: 11px; margin-top: 8px; min-height: 14px; color: var(--text); }
+  .meMsg.err { font-weight: bold; color: var(--danger); }
+  .meMsg.ok { color: var(--toggle-on); }
+
+  .meStat {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 12px;
+    line-height: 1.9;
+  }
+  .meStat b { color: var(--text); }
+
+  .badge {
+    display: inline-block;
+    background: var(--danger);
+    color: #fff;
+    font-size: 10px;
+    padding: 0 6px;
+    margin-left: 4px;
+    line-height: 15px;
+    vertical-align: middle;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(192,83,47,0.4);
+  }
+
+  .frList { margin-top: 6px; }
+  .frItem {
+    position: relative;
+    border: 1px solid var(--glass-border);
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    background: var(--glass-bg);
+    line-height: 20px;
+    border-radius: 14px;
+    -webkit-backdrop-filter: blur(10px) saturate(1.3);
+    backdrop-filter: blur(10px) saturate(1.3);
+    box-shadow: inset 0 1px 0 var(--glass-highlight), var(--glass-inner-shadow);
+    animation: riseIn 0.4s ease both;
+  }
+  .frItem .frName { font-weight: bold; color: var(--accent); }
+  .frItem .frMeta { color: var(--soft); font-size: 10px; margin-left: 8px; }
+  .frItem .frDel {
+    float: right;
+    padding: 2px 10px;
+    font-size: 10px;
+    color: var(--danger);
+    border: 1px solid var(--danger);
+    background: transparent;
+    cursor: pointer;
+    font-family: inherit;
+    border-radius: 999px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .frItem .frDel:hover { background: var(--danger); color: #fff; }
+  .frEmpty { color: var(--soft); font-size: 11px; padding: 6px 0; }
+
+  .frReqItem {
+    position: relative;
+    border: 1px solid var(--glass-border);
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    background: var(--accent-soft);
+    line-height: 20px;
+    border-radius: 14px;
+    -webkit-backdrop-filter: blur(10px) saturate(1.3);
+    backdrop-filter: blur(10px) saturate(1.3);
+    animation: riseIn 0.4s ease both;
+  }
+  .frReqItem .frName { font-weight: bold; color: var(--text); }
+  .frReqItem .frMeta { color: var(--soft); font-size: 10px; margin-left: 8px; }
+  .frReqItem .frMsg { color: var(--muted); font-size: 11px; margin-top: 3px; }
+  .frReqItem .frAct {
+    float: right;
+    margin-left: 6px;
+    padding: 2px 10px;
+    font-size: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    border-radius: 999px;
+    transition: filter 0.2s ease;
+  }
+  .frReqItem .frAct.accept { background: var(--toggle-on); color: #fff; }
+  .frReqItem .frAct.accept:hover { filter: brightness(1.08); }
+  .frReqItem .frAct.reject { background: transparent; color: var(--danger); border: 1px solid var(--danger); }
+  .frReqItem .frAct.reject:hover { background: var(--danger); color: #fff; }
+  .frReqItem .frAct:disabled { background: var(--soft); color: rgba(255,255,255,0.8); cursor: default; }
+
+  .searchResult { margin-top: 6px; }
+  .searchResult .srRow {
+    position: relative;
+    border: 1px solid var(--glass-border);
+    padding: 7px 10px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    background: var(--glass-bg);
+    line-height: 22px;
+    border-radius: 12px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    animation: riseIn 0.4s ease both;
+  }
+  .searchResult .srRow .srAdd {
+    padding: 3px 12px;
+    font-size: 11px;
+    color: #fff;
+    border: none;
+    background: linear-gradient(160deg, var(--accent), var(--accent-deep));
+    cursor: pointer;
+    font-family: inherit;
+    margin-left: 8px;
+    border-radius: 999px;
+    transition: filter 0.2s ease;
+  }
+  .searchResult .srRow .srAdd:hover { filter: brightness(1.08); }
+
+  .modalLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dim);
+    display: none;
+    z-index: 100;
+    -webkit-backdrop-filter: blur(var(--dim-blur));
+    backdrop-filter: blur(var(--dim-blur));
+  }
+  .glassDialog {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 101;
+    width: 380px;
+    margin-left: -190px;
+    margin-top: -170px;
+    padding: 22px 24px 20px;
+    background: var(--dialog-bg);
+    border: 1px solid var(--glass-border);
+    -webkit-backdrop-filter: blur(16px) saturate(1.5);
+    backdrop-filter: blur(16px) saturate(1.5);
+    border-radius: 28px;
+    box-shadow: inset 0 1px 0 var(--glass-highlight), var(--glass-inner-shadow), 0 24px 48px var(--glass-shadow-color);
+    display: none;
+    animation: popIn 0.42s cubic-bezier(0.34,1.56,0.64,1) both;
+    overflow: hidden;
+  }
+  .glassDialog::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 28px;
+    pointer-events: none;
+    background: var(--glass-rim);
+    z-index: 1;
+  }
+  .glassDialog > * { position: relative; z-index: 2; }
+  .glassDialog h3 { font-size: 16px; font-weight: bold; margin-bottom: 12px; }
+  .glassDialog .gdMsg {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .glassDialog .gdWarn {
+    font-size: 11px;
+    color: var(--danger);
+    margin-top: 6px;
+    margin-bottom: 10px;
+  }
+  .glassDialog .gdBtns { text-align: right; margin-top: 16px; }
+
+  .lgBtn {
+    padding: 9px 22px;
+    font-size: 13px;
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+    font-family: inherit;
+    margin-left: 8px;
+    border-radius: 999px;
+    background: var(--glass-bg);
+    color: var(--text);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: inset 0 1px 0 var(--glass-highlight), 0 24px 48px var(--glass-shadow-color);
+    transition: filter 0.2s ease;
+    will-change: transform;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .lgBtn:hover { filter: brightness(1.08); }
+  .lgBtn.accent {
+    background: linear-gradient(160deg, var(--accent), var(--accent-deep));
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 6px 16px rgba(0,130,255,0.35);
+  }
+  .lgBtn.accent:hover { filter: brightness(1.06); box-shadow: 0 8px 22px rgba(0,130,255,0.45); }
+  .lgBtn.accent:disabled { background: var(--soft); color: rgba(255,255,255,0.8); box-shadow: none; }
+  .lgBtn.accent.danger {
+    background: linear-gradient(160deg, var(--danger), #c8442a);
+    box-shadow: 0 6px 16px rgba(192,83,47,0.35);
+  }
+  .lgBtn.accent.danger:hover { filter: brightness(1.06); }
+  .lgBtn.ghost {
+    background: transparent;
+    border: 1px solid var(--field-border);
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    color: var(--muted);
+  }
+  .lgBtn.ghost:hover { background: var(--glass-bg); }
+
+  #friendModal { width: 400px; margin-left: -200px; margin-top: -180px; }
+  #friendModal .fmInfo {
+    border: 1px solid var(--glass-border);
+    background: var(--input-bg);
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    line-height: 1.8;
+    border-radius: 14px;
+  }
+  #friendModal .fmInfo .fmName { font-weight: bold; font-size: 13px; color: var(--accent); }
+  #friendModal .fmInfo .fmMeta { color: var(--soft); margin-left: 6px; }
+  #friendModal .fmLabel { display: block; font-size: 11px; margin-bottom: 5px; color: var(--muted); }
+  #friendModal .fmMsg {
+    width: 100%;
+    padding: 9px 12px;
+    font-size: 12px;
+    color: var(--text);
+    border: 1px solid var(--field-border);
+    background: var(--input-bg);
+    outline: none;
+    font-family: inherit;
+    line-height: 1.5;
+    border-radius: 12px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+  }
+  #friendModal .fmMsg:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+  #friendModal .fmBtns { margin-top: 16px; text-align: right; }
+  #friendModal .fmStatus, #confirmModal .cmStatus {
+    font-size: 11px;
+    margin-top: 10px;
+    min-height: 14px;
+    color: var(--text);
+  }
+  #friendModal .fmStatus.err, #confirmModal .cmStatus.err { color: var(--danger); font-weight: bold; }
+  #friendModal .fmStatus.ok, #confirmModal .cmStatus.ok { color: var(--toggle-on); }
+
+  #confirmModal { width: 380px; margin-left: -190px; margin-top: -140px; }
+  #confirmModal .cmMsg {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  #confirmModal .cmMsg .cmName { font-weight: bold; color: var(--accent); }
+  #confirmModal .cmWarn { font-size: 11px; color: var(--danger); margin-top: 6px; margin-bottom: 10px; }
+  #confirmModal .cmBtns { text-align: right; margin-top: 10px; }
+
+  #play {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: none;
+    overflow: hidden;
+  }
+  #game {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+  }
+  #game object { display: block; width: 100%; height: 100%; }
+  #flashwarn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    color: #fff;
+    text-align: center;
+    padding-top: 60px;
+  }
+  #flashwarn p { margin: 6px 0; font-size: 14px; }
+
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-thumb { background: var(--glass-border); border-radius: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+
+  @media (max-width: 720px) {
+    .noticeBox { display: none; }
+    .startBtn { width: 280px; height: 76px; font-size: 20px; line-height: 76px; }
+    .authCard { width: 290px; padding: 20px; }
+    #topCapsule { width: 280px; }
+    #friendModal, #confirmModal { width: 90%; margin-left: -45%; }
+    .meRow input, .meRow select { width: 100%; }
+    .meRow input.wide { width: 100%; }
+    .meRow label { width: 100%; margin-bottom: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== 关服提醒横幅 ===== -->
+<div class="shutdown-banner" id="shutdownBanner">
+  <span id="shutdownMessage">服务器即将关闭维护，请尽快保存进度！</span>
+  <span class="countdown" id="shutdownCountdown">--:--:--</span>
+  <button class="close-btn" id="shutdownCloseBtn">×</button>
+</div>
+
+<!-- 登录/注册 -->
+<div id="authWrap"><div id="authCell">
+  <div class="authCard">
+    <div class="cardTitle">植物大战僵尸 Online</div>
+    <div class="cardSub">私有服务器</div>
+    <!-- 关服提醒（登录页） -->
+    <div class="shutdown-login-banner" id="shutdownLoginBanner">
+      ⚠️ <span id="shutdownLoginMessage">服务器即将关闭维护，请尽快保存进度！</span>
+    </div>
+    <div class="authTabs" id="authTabs">
+      <div class="authIndicator" id="authIndicator"></div>
+      <div class="authTab active" id="tabLogin">登录</div>
+      <div class="authTab" id="tabReg">注册</div>
+    </div>
+    <form id="loginForm" onsubmit="return false;">
+      <div class="field"><label>用户名</label><input type="text" id="loginUser" autocomplete="username" /></div>
+      <div class="field"><label>密码</label><input type="password" id="loginPass" autocomplete="current-password" /></div>
+      <button type="submit" class="liquid-btn primary" id="loginBtn">登录</button>
+      <div class="msg" id="loginMsg"></div>
+    </form>
+    <form id="regForm" onsubmit="return false;" style="display:none">
+      <div class="field"><label>用户名（2-32 字符）</label><input type="text" id="regUser" autocomplete="username" /></div>
+      <div class="field"><label>密码（4-64 字符）</label><input type="password" id="regPass" autocomplete="new-password" /></div>
+      <div class="field"><label>确认密码</label><input type="password" id="regPass2" autocomplete="new-password" /></div>
+      <button type="submit" class="liquid-btn primary" id="regBtn">注册</button>
+      <div class="msg" id="regMsg"></div>
+    </form>
+    <div class="hint">
+      你的就是我的，我的还是我的<br />
+    </div>
+  </div>
+</div></div>
+
+<!-- 主菜单 -->
+<div id="menu">
+  <div id="menuTop">
+    <span class="brand">植物大战僵尸 Online</span>
+    <div class="rightLinks">
+      <a class="meLink" id="meLink">我的</a>
+      <a id="logoutLink">退出</a>
+    </div>
+  </div>
+  <div id="menuCell"><div id="menuCellInner">
+    <button class="startBtn" id="startBtn">开始游戏</button>
+  </div></div>
+  <div class="noticeBox">
+    <div class="nbTitle">公告</div>
+    <div class="nbBody" id="noticeBody"><span class="empty">暂无公告</span></div>
+  </div>
+</div>
+
+<!-- 顶部胶囊导航（登录后显示） -->
+<div id="topCapsule">
+  <div class="cs-indicator" id="csIndicator"></div>
+  <div class="cs-tab active" id="csHome">主页</div>
+  <div class="cs-tab" id="csOnline">online</div>
+  <div class="cs-tab" id="csMe">我的</div>
+</div>
+
+<!-- 我的面板 -->
+<div id="meMask">
+  <div class="meTop"><h2>我的</h2><button class="backBtn" id="meBackBtn">返回</button></div>
+  <div class="meBody">
+    <div class="meStat" id="meStat">加载中…</div>
+
+    <div class="meSection">
+      <h3>设置</h3>
+      <div class="settingRow" style="display:flex;align-items:center;justify-content:space-between;padding:8px 0;margin-top:4px;">
+        <span class="setLabel" style="font-size:13px;color:var(--text);">深色模式</span>
+        <div class="lg-toggle" id="darkToggle" style="position:relative;width:64px;height:28px;cursor:pointer;flex-shrink:0;-webkit-tap-highlight-color:transparent;user-select:none;">
+          <div class="track" style="position:absolute;inset:0;border-radius:14px;background:var(--toggle-off);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:background 0.3s ease,box-shadow 0.3s ease;"></div>
+          <div class="knob" style="position:absolute;left:2px;top:2px;z-index:2;width:40px;height:24px;border-radius:12px;background:linear-gradient(160deg,#ffffff 0%,#f0f3f6 100%);box-shadow:0 2px 6px rgba(0,0,0,0.2),inset 0 -1px 1px rgba(0,0,0,0.06);transform:translateX(0);transition:transform 0.35s cubic-bezier(0.34,1.56,0.64,1);will-change:transform;"></div>
+        </div>
+      </div>
+      <button class="meBtn meLogoutBtn" id="meLogoutBtn" style="margin-top:12px;">退出登录</button>
+    </div>
+
+    <div class="meSection">
+      <h3>修改角色名</h3>
+      <div class="meRow"><label>角色名</label><input type="text" id="meName" /></div>
+      <button class="meBtn" id="meNameBtn">保存角色名</button>
+      <div class="meMsg" id="meNameMsg"></div>
+    </div>
+
+    <div class="meSection">
+      <h3>好友卡植物</h3>
+      <div class="meRow"><label>植物</label><select id="mePlant"><option value="0">未设置（默认使用向日葵）</option></select></div>
+      <button class="meBtn" id="mePlantBtn">保存好友卡</button>
+      <div class="meMsg" id="mePlantMsg"></div>
+      <div class="hint" style="margin-top:8px;">其他玩家加你为好友时，会看到这张好友卡植物。未设置则默认使用向日葵</div>
+    </div>
+
+    <div class="meSection">
+      <h3>兑换码</h3>
+      <div class="meRow"><label>兑换码</label><input type="text" id="meCode" class="wide" /></div>
+      <button class="meBtn" id="meCodeBtn">兑换</button>
+      <div class="meMsg" id="meCodeMsg"></div>
+    </div>
+
+    <div class="meSection">
+      <h3>好友<span class="badge" id="meReqBadge" style="display:none;">0</span></h3>
+      <div style="margin-top:14px; font-size:12px; font-weight:bold;">好友请求</div>
+      <div class="frList" id="meReqList"></div>
+      <div style="margin-top:14px; font-size:12px; font-weight:bold;">已发送的请求</div>
+      <div class="frList" id="meSentList"></div>
+      <div class="meRow" style="margin-top:14px;"><label>搜索玩家名</label><input type="text" id="meSearch" class="wide" /></div>
+      <button class="meBtn" id="meSearchBtn">搜索</button>
+      <div class="searchResult" id="meSearchResult"></div>
+      <div style="margin-top:14px; font-size:12px; font-weight:bold;">我的好友</div>
+      <div class="frList" id="meFrList"></div>
+      <button class="meBtn" id="meFrRefreshBtn" style="margin-top:8px;">刷新</button>
+    </div>
+  </div>
+</div>
+
+<!-- 模态框 -->
+<div id="friendModalLayer" class="modalLayer"></div>
+<div id="friendModal" class="glassDialog">
+  <h3 id="fmTitle">发送好友请求</h3>
+  <div class="fmInfo" id="fmInfo"></div>
+  <label class="fmLabel" for="fmMsg">留言（可选）</label>
+  <textarea class="fmMsg" id="fmMsg" rows="3" placeholder="给对方留个言…"></textarea>
+  <div class="fmBtns"><button class="lgBtn ghost" id="fmCancelBtn">取消</button><button class="lgBtn accent" id="fmSendBtn">发送请求</button></div>
+  <div class="fmStatus" id="fmStatus"></div>
+</div>
+
+<div id="confirmModalLayer" class="modalLayer"></div>
+<div id="confirmModal" class="glassDialog">
+  <h3>删除好友</h3>
+  <div class="cmMsg" id="cmMsg"></div>
+  <div class="cmWarn">删除后双方都会从对方的好友列表中移除，且不会通知对方。</div>
+  <div class="cmBtns"><button class="lgBtn ghost" id="cmCancelBtn">取消</button><button class="lgBtn accent danger" id="cmConfirmBtn">确认删除</button></div>
+  <div class="cmStatus" id="cmStatus"></div>
+</div>
+
+<!-- 退出登录确认 -->
+<div id="logoutModalLayer" class="modalLayer"></div>
+<div id="logoutModal" class="glassDialog">
+  <h3>退出登录</h3>
+  <div class="gdMsg">确定要退出当前账号吗？退出后需要重新登录才能继续游戏。</div>
+  <div class="gdBtns"><button class="lgBtn ghost" id="logoutCancelBtn">取消</button><button class="lgBtn accent danger" id="logoutConfirmBtn">退出登录</button></div>
+  <div class="cmStatus" id="logoutStatus"></div>
+</div>
+
+<!-- 游戏容器 -->
+<div id="play">
+  <div id="game"></div>
+  <div id="flashwarn"><p style="font-size:16px;font-weight:bold;">未检测到 Flash Player</p><p>请使用支持 Flash 的浏览器，或安装 Flash 控件后刷新。</p></div>
+</div>
+
+<script>
+var GAME_SKEY = "ABCDEFGHIJ";
+var gamePort = 9001;
+var currentUin = null;
+var currentUsername = "";
+
+var _PLANTS = [];
+
+// ============ 关服状态管理 ============
+var shutdown = {
+  enabled: false,
+  message: "服务器即将关闭维护，请尽快保存进度！",
+  endTime: null,
+  showOnLogin: false,
+  timer: null,
+  bannerEl: null,
+  loginBannerEl: null,
+  messageEl: null,
+  countdownEl: null,
+  loginMessageEl: null,
+
+  // 初始化 DOM 引用
+  init: function() {
+    this.bannerEl = document.getElementById('shutdownBanner');
+    this.loginBannerEl = document.getElementById('shutdownLoginBanner');
+    this.messageEl = document.getElementById('shutdownMessage');
+    this.countdownEl = document.getElementById('shutdownCountdown');
+    this.loginMessageEl = document.getElementById('shutdownLoginMessage');
+  },
+
+  // 从服务器加载关服状态
+  load: function(callback) {
+    var self = this;
+    api("GET", "/api/shutdown", null, function(res) {
+      if (res && res.ok && res.data) {
+        var data = res.data;
+        if (data.enabled) {
+          self.enable(data.message || "服务器即将关闭维护，请尽快保存进度！", data.end_time);
+          if (data.show_on_login) {
+            self.showOnLogin = true;
+            self._updateLoginBanner();
+          }
+        } else {
+          self.disable();
+        }
+      }
+      if (callback) callback();
+    });
+  },
+
+  enable: function(msg, endTime) {
+    this.enabled = true;
+    this.message = msg || "服务器即将关闭维护，请尽快保存进度！";
+    this.endTime = endTime || null;
+    this._updateUI();
+    if (this.timer) clearInterval(this.timer);
+    this.timer = setInterval(this._updateUI.bind(this), 1000);
+  },
+
+  disable: function() {
+    this.enabled = false;
+    if (this.bannerEl) this.bannerEl.style.display = 'none';
+    if (this.loginBannerEl) this.loginBannerEl.style.display = 'none';
+    if (this.timer) {
+      clearInterval(this.timer);
+      this.timer = null;
+    }
+  },
+
+  _updateUI: function() {
+    if (!this.enabled) return;
+    if (this.messageEl) this.messageEl.textContent = this.message;
+    if (this.loginMessageEl) this.loginMessageEl.textContent = this.message;
+    
+    if (this.endTime && this.countdownEl) {
+      var now = Date.now();
+      var target = new Date(this.endTime).getTime();
+      var diff = Math.max(0, target - now);
+      var hours = Math.floor(diff / 3600000);
+      var minutes = Math.floor((diff % 3600000) / 60000);
+      var seconds = Math.floor((diff % 60000) / 1000);
+      this.countdownEl.textContent = 
+        String(hours).padStart(2, '0') + ':' +
+        String(minutes).padStart(2, '0') + ':' +
+        String(seconds).padStart(2, '0');
+      if (diff <= 0) {
+        this.countdownEl.textContent = '已关服';
+        if (this.messageEl) this.messageEl.textContent = '服务器已关闭';
+        if (this.loginMessageEl) this.loginMessageEl.textContent = '服务器已关闭';
+      }
+    } else if (this.countdownEl) {
+      this.countdownEl.textContent = '';
+    }
+    
+    if (this.bannerEl) this.bannerEl.style.display = 'block';
+    this._updateLoginBanner();
+  },
+
+  _updateLoginBanner: function() {
+    if (!this.loginBannerEl) return;
+    if (this.enabled && this.showOnLogin) {
+      this.loginBannerEl.style.display = 'block';
+    } else {
+      this.loginBannerEl.style.display = 'none';
+    }
+  }
+};
+
+// ===== 工具函数 =====
+function _plantIdFromOption(val) {
+  var idx = parseInt(val, 10);
+  if (isNaN(idx) || idx <= 0) { return 0; }
+  var p = _PLANTS[idx - 1];
+  return p ? p.id : 0;
+}
+
+function addEvent(el, type, fn) {
+  if (el.addEventListener) { el.addEventListener(type, fn, false); }
+  else if (el.attachEvent) { el.attachEvent("on" + type, fn); }
+}
+function cancelEvent(e) {
+  e = e || window.event;
+  if (e && e.preventDefault) { e.preventDefault(); }
+  else if (e) { e.returnValue = false; }
+  return false;
+}
+function $(id) { return document.getElementById(id); }
+function trim(s) { return String(s || "").replace(/^\s+|\s+$/g, ""); }
+function escapeHtml(s) {
+  if (s === null || s === undefined) { return ""; }
+  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
+                  .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+function fmtDate(ts) {
+  if (!ts) { return ""; }
+  var d = new Date(ts * 1000);
+  if (isNaN(d.getTime())) { return ""; }
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate())
+       + " " + pad(d.getHours()) + ":" + pad(d.getMinutes());
+}
+
+// ===== API 调用（支持 Cookie） =====
+function api(method, url, body, cb) {
+  var x = new XMLHttpRequest();
+  x.open(method, url, true);
+  if (body != null) { x.setRequestHeader("Content-Type", "application/json"); }
+  x.withCredentials = true;
+  x.onreadystatechange = function () {
+    if (x.readyState === 4) {
+      var data = null;
+      try { data = JSON.parse(x.responseText); } catch (e) {}
+      cb(data, x.status);
+    }
+  };
+  x.send(body != null ? JSON.stringify(body) : null);
+}
+
+function setMsg(id, text, kind) {
+  var el = $(id);
+  el.innerHTML = "";
+  el.appendChild(document.createTextNode(text || ""));
+  el.className = "msg" + (kind ? " " + kind : "");
+}
+function setMeMsg(id, text, kind) {
+  var el = $(id);
+  el.innerHTML = "";
+  el.appendChild(document.createTextNode(text || ""));
+  el.className = "meMsg" + (kind ? " " + kind : "");
+}
+
+// ===== 认证选项卡滑动指示器 =====
+function setAuthTab(tab) {
+  var tabs = document.querySelectorAll('.authTab');
+  tabs.forEach(function(t) { t.classList.remove('active'); });
+  var indicator = document.getElementById('authIndicator');
+  if (tab === 'login') {
+    document.getElementById('tabLogin').classList.add('active');
+    indicator.className = 'authIndicator';
+  } else {
+    document.getElementById('tabReg').classList.add('active');
+    indicator.className = 'authIndicator at-reg';
+  }
+}
+
+// ===== 主题切换 =====
+function getTheme() {
+  return document.documentElement.getAttribute('data-theme') || 'dark';
+}
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  var toggle = document.getElementById('darkToggle');
+  if (theme === 'dark') {
+    toggle.classList.add('on');
+    toggle.querySelector('.knob').style.transform = 'translateX(20px)';
+  } else {
+    toggle.classList.remove('on');
+    toggle.querySelector('.knob').style.transform = 'translateX(0)';
+  }
+  try { localStorage.setItem('pvz-theme', theme); } catch (e) {}
+}
+addEvent(document.getElementById('darkToggle'), 'click', function() {
+  var current = getTheme();
+  setTheme(current === 'dark' ? 'light' : 'dark');
+});
+(function() {
+  var saved = 'dark';
+  try { saved = localStorage.getItem('pvz-theme') || 'dark'; } catch(e) {}
+  setTheme(saved);
+})();
+
+// ===== 顶部胶囊导航 =====
+function showCapsule() {
+  document.getElementById('topCapsule').style.display = 'block';
+}
+function hideCapsule() {
+  document.getElementById('topCapsule').style.display = 'none';
+}
+function setCapsuleTab(tab) {
+  var tabs = document.querySelectorAll('.cs-tab');
+  tabs.forEach(function(t) { t.classList.remove('active'); });
+  var indicator = document.getElementById('csIndicator');
+  indicator.className = 'cs-indicator';
+  if (tab === 'home') {
+    document.getElementById('csHome').classList.add('active');
+    indicator.classList.add('at-home');
+  } else if (tab === 'online') {
+    document.getElementById('csOnline').classList.add('active');
+    indicator.classList.add('at-online');
+  } else if (tab === 'me') {
+    document.getElementById('csMe').classList.add('active');
+    indicator.classList.add('at-me');
+  }
+}
+
+// ===== 创建 onlineView =====
+(function() {
+  var oldView = document.getElementById('onlineView');
+  if (oldView) { oldView.parentNode && oldView.parentNode.removeChild(oldView); }
+  
+  var onlineView = document.createElement('div');
+  onlineView.id = 'onlineView';
+  onlineView.style.cssText = 'display:none;position:absolute;z-index:2;top:0;left:0;width:100%;height:100%;overflow:hidden;box-sizing:border-box;background:transparent;';
+  
+  var iframe = document.createElement('iframe');
+  iframe.id = 'onlineFrame';
+  iframe.style.cssText = 'display:block;width:100%;height:100%;border:0;background:transparent;';
+  iframe.name = 'onlineFrame';
+  iframe.scrolling = 'auto';
+  iframe.allowTransparency = true;
+  iframe.src = '你还想翻文件？/pvz-game.yeyou.com/index.html';
+  
+  onlineView.appendChild(iframe);
+  document.body.appendChild(onlineView);
+})();
+
+addEvent(document.getElementById('csHome'), 'click', function() {
+  setCapsuleTab('home');
+  document.getElementById('menu').style.display = 'block';
+  document.getElementById('meMask').style.display = 'none';
+  document.getElementById('onlineView').style.display = 'none';
+  document.getElementById('play').style.display = 'none';
+});
+
+addEvent(document.getElementById('csOnline'), 'click', function() {
+  setCapsuleTab('online');
+  document.getElementById('menu').style.display = 'none';
+  document.getElementById('meMask').style.display = 'none';
+  document.getElementById('play').style.display = 'none';
+  
+  var onlineView = document.getElementById('onlineView');
+  onlineView.style.display = 'block';
+  
+  var iframe = document.getElementById('onlineFrame');
+  if (iframe) {
+    iframe.src = iframe.src;
+  }
+});
+
+addEvent(document.getElementById('csMe'), 'click', function() {
+  setCapsuleTab('me');
+  document.getElementById('menu').style.display = 'none';
+  document.getElementById('meMask').style.display = 'block';
+  document.getElementById('onlineView').style.display = 'none';
+  document.getElementById('play').style.display = 'none';
+  loadMe();
+  loadFriends();
+  loadFriendRequests();
+});
+
+// ===== 登录/注册 =====
+addEvent($("tabLogin"), "click", function () {
+  setAuthTab('login');
+  $("loginForm").style.display = "";
+  $("regForm").style.display = "none";
+});
+addEvent($("tabReg"), "click", function () {
+  setAuthTab('reg');
+  $("regForm").style.display = "";
+  $("loginForm").style.display = "none";
+});
+
+addEvent($("loginForm"), "submit", function (e) {
+  cancelEvent(e);
+  var u = $("loginUser").value;
+  var p = $("loginPass").value;
+  var btn = $("loginBtn");
+  btn.disabled = true; setMsg("loginMsg", "登录中…", "");
+  api("POST", "/api/login", { username: u, password: p }, function (res) {
+    btn.disabled = false;
+    if (res && res.ok) {
+      currentUin = res.uin; currentUsername = res.username;
+      enterMenu();
+    } else {
+      setMsg("loginMsg", (res && res.error) || "登录失败", "err");
+    }
+  });
+});
+
+addEvent($("regForm"), "submit", function (e) {
+  cancelEvent(e);
+  var u = $("regUser").value;
+  var p = $("regPass").value;
+  var p2 = $("regPass2").value;
+  if (p !== p2) { setMsg("regMsg", "两次输入的密码不一致", "err"); return; }
+  var btn = $("regBtn");
+  btn.disabled = true; setMsg("regMsg", "注册中…", "");
+  api("POST", "/api/register", { username: u, password: p }, function (res) {
+    btn.disabled = false;
+    if (res && res.ok) {
+      currentUin = res.uin; currentUsername = res.username;
+      enterMenu();
+    } else {
+      setMsg("regMsg", (res && res.error) || "注册失败", "err");
+    }
+  });
+});
+
+function enterMenu() {
+  $("authWrap").style.display = "none";
+  $("meMask").style.display = "none";
+  $("play").style.display = "none";
+  document.getElementById('onlineView').style.display = 'none';
+  $("menu").style.display = "block";
+  showCapsule();
+  setCapsuleTab('home');
+  loadNotice();
+  loadMe();
+  loadFriends();
+  loadFriendRequests();
+}
+
+function loadNotice() {
+  api("GET", "/api/notice", null, function (res) {
+    var body = $("noticeBody");
+    body.innerHTML = "";
+    if (res && res.ok && res.notice) {
+      body.appendChild(document.createTextNode(res.notice));
+    } else {
+      var sp = document.createElement("span");
+      sp.className = "empty";
+      sp.appendChild(document.createTextNode("暂无公告"));
+      body.appendChild(sp);
+    }
+  });
+}
+
+// ===== 退出登录 =====
+function showLogoutModal() {
+  document.getElementById('logoutModalLayer').style.display = 'block';
+  document.getElementById('logoutModal').style.display = 'block';
+  document.getElementById('logoutStatus').innerHTML = '';
+}
+function hideLogoutModal() {
+  document.getElementById('logoutModalLayer').style.display = 'none';
+  document.getElementById('logoutModal').style.display = 'none';
+}
+addEvent(document.getElementById('logoutLink'), 'click', showLogoutModal);
+addEvent(document.getElementById('meLogoutBtn'), 'click', showLogoutModal);
+addEvent(document.getElementById('logoutCancelBtn'), 'click', hideLogoutModal);
+addEvent(document.getElementById('logoutModalLayer'), 'click', hideLogoutModal);
+addEvent(document.getElementById('logoutConfirmBtn'), 'click', function() {
+  var btn = this;
+  btn.disabled = true;
+  document.getElementById('logoutStatus').innerHTML = '';
+  document.getElementById('logoutStatus').appendChild(document.createTextNode('退出中…'));
+  api("POST", "/api/logout", {}, function (res) {
+    currentUin = null; currentUsername = "";
+    hideLogoutModal();
+    hideCapsule();
+    $("menu").style.display = "none";
+    document.getElementById('onlineView').style.display = 'none';
+    $("authWrap").style.display = "table";
+    $("loginUser").value = ""; $("loginPass").value = "";
+    setMsg("loginMsg", "", "");
+    btn.disabled = false;
+  });
+});
+
+// ===== 开始游戏 =====
+addEvent($("startBtn"), "click", function () {
+  if (!currentUin) { return; }
+  $("menu").style.display = "none";
+  document.getElementById('onlineView').style.display = 'none';
+  $("meMask").style.display = "none";
+  $("play").style.display = "block";
+  
+  hideCapsule();
+  
+  embedGame(currentUin);
+});
+
+function embedGame(uin) {
+  var host = window.location.hostname || "26.140.151.0";
+  var flashvars = "server=" + host + ":" + gamePort + "&zoneID=&uin=" + uin + "&skey=" + GAME_SKEY;
+  var swfUrl = "/loader_p.swf?" + flashvars;
+  var params =
+    '<param name="movie" value="' + swfUrl + '" />' +
+    '<param name="flashvars" value="' + flashvars + '" />' +
+    '<param name="allowScriptAccess" value="always" />' +
+    '<param name="allowFullScreen" value="true" />' +
+    '<param name="wmode" value="direct" />' +
+    '<param name="quality" value="high" />' +
+    '<param name="bgcolor" value="#000000" />';
+  var html =
+    '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%" id="pvzSwf">' +
+      params +
+      '<object type="application/x-shockwave-flash" data="' + swfUrl + '" width="100%" height="100%">' +
+        params +
+        '<p style="color:#fff;text-align:center;padding:40px;">未检测到 Flash Player，请使用支持 Flash 的浏览器或改用桌面启动器。</p>' +
+      '</object>' +
+    '</object>';
+  $("game").innerHTML = html;
+  if (!hasFlash()) { $("flashwarn").style.display = "block"; }
+}
+
+function hasFlash() {
+  try {
+    var n = navigator;
+    if (n.plugins && n.plugins.length) {
+      for (var i = 0; i < n.plugins.length; i++) {
+        if (/Shockwave Flash/i.test(n.plugins[i].name)) { return true; }
+      }
+    }
+    if (n.mimeTypes && n.mimeTypes.length) {
+      for (var j = 0; j < n.mimeTypes.length; j++) {
+        if (/x-shockwave-flash/i.test(n.mimeTypes[j].type)) { return true; }
+      }
+    }
+    if (window.ActiveXObject || "ActiveXObject" in window) {
+      try { new ActiveXObject("ShockwaveFlash.ShockwaveFlash"); return true; } catch (e) {}
+    }
+  } catch (e) {}
+  return false;
+}
+
+// ===== 按 ESC 键退出游戏 =====
+addEvent(document, "keydown", function (e) {
+  e = e || window.event;
+  if (e.keyCode === 27) {
+    var playEl = document.getElementById('play');
+    if (playEl.style.display === 'block') {
+      playEl.style.display = 'none';
+      document.getElementById('game').innerHTML = '';
+      document.getElementById('flashwarn').style.display = 'none';
+      document.getElementById('menu').style.display = 'block';
+      showCapsule();
+      setCapsuleTab('home');
+    }
+  }
+});
+
+// ===== 我的 =====
+addEvent($("meBackBtn"), "click", function () {
+  setCapsuleTab('home');
+  $("meMask").style.display = "none";
+  $("menu").style.display = "block";
+});
+
+function buildPlantSelect() {
+  api("GET", "/api/plants", null, function (res) {
+    var sel = $("mePlant");
+    if (res && res.ok && res.plants) {
+      _PLANTS = res.plants;
+      for (var i = 0; i < _PLANTS.length; i++) {
+        var opt = document.createElement("option");
+        opt.value = String(i + 1);
+        opt.appendChild(document.createTextNode(_PLANTS[i].name));
+        sel.appendChild(opt);
+      }
+    }
+  });
+}
+
+function loadMe() {
+  api("GET", "/api/me", null, function (res) {
+    if (!res || !res.ok) {
+      $("meStat").innerHTML = "";
+      $("meStat").appendChild(document.createTextNode((res && res.error) || "加载失败"));
+      return;
+    }
+    var m = res.me || {};
+    currentUin = m.uin;
+    var vipText = ["无", "VIP1 阳光", "VIP2 财富", "VIP3 金壶"][m.vip_level] || "无";
+    var tdText = m.td_privilege ? "已开通" : "未开通";
+    var stat = $("meStat");
+    stat.innerHTML = "";
+    var lines = [
+      "账号：" + (m.username || ""),
+      "角色名：" + (m.name || "") + "   等级：" + m.level,
+      "金币：" + m.coin + "   钻石：" + m.ticket,
+      "VIP：" + vipText + "   塔防特权：" + tdText
+    ];
+    for (var i = 0; i < lines.length; i++) {
+      stat.appendChild(document.createTextNode(lines[i]));
+      stat.appendChild(document.createElement("br"));
+    }
+    $("meName").value = m.name || "";
+    var sel = $("mePlant");
+    var targetIdx = 0;
+    for (var j = 0; j < _PLANTS.length; j++) {
+      if (_PLANTS[j].id === m.friend_card_plant_id) { targetIdx = j + 1; break; }
+    }
+    sel.value = String(targetIdx);
+  });
+}
+
+addEvent($("meNameBtn"), "click", function () {
+  var name = trim($("meName").value);
+  if (name.length < 2 || name.length > 32) {
+    setMeMsg("meNameMsg", "角色名长度需为 2-32 个字符", "err"); return;
+  }
+  var btn = $("meNameBtn");
+  btn.disabled = true; setMeMsg("meNameMsg", "保存中…", "");
+  api("POST", "/api/me/name", { name: name }, function (res) {
+    btn.disabled = false;
+    if (res && res.ok) { setMeMsg("meNameMsg", "已保存", "ok"); loadMe(); }
+    else { setMeMsg("meNameMsg", (res && res.error) || "保存失败", "err"); }
+  });
+});
+
+addEvent($("mePlantBtn"), "click", function () {
+  var pid = _plantIdFromOption($("mePlant").value);
+  var btn = $("mePlantBtn");
+  btn.disabled = true; setMeMsg("mePlantMsg", "保存中…", "");
+  api("POST", "/api/me/friend_card", { plant_id: pid }, function (res) {
+    btn.disabled = false;
+    if (res && res.ok) { setMeMsg("mePlantMsg", "已保存", "ok"); loadMe(); }
+    else { setMeMsg("mePlantMsg", (res && res.error) || "保存失败", "err"); }
+  });
+});
+
+addEvent($("meCodeBtn"), "click", function () {
+  var code = trim($("meCode").value);
+  if (!code) { setMeMsg("meCodeMsg", "请输入兑换码", "err"); return; }
+  var btn = $("meCodeBtn");
+  btn.disabled = true; setMeMsg("meCodeMsg", "兑换中…", "");
+  api("POST", "/api/redeem", { code: code }, function (res) {
+    btn.disabled = false;
+    if (res && res.ok) {
+      var r = res.reward || {};
+      var desc = r.reward_type + " x" + r.amount;
+      setMeMsg("meCodeMsg", "兑换成功：" + desc + "（下次进入游戏生效）", "ok");
+      $("meCode").value = "";
+      loadMe();
+    } else {
+      setMeMsg("meCodeMsg", (res && res.error) || "兑换失败", "err");
+    }
+  });
+});
+
+// ===== 好友功能 =====
+addEvent($("meSearchBtn"), "click", function () { doFriendSearch(); });
+addEvent($("meSearch"), "keydown", function (e) {
+  e = e || window.event;
+  if (e.keyCode === 13) { doFriendSearch(); return cancelEvent(e); }
+});
+
+function doFriendSearch() {
+  var q = trim($("meSearch").value);
+  var box = $("meSearchResult");
+  box.innerHTML = "";
+  if (!q) { return; }
+  api("GET", "/api/friends/search?q=" + encodeURIComponent(q), null, function (res) {
+    box.innerHTML = "";
+    if (!res || !res.ok) {
+      box.appendChild(document.createTextNode((res && res.error) || "搜索失败"));
+      return;
+    }
+    var list = res.players || [];
+    if (!list.length) {
+      var sp = document.createElement("div");
+      sp.style.color = "#555";
+      sp.appendChild(document.createTextNode("未找到该名字的玩家"));
+      box.appendChild(sp);
+      return;
+    }
+    for (var i = 0; i < list.length; i++) {
+      box.appendChild(makeSearchRow(list[i]));
+    }
+  });
+}
+
+function makeSearchRow(p) {
+  var row = document.createElement("div");
+  row.className = "srRow";
+  var plantLabel = p.friend_card_plant_name || "未设置";
+  row.appendChild(document.createTextNode(
+    p.name + " (Lv " + p.level + ", 好友卡: " + plantLabel + ")"));
+  var btn = document.createElement("button");
+  btn.className = "srAdd";
+  btn.appendChild(document.createTextNode("加好友"));
+  addEvent(btn, "click", (function (player) {
+    return function () { openFriendModal(player, btn); };
+  })(p));
+  row.appendChild(btn);
+  return row;
+}
+
+var _fmTarget = null;
+var _fmTriggerBtn = null;
+
+addEvent($("fmCancelBtn"), "click", closeFriendModal);
+addEvent($("fmSendBtn"), "click", function () { doSendFriendRequest(); });
+addEvent($("friendModalLayer"), "click", closeFriendModal);
+addEvent(document, "keydown", function (e) {
+  e = e || window.event;
+  if (e.keyCode === 27 && $("friendModal").style.display === "block") {
+    closeFriendModal();
+  }
+});
+
+function openFriendModal(player, triggerBtn) {
+  _fmTarget = player;
+  _fmTriggerBtn = triggerBtn || null;
+  var info = $("fmInfo");
+  info.innerHTML = "";
+  var name = document.createElement("span");
+  name.className = "fmName";
+  name.appendChild(document.createTextNode(player.name || "未知玩家"));
+  info.appendChild(name);
+  var meta = document.createElement("span");
+  meta.className = "fmMeta";
+  var plantLabel = player.friend_card_plant_name || "未设置";
+  meta.appendChild(document.createTextNode("Lv " + (player.level || 1) + " · 好友卡: " + plantLabel));
+  info.appendChild(meta);
+  $("fmMsg").value = "";
+  setFmStatus("", "");
+  var sendBtn = $("fmSendBtn");
+  sendBtn.disabled = false;
+  sendBtn.innerHTML = "";
+  sendBtn.appendChild(document.createTextNode("发送请求"));
+  $("friendModalLayer").style.display = "block";
+  $("friendModal").style.display = "block";
+  try { $("fmMsg").focus(); } catch (e) {}
+}
+
+function closeFriendModal() {
+  $("friendModalLayer").style.display = "none";
+  $("friendModal").style.display = "none";
+  _fmTarget = null;
+  _fmTriggerBtn = null;
+  setFmStatus("", "");
+}
+
+function setFmStatus(text, kind) {
+  var el = $("fmStatus");
+  el.innerHTML = "";
+  el.appendChild(document.createTextNode(text || ""));
+  el.className = "fmStatus" + (kind ? " " + kind : "");
+}
+
+function doSendFriendRequest() {
+  if (!_fmTarget) { return; }
+  var rid = _fmTarget.role_id;
+  var message = $("fmMsg").value;
+  var sendBtn = $("fmSendBtn");
+  sendBtn.disabled = true;
+  setFmStatus("发送中…", "");
+  api("POST", "/api/friends/add", { role_id: rid, message: message }, function (res) {
+    if (res && res.ok) {
+      setFmStatus(res.message || "好友请求已发送，等待对方同意", "ok");
+      if (_fmTriggerBtn) {
+        _fmTriggerBtn.disabled = true;
+        _fmTriggerBtn.innerHTML = "";
+        _fmTriggerBtn.appendChild(document.createTextNode("已发送"));
+      }
+      loadFriendRequests();
+      setTimeout(closeFriendModal, 1200);
+    } else {
+      sendBtn.disabled = false;
+      setFmStatus((res && res.error) || "发送失败", "err");
+    }
+  });
+}
+
+function loadFriends() {
+  var box = $("meFrList");
+  box.innerHTML = "";
+  api("GET", "/api/friends", null, function (res) {
+    if (!res || !res.ok) { return; }
+    var list = res.friends || [];
+    if (!list.length) {
+      var empty = document.createElement("div");
+      empty.className = "frEmpty";
+      empty.appendChild(document.createTextNode("暂无好友"));
+      box.appendChild(empty);
+      return;
+    }
+    for (var i = 0; i < list.length; i++) {
+      box.appendChild(makeFrRow(list[i]));
+    }
+  });
+}
+
+function loadFriendRequests() {
+  loadIncomingRequests();
+  loadSentRequests();
+}
+
+function loadIncomingRequests() {
+  var box = $("meReqList");
+  box.innerHTML = "";
+  api("GET", "/api/friends/requests", null, function (res) {
+    if (!res || !res.ok) {
+      updateReqBadge(0);
+      return;
+    }
+    var list = res.requests || [];
+    updateReqBadge(list.length);
+    if (!list.length) {
+      var empty = document.createElement("div");
+      empty.className = "frEmpty";
+      empty.appendChild(document.createTextNode("暂无好友请求"));
+      box.appendChild(empty);
+      return;
+    }
+    for (var i = 0; i < list.length; i++) {
+      box.appendChild(makeReqRow(list[i]));
+    }
+  });
+}
+
+function loadSentRequests() {
+  var box = $("meSentList");
+  box.innerHTML = "";
+  api("GET", "/api/friends/requests/sent", null, function (res) {
+    if (!res || !res.ok) { return; }
+    var list = res.requests || [];
+    if (!list.length) {
+      var empty = document.createElement("div");
+      empty.className = "frEmpty";
+      empty.appendChild(document.createTextNode("没有等待中的请求"));
+      box.appendChild(empty);
+      return;
+    }
+    for (var i = 0; i < list.length; i++) {
+      box.appendChild(makeSentRow(list[i]));
+    }
+  });
+}
+
+function updateReqBadge(n) {
+  var badge = $("meReqBadge");
+  if (!badge) { return; }
+  if (n > 0) {
+    badge.style.display = "inline-block";
+    badge.innerHTML = "";
+    badge.appendChild(document.createTextNode(String(n)));
+  } else {
+    badge.style.display = "none";
+  }
+}
+
+function makeReqRow(r) {
+  var row = document.createElement("div");
+  row.className = "frReqItem";
+  var name = document.createElement("span");
+  name.className = "frName";
+  name.appendChild(document.createTextNode(r.from_name || "未知玩家"));
+  row.appendChild(name);
+  var meta = document.createElement("span");
+  meta.className = "frMeta";
+  meta.appendChild(document.createTextNode("Lv " + (r.from_level || 1) + " · " + fmtDate(r.created_at)));
+  row.appendChild(meta);
+  if (r.message) {
+    var msg = document.createElement("div");
+    msg.className = "frMsg";
+    msg.appendChild(document.createTextNode("留言：" + r.message));
+    row.appendChild(msg);
+  }
+  var acceptBtn = document.createElement("button");
+  acceptBtn.className = "frAct accept";
+  acceptBtn.appendChild(document.createTextNode("同意"));
+  addEvent(acceptBtn, "click", (function (id) {
+    return function () { respondRequest(id, true, acceptBtn); };
+  })(r.id));
+  row.appendChild(acceptBtn);
+  var rejectBtn = document.createElement("button");
+  rejectBtn.className = "frAct reject";
+  rejectBtn.appendChild(document.createTextNode("拒绝"));
+  addEvent(rejectBtn, "click", (function (id) {
+    return function () { respondRequest(id, false, rejectBtn); };
+  })(r.id));
+  row.appendChild(rejectBtn);
+  return row;
+}
+
+function makeSentRow(r) {
+  var row = document.createElement("div");
+  row.className = "frReqItem";
+  var name = document.createElement("span");
+  name.className = "frName";
+  name.appendChild(document.createTextNode(r.to_name || "未知玩家"));
+  row.appendChild(name);
+  var meta = document.createElement("span");
+  meta.className = "frMeta";
+  meta.appendChild(document.createTextNode("Lv " + (r.to_level || 1) + " · 等待同意 · " + fmtDate(r.created_at)));
+  row.appendChild(meta);
+  return row;
+}
+
+function respondRequest(id, accept, btn) {
+  btn.disabled = true;
+  var action = accept ? "accept" : "reject";
+  api("POST", "/api/friends/requests/" + id + "/" + action, {}, function (res) {
+    if (res && res.ok) {
+      if (accept) {
+        loadFriendRequests();
+        loadFriends();
+      } else {
+        window.alert("已拒绝好友请求");
+        loadFriendRequests();
+      }
+    } else {
+      btn.disabled = false;
+      window.alert((res && res.error) || "操作失败");
+    }
+  });
+}
+
+function makeFrRow(f) {
+  var row = document.createElement("div");
+  row.className = "frItem";
+  var name = document.createElement("span");
+  name.className = "frName";
+  name.appendChild(document.createTextNode(f.friend_name || "未知玩家"));
+  row.appendChild(name);
+  var btn = document.createElement("button");
+  btn.className = "frDel";
+  btn.appendChild(document.createTextNode("删除"));
+  addEvent(btn, "click", (function (fr) {
+    return function () { openDeleteModal(fr); };
+  })(f));
+  row.appendChild(btn);
+  return row;
+}
+
+var _cmTarget = null;
+
+addEvent($("cmCancelBtn"), "click", closeDeleteModal);
+addEvent($("cmConfirmBtn"), "click", function () { doDeleteFriend(); });
+addEvent($("confirmModalLayer"), "click", closeDeleteModal);
+addEvent(document, "keydown", function (e) {
+  e = e || window.event;
+  if (e.keyCode === 27) {
+    if ($("confirmModal").style.display === "block") { closeDeleteModal(); }
+    else if ($("friendModal").style.display === "block") { closeFriendModal(); }
+  }
+});
+
+function openDeleteModal(fr) {
+  _cmTarget = fr;
+  var msg = $("cmMsg");
+  msg.innerHTML = "";
+  msg.appendChild(document.createTextNode("确定删除好友 "));
+  var nm = document.createElement("span");
+  nm.className = "cmName";
+  nm.appendChild(document.createTextNode(fr.friend_name || "未知玩家"));
+  msg.appendChild(nm);
+  msg.appendChild(document.createTextNode("？"));
+  setCmStatus("", "");
+  var confirmBtn = $("cmConfirmBtn");
+  confirmBtn.disabled = false;
+  confirmBtn.innerHTML = "";
+  confirmBtn.appendChild(document.createTextNode("确认删除"));
+  $("confirmModalLayer").style.display = "block";
+  $("confirmModal").style.display = "block";
+}
+
+function closeDeleteModal() {
+  $("confirmModalLayer").style.display = "none";
+  $("confirmModal").style.display = "none";
+  _cmTarget = null;
+  setCmStatus("", "");
+}
+
+function setCmStatus(text, kind) {
+  var el = $("cmStatus");
+  el.innerHTML = "";
+  el.appendChild(document.createTextNode(text || ""));
+  el.className = "cmStatus" + (kind ? " " + kind : "");
+}
+
+function doDeleteFriend() {
+  if (!_cmTarget) { return; }
+  var rid = _cmTarget.friend_role_id;
+  var confirmBtn = $("cmConfirmBtn");
+  confirmBtn.disabled = true;
+  setCmStatus("删除中…", "");
+  api("POST", "/api/friends/" + rid + "/delete", {}, function (res) {
+    if (res && res.ok) {
+      setCmStatus("已删除", "ok");
+      loadFriends();
+      setTimeout(closeDeleteModal, 800);
+    } else {
+      confirmBtn.disabled = false;
+      setCmStatus((res && res.error) || "删除失败", "err");
+    }
+  });
+}
+
+addEvent($("meFrRefreshBtn"), "click", function () {
+  loadFriends();
+  loadFriendRequests();
+});
+
+// ===== 关闭关服横幅 =====
+addEvent(document.getElementById('shutdownCloseBtn'), 'click', function() {
+  document.getElementById('shutdownBanner').style.display = 'none';
+});
+
+// ===== 会话恢复 =====
+api("GET", "/api/session", null, function (res) {
+  if (res && res.game_port) { gamePort = res.game_port; }
+  if (res && res.logged_in) {
+    currentUin = res.uin; currentUsername = res.username;
+    enterMenu();
+  }
+});
+
+// ===== 初始化 =====
+buildPlantSelect();
+setAuthTab('login');
+
+// 初始化关服状态管理器
+shutdown.init();
+
+// 加载关服状态（先加载关服状态，再检查登录状态）
+shutdown.load(function() {
+  // 关服状态加载完成后，检查会话恢复
+  api("GET", "/api/session", null, function (res) {
+    if (res && res.game_port) { gamePort = res.game_port; }
+    if (res && res.logged_in) {
+      currentUin = res.uin; currentUsername = res.username;
+      enterMenu();
+    }
+  });
+});
+
+// 暴露 shutdown 到控制台方便调试
+window.shutdown = shutdown;
+
+console.log('植物大战僵尸 Online 客户端已加载');
+console.log('关服状态管理: shutdown');
+console.log('可用命令: shutdown.enable("消息", "2026-01-20 18:00:00")');
+</script>
+</body>
+</html>

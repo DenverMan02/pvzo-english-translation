@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "test_count": 7,
+  "menu_coordinate_scenarios": 150,
+  "explicit_position_scenarios": 5,
+  "chest_size_scenarios": 5,
+  "original_error_reproductions": 2,
+  "canonical_scan_files": 154,
+  "qpopup_definitions": 5,
+  "baseline_webroot": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\baseline",
+  "candidate_webroot": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot",
+  "real_flash_ui_tested": false,
+  "account_requests_sent": 0,
+  "results": [
+    {
+      "test": "__main__.BagActualBytecodeRegression.test_all_real_menu_candidates_follow_mouse_at_window_scales",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.BagActualBytecodeRegression.test_candidate_chest_view_uses_logical_size_at_all_scales",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.BagActualBytecodeRegression.test_every_other_body_header_pool_and_trait_remains_identical",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.BagActualBytecodeRegression.test_explicit_positions_and_disabled_actions_preserved",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.BagActualBytecodeRegression.test_menu_and_init_methods_have_valid_control_flow_stacks",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.BagActualBytecodeRegression.test_original_chest_init_reproduces_oversized_view",
+      "status": "passed"
+    },
+    {
+      "test": "__main__.BagActualBytecodeRegression.test_original_menu_reproduces_physical_coordinate_error",
+      "status": "passed"
+    }
+  ]
+}

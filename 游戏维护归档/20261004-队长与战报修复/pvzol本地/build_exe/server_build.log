@@ -1,0 +1,73 @@
+362 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.8
+363 INFO: Python: 3.13.12
+385 INFO: Platform: Windows-11-10.0.26200-SP0
+385 INFO: Python environment: C:\Users\huawei\.workbuddy\binaries\python\envs\default
+387 INFO: wrote C:/Users/huawei/Downloads/pvzol本地最新最新/pvzol本地/build_exe\PvZServer.spec
+393 INFO: Removing temporary files and cleaning cache in C:\Users\huawei\AppData\Local\pyinstaller
+398 INFO: Module search paths (PYTHONPATH):
+['C:\\Users\\huawei\\Downloads\\pvzol本地最新最新\\pvzol本地\\PvZ-Server-PoC',
+ 'C:\\Users\\huawei\\AppData\\Local\\Programs\\WorkBuddy\\resources\\app.asar.unpacked\\cli\\vendor\\shim',
+ 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\versions\\3.13.12\\python313.zip',
+ 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\versions\\3.13.12\\DLLs',
+ 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\versions\\3.13.12\\Lib',
+ 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\versions\\3.13.12',
+ 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default',
+ 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages',
+ 'C:\\Users\\huawei\\Downloads\\pvzol本地最新最新\\pvzol本地\\PvZ-Server-PoC']
+1416 INFO: checking Analysis
+1416 INFO: Building Analysis because Analysis-00.toc is non existent
+1416 INFO: Looking for Python shared library...
+1416 INFO: Using Python shared library: C:\Users\huawei\.workbuddy\binaries\python\versions\3.13.12\python313.dll
+1416 INFO: Running Analysis Analysis-00.toc
+1416 INFO: Target bytecode optimization level: 0
+1416 INFO: Initializing module dependency graph...
+1438 INFO: Initializing module graph hook caches...
+1450 INFO: Analyzing modules for base_library.zip ...
+5727 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+7099 INFO: Processing standard module hook 'hook-math.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+9550 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+11212 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+12418 INFO: Caching module dependency graph...
+12491 INFO: Analyzing C:\Users\huawei\Downloads\pvzol本地最新最新\pvzol本地\PvZ-Server-PoC\run_all.py
+12919 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+13272 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+13900 INFO: Processing standard module hook 'hook-sysconfig.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+13916 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+16995 INFO: Processing standard module hook 'hook-sqlite3.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks'
+18714 INFO: Processing module hooks (post-graph stage)...
+19217 INFO: Performing binary vs. data reclassification (1 entries)
+19221 INFO: Looking for ctypes DLLs
+19235 INFO: Analyzing run-time hooks ...
+19237 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+19243 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+19249 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from 'C:\\Users\\huawei\\.workbuddy\\binaries\\python\\envs\\default\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+19259 INFO: Creating base_library.zip...
+19295 INFO: Looking for dynamic libraries
+20222 INFO: Extra DLL search directories (AddDllDirectory): []
+20222 INFO: Extra DLL search directories (PATH): []
+20708 INFO: Warnings written to C:\Users\huawei\Downloads\pvzol本地最新最新\pvzol本地\build_exe\work_server\PvZServer\warn-PvZServer.txt
+20749 INFO: Graph cross-reference written to C:\Users\huawei\Downloads\pvzol本地最新最新\pvzol本地\build_exe\work_server\PvZServer\xref-PvZServer.html
+20789 INFO: checking PYZ
+20789 INFO: Building PYZ because PYZ-00.toc is non existent
+20789 INFO: Building PYZ (ZlibArchive) C:\Users\huawei\Downloads\pvzol本地最新最新\pvzol本地\build_exe\work_server\PvZServer\PYZ-00.pyz
+21314 INFO: Building PYZ (ZlibArchive) C:\Users\huawei\Downloads\pvzol本地最新最新\pvzol本地\build_exe\work_server\PvZServer\PYZ-00.pyz completed successfully.
+21337 INFO: checking PKG
+21337 INFO: Building PKG because PKG-00.toc is non existent
+21337 INFO: Building PKG (CArchive) PvZServer.pkg
+21372 INFO: Building PKG (CArchive) PvZServer.pkg completed successfully.
+21374 INFO: Bootloader C:\Users\huawei\.workbuddy\binaries\python\envs\default\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\run.exe
+21374 INFO: checking EXE
+21375 INFO: Building EXE because EXE-00.toc is non existent
+21375 INFO: Building EXE from EXE-00.toc
+21375 INFO: Copying bootloader EXE to C:\Users\huawei\Downloads\pvzol本地最新最新\pvzol本地\build_exe\work_server\PvZServer\PvZServer.exe
+21390 INFO: Copying icon to EXE
+21402 INFO: Copying 0 resources to EXE
+21402 INFO: Embedding manifest in EXE
+21412 INFO: Appending PKG archive to EXE
+21419 INFO: Fixing EXE headers
+21547 INFO: Building EXE from EXE-00.toc completed successfully.
+21551 INFO: checking COLLECT
+21551 INFO: Building COLLECT because COLLECT-00.toc is non existent
+21552 INFO: Building COLLECT COLLECT-00.toc
+21650 INFO: Building COLLECT COLLECT-00.toc completed successfully.
+21652 INFO: Build complete! The results are available in: C:\Users\huawei\Downloads\pvzol本地最新最新\pvzol本地\build_exe\dist

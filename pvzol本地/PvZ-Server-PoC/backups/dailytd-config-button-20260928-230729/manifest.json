@@ -1,0 +1,34 @@
+{
+  "target": "C:\\Users\\fuyu\\Downloads\\pvzol本地最新最新\\pvzol本地",
+  "source_server_sha256": "d3399d25e75b443d1e15d4809a91e126343877d91f223ca8d6a6749980b483ad",
+  "patched_server_sha256": "9c41fff079c05121321ad7f5fc9d8d795f206cbc7b46d6389e8adba9c933c495",
+  "assets": [
+    {
+      "file": "webroot\\swf\\dailyTD\\btnUp.png",
+      "size": 8152,
+      "dimensions": [
+        100,
+        41
+      ],
+      "sha256": "f67d03859af7585378cca1c24d2ddb4cb40c91a67eb5ee77eb25c95ca296988a"
+    },
+    {
+      "file": "webroot\\swf\\dailyTD\\btnOver.png",
+      "size": 7751,
+      "dimensions": [
+        100,
+        41
+      ],
+      "sha256": "f96175198b43ad0f4d3ed9bd8dc4e0ba7b7848cb4fd2bd760bb5aa0bfa87c6e9"
+    }
+  ],
+  "unchanged": {
+    "C:\\Users\\fuyu\\Downloads\\pvzol本地最新最新\\pvzol本地\\PvZ-Server-PoC\\players.db": "de84c6c1df521233c5c5bb2962742e6b835027c82c908531dbb5b0a3418be847",
+    "C:\\Users\\fuyu\\Downloads\\pvzol本地最新最新\\pvzol本地\\PvZ-Server-PoC\\guild_local.db": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "C:\\Users\\fuyu\\Downloads\\pvzol本地最新最新\\pvzol本地\\webroot\\clientDB.txt": "9b437ea6b9594af099733b2f2a12abc237c1123c40195daa7c4b83d1256acbcb",
+    "C:\\Users\\fuyu\\Downloads\\pvzol本地最新最新\\pvzol本地\\webroot\\ModuleDailyTD.swf": "13decdead867c7302f90b7ae784a6d0572a42bddd0f69f78a3ca957f99a077af",
+    "C:\\Users\\fuyu\\Downloads\\pvzol本地最新最新\\pvzol本地\\webroot\\fileVer.xml": "9a41d63f5f28dfc15b255b1e253c9980f2ad4cb591181d54b6d602ea06c2a521",
+    "C:\\Users\\fuyu\\Downloads\\pvzol本地修复版\\pvzol本地修复版\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py": "ee7d4f3d7a7d92cfd6b09b086e08f8f72dfcb7bb2bdf86b593be5c1782221024"
+  },
+  "validation": "Python compile; isolated actual Cmd_Init_SC config encoder; PNG dimensions and SHA256 match. No game UI or full game tests."
+}

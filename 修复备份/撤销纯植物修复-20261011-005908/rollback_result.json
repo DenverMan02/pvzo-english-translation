@@ -1,0 +1,55 @@
+{
+  "restored_from": "D:\\pvzol本地最新最新ol\\修复备份\\竞技场纯植物与身份修复-20261011-004437",
+  "rollback_backup": "D:\\pvzol本地最新最新ol\\修复备份\\撤销纯植物修复-20261011-005908",
+  "restored_files": [
+    {
+      "relative": "pvz_poc_server.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py",
+      "original": "D:\\pvzol本地最新最新ol\\修复备份\\竞技场纯植物与身份修复-20261011-004437\\pvz_poc_server.py",
+      "expected": "ae2e796a46fe374c9384b226b8c7e67e8fb7ee86eca5bd26530893e062b72357"
+    },
+    {
+      "relative": "tests\\test_arena_mode_contract_20261011.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\tests\\test_arena_mode_contract_20261011.py",
+      "original": "D:\\pvzol本地最新最新ol\\修复备份\\竞技场纯植物与身份修复-20261011-004437\\tests\\test_arena_mode_contract_20261011.py",
+      "expected": null
+    },
+    {
+      "relative": "tests\\test_gameplay_audit_20261007.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\tests\\test_gameplay_audit_20261007.py",
+      "original": "D:\\pvzol本地最新最新ol\\修复备份\\竞技场纯植物与身份修复-20261011-004437\\tests\\test_gameplay_audit_20261007.py",
+      "expected": "06d6b8ad090f1bbc07bb5d8ca9389638fa974527fc04bca7d8503918ed95460a"
+    },
+    {
+      "relative": "tests\\test_rewards_rules_20261009.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\tests\\test_rewards_rules_20261009.py",
+      "original": "D:\\pvzol本地最新最新ol\\修复备份\\竞技场纯植物与身份修复-20261011-004437\\tests\\test_rewards_rules_20261009.py",
+      "expected": "a1521ed14871759f6a941b5465153ce35d972a1e564b242d8731bd222445a7bf"
+    }
+  ],
+  "protected_before": {
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\players.db": "3000bba8775660d4c65e5d4e3a181c2af6e80cc7771b36097afaa67124d8ffaf",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\players.db": "e7920563854dc10ced60f6c70607e56a3ee0e19881c11f9571b4d76dfea8dd1e",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\guild_local.db": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p.swf": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_n.swf": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\clientDB.txt": "1f2fae0156a35eb842f590a4073a48a1752f8c49eea33c689449030caae39b8a",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\bots_local.py": "cc1b003b161e695c3c3b1656935a5ea9a6b3e378cd7f12977a49fab3b31c6e74",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\consistency_repairs.py": "d2a228d399289dc376ffe6018e5e7431ac3795f3a37a020d7b6bfc9498e61b75",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\worldmap_local.py": "723880b0a71f82a6c9c403d602ccfcd1b8c0f2d0f12fa811991c3ab12d27c436",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\player_store.py": "011eda79b484e22d0558a4bfde667f830bde68544124a3ce09aa3ea89c864ccf"
+  },
+  "protected_after": {
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\players.db": "3000bba8775660d4c65e5d4e3a181c2af6e80cc7771b36097afaa67124d8ffaf",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\players.db": "e7920563854dc10ced60f6c70607e56a3ee0e19881c11f9571b4d76dfea8dd1e",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\guild_local.db": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p.swf": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_n.swf": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\clientDB.txt": "1f2fae0156a35eb842f590a4073a48a1752f8c49eea33c689449030caae39b8a",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\bots_local.py": "cc1b003b161e695c3c3b1656935a5ea9a6b3e378cd7f12977a49fab3b31c6e74",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\consistency_repairs.py": "d2a228d399289dc376ffe6018e5e7431ac3795f3a37a020d7b6bfc9498e61b75",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\worldmap_local.py": "723880b0a71f82a6c9c403d602ccfcd1b8c0f2d0f12fa811991c3ab12d27c436",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\player_store.py": "011eda79b484e22d0558a4bfde667f830bde68544124a3ce09aa3ea89c864ccf"
+  },
+  "protected_unchanged": true
+}

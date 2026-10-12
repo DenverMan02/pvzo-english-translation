@@ -1,0 +1,20 @@
+{
+  "source_sha256": "f90140d8b9b1f6f4bfdfc3262c217904a555c9948f8ff824b047ccd093f89580",
+  "patched_sha256": "c296d7fb404961902c8a5f801eed003b17dc023fcd25d4c3f8b42f46e83bc096",
+  "md5": "b553d6f1d4a81300389ff9e3103221d6",
+  "size": 27934,
+  "changed_method": {
+    "classname": "com.qq.modules.endlessFuben.view.EndlessFubenViewMediator",
+    "method": "onClickBtnRefresh",
+    "id": 177
+  },
+  "body_count": 383,
+  "unchanged_body_count": 382,
+  "all_headers_unchanged": true,
+  "changed_string_indices": [
+    548,
+    1054,
+    1055
+  ],
+  "tooltip": "剩余次数：<font color='{3}'>{0}</font>/{1}<br>金钻消耗：{2}"
+}

@@ -1,0 +1,683 @@
+id	name
+1001	Yesterday
+1002	Intoxicating
+1003	Sinful
+1004	Strongest
+1005	Maximum
+1006	Brown
+1007	Olive Drab
+1008	Tan
+1009	Auburn
+1010	Brownish-Black
+1011	Freedom
+1012	Selfish
+1013	Conscious
+1014	Arrogant
+1015	Purple
+1016	Rosewood
+1017	Purple
+1018	Purple-brown
+1019	Nourishing
+1020	Blackish
+1021	Note
+1022	Dream-chasing
+1023	Bamboo Green
+1024	Vermilion
+1025	Middle
+1026	Ambition
+1027	Straightforward
+1028	Persistence
+1029	Politics
+1030	Orderly
+1031	Tidy
+1032	Controversy
+1033	Argue
+1034	Fury
+1035	Sincere
+1036	Precious
+1037	Ochre
+1038	Enduring
+1039	Tossing
+1040	Jujube Red
+1041	Sooner or Later
+1042	morning
+1043	we
+1044	Moon White
+1045	Gaze
+1046	Slick
+1047	Heartbroken
+1048	Gloomy
+1049	Jade
+1050	morpheme
+1051	Cheerful
+1052	Dark
+1053	Friendly
+1054	friendly
+1055	Dark Green
+1056	Sobbing
+1057	Faint scent
+1058	Humorous
+1059	Anxious
+1060	Melancholy
+1061	Gloomy
+1062	Elegant
+1063	Bulky
+1064	Handsome
+1065	Silver-Red
+1066	Silvery
+1067	Attentive
+1068	Crimson
+1069	Gloomy
+1070	Eerie
+1071	Radiant
+1072	Perseverance
+1073	Depressed
+1074	Nostalgic
+1075	Question
+1076	Regret
+1077	Attachment
+1078	Depend
+1079	Magenta
+1080	Blaze
+1081	Severe
+1082	Strict
+1083	Bright Red
+1084	Rouge
+1085	Ivory
+1086	Duck Yellow
+1087	Raven black
+1088	Lilac
+1089	Snow white
+1090	Whirlwind
+1091	dark black
+1092	Dark Cyan
+1093	Lofty
+1094	Many
+1095	Hypocritical
+1096	Weak
+1097	Delicate
+1098	Graceful
+1099	Ambition
+1100	Sexy
+1101	apricot yellow
+1102	Apricot Red
+1103	excited
+1104	Delighted
+1105	fondness
+1106	Preoccupation
+1107	mood
+1108	impatient
+1109	flustered
+1110	laughter
+1111	Smiley
+1112	Smile
+1113	petite
+1114	Dashing
+1115	Sales
+1116	Vanishe
+1117	eliminate
+1118	Light yellow
+1119	Sweet
+1120	In love
+1121	Trap
+1122	Virtuous
+1123	Tender
+1124	Flower
+1125	Daydream
+1126	Narrow sense
+1127	Joy
+1128	Beaming
+1129	Like
+1130	Drizzling
+1131	Misty
+1132	Physics
+1133	Midnight
+1134	Ignore
+1135	Dark gold
+1136	Jet-black
+1137	Frail
+1138	Azure
+1139	Cringe
+1140	Faint
+1141	Bowls and plates
+1142	Extroverted
+1143	Ruddy
+1144	Camel
+1145	Hesitate
+1146	Pure White
+1147	Patina
+1148	Crimson
+1149	Upright
+1150	Chest Out
+1151	Jump
+1152	serene
+1153	Sky
+1154	High Skies
+1155	Considerate
+1156	Pain
+1157	special
+1158	Charcoal
+1159	Apprehensive
+1160	Covetous
+1161	Greedy
+1162	He is
+1163	Easygoing
+1164	Elegant and Simple
+1165	Pine and Cypress
+1166	Obedient
+1167	Deep Water
+1168	Aqua
+1169	Whose
+1170	Frosty
+1171	Duotone
+1172	stretch
+1173	Uncle
+1174	Gaunt
+1175	Scrawny
+1176	Beginning and end
+1177	bloodthirsty
+1178	Right and Wrong
+1179	things
+1180	Century
+1181	whole story
+1182	authentic
+1183	Azurite
+1184	Heartbroken
+1185	Holy
+1186	Sound
+1187	Growth
+1188	Life and Death
+1189	Angry
+1190	Charm
+1191	Divine
+1192	Magical
+1193	Profound
+1194	Melancholic
+1195	Kind-hearted
+1196	Good & Evil
+1197	High mountains
+1198	Dispirited
+1199	Careless
+1200	As If Meeting
+1201	Burning
+1202	Fragile
+1203	Soft
+1204	Headstrong
+1205	Earnest
+1206	Merciful
+1207	Passion
+1208	Passionate love
+1209	Attached
+1210	Choice
+1211	Curved and Straight
+1212	Imprisoned
+1213	Autumn Hue
+1214	Celebrating Spring
+1215	Romance
+1216	Dainty
+1217	Lean
+1218	Peaceful
+1219	Lightweight
+1220	Cyan
+1221	Blue lotus
+1222	Lush
+1223	Verdant
+1224	youth
+1225	Bluish Green
+1226	Pale
+1227	diligent
+1228	Admire
+1229	Silver-tongued
+1230	Haggard
+1231	Knocking
+1232	Stealthy
+1233	Sturdy
+1234	Madder Red
+1235	Devout
+1236	Front & Back
+1237	Ahead
+1238	Lead White
+1239	Imposing
+1240	furious
+1241	Furious
+1242	Strange
+1243	Jet-black
+1244	simple
+1245	Tattered
+1246	Peaceful
+1247	Graceful
+1248	Disperse
+1249	Ethereal
+1250	Pretty
+1251	Floating
+1252	Bleached
+1253	Secluded
+1254	Crackle
+1255	Fluffy
+1256	Admiring
+1257	Running
+1258	Crack
+1259	Wham
+1260	lotus root pink
+1261	Fury
+1262	Roar
+1263	Full bloom
+1264	denounce
+1265	Dense
+1266	Shy
+1267	Yearning
+1268	Prefer
+1269	Peaceful
+1270	Graceful
+1271	Light Green
+1272	Introverted
+1273	Annoyed
+1274	Patience
+1275	Over There
+1276	Where
+1277	Adoration
+1278	Dull
+1279	Inky
+1280	Ink Gray
+1281	Simulation
+1282	Imitate
+1283	Command
+1284	Tomorrow
+1285	Bright
+1286	Noun
+1287	Slender
+1288	Bashful
+1289	infatuation
+1290	Sprout
+1291	Charm
+1292	Hypnotic
+1293	Beaming
+1294	Adventure
+1295	Contradictory
+1296	full of
+1297	bellyful
+1298	sloppy
+1299	Mom
+1300	Green
+1301	Dark green
+1302	Desolate
+1303	Desolate
+1304	Wordy
+1305	Willow Green
+1306	Willow Yellow
+1307	linger
+1308	Nostalgic
+1309	Scattered
+1310	Dexterous
+1311	Solitary
+1312	cheetah
+1313	Desolate
+1314	Measure word
+1315	reluctant to leave
+1316	Chestnut
+1317	Power
+1318	Calm
+1319	Prism
+1320	Upright
+1321	Thunder
+1322	Order
+1323	Optimistic
+1324	Yearning
+1325	Chatty
+1326	Antique Silver
+1327	Old Man
+1328	Teacher
+1329	Seasoned
+1330	lazy
+1331	Blue
+1332	Sallow
+1333	Tug
+1334	Sleepy
+1335	Cackle
+1336	Magnanimous
+1337	Generous
+1338	Spacious
+1339	Rapid
+1340	happy
+1341	Wilted
+1342	Withered Yellow
+1343	fear
+1344	Panic
+1345	Devotion
+1346	Eager
+1347	Affable
+1348	reliable
+1349	Pathetic
+1350	Cute
+1351	generous
+1352	cheerful
+1353	Joyful
+1354	Switch
+1355	Blooming
+1356	Handsome
+1357	Handsome
+1358	Nostalgic
+1359	Hurricane
+1360	dread
+1361	Chew
+1362	orange-yellow
+1363	Tangerine
+1364	Reserved
+1365	Admire
+1366	Proficient
+1367	Astute
+1368	pure white
+1369	Fright
+1370	Panicked
+1371	Panicked
+1372	Jinghan
+1373	Dutiful
+1374	nervous
+1375	Golden
+1376	Sturdy
+1377	Result
+1378	Clean
+1379	Pristine
+1380	Feel
+1381	Cunning
+1382	Scorched
+1383	Tender
+1384	Exquisite
+1385	Purplish
+1386	Deep Purple
+1387	Turmeric
+1388	Future
+1389	Talkative
+1390	Sturdy
+1391	Frugal
+1392	Tough
+1393	Jia-Wu
+1394	Silent
+1395	Desolate
+1396	Silence
+1397	Commemoration
+1398	Passion
+1399	Enrage
+1400	Thrilled
+1401	Excited
+1402	Fervent
+1403	Accumulated Love
+1404	Active
+1405	Witty
+1406	fuselage
+1407	Agile
+1408	Clever
+1409	chatter
+1410	Fortune and Misfortune
+1411	Fuming
+1412	Fiery red
+1413	Furious
+1414	Active
+1415	Vivacious
+1416	Vibrant
+1417	Dusk
+1418	Discerning Eye
+1419	Echo
+1420	Gray
+1421	Smoke tree
+1422	disillusionment
+1423	Transform
+1424	Sluggish
+1425	joyful
+1426	Exuberant
+1427	Joyful voices
+1428	joyful
+1429	Cheer
+1430	Jovial
+1431	Doubt
+1432	Nostalgic
+1433	Slick
+1434	Clatter
+1435	Gorgeous
+1436	Stamen
+1437	Pollen
+1438	Petal
+1439	Grizzled
+1440	Amber
+1441	Breathe
+1442	Uproar
+1443	Rosy
+1444	Rosy
+1445	Rumble
+1446	Dark and Thin
+1447	Black and White
+1448	Darkness
+1449	Brown
+1450	Bright Red
+1451	Affable
+1452	Friendly
+1453	Why
+1454	Gregarious
+1455	Qualified
+1456	Drinking Water
+1457	kind-hearted
+1458	bold
+1459	Behavior
+1460	Chilly
+1461	Subtle
+1462	Budding
+1463	silly grin
+1464	Shy
+1465	Past
+1466	Decisive
+1467	Smooth
+1468	Bizarre
+1469	Taciturn
+1470	Fondness
+1471	Fixed
+1472	Isolated
+1473	Lonely
+1474	Lonely
+1475	Just
+1476	Upright
+1477	Singing
+1478	Brother
+1479	Happy
+1480	Tall and Slender
+1481	Tall
+1482	Resolute
+1483	Violet-Blue
+1484	Navy Blue
+1485	Dry
+1486	Scrawny
+1487	Parched
+1488	Scrawny
+1489	Emotional
+1490	Affection
+1491	Bittersweet
+1492	Woman
+1493	Responsible
+1494	stroke
+1495	Dedicated
+1496	Crazy
+1497	Witty
+1498	Debonair
+1499	Plump
+1500	Abundant
+1501	pink
+1502	Distinct
+1503	Discretion
+1504	Plump
+1505	Crimson
+1506	Extraordinary
+1507	Eaves
+1508	Flitting
+1509	Airplane
+1510	As if
+1511	Direction
+1512	Method
+1513	Example
+1514	Worry
+1515	anyway
+1516	Repeatedly
+1517	Tedious
+1518	Sprouting
+1519	panicked
+1520	Developed
+1521	Worrying
+1522	binary
+1523	Light yellow
+1524	Polyphonic
+1525	mostly
+1526	Talkative
+1527	How many
+1528	Wealthy
+1529	Versatile
+1530	Phrase
+1531	Dignified
+1532	Independent
+1533	pea green
+1534	Bean Green
+1535	Vigorous
+1536	Touching
+1537	Movement
+1538	Verb
+1539	Things
+1540	Lost
+1541	fishing
+1542	Indigo
+1543	indigo
+1544	ignite
+1545	Younger brother
+1546	Earth
+1547	Profound
+1548	Bow
+1549	Graceful
+1550	Faint
+1551	Faint
+1552	Timidsome
+1553	Infatuation
+1554	Monotone
+1555	Unit
+1556	Monotonous
+1557	Unrequited Love
+1558	Word
+1559	Naive
+1560	Frail
+1561	Worry
+1562	Dark Purple
+1563	Dark Blue
+1564	dark green
+1565	Dark Cyan
+1566	Dark Indigo
+1567	Replace
+1568	Pronoun
+1569	Blank
+1570	Massive
+1571	everyone
+1572	Bright Red
+1573	Ocean
+1574	Bold
+1575	Heartbroken
+1576	Existence
+1577	Save as
+1578	fragile
+1579	Thickness
+1580	Rugged
+1581	Round
+1582	gurgling
+1583	verdant
+1584	Verdant
+1585	Verdant
+1586	Onion Yellow
+1587	Hasty
+1588	Benevolent
+1589	Affectionate
+1590	Phrase
+1591	Vocabulary
+1592	Pure
+1593	Spring Festival
+1594	Breezy
+1595	First Love
+1596	Ugly
+1597	Melancholy
+1598	Melancholy
+1599	Melancholy
+1600	Adore
+1601	Impulsive
+1602	Red Gold
+1603	Demented
+1604	Orange
+1605	Orange-yellow
+1606	Sincere
+1607	Pondering
+1608	Serene
+1609	Silent
+1610	Noisy
+1611	day and night
+1612	Singing
+1613	Joyful
+1614	tremble
+1615	Spawning
+1616	Tangled
+1617	Tea Stain
+1618	Teal
+1619	Dark Green
+1620	Tea Green
+1621	Interrupt
+1622	Flag
+1623	Listen
+1624	Grass Green
+1625	Navy Blue
+1626	navy blue
+1627	Dark blue
+1628	Vast and hazy
+1629	Pale
+1630	Uneven
+1631	Suspicion
+1632	Guessed
+1633	Sleepless
+1634	Tireless
+1635	learned
+1636	Frozen
+1637	Colorful
+1638	Indicate
+1639	Flat
+1640	Jade Green
+1641	Jade Green
+1642	Azure
+1643	Straight
+1644	Each Other
+1645	ratio
+1646	Clumsy
+1647	Clunky
+1648	Galloping
+1649	Passive
+1650	Tragic
+1651	Grief
+1652	sorrowful
+1653	Desolate
+1654	tragic romance
+1655	Joys and Sorrows
+1656	Tragic
+1657	Explosion
+1658	Sapphire
+1659	comments
+1660	Baseball
+1661	Gold-digger
+1662	knotted
+1663	Worries
+1664	Fair-skinned
+1665	Platinum
+1666	Dad
+1667	Tsundere
+1668	Head-high
+1669	Secure
+1670	Affectionate
+1671	quiet
+1672	affection
+1673	Mugwort Green
+1674	Stunted
+1675	stout
+1676	Wistful
+1677	Sorrow
+1678	Tsundere
+1679	adorkable
+1680	Numb
+1681	Facepalm
+1682	Awesome

@@ -1,0 +1,43 @@
+{
+  "game": "D:\\pvzol本地最新最新ol\\pvzol本地",
+  "md5": "5442f3d905d35737e357e571c83eda03",
+  "old_ver": "b20e1ed46fb5ea15b3f03d276bd6697c",
+  "files": [
+    {
+      "relative": "PvZ-Server-PoC/pvz_poc_server.py",
+      "source": "server/pvz_poc_server.py",
+      "before": "b9d37003776eab9c6310c9ac6e13523d8c9dcc89f4ff72f586df4078118555ac",
+      "after": "b3c6d37c242b86c06f29a0b3b66717a65b3d1f789d43f2607194787c52e0bd61"
+    },
+    {
+      "relative": "PvZ-Server-PoC/tests/test_puzzle_flow.py",
+      "source": "server/tests/test_puzzle_flow.py",
+      "before": null,
+      "after": "6b5e83f2c872e49ad71e3353895ccfac881606292c9e92b612e7f59612d8f0b0"
+    },
+    {
+      "relative": "webroot/ModuleCard.swf",
+      "source": "ModuleCard.patched.swf",
+      "before": "d4a2597cc08011a435e2e78a938cb54e035a6d1c21d62861c7d4ba9e4ddeed72",
+      "after": "467c09688e1f214d90369de2b1e64f9f45c415d5da3fa9e809f11fdeb5ee1d65"
+    },
+    {
+      "relative": "webroot/ModuleCard_b20e1ed46fb5ea15b3f03d276bd6697c.swf",
+      "source": "ModuleCard.patched.swf",
+      "before": "d4a2597cc08011a435e2e78a938cb54e035a6d1c21d62861c7d4ba9e4ddeed72",
+      "after": "467c09688e1f214d90369de2b1e64f9f45c415d5da3fa9e809f11fdeb5ee1d65"
+    },
+    {
+      "relative": "webroot/ModuleCard_5442f3d905d35737e357e571c83eda03.swf",
+      "source": "ModuleCard.patched.swf",
+      "before": null,
+      "after": "467c09688e1f214d90369de2b1e64f9f45c415d5da3fa9e809f11fdeb5ee1d65"
+    },
+    {
+      "relative": "webroot/fileVer.xml",
+      "source": "fileVer.patched.xml",
+      "before": "acd8fdc0b8489a8b186f1ada57222af3c0b9d857a8e9445320c791b84bafceae",
+      "after": "12fff49ff87ca2864d3b895c473a79c299b31c8ac31ff0a221c9e8ccee75cf91"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+id	name
+1	Nile River
+2	Egyptian Market
+3	Imperial Tomb
+4	Battle of the Great Wall
+5	Cabana Coast
+6	Treasure Cave
+7	Modern Day
+8	Mecha Factory

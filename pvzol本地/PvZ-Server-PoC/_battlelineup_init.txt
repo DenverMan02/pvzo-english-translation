@@ -1,0 +1,791 @@
+### com.qq.modules.battleLineup.view.components::BattleLineupWinCE.::InitializeComponent (method 52)
+      0 0  getlocal0
+      1 1  pushscope
+      2 2  getlocal0
+      3 3  callsupervoid    ::InitializeComponent, 0
+      4 6  getlocal0
+      5 7  pushshort        815
+      6 10  setproperty      ::width
+      7 13  getlocal0
+      8 14  pushshort        573
+      9 17  setproperty      ::height
+     10 20  getlocal0
+     11 21  findpropstrict   asgui.containers::Canvas
+     12 23  constructprop    asgui.containers::Canvas, 0
+     13 26  initproperty     ::canvas_87
+     14 28  getlocal0
+     15 29  getproperty      ::canvas_87
+     16 31  pushshort        400
+     17 34  setproperty      ::width
+     18 37  getlocal0
+     19 38  getproperty      ::canvas_87
+     20 40  pushshort        300
+     21 43  setproperty      ::height
+     22 46  getlocal0
+     23 47  getproperty      ::canvas_87
+     24 49  pushstring       '.Canvas_Brown1'
+     25 52  setproperty      ::styleName
+     26 55  getlocal0
+     27 56  getproperty      ::canvas_87
+     28 58  pushbyte         0
+     29 60  setproperty      ::x
+     30 63  getlocal0
+     31 64  getproperty      ::canvas_87
+     32 66  pushbyte         20
+     33 68  setproperty      ::y
+     34 71  getlocal0
+     35 72  getproperty      ::canvas_87
+     36 74  pushstring       'canvas_87'
+     37 76  setproperty      ::id
+     38 79  getlocal0
+     39 80  getproperty      ::canvas_87
+     40 82  pushbyte         5
+     41 84  setproperty      ::left
+     42 87  getlocal0
+     43 88  getproperty      ::canvas_87
+     44 90  pushbyte         5
+     45 92  setproperty      ::right
+     46 95  getlocal0
+     47 96  getproperty      ::canvas_87
+     48 98  pushbyte         30
+     49 100  setproperty      ::top
+     50 103  getlocal0
+     51 104  getproperty      ::canvas_87
+     52 106  pushbyte         5
+     53 108  setproperty      ::bottom
+     54 111  getlocal0
+     55 112  findpropstrict   asgui.containers::Canvas
+     56 114  constructprop    asgui.containers::Canvas, 0
+     57 117  initproperty     ::canvas_88
+     58 119  getlocal0
+     59 120  getproperty      ::canvas_88
+     60 122  pushshort        400
+     61 125  setproperty      ::width
+     62 128  getlocal0
+     63 129  getproperty      ::canvas_88
+     64 131  pushshort        300
+     65 134  setproperty      ::height
+     66 137  getlocal0
+     67 138  getproperty      ::canvas_88
+     68 140  pushstring       '.Canvas_Grass_Left'
+     69 143  setproperty      ::styleName
+     70 146  getlocal0
+     71 147  getproperty      ::canvas_88
+     72 149  pushbyte         69
+     73 151  setproperty      ::x
+     74 154  getlocal0
+     75 155  getproperty      ::canvas_88
+     76 157  pushbyte         111
+     77 159  setproperty      ::y
+     78 162  getlocal0
+     79 163  getproperty      ::canvas_88
+     80 165  pushstring       'canvas_88'
+     81 167  setproperty      ::id
+     82 170  getlocal0
+     83 171  getproperty      ::canvas_88
+     84 173  pushbyte         253
+     85 175  setproperty      ::left
+     86 178  getlocal0
+     87 179  getproperty      ::canvas_88
+     88 181  pushbyte         246
+     89 183  setproperty      ::bottom
+     90 186  getlocal0
+     91 187  getproperty      ::canvas_87
+     92 189  getlocal0
+     93 190  getproperty      ::canvas_88
+     94 192  callpropvoid     ::addChild, 1
+     95 196  getlocal0
+     96 197  findpropstrict   asgui.containers::Canvas
+     97 199  constructprop    asgui.containers::Canvas, 0
+     98 202  initproperty     ::canvas_89
+     99 204  getlocal0
+    100 205  getproperty      ::canvas_89
+    101 207  pushbyte         66
+    102 209  setproperty      ::width
+    103 212  getlocal0
+    104 213  getproperty      ::canvas_89
+    105 215  pushbyte         40
+    106 217  setproperty      ::height
+    107 220  getlocal0
+    108 221  getproperty      ::canvas_89
+    109 223  pushstring       '.Canvas_Grass_Right'
+    110 226  setproperty      ::styleName
+    111 229  getlocal0
+    112 230  getproperty      ::canvas_89
+    113 232  pushshort        151
+    114 235  setproperty      ::y
+    115 238  getlocal0
+    116 239  getproperty      ::canvas_89
+    117 241  pushstring       'canvas_89'
+    118 243  setproperty      ::id
+    119 246  getlocal0
+    120 247  getproperty      ::canvas_89
+    121 249  pushbyte         253
+    122 251  setproperty      ::right
+    123 254  getlocal0
+    124 255  getproperty      ::canvas_89
+    125 257  pushbyte         246
+    126 259  setproperty      ::bottom
+    127 262  getlocal0
+    128 263  getproperty      ::canvas_87
+    129 265  getlocal0
+    130 266  getproperty      ::canvas_89
+    131 268  callpropvoid     ::addChild, 1
+    132 272  getlocal0
+    133 273  findpropstrict   asgui.controls::Image
+    134 275  constructprop    asgui.controls::Image, 0
+    135 278  initproperty     ::image_88
+    136 280  getlocal0
+    137 281  getproperty      ::image_88
+    138 283  pushshort        548
+    139 286  setproperty      ::width
+    140 289  getlocal0
+    141 290  getproperty      ::image_88
+    142 292  pushshort        322
+    143 295  setproperty      ::height
+    144 298  getlocal0
+    145 299  getproperty      ::image_88
+    146 301  getlex           asgui.resources::AssetManager
+    147 304  pushstring       'skin_battle_posBG'
+    148 307  callproperty     ::GetClass, 1
+    149 311  setproperty      ::source
+    150 314  getlocal0
+    151 315  getproperty      ::image_88
+    152 317  pushshort        228
+    153 320  setproperty      ::x
+    154 323  getlocal0
+    155 324  getproperty      ::image_88
+    156 326  pushbyte         10
+    157 328  setproperty      ::y
+    158 331  getlocal0
+    159 332  getproperty      ::image_88
+    160 334  pushstring       'image_88'
+    161 336  setproperty      ::id
+    162 339  getlocal0
+    163 340  getproperty      ::canvas_87
+    164 342  getlocal0
+    165 343  getproperty      ::image_88
+    166 345  callpropvoid     ::addChild, 1
+    167 349  getlocal0
+    168 350  findpropstrict   asgui.controls::Label
+    169 352  constructprop    asgui.controls::Label, 0
+    170 355  initproperty     ::txt_selfPower
+    171 357  getlocal0
+    172 358  getproperty      ::txt_selfPower
+    173 360  pushstring       '总战力：'
+    174 363  setproperty      ::text
+    175 366  getlocal0
+    176 367  getproperty      ::txt_selfPower
+    177 369  pushstring       '.TXT_HKHB_13_Yellow'
+    178 372  setproperty      ::styleName
+    179 375  getlocal0
+    180 376  getproperty      ::txt_selfPower
+    181 378  pushshort        229
+    182 381  setproperty      ::x
+    183 384  getlocal0
+    184 385  getproperty      ::txt_selfPower
+    185 387  pushshort        312
+    186 390  setproperty      ::y
+    187 393  getlocal0
+    188 394  getproperty      ::txt_selfPower
+    189 396  pushbyte         60
+    190 398  setproperty      ::width
+    191 401  getlocal0
+    192 402  getproperty      ::txt_selfPower
+    193 404  pushbyte         24
+    194 406  setproperty      ::height
+    195 409  getlocal0
+    196 410  getproperty      ::txt_selfPower
+    197 412  pushstring       'txt_selfPower'
+    198 414  setproperty      ::id
+    199 417  getlocal0
+    200 418  getproperty      ::canvas_87
+    201 420  getlocal0
+    202 421  getproperty      ::txt_selfPower
+    203 423  callpropvoid     ::addChild, 1
+    204 427  getlocal0
+    205 428  findpropstrict   asgui.controls::Label
+    206 430  constructprop    asgui.controls::Label, 0
+    207 433  initproperty     ::txt_selfPowerData
+    208 435  getlocal0
+    209 436  getproperty      ::txt_selfPowerData
+    210 438  pushstring       '00000000'
+    211 441  setproperty      ::text
+    212 444  getlocal0
+    213 445  getproperty      ::txt_selfPowerData
+    214 447  pushstring       '.TXT_HKHB_13_Yellow'
+    215 450  setproperty      ::styleName
+    216 453  getlocal0
+    217 454  getproperty      ::txt_selfPowerData
+    218 456  pushshort        282
+    219 459  setproperty      ::x
+    220 462  getlocal0
+    221 463  getproperty      ::txt_selfPowerData
+    222 465  pushshort        312
+    223 468  setproperty      ::y
+    224 471  getlocal0
+    225 472  getproperty      ::txt_selfPowerData
+    226 474  pushbyte         96
+    227 476  setproperty      ::width
+    228 479  getlocal0
+    229 480  getproperty      ::txt_selfPowerData
+    230 482  pushbyte         24
+    231 484  setproperty      ::height
+    232 487  getlocal0
+    233 488  getproperty      ::txt_selfPowerData
+    234 490  pushstring       'txt_selfPowerData'
+    235 492  setproperty      ::id
+    236 495  getlocal0
+    237 496  getproperty      ::canvas_87
+    238 498  getlocal0
+    239 499  getproperty      ::txt_selfPowerData
+    240 501  callpropvoid     ::addChild, 1
+    241 505  getlocal0
+    242 506  findpropstrict   asgui.controls::Label
+    243 508  constructprop    asgui.controls::Label, 0
+    244 511  initproperty     ::txt_enemyPower
+    245 513  getlocal0
+    246 514  getproperty      ::txt_enemyPower
+    247 516  pushstring       '总战力：'
+    248 519  setproperty      ::text
+    249 522  getlocal0
+    250 523  getproperty      ::txt_enemyPower
+    251 525  pushstring       '.TXT_HKHB_13_Yellow'
+    252 528  setproperty      ::styleName
+    253 531  getlocal0
+    254 532  getproperty      ::txt_enemyPower
+    255 534  pushshort        643
+    256 537  setproperty      ::x
+    257 540  getlocal0
+    258 541  getproperty      ::txt_enemyPower
+    259 543  pushshort        312
+    260 546  setproperty      ::y
+    261 549  getlocal0
+    262 550  getproperty      ::txt_enemyPower
+    263 552  pushshort        150
+    264 555  setproperty      ::width
+    265 558  getlocal0
+    266 559  getproperty      ::txt_enemyPower
+    267 561  pushbyte         24
+    268 563  setproperty      ::height
+    269 566  getlocal0
+    270 567  getproperty      ::txt_enemyPower
+    271 569  pushstring       'txt_enemyPower'
+    272 571  setproperty      ::id
+    273 574  getlocal0
+    274 575  getproperty      ::canvas_87
+    275 577  getlocal0
+    276 578  getproperty      ::txt_enemyPower
+    277 580  callpropvoid     ::addChild, 1
+    278 584  getlocal0
+    279 585  findpropstrict   asgui.controls::Label
+    280 587  constructprop    asgui.controls::Label, 0
+    281 590  initproperty     ::txt_enemyPowerData
+    282 592  getlocal0
+    283 593  getproperty      ::txt_enemyPowerData
+    284 595  pushstring       '00000000'
+    285 598  setproperty      ::text
+    286 601  getlocal0
+    287 602  getproperty      ::txt_enemyPowerData
+    288 604  pushstring       '.TXT_HKHB_13_Yellow'
+    289 607  setproperty      ::styleName
+    290 610  getlocal0
+    291 611  getproperty      ::txt_enemyPowerData
+    292 613  pushshort        696
+    293 616  setproperty      ::x
+    294 619  getlocal0
+    295 620  getproperty      ::txt_enemyPowerData
+    296 622  pushshort        313
+    297 625  setproperty      ::y
+    298 628  getlocal0
+    299 629  getproperty      ::txt_enemyPowerData
+    300 631  pushbyte         86
+    301 633  setproperty      ::width
+    302 636  getlocal0
+    303 637  getproperty      ::txt_enemyPowerData
+    304 639  pushbyte         24
+    305 641  setproperty      ::height
+    306 644  getlocal0
+    307 645  getproperty      ::txt_enemyPowerData
+    308 647  pushstring       'txt_enemyPowerData'
+    309 649  setproperty      ::id
+    310 652  getlocal0
+    311 653  getproperty      ::canvas_87
+    312 655  getlocal0
+    313 656  getproperty      ::txt_enemyPowerData
+    314 658  callpropvoid     ::addChild, 1
+    315 662  getlocal0
+    316 663  findpropstrict   asgui.containers::Canvas
+    317 665  constructprop    asgui.containers::Canvas, 0
+    318 668  initproperty     ::box_self
+    319 670  getlocal0
+    320 671  getproperty      ::box_self
+    321 673  pushshort        240
+    322 676  setproperty      ::width
+    323 679  getlocal0
+    324 680  getproperty      ::box_self
+    325 682  pushshort        310
+    326 685  setproperty      ::height
+    327 688  getlocal0
+    328 689  getproperty      ::box_self
+    329 691  pushshort        230
+    330 694  setproperty      ::x
+    331 697  getlocal0
+    332 698  getproperty      ::box_self
+    333 700  pushbyte         12
+    334 702  setproperty      ::y
+    335 705  getlocal0
+    336 706  getproperty      ::box_self
+    337 708  pushstring       'box_self'
+    338 710  setproperty      ::id
+    339 713  getlocal0
+    340 714  getproperty      ::canvas_87
+    341 716  getlocal0
+    342 717  getproperty      ::box_self
+    343 719  callpropvoid     ::addChild, 1
+    344 723  getlocal0
+    345 724  findpropstrict   asgui.containers::Canvas
+    346 726  constructprop    asgui.containers::Canvas, 0
+    347 729  initproperty     ::box_enemy
+    348 731  getlocal0
+    349 732  getproperty      ::box_enemy
+    350 734  pushshort        240
+    351 737  setproperty      ::width
+    352 740  getlocal0
+    353 741  getproperty      ::box_enemy
+    354 743  pushshort        310
+    355 746  setproperty      ::height
+    356 749  getlocal0
+    357 750  getproperty      ::box_enemy
+    358 752  pushshort        530
+    359 755  setproperty      ::x
+    360 758  getlocal0
+    361 759  getproperty      ::box_enemy
+    362 761  pushbyte         12
+    363 763  setproperty      ::y
+    364 766  getlocal0
+    365 767  getproperty      ::box_enemy
+    366 769  pushstring       'box_enemy'
+    367 771  setproperty      ::id
+    368 774  getlocal0
+    369 775  getproperty      ::canvas_87
+    370 777  getlocal0
+    371 778  getproperty      ::box_enemy
+    372 780  callpropvoid     ::addChild, 1
+    373 784  getlocal0
+    374 785  findpropstrict   asgui.controls::SelectableButton
+    375 787  constructprop    asgui.controls::SelectableButton, 0
+    376 790  initproperty     ::sl_friend
+    377 792  getlocal0
+    378 793  getproperty      ::sl_friend
+    379 795  pushstring       '随缘卡牌'
+    380 798  setproperty      ::label
+    381 801  getlocal0
+    382 802  getproperty      ::sl_friend
+    383 804  pushstring       '.GreenButtonTab'
+    384 807  setproperty      ::styleName
+    385 810  getlocal0
+    386 811  getproperty      ::sl_friend
+    387 813  pushbyte         18
+    388 815  setproperty      ::x
+    389 818  getlocal0
+    390 819  getproperty      ::sl_friend
+    391 821  pushbyte         5
+    392 823  setproperty      ::y
+    393 826  getlocal0
+    394 827  getproperty      ::sl_friend
+    395 829  pushbyte         80
+    396 831  setproperty      ::width
+    397 834  getlocal0
+    398 835  getproperty      ::sl_friend
+    399 837  pushbyte         35
+    400 839  setproperty      ::height
+    401 842  getlocal0
+    402 843  getproperty      ::sl_friend
+    403 845  pushstring       'sl_friend'
+    404 848  setproperty      ::id
+    405 851  getlocal0
+    406 852  getproperty      ::canvas_87
+    407 854  getlocal0
+    408 855  getproperty      ::sl_friend
+    409 857  callpropvoid     ::addChild, 1
+    410 861  getlocal0
+    411 862  findpropstrict   asgui.controls::SelectableButton
+    412 864  constructprop    asgui.controls::SelectableButton, 0
+    413 867  initproperty     ::sl_me
+    414 869  getlocal0
+    415 870  getproperty      ::sl_me
+    416 872  pushstring       '我的卡牌'
+    417 875  setproperty      ::label
+    418 878  getlocal0
+    419 879  getproperty      ::sl_me
+    420 881  pushstring       '.GreenButtonTab'
+    421 884  setproperty      ::styleName
+    422 887  getlocal0
+    423 888  getproperty      ::sl_me
+    424 890  pushbyte         104
+    425 892  setproperty      ::x
+    426 895  getlocal0
+    427 896  getproperty      ::sl_me
+    428 898  pushbyte         5
+    429 900  setproperty      ::y
+    430 903  getlocal0
+    431 904  getproperty      ::sl_me
+    432 906  pushbyte         80
+    433 908  setproperty      ::width
+    434 911  getlocal0
+    435 912  getproperty      ::sl_me
+    436 914  pushbyte         35
+    437 916  setproperty      ::height
+    438 919  getlocal0
+    439 920  getproperty      ::sl_me
+    440 922  pushstring       'sl_me'
+    441 925  setproperty      ::id
+    442 928  getlocal0
+    443 929  getproperty      ::canvas_87
+    444 931  getlocal0
+    445 932  getproperty      ::sl_me
+    446 934  callpropvoid     ::addChild, 1
+    447 938  getlocal0
+    448 939  findpropstrict   asgui.containers::Canvas
+    449 941  constructprop    asgui.containers::Canvas, 0
+    450 944  initproperty     ::box_help
+    451 946  getlocal0
+    452 947  getproperty      ::box_help
+    453 949  pushshort        190
+    454 952  setproperty      ::width
+    455 955  getlocal0
+    456 956  getproperty      ::box_help
+    457 958  pushshort        440
+    458 961  setproperty      ::height
+    459 964  getlocal0
+    460 965  getproperty      ::box_help
+    461 967  pushbyte         10
+    462 969  setproperty      ::x
+    463 972  getlocal0
+    464 973  getproperty      ::box_help
+    465 975  pushbyte         33
+    466 977  setproperty      ::y
+    467 980  getlocal0
+    468 981  getproperty      ::box_help
+    469 983  pushstring       'box_help'
+    470 986  setproperty      ::id
+    471 989  getlocal0
+    472 990  getproperty      ::canvas_87
+    473 992  getlocal0
+    474 993  getproperty      ::box_help
+    475 995  callpropvoid     ::addChild, 1
+    476 999  getlocal0
+    477 1000  findpropstrict   asgui.controls::Button
+    478 1002  constructprop    asgui.controls::Button, 0
+    479 1005  initproperty     ::beginFight_sweepAll
+    480 1007  getlocal0
+    481 1008  getproperty      ::beginFight_sweepAll
+    482 1010  pushstring       '扫荡X次'
+    483 1013  setproperty      ::label
+    484 1016  getlocal0
+    485 1017  getproperty      ::beginFight_sweepAll
+    486 1019  pushstring       '.GreenButton'
+    487 1022  setproperty      ::styleName
+    488 1025  getlocal0
+    489 1026  getproperty      ::beginFight_sweepAll
+    490 1028  pushshort        645
+    491 1031  setproperty      ::x
+    492 1034  getlocal0
+    493 1035  getproperty      ::beginFight_sweepAll
+    494 1037  pushshort        357
+    495 1040  setproperty      ::y
+    496 1043  getlocal0
+    497 1044  getproperty      ::beginFight_sweepAll
+    498 1046  pushbyte         110
+    499 1048  setproperty      ::width
+    500 1051  getlocal0
+    501 1052  getproperty      ::beginFight_sweepAll
+    502 1054  pushbyte         50
+    503 1056  setproperty      ::height
+    504 1059  getlocal0
+    505 1060  getproperty      ::beginFight_sweepAll
+    506 1062  pushstring       'beginFight_sweepAll'
+    507 1065  setproperty      ::id
+    508 1068  getlocal0
+    509 1069  getproperty      ::beginFight_sweepAll
+    510 1071  pushbyte         115
+    511 1073  setproperty      ::right
+    512 1076  getlocal0
+    513 1077  getproperty      ::beginFight_sweepAll
+    514 1079  pushbyte         40
+    515 1081  setproperty      ::bottom
+    516 1084  getlocal0
+    517 1085  getproperty      ::canvas_87
+    518 1087  getlocal0
+    519 1088  getproperty      ::beginFight_sweepAll
+    520 1090  callpropvoid     ::addChild, 1
+    521 1094  getlocal0
+    522 1095  findpropstrict   asgui.controls::Button
+    523 1097  constructprop    asgui.controls::Button, 0
+    524 1100  initproperty     ::beginFight_sweep
+    525 1102  getlocal0
+    526 1103  getproperty      ::beginFight_sweep
+    527 1105  pushstring       '扫荡'
+    528 1108  setproperty      ::label
+    529 1111  getlocal0
+    530 1112  getproperty      ::beginFight_sweep
+    531 1114  pushstring       '.GreenButton'
+    532 1117  setproperty      ::styleName
+    533 1120  getlocal0
+    534 1121  getproperty      ::beginFight_sweep
+    535 1123  pushshort        645
+    536 1126  setproperty      ::x
+    537 1129  getlocal0
+    538 1130  getproperty      ::beginFight_sweep
+    539 1132  pushshort        427
+    540 1135  setproperty      ::y
+    541 1138  getlocal0
+    542 1139  getproperty      ::beginFight_sweep
+    543 1141  pushbyte         110
+    544 1143  setproperty      ::width
+    545 1146  getlocal0
+    546 1147  getproperty      ::beginFight_sweep
+    547 1149  pushbyte         50
+    548 1151  setproperty      ::height
+    549 1154  getlocal0
+    550 1155  getproperty      ::beginFight_sweep
+    551 1157  pushstring       'beginFight_sweep'
+    552 1160  setproperty      ::id
+    553 1163  getlocal0
+    554 1164  getproperty      ::beginFight_sweep
+    555 1166  pushbyte         115
+    556 1168  setproperty      ::right
+    557 1171  getlocal0
+    558 1172  getproperty      ::beginFight_sweep
+    559 1174  pushbyte         10
+    560 1176  setproperty      ::bottom
+    561 1179  getlocal0
+    562 1180  getproperty      ::canvas_87
+    563 1182  getlocal0
+    564 1183  getproperty      ::beginFight_sweep
+    565 1185  callpropvoid     ::addChild, 1
+    566 1189  getlocal0
+    567 1190  getlocal0
+    568 1191  getproperty      ::canvas_87
+    569 1193  callpropvoid     ::addChild, 1
+    570 1197  getlocal0
+    571 1198  findpropstrict   asgui.controls::Image
+    572 1200  constructprop    asgui.controls::Image, 0
+    573 1203  initproperty     ::image_48
+    574 1205  getlocal0
+    575 1206  getproperty      ::image_48
+    576 1208  pushbyte         60
+    577 1210  setproperty      ::width
+    578 1213  getlocal0
+    579 1214  getproperty      ::image_48
+    580 1216  pushbyte         60
+    581 1218  setproperty      ::height
+    582 1221  getlocal0
+    583 1222  getproperty      ::image_48
+    584 1224  getlex           asgui.resources::AssetManager
+    585 1227  pushstring       'skin_battle_vs'
+    586 1230  callproperty     ::GetClass, 1
+    587 1234  setproperty      ::source
+    588 1237  getlocal0
+    589 1238  getproperty      ::image_48
+    590 1240  pushshort        477
+    591 1243  setproperty      ::x
+    592 1246  getlocal0
+    593 1247  getproperty      ::image_48
+    594 1249  pushshort        180
+    595 1252  setproperty      ::y
+    596 1255  getlocal0
+    597 1256  getproperty      ::image_48
+    598 1258  pushstring       'image_48'
+    599 1261  setproperty      ::id
+    600 1264  getlocal0
+    601 1265  getlocal0
+    602 1266  getproperty      ::image_48
+    603 1268  callpropvoid     ::addChild, 1
+    604 1272  getlocal0
+    605 1273  findpropstrict   asgui.controls::Button
+    606 1275  constructprop    asgui.controls::Button, 0
+    607 1278  initproperty     ::beginFight
+    608 1280  getlocal0
+    609 1281  getproperty      ::beginFight
+    610 1283  pushbyte         110
+    611 1285  setproperty      ::width
+    612 1288  getlocal0
+    613 1289  getproperty      ::beginFight
+    614 1291  pushbyte         50
+    615 1293  setproperty      ::height
+    616 1296  getlocal0
+    617 1297  getproperty      ::beginFight
+    618 1299  pushstring       '.GreenButton'
+    619 1302  setproperty      ::styleName
+    620 1305  getlocal0
+    621 1306  getproperty      ::beginFight
+    622 1308  pushbyte         5
+    623 1310  setproperty      ::x
+    624 1313  getlocal0
+    625 1314  getproperty      ::beginFight
+    626 1316  pushbyte         35
+    627 1318  setproperty      ::y
+    628 1321  getlocal0
+    629 1322  getproperty      ::beginFight
+    630 1324  pushstring       'beginFight'
+    631 1327  setproperty      ::id
+    632 1330  getlocal0
+    633 1331  getproperty      ::beginFight
+    634 1333  pushstring       '开始战斗'
+    635 1336  setproperty      ::label
+    636 1339  getlocal0
+    637 1340  getproperty      ::beginFight
+    638 1342  pushbyte         30
+    639 1344  setproperty      ::right
+    640 1347  getlocal0
+    641 1348  getproperty      ::beginFight
+    642 1350  pushbyte         50
+    643 1352  setproperty      ::bottom
+    644 1355  getlocal0
+    645 1356  getlocal0
+    646 1357  getproperty      ::beginFight
+    647 1359  callpropvoid     ::addChild, 1
+    648 1363  getlocal0
+    649 1364  findpropstrict   asgui.controls::Label
+    650 1366  constructprop    asgui.controls::Label, 0
+    651 1369  initproperty     ::txt_drag
+    652 1371  getlocal0
+    653 1372  getproperty      ::txt_drag
+    654 1374  pushstring       '拖拽植物更换阵容'
+    655 1377  setproperty      ::text
+    656 1380  getlocal0
+    657 1381  getproperty      ::txt_drag
+    658 1383  pushstring       '.TXT_HKHB_15_White_Blank_Frame'
+    659 1386  setproperty      ::styleName
+    660 1389  getlocal0
+    661 1390  getproperty      ::txt_drag
+    662 1392  pushbyte         5
+    663 1394  setproperty      ::x
+    664 1397  getlocal0
+    665 1398  getproperty      ::txt_drag
+    666 1400  pushbyte         3
+    667 1402  setproperty      ::y
+    668 1405  getlocal0
+    669 1406  getproperty      ::txt_drag
+    670 1408  pushshort        130
+    671 1411  setproperty      ::width
+    672 1414  getlocal0
+    673 1415  getproperty      ::txt_drag
+    674 1417  pushbyte         24
+    675 1419  setproperty      ::height
+    676 1422  getlocal0
+    677 1423  getproperty      ::txt_drag
+    678 1425  pushstring       'txt_drag'
+    679 1428  setproperty      ::id
+    680 1431  getlocal0
+    681 1432  getlocal0
+    682 1433  getproperty      ::txt_drag
+    683 1435  callpropvoid     ::addChild, 1
+    684 1439  getlocal0
+    685 1440  findpropstrict   asgui.containers::Canvas
+    686 1442  constructprop    asgui.containers::Canvas, 0
+    687 1445  initproperty     ::canvas_97
+    688 1447  getlocal0
+    689 1448  getproperty      ::canvas_97
+    690 1450  pushshort        245
+    691 1453  setproperty      ::width
+    692 1456  getlocal0
+    693 1457  getproperty      ::canvas_97
+    694 1459  pushbyte         24
+    695 1461  setproperty      ::height
+    696 1464  getlocal0
+    697 1465  getproperty      ::canvas_97
+    698 1467  pushstring       '.Canvas_Gray_2'
+    699 1470  setproperty      ::styleName
+    700 1473  getlocal0
+    701 1474  getproperty      ::canvas_97
+    702 1476  pushshort        165
+    703 1479  setproperty      ::x
+    704 1482  getlocal0
+    705 1483  getproperty      ::canvas_97
+    706 1485  pushbyte         1
+    707 1487  setproperty      ::y
+    708 1490  getlocal0
+    709 1491  getproperty      ::canvas_97
+    710 1493  pushstring       'canvas_97'
+    711 1496  setproperty      ::id
+    712 1499  getlocal0
+    713 1500  findpropstrict   asgui.controls::Label
+    714 1502  constructprop    asgui.controls::Label, 0
+    715 1505  initproperty     ::txt_plantNum
+    716 1507  getlocal0
+    717 1508  getproperty      ::txt_plantNum
+    718 1510  pushstring       ''
+    719 1512  setproperty      ::text
+    720 1515  getlocal0
+    721 1516  getproperty      ::txt_plantNum
+    722 1518  pushstring       '.TXT_HKHB_15_White_Blank_Frame'
+    723 1521  setproperty      ::styleName
+    724 1524  getlocal0
+    725 1525  getproperty      ::txt_plantNum
+    726 1527  pushbyte         8
+    727 1529  setproperty      ::x
+    728 1532  getlocal0
+    729 1533  getproperty      ::txt_plantNum
+    730 1535  pushbyte         3
+    731 1537  setproperty      ::y
+    732 1540  getlocal0
+    733 1541  getproperty      ::txt_plantNum
+    734 1543  pushshort        224
+    735 1546  setproperty      ::width
+    736 1549  getlocal0
+    737 1550  getproperty      ::txt_plantNum
+    738 1552  pushbyte         18
+    739 1554  setproperty      ::height
+    740 1557  getlocal0
+    741 1558  getproperty      ::txt_plantNum
+    742 1560  pushstring       'txt_plantNum'
+    743 1563  setproperty      ::id
+    744 1566  getlocal0
+    745 1567  getproperty      ::canvas_97
+    746 1569  getlocal0
+    747 1570  getproperty      ::txt_plantNum
+    748 1572  callpropvoid     ::addChild, 1
+    749 1576  getlocal0
+    750 1577  getlocal0
+    751 1578  getproperty      ::canvas_97
+    752 1580  callpropvoid     ::addChild, 1
+    753 1584  getlocal0
+    754 1585  findpropstrict   asgui.containers::HBox
+    755 1587  constructprop    asgui.containers::HBox, 0
+    756 1590  initproperty     ::canvas_100
+    757 1592  getlocal0
+    758 1593  getproperty      ::canvas_100
+    759 1595  pushshort        350
+    760 1598  setproperty      ::width
+    761 1601  getlocal0
+    762 1602  getproperty      ::canvas_100
+    763 1604  pushbyte         30
+    764 1606  setproperty      ::height
+    765 1609  getlocal0
+    766 1610  getproperty      ::canvas_100
+    767 1612  pushshort        240
+    768 1615  setproperty      ::x
+    769 1618  getlocal0
+    770 1619  getproperty      ::canvas_100
+    771 1621  pushbyte         0
+    772 1623  setproperty      ::y
+    773 1626  getlocal0
+    774 1627  getproperty      ::canvas_100
+    775 1629  pushbyte         0
+    776 1631  setproperty      ::top
+    777 1634  getlocal0
+    778 1635  getproperty      ::canvas_100
+    779 1637  pushbyte         5
+    780 1639  setproperty      ::right
+    781 1642  getlocal0
+    782 1643  getproperty      ::canvas_100
+    783 1645  pushstring       'canvas_100'
+    784 1648  setproperty      ::id
+    785 1651  getlocal0
+    786 1652  getlocal0
+    787 1653  getproperty      ::canvas_100
+    788 1655  callpropvoid     ::addChild, 1
+    789 1659  returnvoid

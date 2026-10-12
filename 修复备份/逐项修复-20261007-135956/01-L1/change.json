@@ -1,0 +1,34 @@
+{
+  "issue": "L1",
+  "files": [
+    {
+      "relative": "pvzol本地/launcher.py",
+      "old_sha256": "359c109710085e547c2152e496521e4f9c5ebf9131cfe50719f692296445f812",
+      "new_sha256": "ed6e6068d92e5b966eb64c4bb838aa24ba0ec11f96518d3dfc567ccfa0f1be44",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\launcher.py"
+    },
+    {
+      "relative": "pvzol本地/PvZ-Server-PoC/gm.py",
+      "old_sha256": "d9e488c5206c812fedec80a89032c2f511681bb53e3836d0f89109f78a32cbb8",
+      "new_sha256": "3fe12d6fcbc37cae48d73ea2ad1efa675f6404d1346d63829d34bc7869eee7c8",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\PvZ-Server-PoC\\gm.py"
+    },
+    {
+      "relative": "pvzol本地/PvZ-Server-PoC/pvz_poc_server.py",
+      "old_sha256": "ce3f65c34b1e4e84bf37119ad2343eeb25a9a2c99c30dc6022b7ca75f077e288",
+      "new_sha256": "addb6652e9bef13a72b9bb96f89358c1c20b82e71dc578ae467429a797f26e5b",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\PvZ-Server-PoC\\pvz_poc_server.py"
+    },
+    {
+      "relative": "pvzol本地/PvZ-Server-PoC/admin_server.py",
+      "old_sha256": "5cb86c9ce404f41b6a3e11bb85a16411efa8aca4ab9d2e3b7502ba1199ad5117",
+      "new_sha256": "3d7d29e23574453a24d8ddaad157718785dc90cb5207193472eff9fc2bffee91",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\PvZ-Server-PoC\\admin_server.py"
+    }
+  ],
+  "tests": [
+    "test_01_numeric_safety: 4 passed",
+    "test_launcher_lifecycle passed",
+    "test_profile_editor passed"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "test_count": 4,
+  "true_avm2_callback_cases": 825,
+  "true_avm2_reference_cases": 825,
+  "true_avm2_native_cursor_cases": 50,
+  "true_avm2_area_branch_cases": 10,
+  "old_bytecode_error_reproductions": 13,
+  "actual_nested_tile_method": "TDGameInfo.getRoadTileByScreenPos (method1058)",
+  "native_display_transforms": "synthetic SystemManager and MixLayer affine interfaces",
+  "tile_map": "synthetic 5 roads x 9 Rectangle tiles; actual bytecode enumeration and contains calls",
+  "window_sizes": [
+    [
+      1440,
+      900
+    ],
+    [
+      1920,
+      1080
+    ],
+    [
+      3840,
+      2088
+    ],
+    [
+      2162,
+      1360
+    ],
+    [
+      800,
+      600
+    ]
+  ],
+  "internal_scale": 1.3333333333333333,
+  "scene_x": -50,
+  "real_flash_gpu_tested": false,
+  "real_accounts_used": false,
+  "candidate_sha256": "8b80432e9997467fea10ffeb12827fb9a653c335919363ac5118f5098fd8ed8c",
+  "failures": [],
+  "errors": []
+}

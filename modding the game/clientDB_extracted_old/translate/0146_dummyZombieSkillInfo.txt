@@ -1,0 +1,181 @@
+id	name	desc	effectDesc
+101	血盆大口	狂咬当前目标，造成{0}伤害	无
+102	中级·血盆大口	狂咬当前目标，造成{0}伤害	无
+103	高级·血盆大口	狂咬当前目标，造成{0}伤害	无
+104	专家·血盆大口	狂咬当前目标，造成{0}伤害	无
+201	霹雳炸弹	使用威力巨大的炸弹对前排目标造成最大生命{1}的伤害	无
+202	中级·霹雳炸弹	使用威力巨大的炸弹对前排目标造成最大生命{1}的伤害	无
+203	高级·霹雳炸弹	使用威力巨大的炸弹对前排目标造成最大生命{1}的伤害	无
+204	专家·霹雳炸弹	使用威力巨大的炸弹对前排目标造成最大生命{1}的伤害	无
+301	葫芦锤	对当前目标所在行造成最大生命{1}+{0}伤害，并使其定身抗性下降{2}持续4回合	[定身]：<br>路灯花 <font color="#FFA11E">传奇</font><br>阿开木 <font color="#FFA11E">传奇</font><br>魔术菇 <font color="#FFA11E">传奇</font><br>冰冻西瓜 <font color="#0078ff">高级</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>寒冰射手 <font color="#0078ff">高级</font><br>激光豆 <font color="#ffffff">普通</font><br>双发豌豆 <font color="#ffffff">普通</font>
+302	中级·葫芦锤	对当前目标所在行造成最大生命{1}+{0}伤害，并使其定身抗性下降{2}持续4回合	[定身]：<br>路灯花 <font color="#FFA11E">传奇</font><br>阿开木 <font color="#FFA11E">传奇</font><br>魔术菇 <font color="#FFA11E">传奇</font><br>冰冻西瓜 <font color="#0078ff">高级</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>寒冰射手 <font color="#0078ff">高级</font><br>激光豆 <font color="#ffffff">普通</font><br>双发豌豆 <font color="#ffffff">普通</font>
+303	高级·葫芦锤	对当前目标所在行造成最大生命{1}+{0}伤害，并使其定身抗性下降{2}持续4回合	[定身]：<br>路灯花 <font color="#FFA11E">传奇</font><br>阿开木 <font color="#FFA11E">传奇</font><br>魔术菇 <font color="#FFA11E">传奇</font><br>冰冻西瓜 <font color="#0078ff">高级</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>寒冰射手 <font color="#0078ff">高级</font><br>激光豆 <font color="#ffffff">普通</font><br>双发豌豆 <font color="#ffffff">普通</font>
+304	专家·葫芦锤	对当前目标所在行造成最大生命{1}+{0}伤害，并使其定身抗性下降{2}持续4回合	[定身]：<br>路灯花 <font color="#FFA11E">传奇</font><br>阿开木 <font color="#FFA11E">传奇</font><br>魔术菇 <font color="#FFA11E">传奇</font><br>冰冻西瓜 <font color="#0078ff">高级</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>寒冰射手 <font color="#0078ff">高级</font><br>激光豆 <font color="#ffffff">普通</font><br>双发豌豆 <font color="#ffffff">普通</font>
+401	热血大旗	对随机3个队友进行治疗，恢复最大生命的{1}	无
+402	中级·热血大旗	对随机3个队友进行治疗，恢复最大生命的{1}	无
+403	高级·热血大旗	对随机3个队友进行治疗，恢复最大生命的{1}	无
+404	专家·热血大旗	对随机3个队友进行治疗，恢复最大生命的{1}	无
+501	旋风锤	对前排目标造成最大生命{1}+{0}伤害，并使其沉默抗性下降{2}持续4回合	[沉默]：<br>功夫萝卜 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font><br>脉冲黄桃 <font color="#c739c0">稀有</font>
+502	中级·旋风锤	对前排目标造成最大生命{1}+{0}伤害，并使其沉默抗性下降{2}持续4回合	[沉默]：<br>功夫萝卜 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font><br>脉冲黄桃 <font color="#c739c0">稀有</font>
+503	高级·旋风锤	对前排目标造成最大生命{1}+{0}伤害，并使其沉默抗性下降{2}持续4回合	[沉默]：<br>功夫萝卜 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font><br>脉冲黄桃 <font color="#c739c0">稀有</font>
+504	专家·旋风锤	对前排目标造成最大生命{1}+{0}伤害，并使其沉默抗性下降{2}持续4回合	[沉默]：<br>功夫萝卜 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font><br>脉冲黄桃 <font color="#c739c0">稀有</font>
+601	开山刀	对当前目标造成最大生命{1}的伤害	无
+602	中级·开山刀	对当前目标造成最大生命{1}的伤害	无
+603	高级·开山刀	对当前目标造成最大生命{1}的伤害	无
+604	专家·开山刀	对当前目标造成最大生命{1}的伤害	无
+701	气功炮	对前排目标造成最大生命{1}+{0}伤害，并使其减能抗性下降{2}持续4回合	[减能]：<br>幽灵辣椒 <font color="#FFA11E">传奇</font><br>电海松 <font color="#c739c0">稀有</font>
+702	中级·气功炮	对前排目标造成最大生命{1}+{0}伤害，并使其减能抗性下降{2}持续4回合	[减能]：<br>幽灵辣椒 <font color="#FFA11E">传奇</font><br>电海松 <font color="#c739c0">稀有</font>
+703	高级·气功炮	对前排目标造成最大生命{1}+{0}伤害，并使其减能抗性下降{2}持续4回合	[减能]：<br>幽灵辣椒 <font color="#FFA11E">传奇</font><br>电海松 <font color="#c739c0">稀有</font>
+704	专家·气功炮	对前排目标造成最大生命{1}+{0}伤害，并使其减能抗性下降{2}持续4回合	[减能]：<br>幽灵辣椒 <font color="#FFA11E">传奇</font><br>电海松 <font color="#c739c0">稀有</font>
+801	风火棍	疯狂攻击当前目标，造成最大生命{1}+{0}伤害	无
+802	中级·风火棍	疯狂攻击当前目标，造成最大生命{1}+{0}伤害	无
+803	高级·风火棍	疯狂攻击当前目标，造成最大生命{1}+{0}伤害	无
+804	专家·风火棍	疯狂攻击当前目标，造成最大生命{1}+{0}伤害	无
+901	酒气冲云	为生命百分比最少的3个队友增加最大生命{1}的护盾，并提升减能抗性{2}持续4回合	[减能]：<br>幽灵辣椒 <font color="#FFA11E">传奇</font><br>电海松 <font color="#c739c0">稀有</font>
+902	中级·酒气冲云	为生命百分比最少的3个队友增加最大生命{1}的护盾，并提升减能抗性{2}持续4回合	[减能]：<br>幽灵辣椒 <font color="#FFA11E">传奇</font><br>电海松 <font color="#c739c0">稀有</font>
+903	高级·酒气冲云	为生命百分比最少的3个队友增加最大生命{1}的护盾，并提升减能抗性{2}持续4回合	[减能]：<br>幽灵辣椒 <font color="#FFA11E">传奇</font><br>电海松 <font color="#c739c0">稀有</font>
+904	专家·酒气冲云	为生命百分比最少的3个队友增加最大生命{1}的护盾，并提升减能抗性{2}持续4回合	[减能]：<br>幽灵辣椒 <font color="#FFA11E">传奇</font><br>电海松 <font color="#c739c0">稀有</font>
+1001	火龙在天	对随机3个敌人造成最大生命{1}+{0}伤害，并使其流放抗性下降{2}持续4回合	[流放]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>铃儿草 <font color="#FFA11E">传奇</font><br>食人花 <font color="#c739c0">稀有</font>
+1002	中级·火龙在天	对随机3个敌人造成最大生命{1}+{0}伤害，并使其流放抗性下降{2}持续4回合	[流放]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>铃儿草 <font color="#FFA11E">传奇</font><br>食人花 <font color="#c739c0">稀有</font>
+1003	高级·火龙在天	对随机3个敌人造成最大生命{1}+{0}伤害，并使其流放抗性下降{2}持续4回合	[流放]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>铃儿草 <font color="#FFA11E">传奇</font><br>食人花 <font color="#c739c0">稀有</font>
+1004	专家·火龙在天	对随机3个敌人造成最大生命{1}+{0}伤害，并使其流放抗性下降{2}持续4回合	[流放]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>铃儿草 <font color="#FFA11E">传奇</font><br>食人花 <font color="#c739c0">稀有</font>
+10001	嗜血狂咬	对生命最少的敌人造成最大生命{1}的伤害，并使其吸血效果下降{2}持续4回合	[吸血]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>玫瑰剑客 <font color="#FFA11E">传奇</font><br>海星果 <font color="#c739c0">稀有</font><br>地刺 <font color="#ffffff">普通</font>
+10002	中级·嗜血狂咬	对生命最少的敌人造成最大生命{1}的伤害，并使其吸血效果下降{2}持续4回合	[吸血]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>玫瑰剑客 <font color="#FFA11E">传奇</font><br>海星果 <font color="#c739c0">稀有</font><br>地刺 <font color="#ffffff">普通</font>
+10003	高级·嗜血狂咬	对生命最少的敌人造成最大生命{1}的伤害，并使其吸血效果下降{2}持续4回合	[吸血]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>玫瑰剑客 <font color="#FFA11E">传奇</font><br>海星果 <font color="#c739c0">稀有</font><br>地刺 <font color="#ffffff">普通</font>
+10004	专家·嗜血狂咬	对生命最少的敌人造成最大生命{1}的伤害，并使其吸血效果下降{2}持续4回合	[吸血]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>玫瑰剑客 <font color="#FFA11E">传奇</font><br>海星果 <font color="#c739c0">稀有</font><br>地刺 <font color="#ffffff">普通</font>
+10011	一鼓作气	治疗我方当前生命最少的单位，恢复其最大生命的{1}	无
+10012	中级·一鼓作气	治疗我方当前生命最少的单位，恢复其最大生命的{1}	无
+10013	高级·一鼓作气	治疗我方当前生命最少的单位，恢复其最大生命的{1}	无
+10014	专家·一鼓作气	治疗我方当前生命最少的单位，恢复其最大生命的{1}	无
+10021	铜皮铁骨	为生命最少的3个队友增加最大生命{1}的护盾，并使其定身抗性增加{2}持续4回合	[定身]：<br>路灯花 <font color="#FFA11E">传奇</font><br>阿开木 <font color="#FFA11E">传奇</font><br>魔术菇 <font color="#FFA11E">传奇</font><br>冰冻西瓜 <font color="#0078ff">高级</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>寒冰射手 <font color="#0078ff">高级</font><br>激光豆 <font color="#ffffff">普通</font><br>双发豌豆 <font color="#ffffff">普通</font>
+10022	中级·铜皮铁骨	为生命最少的3个队友增加最大生命{1}的护盾，并使其定身抗性增加{2}持续4回合	[定身]：<br>路灯花 <font color="#FFA11E">传奇</font><br>阿开木 <font color="#FFA11E">传奇</font><br>魔术菇 <font color="#FFA11E">传奇</font><br>冰冻西瓜 <font color="#0078ff">高级</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>寒冰射手 <font color="#0078ff">高级</font><br>激光豆 <font color="#ffffff">普通</font><br>双发豌豆 <font color="#ffffff">普通</font>
+10023	高级·铜皮铁骨	为生命最少的3个队友增加最大生命{1}的护盾，并使其定身抗性增加{2}持续4回合	[定身]：<br>路灯花 <font color="#FFA11E">传奇</font><br>阿开木 <font color="#FFA11E">传奇</font><br>魔术菇 <font color="#FFA11E">传奇</font><br>冰冻西瓜 <font color="#0078ff">高级</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>寒冰射手 <font color="#0078ff">高级</font><br>激光豆 <font color="#ffffff">普通</font><br>双发豌豆 <font color="#ffffff">普通</font>
+10024	专家·铜皮铁骨	为生命最少的3个队友增加最大生命{1}的护盾，并使其定身抗性增加{2}持续4回合	[定身]：<br>路灯花 <font color="#FFA11E">传奇</font><br>阿开木 <font color="#FFA11E">传奇</font><br>魔术菇 <font color="#FFA11E">传奇</font><br>冰冻西瓜 <font color="#0078ff">高级</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>寒冰射手 <font color="#0078ff">高级</font><br>激光豆 <font color="#ffffff">普通</font><br>双发豌豆 <font color="#ffffff">普通</font>
+10031	冰柱乱舞	对当前目标所在行造成最大生命{1}+{0}伤害，并使其流血抗性下降{2}持续4回合	[流血]：<br>红针花 <font color="#FEFC81">史诗</font><br>龙舌兰 <font color="#FEFC81">史诗</font><br>甜椒投手 <font color="#FFA11E">传奇</font><br>鳄梨 <font color="#c739c0">稀有</font><br>捕蝇草 <font color="#ffffff">普通</font>
+10032	中级·冰柱乱舞	对当前目标所在行造成最大生命{1}+{0}伤害，并使其流血抗性下降{2}持续4回合	[流血]：<br>红针花 <font color="#FEFC81">史诗</font><br>龙舌兰 <font color="#FEFC81">史诗</font><br>甜椒投手 <font color="#FFA11E">传奇</font><br>鳄梨 <font color="#c739c0">稀有</font><br>捕蝇草 <font color="#ffffff">普通</font>
+10033	高级·冰柱乱舞	对当前目标所在行造成最大生命{1}+{0}伤害，并使其流血抗性下降{2}持续4回合	[流血]：<br>红针花 <font color="#FEFC81">史诗</font><br>龙舌兰 <font color="#FEFC81">史诗</font><br>甜椒投手 <font color="#FFA11E">传奇</font><br>鳄梨 <font color="#c739c0">稀有</font><br>捕蝇草 <font color="#ffffff">普通</font>
+10034	专家·冰柱乱舞	对当前目标所在行造成最大生命{1}+{0}伤害，并使其流血抗性下降{2}持续4回合	[流血]：<br>红针花 <font color="#FEFC81">史诗</font><br>龙舌兰 <font color="#FEFC81">史诗</font><br>甜椒投手 <font color="#FFA11E">传奇</font><br>鳄梨 <font color="#c739c0">稀有</font><br>捕蝇草 <font color="#ffffff">普通</font>
+10041	彗星一击	对生命最少的3个敌人造成最大生命{1}+{0}伤害，并使其削弱抗性下降{2}持续4回合	[削弱]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font>
+10042	中级·彗星一击	对生命最少的3个敌人造成最大生命{1}+{0}伤害，并使其削弱抗性下降{2}持续4回合	[削弱]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font>
+10043	高级·彗星一击	对生命最少的3个敌人造成最大生命{1}+{0}伤害，并使其削弱抗性下降{2}持续4回合	[削弱]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font>
+10044	专家·彗星一击	对生命最少的3个敌人造成最大生命{1}+{0}伤害，并使其削弱抗性下降{2}持续4回合	[削弱]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font>
+10051	寒冰巨石	对当前目标所在行造成最大生命{1}+{0}伤害，并使其沉默抗性下降{2}持续4回合	[沉默]：<br>功夫萝卜 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font><br>脉冲黄桃 <font color="#c739c0">稀有</font>
+10052	中级·寒冰巨石	对当前目标所在行造成最大生命{1}+{0}伤害，并使其沉默抗性下降{2}持续4回合	[沉默]：<br>功夫萝卜 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font><br>脉冲黄桃 <font color="#c739c0">稀有</font>
+10053	高级·寒冰巨石	对当前目标所在行造成最大生命{1}+{0}伤害，并使其沉默抗性下降{2}持续4回合	[沉默]：<br>功夫萝卜 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font><br>脉冲黄桃 <font color="#c739c0">稀有</font>
+10054	专家·寒冰巨石	对当前目标所在行造成最大生命{1}+{0}伤害，并使其沉默抗性下降{2}持续4回合	[沉默]：<br>功夫萝卜 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font><br>脉冲黄桃 <font color="#c739c0">稀有</font>
+10061	呼风唤雪	对随机3个敌人造成最大生命{1}+{0}伤害，并使其攻击加成效果下降{2}持续4回合	[攻击加成]：<br>火爆辣椒 <font color="#c739c0">稀有</font><br>脉冲黄桃 <font color="#c739c0">稀有</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>石榴 <font color="#0078ff">高级</font><br>樱桃炸弹 <font color="#ffffff">普通</font><br>土豆地雷 <font color="#ffffff">普通</font><br>墓碑吞噬者 <font color="#ffffff">普通</font>
+10062	中级·呼风唤雪	对随机3个敌人造成最大生命{1}+{0}伤害，并使其攻击加成效果下降{2}持续4回合	[攻击加成]：<br>火爆辣椒 <font color="#c739c0">稀有</font><br>脉冲黄桃 <font color="#c739c0">稀有</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>石榴 <font color="#0078ff">高级</font><br>樱桃炸弹 <font color="#ffffff">普通</font><br>土豆地雷 <font color="#ffffff">普通</font><br>墓碑吞噬者 <font color="#ffffff">普通</font>
+10063	高级·呼风唤雪	对随机3个敌人造成最大生命{1}+{0}伤害，并使其攻击加成效果下降{2}持续4回合	[攻击加成]：<br>火爆辣椒 <font color="#c739c0">稀有</font><br>脉冲黄桃 <font color="#c739c0">稀有</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>石榴 <font color="#0078ff">高级</font><br>樱桃炸弹 <font color="#ffffff">普通</font><br>土豆地雷 <font color="#ffffff">普通</font><br>墓碑吞噬者 <font color="#ffffff">普通</font>
+10064	专家·呼风唤雪	对随机3个敌人造成最大生命{1}+{0}伤害，并使其攻击加成效果下降{2}持续4回合	[攻击加成]：<br>火爆辣椒 <font color="#c739c0">稀有</font><br>脉冲黄桃 <font color="#c739c0">稀有</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>石榴 <font color="#0078ff">高级</font><br>樱桃炸弹 <font color="#ffffff">普通</font><br>土豆地雷 <font color="#ffffff">普通</font><br>墓碑吞噬者 <font color="#ffffff">普通</font>
+10071	寒风刺骨	对当前目标所在行造成最大生命{1}+{0}伤害，并使其反伤效果下降{2}持续4回合	[反伤]：<br>月光花 <font color="#FEFC81">史诗</font><br>功夫萝卜 <font color="#FEFC81">史诗</font><br>地刺王 <font color="#ffffff">普通</font>
+10072	中级·寒风刺骨	对当前目标所在行造成最大生命{1}+{0}伤害，并使其反伤效果下降{2}持续4回合	[反伤]：<br>月光花 <font color="#FEFC81">史诗</font><br>功夫萝卜 <font color="#FEFC81">史诗</font><br>地刺王 <font color="#ffffff">普通</font>
+10073	高级·寒风刺骨	对当前目标所在行造成最大生命{1}+{0}伤害，并使其反伤效果下降{2}持续4回合	[反伤]：<br>月光花 <font color="#FEFC81">史诗</font><br>功夫萝卜 <font color="#FEFC81">史诗</font><br>地刺王 <font color="#ffffff">普通</font>
+10074	专家·寒风刺骨	对当前目标所在行造成最大生命{1}+{0}伤害，并使其反伤效果下降{2}持续4回合	[反伤]：<br>月光花 <font color="#FEFC81">史诗</font><br>功夫萝卜 <font color="#FEFC81">史诗</font><br>地刺王 <font color="#ffffff">普通</font>
+10081	冰弹打击	对生命百分比最少的敌人造成最大生命{1}的伤害，并使其免伤效果下降{2}持续4回合	[免伤]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>钻地荔枝果 <font color="#c739c0">稀有</font><br>全息坚果 <font color="#0078ff">高级</font>
+10082	中级·冰弹打击	对生命百分比最少的敌人造成最大生命{1}的伤害，并使其免伤效果下降{2}持续4回合	[免伤]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>钻地荔枝果 <font color="#c739c0">稀有</font><br>全息坚果 <font color="#0078ff">高级</font>
+10083	高级·冰弹打击	对生命百分比最少的敌人造成最大生命{1}的伤害，并使其免伤效果下降{2}持续4回合	[免伤]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>钻地荔枝果 <font color="#c739c0">稀有</font><br>全息坚果 <font color="#0078ff">高级</font>
+10084	专家·冰弹打击	对生命百分比最少的敌人造成最大生命{1}的伤害，并使其免伤效果下降{2}持续4回合	[免伤]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>钻地荔枝果 <font color="#c739c0">稀有</font><br>全息坚果 <font color="#0078ff">高级</font>
+10091	强力啄击	对生命百分比最少的敌人造成最大生命{1}+{0}伤害，并使其生命加成效果下降{2}持续4回合	[生命加成]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>榴莲 <font color="#FFA11E">传奇</font>
+10092	中级·强力啄击	对生命百分比最少的敌人造成最大生命{1}+{0}伤害，并使其生命加成效果下降{2}持续4回合	[生命加成]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>榴莲 <font color="#FFA11E">传奇</font>
+10093	高级·强力啄击	对生命百分比最少的敌人造成最大生命{1}+{0}伤害，并使其生命加成效果下降{2}持续4回合	[生命加成]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>榴莲 <font color="#FFA11E">传奇</font>
+10094	专家·强力啄击	对生命百分比最少的敌人造成最大生命{1}+{0}伤害，并使其生命加成效果下降{2}持续4回合	[生命加成]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>榴莲 <font color="#FFA11E">传奇</font>
+2001	攻势如虹	攻击加成效果增加{2}	[攻击加成]：<br>火爆辣椒 <font color="#c739c0">稀有</font><br>脉冲黄桃 <font color="#c739c0">稀有</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>石榴 <font color="#0078ff">高级</font><br>樱桃炸弹 <font color="#ffffff">普通</font><br>土豆地雷 <font color="#ffffff">普通</font><br>墓碑吞噬者 <font color="#ffffff">普通</font>
+2002	中级·攻势如虹	攻击加成效果增加{2}	[攻击加成]：<br>火爆辣椒 <font color="#c739c0">稀有</font><br>脉冲黄桃 <font color="#c739c0">稀有</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>石榴 <font color="#0078ff">高级</font><br>樱桃炸弹 <font color="#ffffff">普通</font><br>土豆地雷 <font color="#ffffff">普通</font><br>墓碑吞噬者 <font color="#ffffff">普通</font>
+2003	高级·攻势如虹	攻击加成效果增加{2}	[攻击加成]：<br>火爆辣椒 <font color="#c739c0">稀有</font><br>脉冲黄桃 <font color="#c739c0">稀有</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>石榴 <font color="#0078ff">高级</font><br>樱桃炸弹 <font color="#ffffff">普通</font><br>土豆地雷 <font color="#ffffff">普通</font><br>墓碑吞噬者 <font color="#ffffff">普通</font>
+2004	专家·攻势如虹	攻击加成效果增加{2}	[攻击加成]：<br>火爆辣椒 <font color="#c739c0">稀有</font><br>脉冲黄桃 <font color="#c739c0">稀有</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>石榴 <font color="#0078ff">高级</font><br>樱桃炸弹 <font color="#ffffff">普通</font><br>土豆地雷 <font color="#ffffff">普通</font><br>墓碑吞噬者 <font color="#ffffff">普通</font>
+2101	暴跳如雷	暴击加成效果增加{2}	[暴击加成]：<br>硝化菇 <font color="#c739c0">稀有</font>
+2102	中级·暴跳如雷	暴击加成效果增加{2}	[暴击加成]：<br>硝化菇 <font color="#c739c0">稀有</font>
+2103	高级·暴跳如雷	暴击加成效果增加{2}	[暴击加成]：<br>硝化菇 <font color="#c739c0">稀有</font>
+2104	专家·暴跳如雷	暴击加成效果增加{2}	[暴击加成]：<br>硝化菇 <font color="#c739c0">稀有</font>
+2201	怒不可遏	减能抗性增加{2}	[减能]：<br>幽灵辣椒 <font color="#FFA11E">传奇</font><br>电海松 <font color="#c739c0">稀有</font>
+2202	中级·怒不可遏	减能抗性增加{2}	[减能]：<br>幽灵辣椒 <font color="#FFA11E">传奇</font><br>电海松 <font color="#c739c0">稀有</font>
+2203	高级·怒不可遏	减能抗性增加{2}	[减能]：<br>幽灵辣椒 <font color="#FFA11E">传奇</font><br>电海松 <font color="#c739c0">稀有</font>
+2204	专家·怒不可遏	减能抗性增加{2}	[减能]：<br>幽灵辣椒 <font color="#FFA11E">传奇</font><br>电海松 <font color="#c739c0">稀有</font>
+2301	攻势如虹	攻击加成效果增加{2}	[攻击加成]：<br>火爆辣椒 <font color="#c739c0">稀有</font><br>脉冲黄桃 <font color="#c739c0">稀有</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>石榴 <font color="#0078ff">高级</font><br>樱桃炸弹 <font color="#ffffff">普通</font><br>土豆地雷 <font color="#ffffff">普通</font><br>墓碑吞噬者 <font color="#ffffff">普通</font>
+2302	中级·攻势如虹	攻击加成效果增加{2}	[攻击加成]：<br>火爆辣椒 <font color="#c739c0">稀有</font><br>脉冲黄桃 <font color="#c739c0">稀有</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>石榴 <font color="#0078ff">高级</font><br>樱桃炸弹 <font color="#ffffff">普通</font><br>土豆地雷 <font color="#ffffff">普通</font><br>墓碑吞噬者 <font color="#ffffff">普通</font>
+2303	高级·攻势如虹	攻击加成效果增加{2}	[攻击加成]：<br>火爆辣椒 <font color="#c739c0">稀有</font><br>脉冲黄桃 <font color="#c739c0">稀有</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>石榴 <font color="#0078ff">高级</font><br>樱桃炸弹 <font color="#ffffff">普通</font><br>土豆地雷 <font color="#ffffff">普通</font><br>墓碑吞噬者 <font color="#ffffff">普通</font>
+2304	专家·攻势如虹	攻击加成效果增加{2}	[攻击加成]：<br>火爆辣椒 <font color="#c739c0">稀有</font><br>脉冲黄桃 <font color="#c739c0">稀有</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>石榴 <font color="#0078ff">高级</font><br>樱桃炸弹 <font color="#ffffff">普通</font><br>土豆地雷 <font color="#ffffff">普通</font><br>墓碑吞噬者 <font color="#ffffff">普通</font>
+2401	坚若磐石	流放抗性增加{2}	[流放]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>铃儿草 <font color="#FFA11E">传奇</font><br>食人花 <font color="#c739c0">稀有</font>
+2402	中级·坚若磐石	流放抗性增加{2}	[流放]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>铃儿草 <font color="#FFA11E">传奇</font><br>食人花 <font color="#c739c0">稀有</font>
+2403	高级·坚若磐石	流放抗性增加{2}	[流放]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>铃儿草 <font color="#FFA11E">传奇</font><br>食人花 <font color="#c739c0">稀有</font>
+2404	专家·坚若磐石	流放抗性增加{2}	[流放]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>铃儿草 <font color="#FFA11E">传奇</font><br>食人花 <font color="#c739c0">稀有</font>
+2501	暴跳如雷	暴击加成效果增加{2}	[暴击加成]：<br>硝化菇 <font color="#c739c0">稀有</font>
+2502	中级·暴跳如雷	暴击加成效果增加{2}	[暴击加成]：<br>硝化菇 <font color="#c739c0">稀有</font>
+2503	高级·暴跳如雷	暴击加成效果增加{2}	[暴击加成]：<br>硝化菇 <font color="#c739c0">稀有</font>
+2504	专家·暴跳如雷	暴击加成效果增加{2}	[暴击加成]：<br>硝化菇 <font color="#c739c0">稀有</font>
+2601	生龙活虎	定身抗性增加{2}	[定身]：<br>路灯花 <font color="#FFA11E">传奇</font><br>阿开木 <font color="#FFA11E">传奇</font><br>魔术菇 <font color="#FFA11E">传奇</font><br>冰冻西瓜 <font color="#0078ff">高级</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>寒冰射手 <font color="#0078ff">高级</font><br>激光豆 <font color="#ffffff">普通</font><br>双发豌豆 <font color="#ffffff">普通</font>
+2602	中级·生龙活虎	定身抗性增加{2}	[定身]：<br>路灯花 <font color="#FFA11E">传奇</font><br>阿开木 <font color="#FFA11E">传奇</font><br>魔术菇 <font color="#FFA11E">传奇</font><br>冰冻西瓜 <font color="#0078ff">高级</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>寒冰射手 <font color="#0078ff">高级</font><br>激光豆 <font color="#ffffff">普通</font><br>双发豌豆 <font color="#ffffff">普通</font>
+2603	高级·生龙活虎	定身抗性增加{2}	[定身]：<br>路灯花 <font color="#FFA11E">传奇</font><br>阿开木 <font color="#FFA11E">传奇</font><br>魔术菇 <font color="#FFA11E">传奇</font><br>冰冻西瓜 <font color="#0078ff">高级</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>寒冰射手 <font color="#0078ff">高级</font><br>激光豆 <font color="#ffffff">普通</font><br>双发豌豆 <font color="#ffffff">普通</font>
+2604	专家·生龙活虎	定身抗性增加{2}	[定身]：<br>路灯花 <font color="#FFA11E">传奇</font><br>阿开木 <font color="#FFA11E">传奇</font><br>魔术菇 <font color="#FFA11E">传奇</font><br>冰冻西瓜 <font color="#0078ff">高级</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>寒冰射手 <font color="#0078ff">高级</font><br>激光豆 <font color="#ffffff">普通</font><br>双发豌豆 <font color="#ffffff">普通</font>
+2701	固本培元	生命加成效果增加{2}	[生命加成]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>榴莲 <font color="#FFA11E">传奇</font>
+2702	中级·固本培元	生命加成效果增加{2}	[生命加成]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>榴莲 <font color="#FFA11E">传奇</font>
+2703	高级·固本培元	生命加成效果增加{2}	[生命加成]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>榴莲 <font color="#FFA11E">传奇</font>
+2704	专家·固本培元	生命加成效果增加{2}	[生命加成]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>榴莲 <font color="#FFA11E">传奇</font>
+2801	固本培元	生命加成效果增加{2}	[生命加成]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>榴莲 <font color="#FFA11E">传奇</font>
+2802	中级·固本培元	生命加成效果增加{2}	[生命加成]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>榴莲 <font color="#FFA11E">传奇</font>
+2803	高级·固本培元	生命加成效果增加{2}	[生命加成]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>榴莲 <font color="#FFA11E">传奇</font>
+2804	专家·固本培元	生命加成效果增加{2}	[生命加成]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>榴莲 <font color="#FFA11E">传奇</font>
+2901	滔滔不绝	沉默抗性增加{2}	[沉默]：<br>功夫萝卜 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font><br>脉冲黄桃 <font color="#c739c0">稀有</font>
+2902	中级·滔滔不绝	沉默抗性增加{2}	[沉默]：<br>功夫萝卜 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font><br>脉冲黄桃 <font color="#c739c0">稀有</font>
+2903	高级·滔滔不绝	沉默抗性增加{2}	[沉默]：<br>功夫萝卜 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font><br>脉冲黄桃 <font color="#c739c0">稀有</font>
+2904	专家·滔滔不绝	沉默抗性增加{2}	[沉默]：<br>功夫萝卜 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font><br>脉冲黄桃 <font color="#c739c0">稀有</font>
+20001	攻势如虹	攻击加成效果增加{2}	[攻击加成]：<br>火爆辣椒 <font color="#c739c0">稀有</font><br>脉冲黄桃 <font color="#c739c0">稀有</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>石榴 <font color="#0078ff">高级</font><br>樱桃炸弹 <font color="#ffffff">普通</font><br>土豆地雷 <font color="#ffffff">普通</font><br>墓碑吞噬者 <font color="#ffffff">普通</font>
+20002	中级·攻势如虹	攻击加成效果增加{2}	[攻击加成]：<br>火爆辣椒 <font color="#c739c0">稀有</font><br>脉冲黄桃 <font color="#c739c0">稀有</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>石榴 <font color="#0078ff">高级</font><br>樱桃炸弹 <font color="#ffffff">普通</font><br>土豆地雷 <font color="#ffffff">普通</font><br>墓碑吞噬者 <font color="#ffffff">普通</font>
+20003	高级·攻势如虹	攻击加成效果增加{2}	[攻击加成]：<br>火爆辣椒 <font color="#c739c0">稀有</font><br>脉冲黄桃 <font color="#c739c0">稀有</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>石榴 <font color="#0078ff">高级</font><br>樱桃炸弹 <font color="#ffffff">普通</font><br>土豆地雷 <font color="#ffffff">普通</font><br>墓碑吞噬者 <font color="#ffffff">普通</font>
+20004	专家·攻势如虹	攻击加成效果增加{2}	[攻击加成]：<br>火爆辣椒 <font color="#c739c0">稀有</font><br>脉冲黄桃 <font color="#c739c0">稀有</font><br>冰冻生菜 <font color="#0078ff">高级</font><br>石榴 <font color="#0078ff">高级</font><br>樱桃炸弹 <font color="#ffffff">普通</font><br>土豆地雷 <font color="#ffffff">普通</font><br>墓碑吞噬者 <font color="#ffffff">普通</font>
+20011	铜墙铁壁	削弱抗性增加{2}	[削弱]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font>
+20012	中级·铜墙铁壁	削弱抗性增加{2}	[削弱]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font>
+20013	高级·铜墙铁壁	削弱抗性增加{2}	[削弱]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font>
+20014	专家·铜墙铁壁	削弱抗性增加{2}	[削弱]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>刺头花 <font color="#FFA11E">传奇</font>
+20021	吸星大法	吸血效果增加{2}	[吸血]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>玫瑰剑客 <font color="#FFA11E">传奇</font><br>海星果 <font color="#c739c0">稀有</font><br>地刺 <font color="#ffffff">普通</font>
+20022	中级·吸星大法	吸血效果增加{2}	[吸血]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>玫瑰剑客 <font color="#FFA11E">传奇</font><br>海星果 <font color="#c739c0">稀有</font><br>地刺 <font color="#ffffff">普通</font>
+20023	高级·吸星大法	吸血效果增加{2}	[吸血]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>玫瑰剑客 <font color="#FFA11E">传奇</font><br>海星果 <font color="#c739c0">稀有</font><br>地刺 <font color="#ffffff">普通</font>
+20024	专家·吸星大法	吸血效果增加{2}	[吸血]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>玫瑰剑客 <font color="#FFA11E">传奇</font><br>海星果 <font color="#c739c0">稀有</font><br>地刺 <font color="#ffffff">普通</font>
+20031	斗转星移	反伤效果增加{2}	[反伤]：<br>月光花 <font color="#FEFC81">史诗</font><br>功夫萝卜 <font color="#FEFC81">史诗</font><br>地刺王 <font color="#ffffff">普通</font>
+20032	中级·斗转星移	反伤效果增加{2}	[反伤]：<br>月光花 <font color="#FEFC81">史诗</font><br>功夫萝卜 <font color="#FEFC81">史诗</font><br>地刺王 <font color="#ffffff">普通</font>
+20033	高级·斗转星移	反伤效果增加{2}	[反伤]：<br>月光花 <font color="#FEFC81">史诗</font><br>功夫萝卜 <font color="#FEFC81">史诗</font><br>地刺王 <font color="#ffffff">普通</font>
+20034	专家·斗转星移	反伤效果增加{2}	[反伤]：<br>月光花 <font color="#FEFC81">史诗</font><br>功夫萝卜 <font color="#FEFC81">史诗</font><br>地刺王 <font color="#ffffff">普通</font>
+20041	百折不挠	流血抗性增加{2}	[流血]：<br>红针花 <font color="#FEFC81">史诗</font><br>龙舌兰 <font color="#FEFC81">史诗</font><br>甜椒投手 <font color="#FFA11E">传奇</font><br>鳄梨 <font color="#c739c0">稀有</font><br>捕蝇草 <font color="#ffffff">普通</font>
+20042	中级·百折不挠	流血抗性增加{2}	[流血]：<br>红针花 <font color="#FEFC81">史诗</font><br>龙舌兰 <font color="#FEFC81">史诗</font><br>甜椒投手 <font color="#FFA11E">传奇</font><br>鳄梨 <font color="#c739c0">稀有</font><br>捕蝇草 <font color="#ffffff">普通</font>
+20043	高级·百折不挠	流血抗性增加{2}	[流血]：<br>红针花 <font color="#FEFC81">史诗</font><br>龙舌兰 <font color="#FEFC81">史诗</font><br>甜椒投手 <font color="#FFA11E">传奇</font><br>鳄梨 <font color="#c739c0">稀有</font><br>捕蝇草 <font color="#ffffff">普通</font>
+20044	专家·百折不挠	流血抗性增加{2}	[流血]：<br>红针花 <font color="#FEFC81">史诗</font><br>龙舌兰 <font color="#FEFC81">史诗</font><br>甜椒投手 <font color="#FFA11E">传奇</font><br>鳄梨 <font color="#c739c0">稀有</font><br>捕蝇草 <font color="#ffffff">普通</font>
+20051	祛瘀止血	流血抗性增加{2}	[流血]：<br>红针花 <font color="#FEFC81">史诗</font><br>龙舌兰 <font color="#FEFC81">史诗</font><br>甜椒投手 <font color="#FFA11E">传奇</font><br>鳄梨 <font color="#c739c0">稀有</font><br>捕蝇草 <font color="#ffffff">普通</font>
+20052	中级·祛瘀止血	流血抗性增加{2}	[流血]：<br>红针花 <font color="#FEFC81">史诗</font><br>龙舌兰 <font color="#FEFC81">史诗</font><br>甜椒投手 <font color="#FFA11E">传奇</font><br>鳄梨 <font color="#c739c0">稀有</font><br>捕蝇草 <font color="#ffffff">普通</font>
+20053	高级·祛瘀止血	流血抗性增加{2}	[流血]：<br>红针花 <font color="#FEFC81">史诗</font><br>龙舌兰 <font color="#FEFC81">史诗</font><br>甜椒投手 <font color="#FFA11E">传奇</font><br>鳄梨 <font color="#c739c0">稀有</font><br>捕蝇草 <font color="#ffffff">普通</font>
+20054	专家·祛瘀止血	流血抗性增加{2}	[流血]：<br>红针花 <font color="#FEFC81">史诗</font><br>龙舌兰 <font color="#FEFC81">史诗</font><br>甜椒投手 <font color="#FFA11E">传奇</font><br>鳄梨 <font color="#c739c0">稀有</font><br>捕蝇草 <font color="#ffffff">普通</font>
+20061	无伤大体	免伤效果增加{2}	[免伤]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>钻地荔枝果 <font color="#c739c0">稀有</font><br>全息坚果 <font color="#0078ff">高级</font>
+20062	中级·无伤大体	免伤效果增加{2}	[免伤]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>钻地荔枝果 <font color="#c739c0">稀有</font><br>全息坚果 <font color="#0078ff">高级</font>
+20063	高级·无伤大体	免伤效果增加{2}	[免伤]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>钻地荔枝果 <font color="#c739c0">稀有</font><br>全息坚果 <font color="#0078ff">高级</font>
+20064	专家·无伤大体	免伤效果增加{2}	[免伤]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>钻地荔枝果 <font color="#c739c0">稀有</font><br>全息坚果 <font color="#0078ff">高级</font>
+20071	吸星大法	吸血效果增加{2}	[吸血]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>玫瑰剑客 <font color="#FFA11E">传奇</font><br>海星果 <font color="#c739c0">稀有</font><br>地刺 <font color="#ffffff">普通</font>
+20072	中级·吸星大法	吸血效果增加{2}	[吸血]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>玫瑰剑客 <font color="#FFA11E">传奇</font><br>海星果 <font color="#c739c0">稀有</font><br>地刺 <font color="#ffffff">普通</font>
+20073	高级·吸星大法	吸血效果增加{2}	[吸血]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>玫瑰剑客 <font color="#FFA11E">传奇</font><br>海星果 <font color="#c739c0">稀有</font><br>地刺 <font color="#ffffff">普通</font>
+20074	专家·吸星大法	吸血效果增加{2}	[吸血]：<br>闪电蓝莓 <font color="#FEFC81">史诗</font><br>玫瑰剑客 <font color="#FFA11E">传奇</font><br>海星果 <font color="#c739c0">稀有</font><br>地刺 <font color="#ffffff">普通</font>
+20081	铜头铁臂	生命加成效果增加{2}	[生命加成]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>榴莲 <font color="#FFA11E">传奇</font>
+20082	中级·铜头铁臂	生命加成效果增加{2}	[生命加成]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>榴莲 <font color="#FFA11E">传奇</font>
+20083	高级·铜头铁臂	生命加成效果增加{2}	[生命加成]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>榴莲 <font color="#FFA11E">传奇</font>
+20084	专家·铜头铁臂	生命加成效果增加{2}	[生命加成]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>榴莲 <font color="#FFA11E">传奇</font>
+20091	无伤大体	免伤效果增加{2}	[免伤]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>钻地荔枝果 <font color="#c739c0">稀有</font><br>全息坚果 <font color="#0078ff">高级</font>
+20092	中级·无伤大体	免伤效果增加{2}	[免伤]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>钻地荔枝果 <font color="#c739c0">稀有</font><br>全息坚果 <font color="#0078ff">高级</font>
+20093	高级·无伤大体	免伤效果增加{2}	[免伤]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>钻地荔枝果 <font color="#c739c0">稀有</font><br>全息坚果 <font color="#0078ff">高级</font>
+20094	专家·无伤大体	免伤效果增加{2}	[免伤]：<br>金蟾菇 <font color="#FEFC81">史诗</font><br>钻地荔枝果 <font color="#c739c0">稀有</font><br>全息坚果 <font color="#0078ff">高级</font>
+10101	血盆大口	狂咬当前目标，造成{0}伤害	
+10201	霹雳炸弹	使用威力巨大的炸弹对前排目标造成最大生命{1}的伤害	
+10301	葫芦锤	对当前目标所在行造成最大生命{1}+{0}伤害，并使其定身抗性下降{2}持续4回合	
+10401	热血大旗	对随机3个队友进行治疗，恢复最大生命的{1}	
+10501	旋风锤	对前排目标造成最大生命{1}+{0}伤害，并使其沉默抗性下降{2}持续4回合	
+10601	开山刀	对当前目标造成最大生命{1}的伤害	
+10701	气功炮	对前排目标造成最大生命{1}+{0}伤害，并使其减能抗性下降{2}持续4回合	
+10801	风火棍	疯狂攻击当前目标，造成最大生命{1}+{0}伤害	
+10901	酒气冲云	为生命百分比最少的3个队友增加最大生命{1}的护盾，并提升减能抗性{2}持续4回合	
+11001	火龙在天	对随机3个敌人造成最大生命{1}+{0}伤害，并使其流放抗性下降{2}持续4回合	
+22001	攻势如虹	攻击加成效果增加{2}	
+22101	暴跳如雷	暴击加成效果增加{2}	
+22201	怒不可遏	减能效果抗性增加{2}	
+22301	百治百效	治疗技能命中增加{2}	
+22401	坚若磐石	流放效果抗性增加{2}	
+22501	灵光闪现	闪避加成效果增加{2}	
+22601	生龙活虎	定身效果抗性增加{2}	
+22701	披甲上阵	护盾技能命中增加{2}	
+22801	固本培元	生命加成效果增加{2}	
+22901	滔滔不绝	沉默效果抗性增加{2}	

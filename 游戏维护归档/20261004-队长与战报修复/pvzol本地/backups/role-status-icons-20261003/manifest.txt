@@ -1,0 +1,9 @@
+replaced: fileVer.xml
+created: ModuleRoleInfo_6c20d310f9de72f424f071fe0c7d3add.swf
+replaced: ModuleRoleInfo_a372ede9ec47b6161bb7587fde6bbfeb.swf
+replaced: ModuleRoleInfo.swf
+replaced: image\arena\s1001.png
+created: swf\roleInfo\avoidWar1.png
+created: swf\roleInfo\avoidWar2.png
+created: swf\roleInfo\castle1.png
+created: swf\roleInfo\month_can_and_got.png

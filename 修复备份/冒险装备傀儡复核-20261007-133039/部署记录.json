@@ -1,0 +1,26 @@
+{
+  "installed_at": "2026-10-07T13:30:39",
+  "game_directory": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC",
+  "backup_directory": "D:\\pvzol本地最新最新ol\\修复备份\\冒险装备傀儡复核-20261007-133039",
+  "save_snapshot": "players.db (SQLite backup; quick_check=ok)",
+  "files": [
+    {
+      "path": "pvz_poc_server.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol\\work\\gameplay-audit\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py",
+      "before_sha256": "b3c6d37c242b86c06f29a0b3b66717a65b3d1f789d43f2607194787c52e0bd61",
+      "after_sha256": "ce3f65c34b1e4e84bf37119ad2343eeb25a9a2c99c30dc6022b7ca75f077e288"
+    },
+    {
+      "path": "missing_features_local.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol\\work\\gameplay-audit\\pvzol本地\\PvZ-Server-PoC\\missing_features_local.py",
+      "before_sha256": "4febb887d3b1a9686ecc7cf26bd5e6d5549879ac80ac7035082df1f06ca3b588",
+      "after_sha256": "a0537f9746237aa95e2467a04dc3e28d6d61a366c63b039711dad97b299622db"
+    },
+    {
+      "path": "tests/test_gameplay_audit_20261007.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol\\work\\gameplay-audit\\pvzol本地\\PvZ-Server-PoC\\tests\\test_gameplay_audit_20261007.py",
+      "before_sha256": null,
+      "after_sha256": "dc5e283c0ed98ec28efae7ee9444d3eff873ea728612a35420a10bbf8a926820"
+    }
+  ]
+}

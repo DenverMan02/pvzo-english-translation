@@ -1,0 +1,7 @@
+id	desc
+2	[font color='#ff0000']{role_name}[/font]赠送了你{energy}点体力。要记得礼尚往来哦！
+1	你赠送了[font color='#ff0000']{role_name}[/font]{energy}点体力，并获得{friend_point}友情点
+3	好友[font color='#ff0000']{role_name}[/font]挑战了你，你轻松获胜
+4	好友[font color='#ff0000']{role_name}[/font]挑战了你，你遗憾落败
+5	你挑战了好友[font color='#ff0000']{role_name}[/font]，并获得了胜利
+6	你挑战了好友[font color='#ff0000']{role_name}[/font]，可惜失败了

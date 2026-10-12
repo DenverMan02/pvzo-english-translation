@@ -1,0 +1,38 @@
+{
+  "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-08\\d-pvzol-ol\\work\\puzzle-crash\\original\\ModuleCard.swf",
+  "output": "C:\\Users\\komi\\Documents\\Codex\\2026-10-08\\d-pvzol-ol\\work\\puzzle-crash\\fixed\\ModuleCard.swf",
+  "method_id": 1105,
+  "changed_method": "com.qq.modules.card.view.puzzle.CardPuzzleGroupPanelMediator.selectNextPrice",
+  "code_length_before": 93,
+  "code_length_after": 94,
+  "inserted_opcode": "OP_label (0x09)",
+  "insertion_offset": 21,
+  "relocated_branches": [
+    {
+      "old_source": 6,
+      "new_source": 6,
+      "old_target": 92,
+      "new_target": 93
+    },
+    {
+      "old_source": 14,
+      "new_source": 14,
+      "old_target": 92,
+      "new_target": 93
+    },
+    {
+      "old_source": 83,
+      "new_source": 84,
+      "old_target": 21,
+      "new_target": 21
+    }
+  ],
+  "unchanged_method_bodies": 1687,
+  "total_method_bodies": 1688,
+  "non_abc_tags_identical": true,
+  "constant_pool_identical": true,
+  "before_sha256": "467c09688e1f214d90369de2b1e64f9f45c415d5da3fa9e809f11fdeb5ee1d65",
+  "after_sha256": "a8c2ba52139fee775512ac9fbaa41503e253f05854b49cfbc9df0d71e441c3b0",
+  "new_md5": "70d7e3c8d7774fd835b339295af9d352",
+  "bytes": 117176
+}

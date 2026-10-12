@@ -1,0 +1,236 @@
+[
+  {
+    "file": "ModuleTD_p.current.swf",
+    "method_id": 472,
+    "max_stack_used": 8,
+    "max_scope_used": 5,
+    "instruction_count": 284,
+    "reachable_count": 284,
+    "return_count": 1
+  },
+  {
+    "file": "ModuleTD_p.current.swf",
+    "method_id": 471,
+    "max_stack_used": 5,
+    "max_scope_used": 5,
+    "instruction_count": 196,
+    "reachable_count": 196,
+    "return_count": 4
+  },
+  {
+    "file": "ModuleTD_p.current.swf",
+    "method_id": 722,
+    "max_stack_used": 4,
+    "max_scope_used": 5,
+    "instruction_count": 125,
+    "reachable_count": 125,
+    "return_count": 2
+  },
+  {
+    "file": "ModuleTD_p.current.swf",
+    "method_id": 723,
+    "max_stack_used": 4,
+    "max_scope_used": 5,
+    "instruction_count": 64,
+    "reachable_count": 64,
+    "return_count": 2
+  },
+  {
+    "file": "ModuleTD_p.current.swf",
+    "method_id": 317,
+    "max_stack_used": 8,
+    "max_scope_used": 5,
+    "instruction_count": 128,
+    "reachable_count": 128,
+    "return_count": 1
+  },
+  {
+    "file": "ModuleTD_p.current.swf",
+    "method_id": 318,
+    "max_stack_used": 4,
+    "max_scope_used": 5,
+    "instruction_count": 43,
+    "reachable_count": 43,
+    "return_count": 2
+  },
+  {
+    "file": "ModuleTD_p.current.swf",
+    "method_id": 1110,
+    "max_stack_used": 4,
+    "max_scope_used": 5,
+    "instruction_count": 135,
+    "reachable_count": 135,
+    "return_count": 1
+  },
+  {
+    "file": "ModuleTD_p.current.swf",
+    "method_id": 1111,
+    "max_stack_used": 4,
+    "max_scope_used": 5,
+    "instruction_count": 80,
+    "reachable_count": 80,
+    "return_count": 1
+  },
+  {
+    "file": "ModuleTD_p.current.swf",
+    "method_id": 1489,
+    "max_stack_used": 3,
+    "max_scope_used": 5,
+    "instruction_count": 136,
+    "reachable_count": 136,
+    "return_count": 4
+  },
+  {
+    "file": "ModuleTD_p.current.swf",
+    "method_id": 3134,
+    "max_stack_used": 4,
+    "max_scope_used": 7,
+    "instruction_count": 98,
+    "reachable_count": 98,
+    "return_count": 1
+  },
+  {
+    "file": "ModuleTD_p.current.swf",
+    "method_id": 7586,
+    "max_stack_used": 3,
+    "max_scope_used": 5,
+    "instruction_count": 67,
+    "reachable_count": 67,
+    "return_count": 4
+  },
+  {
+    "file": "ModuleTD_p.current.swf",
+    "method_id": 5612,
+    "max_stack_used": 2,
+    "max_scope_used": 6,
+    "instruction_count": 15,
+    "reachable_count": 15,
+    "return_count": 1
+  },
+  {
+    "file": "ModuleTD_p.current.swf",
+    "method_id": 5323,
+    "max_stack_used": 2,
+    "max_scope_used": 7,
+    "instruction_count": 15,
+    "reachable_count": 15,
+    "return_count": 1
+  },
+  {
+    "file": "ModuleTD_p.pointer.swf",
+    "method_id": 472,
+    "max_stack_used": 8,
+    "max_scope_used": 5,
+    "instruction_count": 290,
+    "reachable_count": 290,
+    "return_count": 1
+  },
+  {
+    "file": "ModuleTD_p.pointer.swf",
+    "method_id": 471,
+    "max_stack_used": 5,
+    "max_scope_used": 5,
+    "instruction_count": 204,
+    "reachable_count": 204,
+    "return_count": 4
+  },
+  {
+    "file": "ModuleTD_p.pointer.swf",
+    "method_id": 722,
+    "max_stack_used": 4,
+    "max_scope_used": 5,
+    "instruction_count": 133,
+    "reachable_count": 133,
+    "return_count": 2
+  },
+  {
+    "file": "ModuleTD_p.pointer.swf",
+    "method_id": 723,
+    "max_stack_used": 4,
+    "max_scope_used": 5,
+    "instruction_count": 70,
+    "reachable_count": 70,
+    "return_count": 2
+  },
+  {
+    "file": "ModuleTD_p.pointer.swf",
+    "method_id": 317,
+    "max_stack_used": 8,
+    "max_scope_used": 5,
+    "instruction_count": 140,
+    "reachable_count": 140,
+    "return_count": 1
+  },
+  {
+    "file": "ModuleTD_p.pointer.swf",
+    "method_id": 318,
+    "max_stack_used": 4,
+    "max_scope_used": 5,
+    "instruction_count": 49,
+    "reachable_count": 49,
+    "return_count": 2
+  },
+  {
+    "file": "ModuleTD_p.pointer.swf",
+    "method_id": 1110,
+    "max_stack_used": 4,
+    "max_scope_used": 5,
+    "instruction_count": 141,
+    "reachable_count": 141,
+    "return_count": 1
+  },
+  {
+    "file": "ModuleTD_p.pointer.swf",
+    "method_id": 1111,
+    "max_stack_used": 4,
+    "max_scope_used": 5,
+    "instruction_count": 86,
+    "reachable_count": 86,
+    "return_count": 1
+  },
+  {
+    "file": "ModuleTD_p.pointer.swf",
+    "method_id": 1489,
+    "max_stack_used": 3,
+    "max_scope_used": 5,
+    "instruction_count": 144,
+    "reachable_count": 144,
+    "return_count": 4
+  },
+  {
+    "file": "ModuleTD_p.pointer.swf",
+    "method_id": 3134,
+    "max_stack_used": 4,
+    "max_scope_used": 7,
+    "instruction_count": 104,
+    "reachable_count": 104,
+    "return_count": 1
+  },
+  {
+    "file": "ModuleTD_p.pointer.swf",
+    "method_id": 7586,
+    "max_stack_used": 3,
+    "max_scope_used": 5,
+    "instruction_count": 73,
+    "reachable_count": 73,
+    "return_count": 4
+  },
+  {
+    "file": "ModuleTD_p.pointer.swf",
+    "method_id": 5612,
+    "max_stack_used": 4,
+    "max_scope_used": 6,
+    "instruction_count": 26,
+    "reachable_count": 26,
+    "return_count": 1
+  },
+  {
+    "file": "ModuleTD_p.pointer.swf",
+    "method_id": 5323,
+    "max_stack_used": 4,
+    "max_scope_used": 7,
+    "instruction_count": 26,
+    "reachable_count": 26,
+    "return_count": 1
+  }
+]

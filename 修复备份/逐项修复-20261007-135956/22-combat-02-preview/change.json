@@ -1,0 +1,16 @@
+{
+  "issue": "combat-02-preview",
+  "files": [
+    {
+      "relative": "pvzol本地/PvZ-Server-PoC/pvz_poc_server.py",
+      "old_sha256": "09b3c3ab8ae4dc43a39273b5a6a3cf941b4fe12ba5f1047d1147c90d2de6bd6e",
+      "new_sha256": "c8cf4a23fbd5f143ba358abc5122daaa7937a7b48728cd4bb0ba54881acf3655",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\PvZ-Server-PoC\\pvz_poc_server.py"
+    }
+  ],
+  "tests": [
+    "test_22_captain_preview: all6 home/arena/rank preview cases passed",
+    "test_13_captain passed",
+    "test_14_report_history passed"
+  ]
+}

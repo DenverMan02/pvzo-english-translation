@@ -1,0 +1,18 @@
+FAIL test_adventure_prosperity.py                  FAILED (failures=1)
+FAIL test_awake_plant_test.py                      PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'C:\\Users\\huawei\\AppData\\Local\\Temp\\tmpeecrmfg5\\test.db'
+FAIL test_battle_preview.py                        battle preview: FAIL ['fight fields the previewed zombies']
+FAIL test_bot_guild_membership.py                  ModuleNotFoundError: No module named 'bots_local'
+FAIL test_captain_shield.py                        ModuleNotFoundError: No module named 'pvz_poc_server'
+FAIL test_energy_shield_cleanse.py                 FAILED (failures=2, errors=3)
+FAIL test_guild_local.py                           ModuleNotFoundError: No module named 'guild_local'
+FAIL test_guild_modes_local.py                     ModuleNotFoundError: No module named 'guild_local'
+FAIL test_missing_features.py                      ModuleNotFoundError: No module named 'missing_features_local'
+FAIL test_npc_generation.py                        KeyError: 'PVZ_NPC_TEST_DB'
+FAIL test_nutrition_actions.py                     PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'C:\\Users\\huawei\\AppData\\Local\\Temp\\tmp6s3hsqbk\\players.db'
+FAIL test_puppet.py                                傀儡 (puppets): FAIL ['the replay carries Dto_FightAction.puppetActor(6) — the puppet fights', 'the wave is recorded', 'clearing all five waves unlocks 扫荡', '扫荡 answers with the loot of both sweeps', '扫荡 spends 能量 per sweep', 'adventure returns the decided win + reward and records stage progress', "adventure's final enemy death is the final replay action (no post-kill puppet/fade wait)"]
+FAIL test_puppet_fuben_progress.py                 ValueError: not enough values to unpack (expected 4, got 0)
+FAIL test_puzzle_purchase.py                       FAILED (failures=2, errors=3)
+FAIL test_skill_effects.py                         ModuleNotFoundError: No module named 'player_store'
+
+passed 41 / 56
+failed: test_adventure_prosperity.py, test_awake_plant_test.py, test_battle_preview.py, test_bot_guild_membership.py, test_captain_shield.py, test_energy_shield_cleanse.py, test_guild_local.py, test_guild_modes_local.py, test_missing_features.py, test_npc_generation.py, test_nutrition_actions.py, test_puppet.py, test_puppet_fuben_progress.py, test_puzzle_purchase.py, test_skill_effects.py

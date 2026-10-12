@@ -1,0 +1,251 @@
+{
+  "root": "D:\\pvzol本地最新最新ol\\pvzol本地",
+  "backup": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\client_patches\\reported-gameplay-20261010",
+  "player_db_sha256": "3081f879d7ac9a3ba6a27b146166ac0d16a814a7387e01e198bd8c948cabfb23",
+  "files": [
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\server\\pvz_poc_server.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py",
+      "before_sha256": "032cf556d98ea7b548fdffb667746569088703db7c4f76bbd9a1d34de5880869",
+      "after_sha256": "e96752b8274b8e734fb789198d609f63e634cb2e2cab78881cadc14f35013299"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\puppet\\test_puppet_promotion_20261010.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\tests\\test_puppet_promotion_20261010.py",
+      "before_sha256": null,
+      "after_sha256": "ebef3b7718738645fd5dc5543ea2bd2be1289b256fa30f160aa7cb861fb2daa2"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\puppet\\test_puppet_total_power_20261009.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\tests\\test_puppet_total_power_20261009.py",
+      "before_sha256": "9b56387b7ffc633f54ae3a771058239258ec5e4c5bdaf894294aa3bc7123aecb",
+      "after_sha256": "3c2143aa1bf83289812a263823353dbb4bd1805d762151316a6a945af87ce021"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\server\\tests\\test_exchange_contract_20261010.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\tests\\test_exchange_contract_20261010.py",
+      "before_sha256": null,
+      "after_sha256": "101cadf25b21a52f33040c14106e7033a5c821bf006dcc9c6f0bb612bcac9c11"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game_p.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p.swf",
+      "before_sha256": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747",
+      "after_sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game_p.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_041205df680ecb63e34f6da5bacbfcf1.swf",
+      "before_sha256": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747",
+      "after_sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game_p.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_04d85414d9f7ef6add82a525a0475506.swf",
+      "before_sha256": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747",
+      "after_sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game_p.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_136f07596f913cef93d35343a83626ec.swf",
+      "before_sha256": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747",
+      "after_sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game_p.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_2f31414da4c6b9aff9be96e68029c65b.swf",
+      "before_sha256": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747",
+      "after_sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game_p.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_44d757b4fb708f31dad7a2394a1a360f.swf",
+      "before_sha256": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747",
+      "after_sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game_p.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_69140ebbd2987948f780ae0440e57a78.swf",
+      "before_sha256": null,
+      "after_sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game_p.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_867dbb7ffa06e76c8e280fe312d5a976.swf",
+      "before_sha256": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747",
+      "after_sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game_p.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_c874590c49beaaf924c0395036c85119.swf",
+      "before_sha256": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747",
+      "after_sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game_p.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_cb7af05d4d2ddbe204ea4926772f3b92.swf",
+      "before_sha256": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747",
+      "after_sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game_p.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_ddd80a273668f4e746bbaa442bfc55f0.swf",
+      "before_sha256": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747",
+      "after_sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game_p.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_e90cc556a5e9f63b73ffa23b6fe21c34.swf",
+      "before_sha256": "6d59ddc08ecf174e25b83c46062a0d4e11655c9b1b647dae3f59f5cf00942747",
+      "after_sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game_n.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_n.swf",
+      "before_sha256": "db8a2571cfb7e85d2e01f3acd9a610bfe1d05815dc71696be86308fcf579be90",
+      "after_sha256": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game_n.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_n_4d53e0052a8b9a17f19cf626f29c10bc.swf",
+      "before_sha256": "db8a2571cfb7e85d2e01f3acd9a610bfe1d05815dc71696be86308fcf579be90",
+      "after_sha256": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game_n.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_n_8cc275294353263d5f5767ac0893d728.swf",
+      "before_sha256": "db8a2571cfb7e85d2e01f3acd9a610bfe1d05815dc71696be86308fcf579be90",
+      "after_sha256": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game_n.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_n_be797a192e1d8fe008b64817a797f626.swf",
+      "before_sha256": null,
+      "after_sha256": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game.swf",
+      "before_sha256": "db8a2571cfb7e85d2e01f3acd9a610bfe1d05815dc71696be86308fcf579be90",
+      "after_sha256": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_8cc275294353263d5f5767ac0893d728.swf",
+      "before_sha256": "db8a2571cfb7e85d2e01f3acd9a610bfe1d05815dc71696be86308fcf579be90",
+      "after_sha256": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\crash\\candidates\\Game.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_be797a192e1d8fe008b64817a797f626.swf",
+      "before_sha256": null,
+      "after_sha256": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\assets_exchange\\candidates\\ModuleTD_p.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleTD_p.swf",
+      "before_sha256": "8b80432e9997467fea10ffeb12827fb9a653c335919363ac5118f5098fd8ed8c",
+      "after_sha256": "3dc8a9f2cd80ef52299094e622cbbcb91cf286b89af9d53febb8486ae38e26e4"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\assets_exchange\\candidates\\ModuleTD_p.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleTD_p_1c16b189d057f81f222aab0f948139bd.swf",
+      "before_sha256": "8b80432e9997467fea10ffeb12827fb9a653c335919363ac5118f5098fd8ed8c",
+      "after_sha256": "3dc8a9f2cd80ef52299094e622cbbcb91cf286b89af9d53febb8486ae38e26e4"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\assets_exchange\\candidates\\ModuleTD_p.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleTD_p_331f0f8f1742e06c3c4824b3c6b47921.swf",
+      "before_sha256": null,
+      "after_sha256": "3dc8a9f2cd80ef52299094e622cbbcb91cf286b89af9d53febb8486ae38e26e4"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\assets_exchange\\candidates\\ModuleTD_p.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleTD_p_b8b34678a49e91868b64b0b926ec96dd.swf",
+      "before_sha256": "8b80432e9997467fea10ffeb12827fb9a653c335919363ac5118f5098fd8ed8c",
+      "after_sha256": "3dc8a9f2cd80ef52299094e622cbbcb91cf286b89af9d53febb8486ae38e26e4"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\assets_exchange\\candidates\\ModuleTD_p.swf",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleTD_p_becc987b9a7628ab304c08c8c1dea8dd.swf",
+      "before_sha256": "8b80432e9997467fea10ffeb12827fb9a653c335919363ac5118f5098fd8ed8c",
+      "after_sha256": "3dc8a9f2cd80ef52299094e622cbbcb91cf286b89af9d53febb8486ae38e26e4"
+    },
+    {
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-11\\work\\deployment\\fileVer.xml",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\fileVer.xml",
+      "before_sha256": "2e44b2f97c7cac51393390fdd661b186135e0af73ff80ef3d6ceceabedc2c458",
+      "after_sha256": "42edceb9bd0851931f3624bef22211f4515c4127da9cd6fe2e4b2c76aa9b4f3d"
+    },
+    {
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\td\\anmi\\plant\\Potato_Mine&holder_custom_001&potatomine_bulb.bpart",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\swf\\td\\anmi\\plant\\Potato_Mine&holder_custom_001&potatomine_bulb_ca4cad2620bc19d01053109e6a1f5a7d.bpart",
+      "before_sha256": null,
+      "after_sha256": "199d7a1dc84aba79ab0161f5869693f71562e970c63ffe2d4fa2978e26cdbe02"
+    }
+  ],
+  "resources": [
+    {
+      "name": "Game_p.swf",
+      "size": 2403685,
+      "ver": "69140ebbd2987948f780ae0440e57a78",
+      "sha256": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e",
+      "aliases": [
+        "Game_p.swf",
+        "Game_p_041205df680ecb63e34f6da5bacbfcf1.swf",
+        "Game_p_04d85414d9f7ef6add82a525a0475506.swf",
+        "Game_p_136f07596f913cef93d35343a83626ec.swf",
+        "Game_p_2f31414da4c6b9aff9be96e68029c65b.swf",
+        "Game_p_44d757b4fb708f31dad7a2394a1a360f.swf",
+        "Game_p_69140ebbd2987948f780ae0440e57a78.swf",
+        "Game_p_867dbb7ffa06e76c8e280fe312d5a976.swf",
+        "Game_p_c874590c49beaaf924c0395036c85119.swf",
+        "Game_p_cb7af05d4d2ddbe204ea4926772f3b92.swf",
+        "Game_p_ddd80a273668f4e746bbaa442bfc55f0.swf",
+        "Game_p_e90cc556a5e9f63b73ffa23b6fe21c34.swf"
+      ]
+    },
+    {
+      "name": "Game_n.swf",
+      "size": 2331875,
+      "ver": "be797a192e1d8fe008b64817a797f626",
+      "sha256": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db",
+      "aliases": [
+        "Game_n.swf",
+        "Game_n_4d53e0052a8b9a17f19cf626f29c10bc.swf",
+        "Game_n_8cc275294353263d5f5767ac0893d728.swf",
+        "Game_n_be797a192e1d8fe008b64817a797f626.swf"
+      ]
+    },
+    {
+      "name": "Game.swf",
+      "size": 2331875,
+      "ver": "be797a192e1d8fe008b64817a797f626",
+      "sha256": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db",
+      "aliases": [
+        "Game.swf",
+        "Game_8cc275294353263d5f5767ac0893d728.swf",
+        "Game_be797a192e1d8fe008b64817a797f626.swf"
+      ]
+    },
+    {
+      "name": "ModuleTD_p.swf",
+      "size": 504221,
+      "ver": "331f0f8f1742e06c3c4824b3c6b47921",
+      "sha256": "3dc8a9f2cd80ef52299094e622cbbcb91cf286b89af9d53febb8486ae38e26e4",
+      "aliases": [
+        "ModuleTD_p.swf",
+        "ModuleTD_p_1c16b189d057f81f222aab0f948139bd.swf",
+        "ModuleTD_p_331f0f8f1742e06c3c4824b3c6b47921.swf",
+        "ModuleTD_p_b8b34678a49e91868b64b0b926ec96dd.swf",
+        "ModuleTD_p_becc987b9a7628ab304c08c8c1dea8dd.swf"
+      ]
+    },
+    {
+      "name": "swf\\td\\anmi\\plant\\Potato_Mine&holder_custom_001&potatomine_bulb.bpart",
+      "size": 835,
+      "ver": "ca4cad2620bc19d01053109e6a1f5a7d",
+      "sha256": "199d7a1dc84aba79ab0161f5869693f71562e970c63ffe2d4fa2978e26cdbe02"
+    }
+  ]
+}

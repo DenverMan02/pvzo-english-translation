@@ -1,0 +1,116 @@
+126 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.8
+126 INFO: Python: 3.13.0
+145 INFO: Platform: Windows-11-10.0.26200-SP0
+145 INFO: Python environment: C:\Users\komi\Documents\Codex\2026-10-09\d-pvzol-ol-5\work\ui_env
+145 INFO: wrote C:\Users\komi\Documents\Codex\2026-10-09\new-chat-20\work\dpi-fix\build\PvZLauncherUI.spec
+147 INFO: Removing temporary files and cleaning cache in C:\Users\komi\AppData\Local\pyinstaller
+111 WARNING: Failed to collect submodules for 'webview.platforms.android' because importing 'webview.platforms.android' raised: ModuleNotFoundError: No module named 'android'
+1904 INFO: Module search paths (PYTHONPATH):
+['C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20',
+ 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\python313.zip',
+ 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\DLLs',
+ 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib',
+ 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313',
+ 'C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\d-pvzol-ol-5\\work\\ui_env',
+ 'C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\d-pvzol-ol-5\\work\\ui_env\\Lib\\site-packages',
+ 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages',
+ 'C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\dpi-fix\\staged']
+2499 INFO: Appending 'binaries' from .spec
+2500 INFO: Appending 'datas' from .spec
+2502 INFO: checking Analysis
+2502 INFO: Building Analysis because Analysis-00.toc is non existent
+2502 INFO: Looking for Python shared library...
+2502 INFO: Using Python shared library: C:\Users\komi\AppData\Local\Programs\Python\Python313\python313.dll
+2502 INFO: Running Analysis Analysis-00.toc
+2502 INFO: Target bytecode optimization level: 0
+2502 INFO: Initializing module dependency graph...
+2503 INFO: Initializing module graph hook caches...
+2544 INFO: Analyzing modules for base_library.zip ...
+3532 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks'
+3838 INFO: Processing standard module hook 'hook-math.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks'
+4722 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks'
+5621 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks'
+6366 INFO: Caching module dependency graph...
+6383 INFO: Analyzing C:\Users\komi\Documents\Codex\2026-10-09\new-chat-20\work\dpi-fix\staged\ui_shell.py
+6415 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks'
+6509 INFO: Processing standard module hook 'hook-webview.py' from 'C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\d-pvzol-ol-5\\work\\ui_env\\Lib\\site-packages\\webview\\__pyinstaller'
+6555 INFO: Processing standard module hook 'hook-platform.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks'
+6730 INFO: Processing standard module hook 'hook-webbrowser.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks'
+7000 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks'
+7082 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks'
+7657 INFO: Processing pre-safe-import-module hook 'hook-typing_extensions.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+7658 INFO: SetuptoolsInfo: initializing cached setuptools info...
+8401 INFO: Processing pre-safe-import-module hook 'hook-gi.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+8498 INFO: Processing standard module hook 'hook-clr.py' from 'C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\d-pvzol-ol-5\\work\\ui_env\\Lib\\site-packages\\pythonnet\\_pyinstaller'
+8516 INFO: Processing standard module hook 'hook-clr_loader.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+8611 INFO: Processing standard module hook 'hook-pycparser.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+8730 INFO: Processing standard module hook 'hook-setuptools.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks'
+8754 INFO: Processing pre-safe-import-module hook 'hook-distutils.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+8811 INFO: Processing standard module hook 'hook-sysconfig.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks'
+8818 INFO: Processing pre-safe-import-module hook 'hook-jaraco.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+8819 INFO: Setuptools: 'jaraco' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.jaraco'!
+8830 INFO: Processing pre-safe-import-module hook 'hook-more_itertools.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+8830 INFO: Setuptools: 'more_itertools' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.more_itertools'!
+8934 INFO: Processing standard module hook 'hook-_osx_support.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks'
+8956 INFO: Processing pre-safe-import-module hook 'hook-packaging.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+9213 INFO: Processing standard module hook 'hook-setuptools._vendor.jaraco.text.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks'
+9214 INFO: Processing pre-safe-import-module hook 'hook-importlib_resources.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+9355 INFO: Processing pre-safe-import-module hook 'hook-backports.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+9356 INFO: Setuptools: 'backports' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.backports'!
+9828 INFO: Processing pre-safe-import-module hook 'hook-tomli.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+9829 INFO: Setuptools: 'tomli' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.tomli'!
+10273 INFO: Processing pre-safe-import-module hook 'hook-wheel.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+10274 INFO: Setuptools: 'wheel' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.wheel'!
+10894 INFO: Processing standard module hook 'hook-xml.etree.cElementTree.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks'
+10972 INFO: Analyzing hidden import 'webview.__pyinstaller'
+10975 INFO: Analyzing hidden import 'webview.__pyinstaller.hook-webview'
+11002 INFO: Processing pre-safe-import-module hook 'hook-importlib_metadata.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+11002 INFO: Setuptools: 'importlib_metadata' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.importlib_metadata'!
+11021 INFO: Processing standard module hook 'hook-setuptools._vendor.importlib_metadata.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks'
+11071 INFO: Processing pre-safe-import-module hook 'hook-zipp.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+11072 INFO: Setuptools: 'zipp' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.zipp'!
+11129 INFO: Processing standard module hook 'hook-win32ctypes.core.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks'
+12154 INFO: Analyzing hidden import 'webview._version'
+12158 INFO: Analyzing hidden import 'pythonnet._pyinstaller'
+12161 INFO: Analyzing hidden import 'pythonnet._pyinstaller.hook-clr'
+12162 INFO: Processing module hooks (post-graph stage)...
+12162 WARNING: Hidden import "pycparser.lextab" not found!
+12162 WARNING: Hidden import "pycparser.yacctab" not found!
+12330 INFO: Performing binary vs. data reclassification (117 entries)
+12466 INFO: Looking for ctypes DLLs
+12503 INFO: Analyzing run-time hooks ...
+12504 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+12512 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+12517 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+12522 INFO: Including run-time hook 'pyi_rth_setuptools.py' from 'C:\\Users\\komi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+12530 INFO: Creating base_library.zip...
+12541 INFO: Looking for dynamic libraries
+12965 INFO: Extra DLL search directories (AddDllDirectory): []
+12965 INFO: Extra DLL search directories (PATH): []
+13141 INFO: Warnings written to C:\Users\komi\Documents\Codex\2026-10-09\new-chat-20\work\dpi-fix\build\ui\PvZLauncherUI\warn-PvZLauncherUI.txt
+13163 INFO: Graph cross-reference written to C:\Users\komi\Documents\Codex\2026-10-09\new-chat-20\work\dpi-fix\build\ui\PvZLauncherUI\xref-PvZLauncherUI.html
+13196 INFO: checking PYZ
+13196 INFO: Building PYZ because PYZ-00.toc is non existent
+13196 INFO: Building PYZ (ZlibArchive) C:\Users\komi\Documents\Codex\2026-10-09\new-chat-20\work\dpi-fix\build\ui\PvZLauncherUI\PYZ-00.pyz
+13505 INFO: Building PYZ (ZlibArchive) C:\Users\komi\Documents\Codex\2026-10-09\new-chat-20\work\dpi-fix\build\ui\PvZLauncherUI\PYZ-00.pyz completed successfully.
+13512 INFO: checking PKG
+13512 INFO: Building PKG because PKG-00.toc is non existent
+13512 INFO: Building PKG (CArchive) PvZLauncherUI.pkg
+13541 INFO: Building PKG (CArchive) PvZLauncherUI.pkg completed successfully.
+13541 INFO: Bootloader C:\Users\komi\AppData\Local\Programs\Python\Python313\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
+13541 INFO: checking EXE
+13541 INFO: Building EXE because EXE-00.toc is non existent
+13541 INFO: Building EXE from EXE-00.toc
+13542 INFO: Copying bootloader EXE to C:\Users\komi\Documents\Codex\2026-10-09\new-chat-20\work\dpi-fix\build\ui\PvZLauncherUI\PvZLauncherUI.exe
+13581 INFO: Copying icon to EXE
+13602 INFO: Copying 0 resources to EXE
+13602 INFO: Embedding manifest in EXE
+13619 INFO: Appending PKG archive to EXE
+13668 INFO: Fixing EXE headers
+13831 INFO: Building EXE from EXE-00.toc completed successfully.
+13833 INFO: checking COLLECT
+13833 INFO: Building COLLECT because COLLECT-00.toc is non existent
+13833 INFO: Building COLLECT COLLECT-00.toc
+13992 INFO: Building COLLECT COLLECT-00.toc completed successfully.
+13994 INFO: Build complete! The results are available in: C:\Users\komi\Documents\Codex\2026-10-09\new-chat-20\work\dpi-fix\dist
+Validated package: C:\Users\komi\Documents\Codex\2026-10-09\new-chat-20\work\dpi-fix\dist\PvZLauncherUI

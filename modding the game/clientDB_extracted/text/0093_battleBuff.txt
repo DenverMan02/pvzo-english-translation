@@ -1,0 +1,25 @@
+id	name	effect	icon	align	onlyEff
+1001	冰冻	ice_effect		1	1
+1002	麻痹	buff_palsy		1	1
+1003	中毒	buff_poisoning		1	1
+1004	吸血			1	1
+1005	反伤	buff_rally		1	1
+1006	沉默	buff_silence		1	1
+1007	晕眩	buff_dizziness		2	1
+1008	流放			1	1
+2001	暴击增加		bufIcon_critical_add	0	0
+2002	暴击降低		bufIcon_critical_red	0	0
+2003	防御增加	buff_defense		2	1
+2004	防御降低		bufIcon_def_red	0	0
+2005	血量恢复		bufIcon_hp_add	0	0
+2006	血量下降		bufIcon_blood_red	0	0
+2007	技能伤害提升		bufIcon_skill_add	0	0
+2008	技能伤害下降		bufIcon_skill_red	0	0
+2009	普攻上升		bufIcon_atk_add	0	0
+2010	普攻下降		bufIcon_atk_red	0	0
+2011	闪避上升		bufIcon_dodge_add	0	0
+2012	闪避下降		bufIcon_dodge_red	0	0
+2013	血量提升		bufIcon_cure_add	2	1
+2014	神秘诅咒		buff_def_mystery	0	1
+2015	金身	buff_defense	bufIcon_gold_add	2	1
+2016	易伤		bufIcon_easy_red	0	0

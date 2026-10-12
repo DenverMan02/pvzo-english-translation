@@ -1,0 +1,110 @@
+[
+  {
+    "file": "ModuleAct3years.swf",
+    "input_sha256": "b7393d4715ea0f6e28c5ba0ff37cdc5ff0d847d9ef21e1fed11cb9cfc66078f5",
+    "output_sha256": "82c26e1d1be63dd78ba10df24b8b77d0748daa2309ca777e0d55c255cd1d150d",
+    "output_md5": "250eddacb387b41c72d2dc59d60186d4",
+    "size": 113254,
+    "candidate": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\bag\\candidates\\ModuleAct3years.swf",
+    "changes": [
+      {
+        "class": "com.qq.display.QPopupMenu",
+        "method": "show",
+        "method_id": 454,
+        "old_length": 358,
+        "new_length": 358,
+        "change": "read Application local mouse coordinates"
+      }
+    ],
+    "unrelated_methods_unchanged": true,
+    "constant_pools_signatures_scripts_and_exception_tables_unchanged": true
+  },
+  {
+    "file": "ModuleBag.swf",
+    "input_sha256": "7c4bff923b38a0b98fbb52a674d72653e8abc351d38b17ab0faf11ca594a4a9a",
+    "output_sha256": "e59ce295423dd781d169f0b2d31ad114851f99d8f5b6ea19981acbc8b59d0219",
+    "output_md5": "7fa3305508527661a70579e4999903f4",
+    "size": 26934,
+    "candidate": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\bag\\candidates\\ModuleBag.swf",
+    "changes": [
+      {
+        "class": "com.qq.display.QPopupMenu",
+        "method": "show",
+        "method_id": 333,
+        "old_length": 350,
+        "new_length": 350,
+        "change": "read Application local mouse coordinates"
+      },
+      {
+        "class": "com.qq.modules.bag.view.components.BagItemOpenEffectViewMediator",
+        "method": "init",
+        "method_id": 235,
+        "old_length": 101,
+        "new_length": 101,
+        "change": "size open effect using logical application dimensions"
+      }
+    ],
+    "unrelated_methods_unchanged": true,
+    "constant_pools_signatures_scripts_and_exception_tables_unchanged": true
+  },
+  {
+    "file": "ModuleCard.swf",
+    "input_sha256": "a8c2ba52139fee775512ac9fbaa41503e253f05854b49cfbc9df0d71e441c3b0",
+    "output_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912",
+    "output_md5": "f38421f4e0c7b1b2727597c20b8a1b32",
+    "size": 117450,
+    "candidate": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\bag\\candidates\\ModuleCard.swf",
+    "changes": [
+      {
+        "class": "com.qq.display.QPopupMenu",
+        "method": "show",
+        "method_id": 779,
+        "old_length": 354,
+        "new_length": 354,
+        "change": "read Application local mouse coordinates"
+      }
+    ],
+    "unrelated_methods_unchanged": true,
+    "constant_pools_signatures_scripts_and_exception_tables_unchanged": true
+  },
+  {
+    "file": "ModuleChat.swf",
+    "input_sha256": "8ce176b6d90c32ae263d2c304f56ad0deac47160bd0b237c617deb856a3aa49d",
+    "output_sha256": "ab88f5e8abfc11c0e610be3ff45af86429974757dcfcdb933d91b8aa322fc399",
+    "output_md5": "a4c202dcdf4bfd9bbbf32575e7fa35eb",
+    "size": 107066,
+    "candidate": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\bag\\candidates\\ModuleChat.swf",
+    "changes": [
+      {
+        "class": "com.qq.display.QPopupMenu",
+        "method": "show",
+        "method_id": 150,
+        "old_length": 358,
+        "new_length": 358,
+        "change": "read Application local mouse coordinates"
+      }
+    ],
+    "unrelated_methods_unchanged": true,
+    "constant_pools_signatures_scripts_and_exception_tables_unchanged": true
+  },
+  {
+    "file": "ModuleUnion.swf",
+    "input_sha256": "0eadbc0247b7c6be7644d134538fc10f1faa240ec045fcd6e43bb5725916b2dc",
+    "output_sha256": "671f8c5786905b86bb339202918df941c505ac5aa0392fba7743239e25c749d2",
+    "output_md5": "36d83f770b8e5f247428e3064482f787",
+    "size": 62858,
+    "candidate": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\bag\\candidates\\ModuleUnion.swf",
+    "changes": [
+      {
+        "class": "com.qq.display.QPopupMenu",
+        "method": "show",
+        "method_id": 1019,
+        "old_length": 352,
+        "new_length": 352,
+        "change": "read Application local mouse coordinates"
+      }
+    ],
+    "unrelated_methods_unchanged": true,
+    "constant_pools_signatures_scripts_and_exception_tables_unchanged": true
+  }
+]

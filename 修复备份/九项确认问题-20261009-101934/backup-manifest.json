@@ -1,0 +1,284 @@
+{
+  "created_at": "2026-10-09T10:19:34.684684+08:00",
+  "project": "D:\\pvzol本地最新最新ol\\pvzol本地",
+  "backup": "D:\\pvzol本地最新最新ol\\修复备份\\九项确认问题-20261009-101934",
+  "sources": [
+    {
+      "path": "avatar_tools.py",
+      "sha256": "c1e1989c4fd6913e43f63548d20de73335e74c90f370346a891cc94c81074149"
+    },
+    {
+      "path": "launcher.py",
+      "sha256": "3c2b7d2b1b019f5a433ccb869fae936f9b867fd9e9b902e30f42e427345c49e8"
+    },
+    {
+      "path": "launcher_desktop.py",
+      "sha256": "8f7aebf05a5f5d06f03a65267f85750e32339ce1d5968dcef09e842b6ea9d0d4"
+    },
+    {
+      "path": "launcher_game_window.py",
+      "sha256": "e31c06bd0156efc3b4817450ff142da66c1eddc6b9709c73dd35711d8922b73f"
+    },
+    {
+      "path": "launcher_instance.py",
+      "sha256": "9d4b5b740e2ddf24f0074777d40d8470104426e92370d9d4d898ac74ee72eaa2"
+    },
+    {
+      "path": "launcher_service.py",
+      "sha256": "93613d2f93c0baf95550e786d78b4ae4bb37470e0cbd877fd0ef4a4e83a9381f"
+    },
+    {
+      "path": "profile_ui.py",
+      "sha256": "6a88b6430dd421475a30735fefd34cc91f6b9dd1c175ed742642bc0ea38b1dd2"
+    },
+    {
+      "path": "ui_shell.py",
+      "sha256": "fb49e36fc3e7c6510d3b8ba0a621d9bdaeb1d2232ccc3d21836569f21ddcee6a"
+    },
+    {
+      "path": "PvZ-Server-PoC\\account_management.py",
+      "sha256": "22154a3d522845e0e3071495e94fa95e66520cbb65a7122e0c9c8c7b44853005"
+    },
+    {
+      "path": "PvZ-Server-PoC\\add_plants.py",
+      "sha256": "683d1c86cb616efdc1be390cd27ee21bbcbb843b25308f81a7da6e57ceb6c8be"
+    },
+    {
+      "path": "PvZ-Server-PoC\\admin_server.py",
+      "sha256": "0f43f42c19a5da6e57708a0f0c087046b1a2e2d7c014de445d2bb0d3bec1c6e5"
+    },
+    {
+      "path": "PvZ-Server-PoC\\bots_local.py",
+      "sha256": "0606cd291fd9c7f1043a0b035125e3854ef20e3dfd94aff23e8bfedc8bff6029"
+    },
+    {
+      "path": "PvZ-Server-PoC\\chest_reward_repairs.py",
+      "sha256": "9160fce0bb6af86c91316f85496e461b8d51c2fc4a9e3eda77d71099fbf4e76a"
+    },
+    {
+      "path": "PvZ-Server-PoC\\clientdata_local.py",
+      "sha256": "7cd4873e3eb398ff56bd20526c82692ebe4da5f6bb1a0dfe801cb57f79aafc53"
+    },
+    {
+      "path": "PvZ-Server-PoC\\combat_effects.py",
+      "sha256": "41ebeac181a3bd775f3edd2db7b5d83009a240a6267c7c94b5bc0ae440719e73"
+    },
+    {
+      "path": "PvZ-Server-PoC\\consistency_repairs.py",
+      "sha256": "dd47ea0088c3b94df3f036840b882c762922ad089bda9480966eacdd981a543c"
+    },
+    {
+      "path": "PvZ-Server-PoC\\dailytd_start_transition.py",
+      "sha256": "09515260b4bddd0f3f01d4d4522eee6486a0b594336cf7f3a9f7445d7c0337a2"
+    },
+    {
+      "path": "PvZ-Server-PoC\\friend_energy_repairs.py",
+      "sha256": "8035fecb803905ccd20391c0564c1087b8f60875bae59a498f1a3c3cf9b655e5"
+    },
+    {
+      "path": "PvZ-Server-PoC\\gm.py",
+      "sha256": "627e540c4df14150f1a0f7197c3e7e335613271db765bec5835beacb6a82d454"
+    },
+    {
+      "path": "PvZ-Server-PoC\\gold_exchange_local.py",
+      "sha256": "9bbb5334e421e9b075d6a6e80433d654c049ddaeecca031dc68452c0251aea16"
+    },
+    {
+      "path": "PvZ-Server-PoC\\guard_local.py",
+      "sha256": "7c43d70f32c475e5fb144ce3836a313eface371778424f71799c52f3c00cd4b8"
+    },
+    {
+      "path": "PvZ-Server-PoC\\guild_cohesion_repairs.py",
+      "sha256": "1bd0714c8a83d784859e91071339cd72f9aa2728b01945add6bdf501b17e7aac"
+    },
+    {
+      "path": "PvZ-Server-PoC\\guild_damage_repairs.py",
+      "sha256": "85262c72d602b2c3458efd11f6fb2507e26c67a8d35f1a0db805db8835a6fc7a"
+    },
+    {
+      "path": "PvZ-Server-PoC\\guild_leader_repairs.py",
+      "sha256": "cae0e3f8fc5c6675d16728ef6a93a19a318fa3a60900a5a99028d7cfc7b657b3"
+    },
+    {
+      "path": "PvZ-Server-PoC\\guild_local.py",
+      "sha256": "b6c2aad89a13552acca52e686f0d5ba823d50b12d649a7492cd2f938bad4df76"
+    },
+    {
+      "path": "PvZ-Server-PoC\\guild_modes_local.py",
+      "sha256": "b7a46452fcc17304960eb731e00d6506487640d19ebcd216da019746ffc26ddc"
+    },
+    {
+      "path": "PvZ-Server-PoC\\historical_activities.py",
+      "sha256": "0ebc4397dc92ce8147b3123eeb1ab5c4527c75a255caa11e8f61e9cb25f20ab0"
+    },
+    {
+      "path": "PvZ-Server-PoC\\hotspot_events.py",
+      "sha256": "bce7c8e2f150b1feb37fb6160ff4ae638aecc1a62ff3add6b1022b7d25799173"
+    },
+    {
+      "path": "PvZ-Server-PoC\\item_use_repairs.py",
+      "sha256": "0af88c85a0e5f6f968fac6923e49fbc2a31b238e4317d3703e9e8f6febb2f99f"
+    },
+    {
+      "path": "PvZ-Server-PoC\\jar_local.py",
+      "sha256": "33e3caa40709cd75822cbedc38ee72dd6a66f37da057ff2463e632dbee086245"
+    },
+    {
+      "path": "PvZ-Server-PoC\\launcher_guard.py",
+      "sha256": "e48808fdc96981574a3328a2e80d9abb65e8a6fcb60d99cdeb956d27e264302f"
+    },
+    {
+      "path": "PvZ-Server-PoC\\main_quest_local.py",
+      "sha256": "ed9d26b7600eff30a1cc67ce761377903af94169bf88ed06d356672c98bc99e6"
+    },
+    {
+      "path": "PvZ-Server-PoC\\missing_features_local.py",
+      "sha256": "ba9c6c4d7cba3bb072b80d3ab87357e7993551c87aee82d8272cdc2a8fca9f70"
+    },
+    {
+      "path": "PvZ-Server-PoC\\npc_lineups.py",
+      "sha256": "8d3983bfc1001c3d4747233558c20dfb101af24a3eebbf4108ae5607f6f283e4"
+    },
+    {
+      "path": "PvZ-Server-PoC\\player_store.py",
+      "sha256": "f1f54bdbc253ac816fc245fda5688ec67659930fd5753ed0e741de9f7a9da9c9"
+    },
+    {
+      "path": "PvZ-Server-PoC\\profile_editor.py",
+      "sha256": "0cd5b99f1fbea1e244c5e52d100eebfca97b143e68fbcea9692560b1ba3196ae"
+    },
+    {
+      "path": "PvZ-Server-PoC\\puppet_skill_repairs.py",
+      "sha256": "aba971860f9976089d00b25edde411f6a5da4160ceab36431177ce83397c9006"
+    },
+    {
+      "path": "PvZ-Server-PoC\\pvz_poc_server.py",
+      "sha256": "9cc7e8e293116a87dd78bb621d67964f833ba704c3db6129d035f9828412cc7a"
+    },
+    {
+      "path": "PvZ-Server-PoC\\run_all.py",
+      "sha256": "49d334a2cc5fe417367f27963dddb52b492d0bec032f42f8d43256d5da658d34"
+    },
+    {
+      "path": "PvZ-Server-PoC\\serve_client.py",
+      "sha256": "87623769192fc0e5949a116048f7cdf54b2f13b8953416c5ceedbe21eadd3f34"
+    },
+    {
+      "path": "PvZ-Server-PoC\\social_repairs.py",
+      "sha256": "56d5e51d8ba54c750b14850040708e134e64f1f6bdb02a692b44ccfa695c2242"
+    },
+    {
+      "path": "PvZ-Server-PoC\\tools_puppet_battle_cards.py",
+      "sha256": "d6743eb3f89197f0118b9a270ba7c67c42519c06c94ebfbf1b0acb7e07d2cec3"
+    },
+    {
+      "path": "PvZ-Server-PoC\\town_login_rewards.py",
+      "sha256": "50c06843ffac55615e26c982acba745ea2c88d7df521e2e077d7185826087cb7"
+    },
+    {
+      "path": "PvZ-Server-PoC\\treasure_local.py",
+      "sha256": "9eda7f3f9e6fb4e4c92192caa244767f389a4a2b4c12007de32ac5f47b29cfda"
+    },
+    {
+      "path": "PvZ-Server-PoC\\worldmap_local.py",
+      "sha256": "be566dae0bcf834827c68733dbda189a6e421fae7e5969dde273fbd5a9759044"
+    },
+    {
+      "path": "PvZ-Server-PoC\\worldmap_repairs.py",
+      "sha256": "9cbf45ca2ea5a29ef91b79263a4ea49e85b8e496d8f7d3d8a245b809eaa56bf6"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_consts.py",
+      "sha256": "bbe55d90d215f3058cbc30fc48fee1376bb354fbb112c2e688eef8c43bfb15f9"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_consts2.py",
+      "sha256": "3f9fe76a515264c18ebf7739572d3ae9db4622052971d707c7b357d5b5a4a3b1"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_dbdump.py",
+      "sha256": "7d5c7bb35db5afe5714d1e616d6538ef79a543ee8f3793ae51f06e584ea2446a"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_dumpmethod.py",
+      "sha256": "b6ea030f38c2cfd54eba2966148c83c16aabfc81621c22eeb99130ebb25000ca"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_findall.py",
+      "sha256": "ecdbbdd50e220b7d79ec6bc9325e89c8c07204f97756d345e52b042542fd6228"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_findcall.py",
+      "sha256": "05ceabc317a438618fd5845a765c0694513c16bfb1b5ab7049ea0e5b077bb4d6"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_findclass.py",
+      "sha256": "0e0d5b74377822ec75007fe5cad09617c6df2adc806c40d9c3fea39bf4ad0378"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_findmethod.py",
+      "sha256": "26c5ce38a18f5141a684e7deeb3b0aae4c8f52fdfc412363290066fe5cb1970b"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_findstr.py",
+      "sha256": "2065de9fb1cb8640e8a04f3939d0f4036a01f735afb35299cec26ca128c85eb0"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_findstr2.py",
+      "sha256": "79807e764984397c81fa0f6bcfaf8e0b1b9ff6e6175438fcebb02b7ad1925728"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_find_item.py",
+      "sha256": "c951986227fd8e3490885bccaeb79209c7d65b8fcb7ede5e5ab3ea4344f453ea"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_items.py",
+      "sha256": "edeb728b463c363e02c0a4e4f7ab158284cb98aa65897724dd981a31213e8cc4"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_np.py",
+      "sha256": "ab88826ccff1d5b102d5f0e515877662e57b5c16d2b040c1829b3bab64443fb4"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_probe_sweep.py",
+      "sha256": "4e093a7de1f90c53acb775af3373312948f48fd86ad75240f3a1e88288a1cbd3"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_run_tests.py",
+      "sha256": "2cd17e6029aee204d68416524fd2b9e08ca5629ec259f5f33f147baa0afdfeab"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_tables.py",
+      "sha256": "ef42d2a9d1f1ad170696a84fee3e67e3201e3b9907758376265e9469aab4a7b8"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_tables2.py",
+      "sha256": "f64f30647334a2e80bb9251d8017e529d9c700c7872207602ec5af312ec9e2d5"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_vipdump.py",
+      "sha256": "066cd40b8b0cf43d5218e21b4f0b4abcce91e935992ddcd684b2a3ab5fa528e3"
+    },
+    {
+      "path": "PvZ-Server-PoC\\_vipdump2.py",
+      "sha256": "0ee60ec7c405e3c07015741bbe12e8bfc0f033fe253afef05f9c208ec55d0a02"
+    }
+  ],
+  "databases": [
+    {
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\players.db",
+      "snapshot": "D:\\pvzol本地最新最新ol\\修复备份\\九项确认问题-20261009-101934\\saves\\PvZ-Server-PoC\\players.db",
+      "status": "quick_check_ok"
+    },
+    {
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\guild_local.db",
+      "snapshot": "D:\\pvzol本地最新最新ol\\修复备份\\九项确认问题-20261009-101934\\saves\\PvZ-Server-PoC\\guild_local.db",
+      "status": "quick_check_ok"
+    },
+    {
+      "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\players.db",
+      "snapshot": "D:\\pvzol本地最新最新ol\\修复备份\\九项确认问题-20261009-101934\\saves\\players.db",
+      "status": "quick_check_ok"
+    }
+  ]
+}

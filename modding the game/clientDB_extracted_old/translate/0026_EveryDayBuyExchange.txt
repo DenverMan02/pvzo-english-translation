@@ -1,0 +1,45 @@
+id	name
+41	Witch Hazel (3-Star)
+42	Oxygen Algae (3-Star)
+43	Ganoderma (3-Star)
+31	Guacodile (3-Star)
+38	Hurrikale (3-Star)
+39	Acid Lemon (3-Star)
+5	Rare Costume
+6	Rare Costume
+16	Rare Costume
+47	Witch Hazel Chest
+35	Bell Pepper Gold Chest
+37	Rare Puzzle Piece Chest
+36	Free Plant Chest
+1	3-Star Carrot Artillery
+2	4-Star Iceberg Lettuce
+3	Rare Costume
+4	3-Star Snow Pea
+7	Rare Costume
+8	Iceberg Lettuce (4-Star)
+9	Pea Pod (3-Star)
+10	Rare Costume
+11	Rare Costume
+12	Lemon Wood Chest
+13	Energy Gold Chest
+14	Pomegranate (3-Star)
+15	Rare Costume
+17	Fire Peashooter (3-Star)
+18	Rare Costume
+19	E.M.Peach Wood Chest
+20	Iceberg Lettuce (3-Star)
+21	Infi-nut (3-Star)
+22	Lychee Wood Chest
+23	Sea Anemone (3-Star)
+24	Jalapeno (3-Star)
+25	Hurrikale (3-Star)
+26	Guacodile Gold Chest
+27	Iceberg Lettuce (3-Star)
+28	Infi-nut (3-Star)
+29	Starfruit (3-Star)
+30	Coconut Cannon (3-Star)
+32	Hurrikale (3-Star)
+33	Acid Lemon (3-Star)
+34	Sea Anemone Gold Chest
+40	E.M.Peach (3-Star)

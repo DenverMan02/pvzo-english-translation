@@ -1,0 +1,50 @@
+{
+  "backup": "D:\\pvzol本地最新最新ol\\修复备份\\竞技场纯植物与身份修复-20261011-004437",
+  "files": [
+    {
+      "relative": "pvz_poc_server.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-12\\work\\arena20261011\\PvZ-Server-PoC\\pvz_poc_server.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py",
+      "before_sha256": "ae2e796a46fe374c9384b226b8c7e67e8fb7ee86eca5bd26530893e062b72357",
+      "after_sha256": "dc3848d8f8ee0e6acbd857155a747d7836591969ab513aaef98315debc25b34c"
+    },
+    {
+      "relative": "tests/test_arena_mode_contract_20261011.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-12\\work\\arena20261011\\PvZ-Server-PoC\\tests\\test_arena_mode_contract_20261011.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\tests\\test_arena_mode_contract_20261011.py",
+      "before_sha256": null,
+      "after_sha256": "4be78b85f3e6f4dfc216a6d6ea2bbb7209190832e349fc07922d3121438141eb"
+    },
+    {
+      "relative": "tests/test_gameplay_audit_20261007.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-12\\work\\arena20261011\\PvZ-Server-PoC\\tests\\test_gameplay_audit_20261007.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\tests\\test_gameplay_audit_20261007.py",
+      "before_sha256": "06d6b8ad090f1bbc07bb5d8ca9389638fa974527fc04bca7d8503918ed95460a",
+      "after_sha256": "394c412249b49970a8768d20502af8e69576c125dcf7f5292a15f640d6d995c7"
+    },
+    {
+      "relative": "tests/test_rewards_rules_20261009.py",
+      "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-12\\work\\arena20261011\\PvZ-Server-PoC\\tests\\test_rewards_rules_20261009.py",
+      "destination": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\tests\\test_rewards_rules_20261009.py",
+      "before_sha256": "a1521ed14871759f6a941b5465153ce35d972a1e564b242d8731bd222445a7bf",
+      "after_sha256": "7310729bed57dfdcefc0e8f5a23ee36c35e4eff52f9f2e27c361e6fddf4f649b"
+    }
+  ],
+  "protected_before": {
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\players.db": "3000bba8775660d4c65e5d4e3a181c2af6e80cc7771b36097afaa67124d8ffaf",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\players.db": "3b4648ddb1cf57bf5e406be82f61bc07d1ded60403086c765c1f7edaa0a6ad5c",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\guild_local.db": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p.swf": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_n.swf": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\clientDB.txt": "1f2fae0156a35eb842f590a4073a48a1752f8c49eea33c689449030caae39b8a"
+  },
+  "protected_after": {
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\players.db": "3000bba8775660d4c65e5d4e3a181c2af6e80cc7771b36097afaa67124d8ffaf",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\players.db": "3b4648ddb1cf57bf5e406be82f61bc07d1ded60403086c765c1f7edaa0a6ad5c",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\guild_local.db": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p.swf": "a556b3144dc43faa1d46d8f511d97bf490864a17c805dd41bd818444ac66ca6e",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_n.swf": "e7b1e87a28eacebb99ef43af60ea587a9791a9157ab7cf4548fa162fed9672db",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\clientDB.txt": "1f2fae0156a35eb842f590a4073a48a1752f8c49eea33c689449030caae39b8a"
+  },
+  "protected_unchanged": true
+}

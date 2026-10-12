@@ -1,0 +1,73 @@
+{
+  "ok": true,
+  "name": "installed-frozen-ui",
+  "account_requests_sent": 0,
+  "system_settings_changed": false,
+  "registry_changed": false,
+  "simulated_dpi": null,
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "owned_pid": 36016,
+  "owned_process_exited": true,
+  "requests": [
+    [
+      "GET",
+      "/api/state"
+    ],
+    [
+      "GET",
+      "/"
+    ],
+    [
+      "GET",
+      "/favicon.ico"
+    ],
+    [
+      "GET",
+      "/api/state"
+    ]
+  ],
+  "native": {
+    "dpi": {
+      "ok": true,
+      "mode": "per_monitor_v2",
+      "source": "existing",
+      "attempts": [
+        {
+          "api": "set_context",
+          "mode": "per_monitor_v2",
+          "status": "failed",
+          "error": 5
+        }
+      ]
+    },
+    "shown": {
+      "pid": 36016,
+      "hwnd": 1052056,
+      "work_area": [
+        0,
+        0,
+        3840,
+        2088
+      ],
+      "bounds": [
+        960,
+        399,
+        1920,
+        1290
+      ],
+      "tray_visible": true
+    },
+    "closed": {
+      "tray_visible": false,
+      "tray_disposed": true,
+      "worker_alive": false,
+      "activation_alive": false,
+      "window_record_removed": true
+    }
+  },
+  "centered": true,
+  "in_work_area": true,
+  "clean_exit": true
+}

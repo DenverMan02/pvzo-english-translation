@@ -1,0 +1,8 @@
+id	dec	dayDec	dayCardDec	cardTip
+1	首日<font color="#FFFFFF">登录游戏</font>即可领取奖励：	第1天	棱镜草(2星)	完成七日礼包即可获得150个碎片-棱镜草将<font color="#FF0000">棱镜草(2星)晋升到到三星</a></font>
+2	签到<font color="#FFFFFF">1</font>次即可领取奖励：	第2天	体力药水	
+3	购买<font color="#FFFFFF">1</font>次体力即可领取奖励：	第3天	十字架	
+4	赠送好友体力<font color="#FFFFFF">3</font>次即可领取奖励：	第4天	二星叶绿素	使用二星叶绿素在我的家中<font color="#FF0000">强化棱镜草(2星)</a></font>，100%成功哦
+5	完成冒险普通关<font color="#FFFFFF">3</font>次即可领取奖励：	第5天	时装水晶	
+6	完成冒险精英关<font color="#FFFFFF">3</font>次即可领取奖励：	第6天	高级搬迁令	
+7	联盟花园施肥<font color="#FFFFFF">1</font>次即可领取奖励：	第7天	棱镜草(3星)	使用棱镜草(2星)与碎片-棱镜草在我的家中<font color="#FF0000">升星</a></font>即可获得棱镜草(3星)

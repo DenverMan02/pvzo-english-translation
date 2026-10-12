@@ -1,0 +1,6 @@
+id	name	desc
+1	Sprout	
+2	Daili	Hardworking :<font color="#28FF28">Automatically collects experience orbs every 20 seconds</font><br>Crit I: Chance to crit upon collection (up to 2x), <font color="#FFD306">+15% average</font>
+3	Roundy	Hardworking :<font color="#28FF28">Automatically collects experience orbs every 20 seconds</font><br>Crit II: Chance to crit upon collection (up to 3x), <font color="#FFD306">+40% average</font><br>Greed :<font color="#FFD306">+8 experience per collection</font>
+4	Sweetie	Hardworking :<font color="#28FF28">Automatically collects experience orbs every 20 seconds</font><br>Crit III: Chance to crit upon collection (up to 5x), <font color="#FFD306">+133% average</font><br>Greed :<font color="#FFD306">+16 experience per collection</font>
+5	Toughy	Hardworking :<font color="#28FF28">Automatically collects experience orbs every 20 seconds</font><br>Crit IV: Chance to crit upon collection (up to 10x), <font color="#FFD306">+200% average</font><br>Greed :<font color="#FFD306">+24 experience per collection</font>

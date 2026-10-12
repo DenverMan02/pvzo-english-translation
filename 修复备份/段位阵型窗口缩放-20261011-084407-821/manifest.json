@@ -1,0 +1,54 @@
+{
+  "status": "deployed",
+  "deployed_at": "2026-10-11T08:44:07",
+  "webroot": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot",
+  "backup_root": "D:\\pvzol本地最新最新ol\\修复备份\\段位阵型窗口缩放-20261011-084407-821",
+  "candidate_sha256": "52c0a9771ecb221c393216989da3b741779a7a48bd2d5f51ec8fda1291e81064",
+  "candidate_md5": "b6d756e73b063e4402dafc6cab66f75d",
+  "candidate_size": 12318,
+  "resource_entry": "<file name=\"ModuleEmbattle.swf\" size=\"12318\" ver=\"b6d756e73b063e4402dafc6cab66f75d\" />",
+  "unrelated_xml_entries_unchanged": true,
+  "database_written": false,
+  "server_files_written": false,
+  "targets": [
+    {
+      "name": "ModuleEmbattle.swf",
+      "live_path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleEmbattle.swf",
+      "source_path": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-50-2\\work\\layout_patch\\ModuleEmbattle.swf",
+      "backup_path": "D:\\pvzol本地最新最新ol\\修复备份\\段位阵型窗口缩放-20261011-084407-821\\ModuleEmbattle.swf",
+      "original_sha256": "a487b9a0406cd43feb172262ab0c3d0d3c4951e80f353804049ebc306098fff6",
+      "expected_sha256": "52c0a9771ecb221c393216989da3b741779a7a48bd2d5f51ec8fda1291e81064",
+      "verified_sha256": "52c0a9771ecb221c393216989da3b741779a7a48bd2d5f51ec8fda1291e81064"
+    },
+    {
+      "name": "ModuleEmbattle_f42a60f5aad35cab3164ccf9ac3886b4.swf",
+      "live_path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleEmbattle_f42a60f5aad35cab3164ccf9ac3886b4.swf",
+      "source_path": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-50-2\\work\\layout_patch\\ModuleEmbattle.swf",
+      "backup_path": "D:\\pvzol本地最新最新ol\\修复备份\\段位阵型窗口缩放-20261011-084407-821\\ModuleEmbattle_f42a60f5aad35cab3164ccf9ac3886b4.swf",
+      "original_sha256": "a487b9a0406cd43feb172262ab0c3d0d3c4951e80f353804049ebc306098fff6",
+      "expected_sha256": "52c0a9771ecb221c393216989da3b741779a7a48bd2d5f51ec8fda1291e81064",
+      "verified_sha256": "52c0a9771ecb221c393216989da3b741779a7a48bd2d5f51ec8fda1291e81064"
+    },
+    {
+      "name": "ModuleEmbattle_b6d756e73b063e4402dafc6cab66f75d.swf",
+      "live_path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleEmbattle_b6d756e73b063e4402dafc6cab66f75d.swf",
+      "source_path": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-50-2\\work\\layout_patch\\ModuleEmbattle.swf",
+      "backup_path": null,
+      "original_sha256": null,
+      "expected_sha256": "52c0a9771ecb221c393216989da3b741779a7a48bd2d5f51ec8fda1291e81064",
+      "verified_sha256": "52c0a9771ecb221c393216989da3b741779a7a48bd2d5f51ec8fda1291e81064"
+    },
+    {
+      "name": "fileVer.xml",
+      "live_path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\fileVer.xml",
+      "source_path": "C:\\Users\\komi\\Documents\\Codex\\2026-10-11\\d-pvzol-ol-50-2\\work\\layout_patch\\fileVer.xml",
+      "backup_path": "D:\\pvzol本地最新最新ol\\修复备份\\段位阵型窗口缩放-20261011-084407-821\\fileVer.xml",
+      "original_sha256": "ccaf1f08d756073a88e1a07e3c4d614be153d6745e9535a12d9ad0ea0f2abffe",
+      "expected_sha256": "3888db99f762958344d0fcde82864ad72065be950d608f056cef3bd5b7393597",
+      "verified_sha256": "3888db99f762958344d0fcde82864ad72065be950d608f056cef3bd5b7393597"
+    }
+  ],
+  "failure": null,
+  "rollback_errors": [],
+  "restart_required": "Exit and reopen Flash to reload the updated formation module."
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "test_count": 8,
+  "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\dpi-fix\\staged\\launcher_dpi.py",
+  "api_injected": true,
+  "system_settings_changed": false,
+  "fractional_dpi_simulated": [
+    114,
+    115,
+    116
+  ],
+  "failures": [],
+  "errors": []
+}

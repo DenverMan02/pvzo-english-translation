@@ -1,0 +1,48 @@
+{
+  "deployed_at": "2026-10-11T06:46:15",
+  "server_root": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC",
+  "backup_root": "D:\\pvzol本地最新最新ol\\修复备份\\天梯排名与奖励-20261011-064615",
+  "save_unchanged": true,
+  "files": [
+    {
+      "path": "pvz_poc_server.py",
+      "original_sha256": "1920E90EBBAE96AAD3B98C8B4D6D4624FCABA57473CAFA305612C6627CCEFC8E",
+      "new_sha256": "0EDCA5B9FF2B881991A6433B4AF92EFABCF7831B9855C60D92AB5754FCC25A76"
+    },
+    {
+      "path": "ladder_rules_repairs_20261011.py",
+      "original_sha256": null,
+      "new_sha256": "457D89F93DE5BB32C7D20C12300F8AF41ACE5DFA4EF28CC3591A955721A36898"
+    },
+    {
+      "path": "arena_consistency_repairs_20261011.py",
+      "original_sha256": null,
+      "new_sha256": "19BA462CF92F1781437BA86C03179BBBE3D17C58D990DA1D4F6A7319C9D7DE51"
+    },
+    {
+      "path": "tests\\test_ladder_progression_20261011.py",
+      "original_sha256": null,
+      "new_sha256": "395DC02864589EA3FFBC5242C7E1042407A91D74C5CE338F01B171270BEAE99B"
+    },
+    {
+      "path": "tests\\test_arena_consistency_20261011.py",
+      "original_sha256": null,
+      "new_sha256": "F325F49C5DC27C7CD035803170A7725F6700E4BB25041BE98DCBF8EE63479784"
+    },
+    {
+      "path": "tests\\test_ladder_tcp_20261011.py",
+      "original_sha256": null,
+      "new_sha256": "32EF2EB2D2B9CBE421865E09495FA2789C41949350B79E76BB9BEEB28F539394"
+    },
+    {
+      "path": "tests\\test_rank_slot_deletion_20261011.py",
+      "original_sha256": null,
+      "new_sha256": "3289E16A452BD3B25C3686E09DD7F2BAEACD30822089F343102036D809685EF0"
+    },
+    {
+      "path": "tests\\test_ladder_first_attack_20261011.py",
+      "original_sha256": null,
+      "new_sha256": "84654D7BAF912F90D5704461FB440D0ED1E644E5ADCD89CD09F4F8DCE72897DC"
+    }
+  ]
+}

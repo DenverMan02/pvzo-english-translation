@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "test_count": 5,
+  "failures": [],
+  "errors": [],
+  "isolation": {
+    "real_ui_launched": false,
+    "real_services_launched": false,
+    "real_accounts_accessed": false,
+    "D_drive_modified": false,
+    "owned_synthetic_stderr_process": true
+  }
+}

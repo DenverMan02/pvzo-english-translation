@@ -1,0 +1,22 @@
+{
+  "temporary_original_restored": true,
+  "error_backup": "D:\\pvzol本地最新最新ol\\修复备份\\20261008-窗口缩放启动报错修复",
+  "changes": [
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p.swf",
+      "broken_sha256": "a9d1b3e7f5ec8d0b3a7df0b006bda704b900587371fa175c4f18f216f59cd8e2",
+      "restored_sha256": "c0f9e141be0386cc0ab8282962bebc8b84e47cddbe0e992bbf783945fbaa0af1"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\fileVer.xml",
+      "broken_sha256": "4253c488942afff00164cd039d92df707437a883689556e0c90c1b8bdb04dce2",
+      "restored_sha256": "359f9bdabf0ce62e49b396bac44444e345da7e27aff02ef6b1d5c28c8ae856e2"
+    }
+  ],
+  "protected_hashes": {
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\players.db": "9db512ad4ac131d15de4440ac2fbf815878f7037fb5ffc9342d45ad38433687e",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\guild_local.db": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\pvz_poc_server.py": "feced5721d3942b63d0d5c156a236a907abd50e688c8ceddad9d6b1094611428",
+    "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\bots_local.py": "0606cd291fd9c7f1043a0b035125e3854ef20e3dfd94aff23e8bfedc8bff6029"
+  }
+}

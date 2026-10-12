@@ -1,0 +1,138 @@
+id	name	resName	frameRate	AIMode	actionList	params	isSort	isBlit	isBlock	hp	beAttack	isCanMove	rowOffsetTop	rowOffsetBottom	itemResIDList	initBuffListStr	initHideBones	needShade	needSplash
+100	阳光	sun	30		SunAction_Drop|SunAction_Idle|ObjectAction_Disappear	0:25|1:8000|2:7|3:100|4:600|5:90|6:390|7:170	0	0	0	0	0	0	0	0	|||			0	0
+200	植物生产阳光	sun	30		SunAction_PopOut|SunAction_Idle|ObjectAction_Disappear	0:25|1:8000	0	0	0	0	0	0	0	0	|||			0	0
+300	豌豆子弹爆炸1	splat_pea	24		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+600	冰西瓜爆炸	melon_bullet_effect_1	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+700	西瓜子弹爆炸2	MelonpultHitEffect|melon_bullet_effect_2	24		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+800	西瓜子弹爆炸3	MelonpultHitEffect|melon_bullet_effect_3	24		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+900	僵尸灰烬效果	Zombie_charred|zombie_charred	24		CharredEffectAction_Idle		1	0	0	0	0	0	0	0	|||			0	0
+1000	土豆爆炸特效	potatomine_explosion	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+1100	樱桃爆炸特效	cherrybomb_explosion	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+1200	关卡结束钱包	moneybag|moneybag	24		LootItemAction_Popup|LootItemAction_Idle	8:1	0	0	0	0	0	0	0	0	|||			0	0
+1300	火竹子弹击中	zhupaoHitEffect|zhupao_hit_effect	24		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+1400	埃及除草机	mower_egypt	30		LawnMowerAction_Appear|LawnMowerAction_Idle|LawnMowerAction_Run	9:300	1	0	0	0	0	0	0	0	|||			1	0
+1500	溅土动画1	DirtEffect|Dirt1	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+1600	溅土动画2	DirtEffect|Dirt2	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+1700	溅土动画3	DirtEffect|Dirt3	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+1800	僵尸头掉落		24		ZombieHeadAction_Drop		1	0	0	0	0	0	0	0	|||			0	0
+1900	僵尸手掉落		24		ZombieHandAction_Drop		1	0	0	0	0	0	0	0	|||			0	0
+2000	僵尸物件掉落		24		ZombieItemAction_Drop		1	0	0	0	0	0	0	0	|||			0	0
+2100	竹炮发射效果	zhupaoShootEffect|zhupaoShootEffect	24		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+2200	地鼠	dishu|dishu	30		MouseAction_Appear|MouseAction_Idle|MouseAction_Trigger|MouseAction_Run	9:300	1	0	0	0	0	0	0	0	|||			0	0
+2300	戴夫	CrazyDave|CrazyDave	24		DaveEnterAction|DaveLeaveAction|DaveBlahblahAction|DaveIdleAction		0	0	0	0	0	0	0	0	|||			0	0
+2400	气球僵尸爆炸	heiyan|heiyan	24		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+2500	僵尸博士	NpcDr|NpcDr	24		DaveEnterAction|DaveLeaveAction|DaveBlahblahAction|DaveIdleAction		0	0	0	0	0	0	0	0	|||			0	0
+2600	银币	Coin_silver|coin_silver	24		CoinAction_PopOut|CoinAction_Flip|CoinAction_Collect|ObjectAction_Disappear	1:8000|10:5	1	0	0	0	0	0	0	0	|||			0	0
+2700	金币	Coin_gold|coin_gold	24		CoinAction_PopOut|CoinAction_Flip|CoinAction_Collect|ObjectAction_Disappear	1:8000|10:25	1	0	0	0	0	0	0	0	|||			0	0
+2800	僵死物件被吸走		24		ZombieItemAction_Magnet		1	0	0	0	0	0	0	0	|||			0	0
+2900	僵尸变身路标	switcher	30	ai_entity_switcher	SwitcherActionIdle|SwitcherActionRun	11:130|12:2000	1	1	1	0	0	0	0	0	|||			0	0
+3000	回旋镖击中特效	bloomerang_projectile_hit	30				0	0	0	0	0	0	0	0	|||			0	0
+3100	火炬僵尸点燃植物特效	snapdragon_plantfood_fireballs	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+3200	墓碑	tombstone_Egypt_hieroglyph	30		TombActionIdle	12:-9000|15:1	1	0	1	700	1	0	0	0	|3400:3500||			0	0
+3300	丢出的骨头	throwBone	30		BoneAction_Throwing		0	0	0	0	0	0	0	0	|||			0	1
+3400	墓碑土基特效	tomb_dirt	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+3500	墓碑破粹特效	tombstone_damage	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+3600	植物燃料	plantfood_pickup	30		LeafAction_Fly	13:1	0	0	0	0	0	0	0	0	|||			0	0
+3700	植物大招特效	plantfood_fx	30		PlantFoodEffectAction		0	0	0	0	0	0	0	0	|||			0	0
+3800	闪电击中效果	lightningreed_hit	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+3900	土地召唤物件	summon_dirt	30		TDSkillSummonZombieAction		1	0	0	0	0	0	0	0	|||			0	0
+4000	旋风吹带物件	sandstorm_top_CS4	30		TDBlowZombieAction	14:150	1	0	0	0	0	0	0	0	|||			0	0
+4100	弹出僵尸物件		0		TDPopObjectEffectAction	14:150	0	0	0	0	0	0	0	0	|||			0	0
+4200	节奏大师传送带	Conveyor	30		TDMusicGameConveyorActionIdle		0	0	0	0	0	0	0	0	|||			0	0
+4300	节奏大师打击器		0		TDMusicGameBoxerEffectAction		0	0	0	0	0	0	0	0	|||1800			0	0
+4400	传送带滑动僵尸效果		0		TDConveyEffectAction		0	0	0	0	0	0	0	0	|||			0	0
+4500	普通关除草机	mower_tutorial	30		LawnMowerAction_Appear|LawnMowerAction_Idle|LawnMowerAction_Run	9:300	1	0	0	0	0	0	0	0	|||			1	0
+4600	节奏大师传送带	Conveyor1	30		TDMusicGameConveyorActionIdle		0	0	0	0	0	0	0	0	|||			0	0
+4700	戴夫的小花	star_objective_flower	30		ObjectAchieveActionIdle		0	0	0	0	0	0	0	0	|||			0	0
+4800	戴夫的霉菌地	star_objective_mold	30		ObjectAchieveActionIdle		0	0	0	0	0	0	0	0	|||			0	0
+4910	滚动草皮1背景	guideGrass1	30				0	0	0	0	0	0	0	0	|||		zhezhao|caopiguntong*|cappiguntong_tong*	0	0
+4920	滚动草皮2背景	guideGrass2	30		GrassScrollActionRun				0	0	0	0	0	0	0	0	|||		zhezhao|caopiguntong*|cappiguntong_tong*	0	0
+4930	滚动草皮3背景	guideGrass3	30		GrassScrollActionRun				0	0	0	0	0	0	0	0	|||		zhezhao|caopiguntong*|cappiguntong_tong*	0	0
+4940	滚动草皮4背景	guideGrass4	30		GrassScrollActionRun				0	0	0	0	0	0	0	0	|||		zhezhao|caopiguntong*|cappiguntong_tong*	0	0
+4950	滚动草皮5背景	guideGrass5	30		GrassScrollActionRun				0	0	0	0	0	0	0	0	|||		zhezhao|caopiguntong*|cappiguntong_tong*	0	0
+4960	引导关背景	guideGrassItem	30				1	0	0	0	0	0	0	0	|||			0	0
+4970	草皮滚动动画		0		GrassScrollActionRun		0	0	0	0	0	0	0	0	|||			0	0
+5000	翻牌动画	flipCard	24				0	0	0	0	0	0	0	0	|||			0	0
+5100	火箭火焰动画	fireEffect	24				0	0	0	0	0	0	0	0	|||			0	0
+5200	竹小龙击中僵尸效果	zombieAttackEffect	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+5300	第一关boss技能地面提示	sphinx_shootEffect	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+5400	魔藤大招击中效果	motongSpeicalHitEffect	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+5500	植物生产阳光	bigSun	30		SunAction_PopOut|SunAction_Idle|ObjectAction_Disappear	0:50|1:8000	0	0	0	0	0	0	0	0	|||			0	0
+5600	胡萝卜火箭爆炸特效	carrotRocketHitEffect	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+5700	射箭靶子效果	target	30		ArrowTargetEffectShowAction		1	0	0	0	0	0	0	0	|||			0	0
+5800	胡萝卜火箭大招子弹爆炸特效	carrotRocketBigHitEffect	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+5900	掉落卡牌		30		DropCardAction_Fly		0	0	0	0	0	0	0	0	|||			0	0
+6000	秦始皇陵除草机	mower_qin	30		LawnMowerAction_Appear|LawnMowerAction_Idle|LawnMowerAction_Run	9:300	1	0	0	0	0	0	0	0	|||			1	0
+4210	流沙	quickSand	30		QuickSandAppearAction		0	0	0	0	0	0	0	0	|||			0	0
+1001	土豆大招子弹	potato	30		TDPopPotatoEffectAction		0	0	0	0	0	0	0	0	|||			0	1
+6100	宝石迷阵植物坑	hole	30				0	0	0	0	0	0	0	0	|||			0	0
+6200	宝石消失特效	minigame_jewel_eff	30				0	0	0	0	0	0	0	0	|||			0	0
+6300	戴夫的安全地块	protect_tile	30		ObjectAchieveActionIdle		0	0	0	0	0	0	0	0	|||			0	0
+6400	桅杆下倒	spars1	30		SparsActionIdle	12:90000	1	0	0	1000	0	0	0	0	|||			0	0
+6410	桅杆上倒	spars2	30		SparsActionIdle	12:90000	1	0	0	1000	0	0	0	0	|||			0	0
+6500	桅杆阻挡空气墙	spars_blockWall	30			15:1	0	0	0	1000	1	0	0	0	|||			0	0
+6600	火龙草喷火	snapdragon_fire	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+6700	火龙草大招喷火	snapdragon_bigFire	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+6800	火龙草地面火焰	snapdragon_plantfood_fireballs	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+6900	海盗关除草机	mower_pirateShip	30		LawnMowerAction_Appear|LawnMowerAction_Idle|LawnMowerAction_Run|LawnMowerAction_Sink	9:300	1	0	0	0	0	0	0	0	|7000:7010:7020||			1	0
+7000	海盗关水花	water_splash	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+7010	海盗关浪花1	water_foam	30		WaterAction_foam		0	0	0	0	0	0	0	0	|||			0	0
+7020	海盗关浪花2	water_breaker	30		EffectLoopAction		0	0	0	0	0	0	0	0	|||			0	0
+7100	射击小游戏打击器		0		TDShootingGameControllerAction		0	0	0	0	0	0	0	0	|||			0	0
+7200	海鸥	seagull	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+7300	滚桶	barrel_roller_barrel	30		BarrelAction_Idle	1001:1	1	0	0	700	1	1	0	0	|||			1	0
+7400	地刺大招刺	spikeweed_plantfood_spikes	30		EffectAdvPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+7500	地刺王大招刺	spikerock_plantfood_spikes	30		EffectAdvPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+7600	椰子加农炮子弹爆炸	coconutCannon_explosion	30		EffectAdvPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+7700	扔出的火把	torch_throw	30			8:7800|18:TorchAction_Boom	0	0	0	0	0	0	0	0	|7800||			1	1
+7800	地面火焰	groundFire	30		GroundFirePlayAction	1:4000|16:1000|17:50	1	0	0	0	0	0	0	0	|||			0	0
+7900	椰子炮控制器		0		TDCoconutControllerAction		0	0	0	0	0	0	0	0	|||			0	0
+8000	辣椒火焰	jalapeno_fire	30		JalapenoFireAction		0	0	0	0	0	0	0	0	|||			0	0
+8100	长流沙	Conveyor1	30		LongQuickSandAction		0	0	0	0	0	0	0	0	|||			0	0
+8200	冰西瓜爆炸	splat_wintermelon	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+8300	冰西瓜大招爆炸	wintermelon_explode	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+8400	传送门传送僵尸效果		0		TDSkillPortalZombieEffectAction		0	0	0	0	0	0	0	0	|||			0	0
+8500	电磁盾僵尸护盾	electromagnetic_shield	30		ElectromagneticShieldAction_Idle		0	0	0	700	1	1	1	1	|||			0	0
+8600	能量块1	powerTile1	30		EffectLoopAction		0	0	0	0	0	0	0	0	|||			0	0
+8700	能量块2	powerTile2	30		EffectLoopAction		0	0	0	0	0	0	0	0	|||			0	0
+8800	能量块3	powerTile3	30		EffectLoopAction		0	0	0	0	0	0	0	0	|||			0	0
+8900	能量块4	powerTile4	30		EffectLoopAction		0	0	0	0	0	0	0	0	|||			0	0
+9000	能量块5	powerTile5	30		EffectLoopAction		0	0	0	0	0	0	0	0	|||			0	0
+9100	充能柚子普通子弹爆炸	citron_citrus_orb_Hit	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+9200	充能柚子大招子弹爆炸	citron_plantfood_orb_hit	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+9300	脉冲黄桃爆炸效果	empeach_blast	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+9400	未来关除草机	mower_future	30		LawnMowerAction_Appear|LawnMowerAction_Idle|LawnMowerAction_Run	9:300	1	0	0	0	0	0	0	0	|||			1	0
+9500	脉冲黄桃击中特效	empeach_damage	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+9600	太阳炸弹	sun_bomb	30		TDSunBombAction_Fall|TDSunBombAction_Explod	2:11|19:3|20:650	0	0	0	0	0	0	0	0	|||			0	0
+9700	太阳炸弹轨道	sun_bomb_track	30		TDSunBombTrackAction_Idle|TDSunBombTrackAction_Disappear		0	0	0	0	0	0	0	0	|||			0	0
+9800	雪人掉落钥匙	yeti_key	30		YetiKeyAction		0	0	0	0	0	0	0	0	|||			0	0
+9900	飞行毒液	poison	30		PoisonAction_Fly|PoisonAction_Idle|PoisonAction_Explod		0	0	0	0	0	0	0	0	|||			0	1
+10000	灵芝子弹爆炸	glossy_ganoderma_hit	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+10100	灵芝除毒效果	glossy_ganoderma_remove_poison	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+10200	芭蕉子弹爆炸	banana_hit	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+10300	机甲巨人僵尸激光轨迹	gargantuar_laser_track	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+10400	机甲巨人僵尸激光爆炸	gargantuar_laser_explode	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+10500	全息坚果墙	nuts_shield	30		NutsShieldOnAction|NutsShieldIdleAction		0	0	0	3500	0	0	0	0	|||			0	0
+10600	棱镜草普通子弹爆炸	prism_grass_hit	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+10700	棱镜草大招子弹爆炸	prism_grass_plantfood_hit	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+10800	棱镜草大招连接线	prism_grass_plantfood_connect_line	30				0	0	0	0	0	0	0	0	|||			0	0
+10900	棱镜草大招打击线	prism_grass_plantfood_hit_line	30				0	0	0	0	0	0	0	0	|||			0	0
+11000	未来破译者导弹落地爆炸	potatomine_explosion	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+11100	未来破译者导弹	future_boss_rocket	30				0	0	0	0	0	0	0	0	|||			0	1
+11200	未来破译者导弹靶心	rocketTarget	30		RocketTargetAction		0	0	0	0	0	0	0	0	|||			0	0
+11300	水泡拖尾效果	sea_splash_effect	30		EffectLoopAction		0	0	0	0	0	0	0	0	|||			0	0
+11400	普通泡泡爆炸效果	bubble_normal_split	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+11500	电泡泡爆炸效果	bubble_eletric_split	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+11600	蚌仙弹开子弹效果	bounce_effect	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+11700	海夜叉龙卷风	yaksha_storm	30			9:600	0	0	0	0	0	0	0	0	|||			0	0
+11800	氧气藻供养范围效果	oxygen_range_indicate	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+11900	氧气藻供养效果	supply_oxygen	30		EffectLoopAction	12:90000	1	0	0	0	0	0	0	0	|||			0	0
+12000	东海龙宫除草机	mower_sea	30		LawnMowerAction_Appear|LawnMowerAction_Idle|LawnMowerAction_Run	9:300	1	0	0	0	0	0	0	0	|||			1	0
+12100	电海松普通子弹爆炸	thunderPine_hit	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+12200	电海松大招子弹爆炸	thunderPine_plantfood_hit	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+12300	冰豌豆子弹爆炸	icepea_hit	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+12400	假小推车	sample_mower	30				1	0	0	0	0	0	0	0	|||			0	0
+12500	冰豌豆冰冻路径效果	icepea_frozen_path	30		EffectPlayAction	12:-9500	0	0	0	0	0	0	0	0	|||			0	0
+12600	西瓜大招爆炸	melon_explode	30		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+12700	刺头花普通子弹爆炸	effect_bullet_guide_the_ji	24		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0
+12800	刺头花大招子弹爆炸	effect_bullet_guide_the_ji_spec	24		EffectPlayAction		0	0	0	0	0	0	0	0	|||			0	0

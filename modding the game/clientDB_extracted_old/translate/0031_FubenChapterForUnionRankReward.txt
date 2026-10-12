@@ -1,0 +1,505 @@
+id	name
+1005	Stage 5 Total Damage
+1005	Stage 5 Total Damage
+1005	Stage 5 Total Damage
+1005	Stage 5 Total Damage
+1005	Stage 5 Total Damage
+1005	Stage 5 Total Damage
+1005	Stage 5 Total Damage
+1005	Stage 5 Total Damage
+1005	Stage 5 Total Damage
+1006	Stage 6 Total Damage
+1006	Stage 6 Total Damage
+1006	Stage 6 Total Damage
+1006	Stage 6 Total Damage
+1006	Stage 6 Total Damage
+1006	Stage 6 Total Damage
+1006	Stage 6 Total Damage
+1006	Stage 6 Total Damage
+1006	Stage 6 Total Damage
+1007	Stage 7 Total Damage
+1007	Stage 7 Total Damage
+1007	Stage 7 Total Damage
+1007	Stage 7 Total Damage
+1007	Stage 7 Total Damage
+1007	Stage 7 Total Damage
+1007	Stage 7 Total Damage
+1007	Stage 7 Total Damage
+1007	Stage 7 Total Damage
+1008	Stage 8 Total Damage
+1008	Stage 8 Total Damage
+1008	Stage 8 Total Damage
+1008	Stage 8 Total Damage
+1008	Stage 8 Total Damage
+1008	Stage 8 Total Damage
+1008	Stage 8 Total Damage
+1008	Stage 8 Total Damage
+1008	Stage 8 Total Damage
+1009	Stage 9 Total Damage
+1009	Stage 9 Total Damage
+1009	Stage 9 Total Damage
+1009	Stage 9 Total Damage
+1009	Stage 9 Total Damage
+1009	Stage 9 Total Damage
+1009	Stage 9 Total Damage
+1009	Stage 9 Total Damage
+1009	Stage 9 Total Damage
+1010	Stage 10 Total Damage
+1010	Stage 10 Total Damage
+1010	Stage 10 Total Damage
+1010	Stage 10 Total Damage
+1010	Stage 10 Total Damage
+1010	Stage 10 Total Damage
+1010	Stage 10 Total Damage
+1010	Stage 10 Total Damage
+1010	Stage 10 Total Damage
+1011	Stage 11 Total Damage
+1011	Stage 11 Total Damage
+1011	Stage 11 Total Damage
+1011	Stage 11 Total Damage
+1011	Stage 11 Total Damage
+1011	Stage 11 Total Damage
+1011	Stage 11 Total Damage
+1011	Stage 11 Total Damage
+1011	Stage 11 Total Damage
+1012	Stage 12 Total Damage
+1012	Stage 12 Total Damage
+1012	Stage 12 Total Damage
+1012	Stage 12 Total Damage
+1012	Stage 12 Total Damage
+1012	Stage 12 Total Damage
+1012	Stage 12 Total Damage
+1012	Stage 12 Total Damage
+1012	Stage 12 Total Damage
+1013	Stage 13 Total Damage
+1013	Stage 13 Total Damage
+1013	Stage 13 Total Damage
+1013	Stage 13 Total Damage
+1013	Stage 13 Total Damage
+1013	Stage 13 Total Damage
+1013	Stage 13 Total Damage
+1013	Stage 13 Total Damage
+1013	Stage 13 Total Damage
+1014	Stage 14 Total Damage
+1014	Stage 14 Total Damage
+1014	Stage 14 Total Damage
+1014	Stage 14 Total Damage
+1014	Stage 14 Total Damage
+1014	Stage 14 Total Damage
+1014	Stage 14 Total Damage
+1014	Stage 14 Total Damage
+1014	Stage 14 Total Damage
+1015	Stage 15 Total Damage
+1015	Stage 15 Total Damage
+1015	Stage 15 Total Damage
+1015	Stage 15 Total Damage
+1015	Stage 15 Total Damage
+1015	Stage 15 Total Damage
+1015	Stage 15 Total Damage
+1015	Stage 15 Total Damage
+1015	Stage 15 Total Damage
+1016	Stage 16 Total Damage
+1016	Stage 16 Total Damage
+1016	Stage 16 Total Damage
+1016	Stage 16 Total Damage
+1016	Stage 16 Total Damage
+1016	Stage 16 Total Damage
+1016	Stage 16 Total Damage
+1016	Stage 16 Total Damage
+1016	Stage 16 Total Damage
+1017	Stage 17 Total Damage
+1017	Stage 17 Total Damage
+1017	Stage 17 Total Damage
+1017	Stage 17 Total Damage
+1017	Stage 17 Total Damage
+1017	Stage 17 Total Damage
+1017	Stage 17 Total Damage
+1017	Stage 17 Total Damage
+1017	Stage 17 Total Damage
+1018	Stage 18 Total Damage
+1018	Stage 18 Total Damage
+1018	Stage 18 Total Damage
+1018	Stage 18 Total Damage
+1018	Stage 18 Total Damage
+1018	Stage 18 Total Damage
+1018	Stage 18 Total Damage
+1018	Stage 18 Total Damage
+1018	Stage 18 Total Damage
+1019	Stage 19 Total Damage
+1019	Stage 19 Total Damage
+1019	Stage 19 Total Damage
+1019	Stage 19 Total Damage
+1019	Stage 19 Total Damage
+1019	Stage 19 Total Damage
+1019	Stage 19 Total Damage
+1019	Stage 19 Total Damage
+1019	Stage 19 Total Damage
+1020	Stage 20 Total Damage
+1020	Stage 20 Total Damage
+1020	Stage 20 Total Damage
+1020	Stage 20 Total Damage
+1020	Stage 20 Total Damage
+1020	Stage 20 Total Damage
+1020	Stage 20 Total Damage
+1020	Stage 20 Total Damage
+1020	Stage 20 Total Damage
+1021	Stage 21 Total Damage
+1021	Stage 21 Total Damage
+1021	Stage 21 Total Damage
+1021	Stage 21 Total Damage
+1021	Stage 21 Total Damage
+1021	Stage 21 Total Damage
+1021	Stage 21 Total Damage
+1021	Stage 21 Total Damage
+1021	Stage 21 Total Damage
+1022	Stage 22 Total Damage
+1022	Stage 22 Total Damage
+1022	Stage 22 Total Damage
+1022	Stage 22 Total Damage
+1022	Stage 22 Total Damage
+1022	Stage 22 Total Damage
+1022	Stage 22 Total Damage
+1022	Stage 22 Total Damage
+1022	Stage 22 Total Damage
+1023	Stage 23 Total Damage
+1023	Stage 23 Total Damage
+1023	Stage 23 Total Damage
+1023	Stage 23 Total Damage
+1023	Stage 23 Total Damage
+1023	Stage 23 Total Damage
+1023	Stage 23 Total Damage
+1023	Stage 23 Total Damage
+1023	Stage 23 Total Damage
+1024	Stage 24 Total Damage
+1024	Stage 24 Total Damage
+1024	Stage 24 Total Damage
+1024	Stage 24 Total Damage
+1024	Stage 24 Total Damage
+1024	Stage 24 Total Damage
+1024	Stage 24 Total Damage
+1024	Stage 24 Total Damage
+1024	Stage 24 Total Damage
+1025	Stage 25 Total Damage
+1025	Stage 25 Total Damage
+1025	Stage 25 Total Damage
+1025	Stage 25 Total Damage
+1025	Stage 25 Total Damage
+1025	Stage 25 Total Damage
+1025	Stage 25 Total Damage
+1025	Stage 25 Total Damage
+1025	Stage 25 Total Damage
+1026	Stage 26 Total Damage
+1026	Stage 26 Total Damage
+1026	Stage 26 Total Damage
+1026	Stage 26 Total Damage
+1026	Stage 26 Total Damage
+1026	Stage 26 Total Damage
+1026	Stage 26 Total Damage
+1026	Stage 26 Total Damage
+1026	Stage 26 Total Damage
+1027	Stage 27 Total Damage
+1027	Stage 27 Total Damage
+1027	Stage 27 Total Damage
+1027	Stage 27 Total Damage
+1027	Stage 27 Total Damage
+1027	Stage 27 Total Damage
+1027	Stage 27 Total Damage
+1027	Stage 27 Total Damage
+1027	Stage 27 Total Damage
+1028	Stage 28 Total Damage
+1028	Stage 28 Total Damage
+1028	Stage 28 Total Damage
+1028	Stage 28 Total Damage
+1028	Stage 28 Total Damage
+1028	Stage 28 Total Damage
+1028	Stage 28 Total Damage
+1028	Stage 28 Total Damage
+1028	Stage 28 Total Damage
+1029	Stage 29 Total Damage
+1029	Stage 29 Total Damage
+1029	Stage 29 Total Damage
+1029	Stage 29 Total Damage
+1029	Stage 29 Total Damage
+1029	Stage 29 Total Damage
+1029	Stage 29 Total Damage
+1029	Stage 29 Total Damage
+1029	Stage 29 Total Damage
+1030	Stage 30 Total Damage
+1030	Stage 30 Total Damage
+1030	Stage 30 Total Damage
+1030	Stage 30 Total Damage
+1030	Stage 30 Total Damage
+1030	Stage 30 Total Damage
+1030	Stage 30 Total Damage
+1030	Stage 30 Total Damage
+1030	Stage 30 Total Damage
+1031	Stage 31 Total Damage
+1031	Stage 31 Total Damage
+1031	Stage 31 Total Damage
+1031	Stage 31 Total Damage
+1031	Stage 31 Total Damage
+1031	Stage 31 Total Damage
+1031	Stage 31 Total Damage
+1031	Stage 31 Total Damage
+1031	Stage 31 Total Damage
+1032	Stage 32 Total Damage
+1032	Stage 32 Total Damage
+1032	Stage 32 Total Damage
+1032	Stage 32 Total Damage
+1032	Stage 32 Total Damage
+1032	Stage 32 Total Damage
+1032	Stage 32 Total Damage
+1032	Stage 32 Total Damage
+1032	Stage 32 Total Damage
+5	Stage 5 Single-Target Damage
+5	Stage 5 Single-Target Damage
+5	Stage 5 Single-Target Damage
+5	Stage 5 Single-Target Damage
+5	Stage 5 Single-Target Damage
+5	Stage 5 Single-Target Damage
+5	Stage 5 Single-Target Damage
+5	Stage 5 Single-Target Damage
+5	Stage 5 Single-Target Damage
+6	Stage 6 Single Target Damage
+6	Stage 6 Single Target Damage
+6	Stage 6 Single Target Damage
+6	Stage 6 Single Target Damage
+6	Stage 6 Single Target Damage
+6	Stage 6 Single Target Damage
+6	Stage 6 Single Target Damage
+6	Stage 6 Single Target Damage
+6	Stage 6 Single Target Damage
+7	Stage 7 Single Target Damage
+7	Stage 7 Single Target Damage
+7	Stage 7 Single Target Damage
+7	Stage 7 Single Target Damage
+7	Stage 7 Single Target Damage
+7	Stage 7 Single Target Damage
+7	Stage 7 Single Target Damage
+7	Stage 7 Single Target Damage
+7	Stage 7 Single Target Damage
+8	Stage 8 Single Target Damage
+8	Stage 8 Single Target Damage
+8	Stage 8 Single Target Damage
+8	Stage 8 Single Target Damage
+8	Stage 8 Single Target Damage
+8	Stage 8 Single Target Damage
+8	Stage 8 Single Target Damage
+8	Stage 8 Single Target Damage
+8	Stage 8 Single Target Damage
+9	Stage 9 Single-Target Damage
+9	Stage 9 Single-Target Damage
+9	Stage 9 Single-Target Damage
+9	Stage 9 Single-Target Damage
+9	Stage 9 Single-Target Damage
+9	Stage 9 Single-Target Damage
+9	Stage 9 Single-Target Damage
+9	Stage 9 Single-Target Damage
+9	Stage 9 Single-Target Damage
+10	Stage 10 Single Target Damage
+10	Stage 10 Single Target Damage
+10	Stage 10 Single Target Damage
+10	Stage 10 Single Target Damage
+10	Stage 10 Single Target Damage
+10	Stage 10 Single Target Damage
+10	Stage 10 Single Target Damage
+10	Stage 10 Single Target Damage
+10	Stage 10 Single Target Damage
+11	Stage 11 Single Target Damage
+11	Stage 11 Single Target Damage
+11	Stage 11 Single Target Damage
+11	Stage 11 Single Target Damage
+11	Stage 11 Single Target Damage
+11	Stage 11 Single Target Damage
+11	Stage 11 Single Target Damage
+11	Stage 11 Single Target Damage
+11	Stage 11 Single Target Damage
+12	Stage 12 Single Target Damage
+12	Stage 12 Single Target Damage
+12	Stage 12 Single Target Damage
+12	Stage 12 Single Target Damage
+12	Stage 12 Single Target Damage
+12	Stage 12 Single Target Damage
+12	Stage 12 Single Target Damage
+12	Stage 12 Single Target Damage
+12	Stage 12 Single Target Damage
+13	Stage 13 Single-Target Damage
+13	Stage 13 Single-Target Damage
+13	Stage 13 Single-Target Damage
+13	Stage 13 Single-Target Damage
+13	Stage 13 Single-Target Damage
+13	Stage 13 Single-Target Damage
+13	Stage 13 Single-Target Damage
+13	Stage 13 Single-Target Damage
+13	Stage 13 Single-Target Damage
+14	Stage 14 Single-Target Damage
+14	Stage 14 Single-Target Damage
+14	Stage 14 Single-Target Damage
+14	Stage 14 Single-Target Damage
+14	Stage 14 Single-Target Damage
+14	Stage 14 Single-Target Damage
+14	Stage 14 Single-Target Damage
+14	Stage 14 Single-Target Damage
+14	Stage 14 Single-Target Damage
+15	Stage 15 Single-Target Damage
+15	Stage 15 Single-Target Damage
+15	Stage 15 Single-Target Damage
+15	Stage 15 Single-Target Damage
+15	Stage 15 Single-Target Damage
+15	Stage 15 Single-Target Damage
+15	Stage 15 Single-Target Damage
+15	Stage 15 Single-Target Damage
+15	Stage 15 Single-Target Damage
+16	Stage 16 Single-Target Damage
+16	Stage 16 Single-Target Damage
+16	Stage 16 Single-Target Damage
+16	Stage 16 Single-Target Damage
+16	Stage 16 Single-Target Damage
+16	Stage 16 Single-Target Damage
+16	Stage 16 Single-Target Damage
+16	Stage 16 Single-Target Damage
+16	Stage 16 Single-Target Damage
+17	Stage 17 Single Target Damage
+17	Stage 17 Single Target Damage
+17	Stage 17 Single Target Damage
+17	Stage 17 Single Target Damage
+17	Stage 17 Single Target Damage
+17	Stage 17 Single Target Damage
+17	Stage 17 Single Target Damage
+17	Stage 17 Single Target Damage
+17	Stage 17 Single Target Damage
+18	Stage 18 Single-Target Damage
+18	Stage 18 Single-Target Damage
+18	Stage 18 Single-Target Damage
+18	Stage 18 Single-Target Damage
+18	Stage 18 Single-Target Damage
+18	Stage 18 Single-Target Damage
+18	Stage 18 Single-Target Damage
+18	Stage 18 Single-Target Damage
+18	Stage 18 Single-Target Damage
+19	Stage 19 Single Target Damage
+19	Stage 19 Single Target Damage
+19	Stage 19 Single Target Damage
+19	Stage 19 Single Target Damage
+19	Stage 19 Single Target Damage
+19	Stage 19 Single Target Damage
+19	Stage 19 Single Target Damage
+19	Stage 19 Single Target Damage
+19	Stage 19 Single Target Damage
+20	Stage 20 Single Target Damage
+20	Stage 20 Single Target Damage
+20	Stage 20 Single Target Damage
+20	Stage 20 Single Target Damage
+20	Stage 20 Single Target Damage
+20	Stage 20 Single Target Damage
+20	Stage 20 Single Target Damage
+20	Stage 20 Single Target Damage
+20	Stage 20 Single Target Damage
+21	Stage 21 Single Target Damage
+21	Stage 21 Single Target Damage
+21	Stage 21 Single Target Damage
+21	Stage 21 Single Target Damage
+21	Stage 21 Single Target Damage
+21	Stage 21 Single Target Damage
+21	Stage 21 Single Target Damage
+21	Stage 21 Single Target Damage
+21	Stage 21 Single Target Damage
+22	Stage 22 Single-Target Damage
+22	Stage 22 Single-Target Damage
+22	Stage 22 Single-Target Damage
+22	Stage 22 Single-Target Damage
+22	Stage 22 Single-Target Damage
+22	Stage 22 Single-Target Damage
+22	Stage 22 Single-Target Damage
+22	Stage 22 Single-Target Damage
+22	Stage 22 Single-Target Damage
+23	Stage 23 Single Target Damage
+23	Stage 23 Single Target Damage
+23	Stage 23 Single Target Damage
+23	Stage 23 Single Target Damage
+23	Stage 23 Single Target Damage
+23	Stage 23 Single Target Damage
+23	Stage 23 Single Target Damage
+23	Stage 23 Single Target Damage
+23	Stage 23 Single Target Damage
+24	Stage 24 Single Target Damage
+24	Stage 24 Single Target Damage
+24	Stage 24 Single Target Damage
+24	Stage 24 Single Target Damage
+24	Stage 24 Single Target Damage
+24	Stage 24 Single Target Damage
+24	Stage 24 Single Target Damage
+24	Stage 24 Single Target Damage
+24	Stage 24 Single Target Damage
+25	Stage 25 Single-Target Damage
+25	Stage 25 Single-Target Damage
+25	Stage 25 Single-Target Damage
+25	Stage 25 Single-Target Damage
+25	Stage 25 Single-Target Damage
+25	Stage 25 Single-Target Damage
+25	Stage 25 Single-Target Damage
+25	Stage 25 Single-Target Damage
+25	Stage 25 Single-Target Damage
+26	Stage 26 Single Target Damage
+26	Stage 26 Single Target Damage
+26	Stage 26 Single Target Damage
+26	Stage 26 Single Target Damage
+26	Stage 26 Single Target Damage
+26	Stage 26 Single Target Damage
+26	Stage 26 Single Target Damage
+26	Stage 26 Single Target Damage
+26	Stage 26 Single Target Damage
+27	Stage 27 Single Target Damage
+27	Stage 27 Single Target Damage
+27	Stage 27 Single Target Damage
+27	Stage 27 Single Target Damage
+27	Stage 27 Single Target Damage
+27	Stage 27 Single Target Damage
+27	Stage 27 Single Target Damage
+27	Stage 27 Single Target Damage
+27	Stage 27 Single Target Damage
+28	Stage 28 Single Target Damage
+28	Stage 28 Single Target Damage
+28	Stage 28 Single Target Damage
+28	Stage 28 Single Target Damage
+28	Stage 28 Single Target Damage
+28	Stage 28 Single Target Damage
+28	Stage 28 Single Target Damage
+28	Stage 28 Single Target Damage
+28	Stage 28 Single Target Damage
+29	Stage 29 Single-Target Damage
+29	Stage 29 Single-Target Damage
+29	Stage 29 Single-Target Damage
+29	Stage 29 Single-Target Damage
+29	Stage 29 Single-Target Damage
+29	Stage 29 Single-Target Damage
+29	Stage 29 Single-Target Damage
+29	Stage 29 Single-Target Damage
+29	Stage 29 Single-Target Damage
+30	Stage 30 Single-Target Damage
+30	Stage 30 Single-Target Damage
+30	Stage 30 Single-Target Damage
+30	Stage 30 Single-Target Damage
+30	Stage 30 Single-Target Damage
+30	Stage 30 Single-Target Damage
+30	Stage 30 Single-Target Damage
+30	Stage 30 Single-Target Damage
+30	Stage 30 Single-Target Damage
+31	Stage 31 Single-Target Damage
+31	Stage 31 Single-Target Damage
+31	Stage 31 Single-Target Damage
+31	Stage 31 Single-Target Damage
+31	Stage 31 Single-Target Damage
+31	Stage 31 Single-Target Damage
+31	Stage 31 Single-Target Damage
+31	Stage 31 Single-Target Damage
+31	Stage 31 Single-Target Damage
+32	Stage 32 Single Target Damage
+32	Stage 32 Single Target Damage
+32	Stage 32 Single Target Damage
+32	Stage 32 Single Target Damage
+32	Stage 32 Single Target Damage
+32	Stage 32 Single Target Damage
+32	Stage 32 Single Target Damage
+32	Stage 32 Single Target Damage
+32	Stage 32 Single Target Damage

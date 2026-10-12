@@ -1,0 +1,3677 @@
+{
+  "path": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\bag\\candidates\\ModuleBag.swf",
+  "counts": {
+    "definitions": 398,
+    "methods": 351,
+    "qualified_references": 4931,
+    "private_references": 493,
+    "protected_references": 184
+  },
+  "unresolved_private_qnames": [],
+  "unresolved_protected_qnames": [
+    {
+      "abc": 0,
+      "method": 117,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagSellWindowMediator.com.qq.modules.bag.view.components:BagSellWindowMediator::init"
+      ],
+      "pc": 3,
+      "opcode": "callsupervoid",
+      "multiname": 549,
+      "reference": {
+        "multiname_index": 549,
+        "name": "init",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": [
+        {
+          "identity": [
+            24,
+            "com.qq.modules.basic:BaseModule"
+          ],
+          "owners": [
+            "com.qq.modules.basic::BaseModule.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "ModuleBag"
+          ],
+          "owners": [
+            "::ModuleBag.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagChooseRewardWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseResultWdMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.inst_traits"
+          ]
+        }
+      ]
+    },
+    {
+      "abc": 0,
+      "method": 118,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagSellWindowMediator.com.qq.modules.bag.view.components:BagSellWindowMediator::initListener"
+      ],
+      "pc": 3,
+      "opcode": "callsupervoid",
+      "multiname": 552,
+      "reference": {
+        "multiname_index": 552,
+        "name": "initListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": [
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            5,
+            49
+          ],
+          "owners": [
+            "com.qq.utils.ui::SPager.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagChooseRewardWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseResultWdMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.tooltip:EquipmentToolTipMediator"
+          ],
+          "owners": [
+            "com.qq.tooltip::EquipmentToolTipMediator.inst_traits"
+          ]
+        }
+      ]
+    },
+    {
+      "abc": 0,
+      "method": 118,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagSellWindowMediator.com.qq.modules.bag.view.components:BagSellWindowMediator::initListener"
+      ],
+      "pc": 7,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 118,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagSellWindowMediator.com.qq.modules.bag.view.components:BagSellWindowMediator::initListener"
+      ],
+      "pc": 25,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 118,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagSellWindowMediator.com.qq.modules.bag.view.components:BagSellWindowMediator::initListener"
+      ],
+      "pc": 29,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 118,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagSellWindowMediator.com.qq.modules.bag.view.components:BagSellWindowMediator::initListener"
+      ],
+      "pc": 47,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 118,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagSellWindowMediator.com.qq.modules.bag.view.components:BagSellWindowMediator::initListener"
+      ],
+      "pc": 51,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 118,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagSellWindowMediator.com.qq.modules.bag.view.components:BagSellWindowMediator::initListener"
+      ],
+      "pc": 69,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 185,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::init"
+      ],
+      "pc": 3,
+      "opcode": "callsupervoid",
+      "multiname": 549,
+      "reference": {
+        "multiname_index": 549,
+        "name": "init",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": [
+        {
+          "identity": [
+            24,
+            "com.qq.modules.basic:BaseModule"
+          ],
+          "owners": [
+            "com.qq.modules.basic::BaseModule.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "ModuleBag"
+          ],
+          "owners": [
+            "::ModuleBag.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagChooseRewardWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseResultWdMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.inst_traits"
+          ]
+        }
+      ]
+    },
+    {
+      "abc": 0,
+      "method": 186,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initialized"
+      ],
+      "pc": 3,
+      "opcode": "callsupervoid",
+      "multiname": 609,
+      "reference": {
+        "multiname_index": 609,
+        "name": "initialized",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": [
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.inst_traits"
+          ]
+        }
+      ]
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 7,
+      "opcode": "callsupervoid",
+      "multiname": 552,
+      "reference": {
+        "multiname_index": 552,
+        "name": "initListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": [
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            5,
+            49
+          ],
+          "owners": [
+            "com.qq.utils.ui::SPager.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagChooseRewardWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseResultWdMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.tooltip:EquipmentToolTipMediator"
+          ],
+          "owners": [
+            "com.qq.tooltip::EquipmentToolTipMediator.inst_traits"
+          ]
+        }
+      ]
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 39,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 52,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 67,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 85,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 89,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 107,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 111,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 129,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 133,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 151,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 155,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 173,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 177,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 195,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 199,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 217,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 221,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 239,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 243,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 261,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 265,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 283,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 287,
+      "opcode": "findpropstrict",
+      "multiname": 614,
+      "reference": {
+        "multiname_index": 614,
+        "name": "addContextListener",
+        "namespace": {
+          "index": 132,
+          "kind": 24,
+          "uri": "org.robotlegs.mvcs:Mediator",
+          "identity": [
+            24,
+            "org.robotlegs.mvcs:Mediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 187,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagWindowMediator.com.qq.modules.bag.view.components:BagWindowMediator::initListener"
+      ],
+      "pc": 300,
+      "opcode": "callpropvoid",
+      "multiname": 614,
+      "reference": {
+        "multiname_index": 614,
+        "name": "addContextListener",
+        "namespace": {
+          "index": 132,
+          "kind": 24,
+          "uri": "org.robotlegs.mvcs:Mediator",
+          "identity": [
+            24,
+            "org.robotlegs.mvcs:Mediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 213,
+      "owners": [
+        "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator::init"
+      ],
+      "pc": 3,
+      "opcode": "callsupervoid",
+      "multiname": 549,
+      "reference": {
+        "multiname_index": 549,
+        "name": "init",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": [
+        {
+          "identity": [
+            24,
+            "com.qq.modules.basic:BaseModule"
+          ],
+          "owners": [
+            "com.qq.modules.basic::BaseModule.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "ModuleBag"
+          ],
+          "owners": [
+            "::ModuleBag.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagChooseRewardWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseResultWdMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.inst_traits"
+          ]
+        }
+      ]
+    },
+    {
+      "abc": 0,
+      "method": 214,
+      "owners": [
+        "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator::initListener"
+      ],
+      "pc": 3,
+      "opcode": "callsupervoid",
+      "multiname": 552,
+      "reference": {
+        "multiname_index": 552,
+        "name": "initListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": [
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            5,
+            49
+          ],
+          "owners": [
+            "com.qq.utils.ui::SPager.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagChooseRewardWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseResultWdMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.tooltip:EquipmentToolTipMediator"
+          ],
+          "owners": [
+            "com.qq.tooltip::EquipmentToolTipMediator.inst_traits"
+          ]
+        }
+      ]
+    },
+    {
+      "abc": 0,
+      "method": 214,
+      "owners": [
+        "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator::initListener"
+      ],
+      "pc": 7,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 214,
+      "owners": [
+        "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator::initListener"
+      ],
+      "pc": 26,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 214,
+      "owners": [
+        "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator::initListener"
+      ],
+      "pc": 30,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 214,
+      "owners": [
+        "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator::initListener"
+      ],
+      "pc": 49,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 223,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.com.qq.modules.bag.view.components:BagChooseRewardWindowMediator::init"
+      ],
+      "pc": 3,
+      "opcode": "callsupervoid",
+      "multiname": 549,
+      "reference": {
+        "multiname_index": 549,
+        "name": "init",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": [
+        {
+          "identity": [
+            24,
+            "com.qq.modules.basic:BaseModule"
+          ],
+          "owners": [
+            "com.qq.modules.basic::BaseModule.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "ModuleBag"
+          ],
+          "owners": [
+            "::ModuleBag.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagChooseRewardWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseResultWdMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.inst_traits"
+          ]
+        }
+      ]
+    },
+    {
+      "abc": 0,
+      "method": 224,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.com.qq.modules.bag.view.components:BagChooseRewardWindowMediator::initListener"
+      ],
+      "pc": 7,
+      "opcode": "callsupervoid",
+      "multiname": 552,
+      "reference": {
+        "multiname_index": 552,
+        "name": "initListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": [
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            5,
+            49
+          ],
+          "owners": [
+            "com.qq.utils.ui::SPager.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagChooseRewardWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseResultWdMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.tooltip:EquipmentToolTipMediator"
+          ],
+          "owners": [
+            "com.qq.tooltip::EquipmentToolTipMediator.inst_traits"
+          ]
+        }
+      ]
+    },
+    {
+      "abc": 0,
+      "method": 224,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.com.qq.modules.bag.view.components:BagChooseRewardWindowMediator::initListener"
+      ],
+      "pc": 50,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 224,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.com.qq.modules.bag.view.components:BagChooseRewardWindowMediator::initListener"
+      ],
+      "pc": 63,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 224,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.com.qq.modules.bag.view.components:BagChooseRewardWindowMediator::initListener"
+      ],
+      "pc": 75,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 224,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.com.qq.modules.bag.view.components:BagChooseRewardWindowMediator::initListener"
+      ],
+      "pc": 94,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 224,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.com.qq.modules.bag.view.components:BagChooseRewardWindowMediator::initListener"
+      ],
+      "pc": 98,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 224,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.com.qq.modules.bag.view.components:BagChooseRewardWindowMediator::initListener"
+      ],
+      "pc": 117,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 235,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator::init"
+      ],
+      "pc": 3,
+      "opcode": "callsupervoid",
+      "multiname": 549,
+      "reference": {
+        "multiname_index": 549,
+        "name": "init",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": [
+        {
+          "identity": [
+            24,
+            "com.qq.modules.basic:BaseModule"
+          ],
+          "owners": [
+            "com.qq.modules.basic::BaseModule.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "ModuleBag"
+          ],
+          "owners": [
+            "::ModuleBag.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagChooseRewardWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseResultWdMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.inst_traits"
+          ]
+        }
+      ]
+    },
+    {
+      "abc": 0,
+      "method": 237,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator::initListener"
+      ],
+      "pc": 3,
+      "opcode": "callsupervoid",
+      "multiname": 552,
+      "reference": {
+        "multiname_index": 552,
+        "name": "initListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": [
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            5,
+            49
+          ],
+          "owners": [
+            "com.qq.utils.ui::SPager.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagChooseRewardWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseResultWdMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.tooltip:EquipmentToolTipMediator"
+          ],
+          "owners": [
+            "com.qq.tooltip::EquipmentToolTipMediator.inst_traits"
+          ]
+        }
+      ]
+    },
+    {
+      "abc": 0,
+      "method": 237,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator::initListener"
+      ],
+      "pc": 7,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 237,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator::initListener"
+      ],
+      "pc": 23,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 237,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator::initListener"
+      ],
+      "pc": 27,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 237,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator::initListener"
+      ],
+      "pc": 46,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 238,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator::stageClickHandler"
+      ],
+      "pc": 16,
+      "opcode": "findpropstrict",
+      "multiname": 799,
+      "reference": {
+        "multiname_index": 799,
+        "name": "dispatch",
+        "namespace": {
+          "index": 132,
+          "kind": 24,
+          "uri": "org.robotlegs.mvcs:Mediator",
+          "identity": [
+            24,
+            "org.robotlegs.mvcs:Mediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 238,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator::stageClickHandler"
+      ],
+      "pc": 30,
+      "opcode": "callpropvoid",
+      "multiname": 799,
+      "reference": {
+        "multiname_index": 799,
+        "name": "dispatch",
+        "namespace": {
+          "index": 132,
+          "kind": 24,
+          "uri": "org.robotlegs.mvcs:Mediator",
+          "identity": [
+            24,
+            "org.robotlegs.mvcs:Mediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 250,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.com.qq.modules.bag.view.components:BagBatchUseResultWdMediator::init"
+      ],
+      "pc": 11,
+      "opcode": "callsupervoid",
+      "multiname": 549,
+      "reference": {
+        "multiname_index": 549,
+        "name": "init",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": [
+        {
+          "identity": [
+            24,
+            "com.qq.modules.basic:BaseModule"
+          ],
+          "owners": [
+            "com.qq.modules.basic::BaseModule.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "ModuleBag"
+          ],
+          "owners": [
+            "::ModuleBag.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagChooseRewardWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseResultWdMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.inst_traits"
+          ]
+        }
+      ]
+    },
+    {
+      "abc": 0,
+      "method": 251,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.com.qq.modules.bag.view.components:BagBatchUseResultWdMediator::initListener"
+      ],
+      "pc": 3,
+      "opcode": "callsupervoid",
+      "multiname": 552,
+      "reference": {
+        "multiname_index": 552,
+        "name": "initListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": [
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            5,
+            49
+          ],
+          "owners": [
+            "com.qq.utils.ui::SPager.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagChooseRewardWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseResultWdMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.tooltip:EquipmentToolTipMediator"
+          ],
+          "owners": [
+            "com.qq.tooltip::EquipmentToolTipMediator.inst_traits"
+          ]
+        }
+      ]
+    },
+    {
+      "abc": 0,
+      "method": 251,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.com.qq.modules.bag.view.components:BagBatchUseResultWdMediator::initListener"
+      ],
+      "pc": 7,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 251,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.com.qq.modules.bag.view.components:BagBatchUseResultWdMediator::initListener"
+      ],
+      "pc": 26,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 256,
+      "owners": [
+        "asgui.controls::RadioButton.<iinit>"
+      ],
+      "pc": 2,
+      "opcode": "findproperty",
+      "multiname": 823,
+      "reference": {
+        "multiname_index": 823,
+        "name": "textFiledAutoSize",
+        "namespace": {
+          "index": 166,
+          "kind": 24,
+          "uri": "asgui.controls:Button",
+          "identity": [
+            24,
+            "asgui.controls:Button"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 256,
+      "owners": [
+        "asgui.controls::RadioButton.<iinit>"
+      ],
+      "pc": 6,
+      "opcode": "initproperty",
+      "multiname": 823,
+      "reference": {
+        "multiname_index": 823,
+        "name": "textFiledAutoSize",
+        "namespace": {
+          "index": 166,
+          "kind": 24,
+          "uri": "asgui.controls:Button",
+          "identity": [
+            24,
+            "asgui.controls:Button"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 263,
+      "owners": [
+        "asgui.controls::RadioButton.asgui.controls:RadioButton::lableX"
+      ],
+      "pc": 2,
+      "opcode": "getlex",
+      "multiname": 824,
+      "reference": {
+        "multiname_index": 824,
+        "name": "$SkinNormal",
+        "namespace": {
+          "index": 167,
+          "kind": 24,
+          "uri": "asgui.core:UIComponent",
+          "identity": [
+            24,
+            "asgui.core:UIComponent"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 263,
+      "owners": [
+        "asgui.controls::RadioButton.asgui.controls:RadioButton::lableX"
+      ],
+      "pc": 9,
+      "opcode": "getlex",
+      "multiname": 824,
+      "reference": {
+        "multiname_index": 824,
+        "name": "$SkinNormal",
+        "namespace": {
+          "index": 167,
+          "kind": 24,
+          "uri": "asgui.core:UIComponent",
+          "identity": [
+            24,
+            "asgui.core:UIComponent"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 268,
+      "owners": [
+        "asgui.controls::RadioButton.asgui.controls:RadioButton::OnClick"
+      ],
+      "pc": 4,
+      "opcode": "callsupervoid",
+      "multiname": 825,
+      "reference": {
+        "multiname_index": 825,
+        "name": "OnClick",
+        "namespace": {
+          "index": 168,
+          "kind": 24,
+          "uri": "asgui.controls:SelectableButton",
+          "identity": [
+            24,
+            "asgui.controls:SelectableButton"
+          ]
+        }
+      },
+      "same_short_name_definitions": [
+        {
+          "identity": [
+            24,
+            "asgui.controls:RadioButton"
+          ],
+          "owners": [
+            "asgui.controls::RadioButton.inst_traits"
+          ]
+        }
+      ]
+    },
+    {
+      "abc": 0,
+      "method": 269,
+      "owners": [
+        "asgui.controls::RadioButton.::selected"
+      ],
+      "pc": 15,
+      "opcode": "findpropstrict",
+      "multiname": 826,
+      "reference": {
+        "multiname_index": 826,
+        "name": "CheckSeletedData",
+        "namespace": {
+          "index": 168,
+          "kind": 24,
+          "uri": "asgui.controls:SelectableButton",
+          "identity": [
+            24,
+            "asgui.controls:SelectableButton"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 269,
+      "owners": [
+        "asgui.controls::RadioButton.::selected"
+      ],
+      "pc": 18,
+      "opcode": "callpropvoid",
+      "multiname": 826,
+      "reference": {
+        "multiname_index": 826,
+        "name": "CheckSeletedData",
+        "namespace": {
+          "index": 168,
+          "kind": 24,
+          "uri": "asgui.controls:SelectableButton",
+          "identity": [
+            24,
+            "asgui.controls:SelectableButton"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 273,
+      "owners": [
+        "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator::init"
+      ],
+      "pc": 3,
+      "opcode": "callsupervoid",
+      "multiname": 549,
+      "reference": {
+        "multiname_index": 549,
+        "name": "init",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": [
+        {
+          "identity": [
+            24,
+            "com.qq.modules.basic:BaseModule"
+          ],
+          "owners": [
+            "com.qq.modules.basic::BaseModule.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "ModuleBag"
+          ],
+          "owners": [
+            "::ModuleBag.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagChooseRewardWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseResultWdMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.inst_traits"
+          ]
+        }
+      ]
+    },
+    {
+      "abc": 0,
+      "method": 274,
+      "owners": [
+        "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator::initListener"
+      ],
+      "pc": 7,
+      "opcode": "callsupervoid",
+      "multiname": 552,
+      "reference": {
+        "multiname_index": 552,
+        "name": "initListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": [
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            5,
+            49
+          ],
+          "owners": [
+            "com.qq.utils.ui::SPager.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagChooseRewardWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseResultWdMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.tooltip:EquipmentToolTipMediator"
+          ],
+          "owners": [
+            "com.qq.tooltip::EquipmentToolTipMediator.inst_traits"
+          ]
+        }
+      ]
+    },
+    {
+      "abc": 0,
+      "method": 274,
+      "owners": [
+        "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator::initListener"
+      ],
+      "pc": 37,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 274,
+      "owners": [
+        "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator::initListener"
+      ],
+      "pc": 50,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 274,
+      "owners": [
+        "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator::initListener"
+      ],
+      "pc": 71,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 274,
+      "owners": [
+        "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator::initListener"
+      ],
+      "pc": 90,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 274,
+      "owners": [
+        "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator::initListener"
+      ],
+      "pc": 94,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 274,
+      "owners": [
+        "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator::initListener"
+      ],
+      "pc": 113,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 275,
+      "owners": [
+        "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator::initialized"
+      ],
+      "pc": 3,
+      "opcode": "callsupervoid",
+      "multiname": 609,
+      "reference": {
+        "multiname_index": 609,
+        "name": "initialized",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": [
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.inst_traits"
+          ]
+        }
+      ]
+    },
+    {
+      "abc": 0,
+      "method": 311,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagBatchUseWindowMediator.com.qq.modules.bag.view.components:BagBatchUseWindowMediator::initListener"
+      ],
+      "pc": 3,
+      "opcode": "callsupervoid",
+      "multiname": 552,
+      "reference": {
+        "multiname_index": 552,
+        "name": "initListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": [
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            5,
+            49
+          ],
+          "owners": [
+            "com.qq.utils.ui::SPager.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellConfirmWinMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellConfirmWinMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagChooseRewardWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagChooseRewardWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagItemOpenEffectViewMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagItemOpenEffectViewMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseResultWdMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseResultWdMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:CardPuzzleSellWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::CardPuzzleSellWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.modules.bag.view.components:BagBatchUseWindowMediator"
+          ],
+          "owners": [
+            "com.qq.modules.bag.view.components::BagBatchUseWindowMediator.inst_traits"
+          ]
+        },
+        {
+          "identity": [
+            24,
+            "com.qq.tooltip:EquipmentToolTipMediator"
+          ],
+          "owners": [
+            "com.qq.tooltip::EquipmentToolTipMediator.inst_traits"
+          ]
+        }
+      ]
+    },
+    {
+      "abc": 0,
+      "method": 311,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagBatchUseWindowMediator.com.qq.modules.bag.view.components:BagBatchUseWindowMediator::initListener"
+      ],
+      "pc": 7,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 311,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagBatchUseWindowMediator.com.qq.modules.bag.view.components:BagBatchUseWindowMediator::initListener"
+      ],
+      "pc": 25,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 311,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagBatchUseWindowMediator.com.qq.modules.bag.view.components:BagBatchUseWindowMediator::initListener"
+      ],
+      "pc": 29,
+      "opcode": "findpropstrict",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 311,
+      "owners": [
+        "com.qq.modules.bag.view.components::BagBatchUseWindowMediator.com.qq.modules.bag.view.components:BagBatchUseWindowMediator::initListener"
+      ],
+      "pc": 48,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    },
+    {
+      "abc": 0,
+      "method": 348,
+      "owners": [
+        "com.qq.tooltip::EquipmentToolTipMediator.com.qq.tooltip:EquipmentToolTipMediator::initListener"
+      ],
+      "pc": 16,
+      "opcode": "callpropvoid",
+      "multiname": 553,
+      "reference": {
+        "multiname_index": 553,
+        "name": "addComponentListener",
+        "namespace": {
+          "index": 127,
+          "kind": 24,
+          "uri": "com.qq.modules.basic.view:BasicScreenMediator",
+          "identity": [
+            24,
+            "com.qq.modules.basic.view:BasicScreenMediator"
+          ]
+        }
+      },
+      "same_short_name_definitions": []
+    }
+  ],
+  "private_namespaces": [
+    {
+      "abc": 0,
+      "index": 18,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        18
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 29,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        29
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 37,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        37
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 44,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        44
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 46,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        46
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 49,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        49
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 51,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        51
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 58,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        58
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 60,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        60
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 62,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        62
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 65,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        65
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 68,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        68
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 71,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        71
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 73,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        73
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 75,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        75
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 77,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        77
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 81,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        81
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 86,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        86
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 87,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        87
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 89,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        89
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 110,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        110
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 120,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        120
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 121,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        121
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 140,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        140
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 156,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        156
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 159,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        159
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 161,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        161
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 164,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        164
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 169,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        169
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 172,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        172
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 174,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        174
+      ]
+    },
+    {
+      "abc": 0,
+      "index": 176,
+      "kind": 5,
+      "uri": "*",
+      "identity": [
+        5,
+        176
+      ]
+    }
+  ]
+}

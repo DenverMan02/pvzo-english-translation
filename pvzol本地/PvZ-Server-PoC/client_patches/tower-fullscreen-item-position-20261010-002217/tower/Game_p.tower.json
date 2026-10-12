@@ -1,0 +1,36 @@
+{
+  "source": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p.swf",
+  "output": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\tower\\Game_p.tower.swf",
+  "source_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+  "output_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e",
+  "methods": [
+    {
+      "classname": "starling.core.Starling",
+      "name": "initialize",
+      "method_id": 3058,
+      "detail": {
+        "start": 61,
+        "length": 5,
+        "before_hex": "d04fe31900"
+      }
+    },
+    {
+      "classname": "starling.display.QuadBatch",
+      "name": "createBuffers",
+      "method_id": 5687,
+      "detail": {
+        "cleared_disposed_references": [
+          "mVertexBuffer",
+          "mIndexBuffer"
+        ],
+        "insertion_offsets": [
+          46,
+          62
+        ]
+      }
+    }
+  ],
+  "total_method_bodies": 47299,
+  "unchanged_method_bodies": 47297,
+  "constant_pools_and_class_structure_unchanged": true
+}

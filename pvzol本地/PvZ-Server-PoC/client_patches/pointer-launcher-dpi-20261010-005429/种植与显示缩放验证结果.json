@@ -1,0 +1,415 @@
+{
+  "installed": {
+    "backup": "D:\\pvzol本地最新最新ol\\修复备份\\种植坐标与启动器DPI-20261010-005429",
+    "patch": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\client_patches\\pointer-launcher-dpi-20261010-005429",
+    "installed_at": "20261010-005429",
+    "count": 10,
+    "files": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleTD_p.swf",
+        "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\plant-alignment\\ModuleTD_p.pointer.swf",
+        "existed": true,
+        "before_sha256": "a13f2bbc3751a9beb6b9de87691ae51f2eb0da62a41ffbf19fe4f5c7fa9de3c8",
+        "after_sha256": "8b80432e9997467fea10ffeb12827fb9a653c335919363ac5118f5098fd8ed8c",
+        "size": 502343
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleTD_p_1c16b189d057f81f222aab0f948139bd.swf",
+        "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\plant-alignment\\ModuleTD_p.pointer.swf",
+        "existed": true,
+        "before_sha256": "a13f2bbc3751a9beb6b9de87691ae51f2eb0da62a41ffbf19fe4f5c7fa9de3c8",
+        "after_sha256": "8b80432e9997467fea10ffeb12827fb9a653c335919363ac5118f5098fd8ed8c",
+        "size": 502343
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleTD_p_becc987b9a7628ab304c08c8c1dea8dd.swf",
+        "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\plant-alignment\\ModuleTD_p.pointer.swf",
+        "existed": true,
+        "before_sha256": "a13f2bbc3751a9beb6b9de87691ae51f2eb0da62a41ffbf19fe4f5c7fa9de3c8",
+        "after_sha256": "8b80432e9997467fea10ffeb12827fb9a653c335919363ac5118f5098fd8ed8c",
+        "size": 502343
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleTD_p_b8b34678a49e91868b64b0b926ec96dd.swf",
+        "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\plant-alignment\\ModuleTD_p.pointer.swf",
+        "existed": false,
+        "before_sha256": null,
+        "after_sha256": "8b80432e9997467fea10ffeb12827fb9a653c335919363ac5118f5098fd8ed8c",
+        "size": 502343
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\fileVer.xml",
+        "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\fileVer.pointer-dpi.xml",
+        "existed": true,
+        "before_sha256": "8251717569c50b812fdaaa362982fbf5a7a7c45f9f613b4fbd0d6be9962ead51",
+        "after_sha256": "a943adc251567a899550dabe4cd7033a273086def408b0d1738cd10342306f89",
+        "size": 228631
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\ui_shell.py",
+        "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\dpi-fix\\staged\\ui_shell.py",
+        "existed": true,
+        "before_sha256": "fb49e36fc3e7c6510d3b8ba0a621d9bdaeb1d2232ccc3d21836569f21ddcee6a",
+        "after_sha256": "057c6ba532ed03bcc4c28d5aaddd9a310e27d14ffb20d32ab91eee87531b3373",
+        "size": 30666
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\launcher_dpi.py",
+        "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\dpi-fix\\staged\\launcher_dpi.py",
+        "existed": false,
+        "before_sha256": null,
+        "after_sha256": "ec56c448f8f3f1be7124f0c807af8144f04a7a99df72b1ef1965788a28cb1cb3",
+        "size": 8542
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\launcher_desktop.py",
+        "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\dpi-fix\\staged\\launcher_desktop.py",
+        "existed": true,
+        "before_sha256": "8f7aebf05a5f5d06f03a65267f85750e32339ce1d5968dcef09e842b6ea9d0d4",
+        "after_sha256": "7a1ce75e4f05c6d2d879c5a9478cb39cbb5e621820cfc30153e973935b17e993",
+        "size": 15555
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\启动器界面\\PvZLauncherUI.exe",
+        "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\dpi-fix\\dist\\PvZLauncherUI\\PvZLauncherUI.exe",
+        "existed": true,
+        "before_sha256": "7965187d6d2cb09b873f386cc2bdf8dcbbdaa46726d4aea9a350cff90492ea02",
+        "after_sha256": "492051d79ceb9ef9e39f9d7fc767898997dab79ee6db0742ecc2692071f0ab8e",
+        "size": 5442798
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\启动器界面\\_internal\\base_library.zip",
+        "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\dpi-fix\\dist\\PvZLauncherUI\\_internal\\base_library.zip",
+        "existed": true,
+        "before_sha256": "3905fbc599d5e45e3cb86a349ee1cef6eecbed452aa5ee48b8132334b2d1a847",
+        "after_sha256": "077e483d6990df59d924128141149b5caa7f31faa39454afabab556b32c819ba",
+        "size": 1394456
+      }
+    ],
+    "system_display_settings_changed": false,
+    "account_or_save_data_changed": false
+  },
+  "pointer_structure": {
+    "passed": true,
+    "test_count": 3,
+    "before_after_stack_methods": 26,
+    "unchanged_methods": 7988,
+    "checksize_real_vm_scenarios": 10,
+    "real_windows_rendering_tested": false,
+    "failures": [],
+    "errors": []
+  },
+  "dpi_api_tests": {
+    "passed": true,
+    "test_count": 8,
+    "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\dpi-fix\\staged\\launcher_dpi.py",
+    "api_injected": true,
+    "system_settings_changed": false,
+    "fractional_dpi_simulated": [
+      114,
+      115,
+      116
+    ],
+    "failures": [],
+    "errors": []
+  },
+  "dpi_geometry_tests": {
+    "passed": true,
+    "test_count": 4,
+    "physical_geometry_scenarios": 52,
+    "dpi_change_geometry_scenarios": 18,
+    "main_initialization_scenarios": 2,
+    "fractional_120_percent_dpi": [
+      114,
+      115,
+      116
+    ],
+    "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\dpi-fix\\staged\\ui_shell.py",
+    "actual_os_scaling_changed": false,
+    "errors": [],
+    "failures": []
+  },
+  "native_candidate": {
+    "ok": true,
+    "name": "candidate-frozen-ui",
+    "account_requests_sent": 0,
+    "system_settings_changed": false,
+    "registry_changed": false,
+    "simulated_dpi": null,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "owned_pid": 51664,
+    "owned_process_exited": true,
+    "requests": [
+      [
+        "GET",
+        "/api/state"
+      ],
+      [
+        "GET",
+        "/"
+      ],
+      [
+        "GET",
+        "/favicon.ico"
+      ],
+      [
+        "GET",
+        "/api/state"
+      ]
+    ],
+    "native": {
+      "dpi": {
+        "ok": true,
+        "mode": "per_monitor_v2",
+        "source": "existing",
+        "attempts": [
+          {
+            "api": "set_context",
+            "mode": "per_monitor_v2",
+            "status": "failed",
+            "error": 5
+          }
+        ]
+      },
+      "shown": {
+        "pid": 51664,
+        "hwnd": 18878866,
+        "work_area": [
+          0,
+          0,
+          3840,
+          2088
+        ],
+        "bounds": [
+          960,
+          399,
+          1920,
+          1290
+        ],
+        "tray_visible": true
+      },
+      "closed": {
+        "tray_visible": false,
+        "tray_disposed": true,
+        "worker_alive": false,
+        "activation_alive": false,
+        "window_record_removed": true
+      }
+    },
+    "centered": true,
+    "in_work_area": true,
+    "clean_exit": true
+  },
+  "fractional_120_percent_simulation": {
+    "ok": true,
+    "name": "candidate-fractional115",
+    "account_requests_sent": 0,
+    "system_settings_changed": false,
+    "registry_changed": false,
+    "simulated_dpi": 115,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "owned_pid": 47808,
+    "owned_process_exited": true,
+    "requests": [
+      [
+        "GET",
+        "/api/state"
+      ],
+      [
+        "GET",
+        "/"
+      ],
+      [
+        "GET",
+        "/favicon.ico"
+      ],
+      [
+        "GET",
+        "/api/state"
+      ]
+    ],
+    "native": {
+      "dpi": {
+        "ok": true,
+        "mode": "per_monitor_v2",
+        "source": "set_context",
+        "attempts": [
+          {
+            "api": "set_context",
+            "mode": "per_monitor_v2",
+            "status": "set",
+            "error": 0
+          }
+        ]
+      },
+      "shown": {
+        "pid": 52264,
+        "hwnd": 1836630,
+        "work_area": [
+          0,
+          0,
+          3840,
+          2088
+        ],
+        "bounds": [
+          1153,
+          529,
+          1533,
+          1030
+        ],
+        "tray_visible": true
+      },
+      "dpi_fixture": {
+        "os_window_dpi": 144,
+        "simulated_dpi": 115,
+        "simulation_scope": "BrowserForm logical-to-physical Size conversion only",
+        "system_settings_changed": false
+      },
+      "closed": {
+        "tray_visible": false,
+        "tray_disposed": true,
+        "worker_alive": false,
+        "activation_alive": false,
+        "window_record_removed": true
+      }
+    },
+    "centered": true,
+    "in_work_area": true,
+    "clean_exit": true
+  },
+  "native_installed": {
+    "ok": true,
+    "name": "installed-frozen-ui",
+    "account_requests_sent": 0,
+    "system_settings_changed": false,
+    "registry_changed": false,
+    "simulated_dpi": null,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "owned_pid": 36016,
+    "owned_process_exited": true,
+    "requests": [
+      [
+        "GET",
+        "/api/state"
+      ],
+      [
+        "GET",
+        "/"
+      ],
+      [
+        "GET",
+        "/favicon.ico"
+      ],
+      [
+        "GET",
+        "/api/state"
+      ]
+    ],
+    "native": {
+      "dpi": {
+        "ok": true,
+        "mode": "per_monitor_v2",
+        "source": "existing",
+        "attempts": [
+          {
+            "api": "set_context",
+            "mode": "per_monitor_v2",
+            "status": "failed",
+            "error": 5
+          }
+        ]
+      },
+      "shown": {
+        "pid": 36016,
+        "hwnd": 1052056,
+        "work_area": [
+          0,
+          0,
+          3840,
+          2088
+        ],
+        "bounds": [
+          960,
+          399,
+          1920,
+          1290
+        ],
+        "tray_visible": true
+      },
+      "closed": {
+        "tray_visible": false,
+        "tray_disposed": true,
+        "worker_alive": false,
+        "activation_alive": false,
+        "window_record_removed": true
+      }
+    },
+    "centered": true,
+    "in_work_area": true,
+    "clean_exit": true
+  },
+  "pointer_behavior": {
+    "passed": true,
+    "test_count": 4,
+    "true_avm2_callback_cases": 825,
+    "true_avm2_reference_cases": 825,
+    "true_avm2_native_cursor_cases": 50,
+    "true_avm2_area_branch_cases": 10,
+    "old_bytecode_error_reproductions": 13,
+    "actual_nested_tile_method": "TDGameInfo.getRoadTileByScreenPos (method1058)",
+    "native_display_transforms": "synthetic SystemManager and MixLayer affine interfaces",
+    "tile_map": "synthetic 5 roads x 9 Rectangle tiles; actual bytecode enumeration and contains calls",
+    "window_sizes": [
+      [
+        1440,
+        900
+      ],
+      [
+        1920,
+        1080
+      ],
+      [
+        3840,
+        2088
+      ],
+      [
+        2162,
+        1360
+      ],
+      [
+        800,
+        600
+      ]
+    ],
+    "internal_scale": 1.3333333333333333,
+    "scene_x": -50,
+    "real_flash_gpu_tested": false,
+    "real_accounts_used": false,
+    "candidate_sha256": "8b80432e9997467fea10ffeb12827fb9a653c335919363ac5118f5098fd8ed8c",
+    "failures": [],
+    "errors": []
+  },
+  "controller_diagnostics": {
+    "passed": true,
+    "test_count": 5,
+    "failures": [],
+    "errors": [],
+    "isolation": {
+      "real_ui_launched": false,
+      "real_services_launched": false,
+      "real_accounts_accessed": false,
+      "D_drive_modified": false,
+      "owned_synthetic_stderr_process": true
+    }
+  },
+  "limitations": [
+    "120% 原反馈机器的无法启动故障未在实际系统缩放下复现；115/96仅为隔离分数布局模拟。",
+    "种植行为检查执行实际AVM2方法字节码并使用合成原生接口；未进行真实Flash画面/GPU人工验收。"
+  ]
+}

@@ -1,0 +1,303 @@
+13:03:22  DEBUG  Using selector: SelectSelector
+13:03:22  INFO   player store: C:\Users\fuyu\Downloads\pvzol本地gpt修复版\pvzol本地\PvZ-Server-PoC\players.db
+13:03:22  INFO   game server listening on 0.0.0.0:9001
+13:03:22  INFO   game server listening on 0.0.0.0:8001
+13:03:22  INFO   game server listening on 0.0.0.0:443
+13:03:22  INFO   game server listening on 0.0.0.0:80
+13:03:22  INFO   socket-policy server listening on 0.0.0.0:843
+13:03:24  INFO   === client connected on PORT 443 from ('127.0.0.1', 51603) ===
+13:03:24  INFO     (stripped TGW preamble: 'tgw_l7_forward\r\nHost: 127.0.0.1:443')
+13:03:27  INFO   loaded 253 TD level reward templates from clientDB
+13:03:27  INFO   loaded 3 VIP tiers
+13:03:27  INFO   loaded 2079 battle cards (213 TD-plant mappings)
+13:03:27  INFO   loaded 200 role-level exp thresholds
+13:03:27  INFO       loaded existing player uin=700000204 name='online' level=147 coin=642605 plants=[1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000, 3100, 3200, 3300, 3400, 3500, 3600, 3900, 4100, 4200, 4300, 4400, 4500, 4600, 4700, 4800, 4900, 5000, 6300, 6400, 6500, 6600, 6900, 7100, 7200, 7400, 7600, 7900, 8000, 8100, 8200, 8300, 8400]
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+13:03:27  INFO       step 1 -> Cmd_CheckOldUser_SC (new=False, name='online')
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_CheckOldUser_SC                    (10 body bytes, 53 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=61 cmdName=PVZ.Cmd.Cmd_Battle_GetAutoRestoreDefenceTeamHealthHp_CS
+13:03:27  INFO       step 2 -> Cmd_Init_SC (from save)
+13:03:27  INFO   loaded energyMax for 200 role levels
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_Init_SC                            (5383 body bytes, 5419 total)
+13:03:27  INFO       -> PVZ.Cmd.Cmd_PVZPrivilege_SC (413 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_PVZPrivilege_SC                    (413 body bytes, 457 total)
+13:03:27  INFO       -> PVZ.Cmd.Cmd_VipInfo_SC (29 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_VipInfo_SC                         (29 body bytes, 67 total)
+13:03:27  INFO       VIP tier 3 active: 34 privileges
+13:03:27  INFO       -> PVZ.Cmd.Cmd_TD_OpenPrivilege_SC (7 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_TD_OpenPrivilege_SC                (7 body bytes, 54 total)
+13:03:27  INFO       TD privilege active: 9 premium plants
+13:03:27  INFO       -> PVZ.Cmd.Cmd_Vip_SyncVipInfo_SC (4 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_Vip_SyncVipInfo_SC                 (4 body bytes, 50 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=69 cmdName=PVZ.Cmd.Cmd_Init_CS
+13:03:27  INFO       -> PVZ.Cmd.Cmd_Init_SC (6 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_Init_SC                            (6 body bytes, 41 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=45 cmdName=PVZ.Cmd.Cmd_PayShop_GetDayTicketList_CS
+13:03:27  INFO       -> PVZ.Cmd.Cmd_PayShop_GetDayTicketList_SC (0 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetDayTicketList_SC        (0 body bytes, 55 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_CS
+13:03:27  INFO       -> PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_SC (0 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_SC       (0 body bytes, 56 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=53 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_CS
+13:03:27  INFO       -> PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC (180 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC  (180 body bytes, 244 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=53 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_CS
+13:03:27  INFO       -> PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC (180 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC  (180 body bytes, 244 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=53 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_CS
+13:03:27  INFO       -> PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC (180 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC  (180 body bytes, 244 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=45 cmdName=PVZ.Cmd.Cmd_PayShop_GetDayTicketList_CS
+13:03:27  INFO       -> PVZ.Cmd.Cmd_PayShop_GetDayTicketList_SC (0 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetDayTicketList_SC        (0 body bytes, 55 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_CS
+13:03:27  INFO       -> PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_SC (0 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_SC       (0 body bytes, 56 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=53 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_CS
+13:03:27  INFO       -> PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC (180 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC  (180 body bytes, 244 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:27  INFO       activity stat: activity=1 -> hdfubenIds=[1, 2, 3, 4, 5, 6]
+13:03:27  INFO       -> PVZ.Cmd.FlexibleActivity_1 (24 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (24 body bytes, 66 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:27  INFO       activity stat: activity=2 -> hdfubenIds=[7, 8, 9, 10, 11, 12]
+13:03:27  INFO       -> PVZ.Cmd.FlexibleActivity_1 (24 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (24 body bytes, 66 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:27  INFO       activity stat: activity=3 -> hdfubenIds=[18, 19, 20, 21, 22]
+13:03:27  INFO       -> PVZ.Cmd.FlexibleActivity_1 (22 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (22 body bytes, 64 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:27  INFO       activity stat: activity=4 -> hdfubenIds=[13, 14, 15, 16, 17]
+13:03:27  INFO       -> PVZ.Cmd.FlexibleActivity_1 (22 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (22 body bytes, 64 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Welfare_DailyActivity_CS
+13:03:27  INFO       -> PVZ.Cmd.Cmd_Welfare_DailyActivity_SC (558 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_Welfare_DailyActivity_SC           (558 body bytes, 611 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:27  INFO       activity stat: activity=1 -> hdfubenIds=[1, 2, 3, 4, 5, 6]
+13:03:27  INFO       -> PVZ.Cmd.FlexibleActivity_1 (24 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (24 body bytes, 66 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:27  INFO       activity stat: activity=2 -> hdfubenIds=[7, 8, 9, 10, 11, 12]
+13:03:27  INFO       -> PVZ.Cmd.FlexibleActivity_1 (24 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (24 body bytes, 66 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:27  INFO       activity stat: activity=3 -> hdfubenIds=[18, 19, 20, 21, 22]
+13:03:27  INFO       -> PVZ.Cmd.FlexibleActivity_1 (22 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (22 body bytes, 64 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:27  INFO       activity stat: activity=4 -> hdfubenIds=[13, 14, 15, 16, 17]
+13:03:27  INFO       -> PVZ.Cmd.FlexibleActivity_1 (22 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (22 body bytes, 64 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Welfare_DailyActivity_CS
+13:03:27  INFO       -> PVZ.Cmd.Cmd_Welfare_DailyActivity_SC (558 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_Welfare_DailyActivity_SC           (558 body bytes, 611 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:27  INFO       activity stat: activity=1 -> hdfubenIds=[1, 2, 3, 4, 5, 6]
+13:03:27  INFO       -> PVZ.Cmd.FlexibleActivity_1 (24 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (24 body bytes, 66 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:27  INFO       activity stat: activity=2 -> hdfubenIds=[7, 8, 9, 10, 11, 12]
+13:03:27  INFO       -> PVZ.Cmd.FlexibleActivity_1 (24 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (24 body bytes, 66 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:27  INFO       activity stat: activity=3 -> hdfubenIds=[18, 19, 20, 21, 22]
+13:03:27  INFO       -> PVZ.Cmd.FlexibleActivity_1 (22 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (22 body bytes, 64 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:27  INFO       activity stat: activity=4 -> hdfubenIds=[13, 14, 15, 16, 17]
+13:03:27  INFO       -> PVZ.Cmd.FlexibleActivity_1 (22 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (22 body bytes, 64 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Welfare_DailyActivity_CS
+13:03:27  INFO       -> PVZ.Cmd.Cmd_Welfare_DailyActivity_SC (558 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_Welfare_DailyActivity_SC           (558 body bytes, 611 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:27  INFO       activity stat: activity=1 -> hdfubenIds=[1, 2, 3, 4, 5, 6]
+13:03:27  INFO       -> PVZ.Cmd.FlexibleActivity_1 (24 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (24 body bytes, 66 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:27  INFO       activity stat: activity=2 -> hdfubenIds=[7, 8, 9, 10, 11, 12]
+13:03:27  INFO       -> PVZ.Cmd.FlexibleActivity_1 (24 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (24 body bytes, 66 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:27  INFO       activity stat: activity=3 -> hdfubenIds=[18, 19, 20, 21, 22]
+13:03:27  INFO       -> PVZ.Cmd.FlexibleActivity_1 (22 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (22 body bytes, 64 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:27  INFO       activity stat: activity=4 -> hdfubenIds=[13, 14, 15, 16, 17]
+13:03:27  INFO       -> PVZ.Cmd.FlexibleActivity_1 (22 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (22 body bytes, 64 total)
+13:03:27  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Welfare_DailyActivity_CS
+13:03:27  INFO       -> PVZ.Cmd.Cmd_Welfare_DailyActivity_SC (558 body bytes)
+13:03:27  INFO     -> S2C  PVZ.Cmd.Cmd_Welfare_DailyActivity_SC           (558 body bytes, 611 total)
+13:03:37  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:37  INFO       activity stat: activity=1 -> hdfubenIds=[1, 2, 3, 4, 5, 6]
+13:03:37  INFO       -> PVZ.Cmd.FlexibleActivity_1 (24 body bytes)
+13:03:37  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (24 body bytes, 66 total)
+13:03:37  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:37  INFO       activity stat: activity=2 -> hdfubenIds=[7, 8, 9, 10, 11, 12]
+13:03:37  INFO       -> PVZ.Cmd.FlexibleActivity_1 (24 body bytes)
+13:03:37  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (24 body bytes, 66 total)
+13:03:37  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:37  INFO       activity stat: activity=3 -> hdfubenIds=[18, 19, 20, 21, 22]
+13:03:37  INFO       -> PVZ.Cmd.FlexibleActivity_1 (22 body bytes)
+13:03:37  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (22 body bytes, 64 total)
+13:03:37  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:37  INFO       activity stat: activity=4 -> hdfubenIds=[13, 14, 15, 16, 17]
+13:03:37  INFO       -> PVZ.Cmd.FlexibleActivity_1 (22 body bytes)
+13:03:37  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (22 body bytes, 64 total)
+13:03:37  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_SignIn_GetRewardList_CS
+13:03:37  INFO       -> PVZ.Cmd.Cmd_SignIn_GetRewardList_SC (320 body bytes)
+13:03:37  INFO     -> S2C  PVZ.Cmd.Cmd_SignIn_GetRewardList_SC            (320 body bytes, 372 total)
+13:03:37  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_SignIn_GetInfo_CS
+13:03:37  INFO       -> PVZ.Cmd.Cmd_SignIn_GetInfo_SC (12 body bytes)
+13:03:37  INFO     -> S2C  PVZ.Cmd.Cmd_SignIn_GetInfo_SC                  (12 body bytes, 57 total)
+13:03:37  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_OnlineReward_GetInfo_CS
+13:03:37  INFO       -> PVZ.Cmd.Cmd_OnlineReward_GetInfo_SC (149 body bytes)
+13:03:37  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_GetInfo_SC            (149 body bytes, 201 total)
+13:03:38  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=44 cmdName=PVZ.Cmd.Cmd_OnlineReward_TakeReward_CS
+13:03:38  INFO       -> PVZ.Cmd.Cmd_SyncCoin_SC (4 body bytes)
+13:03:38  INFO     -> S2C  PVZ.Cmd.Cmd_SyncCoin_SC                        (4 body bytes, 43 total)
+13:03:38  INFO       -> PVZ.Cmd.Cmd_SyncPresentTicket_SC (5 body bytes)
+13:03:38  INFO     -> S2C  PVZ.Cmd.Cmd_SyncPresentTicket_SC               (5 body bytes, 53 total)
+13:03:38  INFO       -> PVZ.Cmd.Cmd_Item_Update_SC (10 body bytes)
+13:03:38  INFO     -> S2C  PVZ.Cmd.Cmd_Item_Update_SC                     (10 body bytes, 52 total)
+13:03:38  INFO       -> PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC (22 body bytes)
+13:03:38  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC         (22 body bytes, 76 total)
+13:03:38  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=1055 cmdName=PVZ.Cmd.Cmd_ClientDownLog_CS
+13:03:38  INFO       -> PVZ.Cmd.Cmd_ClientDownLog_SC (0 body bytes)
+13:03:38  INFO     -> S2C  PVZ.Cmd.Cmd_ClientDownLog_SC                   (0 body bytes, 44 total)
+13:03:38  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=1052 cmdName=PVZ.Cmd.Cmd_ClientDownLog_CS
+13:03:38  INFO       -> PVZ.Cmd.Cmd_ClientDownLog_SC (0 body bytes)
+13:03:38  INFO     -> S2C  PVZ.Cmd.Cmd_ClientDownLog_SC                   (0 body bytes, 44 total)
+13:03:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=44 cmdName=PVZ.Cmd.Cmd_OnlineReward_TakeReward_CS
+13:03:39  INFO       -> PVZ.Cmd.Cmd_SyncCoin_SC (4 body bytes)
+13:03:39  INFO     -> S2C  PVZ.Cmd.Cmd_SyncCoin_SC                        (4 body bytes, 43 total)
+13:03:39  INFO       -> PVZ.Cmd.Cmd_SyncPresentTicket_SC (5 body bytes)
+13:03:39  INFO     -> S2C  PVZ.Cmd.Cmd_SyncPresentTicket_SC               (5 body bytes, 53 total)
+13:03:39  INFO       -> PVZ.Cmd.Cmd_Item_Update_SC (10 body bytes)
+13:03:39  INFO     -> S2C  PVZ.Cmd.Cmd_Item_Update_SC                     (10 body bytes, 52 total)
+13:03:39  INFO       -> PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC (22 body bytes)
+13:03:39  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC         (22 body bytes, 76 total)
+13:03:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=1055 cmdName=PVZ.Cmd.Cmd_ClientDownLog_CS
+13:03:39  INFO       -> PVZ.Cmd.Cmd_ClientDownLog_SC (0 body bytes)
+13:03:39  INFO     -> S2C  PVZ.Cmd.Cmd_ClientDownLog_SC                   (0 body bytes, 44 total)
+13:03:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=1052 cmdName=PVZ.Cmd.Cmd_ClientDownLog_CS
+13:03:39  INFO       -> PVZ.Cmd.Cmd_ClientDownLog_SC (0 body bytes)
+13:03:39  INFO     -> S2C  PVZ.Cmd.Cmd_ClientDownLog_SC                   (0 body bytes, 44 total)
+13:03:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=44 cmdName=PVZ.Cmd.Cmd_OnlineReward_TakeReward_CS
+13:03:39  INFO       -> PVZ.Cmd.Cmd_SyncCoin_SC (4 body bytes)
+13:03:39  INFO     -> S2C  PVZ.Cmd.Cmd_SyncCoin_SC                        (4 body bytes, 43 total)
+13:03:39  INFO       -> PVZ.Cmd.Cmd_SyncPresentTicket_SC (5 body bytes)
+13:03:39  INFO     -> S2C  PVZ.Cmd.Cmd_SyncPresentTicket_SC               (5 body bytes, 53 total)
+13:03:39  INFO       -> PVZ.Cmd.Cmd_Item_Update_SC (10 body bytes)
+13:03:39  INFO     -> S2C  PVZ.Cmd.Cmd_Item_Update_SC                     (10 body bytes, 52 total)
+13:03:39  INFO       -> PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC (24 body bytes)
+13:03:39  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC         (24 body bytes, 78 total)
+13:03:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=1055 cmdName=PVZ.Cmd.Cmd_ClientDownLog_CS
+13:03:39  INFO       -> PVZ.Cmd.Cmd_ClientDownLog_SC (0 body bytes)
+13:03:39  INFO     -> S2C  PVZ.Cmd.Cmd_ClientDownLog_SC                   (0 body bytes, 44 total)
+13:03:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=1052 cmdName=PVZ.Cmd.Cmd_ClientDownLog_CS
+13:03:39  INFO       -> PVZ.Cmd.Cmd_ClientDownLog_SC (0 body bytes)
+13:03:39  INFO     -> S2C  PVZ.Cmd.Cmd_ClientDownLog_SC                   (0 body bytes, 44 total)
+13:03:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=44 cmdName=PVZ.Cmd.Cmd_OnlineReward_TakeReward_CS
+13:03:39  INFO       -> PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC (2 body bytes)
+13:03:39  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC         (2 body bytes, 56 total)
+13:03:40  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=44 cmdName=PVZ.Cmd.Cmd_OnlineReward_TakeReward_CS
+13:03:40  INFO       -> PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC (2 body bytes)
+13:03:40  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC         (2 body bytes, 56 total)
+13:03:40  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=44 cmdName=PVZ.Cmd.Cmd_OnlineReward_TakeReward_CS
+13:03:40  INFO       -> PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC (2 body bytes)
+13:03:40  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC         (2 body bytes, 56 total)
+13:03:40  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=44 cmdName=PVZ.Cmd.Cmd_OnlineReward_TakeReward_CS
+13:03:40  INFO       -> PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC (2 body bytes)
+13:03:40  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC         (2 body bytes, 56 total)
+13:03:40  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=44 cmdName=PVZ.Cmd.Cmd_OnlineReward_TakeReward_CS
+13:03:40  INFO       -> PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC (2 body bytes)
+13:03:40  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC         (2 body bytes, 56 total)
+13:03:41  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=44 cmdName=PVZ.Cmd.Cmd_OnlineReward_TakeReward_CS
+13:03:41  INFO       -> PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC (2 body bytes)
+13:03:41  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC         (2 body bytes, 56 total)
+13:03:41  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=44 cmdName=PVZ.Cmd.Cmd_OnlineReward_TakeReward_CS
+13:03:41  INFO       -> PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC (2 body bytes)
+13:03:41  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC         (2 body bytes, 56 total)
+13:03:41  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=44 cmdName=PVZ.Cmd.Cmd_OnlineReward_TakeReward_CS
+13:03:41  INFO       -> PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC (2 body bytes)
+13:03:41  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC         (2 body bytes, 56 total)
+13:03:41  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=44 cmdName=PVZ.Cmd.Cmd_OnlineReward_TakeReward_CS
+13:03:41  INFO       -> PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC (2 body bytes)
+13:03:41  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_TakeReward_SC         (2 body bytes, 56 total)
+13:03:42  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Welfare_GetInfo_CS
+13:03:42  INFO       -> PVZ.Cmd.Cmd_Welfare_GetInfo_SC (325 body bytes)
+13:03:42  INFO     -> S2C  PVZ.Cmd.Cmd_Welfare_GetInfo_SC                 (325 body bytes, 372 total)
+13:03:45  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Welfare_DailyActivity_CS
+13:03:45  INFO       -> PVZ.Cmd.Cmd_Welfare_DailyActivity_SC (558 body bytes)
+13:03:45  INFO     -> S2C  PVZ.Cmd.Cmd_Welfare_DailyActivity_SC           (558 body bytes, 611 total)
+13:03:45  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=859 cmdName=PVZ.Cmd.Cmd_ClientDownLog_CS
+13:03:45  INFO       -> PVZ.Cmd.Cmd_ClientDownLog_SC (0 body bytes)
+13:03:45  INFO     -> S2C  PVZ.Cmd.Cmd_ClientDownLog_SC                   (0 body bytes, 44 total)
+13:03:45  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_GetLevelRewardInfo_CS
+13:03:45  INFO       -> PVZ.Cmd.Cmd_GetLevelRewardInfo_SC (0 body bytes)
+13:03:45  INFO     -> S2C  PVZ.Cmd.Cmd_GetLevelRewardInfo_SC              (0 body bytes, 49 total)
+13:03:45  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=28 cmdName=PVZ.Cmd.Cmd_VipInfo_CS
+13:03:45  INFO       -> PVZ.Cmd.Cmd_VipInfo_SC (29 body bytes)
+13:03:45  INFO     -> S2C  PVZ.Cmd.Cmd_VipInfo_SC                         (29 body bytes, 67 total)
+13:03:45  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_PVZPrivilege_CS
+13:03:45  INFO       -> PVZ.Cmd.Cmd_PVZPrivilege_SC (413 body bytes)
+13:03:45  INFO     -> S2C  PVZ.Cmd.Cmd_PVZPrivilege_SC                    (413 body bytes, 457 total)
+13:03:45  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=38 cmdName=PVZ.Cmd.Cmd_TD_GetProductInfo_CS
+13:03:45  INFO       -> PVZ.Cmd.Cmd_TD_GetProductInfo_SC (0 body bytes)
+13:03:45  INFO     -> S2C  PVZ.Cmd.Cmd_TD_GetProductInfo_SC               (0 body bytes, 48 total)
+13:03:45  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Welfare_GetInfo_CS
+13:03:45  INFO       -> PVZ.Cmd.Cmd_Welfare_GetInfo_SC (325 body bytes)
+13:03:45  INFO     -> S2C  PVZ.Cmd.Cmd_Welfare_GetInfo_SC                 (325 body bytes, 372 total)
+13:03:45  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:45  INFO       activity stat: activity=1 -> hdfubenIds=[1, 2, 3, 4, 5, 6]
+13:03:45  INFO       -> PVZ.Cmd.FlexibleActivity_1 (24 body bytes)
+13:03:45  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (24 body bytes, 66 total)
+13:03:45  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:45  INFO       activity stat: activity=2 -> hdfubenIds=[7, 8, 9, 10, 11, 12]
+13:03:45  INFO       -> PVZ.Cmd.FlexibleActivity_1 (24 body bytes)
+13:03:45  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (24 body bytes, 66 total)
+13:03:45  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:45  INFO       activity stat: activity=3 -> hdfubenIds=[18, 19, 20, 21, 22]
+13:03:45  INFO       -> PVZ.Cmd.FlexibleActivity_1 (22 body bytes)
+13:03:45  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (22 body bytes, 64 total)
+13:03:45  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:45  INFO       activity stat: activity=4 -> hdfubenIds=[13, 14, 15, 16, 17]
+13:03:45  INFO       -> PVZ.Cmd.FlexibleActivity_1 (22 body bytes)
+13:03:45  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (22 body bytes, 64 total)
+13:03:45  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=1239 cmdName=PVZ.Cmd.Cmd_ClientDownLog_CS
+13:03:45  INFO       -> PVZ.Cmd.Cmd_ClientDownLog_SC (0 body bytes)
+13:03:45  INFO     -> S2C  PVZ.Cmd.Cmd_ClientDownLog_SC                   (0 body bytes, 44 total)
+13:03:50  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:50  INFO       activity stat: activity=1 -> hdfubenIds=[1, 2, 3, 4, 5, 6]
+13:03:50  INFO       -> PVZ.Cmd.FlexibleActivity_1 (24 body bytes)
+13:03:50  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (24 body bytes, 66 total)
+13:03:50  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:50  INFO       activity stat: activity=2 -> hdfubenIds=[7, 8, 9, 10, 11, 12]
+13:03:50  INFO       -> PVZ.Cmd.FlexibleActivity_1 (24 body bytes)
+13:03:50  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (24 body bytes, 66 total)
+13:03:50  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:50  INFO       activity stat: activity=3 -> hdfubenIds=[18, 19, 20, 21, 22]
+13:03:50  INFO       -> PVZ.Cmd.FlexibleActivity_1 (22 body bytes)
+13:03:50  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (22 body bytes, 64 total)
+13:03:50  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=55 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+13:03:50  INFO       activity stat: activity=4 -> hdfubenIds=[13, 14, 15, 16, 17]
+13:03:50  INFO       -> PVZ.Cmd.FlexibleActivity_1 (22 body bytes)
+13:03:50  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1                     (22 body bytes, 64 total)
+13:03:50  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_SignIn_GetInfo_CS
+13:03:50  INFO       -> PVZ.Cmd.Cmd_SignIn_GetInfo_SC (12 body bytes)
+13:03:50  INFO     -> S2C  PVZ.Cmd.Cmd_SignIn_GetInfo_SC                  (12 body bytes, 57 total)
+13:03:50  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_OnlineReward_GetInfo_CS
+13:03:50  INFO       -> PVZ.Cmd.Cmd_OnlineReward_GetInfo_SC (149 body bytes)
+13:03:50  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_GetInfo_SC            (149 body bytes, 201 total)
+13:03:50  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Welfare_DailyActivity_CS
+13:03:50  INFO       -> PVZ.Cmd.Cmd_Welfare_DailyActivity_SC (558 body bytes)
+13:03:50  INFO     -> S2C  PVZ.Cmd.Cmd_Welfare_DailyActivity_SC           (558 body bytes, 611 total)
+13:03:50  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=859 cmdName=PVZ.Cmd.Cmd_ClientDownLog_CS
+13:03:50  INFO       -> PVZ.Cmd.Cmd_ClientDownLog_SC (0 body bytes)
+13:03:50  INFO     -> S2C  PVZ.Cmd.Cmd_ClientDownLog_SC                   (0 body bytes, 44 total)
+13:03:54  INFO   === client disconnected: ('127.0.0.1', 51603) ===

@@ -1,0 +1,48 @@
+id	name
+100	Pea projectile
+200	Melon projectile
+300	Bamboo Shoot projectile
+400	Little Magic Vine bullet
+500	Bloomerang
+600	Cabbage
+700	Repeater Plant Food projectile
+800	Sphinx fireball
+900	Large Cabbage
+1000	Large Pea projectile
+1100	Arrow
+1200	Rocket
+1300	Magic Vine Plant Food projectile
+1400	Carrocket
+1500	Carrot Rocket Plant Food bullet
+1600	Carrot minigame projectile
+1700	Corn projectile
+1800	Corn projectile 2
+1900	Threepeater bullet
+2000	Threepeater Plant Food projectile
+2100	Coconut Cannon normal projectile
+2200	Coconut Cannon Plant Food bullet
+2300	Pomegranate normal projectile
+2400	Pomegranate Plant Food projectile
+2500	Daffodil normal projectile
+2600	Pineapple projectile
+2700	Pineapple Plant Food bullet
+2800	Musket Zombie projectile
+2900	Winter Melon projectile
+3000	Winter Melon Plant Food bullet
+3100	Laser Bean projectile
+3200	Laser Bean Plant Food projectile
+3300	Ganoderma projectile
+3400	Banana projectile
+3500	Banana Plant Food projectile
+3600	Mecha-Gargantuar laser
+3700	Nitating Shroom projectile
+3800	Prism Grass normal projectile
+3900	Electric Sea-Pine normal bullet
+4000	Electric Sea-shroom Plant Food projectile
+4100	Bubble Flower normal projectile
+4200	Snow Pea bullet
+4300	Melon-pult Plant Food projectile
+4400	Spikeweed normal projectile
+4500	Spikeweed Plant Food projectile
+4600	Magic Shroom normal projectile
+4700	Magic Shroom Plant Food projectile

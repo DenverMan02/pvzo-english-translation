@@ -1,0 +1,7 @@
+{
+  "target": "D:\\pvzol本地最新最新ol\\pvzol本地\\launcher.py",
+  "backup": "D:\\pvzol本地最新最新ol\\修复备份\\20261008-095119-窗口居中",
+  "before_sha256": "af2319e1bd859eb6dc085ea84cb93b11a77791fd7a06d735b64d608bef035baa",
+  "after_sha256": "73535d1ae72f2b2e9d9f284e466d15b770a4619b076f0ea8d7b3017c93c42b79",
+  "verification": "Portable runtime verified main and dialog centers, work area, negative monitor coordinates and dynamic validation layout"
+}

@@ -1,0 +1,14 @@
+{
+  "issue": "combat-06",
+  "files": [
+    {
+      "relative": "pvzol本地/PvZ-Server-PoC/guild_local.py",
+      "old_sha256": "cd718f5bb5ec60abe6532e2b6a4f13a1418f7fb9677fa08ba1a9ce6139eac8e3",
+      "new_sha256": "b6c2aad89a13552acca52e686f0d5ba823d50b12d649a7492cd2f938bad4df76",
+      "prepared_file": "C:\\Users\\komi\\Documents\\Codex\\2026-10-07\\d-pvzol-ol-2\\work\\repair\\game\\PvZ-Server-PoC\\guild_local.py"
+    }
+  ],
+  "tests": [
+    "test_17_guild_capacity: last-seat double approval passed"
+  ]
+}

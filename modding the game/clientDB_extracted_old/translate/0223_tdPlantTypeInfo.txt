@@ -1,0 +1,92 @@
+id	name	desc	introduction
+1200	Peashooter	Shoots peas at the enemy	Peashooters are your first line of defense. They shoot peas at attacking zombies.
+1210	Repeater	Shoots two peas at the enemy	Repeaters fire two peas at one time.
+1300	Wall-nut	Blocks off zombies and protects your other plants	Wall-nuts have hard shells which you can use to protect your other plants.
+1100	Sunflower	Gives you additional sun	Sunflowers are essential for you to produce extra sun. Try planting as many as you can!
+1500	Potato Mine	Explodes on contact, but takes time to arm itself	Potato Mines explode on contact, but they take time to arm. Plant them ahead of zombies.
+1600	Bloomerang	Hits up to three targets in its lane, twice	Bloomerangs can hit multiple targets in their lane, twice each coming and going!
+1400	Cabbage-pult	Hurls cabbages over obstacles at the enemy	Cabbage-pults hurl cabbages at the enemy.
+1110	Twin Sunflower	Gives twice as much sun as a sunflower	Twin Sunflowers give twice as much sun as a normal sunflower.
+1800	Bonk Choy	Rapidly punches enemies ahead or behind	Bonk Choys rapidly punch nearby enemies that are ahead or behind them.
+1700	Iceberg Lettuce	Freezes zombies that step on it, and extinguishes flames	Iceberg Lettuces freeze a zombie when stepped on.
+1900	Grave Buster	Plant it on a grave to remove the grave	Grave Busters consume graves they're planted on.
+2000	Magic Beanstalk	Launches armor-breaking balls of energy	Magic Beanstalks launch balls of energy to more easily destroy armor.
+3100	Bruce Bamboo	Strikes zombies in 8 surrounding tiles	Bruce Bamboos attack zombies that get within a 3x3 radius, taking them down one at a time.
+3300	Explodelion	Repeatedly explodes in a 3x3 area	Explodelions scatter explosive seeds around themselves, dealing damage in a 3x3 area.
+3200	Carrocket	Launches carrot rockets, aimed at the back	Carrockets launch carrot rockets, which target the right-most zombie.
+3400	Wax Gourd	Rolls along paths, dealing huge damage to zombies	Wax Gourds roll along paths, dealing huge damage to zombies.
+3500	Sod	Acts as a standard tile	Sods fill in the Underground Palace's paths, allowing plants to be planted there. 
+3600	Venus Flytrap	Bites a zombie, trapping it	Venus Flytraps bite a zombie, keeping it trapped until one of them dies.
+3700	Squash	Squashes zombies	Squashes will smash the first zombie that gets close.
+3800	Wall-nut Bowling	Rolls down the lane, bouncing from zombie to zombie	Wall-nut Bowling rolls down the lane, ricocheting off of zombies to deal heavy damage.
+3850	Explode-O-Nut Bowling	Rolls down the lane, exploding on contact	Explode-O-Nut Bowling rolls down the lane, exploding on contact with a zombie.
+3900	Snapdragon	Breathes fire in an area in front of it	Snapdragons breathe fire that causes damage in 6 adjacent tiles.
+4000	Carrocket (Mini-game)	None	None
+4100	Spikeweed	Breaks 1 rolling object, hurts zombies that step on it	Spikeweeds destroy one rolling zombie and hurt any zombies that step on them.
+4200	Spikerock	Breaks 3 rolling objects, hurts zombies that step on it	Spikerocks destroy multiple rolling zombies and damage zombies that walk over them.
+4300	Kernel-pult	Flings corn kernels and butter at zombies	Kernel-pults fling corn kernels and butter at zombies.
+4400	Spring Bean	Bounces zombies back and into nearby water	Spring Beans bounce back zombies that get too close. Will bounce them into water if nearby.
+4500	Threepeater	Shoots peas in three lanes	Threepeaters shoot peas in three lanes.
+4600	Coconut Cannon	Click on the cannon to fire an explosive coconut	Coconut Cannons fire down a single lane, causing a medium explosion on impact.
+4700	Pomegranate-pult	Lobs anti-armor pomegranates	Pomegranate-pults lob anti-armor pomegranates, being ineffective against unarmored enemies.
+4800	Narcissus	Shoots extinguishing bubbles	Narcissi shoot bubbles, extinguishing any fire that may be a danger to your plants.
+4900	Durian	Defends while dealing damage to zombies attacking it.	Durians are defensive plants that deal damage to zombies attacking them.
+5000	Pineapple Cannon	Lobs pineapples at the back	Pineapple Cannons lob pineapples to the back of the lawn, dealing more damage than a carrot would.
+5100	Reset	Reset plant deck	Reset plant deck
+5200	Power Shovel	Fills a crater	Use Power Shovel in Beghouled to remove plants and fill in craters!
+5300	Snow Pea	Shoots frozen peas that damage and slow zombies	Snow Peas fire frozen peas making it hard for zombies to advance.
+5400	Split Pea	Shoots peas forward and backward	Split Peas shoot peas forward and backwards.
+5500	Pea Pod	Plant multiple times on the same spot to multiply damage	Pea Pods can be planted in the same space for up to 5 times the destruction.
+5600	Tall-nut	Heavy-duty wall that blocks low flying zombies	Tall-nuts are heavy-duty wall plants that block low flying zombies.
+5700	Cherry Bomb	Blows up all zombies in a medium area	Cherry Bombs can blow up all zombies in an area. They have a short fuse so plant them near zombies.
+5900	Chili Bean	Zombies that eat it are defeated and release gas	Chili Beans deliver a crippling bout of gastrointestinal distress.
+6000	Torchwood	Turns peas into fireballs	Torchwoods turn peas that pass through them into fireballs that deal twice as much damage.
+6100	Lightning Reed	Zaps several chickens or zombies per strike	Lightning Reeds shoot lightning at the nearest zombie up to one lane away. The bolt will then arc and hit other zombies.
+6200	Starfruit	Shoots stars in 5 directions	Starfruits shoot stars in 5 directions.
+6300	Laser Bean	Shoots a laser that pierces through zombies	Laser Beans fire down a lane, hitting all zombies ahead of it.
+6400	Citron	Shoots powerful balls of plasma	Citrons shoot powerful balls of plasma.
+6500	Infi-nut	A weaker Wall-nut that regains health over time	Infi-nuts are weaker than Wall-nuts, but they can regain health over time.
+6600	Magnifying Grass	Click to spend sun for a powerful attack	Magnifying Grass turns sun into a bolt of colorful damage.
+6700	Jalapeno	Destroys an entire lane of zombies	Jalapenos destroy an entire lane of zombies.
+6800	Snow Pea	Shoots frozen peas that damage and slow zombies	Snow Peas fire frozen peas making it hard for zombies to advance.
+6900	Winter Melon	Does heavy damage and slows groups of zombies	Winter Melons do heavy damage and slow groups of zombies.
+7100	Blover	Blows away all flying and floating zombies	Blovers blow away all zombies in the air.
+7200	E.M.Peach	Disables all machines in an area	E.M.Peaches explode and disable all machines in an area.
+7400	Nitro-shroom	Summons mini nitro-shrooms to explode zombies	Nitro-shrooms summon miniature versions of themselves to hop towards zombies, detonating on contact.
+7500	Chomper	Devours a zombie, then chews on it for a while	Chompers can devour a zombie whole, but they are vulnerable while chewing.
+7600	Tile Turnip	Creates a Power Tile	Tile Turnips create a Power Tile on planting.
+7700	Melon-pult	Does heavy damage to groups of zombies	Melon-pults do heavy damage to groups of zombies.
+7800	Cattail	Attacks farthest left target in any lane	Cattails fire homing spikes at targets that are the closest to home.
+7900	Ganoderma	Shoots spores, removes goop, decays	Ganodermas shoot spores at zombies, remove goop, and decay over time.
+8000	Banana Tree	Launches medium-range leaves	Banana Trees launch medium-range leaves at zombies, acting as boomerangs.
+8100	Oxygen Algae	Provides plants with oxygen	Oxygen Algaes provide nearby plants with oxygen, and can be upgraded for 75, 125, and 200 sun respectively.
+8200	Garlic	Diverts zombies into other lanes, even underwater	Garlic diverts zombies into other lanes, even underwater.
+8300	Electric Anemone	Fires lightning to attack enemies	Electric Anemone strike zombies with lightning, dealing extra damage to bubbled zombies.
+8400	Bubble Flower	Shoots zombie-trapping bubbles	Bubble Flowers trap zombies in bubbles from a distance, which can then be electrocuted.
+8500	Sea Starfruit	Rolls down the lane, overturning armored zombies	Sea Starfruits roll down the lane, overturning armored zombies.
+8600	Lychee Drill	Unearths underground zombies	Lychee Drills unearth underground zombies, allowing them to be attacked normally.
+8700	Sea Anemone	Attacks every zombie on the column	Sea Anemone attack every zombie on the column.
+8800	Mine Fruit	Attacks large objects	Mine Fruits attack large objects
+8900	Rose Swordfighter	Stabs, and finishes the job with a powerful strike	Rose Swordfighters stab zombies, and deliver an extra powerful finishing blow to weakened zombies.
+9000	Clivia	Shoots and heals	Clivias shoot zombies, and heal plants.
+9100	Sap-fling	Creates zombie-slowing puddles of sap	Sap-flings create zombie-slowing puddles of sap.
+9200	Acid Lemon	Corrodes metal armor	Acid Lemons corrode metal armor with their extra sour lemonade.
+9300	Magic-shroom	Launches cards to attack both ahead and behind	Magic-shrooms launch playing cards to attack zombies both ahead and behind, prioritizing behind.
+9400	Fire Peashooter	Shoots flaming peas	Fire Peashooters shoot flaming peas down the lane.
+9500	Ghost Pepper	Haunts all zombies that pass by and explodes after a limited time	Ghost Peppers haunt zombies that pass by and explode after a limited time.
+9600	Guacodile	Shoots seeds, will rush all zombies ahead of him when attacked	Guacodiles fire seeds from a distance. When attacked they will rush off the lawn biting any zombies they encounter.
+9700	Hurrikale	Blows a chilling wind that pushes back zombies in lane	Hurrikales push back all zombies in their lane with a chilling wind.
+9800	Plantern	Illuminates fog and invisible enemies	Plantern illuminates fog and invisible zombies, making them visible again.
+9900	Oak Archer	Fires powerful arrows	Oak Archers fire powerful arrows to attack zombies ahead.
+1120	Homing Thistle	Attacks farthest left target in any lane	Homing Thistles fire seeking shots at targets that are the closest to home.
+1130	Pepper-pult	Lobs flaming peppers at zombies	Pepper-pults lob flaming peppers at zombies.
+1140	Pumpkin Witch	Lobs powerful mind-controlling pumpkins	Pumpkin Witches lob pumpkins which transform and control zombies, making them fight by your side.
+1150	Resistant Radish	Blocks off zombies and resists Kung Fu magic	Resistant Radishes are somewhat sturdy walls that are capable of resisting Kung Fu magic, resisting being pulled.
+1160	Toadstool	Gulps down zombies whole, then produces sun	Toadstools gulp down zombies whole, then produce sun.
+1170	Blooming Heart	Lobs projectiles that do more damage the more they hit	Blooming Hearts lob projectiles that infatuate zombies, causing increasing damage the more they hit.
+1180	Red Stinger	Fires shots at full force when close to home and becomes more defensive further from it	Red Stingers fire shots at full force when close to home and become more defensive the further from it they get.
+1220	Electric Blueberry	Randomly electrocutes zombies	Electric Blueberries randomly electrocute zombies every so often.
+1190	A.K.E.E.	Lobs projectiles that bounce from zombie to zombie	A.K.E.E.s lob projectiles that bounce from zombie to zombie.
+1230	Agave	Pierces and breaks armor	Agaves deliver piercing strikes which quickly destroy armor.
+1240	Moonflower	Gives sun and powers up adjacent shadow plants	Moonflowers radiate a glow that powers up adjacent shadow plants.
+1250	Aceparagus	Attacks in adjacent lanes, then reloads	Aceparagus attack in adjacent lanes, before needing to reload.

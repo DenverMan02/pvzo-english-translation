@@ -1,0 +1,143 @@
+{
+  "timestamp": "20261001_204706",
+  "gameRoot": "D:\\pvzol本地最新最新ol\\pvzol本地",
+  "backup": "D:\\pvzol本地最新最新ol\\pvzol本地\\_codex_lab_oldanchor127_full_backup_20261001_204706",
+  "moduleLab": {
+    "size": 13124,
+    "md5": "0a557d8de2ff165eb3d6a51369804608",
+    "hashCopy": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleLab_0a557d8de2ff165eb3d6a51369804608.swf"
+  },
+  "assets": [
+    {
+      "name": "10000.png",
+      "length": 24597,
+      "sha256": "060f8d1a8bedcb47b47367be4bf3034df6e6f5946ec74351f1055774332f3674"
+    },
+    {
+      "name": "100000.png",
+      "length": 26206,
+      "sha256": "5d98babf21851ad38b7d96b00989083a5db5efacd5bbed8b3e5ba9286149c3f4"
+    },
+    {
+      "name": "110000.png",
+      "length": 27073,
+      "sha256": "e49fe8974477abd3bb0450cb834084d576d12e3c7bc71e8f001af42dfbc05f5a"
+    },
+    {
+      "name": "120000.png",
+      "length": 28774,
+      "sha256": "c2e84d01b2f85f43009a51f5b961032105993778383e82ae048b2d6d1c1e6e83"
+    },
+    {
+      "name": "130000.png",
+      "length": 25337,
+      "sha256": "dd85eddd12eba6f689750711c9cc81a8ec4933435a9bfdf3756d9770ca572fe4"
+    },
+    {
+      "name": "180000.png",
+      "length": 27833,
+      "sha256": "a501703b0e655e7f6f156c2eef43cd9053d5709381dcdb15234c9c4a97dd6ae5"
+    },
+    {
+      "name": "20000.png",
+      "length": 26213,
+      "sha256": "1c1cded456d0d70676a2b6097d846216612a42fd10ced78821936e8f0d42c4fe"
+    },
+    {
+      "name": "200000.png",
+      "length": 23896,
+      "sha256": "e57eb1eb3e2489c385edb95068fbd192fd2f2e7454fdcfe9c3cce85c5524b94d"
+    },
+    {
+      "name": "210000.png",
+      "length": 29426,
+      "sha256": "d99f7ef5352b4ff73ff0629718b4c0e52279b7bba030557842cb4de10eaaa0b1"
+    },
+    {
+      "name": "220000.png",
+      "length": 28890,
+      "sha256": "3c8300fef7a04ce435cddc99c67231346dda48403315657998a4038b21a72bc1"
+    },
+    {
+      "name": "230000.png",
+      "length": 27213,
+      "sha256": "03d4819bcba418bd90c5cf55dfce40991237332279c4f937821b80130117c641"
+    },
+    {
+      "name": "30000.png",
+      "length": 27283,
+      "sha256": "fe191eaa27e56da7ed6aeccd02cb4947008a499432d027b18399ccbef3b72ba4"
+    },
+    {
+      "name": "300000.png",
+      "length": 25732,
+      "sha256": "ae8132aa265b8dad4aede359902eed52c5096a453b8734864d28c364f2147c7b"
+    },
+    {
+      "name": "310000.png",
+      "length": 31270,
+      "sha256": "7e3a80139d97b4a22ab254640869acb36af286d6686abdca48d3e4a5be399904"
+    },
+    {
+      "name": "320000.png",
+      "length": 27176,
+      "sha256": "37af8e7a19c2f4f2fb34e0f33143a54e4be815ae566189a93e05352021de6af8"
+    },
+    {
+      "name": "330000.png",
+      "length": 24315,
+      "sha256": "737e1852cb04064b00896238b0310303d866c833e6964d85d60baee7382baa66"
+    },
+    {
+      "name": "40000.png",
+      "length": 23894,
+      "sha256": "b19ffa1ddd4762cc511d947bb4ec50eb0913cd2b1862fd32eb539f0718d77d31"
+    },
+    {
+      "name": "400000.png",
+      "length": 26384,
+      "sha256": "f740def2df598e8007ace30295883d265490f16816edb09846e46dc9c5eaeae3"
+    },
+    {
+      "name": "410000.png",
+      "length": 30230,
+      "sha256": "32ee6de2dba5c49348503fbf4855eea450e725b96b7b5637b26b727f69b6bd63"
+    },
+    {
+      "name": "420000.png",
+      "length": 28001,
+      "sha256": "d4d57efb4dfad45aba2d38f3584c33eccc4148b6ec437eee35b1a3158b52a0a6"
+    },
+    {
+      "name": "430000.png",
+      "length": 25175,
+      "sha256": "e2b44780c7865a83007b72d29dbdf9dcdeda6d54b1c7d53c48f94889c5d4149e"
+    },
+    {
+      "name": "50000.png",
+      "length": 26062,
+      "sha256": "ae55c490c7176fe1fb6e3bcd1a2f2280b0146fa33d42ca6d7c01c5bcb77fc0fa"
+    },
+    {
+      "name": "60000.png",
+      "length": 27186,
+      "sha256": "a7c1b6587e2ca466d7d7a6faf10719aaed4999a375e254b4eea90848c5d0aced"
+    },
+    {
+      "name": "70000.png",
+      "length": 26872,
+      "sha256": "447165726a9c0b2b80ab787b3f234ec12f34e6e47175a053cf444c2c3fa91195"
+    },
+    {
+      "name": "80000.png",
+      "length": 26131,
+      "sha256": "448f8679ea035aca94e13d99fa3a7b3e5c5b443fc69c598878824f383ae8bc0e"
+    },
+    {
+      "name": "90000.png",
+      "length": 26118,
+      "sha256": "1d37784ab49ddff91852d49d3a489b4441a1ae6de60a461a015dfde9daa0d65d"
+    }
+  ],
+  "xmlEntry": "<file name=\"ModuleLab.swf\" size=\"13124\" ver=\"0a557d8de2ff165eb3d6a51369804608\" />"
+}

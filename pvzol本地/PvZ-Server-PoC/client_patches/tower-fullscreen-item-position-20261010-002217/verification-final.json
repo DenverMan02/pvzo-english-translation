@@ -1,0 +1,894 @@
+{
+  "passed": true,
+  "automated_test_count": 21,
+  "real_flash_ui_tested": false,
+  "account_requests_sent": 0,
+  "installation": {
+    "backup": "D:\\pvzol本地最新最新ol\\修复备份\\塔防全屏与道具位置-20261010-002217",
+    "patch": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC\\client_patches\\tower-fullscreen-item-position-20261010-002217",
+    "files": [
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleAct3years.swf",
+        "existed": true,
+        "before_sha256": "b7393d4715ea0f6e28c5ba0ff37cdc5ff0d847d9ef21e1fed11cb9cfc66078f5",
+        "after_sha256": "82c26e1d1be63dd78ba10df24b8b77d0748daa2309ca777e0d55c255cd1d150d"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleAct3years_dfb7b08572f84c386feeec4a43d05c61.swf",
+        "existed": true,
+        "before_sha256": "b7393d4715ea0f6e28c5ba0ff37cdc5ff0d847d9ef21e1fed11cb9cfc66078f5",
+        "after_sha256": "82c26e1d1be63dd78ba10df24b8b77d0748daa2309ca777e0d55c255cd1d150d"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleAct3years_250eddacb387b41c72d2dc59d60186d4.swf",
+        "existed": false,
+        "before_sha256": null,
+        "after_sha256": "82c26e1d1be63dd78ba10df24b8b77d0748daa2309ca777e0d55c255cd1d150d"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleBag.swf",
+        "existed": true,
+        "before_sha256": "7c4bff923b38a0b98fbb52a674d72653e8abc351d38b17ab0faf11ca594a4a9a",
+        "after_sha256": "e59ce295423dd781d169f0b2d31ad114851f99d8f5b6ea19981acbc8b59d0219"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleBag_0ebfeac56115494ceaf28933d3d28504.swf",
+        "existed": true,
+        "before_sha256": "7c4bff923b38a0b98fbb52a674d72653e8abc351d38b17ab0faf11ca594a4a9a",
+        "after_sha256": "e59ce295423dd781d169f0b2d31ad114851f99d8f5b6ea19981acbc8b59d0219"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleBag_c2c3adbbeea007e6dbb73c2e2ba6794b.swf",
+        "existed": true,
+        "before_sha256": "7c4bff923b38a0b98fbb52a674d72653e8abc351d38b17ab0faf11ca594a4a9a",
+        "after_sha256": "e59ce295423dd781d169f0b2d31ad114851f99d8f5b6ea19981acbc8b59d0219"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleBag_7fa3305508527661a70579e4999903f4.swf",
+        "existed": false,
+        "before_sha256": null,
+        "after_sha256": "e59ce295423dd781d169f0b2d31ad114851f99d8f5b6ea19981acbc8b59d0219"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard.swf",
+        "existed": true,
+        "before_sha256": "a8c2ba52139fee775512ac9fbaa41503e253f05854b49cfbc9df0d71e441c3b0",
+        "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_024f83990713bde2d3b9e40ae9d0cf0c.swf",
+        "existed": true,
+        "before_sha256": "15991b6a2c88348485c2d512c0235e2b15e0a0ec05c88cf7ca5de704b303a511",
+        "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_27687cfe6dac3cda5156ebdaf76684cb.swf",
+        "existed": true,
+        "before_sha256": "b3610a291ea0b8213a79464c83773db47311ddb3f38621ab3e973d5ec86527d5",
+        "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_5442f3d905d35737e357e571c83eda03.swf",
+        "existed": true,
+        "before_sha256": "a8c2ba52139fee775512ac9fbaa41503e253f05854b49cfbc9df0d71e441c3b0",
+        "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_70d7e3c8d7774fd835b339295af9d352.swf",
+        "existed": true,
+        "before_sha256": "a8c2ba52139fee775512ac9fbaa41503e253f05854b49cfbc9df0d71e441c3b0",
+        "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_b20e1ed46fb5ea15b3f03d276bd6697c.swf",
+        "existed": true,
+        "before_sha256": "a8c2ba52139fee775512ac9fbaa41503e253f05854b49cfbc9df0d71e441c3b0",
+        "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_d424e5aa36284e2e177cae812d8cc95f.swf",
+        "existed": true,
+        "before_sha256": "b3610a291ea0b8213a79464c83773db47311ddb3f38621ab3e973d5ec86527d5",
+        "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_dc9c6453a1f2a1c73f6e547cf7652a54.swf",
+        "existed": true,
+        "before_sha256": "b3610a291ea0b8213a79464c83773db47311ddb3f38621ab3e973d5ec86527d5",
+        "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_e3700b007bfe5dd2a7257211dff586e4.swf",
+        "existed": true,
+        "before_sha256": "b3610a291ea0b8213a79464c83773db47311ddb3f38621ab3e973d5ec86527d5",
+        "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_eb16745cb730f1bc07960fa05bdd5fde.swf",
+        "existed": true,
+        "before_sha256": "aff75b9d641577f005d413d6e04f078f44bb19cf5d5f6da23a1e4fd72d077474",
+        "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_efa0e0913a5921c7ca829a180065fdc3.swf",
+        "existed": true,
+        "before_sha256": "d4a2597cc08011a435e2e78a938cb54e035a6d1c21d62861c7d4ba9e4ddeed72",
+        "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_f38421f4e0c7b1b2727597c20b8a1b32.swf",
+        "existed": false,
+        "before_sha256": null,
+        "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleChat.swf",
+        "existed": true,
+        "before_sha256": "8ce176b6d90c32ae263d2c304f56ad0deac47160bd0b237c617deb856a3aa49d",
+        "after_sha256": "ab88f5e8abfc11c0e610be3ff45af86429974757dcfcdb933d91b8aa322fc399"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleChat_058398f2830b5da8574a0cc15acffc56.swf",
+        "existed": true,
+        "before_sha256": "8ce176b6d90c32ae263d2c304f56ad0deac47160bd0b237c617deb856a3aa49d",
+        "after_sha256": "ab88f5e8abfc11c0e610be3ff45af86429974757dcfcdb933d91b8aa322fc399"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleChat_a4c202dcdf4bfd9bbbf32575e7fa35eb.swf",
+        "existed": false,
+        "before_sha256": null,
+        "after_sha256": "ab88f5e8abfc11c0e610be3ff45af86429974757dcfcdb933d91b8aa322fc399"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleUnion.swf",
+        "existed": true,
+        "before_sha256": "0eadbc0247b7c6be7644d134538fc10f1faa240ec045fcd6e43bb5725916b2dc",
+        "after_sha256": "671f8c5786905b86bb339202918df941c505ac5aa0392fba7743239e25c749d2"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleUnion_a9cb80f845a121fdca897313518770df.swf",
+        "existed": true,
+        "before_sha256": "0eadbc0247b7c6be7644d134538fc10f1faa240ec045fcd6e43bb5725916b2dc",
+        "after_sha256": "671f8c5786905b86bb339202918df941c505ac5aa0392fba7743239e25c749d2"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleUnion_36d83f770b8e5f247428e3064482f787.swf",
+        "existed": false,
+        "before_sha256": null,
+        "after_sha256": "671f8c5786905b86bb339202918df941c505ac5aa0392fba7743239e25c749d2"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p.swf",
+        "existed": true,
+        "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+        "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_041205df680ecb63e34f6da5bacbfcf1.swf",
+        "existed": true,
+        "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+        "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_04d85414d9f7ef6add82a525a0475506.swf",
+        "existed": true,
+        "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+        "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_2f31414da4c6b9aff9be96e68029c65b.swf",
+        "existed": true,
+        "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+        "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_44d757b4fb708f31dad7a2394a1a360f.swf",
+        "existed": true,
+        "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+        "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_867dbb7ffa06e76c8e280fe312d5a976.swf",
+        "existed": true,
+        "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+        "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_c874590c49beaaf924c0395036c85119.swf",
+        "existed": true,
+        "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+        "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_cb7af05d4d2ddbe204ea4926772f3b92.swf",
+        "existed": true,
+        "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+        "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_ddd80a273668f4e746bbaa442bfc55f0.swf",
+        "existed": true,
+        "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+        "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_e90cc556a5e9f63b73ffa23b6fe21c34.swf",
+        "existed": true,
+        "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+        "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_136f07596f913cef93d35343a83626ec.swf",
+        "existed": false,
+        "before_sha256": null,
+        "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleTD_p.swf",
+        "existed": true,
+        "before_sha256": "77334d656ef2901535328d8e3f9d5a865bc3ac3f3709867d1e59012cd5c9834e",
+        "after_sha256": "a13f2bbc3751a9beb6b9de87691ae51f2eb0da62a41ffbf19fe4f5c7fa9de3c8"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleTD_p_becc987b9a7628ab304c08c8c1dea8dd.swf",
+        "existed": true,
+        "before_sha256": "47b21173e3761532411ca9e63a6f9a87218def8709df86430b6714dc37f98e4e",
+        "after_sha256": "a13f2bbc3751a9beb6b9de87691ae51f2eb0da62a41ffbf19fe4f5c7fa9de3c8"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleTD_p_1c16b189d057f81f222aab0f948139bd.swf",
+        "existed": false,
+        "before_sha256": null,
+        "after_sha256": "a13f2bbc3751a9beb6b9de87691ae51f2eb0da62a41ffbf19fe4f5c7fa9de3c8"
+      },
+      {
+        "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\fileVer.xml",
+        "existed": true,
+        "before_sha256": "93c82975b0072fe8c9cb4a171a4a876dba82fc0c39e3fc1a8d5aac425278df24",
+        "after_sha256": "8251717569c50b812fdaaa362982fbf5a7a7c45f9f613b4fbd0d6be9962ead51"
+      }
+    ],
+    "canonical_files": [
+      "ModuleAct3years.swf",
+      "ModuleBag.swf",
+      "ModuleCard.swf",
+      "ModuleChat.swf",
+      "ModuleUnion.swf",
+      "Game_p.swf",
+      "ModuleTD_p.swf"
+    ],
+    "count": 40,
+    "installed_at": "20261010-002217",
+    "save_or_server_files_modified": false
+  },
+  "checks": {
+    "bag": {
+      "passed": true,
+      "test_count": 7,
+      "menu_coordinate_scenarios": 150,
+      "explicit_position_scenarios": 5,
+      "chest_size_scenarios": 5,
+      "original_error_reproductions": 2,
+      "canonical_scan_files": 154,
+      "qpopup_definitions": 5,
+      "baseline_webroot": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\baseline",
+      "candidate_webroot": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot",
+      "real_flash_ui_tested": false,
+      "account_requests_sent": 0,
+      "results": [
+        {
+          "test": "__main__.BagActualBytecodeRegression.test_all_real_menu_candidates_follow_mouse_at_window_scales",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.BagActualBytecodeRegression.test_candidate_chest_view_uses_logical_size_at_all_scales",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.BagActualBytecodeRegression.test_every_other_body_header_pool_and_trait_remains_identical",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.BagActualBytecodeRegression.test_explicit_positions_and_disabled_actions_preserved",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.BagActualBytecodeRegression.test_menu_and_init_methods_have_valid_control_flow_stacks",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.BagActualBytecodeRegression.test_original_chest_init_reproduces_oversized_view",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.BagActualBytecodeRegression.test_original_menu_reproduces_physical_coordinate_error",
+          "status": "passed"
+        }
+      ]
+    },
+    "tower_structure": {
+      "passed": true,
+      "test_count": 3,
+      "failures": [],
+      "errors": [],
+      "baseline": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\baseline",
+      "candidate": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\tower",
+      "real_flash_ui_tested": false
+    },
+    "tower_behavior": {
+      "passed": true,
+      "test_count": 7,
+      "old_error_reproductions": 3,
+      "viewport_scenarios": 10,
+      "context_recovery_cycles": 4,
+      "baseline": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\baseline",
+      "candidate": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\tower",
+      "real_flash_ui_tested": false,
+      "account_requests_sent": 0,
+      "failures": [],
+      "errors": []
+    },
+    "resize": {
+      "swf": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p.swf",
+      "test_count": 4,
+      "passed": true,
+      "sizes": [
+        {
+          "window": [
+            1440,
+            900
+          ],
+          "viewport": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 1440.0,
+            "height": 900.0
+          },
+          "scale": [
+            1.0,
+            1.0
+          ],
+          "backbuffer": [
+            1440.0,
+            900.0
+          ],
+          "hit_points": 5
+        },
+        {
+          "window": [
+            1920,
+            1080
+          ],
+          "viewport": {
+            "x": 96.0,
+            "y": 0.0,
+            "width": 1728.0,
+            "height": 1080.0
+          },
+          "scale": [
+            1.2,
+            1.2
+          ],
+          "backbuffer": [
+            1728.0,
+            1080.0
+          ],
+          "hit_points": 5
+        },
+        {
+          "window": [
+            3840,
+            2018
+          ],
+          "viewport": {
+            "x": 305.5999999999999,
+            "y": 0.0,
+            "width": 3228.8,
+            "height": 2018.0
+          },
+          "scale": [
+            2.2422222222222223,
+            2.2422222222222223
+          ],
+          "backbuffer": [
+            3228.8,
+            2018.0
+          ],
+          "hit_points": 5
+        },
+        {
+          "window": [
+            3840,
+            2088
+          ],
+          "viewport": {
+            "x": 249.60000000000014,
+            "y": 0.0,
+            "width": 3340.7999999999997,
+            "height": 2088.0
+          },
+          "scale": [
+            2.32,
+            2.32
+          ],
+          "backbuffer": [
+            3340.7999999999993,
+            2088.0
+          ],
+          "hit_points": 5
+        },
+        {
+          "window": [
+            3840,
+            2160
+          ],
+          "viewport": {
+            "x": 192.0,
+            "y": 0.0,
+            "width": 3456.0,
+            "height": 2160.0
+          },
+          "scale": [
+            2.4,
+            2.4
+          ],
+          "backbuffer": [
+            3456.0,
+            2160.0
+          ],
+          "hit_points": 5
+        },
+        {
+          "window": [
+            2560,
+            1440
+          ],
+          "viewport": {
+            "x": 128.0,
+            "y": 0.0,
+            "width": 2304.0,
+            "height": 1440.0
+          },
+          "scale": [
+            1.6,
+            1.6
+          ],
+          "backbuffer": [
+            2304.0,
+            1440.0
+          ],
+          "hit_points": 5
+        },
+        {
+          "window": [
+            1920,
+            1200
+          ],
+          "viewport": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 1920.0,
+            "height": 1200.0
+          },
+          "scale": [
+            1.3333333333333333,
+            1.3333333333333333
+          ],
+          "backbuffer": [
+            1920.0,
+            1200.0
+          ],
+          "hit_points": 5
+        },
+        {
+          "window": [
+            3440,
+            1440
+          ],
+          "viewport": {
+            "x": 568.0,
+            "y": 0.0,
+            "width": 2304.0,
+            "height": 1440.0
+          },
+          "scale": [
+            1.6,
+            1.6
+          ],
+          "backbuffer": [
+            2304.0,
+            1440.0
+          ],
+          "hit_points": 5
+        },
+        {
+          "window": [
+            1280,
+            1024
+          ],
+          "viewport": {
+            "x": 0.0,
+            "y": 112.0,
+            "width": 1280.0,
+            "height": 800.0
+          },
+          "scale": [
+            0.8888888888888888,
+            0.8888888888888888
+          ],
+          "backbuffer": [
+            1280.0,
+            800.0
+          ],
+          "hit_points": 5
+        },
+        {
+          "window": [
+            1600,
+            900
+          ],
+          "viewport": {
+            "x": 80.0,
+            "y": 0.0,
+            "width": 1440.0,
+            "height": 900.0
+          },
+          "scale": [
+            1.0,
+            1.0
+          ],
+          "backbuffer": [
+            1440.0,
+            900.0
+          ],
+          "hit_points": 5
+        },
+        {
+          "window": [
+            1536,
+            864
+          ],
+          "viewport": {
+            "x": 76.80000000000007,
+            "y": 0.0,
+            "width": 1382.3999999999999,
+            "height": 864.0
+          },
+          "scale": [
+            0.96,
+            0.96
+          ],
+          "backbuffer": [
+            1382.3999999999996,
+            864.0
+          ],
+          "hit_points": 5
+        },
+        {
+          "window": [
+            1280,
+            800
+          ],
+          "viewport": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 1280.0,
+            "height": 800.0
+          },
+          "scale": [
+            0.8888888888888888,
+            0.8888888888888888
+          ],
+          "backbuffer": [
+            1280.0,
+            800.0
+          ],
+          "hit_points": 5
+        },
+        {
+          "window": [
+            1024,
+            768
+          ],
+          "viewport": {
+            "x": 0.0,
+            "y": 64.0,
+            "width": 1024.0,
+            "height": 640.0
+          },
+          "scale": [
+            0.7111111111111111,
+            0.7111111111111111
+          ],
+          "backbuffer": [
+            1024.0,
+            640.0
+          ],
+          "hit_points": 5
+        },
+        {
+          "window": [
+            800,
+            600
+          ],
+          "viewport": {
+            "x": 0.0,
+            "y": 50.0,
+            "width": 800.0,
+            "height": 500.0
+          },
+          "scale": [
+            0.5555555555555556,
+            0.5555555555555556
+          ],
+          "backbuffer": [
+            800.0,
+            500.0
+          ],
+          "hit_points": 5
+        },
+        {
+          "window": [
+            1200,
+            800
+          ],
+          "viewport": {
+            "x": 0.0,
+            "y": 25.0,
+            "width": 1200.0,
+            "height": 750.0
+          },
+          "scale": [
+            0.8333333333333334,
+            0.8333333333333334
+          ],
+          "backbuffer": [
+            1200.0,
+            750.0
+          ],
+          "hit_points": 5
+        },
+        {
+          "window": [
+            700,
+            500
+          ],
+          "viewport": {
+            "x": 0.0,
+            "y": 31.25,
+            "width": 700.0,
+            "height": 437.5
+          },
+          "scale": [
+            0.4861111111111111,
+            0.4861111111111111
+          ],
+          "backbuffer": [
+            700.0,
+            437.5
+          ],
+          "hit_points": 5
+        },
+        {
+          "window": [
+            64,
+            40
+          ],
+          "viewport": {
+            "x": 0.0,
+            "y": 0.0,
+            "width": 64.0,
+            "height": 40.0
+          },
+          "scale": [
+            0.044444444444444446,
+            0.044444444444444446
+          ],
+          "backbuffer": [
+            64.0,
+            40.0
+          ],
+          "hit_points": 5
+        },
+        {
+          "window": [
+            80,
+            40
+          ],
+          "viewport": {
+            "x": 8.0,
+            "y": 0.0,
+            "width": 64.0,
+            "height": 40.0
+          },
+          "scale": [
+            0.044444444444444446,
+            0.044444444444444446
+          ],
+          "backbuffer": [
+            64.0,
+            40.0
+          ],
+          "hit_points": 5
+        },
+        {
+          "window": [
+            52,
+            33
+          ],
+          "viewport": {
+            "x": 3.552713678800501e-15,
+            "y": 0.25,
+            "width": 51.99999999999999,
+            "height": 32.5
+          },
+          "scale": [
+            0.03611111111111111,
+            0.03611111111111111
+          ],
+          "backbuffer": [
+            52.0,
+            32.5
+          ],
+          "hit_points": 5
+        }
+      ]
+    },
+    "installed": {
+      "passed": true,
+      "canonical_swf_count": 7,
+      "installed_file_and_alias_count": 40,
+      "all_file_hashes_match_candidates": true,
+      "xml_size_md5_and_alias_mapping_valid": true,
+      "original_backups_match_baselines": true,
+      "real_flash_ui_tested": false
+    },
+    "identity": [
+      {
+        "file": "Game_p.swf",
+        "source_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+        "candidate_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e",
+        "declarations_types_defaults_metadata_byte_identical": true,
+        "class_inheritance_interfaces_traits_byte_identical": true,
+        "namespace_identity_and_constant_pools_unchanged": true,
+        "scope_locals_exceptions_traits_unchanged": true,
+        "introduced_unresolved_private_or_protected_references": 0,
+        "existing_external_protected_references": 0,
+        "changed_bodies": [
+          {
+            "abc": 0,
+            "method": 3058,
+            "before_length": 67,
+            "after_length": 67
+          },
+          {
+            "abc": 0,
+            "method": 5687,
+            "before_length": 154,
+            "after_length": 164
+          }
+        ]
+      },
+      {
+        "file": "ModuleTD_p.swf",
+        "source_sha256": "77334d656ef2901535328d8e3f9d5a865bc3ac3f3709867d1e59012cd5c9834e",
+        "candidate_sha256": "a13f2bbc3751a9beb6b9de87691ae51f2eb0da62a41ffbf19fe4f5c7fa9de3c8",
+        "declarations_types_defaults_metadata_byte_identical": true,
+        "class_inheritance_interfaces_traits_byte_identical": true,
+        "namespace_identity_and_constant_pools_unchanged": true,
+        "scope_locals_exceptions_traits_unchanged": true,
+        "introduced_unresolved_private_or_protected_references": 0,
+        "existing_external_protected_references": 711,
+        "changed_bodies": [
+          {
+            "abc": 0,
+            "method": 290,
+            "before_length": 687,
+            "after_length": 687
+          }
+        ]
+      },
+      {
+        "file": "ModuleAct3years.swf",
+        "source_sha256": "b7393d4715ea0f6e28c5ba0ff37cdc5ff0d847d9ef21e1fed11cb9cfc66078f5",
+        "candidate_sha256": "82c26e1d1be63dd78ba10df24b8b77d0748daa2309ca777e0d55c255cd1d150d",
+        "declarations_types_defaults_metadata_byte_identical": true,
+        "class_inheritance_interfaces_traits_byte_identical": true,
+        "namespace_identity_and_constant_pools_unchanged": true,
+        "scope_locals_exceptions_traits_unchanged": true,
+        "introduced_unresolved_private_or_protected_references": 0,
+        "existing_external_protected_references": 114,
+        "changed_bodies": [
+          {
+            "abc": 0,
+            "method": 454,
+            "before_length": 358,
+            "after_length": 358
+          }
+        ]
+      },
+      {
+        "file": "ModuleBag.swf",
+        "source_sha256": "7c4bff923b38a0b98fbb52a674d72653e8abc351d38b17ab0faf11ca594a4a9a",
+        "candidate_sha256": "e59ce295423dd781d169f0b2d31ad114851f99d8f5b6ea19981acbc8b59d0219",
+        "declarations_types_defaults_metadata_byte_identical": true,
+        "class_inheritance_interfaces_traits_byte_identical": true,
+        "namespace_identity_and_constant_pools_unchanged": true,
+        "scope_locals_exceptions_traits_unchanged": true,
+        "introduced_unresolved_private_or_protected_references": 0,
+        "existing_external_protected_references": 83,
+        "changed_bodies": [
+          {
+            "abc": 0,
+            "method": 235,
+            "before_length": 101,
+            "after_length": 101
+          },
+          {
+            "abc": 0,
+            "method": 333,
+            "before_length": 350,
+            "after_length": 350
+          }
+        ]
+      },
+      {
+        "file": "ModuleCard.swf",
+        "source_sha256": "a8c2ba52139fee775512ac9fbaa41503e253f05854b49cfbc9df0d71e441c3b0",
+        "candidate_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912",
+        "declarations_types_defaults_metadata_byte_identical": true,
+        "class_inheritance_interfaces_traits_byte_identical": true,
+        "namespace_identity_and_constant_pools_unchanged": true,
+        "scope_locals_exceptions_traits_unchanged": true,
+        "introduced_unresolved_private_or_protected_references": 0,
+        "existing_external_protected_references": 504,
+        "changed_bodies": [
+          {
+            "abc": 0,
+            "method": 779,
+            "before_length": 354,
+            "after_length": 354
+          }
+        ]
+      },
+      {
+        "file": "ModuleChat.swf",
+        "source_sha256": "8ce176b6d90c32ae263d2c304f56ad0deac47160bd0b237c617deb856a3aa49d",
+        "candidate_sha256": "ab88f5e8abfc11c0e610be3ff45af86429974757dcfcdb933d91b8aa322fc399",
+        "declarations_types_defaults_metadata_byte_identical": true,
+        "class_inheritance_interfaces_traits_byte_identical": true,
+        "namespace_identity_and_constant_pools_unchanged": true,
+        "scope_locals_exceptions_traits_unchanged": true,
+        "introduced_unresolved_private_or_protected_references": 0,
+        "existing_external_protected_references": 122,
+        "changed_bodies": [
+          {
+            "abc": 0,
+            "method": 150,
+            "before_length": 358,
+            "after_length": 358
+          }
+        ]
+      },
+      {
+        "file": "ModuleUnion.swf",
+        "source_sha256": "0eadbc0247b7c6be7644d134538fc10f1faa240ec045fcd6e43bb5725916b2dc",
+        "candidate_sha256": "671f8c5786905b86bb339202918df941c505ac5aa0392fba7743239e25c749d2",
+        "declarations_types_defaults_metadata_byte_identical": true,
+        "class_inheritance_interfaces_traits_byte_identical": true,
+        "namespace_identity_and_constant_pools_unchanged": true,
+        "scope_locals_exceptions_traits_unchanged": true,
+        "introduced_unresolved_private_or_protected_references": 0,
+        "existing_external_protected_references": 360,
+        "changed_bodies": [
+          {
+            "abc": 0,
+            "method": 1019,
+            "before_length": 352,
+            "after_length": 352
+          }
+        ]
+      }
+    ]
+  }
+}

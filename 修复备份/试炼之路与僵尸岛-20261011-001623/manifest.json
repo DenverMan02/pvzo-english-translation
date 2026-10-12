@@ -1,0 +1,53 @@
+{
+  "target_root": "D:\\pvzol本地最新最新ol\\pvzol本地\\PvZ-Server-PoC",
+  "source_root": "C:\\Users\\komi\\Documents\\Codex\\2026-10-10\\d-pvzol-ol-14\\work\\staged\\PvZ-Server-PoC",
+  "backup_root": "D:\\pvzol本地最新最新ol\\修复备份\\试炼之路与僵尸岛-20261011-001623",
+  "prepared_at": "2026-10-11T00:16:23.814370+08:00",
+  "files": [
+    {
+      "relative": "pvz_poc_server.py",
+      "before_sha256": "ec06798399008d10badb6210a2b8328533ac4e3b5cecc1155a13dac514bbd608",
+      "after_sha256": "ae2e796a46fe374c9384b226b8c7e67e8fb7ee86eca5bd26530893e062b72357"
+    },
+    {
+      "relative": "trial_road_repairs_20261011.py",
+      "before_sha256": null,
+      "after_sha256": "6bc733a2c6b849e396d2ac21c82a6975d2f17cb3471a6c6096319f5ef777779c"
+    },
+    {
+      "relative": "zombie_island_repairs_20261011.py",
+      "before_sha256": null,
+      "after_sha256": "efc30070d395de131b24a7f7240cfbbb6c5ab0174cfc20fa7a53274cebe93ac8"
+    },
+    {
+      "relative": "zombie_island_reward_repairs_20261011.py",
+      "before_sha256": null,
+      "after_sha256": "8b624107f7061e53da67bcaf4ada042618d4e0f73d1296c38dbe31ee67389d53"
+    },
+    {
+      "relative": "tests/test_trial_road_repairs_20261011.py",
+      "before_sha256": null,
+      "after_sha256": "2ddc5d1676269f21d830de414e326991fe0f92e0b04462328d3d99abd461f63f"
+    },
+    {
+      "relative": "tests/test_zombie_island_repairs_20261011.py",
+      "before_sha256": null,
+      "after_sha256": "2726847e09c6267cfb49ce19140c24876d726050e7d7502bb22abfbce8ced7dd"
+    },
+    {
+      "relative": "tests/test_zombie_island_reward_repairs_20261011.py",
+      "before_sha256": null,
+      "after_sha256": "fb2f22362b7ba93df1a71064d4489fd41b5faab452da963ffafe42e176c38928"
+    },
+    {
+      "relative": "tests/test_battle_preview.py",
+      "before_sha256": "2f84b8eb2df0ee61665f99dcb4ef8a2e590d71fbe79691af95527792bd51fd03",
+      "after_sha256": "238679dd49a73dba3d326a77acd0881cfde2a2a0a22eb107ed4069fef621739c"
+    },
+    {
+      "relative": "tests/test_zombie_island.py",
+      "before_sha256": "763f3bc41ae711781bbd922d8c0d40d4fbc815af213748b395ea4de46994a92e",
+      "after_sha256": "16c176eee6003fbec186a8bda1a8c246d450805e4e735e2c28e360e5daff9cce"
+    }
+  ]
+}

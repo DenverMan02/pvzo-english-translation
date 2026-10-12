@@ -1,0 +1,991 @@
+#!/usr/bin/env python3
+"""
+Persistent player store (SQLite) for the PvZ Online server.
+
+One row per uin = one save file. On first login for a uin we create a player with
+sensible starter defaults; on later logins we load the same row, so state persists
+across sessions. This is the foundation the game systems (cards, levels, quests…)
+will read from and write back to.
+
+Keyed by `uin` (passed to the client via the ?uin= flashvar), so a new number = a
+new account.
+"""
+
+import contextlib
+import os
+import sqlite3
+import time
+
+DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "players.db")
+
+# Actor columns and their new-player defaults. Add columns here as systems grow;
+# _ensure_columns() migrates existing DBs automatically.
+DEFAULTS = {
+    "role_id": 0,            # set to uin on create
+    "name": "Player",
+    "level": 1,
+    "exp": 0,
+    "coin": 500,
+    "sun": 10,
+    "energy": 50,
+    "friend_point": 0,
+    "ticket": 0,            # gold diamond
+    "present_ticket": 0,    # gift diamond
+    "fame": 0,
+    "buy_energy_num": 0,    # diamond energy-buys used today (of the daily limit; escalating cost)
+    "buy_energy_day": "",   # YYYYMMDD buy_energy_num belongs to (reset on a new day)
+    "energy_time": 0,       # unix ts the `energy` value was last computed (drives time-based regen)
+    "foster_ticket": 0,
+    "lucky": 0,
+    "contrib_val": 0,
+    "light": 0,
+    "last_pay_time": 0,
+    "prestige": 0,
+    "zone_id": 0,
+    "td_stage": 1,          # latestTDLevel — stageId=1 keeps the town routing happy
+    "td_level": 1,
+    "td_sub": 1,
+    "face_id": 0,
+    "avatar_plant_id": 1200,  # peashooter
+    "reg_time": 0,          # set to now on create
+    "server_open_time": 0,
+    "created_at": 0,
+    "last_login": 0,
+    # --- daily sign-in (Welfare Hall) ---
+    "sign_month": 0,        # YYYYMM the current sign_total belongs to (reset on a new month)
+    "sign_total": 0,        # days signed this month (drives which calendar cells are claimed)
+    "sign_last": 0,         # last sign-in date as YYYYMMDD (dedupe: one sign-in per day)
+    # --- zen garden (阳光房) ---
+    "garden_exp": 0,        # accumulated garden exp (converts to exp beans via TakeBean)
+    "garden_bean": 0,       # exp beans banked in the garden
+    "garden_seeds_granted": 0,  # 1 once the one-time starter crop-seed stash has been given
+    "garden_goodwill": 0,   # lifetime sunflower exp harvested -> pet-house 好感度 (unlocks pets)
+    "card_market_granted": 0,  # 1 once the one-time card-pack draw-ticket stash has been given
+    "mystery_luck": 0,         # Mystery Card Pack pity counter (0..iMysteryCardLuckValueMax)
+    "mystery_granted": 0,      # 1 once the one-time MysteriousTicket stash has been given
+    "mystery_board": "",       # persisted board "weekly,daily1,daily2,daily3" (rerolls only on refresh)
+    # --- laboratory (实验室) ---
+    "lab_bottles": "",         # per-bottle overrides "labId:level:status;..." (only bottles that
+                               #   differ from the fresh default: type-1 basics produced@0, rest locked@base)
+    "lab_mats_granted": 0,     # 1 once the one-time starter lab-material stash has been given
+    # --- world tree (世界树/树屋) ---
+    "wt_level": 1,             # tree level (WTTemplateCE row id; 1..999)
+    "wt_exp": 0,               # exp toward the next level (auto-levels when >= needExp)
+    "wt_free_used": 0,         # normal/free fosters used today (of 5 free/day)
+    "wt_adv_used": 0,          # half-price advanced fosters used today (of 5/day)
+    "wt_day": "",              # YYYYMMDD the free/adv counters belong to (reset on a new day)
+    "wt_granted": 0,           # 1 once the one-time starter fosterTicket stash has been given
+    # --- Trial Road / 试炼之路 (ScrewUp Normal climb; 150 stages, daily material farm) ---
+    "tr_max": 0,               # highest stage ever cleared (persistent; drives sweep/chest tiers)
+    "tr_current": 0,           # current climb position (Restart resets it to 0 to re-sweep)
+    "tr_battles_used": 0,      # NEW-stage climbs used today (of _TR_DAILY_BATTLES)
+    "tr_restarts_used": 0,     # restarts used today (of _TR_DAILY_RESTARTS)
+    "tr_boxes": "",            # CSV of milestone-chest stageIds already claimed (persistent, one-time)
+    "tr_day": "",              # YYYYMMDD the daily counters belong to (reset on a new day)
+    # --- VIP (会员, 3 tiers; GM-set on this private server) ---
+    "vip_level": 0,            # 0=none, 1/2/3 = 阳光/财富/金壶 VIP (drives the privilege bundle)
+    "vip_day": "",             # YYYYMMDD the daily VIP gift flags belong to (reset on a new day)
+    "vip_energy_taken": 0,     # 1 once today's VIP energy gift (priv 13) is claimed
+    "vip_ticket_taken": 0,     # 1 once today's VIP diamond gift (priv 24) is claimed
+    "vip_gift_taken": 0,       # 1 once the one-time first-activation gift (giftString) is claimed
+    "vip_plant_granted": 0,    # 1 once the VIP3 exclusive plant (Winter Melon 6900) has been unlocked
+    # --- nutrition room (营养室 / Building_Nutrition=170) reagents (试剂) ---
+    "nutrition_temp": "",        # CSV of temp-bag reagent baseIds awaiting collection (survive re-login)
+    "nutrition_gold": 0,         # gold-reagent (60000) pool used by the exchange
+    "nutrition_bottle_exp": 0,   # reagent-exp pool (residuals / extract-exp feed it)
+    "reagent_seq": 0,            # per-player reagent uid counter (never reused, even after delete)
+    # --- gene lab / gene trial ---
+    "gene_test_day": "",         # YYYYMMDD for gene-trial daily attempts
+    "gene_test_remain": 3,        # failed fight retries available today
+    "gene_test_restart_num": 0,   # chapter resets used (reset on daily refresh)
+    "gene_test_last_stage": 1,    # last chapter opened in the gene-trial UI
+    "gene_test_pass_stage": 0,    # highest normal chapter fully cleared
+    "gene_test_pass_elite": 0,    # highest elite chapter fully cleared
+    "gene_test_sweep_day": "",   # one sweep per day, YYYYMMDD
+    # --- TD privilege (塔防特权): a time-limited sub that unlocks premium plants in TD levels.
+    # GM-set on this private server. td_privilege=1 -> on; td_privilege_endtime = unix ts it expires
+    # (we push a far-future ts so it never expires while on). Drives Cmd_TD_PrivilegeInfo_SC +
+    # Cmd_TD_OpenPrivilege_SC; the client unlocks the listed `plantId`s for use in TD levels.
+    "td_privilege": 0,
+    "td_privilege_endtime": 0,
+    # --- diamond card (钻石卡 / QQ 蓝钻): the player's OWN Dto_DiamondInfo pushed via
+    # Cmd_Vip_SyncVipInfo_SC. diamond_flag = the Dto_DiamondInfo.flag (visibility bitmask; 1 = show
+    # the card). diamond_<type>_lvl = the Dto_DiamondLevel.level for that E_DiamondType
+    # (1=Blue, 3=Yellow, 4=XinYue). 0 level => that diamond is not granted.
+    "diamond_flag": 1,
+    "diamond_blue_lvl": 0,
+    "diamond_yellow_lvl": 0,
+    "diamond_xinyue_lvl": 0,
+    # --- New-player guide ---
+    # The client owns the presentation and asks the server to retain these values.
+    # Keep them per account so an interrupted tutorial resumes after reconnecting.
+    "role_created": 0,          # controls CheckOldUser / role-name screen independently
+    "tutorial_active": 0,       # set to 1 only for newly-created accounts
+    "tutorial_initialized": 0,  # one-time migration marker for saves created before guides returned
+    "guide_keys": "",          # newline-separated key/value pairs (key\tvalue)
+    "guide_finish_ids": "",    # comma-separated completed guide ids
+}
+
+# Reagent instance uids live in their own high range so they never collide with card/plant uids.
+REAGENT_UID_BASE = 70_000_000
+
+# Normal-mode starter plants a new player unlocks (plantIds from tdPlantInfo/tdPlantTypeInfo):
+# Sunflower, Peashooter, Wall-nut, Potato Mine (the "Player's House" set).
+STARTER_PLANTS = [1100, 1200, 1300, 1500]
+
+
+def _connect():
+    con = sqlite3.connect(DB_PATH)
+    con.row_factory = sqlite3.Row
+    return con
+
+
+@contextlib.contextmanager
+def _db():
+    """Connection that commits on success and ALWAYS closes (with sqlite3.connect
+    as a context manager commits but does not close -> leaks handles/locks)."""
+    con = _connect()
+    try:
+        yield con
+        con.commit()
+    finally:
+        con.close()
+
+
+def init_db():
+    cols = ", ".join("%s %s" % (k, "TEXT" if isinstance(v, str) else "INTEGER")
+                     for k, v in DEFAULTS.items())
+    with _db() as con:
+        con.execute("CREATE TABLE IF NOT EXISTS players (uin INTEGER PRIMARY KEY, %s)" % cols)
+        con.execute("CREATE TABLE IF NOT EXISTS plants "
+                    "(uin INTEGER, plant_id INTEGER, PRIMARY KEY(uin, plant_id))")
+        con.execute("CREATE TABLE IF NOT EXISTS td_passed "
+                    "(uin INTEGER, stage INTEGER, level INTEGER, sub INTEGER, "
+                    "star INTEGER DEFAULT 1, PRIMARY KEY(uin, stage, level, sub))")
+        con.execute("CREATE TABLE IF NOT EXISTS td_gates "
+                    "(uin INTEGER, stage INTEGER, gate_id INTEGER, "
+                    "PRIMARY KEY(uin, stage, gate_id))")
+        con.execute("CREATE TABLE IF NOT EXISTS items "
+                    "(uin INTEGER, item_id INTEGER, count INTEGER, "
+                    "PRIMARY KEY(uin, item_id))")
+        # Equipment is stored as individual bag objects (unlike stackable materials).  The
+        # equipment template id changes when it is ranked up; uid remains stable so the Flash
+        # client's BagProxy can update the same object.
+        con.execute("CREATE TABLE IF NOT EXISTS equipments "
+                    "(uin INTEGER, uid INTEGER, item_id INTEGER, card_uid INTEGER DEFAULT 0, "
+                    "level INTEGER DEFAULT 0, exp INTEGER DEFAULT 0, grade_percent INTEGER DEFAULT 0, "
+                    "is_clone INTEGER DEFAULT 0, PRIMARY KEY(uin, uid))")
+        con.execute("CREATE TABLE IF NOT EXISTS equipment_sequences "
+                    "(uin INTEGER PRIMARY KEY, next_uid INTEGER NOT NULL)")
+        # The pool/generator and its attachable part are account-wide, not card-local.
+        con.execute("CREATE TABLE IF NOT EXISTS equipment_state "
+                    "(uin INTEGER PRIMARY KEY, pool_id INTEGER DEFAULT 1, current_energy INTEGER DEFAULT 0, "
+                    "last_energy_at INTEGER DEFAULT 0, current_exp INTEGER DEFAULT 0, part_id INTEGER DEFAULT 1, "
+                    "first_claimed INTEGER DEFAULT 0, daily_claim_day TEXT DEFAULT '', "
+                    "auto_use_bead INTEGER DEFAULT 0, buy_count INTEGER DEFAULT 0)")
+        con.execute("CREATE TABLE IF NOT EXISTS fuben_passed "
+                    "(uin INTEGER, chapter INTEGER, mode INTEGER, stage INTEGER, "
+                    "star INTEGER DEFAULT 3, PRIMARY KEY(uin, chapter, mode, stage))")
+        con.execute("CREATE TABLE IF NOT EXISTS fuben_boxes "
+                    "(uin INTEGER, chapter INTEGER, mode INTEGER, "
+                    "PRIMARY KEY(uin, chapter, mode))")
+        con.execute("CREATE TABLE IF NOT EXISTS cards "
+                    "(uin INTEGER, uid INTEGER, card_id INTEGER, level INTEGER DEFAULT 1, "
+                    "exp INTEGER DEFAULT 0, fill_quality INTEGER DEFAULT 1, "
+                    "PRIMARY KEY(uin, uid))")
+        # Card fruit progression: quality is the fruit slot (1..14 in this client DB),
+        # level is that slot's catalyst level. Keep it keyed by owned card UID so duplicate
+        # plants can grow independently and star-up can carry their fruit along.
+        con.execute("CREATE TABLE IF NOT EXISTS card_fruits "
+                    "(uin INTEGER, uid INTEGER, quality INTEGER, level INTEGER DEFAULT 0, "
+                    "PRIMARY KEY(uin, uid, quality))")
+        # Gene progress is card-UID local (never transferable between plants or star grades).
+        con.execute("CREATE TABLE IF NOT EXISTS card_genes "
+                    "(uin INTEGER, uid INTEGER, gene_id INTEGER, factor_level INTEGER DEFAULT 0, "
+                    "factor_exp INTEGER DEFAULT 0, attribute INTEGER DEFAULT 0, level INTEGER DEFAULT 0, "
+                    "PRIMARY KEY(uin, uid, gene_id))")
+        # Baptize/refine is card-local. Keep the committed attributes separate from the temporary
+        # candidate so a normal single roll is only applied after the player presses Save.
+        con.execute("CREATE TABLE IF NOT EXISTS card_refines "
+                    "(uin INTEGER, uid INTEGER, attack INTEGER DEFAULT 0, defense INTEGER DEFAULT 0, "
+                    "hp INTEGER DEFAULT 0, ability INTEGER DEFAULT 0, speed INTEGER DEFAULT 0, "
+                    "pending_attack INTEGER DEFAULT 0, pending_defense INTEGER DEFAULT 0, "
+                    "pending_hp INTEGER DEFAULT 0, pending_ability INTEGER DEFAULT 0, "
+                    "pending_speed INTEGER DEFAULT 0, pending_mode INTEGER DEFAULT 0, "
+                    "PRIMARY KEY(uin, uid))")
+        # Chapter progress is independent for normal/elite mode; reward totals are compact
+        # itemId:count pairs so the stage panel can restore its reward history.
+        con.execute("CREATE TABLE IF NOT EXISTS gene_test_stages "
+                    "(uin INTEGER, mode INTEGER, stage INTEGER, current_sub INTEGER DEFAULT 0, "
+                    "max_sub INTEGER DEFAULT 0, rewards TEXT DEFAULT '', "
+                    "PRIMARY KEY(uin, mode, stage))")
+        card_cols = {row[1] for row in con.execute("PRAGMA table_info(cards)")}
+        if "fill_quality" not in card_cols:
+            con.execute("ALTER TABLE cards ADD COLUMN fill_quality INTEGER DEFAULT 1")
+        con.execute("CREATE TABLE IF NOT EXISTS card_fill "
+                "(uin INTEGER, uid INTEGER, piece_index INTEGER, "
+                "PRIMARY KEY(uin, uid, piece_index))")
+        con.execute("CREATE TABLE IF NOT EXISTS card_forge "
+                    "(uin INTEGER, uid INTEGER, forge_level INTEGER DEFAULT 0, "
+                    "PRIMARY KEY(uin, uid))")
+        # Older builds incorrectly made uid the only primary key. The same card uid can exist
+        # in different player saves, so migrate that schema before using the composite upsert.
+        forge_cols = list(con.execute("PRAGMA table_info(card_forge)"))
+        forge_pk = {row[1] for row in forge_cols if row[5]}
+        if forge_pk == {"uid"}:
+            con.execute("ALTER TABLE card_forge RENAME TO card_forge_legacy")
+            con.execute("CREATE TABLE card_forge "
+                        "(uin INTEGER, uid INTEGER, forge_level INTEGER DEFAULT 0, "
+                        "PRIMARY KEY(uin, uid))")
+            con.execute("INSERT OR IGNORE INTO card_forge (uin, uid, forge_level) "
+                        "SELECT uin, uid, forge_level FROM card_forge_legacy")
+            con.execute("DROP TABLE card_forge_legacy")
+        con.execute("CREATE TABLE IF NOT EXISTS formation "
+                    "(uin INTEGER, team_id INTEGER, pos_index INTEGER, uid INTEGER, "
+                    "PRIMARY KEY(uin, team_id, pos_index))")
+        con.execute("CREATE TABLE IF NOT EXISTS talents "
+                    "(uin INTEGER, talent_id INTEGER, PRIMARY KEY(uin, talent_id))")
+        # zen garden: one row per UNLOCKED pot. seed_id=0 = empty; plant_time = when the current
+        # seed was planted OR last harvested (drives grow/harvest timing).
+        con.execute("CREATE TABLE IF NOT EXISTS garden_pots "
+                    "(uin INTEGER, field_id INTEGER, seed_id INTEGER DEFAULT 0, "
+                    "plant_time INTEGER DEFAULT 0, PRIMARY KEY(uin, field_id))")
+        # nutrition reagents (试剂): one row per OWNED reagent. base_id -> its buffType/quality
+        # (nutritionProperty.txt); level scales the buff. position=0/slot_id=0 = unequipped (in the
+        # bag); position in {3,7,9,11,13,15,17} + slot_id 1..8 = equipped onto that plant position.
+        con.execute("CREATE TABLE IF NOT EXISTS reagents "
+                    "(uin INTEGER, uid INTEGER, base_id INTEGER, level INTEGER DEFAULT 1, "
+                    "position INTEGER DEFAULT 0, slot_id INTEGER DEFAULT 0, "
+                    "PRIMARY KEY(uin, uid))")
+        # friends (好友): one row per added friend. help_plant_id is the plantId the friend's
+        # "friend card" represents in the TD choose-seeds flow (Dto_FriendInfo.helpPlant =
+        # Dto_CardFullInfo whose base.cardId maps to a tdPlantId). help_plant_level = card level.
+        # diamond_flag + diamond_<type>_lvl mirror the player's own Dto_DiamondInfo so each friend's
+        # diamond card shows on the friend list / world map.
+        con.execute("CREATE TABLE IF NOT EXISTS friends "
+                    "(uin INTEGER, friend_role_id INTEGER, friend_name TEXT, "
+                    "help_plant_id INTEGER, help_plant_level INTEGER, "
+                    "diamond_flag INTEGER DEFAULT 1, diamond_blue_lvl INTEGER DEFAULT 0, "
+                    "diamond_yellow_lvl INTEGER DEFAULT 0, diamond_xinyue_lvl INTEGER DEFAULT 0, "
+                    "PRIMARY KEY(uin, friend_role_id))")
+        # Migrate any pre-existing `friends` table that predates this schema (the old PoC
+        # shape was (uin, friend_id, add_time) — useless here). Drop+recreate is safe because
+        # the old schema was never populated on this private server.
+        fr_cols = {r["name"] for r in con.execute("PRAGMA table_info(friends)")}
+        if "friend_role_id" not in fr_cols:
+            con.execute("DROP TABLE friends")
+            con.execute("CREATE TABLE friends "
+                        "(uin INTEGER, friend_role_id INTEGER, friend_name TEXT, "
+                        "help_plant_id INTEGER, help_plant_level INTEGER, "
+                        "diamond_flag INTEGER DEFAULT 1, diamond_blue_lvl INTEGER DEFAULT 0, "
+                        "diamond_yellow_lvl INTEGER DEFAULT 0, diamond_xinyue_lvl INTEGER DEFAULT 0, "
+                        "PRIMARY KEY(uin, friend_role_id))")
+        _ensure_columns(con)
+        # td_passed.achievements = csv of the achievement ids actually earned (performance
+        # stars). star stays = the count, for fast SUM(star) totals.
+        have = {r["name"] for r in con.execute("PRAGMA table_info(td_passed)")}
+        if "achievements" not in have:
+            con.execute("ALTER TABLE td_passed ADD COLUMN achievements TEXT DEFAULT ''")
+    return DB_PATH
+
+
+def _ensure_columns(con):
+    have = {r["name"] for r in con.execute("PRAGMA table_info(players)")}
+    for k, v in DEFAULTS.items():
+        if k not in have:
+            # New column WITH a DEFAULT so existing rows backfill to the default
+            # (a bare ALTER ADD COLUMN leaves existing rows NULL -> int(None) crashes).
+            typ = "TEXT" if isinstance(v, str) else "INTEGER"
+            default = "''" if isinstance(v, str) else str(int(v))
+            con.execute("ALTER TABLE players ADD COLUMN %s %s DEFAULT %s" % (k, typ, default))
+        elif not isinstance(v, str):
+            # Heal any NULLs left by an older ALTER that ran before this DEFAULT logic.
+            con.execute("UPDATE players SET %s=? WHERE %s IS NULL" % (k, k), (v,))
+
+
+def get_or_create_player(uin):
+    """Return (player_dict, is_new). Creates a starter player if uin is unseen."""
+    now = int(time.time())
+    with _db() as con:
+        row = con.execute("SELECT * FROM players WHERE uin=?", (uin,)).fetchone()
+        if row is not None:
+            con.execute("UPDATE players SET last_login=? WHERE uin=?", (now, uin))
+            vals = dict(row)
+            has_td_progress = con.execute(
+                "SELECT 1 FROM td_passed WHERE uin=? AND stage>0 LIMIT 1", (uin,)
+            ).fetchone() is not None
+            # One-time upgrade for saves made while the tutorial was disabled:
+            # accounts with no ordinary TD progress are still at the new-player
+            # starting point, so allow them to enter the restored tutorial once.
+            if not vals.get("tutorial_initialized"):
+                vals["tutorial_initialized"] = 1
+                vals["tutorial_active"] = 0 if has_td_progress else 1
+            # Any ordinary TD clear proves both role creation and the tutorial
+            # were completed. Repair stale flags on every login.
+            if has_td_progress:
+                vals["role_created"] = 1
+                vals["tutorial_active"] = 0
+            con.execute("UPDATE players SET tutorial_initialized=?, tutorial_active=?, "
+                        "role_created=? WHERE uin=?",
+                        (vals["tutorial_initialized"], vals["tutorial_active"],
+                         vals["role_created"], uin))
+            return vals, False
+        vals = dict(DEFAULTS)
+        vals["role_id"] = uin
+        vals["name"] = "Player%d" % (uin % 100000)
+        vals["reg_time"] = now
+        vals["server_open_time"] = now
+        vals["created_at"] = now
+        vals["last_login"] = now
+        vals["tutorial_active"] = 1
+        vals["tutorial_initialized"] = 1
+        vals["role_created"] = 0
+        keys = ["uin"] + list(vals.keys())
+        con.execute(
+            "INSERT INTO players (%s) VALUES (%s)" % (
+                ", ".join(keys), ", ".join("?" * len(keys))),
+            [uin] + list(vals.values()))
+        con.executemany("INSERT OR IGNORE INTO plants (uin, plant_id) VALUES (?, ?)",
+                        [(uin, p) for p in STARTER_PLANTS])
+        vals["uin"] = uin
+        return vals, True
+
+
+def get_player_by_role_id(role_id):
+    """按 roleId 查玩家存档 dict；没有则返回 None。
+    依赖 players 表的 role_id 列（创建时默认 = uin）。"""
+    if not role_id:
+        return None
+    con = _connect()
+    try:
+        row = con.execute("SELECT uin FROM players WHERE role_id=?",
+                          (int(role_id),)).fetchone()
+    finally:
+        con.close()
+    if not row:
+        return None
+    player, _ = get_or_create_player(int(row[0]))
+    player["plants"] = get_player_plants(player["uin"])
+    return player
+    
+    
+def get_player_plants(uin):
+    """List of unlocked plantIds for a player (empty if none)."""
+    with _db() as con:
+        return [r["plant_id"] for r in con.execute(
+            "SELECT plant_id FROM plants WHERE uin=? ORDER BY plant_id", (uin,))]
+
+
+def unlock_plant(uin, plant_id):
+    with _db() as con:
+        con.execute("INSERT OR IGNORE INTO plants (uin, plant_id) VALUES (?, ?)",
+                    (uin, plant_id))
+
+
+def remove_plant(uin, plant_id):
+    """Remove a plant from a player's TD roster (used to clean up plants that were never valid TD
+    plants). The battle-card collection (cards table) is separate and untouched."""
+    with _db() as con:
+        con.execute("DELETE FROM plants WHERE uin=? AND plant_id=?", (uin, plant_id))
+
+
+def pass_level(uin, stage, level, sub, achievements):
+    """Record a passed TD level with the achievement ids actually earned (performance
+    stars). `achievements` is an iterable of ids; star = how many. Keeps the BEST run
+    (a replay only overwrites if it earned strictly more stars)."""
+    ach = sorted({int(a) for a in achievements})
+    star = len(ach)
+    csv = ",".join(str(a) for a in ach)
+    with _db() as con:
+        con.execute(
+            "INSERT INTO td_passed (uin, stage, level, sub, star, achievements) "
+            "VALUES (?,?,?,?,?,?) "
+            "ON CONFLICT(uin, stage, level, sub) DO UPDATE SET "
+            "star=excluded.star, achievements=excluded.achievements "
+            "WHERE excluded.star > td_passed.star",
+            (uin, stage, level, sub, star, csv))
+
+
+def get_passed_levels(uin, stage):
+    """[(level, sub, star, [achievementIds])] the player has passed in a stage. Legacy
+    rows with no stored ids fall back to synthesized ids [1..star] so their star COUNT
+    still displays (the exact ids only matter for the per-level achievement tooltip)."""
+    out = []
+    with _db() as con:
+        for r in con.execute(
+                "SELECT level, sub, star, achievements FROM td_passed "
+                "WHERE uin=? AND stage=? ORDER BY level, sub", (uin, stage)):
+            ach = [int(x) for x in (r["achievements"] or "").split(",") if x != ""]
+            if not ach and r["star"] > 0:
+                ach = list(range(1, r["star"] + 1))
+            out.append((r["level"], r["sub"], r["star"], ach))
+    return out
+
+
+def is_level_passed(uin, stage, level, sub):
+    with _db() as con:
+        return con.execute("SELECT 1 FROM td_passed WHERE uin=? AND stage=? AND level=? "
+                           "AND sub=?", (uin, stage, level, sub)).fetchone() is not None
+
+
+def get_all_passed_levels(uin):
+    """[(stage, level, sub)] for every TD level the player has passed (all stages). Used to rebuild the
+    legitimately-earned TD plant roster (starters + each level's bonusPlant)."""
+    with _db() as con:
+        return [(r["stage"], r["level"], r["sub"]) for r in con.execute(
+            "SELECT stage, level, sub FROM td_passed WHERE uin=? ORDER BY stage, level, sub", (uin,))]
+
+
+def total_stars(uin, stage):
+    """Sum of stars the player has earned in a stage (drives the map HUD star count
+    and the gate needStars thresholds)."""
+    with _db() as con:
+        row = con.execute("SELECT COALESCE(SUM(star), 0) AS s FROM td_passed "
+                          "WHERE uin=? AND stage=?", (uin, stage)).fetchone()
+        return int(row["s"])
+
+
+def unlock_gate(uin, stage, gate_id):
+    """Record a level gate the player has unlocked (idempotent)."""
+    with _db() as con:
+        con.execute("INSERT OR IGNORE INTO td_gates (uin, stage, gate_id) VALUES (?,?,?)",
+                    (uin, stage, gate_id))
+
+
+def get_unlocked_gates(uin, stage):
+    """List of gateIds the player has unlocked in a stage."""
+    with _db() as con:
+        return [r["gate_id"] for r in con.execute(
+            "SELECT gate_id FROM td_gates WHERE uin=? AND stage=? ORDER BY gate_id",
+            (uin, stage))]
+
+
+def get_items(uin):
+    """[(item_id, count)] the player holds (count > 0), ordered by item_id."""
+    with _db() as con:
+        return [(r["item_id"], r["count"]) for r in con.execute(
+            "SELECT item_id, count FROM items WHERE uin=? AND count>0 ORDER BY item_id", (uin,))]
+
+
+def get_item_count(uin, item_id):
+    with _db() as con:
+        row = con.execute("SELECT count FROM items WHERE uin=? AND item_id=?",
+                          (uin, item_id)).fetchone()
+        return int(row["count"]) if row else 0
+
+
+def add_item(uin, item_id, delta):
+    """Add `delta` (may be negative) to an item stack; clamp at 0 and delete empty stacks.
+    Returns the new count."""
+    with _db() as con:
+        row = con.execute("SELECT count FROM items WHERE uin=? AND item_id=?",
+                          (uin, item_id)).fetchone()
+        new = max(0, (int(row["count"]) if row else 0) + int(delta))
+        if new <= 0:
+            con.execute("DELETE FROM items WHERE uin=? AND item_id=?", (uin, item_id))
+        else:
+            con.execute("INSERT INTO items (uin, item_id, count) VALUES (?,?,?) "
+                        "ON CONFLICT(uin, item_id) DO UPDATE SET count=excluded.count",
+                        (uin, item_id, new))
+        return new
+
+
+def get_equipments(uin):
+    """Return the player's individual equipment objects as dictionaries."""
+    with _db() as con:
+        return [dict(r) for r in con.execute(
+            "SELECT uid, item_id, card_uid, level, exp, grade_percent, is_clone "
+            "FROM equipments WHERE uin=? ORDER BY uid", (uin,))]
+
+
+def get_equipment(uin, uid):
+    with _db() as con:
+        row = con.execute(
+            "SELECT uid, item_id, card_uid, level, exp, grade_percent, is_clone "
+            "FROM equipments WHERE uin=? AND uid=?", (uin, int(uid))).fetchone()
+        return dict(row) if row else None
+
+
+def next_equipment_uid(uin):
+    """Allocate a stable bag uid, separate from stackable item ids and card uids."""
+    with _db() as con:
+        con.execute("INSERT OR IGNORE INTO equipment_sequences (uin, next_uid) VALUES (?,20000001)",
+                    (uin,))
+        row = con.execute("SELECT next_uid FROM equipment_sequences WHERE uin=?", (uin,)).fetchone()
+        uid = int(row["next_uid"])
+        con.execute("UPDATE equipment_sequences SET next_uid=? WHERE uin=?", (uid + 1, uin))
+        return uid
+
+
+def add_equipment(uin, uid, item_id, card_uid=0, level=0, exp=0,
+                  grade_percent=0, is_clone=0):
+    with _db() as con:
+        con.execute("INSERT OR REPLACE INTO equipments "
+                    "(uin, uid, item_id, card_uid, level, exp, grade_percent, is_clone) "
+                    "VALUES (?,?,?,?,?,?,?,?)",
+                    (uin, int(uid), int(item_id), int(card_uid), int(level), int(exp),
+                     int(grade_percent), int(is_clone)))
+
+
+def update_equipment(uin, uid, **fields):
+    allowed = {"item_id", "card_uid", "level", "exp", "grade_percent", "is_clone"}
+    values = [(key, int(value)) for key, value in fields.items() if key in allowed]
+    if not values:
+        return
+    with _db() as con:
+        con.execute("UPDATE equipments SET " + ",".join(key + "=?" for key, _ in values) +
+                    " WHERE uin=? AND uid=?", [value for _, value in values] + [uin, int(uid)])
+
+
+def remove_equipment(uin, uid):
+    with _db() as con:
+        con.execute("DELETE FROM equipments WHERE uin=? AND uid=?", (uin, int(uid)))
+
+
+def get_equipment_state(uin):
+    """Create a usable starter glass pool once, then return its persisted state."""
+    now = int(time.time())
+    with _db() as con:
+        con.execute("INSERT OR IGNORE INTO equipment_state "
+                    "(uin, pool_id, current_energy, last_energy_at, current_exp, part_id) "
+                    "VALUES (?,1,80000,?,0,1)", (uin, now))
+        return dict(con.execute("SELECT * FROM equipment_state WHERE uin=?", (uin,)).fetchone())
+
+
+def update_equipment_state(uin, **fields):
+    allowed = {"pool_id", "current_energy", "last_energy_at", "current_exp", "part_id",
+               "first_claimed", "daily_claim_day", "auto_use_bead", "buy_count"}
+    values = [(key, value) for key, value in fields.items() if key in allowed]
+    if not values:
+        return
+    with _db() as con:
+        con.execute("INSERT OR IGNORE INTO equipment_state (uin) VALUES (?)", (uin,))
+        con.execute("UPDATE equipment_state SET " + ",".join(key + "=?" for key, _ in values) +
+                    " WHERE uin=?", [value for _, value in values] + [uin])
+
+
+def pass_fuben_stage(uin, chapter, mode, stage, star=3):
+    """Record a cleared adventure (fuben) stage, keeping the best star."""
+    with _db() as con:
+        con.execute(
+            "INSERT INTO fuben_passed (uin, chapter, mode, stage, star) VALUES (?,?,?,?,?) "
+            "ON CONFLICT(uin, chapter, mode, stage) DO UPDATE SET star=MAX(star, excluded.star)",
+            (uin, chapter, mode, stage, star))
+
+
+def get_fuben_passed(uin, chapter, mode):
+    """{stageId: star} the player has cleared in a chapter+mode."""
+    with _db() as con:
+        return {r["stage"]: r["star"] for r in con.execute(
+            "SELECT stage, star FROM fuben_passed WHERE uin=? AND chapter=? AND mode=?",
+            (uin, chapter, mode))}
+
+
+def take_fuben_box(uin, chapter, mode):
+    """Mark a chapter's star-reward chest (for a mode) as claimed (idempotent)."""
+    with _db() as con:
+        con.execute("INSERT OR IGNORE INTO fuben_boxes (uin, chapter, mode) VALUES (?,?,?)",
+                    (uin, chapter, mode))
+
+
+def is_fuben_box_taken(uin, chapter, mode):
+    """True if the player has already claimed a chapter+mode star-reward chest."""
+    with _db() as con:
+        return con.execute("SELECT 1 FROM fuben_boxes WHERE uin=? AND chapter=? AND mode=?",
+                           (uin, chapter, mode)).fetchone() is not None
+
+
+def get_cards(uin):
+    """[(uid, card_id, level, exp)] battle cards the player owns (their collection)."""
+    with _db() as con:
+        return [(r["uid"], r["card_id"], r["level"], r["exp"]) for r in con.execute(
+            "SELECT uid, card_id, level, exp FROM cards WHERE uin=? ORDER BY card_id", (uin,))]
+
+
+def get_card_fill_quality(uin, uid):
+    """Return the persistent plant quality reached through completed puzzle boards."""
+    with _db() as con:
+        row = con.execute("SELECT fill_quality FROM cards WHERE uin=? AND uid=?",
+                          (uin, int(uid))).fetchone()
+        return max(1, int(row["fill_quality"])) if row else 1
+
+
+def set_card_fill_quality(uin, uid, quality):
+    """Persist a plant's puzzle quality (1=white, 2=green, ...)."""
+    with _db() as con:
+        con.execute("UPDATE cards SET fill_quality=? WHERE uin=? AND uid=?",
+                    (max(1, int(quality)), uin, int(uid)))
+
+
+def has_card(uin, uid):
+    with _db() as con:
+        return con.execute("SELECT 1 FROM cards WHERE uin=? AND uid=?",
+                           (uin, uid)).fetchone() is not None
+
+
+def add_card(uin, uid, card_id, level=1, exp=0):
+    """Add a battle card to the collection (idempotent on uid). Returns True if newly added."""
+    with _db() as con:
+        cur = con.execute("INSERT OR IGNORE INTO cards (uin, uid, card_id, level, exp) "
+                          "VALUES (?,?,?,?,?)", (uin, uid, card_id, level, exp))
+        return cur.rowcount > 0
+
+
+def set_card_level(uin, uid, level, exp=0):
+    with _db() as con:
+        con.execute("UPDATE cards SET level=?, exp=? WHERE uin=? AND uid=?",
+                    (level, exp, uin, uid))
+
+
+def upgrade_card(uin, uid, card_id):
+    """Star-up a card IN PLACE: swap its cardId (which encodes the star) but keep the same uid so
+    saved formations that reference it stay valid. Level/exp are preserved."""
+    with _db() as con:
+        con.execute("UPDATE cards SET card_id=? WHERE uin=? AND uid=?", (card_id, uin, uid))
+
+
+def replace_card(uin, old_uid, new_uid, card_id):
+    """Replace a card during star-up while preserving its level/exp and references.
+
+    The client treats star-up as an old-card -> new-card operation.  Moving the
+    UID makes its card model discard the stale forge-level object; formations,
+    puzzle progress and enhancement state are moved along with it.
+    """
+    old_uid, new_uid = int(old_uid), int(new_uid)
+    with _db() as con:
+        if old_uid == new_uid:
+            con.execute("UPDATE cards SET card_id=? WHERE uin=? AND uid=?",
+                        (int(card_id), uin, old_uid))
+            return
+        con.execute("DELETE FROM card_forge WHERE uin=? AND uid=?", (uin, new_uid))
+        con.execute("DELETE FROM card_refines WHERE uin=? AND uid=?", (uin, new_uid))
+        con.execute("DELETE FROM card_fill WHERE uin=? AND uid=?", (uin, new_uid))
+        con.execute("UPDATE formation SET uid=? WHERE uin=? AND uid=?",
+                    (new_uid, uin, old_uid))
+        con.execute("UPDATE card_forge SET uid=? WHERE uin=? AND uid=?",
+                    (new_uid, uin, old_uid))
+        con.execute("UPDATE card_refines SET uid=? WHERE uin=? AND uid=?",
+                    (new_uid, uin, old_uid))
+        con.execute("UPDATE card_fill SET uid=? WHERE uin=? AND uid=?",
+                    (new_uid, uin, old_uid))
+        con.execute("DELETE FROM card_fruits WHERE uin=? AND uid=?", (uin, new_uid))
+        con.execute("UPDATE card_fruits SET uid=? WHERE uin=? AND uid=?",
+                    (new_uid, uin, old_uid))
+        con.execute("UPDATE cards SET uid=?, card_id=? WHERE uin=? AND uid=?",
+                    (new_uid, int(card_id), uin, old_uid))
+
+
+def remove_card(uin, uid, replacement_uid=0):
+    """Remove one duplicate card and clean its dependent rows."""
+    uid, replacement_uid = int(uid), int(replacement_uid or 0)
+    with _db() as con:
+        if replacement_uid:
+            con.execute("UPDATE formation SET uid=? WHERE uin=? AND uid=?",
+                        (replacement_uid, uin, uid))
+        else:
+            con.execute("DELETE FROM formation WHERE uin=? AND uid=?", (uin, uid))
+        con.execute("DELETE FROM card_forge WHERE uin=? AND uid=?", (uin, uid))
+        con.execute("DELETE FROM card_refines WHERE uin=? AND uid=?", (uin, uid))
+        con.execute("DELETE FROM card_fill WHERE uin=? AND uid=?", (uin, uid))
+        con.execute("DELETE FROM card_fruits WHERE uin=? AND uid=?", (uin, uid))
+        con.execute("DELETE FROM cards WHERE uin=? AND uid=?", (uin, uid))
+
+
+def clear_cards_and_formation(uin):
+    """Wipe a player's card collection + saved formation (they regenerate from owned plants on next
+    login). Used to migrate the uid scheme: the client only treats uid>10000 as a REAL owned card."""
+    with _db() as con:
+        con.execute("DELETE FROM cards WHERE uin=?", (uin,))
+        con.execute("DELETE FROM formation WHERE uin=?", (uin,))
+        con.execute("DELETE FROM card_fruits WHERE uin=?", (uin,))
+        con.execute("DELETE FROM card_refines WHERE uin=?", (uin,))
+
+
+def get_card_fruits(uin, uid):
+    """Return {fruit_slot: level} for one owned card, omitting unupgraded slots."""
+    with _db() as con:
+        return {int(r["quality"]): int(r["level"]) for r in con.execute(
+            "SELECT quality, level FROM card_fruits WHERE uin=? AND uid=? AND level>0 "
+            "ORDER BY quality", (uin, int(uid)))}
+
+
+def set_card_fruit_level(uin, uid, quality, level):
+    """Persist the level of one fruit slot (quality is the client-side slot index)."""
+    with _db() as con:
+        con.execute("INSERT INTO card_fruits (uin, uid, quality, level) VALUES (?,?,?,?) "
+                    "ON CONFLICT(uin, uid, quality) DO UPDATE SET level=excluded.level",
+                    (uin, int(uid), int(quality), max(0, int(level))))
+
+
+_CARD_REFINE_FIELDS = {
+    "attack", "defense", "hp", "ability", "speed",
+    "pending_attack", "pending_defense", "pending_hp", "pending_ability",
+    "pending_speed", "pending_mode",
+}
+
+
+def get_card_refine(uin, uid):
+    """Return committed + pending refine state for one card, with zero defaults."""
+    with _db() as con:
+        row = con.execute("SELECT * FROM card_refines WHERE uin=? AND uid=?",
+                          (uin, int(uid))).fetchone()
+    return {key: int(row[key]) if row else 0 for key in _CARD_REFINE_FIELDS}
+
+
+def save_card_refine(uin, uid, **values):
+    """Upsert selected refine fields. Column names are allow-listed above."""
+    values = {key: int(value) for key, value in values.items() if key in _CARD_REFINE_FIELDS}
+    with _db() as con:
+        con.execute("INSERT OR IGNORE INTO card_refines (uin,uid) VALUES (?,?)",
+                    (uin, int(uid)))
+        if values:
+            columns = sorted(values)
+            con.execute("UPDATE card_refines SET "
+                        + ",".join(f"{column}=?" for column in columns)
+                        + " WHERE uin=? AND uid=?",
+                        tuple(values[column] for column in columns) + (uin, int(uid)))
+
+
+def get_card_genes(uin, uid):
+    """{gene_id: {factor_level, factor_exp, attribute, level}} for one owned plant card."""
+    with _db() as con:
+        return {int(r["gene_id"]): {"factor_level": int(r["factor_level"]),
+                                    "factor_exp": int(r["factor_exp"]),
+                                    "attribute": int(r["attribute"]),
+                                    "level": int(r["level"])}
+                for r in con.execute(
+                    "SELECT gene_id,factor_level,factor_exp,attribute,level FROM card_genes "
+                    "WHERE uin=? AND uid=? ORDER BY gene_id", (uin, int(uid)))}
+
+
+def set_card_gene(uin, uid, gene_id, factor_level, factor_exp, attribute, level):
+    with _db() as con:
+        con.execute("INSERT INTO card_genes "
+                    "(uin,uid,gene_id,factor_level,factor_exp,attribute,level) VALUES (?,?,?,?,?,?,?) "
+                    "ON CONFLICT(uin,uid,gene_id) DO UPDATE SET "
+                    "factor_level=excluded.factor_level,factor_exp=excluded.factor_exp,"
+                    "attribute=excluded.attribute,level=excluded.level",
+                    (uin, int(uid), int(gene_id), int(factor_level), int(factor_exp),
+                     int(attribute), int(level)))
+
+
+def delete_card_genes(uin, uid):
+    with _db() as con:
+        con.execute("DELETE FROM card_genes WHERE uin=? AND uid=?", (uin, int(uid)))
+
+
+def get_gene_test_stage(uin, mode, stage):
+    with _db() as con:
+        row = con.execute("SELECT current_sub,max_sub,rewards FROM gene_test_stages "
+                          "WHERE uin=? AND mode=? AND stage=?", (uin, mode, stage)).fetchone()
+    if not row:
+        return {"current_sub": 0, "max_sub": 0, "rewards": {}}
+    rewards = {}
+    for pair in (row["rewards"] or "").split(","):
+        if ":" in pair:
+            try:
+                iid, count = pair.split(":", 1)
+                rewards[int(iid)] = int(count)
+            except ValueError:
+                pass
+    return {"current_sub": int(row["current_sub"]), "max_sub": int(row["max_sub"]),
+            "rewards": rewards}
+
+
+def set_gene_test_stage(uin, mode, stage, current_sub, max_sub, rewards):
+    reward_text = ",".join("%d:%d" % (int(i), int(n))
+                          for i, n in sorted(rewards.items()) if n > 0)
+    with _db() as con:
+        con.execute("INSERT INTO gene_test_stages "
+                    "(uin,mode,stage,current_sub,max_sub,rewards) VALUES (?,?,?,?,?,?) "
+                    "ON CONFLICT(uin,mode,stage) DO UPDATE SET "
+                    "current_sub=excluded.current_sub,max_sub=excluded.max_sub,rewards=excluded.rewards",
+                    (uin, mode, stage, current_sub, max_sub, reward_text))
+
+
+def get_card_filled_indices(uin, uid):
+    """Return enhancement slots already filled for one owned card."""
+    with _db() as con:
+        return [r["piece_index"] for r in con.execute(
+            "SELECT piece_index FROM card_fill WHERE uin=? AND uid=? ORDER BY piece_index",
+            (uin, int(uid)))]
+
+
+def add_card_filled_index(uin, uid, piece_index):
+    """Mark one enhancement slot filled; return True only for a new slot."""
+    with _db() as con:
+        cur = con.execute(
+            "INSERT OR IGNORE INTO card_fill (uin, uid, piece_index) VALUES (?,?,?)",
+            (uin, int(uid), int(piece_index)))
+        return cur.rowcount > 0
+
+
+def clear_card_filled_indices(uin, uid):
+    """Clear enhancement slots after the client completes filling."""
+    with _db() as con:
+        con.execute("DELETE FROM card_fill WHERE uin=? AND uid=?", (uin, int(uid)))
+
+
+def get_card_forge_level(uin, uid):
+    """Return a card's persistent enhancement level."""
+    with _db() as con:
+        row = con.execute("SELECT forge_level FROM card_forge WHERE uin=? AND uid=?",
+                          (uin, int(uid))).fetchone()
+        return int(row["forge_level"]) if row else 0
+
+
+def set_card_forge_level(uin, uid, forge_level):
+    """Persist a card's enhancement level."""
+    with _db() as con:
+        con.execute("INSERT INTO card_forge (uin, uid, forge_level) VALUES (?,?,?) "
+                    "ON CONFLICT(uin, uid) DO UPDATE SET forge_level=excluded.forge_level",
+                    (uin, int(uid), int(forge_level)))
+
+
+def get_formation(uin, team_id=1):
+    """{pos_index: uid} the player's saved battle team (empty if never set)."""
+    with _db() as con:
+        return {r["pos_index"]: r["uid"] for r in con.execute(
+            "SELECT pos_index, uid FROM formation WHERE uin=? AND team_id=? ORDER BY pos_index",
+            (uin, team_id))}
+
+
+def set_formation(uin, team_id, placements):
+    """Replace a team's layout. `placements` = {pos_index: uid} (or [(pos_index, uid)])."""
+    items = placements.items() if isinstance(placements, dict) else placements
+    with _db() as con:
+        con.execute("DELETE FROM formation WHERE uin=? AND team_id=?", (uin, team_id))
+        con.executemany("INSERT INTO formation (uin, team_id, pos_index, uid) VALUES (?,?,?,?)",
+                        [(uin, team_id, int(p), int(u)) for p, u in items])
+
+
+def get_garden_pots(uin):
+    """{field_id: (seed_id, plant_time)} for every UNLOCKED pot the player has."""
+    with _db() as con:
+        return {r["field_id"]: (r["seed_id"], r["plant_time"]) for r in con.execute(
+            "SELECT field_id, seed_id, plant_time FROM garden_pots WHERE uin=?", (uin,))}
+
+
+def unlock_garden_field(uin, field_id):
+    """Ensure a pot row exists (unlocked, empty). Idempotent."""
+    with _db() as con:
+        con.execute("INSERT OR IGNORE INTO garden_pots (uin, field_id, seed_id, plant_time) "
+                    "VALUES (?,?,0,0)", (uin, int(field_id)))
+
+
+def set_garden_pot(uin, field_id, seed_id, plant_time):
+    """Set a pot's planted seed + time (seed_id=0 clears it)."""
+    with _db() as con:
+        con.execute("INSERT INTO garden_pots (uin, field_id, seed_id, plant_time) VALUES (?,?,?,?) "
+                    "ON CONFLICT(uin, field_id) DO UPDATE SET seed_id=excluded.seed_id, "
+                    "plant_time=excluded.plant_time", (uin, int(field_id), int(seed_id), int(plant_time)))
+
+
+def get_talents(uin):
+    """List of plant-talent ids the player has studied (Greenhouse / 植物研究所)."""
+    with _db() as con:
+        return [r["talent_id"] for r in con.execute(
+            "SELECT talent_id FROM talents WHERE uin=?", (uin,))]
+
+
+def study_talent(uin, talent_id):
+    """Record a studied talent (idempotent)."""
+    with _db() as con:
+        con.execute("INSERT OR IGNORE INTO talents (uin, talent_id) VALUES (?,?)",
+                    (uin, int(talent_id)))
+
+
+def has_talent(uin, talent_id):
+    with _db() as con:
+        return con.execute("SELECT 1 FROM talents WHERE uin=? AND talent_id=?",
+                           (uin, int(talent_id))).fetchone() is not None
+
+
+# --- nutrition reagents (试剂) ---------------------------------------------------
+def get_reagents(uin):
+    """Every owned reagent as {uid, base_id, level, position, slot_id} (list of dicts)."""
+    with _db() as con:
+        return [{"uid": r["uid"], "base_id": r["base_id"], "level": r["level"],
+                 "position": r["position"], "slot_id": r["slot_id"]}
+                for r in con.execute(
+                    "SELECT uid, base_id, level, position, slot_id FROM reagents WHERE uin=?", (uin,))]
+
+
+def next_reagent_uid(uin):
+    """A fresh, never-reused reagent uid (REAGENT_UID_BASE + a per-player incrementing seq)."""
+    with _db() as con:
+        row = con.execute("SELECT reagent_seq FROM players WHERE uin=?", (uin,)).fetchone()
+        seq = (int(row["reagent_seq"]) if row and row["reagent_seq"] is not None else 0) + 1
+        con.execute("UPDATE players SET reagent_seq=? WHERE uin=?", (seq, uin))
+        return REAGENT_UID_BASE + seq
+
+
+def add_reagent(uin, uid, base_id, level=1, position=0, slot_id=0):
+    with _db() as con:
+        con.execute("INSERT OR REPLACE INTO reagents (uin, uid, base_id, level, position, slot_id) "
+                    "VALUES (?,?,?,?,?,?)",
+                    (uin, int(uid), int(base_id), int(level), int(position), int(slot_id)))
+
+
+def set_reagent_pos(uin, uid, position, slot_id):
+    """Move a reagent to an equip slot (position>0, slot_id 1..8) or back to the bag (0, 0)."""
+    with _db() as con:
+        con.execute("UPDATE reagents SET position=?, slot_id=? WHERE uin=? AND uid=?",
+                    (int(position), int(slot_id), uin, int(uid)))
+
+
+def set_reagent_level(uin, uid, level):
+    with _db() as con:
+        con.execute("UPDATE reagents SET level=? WHERE uin=? AND uid=?", (int(level), uin, int(uid)))
+
+
+def remove_reagent(uin, uid):
+    with _db() as con:
+        con.execute("DELETE FROM reagents WHERE uin=? AND uid=?", (uin, int(uid)))
+
+
+# --- friends (好友) -----------------------------------------------------------
+def get_friends(uin):
+    """Every added friend as a dict {friend_role_id, friend_name, help_plant_id,
+    help_plant_level, diamond_flag, diamond_blue_lvl, diamond_yellow_lvl,
+    diamond_xinyue_lvl}, ordered by friend_role_id."""
+    with _db() as con:
+        return [dict(r) for r in con.execute(
+            "SELECT friend_role_id, friend_name, help_plant_id, help_plant_level, "
+            "diamond_flag, diamond_blue_lvl, diamond_yellow_lvl, diamond_xinyue_lvl "
+            "FROM friends WHERE uin=? ORDER BY friend_role_id", (uin,))]
+
+
+def add_friend(uin, friend_role_id, friend_name, help_plant_id, help_plant_level,
+               diamond_flag=1, diamond_blue_lvl=0, diamond_yellow_lvl=0, diamond_xinyue_lvl=0):
+    """Insert or replace a friend row."""
+    with _db() as con:
+        con.execute(
+            "INSERT OR REPLACE INTO friends (uin, friend_role_id, friend_name, help_plant_id, "
+            "help_plant_level, diamond_flag, diamond_blue_lvl, diamond_yellow_lvl, "
+            "diamond_xinyue_lvl) VALUES (?,?,?,?,?,?,?,?,?)",
+            (uin, int(friend_role_id), str(friend_name), int(help_plant_id),
+             int(help_plant_level), int(diamond_flag), int(diamond_blue_lvl),
+             int(diamond_yellow_lvl), int(diamond_xinyue_lvl)))
+
+
+def remove_friend(uin, friend_role_id):
+    with _db() as con:
+        con.execute("DELETE FROM friends WHERE uin=? AND friend_role_id=?",
+                    (uin, int(friend_role_id)))
+
+
+def save_player(uin, **fields):
+    """Update specific columns for a player."""
+    if not fields:
+        return
+    sets = ", ".join("%s=?" % k for k in fields)
+    with _db() as con:
+        con.execute("UPDATE players SET %s WHERE uin=?" % sets,
+                    list(fields.values()) + [uin])
+
+
+if __name__ == "__main__":
+    init_db()
+    p, new = get_or_create_player(700000123)
+    print("created" if new else "loaded", "player:", dict(p))

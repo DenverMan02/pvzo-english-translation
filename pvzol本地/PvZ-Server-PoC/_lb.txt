@@ -1,0 +1,313 @@
+webroot/ModuleBattleLineup.swf: 1 ABC block(s)
+  classes=19 bodies=189
+
+=== com.qq.modules.battleLineup.view::BattleLineupWindowMediator.lineupUpdateHandler  (method 124)
+      0  getlocal0        
+      1  pushscope        
+      2  pushnull         
+      3  coerce           com.qq.modules.card.model.vo::CardItemVO
+      5  setlocal3        
+      6  pushbyte         0
+      8  setlocal         4
+     10  pushbyte         0
+     12  setlocal         5
+     14  pushbyte         0
+     16  setlocal         6
+     18  pushnull         
+     19  coerce           com.qq.modules.battleLineup.view.comps::PlantCardVessel
+     21  setlocal         7
+     23  pushnull         
+     24  coerce           ::Array
+     26  setlocal         8
+     28  pushbyte         0
+     30  setlocal         9
+     32  pushnull         
+     33  coerce           com.qq.modules.main.model.settings.battle.ce::BattleLineupCardTemp
+     36  setlocal         10
+     38  pushnull         
+     39  coerce           com.qq.modules.main.model.settings.battle::BattleLineupCardSkillTemplate
+     42  setlocal         11
+     44  pushnull         
+     45  coerce           PVZ.Cmd::Dto_CardPosInfo
+     47  setlocal         12
+     49  pushnull         
+     50  coerce           com.qq.modules.card.model.vo::CardItemVO
+     52  setlocal         13
+     54  pushnull         
+     55  coerce           PVZ.Cmd::Dto_EnemyCardInfo
+     57  setlocal         14
+     59  getlocal0        
+     60  callpropvoid     resetCardVessel, 0
+     64  getlocal0        
+     65  getproperty      ::view
+     68  getproperty      ::totalPowerTxt
+     70  getlex           asgui.utils::StringUtil
+     73  getlex           com.qq.templates.font::FontHKHB
+     76  getproperty      ::BATTLE_CARD_TOTALPOWER
+     79  getlex           com.qq::GameGloble
+     82  getproperty      ::actorModel
+     85  getproperty      ::battleCardModel
+     88  getlocal0        
+     89  getproperty      ::battleModel
+     91  getproperty      ::embattleType
+     94  callproperty     ::getTargetVo, 1
+     98  getproperty      ::totalPower
+    101  callproperty     ::substitute, 2
+    105  setproperty      ::text
+    108  getlocal0        
+    109  getproperty      ::view
+    112  getproperty      ::totalPowerTxt_enemy
+    114  getlex           asgui.utils::StringUtil
+    117  getlex           com.qq.templates.font::FontHKHB
+    120  getproperty      ::BATTLE_CARD_TOTALPOWER
+    123  getlocal0        
+    124  getproperty      ::battleModel
+    126  getproperty      ::enemyTotalPower
+    129  callproperty     ::substitute, 2
+    133  setproperty      ::text
+    136  getlex           com.qq::GameGloble
+    139  getproperty      ::actorModel
+    142  getproperty      ::battleCardModel
+    145  getlocal0        
+    146  getproperty      ::battleModel
+    148  getproperty      ::embattleType
+    151  callproperty     ::getFormationInfo, 1
+    155  coerce           com.qq.modules.main.model.vo::BattleCardFormationVO
+    158  setlocal2        
+    159  getlocal2        
+    160  iffalse          -> 542
+    162  bkpt             
+    163  op_0x0           
+    164  getlex           com.qq::GameGloble
+    167  getproperty      ::actorModel
+    170  getproperty      ::battleCardModel
+    173  getlocal2        
+    174  getproperty      ::dto
+    177  getproperty      ::leaderUid
+    180  callproperty     ::getBattleCardFullInfo, 1
+    184  coerce           com.qq.modules.card.model.vo::CardItemVO
+    186  setlocal3        
+    187  getlocal3        
+    188  iffalse          -> 274
+    190  op_0x0           
+    191  op_0x0           
+    192  getlex           com.qq.modules.main.model::SettingsModel
+    195  getproperty      ::instance
+    198  getproperty      ::battleCardSettings
+    201  getlocal3        
+    202  getproperty      ::cardId
+    205  callproperty     ::getBattleCardTempById, 1
+    209  coerce           com.qq.modules.main.model.settings.battle.ce::BattleLineupCardTemp
+    212  setlocal         10
+    214  getlex           com.qq.modules.main.model.settings.battle::BattleLineupTemplateFactory
+    217  getproperty      ::instance
+    220  getlocal         10
+    222  getproperty      ::leaderSkillId
+    225  callproperty     ::getBattleLineupCardSkillTemplateById, 1
+    229  coerce           com.qq.modules.main.model.settings.battle::BattleLineupCardSkillTemplate
+    232  setlocal         11
+    234  getlocal0        
+    235  getproperty      ::view
+    238  getproperty      ::leaderSkillUI
+    240  getproperty      ::skillName_txt
+    243  pushstring       '['
+    246  getlocal         11
+    248  getproperty      ::name
+    251  add              
+    252  pushstring       ']'
+    255  add              
+    256  setproperty      ::text
+    259  getlocal0        
+    260  getproperty      ::view
+    263  getproperty      ::leaderSkillUI
+    265  getproperty      ::skill_txt
+    268  getlocal         11
+    270  getproperty      ::desc
+    273  setproperty      ::text
+    276  pushbyte         0
+    278  setlocal         6
+    280  newarray         0
+    282  coerce           ::Array
+    284  setlocal         8
+    286  pushbyte         0
+    288  setlocal         4
+    290  jump             -> 407
+    292  op_0x0           
+    293  op_0x0           
+    294  label            
+    295  getlocal0        
+    296  getproperty      ::view
+    299  getproperty      ::selfCardList
+    301  getlocal         4
+    303  getproperty      <runtime>
+    306  coerce           com.qq.modules.battleLineup.view.comps::PlantCardVessel
+    308  setlocal         7
+    310  getlocal2        
+    311  getlocal         7
+    313  getproperty      ::posIndex
+    316  callproperty     ::getCardByPosIndex, 1
+    320  coerce           PVZ.Cmd::Dto_CardPosInfo
+    322  setlocal         12
+    324  getlocal         7
+    326  getlocal         12
+    328  callpropvoid     ::setData, 1
+    332  getlocal         12
+    334  convert_b        
+    335  dup              
+    336  iffalse          -> 345
+    338  op_0x0           
+    339  op_0x0           
+    340  pop              
+    341  getlocal         12
+    343  getproperty      ::ownerRoleId
+    346  convert_b        
+    347  iffalse          -> 359
+    349  op_0x0           
+    350  op_0x0           
+    351  pushbyte         1
+    353  setlocal         6
+    355  getlocal0        
+    356  getlocal         7
+    358  initproperty     cacheHelpVessel
+    361  getlocal         12
+    363  iffalse          -> 405
+    365  op_0x0           
+    366  op_0x0           
+    367  inclocal_i       5
+    369  getlex           com.qq::GameGloble
+    372  getproperty      ::actorModel
+    375  getproperty      ::battleCardModel
+    378  getlocal         12
+    380  getproperty      ::uid
+    383  callproperty     ::getBattleCardFullInfo, 1
+    387  coerce           com.qq.modules.card.model.vo::CardItemVO
+    389  dup              
+    390  setlocal         13
+    392  iffalse          -> 405
+    394  op_0x0           
+    395  op_0x0           
+    396  getlocal         8
+    398  getlocal         13
+    400  getproperty      ::cardId
+    403  callpropvoid     http://adobe.com/AS3/2006/builtin::push, 1
+    407  inclocal_i       4
+    409  getlocal         4
+    411  getlocal0        
+    412  getproperty      ::view
+    415  getproperty      ::selfCardList
+    417  getproperty      ::length
+    420  iflt             -> 292
+    422  op_0xff          
+    423  op_0xff          
+    424  getlex           com.qq::GameGloble
+    427  getproperty      ::actorModel
+    430  getproperty      ::levelTemplate
+    433  getproperty      ::battleCardMax
+    436  pushbyte         1
+    438  add              
+    439  convert_i        
+    440  setlocal         9
+    442  getlocal0        
+    443  getproperty      ::view
+    446  getproperty      ::plantNumTxt
+    448  getlex           asgui.utils::StringUtil
+    451  getlex           com.qq.templates.font::FontHKHB
+    454  getproperty      ::BATTLE_CARD_FIGHT_PLANT
+    457  getlocal         5
+    459  getlocal         9
+    461  getlocal         6
+    463  pushbyte         1
+    465  callproperty     ::substitute, 5
+    469  setproperty      ::text
+    472  getlocal0        
+    473  getproperty      ::view
+    476  getproperty      ::imgDeck
+    479  getlocal         8
+    481  setproperty      ::toolTip
+    484  getlex           com.qq.modules.card.model.templates::CardTemplateFactory
+    487  getproperty      ::instance
+    490  getlocal         8
+    492  callproperty     ::hasActiveSomeDeck, 1
+    496  iffalse          -> 522
+    498  op_0x0           
+    499  op_0x0           
+    500  getlocal0        
+    501  getproperty      ::view
+    504  getproperty      ::imgDeck
+    507  getlex           asgui.resources::AssetManager
+    510  pushstring       'Embattle_UI_Icon_Deck'
+    513  callproperty     ::GetClass, 1
+    517  setproperty      ::source
+    520  jump             -> 542
+    522  op_0x0           
+    523  op_0x0           
+    524  getlocal0        
+    525  getproperty      ::view
+    528  getproperty      ::imgDeck
+    531  getlex           asgui.resources::AssetManager
+    534  pushstring       'Embattle_UI_Icon_Deck_Disable'
+    537  callproperty     ::GetClass, 1
+    541  setproperty      ::source
+    544  getlocal0        
+    545  pushnull         
+    546  callpropvoid     com.qq.modules.battleLineup.view:BattleLineupWindowMediator::pageChangeHandler, 1
+    550  getlocal0        
+    551  getproperty      ::battleModel
+    553  getproperty      ::enemyCardPosInfo
+    556  getproperty      ::length
+    559  convert_i        
+    560  setlocal         5
+    562  pushbyte         0
+    564  setlocal         4
+    566  jump             -> 606
+    568  op_0x0           
+    569  op_0x0           
+    570  label            
+    571  getlocal0        
+    572  getproperty      ::battleModel
+    574  getproperty      ::enemyCardPosInfo
+    577  getlocal         4
+    579  getproperty      <runtime>
+    582  getlex           PVZ.Cmd::Dto_EnemyCardInfo
+    584  astypelate       
+    585  coerce           PVZ.Cmd::Dto_EnemyCardInfo
+    587  setlocal         14
+    589  getlocal0        
+    590  pushfalse        
+    591  getlocal         14
+    593  getproperty      ::posIndex
+    596  callproperty     getCardVesselByPosIndex, 2
+    600  getlocal         14
+    602  callpropvoid     ::setData, 1
+    606  inclocal_i       4
+    608  getlocal         4
+    610  getlocal         5
+    612  iflt             -> 572
+    618  decrement        
+    619  bkpt             
+    620  getproperty      ::enemyDummyCard
+    622  getlocal0        
+    623  getproperty      ::battleModel
+    625  getproperty      ::puppetformation
+    628  callpropvoid     ::reset, 1
+    632  getlocal0        
+    633  getproperty      cacheHelpVessel
+    636  pushnull         
+    637  ifne             -> 648
+    639  op_0x0           
+    640  op_0x0           
+    641  getlocal0        
+    642  getlocal0        
+    643  callproperty     getEmptyCardVessel, 0
+    647  initproperty     cacheHelpVessel
+    650  getlocal0        
+    651  getproperty      cacheHelpVessel
+    654  pushnull         
+    655  ifne             -> 671
+    657  op_0x0           
+    658  op_0x0           
+    659  findpropstrict   org.as3commons.logging.api::getLogger
+    662  callproperty     org.as3commons.logging.api::getLogger, 0
+    666  pushstring       "battleLineup: can't find cacheHelpVessel !  "
+    669  callpropvoid     org.as3commons.logging.api:ILogger::error, 1
+    673  returnvoid       

@@ -1,0 +1,370 @@
+{
+  "files": [
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleAct3years.swf",
+      "existed": true,
+      "before_sha256": "b7393d4715ea0f6e28c5ba0ff37cdc5ff0d847d9ef21e1fed11cb9cfc66078f5",
+      "after_sha256": "82c26e1d1be63dd78ba10df24b8b77d0748daa2309ca777e0d55c255cd1d150d"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleAct3years_dfb7b08572f84c386feeec4a43d05c61.swf",
+      "existed": true,
+      "before_sha256": "b7393d4715ea0f6e28c5ba0ff37cdc5ff0d847d9ef21e1fed11cb9cfc66078f5",
+      "after_sha256": "82c26e1d1be63dd78ba10df24b8b77d0748daa2309ca777e0d55c255cd1d150d"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleAct3years_250eddacb387b41c72d2dc59d60186d4.swf",
+      "existed": false,
+      "before_sha256": null,
+      "after_sha256": "82c26e1d1be63dd78ba10df24b8b77d0748daa2309ca777e0d55c255cd1d150d"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleBag.swf",
+      "existed": true,
+      "before_sha256": "7c4bff923b38a0b98fbb52a674d72653e8abc351d38b17ab0faf11ca594a4a9a",
+      "after_sha256": "e59ce295423dd781d169f0b2d31ad114851f99d8f5b6ea19981acbc8b59d0219"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleBag_0ebfeac56115494ceaf28933d3d28504.swf",
+      "existed": true,
+      "before_sha256": "7c4bff923b38a0b98fbb52a674d72653e8abc351d38b17ab0faf11ca594a4a9a",
+      "after_sha256": "e59ce295423dd781d169f0b2d31ad114851f99d8f5b6ea19981acbc8b59d0219"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleBag_c2c3adbbeea007e6dbb73c2e2ba6794b.swf",
+      "existed": true,
+      "before_sha256": "7c4bff923b38a0b98fbb52a674d72653e8abc351d38b17ab0faf11ca594a4a9a",
+      "after_sha256": "e59ce295423dd781d169f0b2d31ad114851f99d8f5b6ea19981acbc8b59d0219"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleBag_7fa3305508527661a70579e4999903f4.swf",
+      "existed": false,
+      "before_sha256": null,
+      "after_sha256": "e59ce295423dd781d169f0b2d31ad114851f99d8f5b6ea19981acbc8b59d0219"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard.swf",
+      "existed": true,
+      "before_sha256": "a8c2ba52139fee775512ac9fbaa41503e253f05854b49cfbc9df0d71e441c3b0",
+      "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_024f83990713bde2d3b9e40ae9d0cf0c.swf",
+      "existed": true,
+      "before_sha256": "15991b6a2c88348485c2d512c0235e2b15e0a0ec05c88cf7ca5de704b303a511",
+      "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_27687cfe6dac3cda5156ebdaf76684cb.swf",
+      "existed": true,
+      "before_sha256": "b3610a291ea0b8213a79464c83773db47311ddb3f38621ab3e973d5ec86527d5",
+      "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_5442f3d905d35737e357e571c83eda03.swf",
+      "existed": true,
+      "before_sha256": "a8c2ba52139fee775512ac9fbaa41503e253f05854b49cfbc9df0d71e441c3b0",
+      "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_70d7e3c8d7774fd835b339295af9d352.swf",
+      "existed": true,
+      "before_sha256": "a8c2ba52139fee775512ac9fbaa41503e253f05854b49cfbc9df0d71e441c3b0",
+      "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_b20e1ed46fb5ea15b3f03d276bd6697c.swf",
+      "existed": true,
+      "before_sha256": "a8c2ba52139fee775512ac9fbaa41503e253f05854b49cfbc9df0d71e441c3b0",
+      "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_d424e5aa36284e2e177cae812d8cc95f.swf",
+      "existed": true,
+      "before_sha256": "b3610a291ea0b8213a79464c83773db47311ddb3f38621ab3e973d5ec86527d5",
+      "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_dc9c6453a1f2a1c73f6e547cf7652a54.swf",
+      "existed": true,
+      "before_sha256": "b3610a291ea0b8213a79464c83773db47311ddb3f38621ab3e973d5ec86527d5",
+      "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_e3700b007bfe5dd2a7257211dff586e4.swf",
+      "existed": true,
+      "before_sha256": "b3610a291ea0b8213a79464c83773db47311ddb3f38621ab3e973d5ec86527d5",
+      "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_eb16745cb730f1bc07960fa05bdd5fde.swf",
+      "existed": true,
+      "before_sha256": "aff75b9d641577f005d413d6e04f078f44bb19cf5d5f6da23a1e4fd72d077474",
+      "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_efa0e0913a5921c7ca829a180065fdc3.swf",
+      "existed": true,
+      "before_sha256": "d4a2597cc08011a435e2e78a938cb54e035a6d1c21d62861c7d4ba9e4ddeed72",
+      "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleCard_f38421f4e0c7b1b2727597c20b8a1b32.swf",
+      "existed": false,
+      "before_sha256": null,
+      "after_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleChat.swf",
+      "existed": true,
+      "before_sha256": "8ce176b6d90c32ae263d2c304f56ad0deac47160bd0b237c617deb856a3aa49d",
+      "after_sha256": "ab88f5e8abfc11c0e610be3ff45af86429974757dcfcdb933d91b8aa322fc399"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleChat_058398f2830b5da8574a0cc15acffc56.swf",
+      "existed": true,
+      "before_sha256": "8ce176b6d90c32ae263d2c304f56ad0deac47160bd0b237c617deb856a3aa49d",
+      "after_sha256": "ab88f5e8abfc11c0e610be3ff45af86429974757dcfcdb933d91b8aa322fc399"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleChat_a4c202dcdf4bfd9bbbf32575e7fa35eb.swf",
+      "existed": false,
+      "before_sha256": null,
+      "after_sha256": "ab88f5e8abfc11c0e610be3ff45af86429974757dcfcdb933d91b8aa322fc399"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleUnion.swf",
+      "existed": true,
+      "before_sha256": "0eadbc0247b7c6be7644d134538fc10f1faa240ec045fcd6e43bb5725916b2dc",
+      "after_sha256": "671f8c5786905b86bb339202918df941c505ac5aa0392fba7743239e25c749d2"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleUnion_a9cb80f845a121fdca897313518770df.swf",
+      "existed": true,
+      "before_sha256": "0eadbc0247b7c6be7644d134538fc10f1faa240ec045fcd6e43bb5725916b2dc",
+      "after_sha256": "671f8c5786905b86bb339202918df941c505ac5aa0392fba7743239e25c749d2"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleUnion_36d83f770b8e5f247428e3064482f787.swf",
+      "existed": false,
+      "before_sha256": null,
+      "after_sha256": "671f8c5786905b86bb339202918df941c505ac5aa0392fba7743239e25c749d2"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p.swf",
+      "existed": true,
+      "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+      "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_041205df680ecb63e34f6da5bacbfcf1.swf",
+      "existed": true,
+      "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+      "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_04d85414d9f7ef6add82a525a0475506.swf",
+      "existed": true,
+      "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+      "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_2f31414da4c6b9aff9be96e68029c65b.swf",
+      "existed": true,
+      "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+      "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_44d757b4fb708f31dad7a2394a1a360f.swf",
+      "existed": true,
+      "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+      "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_867dbb7ffa06e76c8e280fe312d5a976.swf",
+      "existed": true,
+      "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+      "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_c874590c49beaaf924c0395036c85119.swf",
+      "existed": true,
+      "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+      "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_cb7af05d4d2ddbe204ea4926772f3b92.swf",
+      "existed": true,
+      "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+      "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_ddd80a273668f4e746bbaa442bfc55f0.swf",
+      "existed": true,
+      "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+      "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_e90cc556a5e9f63b73ffa23b6fe21c34.swf",
+      "existed": true,
+      "before_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+      "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\Game_p_136f07596f913cef93d35343a83626ec.swf",
+      "existed": false,
+      "before_sha256": null,
+      "after_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleTD_p.swf",
+      "existed": true,
+      "before_sha256": "77334d656ef2901535328d8e3f9d5a865bc3ac3f3709867d1e59012cd5c9834e",
+      "after_sha256": "a13f2bbc3751a9beb6b9de87691ae51f2eb0da62a41ffbf19fe4f5c7fa9de3c8"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleTD_p_becc987b9a7628ab304c08c8c1dea8dd.swf",
+      "existed": true,
+      "before_sha256": "47b21173e3761532411ca9e63a6f9a87218def8709df86430b6714dc37f98e4e",
+      "after_sha256": "a13f2bbc3751a9beb6b9de87691ae51f2eb0da62a41ffbf19fe4f5c7fa9de3c8"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\ModuleTD_p_1c16b189d057f81f222aab0f948139bd.swf",
+      "existed": false,
+      "before_sha256": null,
+      "after_sha256": "a13f2bbc3751a9beb6b9de87691ae51f2eb0da62a41ffbf19fe4f5c7fa9de3c8"
+    },
+    {
+      "path": "D:\\pvzol本地最新最新ol\\pvzol本地\\webroot\\fileVer.xml",
+      "existed": true,
+      "before_sha256": "93c82975b0072fe8c9cb4a171a4a876dba82fc0c39e3fc1a8d5aac425278df24",
+      "after_sha256": "8251717569c50b812fdaaa362982fbf5a7a7c45f9f613b4fbd0d6be9962ead51"
+    }
+  ],
+  "canonical": {
+    "ModuleAct3years.swf": {
+      "file": "ModuleAct3years.swf",
+      "input_sha256": "b7393d4715ea0f6e28c5ba0ff37cdc5ff0d847d9ef21e1fed11cb9cfc66078f5",
+      "output_sha256": "82c26e1d1be63dd78ba10df24b8b77d0748daa2309ca777e0d55c255cd1d150d",
+      "output_md5": "250eddacb387b41c72d2dc59d60186d4",
+      "size": 113254,
+      "candidate": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\bag\\candidates\\ModuleAct3years.swf",
+      "changes": [
+        {
+          "class": "com.qq.display.QPopupMenu",
+          "method": "show",
+          "method_id": 454,
+          "old_length": 358,
+          "new_length": 358,
+          "change": "read Application local mouse coordinates"
+        }
+      ],
+      "unrelated_methods_unchanged": true,
+      "constant_pools_signatures_scripts_and_exception_tables_unchanged": true
+    },
+    "ModuleBag.swf": {
+      "file": "ModuleBag.swf",
+      "input_sha256": "7c4bff923b38a0b98fbb52a674d72653e8abc351d38b17ab0faf11ca594a4a9a",
+      "output_sha256": "e59ce295423dd781d169f0b2d31ad114851f99d8f5b6ea19981acbc8b59d0219",
+      "output_md5": "7fa3305508527661a70579e4999903f4",
+      "size": 26934,
+      "candidate": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\bag\\candidates\\ModuleBag.swf",
+      "changes": [
+        {
+          "class": "com.qq.display.QPopupMenu",
+          "method": "show",
+          "method_id": 333,
+          "old_length": 350,
+          "new_length": 350,
+          "change": "read Application local mouse coordinates"
+        },
+        {
+          "class": "com.qq.modules.bag.view.components.BagItemOpenEffectViewMediator",
+          "method": "init",
+          "method_id": 235,
+          "old_length": 101,
+          "new_length": 101,
+          "change": "size open effect using logical application dimensions"
+        }
+      ],
+      "unrelated_methods_unchanged": true,
+      "constant_pools_signatures_scripts_and_exception_tables_unchanged": true
+    },
+    "ModuleCard.swf": {
+      "file": "ModuleCard.swf",
+      "input_sha256": "a8c2ba52139fee775512ac9fbaa41503e253f05854b49cfbc9df0d71e441c3b0",
+      "output_sha256": "bad3c445b8231d8e5d9e879348ae5e18cf1fff5c39a24890ab11aa9e2211d912",
+      "output_md5": "f38421f4e0c7b1b2727597c20b8a1b32",
+      "size": 117450,
+      "candidate": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\bag\\candidates\\ModuleCard.swf",
+      "changes": [
+        {
+          "class": "com.qq.display.QPopupMenu",
+          "method": "show",
+          "method_id": 779,
+          "old_length": 354,
+          "new_length": 354,
+          "change": "read Application local mouse coordinates"
+        }
+      ],
+      "unrelated_methods_unchanged": true,
+      "constant_pools_signatures_scripts_and_exception_tables_unchanged": true
+    },
+    "ModuleChat.swf": {
+      "file": "ModuleChat.swf",
+      "input_sha256": "8ce176b6d90c32ae263d2c304f56ad0deac47160bd0b237c617deb856a3aa49d",
+      "output_sha256": "ab88f5e8abfc11c0e610be3ff45af86429974757dcfcdb933d91b8aa322fc399",
+      "output_md5": "a4c202dcdf4bfd9bbbf32575e7fa35eb",
+      "size": 107066,
+      "candidate": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\bag\\candidates\\ModuleChat.swf",
+      "changes": [
+        {
+          "class": "com.qq.display.QPopupMenu",
+          "method": "show",
+          "method_id": 150,
+          "old_length": 358,
+          "new_length": 358,
+          "change": "read Application local mouse coordinates"
+        }
+      ],
+      "unrelated_methods_unchanged": true,
+      "constant_pools_signatures_scripts_and_exception_tables_unchanged": true
+    },
+    "ModuleUnion.swf": {
+      "file": "ModuleUnion.swf",
+      "input_sha256": "0eadbc0247b7c6be7644d134538fc10f1faa240ec045fcd6e43bb5725916b2dc",
+      "output_sha256": "671f8c5786905b86bb339202918df941c505ac5aa0392fba7743239e25c749d2",
+      "output_md5": "36d83f770b8e5f247428e3064482f787",
+      "size": 62858,
+      "candidate": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\bag\\candidates\\ModuleUnion.swf",
+      "changes": [
+        {
+          "class": "com.qq.display.QPopupMenu",
+          "method": "show",
+          "method_id": 1019,
+          "old_length": 352,
+          "new_length": 352,
+          "change": "read Application local mouse coordinates"
+        }
+      ],
+      "unrelated_methods_unchanged": true,
+      "constant_pools_signatures_scripts_and_exception_tables_unchanged": true
+    },
+    "Game_p.swf": {
+      "file": "Game_p.swf",
+      "input_sha256": "8cdf3152b1a0be308a558d879cbe45cbe63895777cba8164724705f0837e2886",
+      "output_sha256": "7d6c7e1401df817bd363e53b364cf3e213ea4f5b472d9d1220b5a6388b6b098e",
+      "output_md5": "136f07596f913cef93d35343a83626ec",
+      "size": 2403661,
+      "candidate": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\tower\\Game_p.tower.swf"
+    },
+    "ModuleTD_p.swf": {
+      "file": "ModuleTD_p.swf",
+      "input_sha256": "77334d656ef2901535328d8e3f9d5a865bc3ac3f3709867d1e59012cd5c9834e",
+      "output_sha256": "a13f2bbc3751a9beb6b9de87691ae51f2eb0da62a41ffbf19fe4f5c7fa9de3c8",
+      "output_md5": "1c16b189d057f81f222aab0f948139bd",
+      "size": 502264,
+      "candidate": "C:\\Users\\komi\\Documents\\Codex\\2026-10-09\\new-chat-20\\work\\tower\\ModuleTD_p.tower.swf"
+    }
+  }
+}

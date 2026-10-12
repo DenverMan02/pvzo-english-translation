@@ -1,0 +1,9 @@
+id	skillName	skillTip
+1	Health	Increases deployed plants' health and initiative.
+2	Attack	Increases deployed plants' attack and initiative.
+3	Defense	Increases deployed plants' defense and initiative.
+4	Dodge	Increases deployed plants' dodge and initiative.
+5	Hit	Increases deployed plants' hit rate and initiative.
+6	Toughness	Increases deployed plants' toughness and initiative.
+7	Critical	Increases deployed plants' critical strike and initiative.
+8	Energy	Increases deployed plants' skill power and initiative.

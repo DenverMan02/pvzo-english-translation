@@ -1,0 +1,60 @@
+2026-10-09 07:28:12,437 WARNING Failed to delete user data folder: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pvzol本地最新最新ol\\pvzol本地\\launcher_cache\\cache\\webview\\EBWebView\\Default\\Extension Rules\\000003.log'
+2026-10-10 00:59:07,035 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 01:23:49,645 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 02:01:04,826 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 02:06:53,374 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 03:28:43,259 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 03:32:11,827 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 06:16:55,775 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 07:15:57,387 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 14:13:44,460 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 14:17:48,087 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 14:17:59,459 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 14:46:46,986 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 15:04:28,591 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 15:05:37,563 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 15:07:12,615 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 15:23:58,827 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 15:37:44,412 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 15:51:55,302 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 16:38:03,455 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 17:24:11,738 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 17:58:36,623 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 22:44:03,612 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-10 23:06:20,903 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-11 00:20:35,338 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-11 00:50:34,652 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-11 01:31:38,190 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-11 04:21:07,928 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-11 06:07:23,690 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-11 06:48:06,988 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-11 07:52:22,740 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-11 08:22:39,503 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-11 08:50:47,837 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-11 20:54:27,080 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-11 20:54:27,314 ERROR 桌面窗口启动失败：Traceback (most recent call last):
+  File "ui_shell.py", line 704, in main
+    check_dependencies()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "ui_shell.py", line 626, in check_dependencies
+    import clr
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "clr.py", line 6, in <module>
+  File "pythonnet\__init__.py", line 143, in load
+    func = assembly.get_function("Python.Runtime.Loader.Initialize")
+  File "clr_loader\types.py", line 95, in get_function
+    return ClrFunction(self._runtime, self._path, name, func)
+  File "clr_loader\types.py", line 59, in __init__
+    self._callable = runtime._get_callable(assembly, typename, func_name)
+                     ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "clr_loader\netfx.py", line 47, in _get_callable
+    raise RuntimeError(
+        f"Failed to resolve {typename}.{function} from {assembly_path}"
+    )
+RuntimeError: Failed to resolve Python.Runtime.Loader.Initialize from C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\启动器界面\_internal\pythonnet\runtime\Python.Runtime.dll
+
+2026-10-11 20:56:14,519 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-11 20:59:56,723 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}

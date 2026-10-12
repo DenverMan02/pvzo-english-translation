@@ -1,0 +1,56 @@
+[
+  {
+    "path": "PvZ-Server-PoC/pvz_poc_server.py",
+    "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-03\\bug-2-bug\\work\\round2\\server\\pvz_poc_server.py",
+    "before": "e38c2816e7ba23a1c8f0c49c57776060da5584171450c9b0f0351077d9550796",
+    "after": "3a656fe2e1f8ea547ba9ddbb8653a5ea7a3fad2d89272368ced5a0c3e3ca132a"
+  },
+  {
+    "path": "PvZ-Server-PoC/player_store.py",
+    "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-03\\bug-2-bug\\work\\round2\\server\\player_store.py",
+    "before": "cc76c343e43fb05c2090541c4cabd114c910899ebf8c5cf5981028447f07c963",
+    "after": "b99837d0fb5edbfde9d5fbc65391b95851670de7bd7b9515810fc07f63c19fb8"
+  },
+  {
+    "path": "PvZ-Server-PoC/combat_effects.py",
+    "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-03\\bug-2-bug\\work\\round2\\server\\combat_effects.py",
+    "before": "793ec6c521bd6f8cd3c00d4ee80ed7b4e76c1b185e15f357bcd555ed6c83b6cd",
+    "after": "41ebeac181a3bd775f3edd2db7b5d83009a240a6267c7c94b5bc0ae440719e73"
+  },
+  {
+    "path": "PvZ-Server-PoC/tests/test_reported_gameplay_issues.py",
+    "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-03\\bug-2-bug\\work\\round2\\server\\tests\\test_reported_gameplay_issues.py",
+    "before": null,
+    "after": "696b72cadf6a887d5ddbcf03df22897e76d46f57b861c5dbf984cf48072e8af4"
+  },
+  {
+    "path": "webroot/ModuleCard.swf",
+    "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-03\\bug-2-bug\\work\\round2\\ModuleCard.swf",
+    "before": "aff75b9d641577f005d413d6e04f078f44bb19cf5d5f6da23a1e4fd72d077474",
+    "after": "d4a2597cc08011a435e2e78a938cb54e035a6d1c21d62861c7d4ba9e4ddeed72"
+  },
+  {
+    "path": "webroot/clientDB.txt",
+    "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-03\\bug-2-bug\\work\\round2\\webroot\\clientDB.txt",
+    "before": "6f4f9f4dc1ce3b8ab8c0858c9f2ad94d7e51931acf123c6c34fc036d5dd1af4d",
+    "after": "4422d938e5e8e157a68f6011c682caaa3fd1533cf176bfbcf008a5299d896c7c"
+  },
+  {
+    "path": "webroot/fileVer.xml",
+    "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-03\\bug-2-bug\\work\\round2\\fileVer.xml",
+    "before": "c4c305c78e75b94ea5d6def7db4a8bd8adbbb8f86d2f8b77386b605192a8b8b9",
+    "after": "0e69486e259db63dd9bfbeba3ce605dd3d3153af6530473108b9359f6ceb22db"
+  },
+  {
+    "path": "webroot/ModuleCard_efa0e0913a5921c7ca829a180065fdc3.swf",
+    "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-03\\bug-2-bug\\work\\round2\\ModuleCard.swf",
+    "before": "aff75b9d641577f005d413d6e04f078f44bb19cf5d5f6da23a1e4fd72d077474",
+    "after": "d4a2597cc08011a435e2e78a938cb54e035a6d1c21d62861c7d4ba9e4ddeed72"
+  },
+  {
+    "path": "webroot/ModuleCard_b20e1ed46fb5ea15b3f03d276bd6697c.swf",
+    "source": "C:\\Users\\komi\\Documents\\Codex\\2026-10-03\\bug-2-bug\\work\\round2\\ModuleCard.swf",
+    "before": null,
+    "after": "d4a2597cc08011a435e2e78a938cb54e035a6d1c21d62861c7d4ba9e4ddeed72"
+  }
+]

@@ -1,0 +1,35 @@
+id	name
+1	Stage-to-Battle Tutorial
+30	Guide player to play Tower Defense 2-1
+2	Claim Reward
+3	Learn Talent 1
+26	Learn Talent 2
+25	Stage Tutorial 1
+4	Farm
+27	Market Trade
+34	Market Trade 2
+31	Guide player to beat Tower Defense 4-1
+5	Unlock Side Door
+29	Guide player to beat Tower Defense 6-1
+6	Unlock Main Story + Start Adventure Chapter 1
+7	Discover Key
+8	Draw Cards & Deploy
+32	Point to Adventure
+9	Puzzle Tutorial
+28	Puzzle Tutorial 2
+10	Costume Tutorial
+11	Equipment
+12	Unlock Main Story 2
+13	Upgrade
+14	Laboratory
+15	Alliance
+16	Catch the Thief
+17	Arena
+18	Map
+19	Zombie Island
+20	Vault + VIP
+21	Redeem Plants
+22	Nursery
+33	Nursery 2
+23	Sentry Tower
+24	Farm Friend Planting

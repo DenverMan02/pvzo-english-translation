@@ -1,0 +1,16 @@
+id	isChooseCard	hasNormalCardSlot	hasMovableCardSlot	hasLimitCountCardSlot	isCropConsumeSun	isDropSun	hasPlantSpecialSkill	hasScorePanel	hasShovelPanel	hasBossHpBar	loadExtraRes
+0	1	1	0	0	1	1	1	0	1	0	
+1	0	1	0	0	1	1	1	0	1	0	
+2	0	0	1	0	0	0	1	0	1	0	tdTrackRes
+3	0	0	0	0	0	0	0	0	0	0	
+4	0	0	0	0	0	0	0	1	0	0	tdMusicGameRes
+5	1	1	0	0	1	0	1	0	1	0	
+6	0	1	0	0	1	1	1	0	1	1	time_tunnel
+7	0	0	0	1	0	0	0	0	0	0	
+8	0	0	1	0	0	0	1	0	1	1	tdTrackRes
+9	0	0	1	0	0	0	0	0	0	0	tdTrackRes
+10	0	1	0	0	1	0	0	0	0	0	
+11	0	0	1	0	0	0	1	0	1	0	tdTrackRes
+12	0	0	0	1	0	0	0	0	0	0	tdShootingGameRes
+13	0	0	0	0	0	0	0	1	0	0	tdMusicGameRes;tdCoconutGameRes
+14	0	0	0	0	0	0	0	0	0	0	

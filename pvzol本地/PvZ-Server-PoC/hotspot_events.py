@@ -1,0 +1,568 @@
+"""Local, persistent protocol adapter for five hotspot activities.
+
+Attach with ``hotspot_events.install(server_module)``.  Its SQLite table is
+created lazily and lives in the configured player_store.DB_PATH, making this
+module safe to import while running isolated tests with a temporary database.
+The original event server rates and reward tables are not in the client data;
+the lists below are conservative local rules, kept here for easy adjustment.
+"""
+
+import json
+import random
+import time
+
+S = None
+WISH_ID = 366
+WORD_ID = 365  # CollectWordConst.ACTIVITY_ID in the Flash client
+GROUP_ID = 364
+TIME_ID = 367
+PENNY_ID = 368
+WISH_FLOWER = 5113
+WISH_STONE = 5114
+SHELL = 5112
+WISH_MAX_DAILY = 100
+WORD_COUNT = 8
+
+# (exchange ID, price, item ID, count, per-player limit)
+WISH_EXCHANGE = ((1, 10, 1, 20000, 10), (2, 20, 4, 50, 5),
+                 (3, 30, 1041, 5, 5), (4, 50, 2003, 1, 2))
+WORD_EXCHANGE = ((1, 20, 1, 20000, 10), (2, 40, 4, 50, 5),
+                 (3, 80, 1041, 5, 5), (4, 120, 2003, 1, 2))
+GROUP_EXCHANGE = (("金币", 3, 1, 30000, 5), ("钻石", 5, 4, 50, 3),
+                  ("坚果种子", 7, 1041, 5, 2), ("经验豆", 10, 2003, 1, 1))
+GROUP_DAILY_ITEMS = ((1, 10000), (1041, 1))
+GROUP_PRICE_GIFT_DIAMONDS = 50  # 5 Q-points, offline equivalent
+TIME_REWARDS = ((1, 1, 1, 10000), (2, 3, 4, 30), (3, 7, 1041, 5))
+# (fragment cost ID, cost count, fragment reward ID, reward count, daily limit)
+PENNY_EXCHANGE = ((51700, 5, 55100, 2, 3),
+                  (55100, 5, 51700, 2, 3),
+                  (57200, 5, 51700, 2, 3))
+# (item_id, count, weight) — 大风吹/许愿奖励池。原本只给金币，现加入钻石、蓝/黄经验豆与
+# 高稀有植物碎片，让活动奖励不再单一。_award 原生支持钻石(4)与背包物品(经验豆/碎片)。
+# 高稀有碎片槽每天 0 点轮换（不再天天是 火龙草/椰子加农炮/地刺），见 _wish_reward_pool()。
+_WISH_FIXED_REWARDS = (
+    (1, 1000, 60), (1, 3000, 18),         # 金币（保留为主）
+    (4, 10, 8), (4, 5, 6),               # 钻石（gift diamond）
+    (2002, 3, 6), (2003, 2, 6),          # 蓝/黄经验豆
+    (1041, 1, 3),                        # 原道具
+)
+_WISH_FRAGMENT_SLOTS = ((2, 3), (2, 3), (1, 2))       # 三个轮换槽各自的 (数量, 权重)
+
+
+def _wish_reward_pool():
+    """今天的奖励池：固定部分 + 当天轮换的高稀有植物碎片（每天 0 点换一批、稀有度更高）。"""
+    try:
+        picks = S.daily_fragments(3, salt=7)
+    except Exception:
+        picks = (54900, 55800, 56000)
+    pool = list(_WISH_FIXED_REWARDS)
+    for item_id, (amount, weight) in zip(picks, _WISH_FRAGMENT_SLOTS):
+        pool.append((item_id, amount, weight))
+    return pool
+
+
+def install(server):
+    global S
+    S = server
+    return {
+        "PVZ.Cmd.Cmd_Tanabata_Vow_CS": handle_wish,
+        "PVZ.Cmd.Cmd_Tanabata_Exchange_CS": handle_wish_exchange,
+        "PVZ.Cmd.Cmd_DragonBoat_Summon_CS": handle_word_summon,
+        "PVZ.Cmd.Cmd_DragonBoat_SetOut_CS": handle_word_setout,
+        "PVZ.Cmd.Cmd_DragonBoat_Exchange_CS": handle_word_exchange,
+        "PVZ.Cmd.Cmd_Groupon_Buy_CS": handle_group_buy,
+        "PVZ.Cmd.Cmd_Groupon_TakeReward_CS": handle_group_take,
+        "PVZ.Cmd.Cmd_Groupon_Exchange_CS": handle_group_exchange,
+        "PVZ.Cmd.Cmd_FlexibleActivity_TakeReward_CS": handle_time_reward,
+        "PVZ.Cmd.Cmd_FlexibleActivity_Exchange_CS": handle_penny_exchange,
+    }
+
+
+def _v(field, value):
+    return S.pb_varint_field(field, int(value))
+
+
+def _message(field, payload):
+    return S.pb_tag(field, 2) + S.uvarint(len(payload)) + payload
+
+
+def _idnum(item_id, count):
+    return _v(1, item_id) + _v(2, count)
+
+
+def activity_common(activity_id, activity_type, panel_id, icon_id=0, client_params=None):
+    """One Dto_FlexibleActivityCommon entry for GetActivityList_SC field 1."""
+    now = int(time.time())
+    dto = (_v(1, activity_id) + _v(2, activity_type) + _v(3, icon_id) +
+           _v(4, panel_id) + _v(5, now - 86400) + _v(6, 2145916800))
+    if client_params:
+        dto += S.pb_bytes(11, json.dumps(client_params, ensure_ascii=False).encode("utf-8"))
+    return _message(1, dto)
+
+
+def activity_list_entries():
+    time_param = {"title": "限时签到", "subtitle": "每日登录领好礼", "time": "长期开放",
+                  "content": "每日登录累计进度，领取对应奖励。",
+                  "listtip": "累计登录{0}天可领取", "type": 2, "order": 1}
+    return (activity_common(WISH_ID, 16, 50, 10084)
+            + activity_common(WORD_ID, 1005, 46, 10081)
+            + activity_common(GROUP_ID, 4, 14, 10051)
+            + activity_common(TIME_ID, 1002, 23, 10058, time_param)
+            + activity_common(PENNY_ID, 24, 66, 10100))
+
+
+def _ensure(con):
+    con.execute("CREATE TABLE IF NOT EXISTS hotspot_event_state "
+                "(uin INTEGER NOT NULL,event TEXT NOT NULL,data TEXT NOT NULL,"
+                "PRIMARY KEY(uin,event))")
+
+
+def _load(con, uin, event, default):
+    _ensure(con)
+    row = con.execute("SELECT data FROM hotspot_event_state WHERE uin=? AND event=?",
+                      (uin, event)).fetchone()
+    if row:
+        try:
+            data = json.loads(row[0])
+            if isinstance(data, dict):
+                return data
+        except (TypeError, ValueError):
+            pass
+    return dict(default)
+
+
+def _save(con, uin, event, data):
+    con.execute("INSERT INTO hotspot_event_state(uin,event,data) VALUES(?,?,?) "
+                "ON CONFLICT(uin,event) DO UPDATE SET data=excluded.data",
+                (uin, event, json.dumps(data, ensure_ascii=False, separators=(",", ":"))))
+
+
+def _item(con, uin, item_id):
+    row = con.execute("SELECT count FROM items WHERE uin=? AND item_id=?",
+                      (uin, item_id)).fetchone()
+    return int(row[0]) if row else 0
+
+
+def _adjust_item(con, uin, item_id, delta):
+    new = _item(con, uin, item_id) + int(delta)
+    if new < 0:
+        raise ValueError("insufficient item")
+    if new:
+        con.execute("INSERT INTO items(uin,item_id,count) VALUES(?,?,?) "
+                    "ON CONFLICT(uin,item_id) DO UPDATE SET count=excluded.count",
+                    (uin, item_id, new))
+    else:
+        con.execute("DELETE FROM items WHERE uin=? AND item_id=?", (uin, item_id))
+    return new
+
+
+def _award(con, player, item_id, amount, changed_items, wallet):
+    if item_id == 1:
+        wallet["coin"] += amount
+        con.execute("UPDATE players SET coin=? WHERE uin=?", (wallet["coin"], player["uin"]))
+    elif item_id == 4:
+        wallet["present_ticket"] += amount
+        con.execute("UPDATE players SET present_ticket=? WHERE uin=?",
+                    (wallet["present_ticket"], player["uin"]))
+    else:
+        changed_items[item_id] = _adjust_item(con, player["uin"], item_id, amount)
+
+
+def _sync(player, changed_items, wallet):
+    messages = []
+    for item_id, count in changed_items.items():
+        dto = S.build_item_dto(item_id, count)
+        messages.append(("PVZ.Cmd.Cmd_Item_Update_SC", _message(1, dto)))
+    for field, command in (("coin", "PVZ.Cmd.Cmd_SyncCoin_SC"),
+                           ("present_ticket", "PVZ.Cmd.Cmd_SyncPresentTicket_SC")):
+        if wallet[field] != int(player.get(field) or 0):
+            player[field] = wallet[field]
+            messages.append((command, _v(1, wallet[field])))
+    return messages
+
+
+def _wallet(con, player):
+    row = con.execute("SELECT coin,present_ticket FROM players WHERE uin=?",
+                      (player["uin"],)).fetchone()
+    return {"coin": int(row[0]), "present_ticket": int(row[1])}
+
+
+def _wish_state(con, uin):
+    today = time.strftime("%Y%m%d", time.localtime())
+    state = _load(con, uin, "wish", {"day": today, "used": 0, "exchanges": {}})
+    if state.get("day") != today:
+        state["day"] = today
+        state["used"] = 0
+    state.setdefault("exchanges", {})
+    return state
+
+
+def _word_state(con, uin):
+    state = _load(con, uin, "word", {"members": [0] * WORD_COUNT,
+                                    "credit": 0, "exchanges": {}})
+    members = state.get("members")
+    if not isinstance(members, list) or len(members) != WORD_COUNT:
+        state["members"] = [0] * WORD_COUNT
+    state.setdefault("exchanges", {})
+    return state
+
+
+def _group_state(con, uin):
+    today = time.strftime("%Y%m%d", time.localtime())
+    state = _load(con, uin, "group", {"day": today, "status": 2,
+                                      "credit": 0, "exchanges": {}})
+    if state.get("day") != today:
+        state["day"] = today
+        state["status"] = 2  # GrouponStatus_NotPay
+    state.setdefault("exchanges", {})
+    return state
+
+
+def _time_state(con, uin, touch_login=False):
+    today = time.strftime("%Y%m%d", time.localtime())
+    state = _load(con, uin, "time", {"last_day": "", "login_days": 0,
+                                     "taken": []})
+    if touch_login and state.get("last_day") != today:
+        state["last_day"] = today
+        state["login_days"] = min(365, int(state.get("login_days") or 0) + 1)
+        _save(con, uin, "time", state)
+    return state
+
+
+def _penny_state(con, uin):
+    today = time.strftime("%Y%m%d", time.localtime())
+    state = _load(con, uin, "penny", {"day": today, "times": [0] * len(PENNY_EXCHANGE)})
+    if state.get("day") != today:
+        state["day"] = today
+        state["times"] = [0] * len(PENNY_EXCHANGE)
+    if not isinstance(state.get("times"), list) or len(state["times"]) != len(PENNY_EXCHANGE):
+        state["times"] = [0] * len(PENNY_EXCHANGE)
+    return state
+
+
+def activity_stat(activity_id, player):
+    if activity_id == PENNY_ID:
+        with S.store._db() as con:
+            state = _penny_state(con, player["uin"])
+        body = _v(1, PENNY_ID)
+        for index, (cost_id, cost_num, reward_id, reward_num, limit) in enumerate(PENNY_EXCHANGE):
+            entry = (_message(1, _idnum(cost_id, cost_num)) +
+                     _message(2, _idnum(reward_id, reward_num)) +
+                     S.pb_bytes(3, b"daily") + _v(4, limit) +
+                     _v(101, state["times"][index]) + _v(102, int(time.time())))
+            body += _message(2, entry)
+        return ("PVZ.Cmd.FlexibleActivity_24", body)
+    if activity_id == TIME_ID:
+        with S.store._db() as con:
+            state = _time_state(con, player["uin"], touch_login=True)
+        body = _v(1, TIME_ID)
+        for _index, days, item_id, count in TIME_REWARDS:
+            reward = _message(1, _idnum(item_id, count)) + _v(2, 1)
+            condition = _v(6, days) + _message(100, reward)
+            body += _message(2, condition)
+        body += S.pb_bytes(3, b"daily") + _v(4, 1) + _v(8, 7)
+        body += _v(5, state["login_days"])
+        for index in state["taken"]:
+            body += _v(6, index)
+        body += _v(7, int(time.time()))
+        return ("PVZ.Cmd.FlexibleActivity_1002", body)
+    if activity_id == GROUP_ID:
+        with S.store._db() as con:
+            state = _group_state(con, player["uin"])
+        goods = _v(1, 5) + _v(3, state["status"])
+        for item_id, count in GROUP_DAILY_ITEMS:
+            goods += _message(2, _idnum(item_id, count))
+        body = _v(1, GROUP_ID) + _message(2, goods)
+        for index, (name, price, item_id, count, limit) in enumerate(GROUP_EXCHANGE):
+            remaining = max(0, limit - int(state["exchanges"].get(str(index), 0)))
+            offer = (S.pb_bytes(1, name.encode("utf-8")) + _v(2, price + 2) +
+                     _v(3, price) + _v(4, remaining) +
+                     _message(5, _idnum(item_id, count)) + _v(6, 0))
+            body += _message(3, offer)
+        body += _v(4, state["credit"]) + _v(5, 7)
+        return ("PVZ.Cmd.FlexibleActivity_4", body)
+    if activity_id == WISH_ID:
+        with S.store._db() as con:
+            state = _wish_state(con, player["uin"])
+            stone = _item(con, player["uin"], WISH_STONE)
+        body = _v(1, WISH_ID)
+        for item_id, count, weight in _wish_reward_pool():
+            body += _message(2, _v(3, item_id) + _v(4, count) + _v(5, weight))
+        for eid, price, item_id, count, limit in WISH_EXCHANGE:
+            used = int(state["exchanges"].get(str(eid), 0))
+            body += _message(3, _v(1, eid) + _v(2, price) + _v(3, item_id) +
+                             _v(4, count) + _v(5, limit) + _v(6, used))
+        body += _v(4, WISH_MAX_DAILY) + _v(5, state["used"]) + _v(6, stone)
+        return ("PVZ.Cmd.FlexibleActivity_16", body)
+    if activity_id == WORD_ID:
+        with S.store._db() as con:
+            state = _word_state(con, player["uin"])
+        body = (_v(1, WORD_ID) + _v(2, SHELL) + _v(3, 80) + _v(4, 20) +
+                _v(5, 70) + _v(6, 30) + _v(7, WORD_COUNT))
+        for missing in range(1, WORD_COUNT + 1):
+            body += _v(8, missing * 20)
+        body += _v(9, 5) + _v(10, 80)
+        for eid, price, item_id, count, limit in WORD_EXCHANGE:
+            used = int(state["exchanges"].get(str(eid), 0))
+            exchange = (_v(1, eid) + _v(2, limit) + _v(3, price) +
+                        _message(4, _idnum(item_id, count)) + _v(5, used))
+            body += _message(11, exchange)
+        for index, count in enumerate(state["members"], 1):
+            body += _message(12, _idnum(index, count))
+        body += _v(13, state["credit"])
+        return ("PVZ.Cmd.FlexibleActivity_1005", body)
+    return None
+
+
+def handle_wish(cmd_data, player):
+    count = S.parse_varint_fields(cmd_data).get(1, 0)
+    if count not in (1, 10):
+        return []
+    changed = {}
+    rewards = {}
+    with S.store._db() as con:
+        con.execute("BEGIN IMMEDIATE")
+        state = _wish_state(con, player["uin"])
+        if state["used"] + count > WISH_MAX_DAILY or _item(con, player["uin"], WISH_FLOWER) < count:
+            return []
+        wallet = _wallet(con, player)
+        changed[WISH_FLOWER] = _adjust_item(con, player["uin"], WISH_FLOWER, -count)
+        changed[WISH_STONE] = _adjust_item(con, player["uin"], WISH_STONE, count)
+        for _ in range(count):
+            _pool = _wish_reward_pool()
+            item_id, amount, _weight = random.choices(
+                _pool, weights=[entry[2] for entry in _pool])[0]
+            rewards[item_id] = rewards.get(item_id, 0) + amount
+        for item_id, amount in rewards.items():
+            _award(con, player, item_id, amount, changed, wallet)
+        state["used"] += count
+        _save(con, player["uin"], "wish", state)
+        stone = changed[WISH_STONE]
+    body = b"".join(_message(1, _idnum(item_id, amount)) for item_id, amount in rewards.items())
+    body += _v(2, state["used"]) + _v(3, stone)
+    return [("PVZ.Cmd.Cmd_Tanabata_Vow_SC", body)] + _sync(player, changed, wallet)
+
+
+def handle_wish_exchange(cmd_data, player):
+    exchange_id = S.parse_varint_fields(cmd_data).get(1, 0)
+    offer = next((x for x in WISH_EXCHANGE if x[0] == exchange_id), None)
+    if offer is None:
+        return []
+    eid, price, item_id, amount, limit = offer
+    changed = {}
+    with S.store._db() as con:
+        con.execute("BEGIN IMMEDIATE")
+        state = _wish_state(con, player["uin"])
+        used = int(state["exchanges"].get(str(eid), 0))
+        if used >= limit or _item(con, player["uin"], WISH_STONE) < price:
+            return []
+        wallet = _wallet(con, player)
+        changed[WISH_STONE] = _adjust_item(con, player["uin"], WISH_STONE, -price)
+        _award(con, player, item_id, amount, changed, wallet)
+        used += 1
+        state["exchanges"][str(eid)] = used
+        _save(con, player["uin"], "wish", state)
+        stone = changed[WISH_STONE]
+    body = _v(1, eid) + _message(2, _idnum(item_id, amount)) + _v(3, used) + _v(4, stone)
+    return [("PVZ.Cmd.Cmd_Tanabata_Exchange_SC", body)] + _sync(player, changed, wallet)
+
+
+def handle_word_summon(cmd_data, player):
+    fields = S.parse_varint_fields(cmd_data)
+    count = {1: 1, 2: 10}.get(fields.get(1, 0))
+    if count is None or fields.get(2) != WORD_ID:
+        return []
+    changed = {}
+    with S.store._db() as con:
+        con.execute("BEGIN IMMEDIATE")
+        if _item(con, player["uin"], SHELL) < count:
+            return []
+        state = _word_state(con, player["uin"])
+        changed[SHELL] = _adjust_item(con, player["uin"], SHELL, -count)
+        # 10 summons guarantee at least one missing member when possible.
+        drawn = [random.randint(1, WORD_COUNT) for _ in range(count)]
+        if count == 10:
+            missing = [i + 1 for i, amount in enumerate(state["members"]) if amount == 0]
+            if missing:
+                drawn[0] = random.choice(missing)
+        for member_id in drawn:
+            state["members"][member_id - 1] += 1
+        _save(con, player["uin"], "word", state)
+    body = b"".join(_v(1, member_id) for member_id in drawn) + _v(2, WORD_ID)
+    return [("PVZ.Cmd.Cmd_DragonBoat_Summon_SC", body)] + _sync(player, changed, {"coin": player["coin"], "present_ticket": player["present_ticket"]})
+
+
+def handle_word_setout(cmd_data, player):
+    fields = S.parse_varint_fields(cmd_data)
+    kind = fields.get(1, 0)
+    if kind not in (1, 2) or fields.get(2) != WORD_ID:
+        return []
+    changed = {}
+    with S.store._db() as con:
+        con.execute("BEGIN IMMEDIATE")
+        state = _word_state(con, player["uin"])
+        members = state["members"]
+        wallet = _wallet(con, player)
+        if kind == 1:
+            existing = sum(members)
+            if existing <= 0 or all(members):
+                return []
+            gain = existing * 5
+            state["members"] = [0] * WORD_COUNT
+        else:
+            missing = sum(amount <= 0 for amount in members)
+            price = missing * 20
+            if wallet["present_ticket"] < price:
+                return []
+            if price:
+                wallet["present_ticket"] -= price
+                con.execute("UPDATE players SET present_ticket=? WHERE uin=?",
+                            (wallet["present_ticket"], player["uin"]))
+            state["members"] = [max(0, amount - 1) for amount in members]
+            gain = 80
+        state["credit"] += gain
+        _save(con, player["uin"], "word", state)
+    body = _v(1, gain) + _v(2, state["credit"]) + _v(3, WORD_ID)
+    return [("PVZ.Cmd.Cmd_DragonBoat_SetOut_SC", body)] + _sync(player, changed, wallet)
+
+
+def handle_word_exchange(cmd_data, player):
+    fields = S.parse_varint_fields(cmd_data)
+    exchange_id = fields.get(1, 0)
+    if fields.get(2) != WORD_ID:
+        return []
+    offer = next((x for x in WORD_EXCHANGE if x[0] == exchange_id), None)
+    if offer is None:
+        return []
+    eid, price, item_id, amount, limit = offer
+    changed = {}
+    with S.store._db() as con:
+        con.execute("BEGIN IMMEDIATE")
+        state = _word_state(con, player["uin"])
+        used = int(state["exchanges"].get(str(eid), 0))
+        if state["credit"] < price or used >= limit:
+            return []
+        wallet = _wallet(con, player)
+        state["credit"] -= price
+        state["exchanges"][str(eid)] = used + 1
+        _award(con, player, item_id, amount, changed, wallet)
+        _save(con, player["uin"], "word", state)
+    body = _message(1, _idnum(item_id, amount)) + _v(2, state["credit"]) + _v(3, WORD_ID)
+    return [("PVZ.Cmd.Cmd_DragonBoat_Exchange_SC", body)] + _sync(player, changed, wallet)
+
+
+def grant_word_shell_on_adventure(player, count=1):
+    """Call only on a successful adventure-clear reward path while event is active."""
+    with S.store._db() as con:
+        con.execute("BEGIN IMMEDIATE")
+        new_count = _adjust_item(con, player["uin"], SHELL, count)
+    dto = S.build_item_dto(SHELL, new_count)
+    return [("PVZ.Cmd.Cmd_Item_Update_SC", _message(1, dto))]
+
+
+def handle_group_buy(cmd_data, player):
+    if S.parse_varint_fields(cmd_data).get(1) != GROUP_ID:
+        return []
+    with S.store._db() as con:
+        con.execute("BEGIN IMMEDIATE")
+        state = _group_state(con, player["uin"])
+        wallet = _wallet(con, player)
+        if state["status"] != 2 or wallet["present_ticket"] < GROUP_PRICE_GIFT_DIAMONDS:
+            return []
+        wallet["present_ticket"] -= GROUP_PRICE_GIFT_DIAMONDS
+        con.execute("UPDATE players SET present_ticket=? WHERE uin=?",
+                    (wallet["present_ticket"], player["uin"]))
+        state["status"] = 3  # paid: reward can be claimed once
+        state["credit"] += 1
+        _save(con, player["uin"], "group", state)
+    body = _v(1, GROUP_ID) + _v(2, state["credit"])
+    return [("PVZ.Cmd.Cmd_Groupon_Buy_SC", body)] + _sync(player, {}, wallet)
+
+
+def handle_group_take(cmd_data, player):
+    if S.parse_varint_fields(cmd_data).get(1) != GROUP_ID:
+        return []
+    changed = {}
+    with S.store._db() as con:
+        con.execute("BEGIN IMMEDIATE")
+        state = _group_state(con, player["uin"])
+        if state["status"] != 3:
+            return []
+        wallet = _wallet(con, player)
+        for item_id, amount in GROUP_DAILY_ITEMS:
+            _award(con, player, item_id, amount, changed, wallet)
+        state["status"] = 4
+        _save(con, player["uin"], "group", state)
+    body = _v(1, GROUP_ID)
+    for item_id, amount in GROUP_DAILY_ITEMS:
+        body += _message(2, _idnum(item_id, amount))
+    return [("PVZ.Cmd.Cmd_Groupon_TakeReward_SC", body)] + _sync(player, changed, wallet)
+
+
+def handle_group_exchange(cmd_data, player):
+    fields = S.parse_varint_fields(cmd_data)
+    index = fields.get(2, -1)
+    if fields.get(1) != GROUP_ID or not 0 <= index < len(GROUP_EXCHANGE):
+        return []
+    _name, price, item_id, amount, limit = GROUP_EXCHANGE[index]
+    changed = {}
+    with S.store._db() as con:
+        con.execute("BEGIN IMMEDIATE")
+        state = _group_state(con, player["uin"])
+        used = int(state["exchanges"].get(str(index), 0))
+        if state["credit"] < price or used >= limit:
+            return []
+        wallet = _wallet(con, player)
+        state["credit"] -= price
+        state["exchanges"][str(index)] = used + 1
+        _award(con, player, item_id, amount, changed, wallet)
+        _save(con, player["uin"], "group", state)
+    body = _v(1, state["credit"]) + _message(2, _idnum(item_id, amount)) + _v(3, index)
+    return [("PVZ.Cmd.Cmd_Groupon_Exchange_SC", body)] + _sync(player, changed, wallet)
+
+
+def handle_time_reward(cmd_data, player):
+    fields = S.parse_varint_fields(cmd_data)
+    if fields.get(1) != TIME_ID:
+        return []
+    denied = [("PVZ.Cmd.Cmd_FlexibleActivity_TakeReward_SC", b"")]
+    index = fields.get(2, 0)
+    offer = next((x for x in TIME_REWARDS if x[0] == index), None)
+    if offer is None:
+        return denied
+    _index, need_days, item_id, amount = offer
+    changed = {}
+    with S.store._db() as con:
+        con.execute("BEGIN IMMEDIATE")
+        state = _time_state(con, player["uin"], touch_login=True)
+        if state["login_days"] < need_days or index in state["taken"]:
+            return denied
+        wallet = _wallet(con, player)
+        _award(con, player, item_id, amount, changed, wallet)
+        state["taken"].append(index)
+        _save(con, player["uin"], "time", state)
+    body = _message(1, _idnum(item_id, amount))
+    return [("PVZ.Cmd.Cmd_FlexibleActivity_TakeReward_SC", body),
+            activity_stat(TIME_ID, player)] + _sync(player, changed, wallet)
+
+
+def handle_penny_exchange(cmd_data, player):
+    fields = S.parse_varint_fields(cmd_data)
+    index = fields.get(2, -1)
+    if fields.get(1) != PENNY_ID or not 0 <= index < len(PENNY_EXCHANGE):
+        return []
+    cost_id, cost_num, reward_id, reward_num, limit = PENNY_EXCHANGE[index]
+    changed = {}
+    with S.store._db() as con:
+        con.execute("BEGIN IMMEDIATE")
+        state = _penny_state(con, player["uin"])
+        if state["times"][index] >= limit or _item(con, player["uin"], cost_id) < cost_num:
+            return []
+        wallet = _wallet(con, player)
+        changed[cost_id] = _adjust_item(con, player["uin"], cost_id, -cost_num)
+        _award(con, player, reward_id, reward_num, changed, wallet)
+        state["times"][index] += 1
+        _save(con, player["uin"], "penny", state)
+    body = (_v(1, PENNY_ID) + _v(2, index) + _v(3, state["times"][index]) +
+            _message(4, _idnum(reward_id, reward_num)))
+    return [("PVZ.Cmd.Cmd_FlexibleActivity_Exchange_SC", body)] + _sync(player, changed, wallet)

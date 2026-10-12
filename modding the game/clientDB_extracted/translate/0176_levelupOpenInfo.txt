@@ -1,0 +1,109 @@
+id	title	desc
+1	Quest System	Completing quests is a key way to raise your Town Level
+2	Plant Research Lab	Learn Plant Tower Defense Talents to make defense even more exciting!
+3	Adventure	Gain town prosperity from each adventure to level up your town!
+4	Sunroom	The Greenhouse is a great place to gain plant upgrade EXP!
+5	Leaderboard	Go check out your ranking!
+6	Stamina (New Feature)	
+7	Plant Cultivation	Level up, puzzle, and enhance plants to quickly boost combat power!
+8	Plant Level Cap (New Feature)	
+9	Tavern	Head to the bar to recruit plants!
+10	Mystery Card Pack	Draw rare plants—the essential path of a champion!
+11	Adventure Chapter 3: Battle of the Nile	New adventures, new challenges!
+12	Adventure Chapter 4: Egyptian Bazaar	New adventures, new challenges!
+13	Adventure Chapter 5: Beside the Imperial Tomb	New adventures, new challenges!
+14	Adventure Chapter 6: Imperial Tomb Return	New adventures, new challenges!
+15	Adventure Chapter 7: Battle of the Great Wall	New adventures, new challenges!
+16	Adventure Chapter 8: Checkerboard Maze	New adventures, new challenges!
+17	Adventure Chapter 9: Gaban Coast	New adventures, new challenges!
+18	Adventure Chapter 10: Treasure Isle	New adventures, new challenges!
+19	Adventure Chapter 11: Treasure Cave	New adventures, new challenges!
+20	Adventure Chapter 12: Maritime Supremacy	New adventures, new challenges!
+21	Adventure Chapter 13: Tech Academy	New adventures, new challenges!
+22	Adventure Chapter 14: Modern Manor	New adventures, new challenges!
+23	Adventure Chapter 15: Mecha Factory	New adventures, new challenges!
+24	Adventure Chapter 16: Space War	New adventures, new challenges!
+25	Adventure Chapter 17: Shallow Encounter	New adventures, new challenges!
+26	Adventure Chapter 18: Ocean Expedition	New adventures, new challenges!
+27	Adventure Chapter 19: East Sea Dragon Palace	New adventures, new challenges!
+28	Adventure Chapter 20: Havoc in the Grand Hall	New adventures, new challenges!
+29	Adventure Chapter 21: Portrait Return	New adventures, new challenges!
+30	Adventure Chapter 22: Dream Return to the Golden Tower	New adventures, new challenges!
+31	Adventure Chapter 23: Crossing the Nile Again	New adventures, new challenges!
+32	Adventure Chapter 24: Return to Egypt	New adventures, new challenges!
+33	Brainiac	Answer daily trivia to win tons of Coins and Plant Coins!
+34	Daily Quests	Complete daily quests to earn massive Town Prosperity
+35	Free Plants	A small top-up for massive rewards!
+36	Coin Exchange	Exchange Diamonds for some Coins daily.
+37	Ladder Arena	Passionate Combat, Who Can Rival Us!
+38	Plant Star-Up	Star-Up greatly enhances plant skill effects!
+39	Ranked Arena	Survival of the fittest! (Unlocks on server day 14)
+40	Alliance System	Ally with like-minded friends and let's have fun together!
+41	Alliance Raid	Team up with allies to defeat zombies and earn Alliance Badges! (Unlocks on server Day 5)
+42	Alliance Championship	All-Alliance Assault to defeat rival alliances and claim ultimate glory! (Unlocked 14 days after server launch)
+43	Daily Event Dungeons	Participate in Welfare Hall daily events to get tons of resources
+44	Catch the Thief / Farm Defense Stage 2	Yields more Coins and EXP Beans
+45	Catch the Thief / Protect the Farm - Stage 3	Yields more Coins and EXP Beans
+46	Catch the Thief / Protect the Farm Stage 4	Yields more Coins and EXP Beans
+47	Catch the Thief / Protect the Farm - Stage 5	Yields more Coins and EXP Beans
+48	Catch the Thief / Defend the Farm - Stage 6	Yields more Coins and EXP Beans
+49	5th Slot	Remember to deploy all 5 plants before battle!
+50	Plant Dismantling	Dismantle excess plants to recycle plant shards and other resources
+51	World Tree	Upgrade the Tree of Wisdom to quickly boost plant stats!
+52	Path of Trials	Clear the Trial of Wisdom daily to harvest massive resources!
+53	Plant Rumble	Plant Brawl, endless fun! (Unlocks on server day 3)
+54	Gear Crafting	Head to [My Home] to craft a set of gear for your plants!
+55	World Boss	Attack the Zombie Boss daily and see who deals the most damage!
+56	Greenhouse Auto-Fertilization	Never worry about missing the 4-hour fertilization window again!
+57	Tower Defense - Time Travel	Daily Tower Defense action with sweet rewards! (Unlocks on server day 2)
+58	Slot 6 Formation	Remember to deploy all 6 plants before battle!
+59	Dressing Room (Plant Costumes)	Dress up your plants in gorgeous outfits and boost your combat power!
+60	Gear Enhancement	Upgrade and evolve equipment to quickly boost your power!
+61	Map - Tranquil Woodland	Support allies and plunder on the map! War is imminent!
+62	Plant Battle	Collaborate with allies to capture strongholds and start your grand conquest! (Unlocks on server day 21)
+63	Alliance Treasure Hunt	Team up with casual friends for treasure hunting, or plunder treasures from others!
+64	Tower Defense - Endless Challenge	Tower defense master? Heh, try surviving Endless Challenge first! (Unlocks 14 days after server launch)
+65	Equipment Level Cap	
+66	Unlocked at Level 2 Flower Pot	Head to the Zen Garden and upgrade your flower pots
+67	Unlocked at Level 3 Flower Pot	Head to the Zen Garden and upgrade your flower pots!
+68	Unlocked at Flower Pot Level 4	Head to the Zen Garden and upgrade your flower pots!
+69	Unlocked at Flower Pot Level 5	Head to the Zen Garden and upgrade your flower pots!
+70	Unlocked at Flower Pot Level 6	Head to the Zen Garden and upgrade your flower pots!
+71	Unlocks at Flowerpot Level 7	Head to the Zen Garden and upgrade your flower pots!
+72	Unlocks at Flowerpot Level 8	Head to the Zen Garden and upgrade your flower pots!
+73	Unlocked at Level 9 Flower Pot	Head to the Zen Garden and upgrade your flower pots!
+74	Unlocked at Level 10 Flower Pot	Head to the Zen Garden and upgrade your flower pots!
+75	Chat in World Channel	You can now chat in the World channel!
+76	Continuous participation in Plant Brawl	No need to worry about missing any battles anymore!
+77	Nursery	Brew nutrient reagents to boost specific plant attributes
+78	Tower Defense - Challenge Stage	Challenge Tower Defense to win weekly ranking rewards!
+79	Zombie Island	I heard there are tons of monster treasures hidden on Zombie Island!
+80	Secret Treasure Guardian	Secret Treasure Guardian, now officially open!
+81	4th Expeditionary Force	You can now dispatch up to 4 troops to the World map simultaneously!
+82	6th Nutrient Slot	Unlock the 6th Reagent Slot in the Nutrition Lab
+83	Balanced Sparring	Try out high-rarity plants for free in balanced friendly matches!
+84	Tower Defense - Rampaging Yeti	Defeat the Yeti to obtain Chest Keys
+85	Map - Battle-Song Plains	"Open the ""War Anthem Plains"" map and unlock the amusement park occupation!"
+86	Adventure Battle Speed x4	Adventure battles: Faster and more thrilling!
+87	7th Nutrient Slot	Unlock the 7th reagent slot in the Nursery
+88	5th Expeditionary Troop	You can now dispatch up to 5 troops to map battles simultaneously!
+89	Plant Refinement	Plants can now reroll bonus stats! Check out My Home!
+90	8th Nutrient Slot	Unlock the 8th reagent slot in the Nursery
+91	Time Travel One-Tap Clear	One-tap quick clear, saving you tons of time!
+92	Magic Exchange	Use Plant Coins to exchange for your favorite plant puzzle pieces
+93	Secret Treasure Guardian	Unlock the 2nd Relic
+94	Nutrient Room Super Formulation	Rapid Brewing, Smart Dismantling!
+95	Plant Awakening	Complete the plant quiz to awaken your plants!
+96	Secret Treasure Guardian	Unlock the 3rd Relic
+97	Secret Treasure Guardian	Unlock the 4th Relic
+98	Adventure Chapter 25: Glacier Tracking	New adventures, new challenges!
+99	Adventure Chapter 26: Snow Mountain Ascent	New adventures, new challenges!
+100	Adventure Chapter 27: Snowy Cloud Pass	New adventures, new challenges!
+101	Adventure Chapter 28: Snow Peak Tower Shadow	New adventures, new challenges!
+102	Adventure Chapter 29: Scorching Ruins	New adventures, new challenges!
+103	Adventure Chapter 30: Magma Tomb	New adventures, new challenges!
+104	Adventure Chapter 31: Sea of Fire Phantoms	New adventures, new challenges!
+105	Adventure Chapter 32: Ashen Road	New adventures, new challenges!
+106	Plant Fruit	Catalyze plant fruits to comprehensively boost plant stats
+107	Plant Genes	Unlocking genes greatly enhances plant abilities
+108	Zombie Puppet	Significantly increases plant defense and grants attack capabilities

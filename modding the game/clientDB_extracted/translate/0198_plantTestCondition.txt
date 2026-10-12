@@ -1,0 +1,6 @@
+id	openDesc	errorTip
+1	Own 1 5-star plant	Do not yet own a 5-star plant
+2	Complete Grade 1<br>Own 1 Level 1 Awakened plant	Requires 1 or more Level 1 Awakened plants
+3	Complete Grade 2<br>Own 2 Level 2 Awakened plants	Requires 2 or more Level 2 Awakened plants
+4	Complete Grade 3<br>Own 2 Level 3 Awakened plants	Requires 2 or more Level 3 Awakened plants
+5	Complete Grade 4<br>Own 2 Level 4 Awakened plants	Requires 2 or more Level 4 Awakened plants

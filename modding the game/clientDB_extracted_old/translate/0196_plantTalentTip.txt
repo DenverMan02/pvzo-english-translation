@@ -1,0 +1,8 @@
+id	content
+1	Unlock earlier perks
+2	Play Adventure
+3	Perks are linked to combat power
+4	Keep growing stronger
+5	Remember to take breaks
+6	View advanced requirements
+7	Later plants require high combat power

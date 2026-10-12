@@ -1,0 +1,3007 @@
+id	name
+1	Basic
+2	Pine Lv.1
+3	Pine Lv. 2
+4	Pine Tier 3
+5	Pine Level 4
+6	Pine Lv.5
+7	Pine Lv.6
+8	Pine Level 7
+9	Pine Tier 8
+10	Pine Level 9
+11	Pine Level 10
+12	Birch Lv.1
+13	Birch Lv.2
+14	Birch Level 3
+15	Birch Lv.4
+16	Birch Lv.5
+17	Birch Lv.6
+18	Birch Level 7
+19	Birch Level 8
+20	Birch Lv.9
+21	Birch Level 10
+22	Ironwood Level 1
+23	Ironwood Tier 2
+24	Ironwood Lv.3
+25	Ironwood Level 4
+26	Ironwood Level 5
+27	Ironwood Level 6
+28	Ironwood Level 7
+29	Ironwood Level 8
+30	Ironwood Level 9
+31	Ironwood Tier 10
+32	Black Iron Tier 1
+33	Black Iron Level 2
+34	Black Iron Level 3
+35	Black Iron Level 4
+36	Black Iron Level 5
+37	Black Iron Lv.6
+38	Black Iron Lv.7
+39	Black Iron Lv.8
+40	Black Iron Level 9
+41	Black Iron Lv. 10
+42	Dark Iron Level 1
+43	Dark Iron Level 2
+44	Dark Iron Level 3
+45	Dark Iron Lv.4
+46	Dark Iron Level 5
+47	Dark Iron Lv.6
+48	Dark Iron Lv.7
+49	Dark Iron Level 8
+50	Dark Iron Level 9
+51	Dark Iron Level 10
+52	Bronze Lv.1
+53	Bronze Level 2
+54	Bronze Level 3
+55	Bronze Level 4
+56	Bronze Lv.5
+57	Bronze Level 6
+58	Bronze Lv.7
+59	Bronze Level 8
+60	Bronze Level 9
+61	Bronze Level 10
+62	Red Copper Level 1
+63	Bronze Level 2
+64	Red Copper Lv.3
+65	Red Copper Lv.4
+66	Red Copper Level 5
+67	Red Brass Lv.6
+68	Bronze Level 7
+69	Red Copper Lv.8
+70	Copper Level 9
+71	Copper Level 10
+72	Silver Level 1
+73	Silver Tier 2
+74	Silver Lv.3
+75	Silver Level 4
+76	Silver Level 5
+77	Silver Level 6
+78	Silver Level 7
+79	Silver Lv.8
+80	Silver Level 9
+81	Silver Tier 10
+82	Mithril Level 1
+83	Mithril Lv.2
+84	Mithril Lv.3
+85	Mithril Lv.4
+86	Mithril Level 5
+87	Mithril Lv.6
+88	Mithril Level 7
+89	Mithril Lv.8
+90	Mithril Lv.9
+91	Mithril Level 10
+92	Gold Level 1
+93	Gold Level 2
+94	Gold Lv.3
+95	Gold Lv.4
+96	Gold Level 5
+97	Gold Level 6
+98	Gold Lv.7
+99	Gold Level 8
+100	Gold Tier 9
+101	Gold Lv.10
+102	Platinum Lv.1
+103	Platinum Level 2
+104	Platinum Lv.3
+105	Platinum Lv.4
+106	Platinum Level 5
+107	Platinum Lv.6
+108	Platinum Level 7
+109	Platinum Lv.8
+110	Platinum Lv. 9
+111	Platinum Lv. 10
+112	Adamantine Level 1
+113	Adamantine Lv. 2
+114	Adamantine Lv. 3
+115	Adamantite Level 4
+116	Adamantine Level 5
+117	Adamantine Lv.6
+118	Adamantine Level 7
+119	Adamantine Tier 8
+120	Adamantine Level 9
+121	Adamantine Lv.10
+122	Icejade Level 1
+123	Icy Jade Lv.2
+124	Ice Jade Lv.3
+125	Ice Jade Lv.4
+126	Ice Jade Lv.5
+127	Ice Jade Tier 6
+128	Ice Jade Tier 7
+129	Ice Jade Level 8
+130	Ice Jade Level 9
+131	Ice Jade Lv.10
+132	Jade Lv.1
+133	Jasper Level 2
+134	Jasper Level 3
+135	Jasper Lv.4
+136	Jasper Lv. 5
+137	Jasper Lv. 6
+138	Jasper Lv.7
+139	Jasper Level 8
+140	Jasper Level 9
+141	Jasper Level 10
+142	Jade Level 1
+143	Jade Level 2
+144	Emerald Level 3
+145	Jade Level 4
+146	Emerald Level 5
+147	Jade Level 6
+148	Emerald Lv. 7
+149	Emerald Lv.8
+150	Emerald Lv.9
+151	Emerald Lv.10
+152	Agate Lv.1
+153	Agate Level 2
+154	Agate Level 3
+155	Agate Lv.4
+156	Agate Lv.5
+157	Onyx Level 6
+158	Agate Level 7
+159	Agate Lv.8
+160	Agate Level 9
+161	Onyx Level 10
+162	Cat's Eye Lv.1
+163	Cat's Eye Lv.2
+164	Cat's Eye Tier 3
+165	Cat's Eye Level 4
+166	Cat Eye Level 5
+167	Cat's Eye Lv.6
+168	Cat's Eye Level 7
+169	Cat's Eye Lv.8
+170	Cat's Eye Lv.9
+171	Cat's Eye Level 10
+172	Diamond Lv.1
+173	Diamond Level 2
+174	Diamond Lv. 3
+175	Diamond Level 4
+176	Diamond Lv.5
+177	Diamond Tier 6
+178	Diamond Lv.7
+179	Diamond Tier 8
+180	Diamond Lv.9
+181	Diamond Level 10
+182	Luminescent Level 1
+183	Luminescent Level 2
+184	Luminescence Lv.3
+185	Noctilucent Level 4
+186	Noctilucent Lv.5
+187	Noctilucent Lv. 6
+188	Noctilucent Level 7
+189	Noctilucent Level 8
+190	Luminescence Lv.9
+191	Noctilucent Level 10
+192	Prismatic Level 1
+193	Prismatic Level 2
+194	Multicolored Level 3
+195	Multicolored Level 4
+196	Multicolor Tier 5
+197	Multicolored Lv.6
+198	Multicolored Lv.7
+199	Multicolored Lv.8
+200	Prismatic Lv.9
+201	Multicolor Lv.10
+202	Gale Level 1
+203	Gale Level 2
+204	Gale Level 3
+205	Gale Lv. 4
+206	Gale Lv.5
+207	Gale Lv.6
+208	Gale Level 7
+209	Gale Level 8
+210	Gale Lv.9
+211	Gale Level 10
+212	Blaze Level 1
+213	Blazing Fire Level 2
+214	Blaze Level 3
+215	Blaze Level 4
+216	Blazing Fire Level 5
+217	Blazing Fire Level 6
+218	Blazing Fire Level 7
+219	Blazing Fire Lv. 8
+220	Blaze Lv.9
+221	Blaze Lv.10
+222	Rainstorm Level 1
+223	Rainstorm Level 2
+224	Rainstorm Tier 3
+225	Rainstorm Level 4
+226	Rainstorm Lv. 5
+227	Rainstorm Lv.6
+228	Rainstorm Lv.7
+229	Rainstorm Lv.8
+230	Downpour Level 9
+231	Rainstorm Level 10
+232	Earth Level 1
+233	Earth Lv.2
+234	Earth Level 3
+235	Earth Lv.4
+236	Earth Level 5
+237	Earth Lv.6
+238	Earth Level 7
+239	Earth Level 8
+240	Earth Level 9
+241	Earth Lv.10
+242	Darkness Lv.1
+243	Darkness Tier 2
+244	Darkness Lv.3
+245	Darkness Lv. 4
+246	Darkness Level 5
+247	Darkness Level 6
+248	Darkness Lv.7
+249	Darkness Lv. 8
+250	Darkness Lv.9
+251	Dark Level 10
+252	Light Level 1
+253	Light Lv.2
+254	Light Lv.3
+255	Light Lv.4
+256	Light Tier 5
+257	Light Level 6
+258	Light Tier 7
+259	Light Level 8
+260	Radiance Level 9
+261	Light Lv.10
+262	Undead Level 1
+263	Undead Tier 2
+264	Undead Level 3
+265	Undead Level 4
+266	Undead Level 5
+267	Undead Level 6
+268	Undead Level 7
+269	Undead Level 8
+270	Undead Level 9
+271	Undead Level 10
+272	Divine Tier 1
+273	Divine Level 2
+274	Divine Level 3
+275	Divine Tier 4
+276	Divine Lv.5
+277	Divine Lv.6
+278	Holy Level 7
+279	Divine Level 8
+280	Divine Lv. 9
+281	Divine Level 10
+282	Legendary Lv.1
+283	Legendary Lv.2
+284	Legendary Level 3
+285	Legendary Lv.4
+286	Legendary Lv. 5
+287	Legendary Lv.6
+288	Legendary Level 7
+289	Legendary Level 8
+290	Legendary Level 9
+291	Legendary Lv.10
+292	Epic Level 1
+293	Epic Level 2
+294	Epic Lv.3
+295	Epic Level 4
+296	Epic Level 5
+297	Epic Level 6
+298	Epic Level 7
+299	Epic Lv.8
+300	Epic Level 9
+301	Epic Level 10
+1807	Chuyun Lv.1
+1808	Chuyun Lv.2
+1809	Firstcloud Level 3
+1810	Chuyun Level 4
+1811	Chuyun Lv.5
+1812	First Cloud Lv. 6
+1813	Chuyun Lv.7
+1814	Early Cloud Lv.8
+1815	Chuyun Level 9
+1816	First Cloud Lv. 10
+1817	Grandeur Lv.1
+1818	Majestic Wind Level 2
+1819	Majestic Level 3
+1820	Majesty Level 4
+1821	Majesty Lv.5
+1822	Majestic Wind Level 6
+1823	Majestic Level 7
+1824	Majestic Wind Lv.8
+1825	Majesty Level 9
+1826	Majesty Lv.10
+1827	Divine Overlord Lv.1
+1828	Divine Overlord Lv.2
+1829	Divine Overlord Lv.3
+1830	Divine Overlord Level 4
+1831	Divine Overlord Level 5
+1832	Divine Overlord Level 6
+1833	Divine Tyranny Lv.7
+1834	Divine Overlord Level 8
+1835	Divine Overlord Level 9
+1836	Divine Overlord Level 10
+1837	Rosy Clouds Level 1
+1838	Rosy Clouds Level 2
+1839	Rosy Clouds Level 3
+1840	Rosy Clouds Lv.4
+1841	Rosy Clouds Level 5
+1842	Rosy Cloud Tier 6
+1843	Rosy Clouds Lv.7
+1844	Rosy Clouds Lv. 8
+1845	Rosy Cloud Level 9
+1846	Rosy Clouds Lv.10
+1847	Wutong Lv.1
+1848	Wutong Lv.2
+1849	Wutong Lv.3
+1850	Wutong Level 4
+1851	Wutong Perch Lv.5
+1852	Wutong Lv.6
+1853	Wutong Level 7
+1854	Qiwu Tier 8
+1855	Qiwu Level 9
+1856	Wutong Lv.10
+1857	Soaring Vastness Level 1
+1858	Soaring Level 2
+1859	Feihan Tier 3
+1860	Feihan Level 4
+1861	Soaring Vastness Lv.5
+1862	Feihan Lv.6
+1863	Soaring Level 7
+1864	Soaring Vastness Lv.8
+1865	Feihan Level 9
+1866	Feihan Lv.10
+1867	Raging Waves Tier 1
+1868	Surging Waves Lv. 2
+1869	Surging Waves Lv.3
+1870	Surging Waves Lv. 4
+1871	Raging Waves Lv.5
+1872	Raging Waves Level 6
+1873	Surging Wave Level 7
+1874	Raging Waves Lv.8
+1875	Raging Waves Tier 9
+1876	Surging Waves Level 10
+1877	Styx Lv.1
+1878	Styx Level 2
+1879	Styx Level 3
+1880	Styx Lv.4
+1881	Styx Level 5
+1882	Styx Lv. 6
+1883	Styx Level 7
+1884	Styx Level 8
+1885	Styx Level 9
+1886	Styx Lv.10
+1887	Yaoguang Level 1
+1888	Yaoguang Level 2
+1889	Yaoguang Lv.3
+1890	Yaoguang Lv.4
+1891	Yaoguang Level 5
+1892	Alkaid Lv. 6
+1893	Alkaid Lv. 7
+1894	Alkaid Lv. 8
+1895	Yaoguang Level 9
+1896	Yaoguang Level 10
+1897	Moon Chaser Lv.1
+1898	Moonchaser Level 2
+1899	Moon Chaser Lv.3
+1900	Moonchaser Level 4
+1901	Moon Chaser Lv.5
+1902	Moonchaser Level 6
+1903	Moonchaser Tier 7
+1904	Moonchaser Lv.8
+1905	Moonchaser Level 9
+1906	Moonchaser Level 10
+1907	Xuanting Level 1
+1908	Dark Thunder Level 2
+1909	Xuanting Lv.3
+1910	Mystic Thunder Level 4
+1911	Xuanting Tier 5
+1912	Xuanting Lv.6
+1913	Xuanting Lv.7
+1914	Xuanting Lv.8
+1915	Xuanting Lv. 9
+1916	Xuanting Level 10
+1917	Cuiwei Level 1
+1918	Emerald Peak Lv.2
+1919	Cuiwei Tier 3
+1920	Cuiwei Level 4
+1921	Emerald Level 5
+1922	Emerald Level 6
+1923	Emerald Level 7
+1924	Emerald Level 8
+1925	Cuiwei Tier 9
+1926	Cuiwei Lv.10
+1927	Dominion Level 1
+1928	Omnipresent Level 2
+1929	Dominion Lv.3
+1930	Dominion Level 4
+1931	Dominion Lv.5
+1932	Majestic Lv.6
+1933	Dominion Lv.7
+1934	Dominion Level 8
+1935	Omni Level 9
+1936	Omni Level 10
+1937	Divine Awl Lv.1
+1938	Divine Awl Level 2
+1939	Divine Awl Lv.3
+1940	Divine Spire Level 4
+1941	Divine Awl Level 5
+1942	Divine Awl Tier 6
+1943	Divine Awl Lv.7
+1944	Divine Awl Tier 8
+1945	Divine Awl Lv.9
+1946	Divine Awl Level 10
+1947	Crepe Myrtle Lv.1
+1948	Crape Myrtle Lv.2
+1949	Crape Myrtle Lv.3
+1950	Ziwei Level 4
+1951	Crape Myrtle Level 5
+1952	Crape Myrtle Level 6
+1953	Crape Myrtle Lv.7
+1954	Ziwei Level 8
+1955	Crape Myrtle Level 9
+1956	Crape Myrtle Lv.10
+1957	Army Breaker Level 1
+1958	Army Breaker Level 2
+1959	Army Breaker Lv.3
+1960	Army Breaker Lv.4
+1961	Army Breaker Lv.5
+1962	Pojun Level 6
+1963	Army Breaker Level 7
+1964	Army Breaker Level 8
+1965	Army Breaker Lv.9
+1966	Pojun Lv. 10
+1967	Seven Killings Level 1
+1968	Qisha Level 2
+1969	Seven Kills Tier 3
+1970	Seven Killings Level 4
+1971	Qisha Level 5
+1972	Seven Kills Level 6
+1973	Seven Kills Lv.7
+1974	Seven Killings Level 8
+1975	Qisha Level 9
+1976	Qisha Lv. 10
+1977	Rampant Lv. 1
+1978	Rampant Level 2
+1979	Rampant Lv.3
+1980	Rampant Lv. 4
+1981	Rampant Level 5
+1982	Rampant Level 6
+1983	Rampant Level 7
+1984	Rampant Level 8
+1985	Rampant Lv. 9
+1986	Rampant Lv.10
+1987	Dominant Level 1
+1988	Tyranny Level 2
+1989	Tyranny Lv.3
+1990	Overlord Lv.4
+1991	Dominator Lv.5
+1992	Overlord Lv.6
+1993	Tyranny Level 7
+1994	Overlord Tier 8
+1995	Tyrannical Level 9
+1996	Dominant Lv. 10
+1997	Reach-Heaven Lv.1
+1998	Tongtian Level 2
+1999	Reach Heaven Level 3
+2000	Sketotalling Level 4
+2001	Reach-Heaven Level 5
+2002	Tongtian Level 6
+2003	Reach Heaven Lv.7
+2004	Towering Sky Level 8
+2005	Tuantian Lv.9
+2006	Reach Heaven Lv.10
+302	Basic
+303	Pine Lv.1
+304	Pine Lv. 2
+305	Pine Tier 3
+306	Pine Level 4
+307	Pine Lv.5
+308	Pine Lv.6
+309	Pine Level 7
+310	Pine Tier 8
+311	Pine Level 9
+312	Pine Level 10
+313	Birch Lv.1
+314	Birch Lv.2
+315	Birch Level 3
+316	Birch Lv.4
+317	Birch Lv.5
+318	Birch Lv.6
+319	Birch Level 7
+320	Birch Level 8
+321	Birch Lv.9
+322	Birch Level 10
+323	Ironwood Level 1
+324	Ironwood Tier 2
+325	Ironwood Lv.3
+326	Ironwood Level 4
+327	Ironwood Level 5
+328	Ironwood Level 6
+329	Ironwood Level 7
+330	Ironwood Level 8
+331	Ironwood Level 9
+332	Ironwood Tier 10
+333	Black Iron Tier 1
+334	Black Iron Level 2
+335	Black Iron Level 3
+336	Black Iron Level 4
+337	Black Iron Level 5
+338	Black Iron Lv.6
+339	Black Iron Lv.7
+340	Black Iron Lv.8
+341	Black Iron Level 9
+342	Black Iron Lv. 10
+343	Dark Iron Level 1
+344	Dark Iron Level 2
+345	Dark Iron Level 3
+346	Dark Iron Lv.4
+347	Dark Iron Level 5
+348	Dark Iron Lv.6
+349	Dark Iron Lv.7
+350	Dark Iron Level 8
+351	Dark Iron Level 9
+352	Dark Iron Level 10
+353	Bronze Lv.1
+354	Bronze Level 2
+355	Bronze Level 3
+356	Bronze Level 4
+357	Bronze Lv.5
+358	Bronze Level 6
+359	Bronze Lv.7
+360	Bronze Level 8
+361	Bronze Level 9
+362	Bronze Level 10
+363	Red Copper Level 1
+364	Bronze Level 2
+365	Red Copper Lv.3
+366	Red Copper Lv.4
+367	Red Copper Level 5
+368	Red Brass Lv.6
+369	Bronze Level 7
+370	Red Copper Lv.8
+371	Copper Level 9
+372	Copper Level 10
+373	Silver Level 1
+374	Silver Tier 2
+375	Silver Lv.3
+376	Silver Level 4
+377	Silver Level 5
+378	Silver Level 6
+379	Silver Level 7
+380	Silver Lv.8
+381	Silver Level 9
+382	Silver Tier 10
+383	Mithril Level 1
+384	Mithril Lv.2
+385	Mithril Lv.3
+386	Mithril Lv.4
+387	Mithril Level 5
+388	Mithril Lv.6
+389	Mithril Level 7
+390	Mithril Lv.8
+391	Mithril Lv.9
+392	Mithril Level 10
+393	Gold Level 1
+394	Gold Level 2
+395	Gold Lv.3
+396	Gold Lv.4
+397	Gold Level 5
+398	Gold Level 6
+399	Gold Lv.7
+400	Gold Level 8
+401	Gold Tier 9
+402	Gold Lv.10
+403	Platinum Lv.1
+404	Platinum Level 2
+405	Platinum Lv.3
+406	Platinum Lv.4
+407	Platinum Level 5
+408	Platinum Lv.6
+409	Platinum Level 7
+410	Platinum Lv.8
+411	Platinum Lv. 9
+412	Platinum Lv. 10
+413	Adamantine Level 1
+414	Adamantine Lv. 2
+415	Adamantine Lv. 3
+416	Adamantite Level 4
+417	Adamantine Level 5
+418	Adamantine Lv.6
+419	Adamantine Level 7
+420	Adamantine Tier 8
+421	Adamantine Level 9
+422	Adamantine Lv.10
+423	Icejade Level 1
+424	Icy Jade Lv.2
+425	Ice Jade Lv.3
+426	Ice Jade Lv.4
+427	Ice Jade Lv.5
+428	Ice Jade Tier 6
+429	Ice Jade Tier 7
+430	Ice Jade Level 8
+431	Ice Jade Level 9
+432	Ice Jade Lv.10
+433	Jade Lv.1
+434	Jasper Level 2
+435	Jasper Level 3
+436	Jasper Lv.4
+437	Jasper Lv. 5
+438	Jasper Lv. 6
+439	Jasper Lv.7
+440	Jasper Level 8
+441	Jasper Level 9
+442	Jasper Level 10
+443	Jade Level 1
+444	Jade Level 2
+445	Emerald Level 3
+446	Jade Level 4
+447	Emerald Level 5
+448	Jade Level 6
+449	Emerald Lv. 7
+450	Emerald Lv.8
+451	Emerald Lv.9
+452	Emerald Lv.10
+453	Agate Lv.1
+454	Agate Level 2
+455	Agate Level 3
+456	Agate Lv.4
+457	Agate Lv.5
+458	Onyx Level 6
+459	Agate Level 7
+460	Agate Lv.8
+461	Agate Level 9
+462	Onyx Level 10
+463	Cat's Eye Lv.1
+464	Cat's Eye Lv.2
+465	Cat's Eye Tier 3
+466	Cat's Eye Level 4
+467	Cat Eye Level 5
+468	Cat's Eye Lv.6
+469	Cat's Eye Level 7
+470	Cat's Eye Lv.8
+471	Cat's Eye Lv.9
+472	Cat's Eye Level 10
+473	Diamond Lv.1
+474	Diamond Level 2
+475	Diamond Lv. 3
+476	Diamond Level 4
+477	Diamond Lv.5
+478	Diamond Tier 6
+479	Diamond Lv.7
+480	Diamond Tier 8
+481	Diamond Lv.9
+482	Diamond Level 10
+483	Luminescent Level 1
+484	Luminescent Level 2
+485	Luminescence Lv.3
+486	Noctilucent Level 4
+487	Noctilucent Lv.5
+488	Noctilucent Lv. 6
+489	Noctilucent Level 7
+490	Noctilucent Level 8
+491	Luminescence Lv.9
+492	Noctilucent Level 10
+493	Prismatic Level 1
+494	Prismatic Level 2
+495	Multicolored Level 3
+496	Multicolored Level 4
+497	Multicolor Tier 5
+498	Multicolored Lv.6
+499	Multicolored Lv.7
+500	Multicolored Lv.8
+501	Prismatic Lv.9
+502	Multicolor Lv.10
+503	Gale Level 1
+504	Gale Level 2
+505	Gale Level 3
+506	Gale Lv. 4
+507	Gale Lv.5
+508	Gale Lv.6
+509	Gale Level 7
+510	Gale Level 8
+511	Gale Lv.9
+512	Gale Level 10
+513	Blaze Level 1
+514	Blazing Fire Level 2
+515	Blaze Level 3
+516	Blaze Level 4
+517	Blazing Fire Level 5
+518	Blazing Fire Level 6
+519	Blazing Fire Level 7
+520	Blazing Fire Lv. 8
+521	Blaze Lv.9
+522	Blaze Lv.10
+523	Rainstorm Level 1
+524	Rainstorm Level 2
+525	Rainstorm Tier 3
+526	Rainstorm Level 4
+527	Rainstorm Lv. 5
+528	Rainstorm Lv.6
+529	Rainstorm Lv.7
+530	Rainstorm Lv.8
+531	Downpour Level 9
+532	Rainstorm Level 10
+533	Earth Level 1
+534	Earth Lv.2
+535	Earth Level 3
+536	Earth Lv.4
+537	Earth Level 5
+538	Earth Lv.6
+539	Earth Level 7
+540	Earth Level 8
+541	Earth Level 9
+542	Earth Lv.10
+543	Darkness Lv.1
+544	Darkness Tier 2
+545	Darkness Lv.3
+546	Darkness Lv. 4
+547	Darkness Level 5
+548	Darkness Level 6
+549	Darkness Lv.7
+550	Darkness Lv. 8
+551	Darkness Lv.9
+552	Dark Level 10
+553	Light Level 1
+554	Light Lv.2
+555	Light Lv.3
+556	Light Lv.4
+557	Light Tier 5
+558	Light Level 6
+559	Light Tier 7
+560	Light Level 8
+561	Radiance Level 9
+562	Light Lv.10
+563	Undead Level 1
+564	Undead Tier 2
+565	Undead Level 3
+566	Undead Level 4
+567	Undead Level 5
+568	Undead Level 6
+569	Undead Level 7
+570	Undead Level 8
+571	Undead Level 9
+572	Undead Level 10
+573	Divine Tier 1
+574	Divine Level 2
+575	Divine Level 3
+576	Divine Tier 4
+577	Divine Lv.5
+578	Divine Lv.6
+579	Holy Level 7
+580	Divine Level 8
+581	Divine Lv. 9
+582	Divine Level 10
+583	Legendary Lv.1
+584	Legendary Lv.2
+585	Legendary Level 3
+586	Legendary Lv.4
+587	Legendary Lv. 5
+588	Legendary Lv.6
+589	Legendary Level 7
+590	Legendary Level 8
+591	Legendary Level 9
+592	Legendary Lv.10
+593	Epic Level 1
+594	Epic Level 2
+595	Epic Lv.3
+596	Epic Level 4
+597	Epic Level 5
+598	Epic Level 6
+599	Epic Level 7
+600	Epic Lv.8
+601	Epic Level 9
+602	Epic Level 10
+2107	Chuyun Lv.1
+2108	Chuyun Lv.2
+2109	Firstcloud Level 3
+2110	Chuyun Level 4
+2111	Chuyun Lv.5
+2112	First Cloud Lv. 6
+2113	Chuyun Lv.7
+2114	Early Cloud Lv.8
+2115	Chuyun Level 9
+2116	First Cloud Lv. 10
+2117	Grandeur Lv.1
+2118	Majestic Wind Level 2
+2119	Majestic Level 3
+2120	Majesty Level 4
+2121	Majesty Lv.5
+2122	Majestic Wind Level 6
+2123	Majestic Level 7
+2124	Majestic Wind Lv.8
+2125	Majesty Level 9
+2126	Majesty Lv.10
+2127	Divine Overlord Lv.1
+2128	Divine Overlord Lv.2
+2129	Divine Overlord Lv.3
+2130	Divine Overlord Level 4
+2131	Divine Overlord Level 5
+2132	Divine Overlord Level 6
+2133	Divine Tyranny Lv.7
+2134	Divine Overlord Level 8
+2135	Divine Overlord Level 9
+2136	Divine Overlord Level 10
+2137	Rosy Clouds Level 1
+2138	Rosy Clouds Level 2
+2139	Rosy Clouds Level 3
+2140	Rosy Clouds Lv.4
+2141	Rosy Clouds Level 5
+2142	Rosy Cloud Tier 6
+2143	Rosy Clouds Lv.7
+2144	Rosy Clouds Lv. 8
+2145	Rosy Cloud Level 9
+2146	Rosy Clouds Lv.10
+2147	Wutong Lv.1
+2148	Wutong Lv.2
+2149	Wutong Lv.3
+2150	Wutong Level 4
+2151	Wutong Perch Lv.5
+2152	Wutong Lv.6
+2153	Wutong Level 7
+2154	Qiwu Tier 8
+2155	Qiwu Level 9
+2156	Wutong Lv.10
+2157	Soaring Vastness Level 1
+2158	Soaring Level 2
+2159	Feihan Tier 3
+2160	Feihan Level 4
+2161	Soaring Vastness Lv.5
+2162	Feihan Lv.6
+2163	Soaring Level 7
+2164	Soaring Vastness Lv.8
+2165	Feihan Level 9
+2166	Feihan Lv.10
+2167	Raging Waves Tier 1
+2168	Surging Waves Lv. 2
+2169	Surging Waves Lv.3
+2170	Surging Waves Lv. 4
+2171	Raging Waves Lv.5
+2172	Raging Waves Level 6
+2173	Surging Wave Level 7
+2174	Raging Waves Lv.8
+2175	Raging Waves Tier 9
+2176	Surging Waves Level 10
+2177	Styx Lv.1
+2178	Styx Level 2
+2179	Styx Level 3
+2180	Styx Lv.4
+2181	Styx Level 5
+2182	Styx Lv. 6
+2183	Styx Level 7
+2184	Styx Level 8
+2185	Styx Level 9
+2186	Styx Lv.10
+2187	Yaoguang Level 1
+2188	Yaoguang Level 2
+2189	Yaoguang Lv.3
+2190	Yaoguang Lv.4
+2191	Yaoguang Level 5
+2192	Alkaid Lv. 6
+2193	Alkaid Lv. 7
+2194	Alkaid Lv. 8
+2195	Yaoguang Level 9
+2196	Yaoguang Level 10
+2197	Moon Chaser Lv.1
+2198	Moonchaser Level 2
+2199	Moon Chaser Lv.3
+2200	Moonchaser Level 4
+2201	Moon Chaser Lv.5
+2202	Moonchaser Level 6
+2203	Moonchaser Tier 7
+2204	Moonchaser Lv.8
+2205	Moonchaser Level 9
+2206	Moonchaser Level 10
+2207	Xuanting Level 1
+2208	Dark Thunder Level 2
+2209	Xuanting Lv.3
+2210	Mystic Thunder Level 4
+2211	Xuanting Tier 5
+2212	Xuanting Lv.6
+2213	Xuanting Lv.7
+2214	Xuanting Lv.8
+2215	Xuanting Lv. 9
+2216	Xuanting Level 10
+2217	Cuiwei Level 1
+2218	Emerald Peak Lv.2
+2219	Cuiwei Tier 3
+2220	Cuiwei Level 4
+2221	Emerald Level 5
+2222	Emerald Level 6
+2223	Emerald Level 7
+2224	Emerald Level 8
+2225	Cuiwei Tier 9
+2226	Cuiwei Lv.10
+2227	Dominion Level 1
+2228	Omnipresent Level 2
+2229	Dominion Lv.3
+2230	Dominion Level 4
+2231	Dominion Lv.5
+2232	Majestic Lv.6
+2233	Dominion Lv.7
+2234	Dominion Level 8
+2235	Omni Level 9
+2236	Omni Level 10
+2237	Divine Awl Lv.1
+2238	Divine Awl Level 2
+2239	Divine Awl Lv.3
+2240	Divine Spire Level 4
+2241	Divine Awl Level 5
+2242	Divine Awl Tier 6
+2243	Divine Awl Lv.7
+2244	Divine Awl Tier 8
+2245	Divine Awl Lv.9
+2246	Divine Awl Level 10
+2247	Crepe Myrtle Lv.1
+2248	Crape Myrtle Lv.2
+2249	Crape Myrtle Lv.3
+2250	Ziwei Level 4
+2251	Crape Myrtle Level 5
+2252	Crape Myrtle Level 6
+2253	Crape Myrtle Lv.7
+2254	Ziwei Level 8
+2255	Crape Myrtle Level 9
+2256	Crape Myrtle Lv.10
+2257	Army Breaker Level 1
+2258	Army Breaker Level 2
+2259	Army Breaker Lv.3
+2260	Army Breaker Lv.4
+2261	Army Breaker Lv.5
+2262	Pojun Level 6
+2263	Army Breaker Level 7
+2264	Army Breaker Level 8
+2265	Army Breaker Lv.9
+2266	Pojun Lv. 10
+2267	Seven Killings Level 1
+2268	Qisha Level 2
+2269	Seven Kills Tier 3
+2270	Seven Killings Level 4
+2271	Qisha Level 5
+2272	Seven Kills Level 6
+2273	Seven Kills Lv.7
+2274	Seven Killings Level 8
+2275	Qisha Level 9
+2276	Qisha Lv. 10
+2277	Rampant Lv. 1
+2278	Rampant Level 2
+2279	Rampant Lv.3
+2280	Rampant Lv. 4
+2281	Rampant Level 5
+2282	Rampant Level 6
+2283	Rampant Level 7
+2284	Rampant Level 8
+2285	Rampant Lv. 9
+2286	Rampant Lv.10
+2287	Dominant Level 1
+2288	Tyranny Level 2
+2289	Tyranny Lv.3
+2290	Overlord Lv.4
+2291	Dominator Lv.5
+2292	Overlord Lv.6
+2293	Tyranny Level 7
+2294	Overlord Tier 8
+2295	Tyrannical Level 9
+2296	Dominant Lv. 10
+2297	Reach-Heaven Lv.1
+2298	Tongtian Level 2
+2299	Reach Heaven Level 3
+2300	Sketotalling Level 4
+2301	Reach-Heaven Level 5
+2302	Tongtian Level 6
+2303	Reach Heaven Lv.7
+2304	Towering Sky Level 8
+2305	Tuantian Lv.9
+2306	Reach Heaven Lv.10
+603	Basic
+604	Pine Lv.1
+605	Pine Lv. 2
+606	Pine Tier 3
+607	Pine Level 4
+608	Pine Lv.5
+609	Pine Lv.6
+610	Pine Level 7
+611	Pine Tier 8
+612	Pine Level 9
+613	Pine Level 10
+614	Birch Lv.1
+615	Birch Lv.2
+616	Birch Level 3
+617	Birch Lv.4
+618	Birch Lv.5
+619	Birch Lv.6
+620	Birch Level 7
+621	Birch Level 8
+622	Birch Lv.9
+623	Birch Level 10
+624	Ironwood Level 1
+625	Ironwood Tier 2
+626	Ironwood Lv.3
+627	Ironwood Level 4
+628	Ironwood Level 5
+629	Ironwood Level 6
+630	Ironwood Level 7
+631	Ironwood Level 8
+632	Ironwood Level 9
+633	Ironwood Tier 10
+634	Black Iron Tier 1
+635	Black Iron Level 2
+636	Black Iron Level 3
+637	Black Iron Level 4
+638	Black Iron Level 5
+639	Black Iron Lv.6
+640	Black Iron Lv.7
+641	Black Iron Lv.8
+642	Black Iron Level 9
+643	Black Iron Lv. 10
+644	Dark Iron Level 1
+645	Dark Iron Level 2
+646	Dark Iron Level 3
+647	Dark Iron Lv.4
+648	Dark Iron Level 5
+649	Dark Iron Lv.6
+650	Dark Iron Lv.7
+651	Dark Iron Level 8
+652	Dark Iron Level 9
+653	Dark Iron Level 10
+654	Bronze Lv.1
+655	Bronze Level 2
+656	Bronze Level 3
+657	Bronze Level 4
+658	Bronze Lv.5
+659	Bronze Level 6
+660	Bronze Lv.7
+661	Bronze Level 8
+662	Bronze Level 9
+663	Bronze Level 10
+664	Red Copper Level 1
+665	Bronze Level 2
+666	Red Copper Lv.3
+667	Red Copper Lv.4
+668	Red Copper Level 5
+669	Red Brass Lv.6
+670	Bronze Level 7
+671	Red Copper Lv.8
+672	Copper Level 9
+673	Copper Level 10
+674	Silver Level 1
+675	Silver Tier 2
+676	Silver Lv.3
+677	Silver Level 4
+678	Silver Level 5
+679	Silver Level 6
+680	Silver Level 7
+681	Silver Lv.8
+682	Silver Level 9
+683	Silver Tier 10
+684	Mithril Level 1
+685	Mithril Lv.2
+686	Mithril Lv.3
+687	Mithril Lv.4
+688	Mithril Level 5
+689	Mithril Lv.6
+690	Mithril Level 7
+691	Mithril Lv.8
+692	Mithril Lv.9
+693	Mithril Level 10
+694	Gold Level 1
+695	Gold Level 2
+696	Gold Lv.3
+697	Gold Lv.4
+698	Gold Level 5
+699	Gold Level 6
+700	Gold Lv.7
+701	Gold Level 8
+702	Gold Tier 9
+703	Gold Lv.10
+704	Platinum Lv.1
+705	Platinum Level 2
+706	Platinum Lv.3
+707	Platinum Lv.4
+708	Platinum Level 5
+709	Platinum Lv.6
+710	Platinum Level 7
+711	Platinum Lv.8
+712	Platinum Lv. 9
+713	Platinum Lv. 10
+714	Adamantine Level 1
+715	Adamantine Lv. 2
+716	Adamantine Lv. 3
+717	Adamantite Level 4
+718	Adamantine Level 5
+719	Adamantine Lv.6
+720	Adamantine Level 7
+721	Adamantine Tier 8
+722	Adamantine Level 9
+723	Adamantine Lv.10
+724	Icejade Level 1
+725	Icy Jade Lv.2
+726	Ice Jade Lv.3
+727	Ice Jade Lv.4
+728	Ice Jade Lv.5
+729	Ice Jade Tier 6
+730	Ice Jade Tier 7
+731	Ice Jade Level 8
+732	Ice Jade Level 9
+733	Ice Jade Lv.10
+734	Jade Lv.1
+735	Jasper Level 2
+736	Jasper Level 3
+737	Jasper Lv.4
+738	Jasper Lv. 5
+739	Jasper Lv. 6
+740	Jasper Lv.7
+741	Jasper Level 8
+742	Jasper Level 9
+743	Jasper Level 10
+744	Jade Level 1
+745	Jade Level 2
+746	Emerald Level 3
+747	Jade Level 4
+748	Emerald Level 5
+749	Jade Level 6
+750	Emerald Lv. 7
+751	Emerald Lv.8
+752	Emerald Lv.9
+753	Emerald Lv.10
+754	Agate Lv.1
+755	Agate Level 2
+756	Agate Level 3
+757	Agate Lv.4
+758	Agate Lv.5
+759	Onyx Level 6
+760	Agate Level 7
+761	Agate Lv.8
+762	Agate Level 9
+763	Onyx Level 10
+764	Cat's Eye Lv.1
+765	Cat's Eye Lv.2
+766	Cat's Eye Tier 3
+767	Cat's Eye Level 4
+768	Cat Eye Level 5
+769	Cat's Eye Lv.6
+770	Cat's Eye Level 7
+771	Cat's Eye Lv.8
+772	Cat's Eye Lv.9
+773	Cat's Eye Level 10
+774	Diamond Lv.1
+775	Diamond Level 2
+776	Diamond Lv. 3
+777	Diamond Level 4
+778	Diamond Lv.5
+779	Diamond Tier 6
+780	Diamond Lv.7
+781	Diamond Tier 8
+782	Diamond Lv.9
+783	Diamond Level 10
+784	Luminescent Level 1
+785	Luminescent Level 2
+786	Luminescence Lv.3
+787	Noctilucent Level 4
+788	Noctilucent Lv.5
+789	Noctilucent Lv. 6
+790	Noctilucent Level 7
+791	Noctilucent Level 8
+792	Luminescence Lv.9
+793	Noctilucent Level 10
+794	Prismatic Level 1
+795	Prismatic Level 2
+796	Multicolored Level 3
+797	Multicolored Level 4
+798	Multicolor Tier 5
+799	Multicolored Lv.6
+800	Multicolored Lv.7
+801	Multicolored Lv.8
+802	Prismatic Lv.9
+803	Multicolor Lv.10
+804	Gale Level 1
+805	Gale Level 2
+806	Gale Level 3
+807	Gale Lv. 4
+808	Gale Lv.5
+809	Gale Lv.6
+810	Gale Level 7
+811	Gale Level 8
+812	Gale Lv.9
+813	Gale Level 10
+814	Blaze Level 1
+815	Blazing Fire Level 2
+816	Blaze Level 3
+817	Blaze Level 4
+818	Blazing Fire Level 5
+819	Blazing Fire Level 6
+820	Blazing Fire Level 7
+821	Blazing Fire Lv. 8
+822	Blaze Lv.9
+823	Blaze Lv.10
+824	Rainstorm Level 1
+825	Rainstorm Level 2
+826	Rainstorm Tier 3
+827	Rainstorm Level 4
+828	Rainstorm Lv. 5
+829	Rainstorm Lv.6
+830	Rainstorm Lv.7
+831	Rainstorm Lv.8
+832	Downpour Level 9
+833	Rainstorm Level 10
+834	Earth Level 1
+835	Earth Lv.2
+836	Earth Level 3
+837	Earth Lv.4
+838	Earth Level 5
+839	Earth Lv.6
+840	Earth Level 7
+841	Earth Level 8
+842	Earth Level 9
+843	Earth Lv.10
+844	Darkness Lv.1
+845	Darkness Tier 2
+846	Darkness Lv.3
+847	Darkness Lv. 4
+848	Darkness Level 5
+849	Darkness Level 6
+850	Darkness Lv.7
+851	Darkness Lv. 8
+852	Darkness Lv.9
+853	Dark Level 10
+854	Light Level 1
+855	Light Lv.2
+856	Light Lv.3
+857	Light Lv.4
+858	Light Tier 5
+859	Light Level 6
+860	Light Tier 7
+861	Light Level 8
+862	Radiance Level 9
+863	Light Lv.10
+864	Undead Level 1
+865	Undead Tier 2
+866	Undead Level 3
+867	Undead Level 4
+868	Undead Level 5
+869	Undead Level 6
+870	Undead Level 7
+871	Undead Level 8
+872	Undead Level 9
+873	Undead Level 10
+874	Divine Tier 1
+875	Divine Level 2
+876	Divine Level 3
+877	Divine Tier 4
+878	Divine Lv.5
+879	Divine Lv.6
+880	Holy Level 7
+881	Divine Level 8
+882	Divine Lv. 9
+883	Divine Level 10
+884	Legendary Lv.1
+885	Legendary Lv.2
+886	Legendary Level 3
+887	Legendary Lv.4
+888	Legendary Lv. 5
+889	Legendary Lv.6
+890	Legendary Level 7
+891	Legendary Level 8
+892	Legendary Level 9
+893	Legendary Lv.10
+894	Epic Level 1
+895	Epic Level 2
+896	Epic Lv.3
+897	Epic Level 4
+898	Epic Level 5
+899	Epic Level 6
+900	Epic Level 7
+901	Epic Lv.8
+902	Epic Level 9
+903	Epic Level 10
+2407	Chuyun Lv.1
+2408	Chuyun Lv.2
+2409	Firstcloud Level 3
+2410	Chuyun Level 4
+2411	Chuyun Lv.5
+2412	First Cloud Lv. 6
+2413	Chuyun Lv.7
+2414	Early Cloud Lv.8
+2415	Chuyun Level 9
+2416	First Cloud Lv. 10
+2417	Grandeur Lv.1
+2418	Majestic Wind Level 2
+2419	Majestic Level 3
+2420	Majesty Level 4
+2421	Majesty Lv.5
+2422	Majestic Wind Level 6
+2423	Majestic Level 7
+2424	Majestic Wind Lv.8
+2425	Majesty Level 9
+2426	Majesty Lv.10
+2427	Divine Overlord Lv.1
+2428	Divine Overlord Lv.2
+2429	Divine Overlord Lv.3
+2430	Divine Overlord Level 4
+2431	Divine Overlord Level 5
+2432	Divine Overlord Level 6
+2433	Divine Tyranny Lv.7
+2434	Divine Overlord Level 8
+2435	Divine Overlord Level 9
+2436	Divine Overlord Level 10
+2437	Rosy Clouds Level 1
+2438	Rosy Clouds Level 2
+2439	Rosy Clouds Level 3
+2440	Rosy Clouds Lv.4
+2441	Rosy Clouds Level 5
+2442	Rosy Cloud Tier 6
+2443	Rosy Clouds Lv.7
+2444	Rosy Clouds Lv. 8
+2445	Rosy Cloud Level 9
+2446	Rosy Clouds Lv.10
+2447	Wutong Lv.1
+2448	Wutong Lv.2
+2449	Wutong Lv.3
+2450	Wutong Level 4
+2451	Wutong Perch Lv.5
+2452	Wutong Lv.6
+2453	Wutong Level 7
+2454	Qiwu Tier 8
+2455	Qiwu Level 9
+2456	Wutong Lv.10
+2457	Soaring Vastness Level 1
+2458	Soaring Level 2
+2459	Feihan Tier 3
+2460	Feihan Level 4
+2461	Soaring Vastness Lv.5
+2462	Feihan Lv.6
+2463	Soaring Level 7
+2464	Soaring Vastness Lv.8
+2465	Feihan Level 9
+2466	Feihan Lv.10
+2467	Raging Waves Tier 1
+2468	Surging Waves Lv. 2
+2469	Surging Waves Lv.3
+2470	Surging Waves Lv. 4
+2471	Raging Waves Lv.5
+2472	Raging Waves Level 6
+2473	Surging Wave Level 7
+2474	Raging Waves Lv.8
+2475	Raging Waves Tier 9
+2476	Surging Waves Level 10
+2477	Styx Lv.1
+2478	Styx Level 2
+2479	Styx Level 3
+2480	Styx Lv.4
+2481	Styx Level 5
+2482	Styx Lv. 6
+2483	Styx Level 7
+2484	Styx Level 8
+2485	Styx Level 9
+2486	Styx Lv.10
+2487	Yaoguang Level 1
+2488	Yaoguang Level 2
+2489	Yaoguang Lv.3
+2490	Yaoguang Lv.4
+2491	Yaoguang Level 5
+2492	Alkaid Lv. 6
+2493	Alkaid Lv. 7
+2494	Alkaid Lv. 8
+2495	Yaoguang Level 9
+2496	Yaoguang Level 10
+2497	Moon Chaser Lv.1
+2498	Moonchaser Level 2
+2499	Moon Chaser Lv.3
+2500	Moonchaser Level 4
+2501	Moon Chaser Lv.5
+2502	Moonchaser Level 6
+2503	Moonchaser Tier 7
+2504	Moonchaser Lv.8
+2505	Moonchaser Level 9
+2506	Moonchaser Level 10
+2507	Xuanting Level 1
+2508	Dark Thunder Level 2
+2509	Xuanting Lv.3
+2510	Mystic Thunder Level 4
+2511	Xuanting Tier 5
+2512	Xuanting Lv.6
+2513	Xuanting Lv.7
+2514	Xuanting Lv.8
+2515	Xuanting Lv. 9
+2516	Xuanting Level 10
+2517	Cuiwei Level 1
+2518	Emerald Peak Lv.2
+2519	Cuiwei Tier 3
+2520	Cuiwei Level 4
+2521	Emerald Level 5
+2522	Emerald Level 6
+2523	Emerald Level 7
+2524	Emerald Level 8
+2525	Cuiwei Tier 9
+2526	Cuiwei Lv.10
+2527	Dominion Level 1
+2528	Omnipresent Level 2
+2529	Dominion Lv.3
+2530	Dominion Level 4
+2531	Dominion Lv.5
+2532	Majestic Lv.6
+2533	Dominion Lv.7
+2534	Dominion Level 8
+2535	Omni Level 9
+2536	Omni Level 10
+2537	Divine Awl Lv.1
+2538	Divine Awl Level 2
+2539	Divine Awl Lv.3
+2540	Divine Spire Level 4
+2541	Divine Awl Level 5
+2542	Divine Awl Tier 6
+2543	Divine Awl Lv.7
+2544	Divine Awl Tier 8
+2545	Divine Awl Lv.9
+2546	Divine Awl Level 10
+2547	Crepe Myrtle Lv.1
+2548	Crape Myrtle Lv.2
+2549	Crape Myrtle Lv.3
+2550	Ziwei Level 4
+2551	Crape Myrtle Level 5
+2552	Crape Myrtle Level 6
+2553	Crape Myrtle Lv.7
+2554	Ziwei Level 8
+2555	Crape Myrtle Level 9
+2556	Crape Myrtle Lv.10
+2557	Army Breaker Level 1
+2558	Army Breaker Level 2
+2559	Army Breaker Lv.3
+2560	Army Breaker Lv.4
+2561	Army Breaker Lv.5
+2562	Pojun Level 6
+2563	Army Breaker Level 7
+2564	Army Breaker Level 8
+2565	Army Breaker Lv.9
+2566	Pojun Lv. 10
+2567	Seven Killings Level 1
+2568	Qisha Level 2
+2569	Seven Kills Tier 3
+2570	Seven Killings Level 4
+2571	Qisha Level 5
+2572	Seven Kills Level 6
+2573	Seven Kills Lv.7
+2574	Seven Killings Level 8
+2575	Qisha Level 9
+2576	Qisha Lv. 10
+2577	Rampant Lv. 1
+2578	Rampant Level 2
+2579	Rampant Lv.3
+2580	Rampant Lv. 4
+2581	Rampant Level 5
+2582	Rampant Level 6
+2583	Rampant Level 7
+2584	Rampant Level 8
+2585	Rampant Lv. 9
+2586	Rampant Lv.10
+2587	Dominant Level 1
+2588	Tyranny Level 2
+2589	Tyranny Lv.3
+2590	Overlord Lv.4
+2591	Dominator Lv.5
+2592	Overlord Lv.6
+2593	Tyranny Level 7
+2594	Overlord Tier 8
+2595	Tyrannical Level 9
+2596	Dominant Lv. 10
+2597	Reach-Heaven Lv.1
+2598	Tongtian Level 2
+2599	Reach Heaven Level 3
+2600	Sketotalling Level 4
+2601	Reach-Heaven Level 5
+2602	Tongtian Level 6
+2603	Reach Heaven Lv.7
+2604	Towering Sky Level 8
+2605	Tuantian Lv.9
+2606	Reach Heaven Lv.10
+904	Basic
+905	Pine Lv.1
+906	Pine Lv. 2
+907	Pine Tier 3
+908	Pine Level 4
+909	Pine Lv.5
+910	Pine Lv.6
+911	Pine Level 7
+912	Pine Tier 8
+913	Pine Level 9
+914	Pine Level 10
+915	Birch Lv.1
+916	Birch Lv.2
+917	Birch Level 3
+918	Birch Lv.4
+919	Birch Lv.5
+920	Birch Lv.6
+921	Birch Level 7
+922	Birch Level 8
+923	Birch Lv.9
+924	Birch Level 10
+925	Ironwood Level 1
+926	Ironwood Tier 2
+927	Ironwood Lv.3
+928	Ironwood Level 4
+929	Ironwood Level 5
+930	Ironwood Level 6
+931	Ironwood Level 7
+932	Ironwood Level 8
+933	Ironwood Level 9
+934	Ironwood Tier 10
+935	Black Iron Tier 1
+936	Black Iron Level 2
+937	Black Iron Level 3
+938	Black Iron Level 4
+939	Black Iron Level 5
+940	Black Iron Lv.6
+941	Black Iron Lv.7
+942	Black Iron Lv.8
+943	Black Iron Level 9
+944	Black Iron Lv. 10
+945	Dark Iron Level 1
+946	Dark Iron Level 2
+947	Dark Iron Level 3
+948	Dark Iron Lv.4
+949	Dark Iron Level 5
+950	Dark Iron Lv.6
+951	Dark Iron Lv.7
+952	Dark Iron Level 8
+953	Dark Iron Level 9
+954	Dark Iron Level 10
+955	Bronze Lv.1
+956	Bronze Level 2
+957	Bronze Level 3
+958	Bronze Level 4
+959	Bronze Lv.5
+960	Bronze Level 6
+961	Bronze Lv.7
+962	Bronze Level 8
+963	Bronze Level 9
+964	Bronze Level 10
+965	Red Copper Level 1
+966	Bronze Level 2
+967	Red Copper Lv.3
+968	Red Copper Lv.4
+969	Red Copper Level 5
+970	Red Brass Lv.6
+971	Bronze Level 7
+972	Red Copper Lv.8
+973	Copper Level 9
+974	Copper Level 10
+975	Silver Level 1
+976	Silver Tier 2
+977	Silver Lv.3
+978	Silver Level 4
+979	Silver Level 5
+980	Silver Level 6
+981	Silver Level 7
+982	Silver Lv.8
+983	Silver Level 9
+984	Silver Tier 10
+985	Mithril Level 1
+986	Mithril Lv.2
+987	Mithril Lv.3
+988	Mithril Lv.4
+989	Mithril Level 5
+990	Mithril Lv.6
+991	Mithril Level 7
+992	Mithril Lv.8
+993	Mithril Lv.9
+994	Mithril Level 10
+995	Gold Level 1
+996	Gold Level 2
+997	Gold Lv.3
+998	Gold Lv.4
+999	Gold Level 5
+1000	Gold Level 6
+1001	Gold Lv.7
+1002	Gold Level 8
+1003	Gold Tier 9
+1004	Gold Lv.10
+1005	Platinum Lv.1
+1006	Platinum Level 2
+1007	Platinum Lv.3
+1008	Platinum Lv.4
+1009	Platinum Level 5
+1010	Platinum Lv.6
+1011	Platinum Level 7
+1012	Platinum Lv.8
+1013	Platinum Lv. 9
+1014	Platinum Lv. 10
+1015	Adamantine Level 1
+1016	Adamantine Lv. 2
+1017	Adamantine Lv. 3
+1018	Adamantite Level 4
+1019	Adamantine Level 5
+1020	Adamantine Lv.6
+1021	Adamantine Level 7
+1022	Adamantine Tier 8
+1023	Adamantine Level 9
+1024	Adamantine Lv.10
+1025	Icejade Level 1
+1026	Icy Jade Lv.2
+1027	Ice Jade Lv.3
+1028	Ice Jade Lv.4
+1029	Ice Jade Lv.5
+1030	Ice Jade Tier 6
+1031	Ice Jade Tier 7
+1032	Ice Jade Level 8
+1033	Ice Jade Level 9
+1034	Ice Jade Lv.10
+1035	Jade Lv.1
+1036	Jasper Level 2
+1037	Jasper Level 3
+1038	Jasper Lv.4
+1039	Jasper Lv. 5
+1040	Jasper Lv. 6
+1041	Jasper Lv.7
+1042	Jasper Level 8
+1043	Jasper Level 9
+1044	Jasper Level 10
+1045	Jade Level 1
+1046	Jade Level 2
+1047	Emerald Level 3
+1048	Jade Level 4
+1049	Emerald Level 5
+1050	Jade Level 6
+1051	Emerald Lv. 7
+1052	Emerald Lv.8
+1053	Emerald Lv.9
+1054	Emerald Lv.10
+1055	Agate Lv.1
+1056	Agate Level 2
+1057	Agate Level 3
+1058	Agate Lv.4
+1059	Agate Lv.5
+1060	Onyx Level 6
+1061	Agate Level 7
+1062	Agate Lv.8
+1063	Agate Level 9
+1064	Onyx Level 10
+1065	Cat's Eye Lv.1
+1066	Cat's Eye Lv.2
+1067	Cat's Eye Tier 3
+1068	Cat's Eye Level 4
+1069	Cat Eye Level 5
+1070	Cat's Eye Lv.6
+1071	Cat's Eye Level 7
+1072	Cat's Eye Lv.8
+1073	Cat's Eye Lv.9
+1074	Cat's Eye Level 10
+1075	Diamond Lv.1
+1076	Diamond Level 2
+1077	Diamond Lv. 3
+1078	Diamond Level 4
+1079	Diamond Lv.5
+1080	Diamond Tier 6
+1081	Diamond Lv.7
+1082	Diamond Tier 8
+1083	Diamond Lv.9
+1084	Diamond Level 10
+1085	Luminescent Level 1
+1086	Luminescent Level 2
+1087	Luminescence Lv.3
+1088	Noctilucent Level 4
+1089	Noctilucent Lv.5
+1090	Noctilucent Lv. 6
+1091	Noctilucent Level 7
+1092	Noctilucent Level 8
+1093	Luminescence Lv.9
+1094	Noctilucent Level 10
+1095	Prismatic Level 1
+1096	Prismatic Level 2
+1097	Multicolored Level 3
+1098	Multicolored Level 4
+1099	Multicolor Tier 5
+1100	Multicolored Lv.6
+1101	Multicolored Lv.7
+1102	Multicolored Lv.8
+1103	Prismatic Lv.9
+1104	Multicolor Lv.10
+1105	Gale Level 1
+1106	Gale Level 2
+1107	Gale Level 3
+1108	Gale Lv. 4
+1109	Gale Lv.5
+1110	Gale Lv.6
+1111	Gale Level 7
+1112	Gale Level 8
+1113	Gale Lv.9
+1114	Gale Level 10
+1115	Blaze Level 1
+1116	Blazing Fire Level 2
+1117	Blaze Level 3
+1118	Blaze Level 4
+1119	Blazing Fire Level 5
+1120	Blazing Fire Level 6
+1121	Blazing Fire Level 7
+1122	Blazing Fire Lv. 8
+1123	Blaze Lv.9
+1124	Blaze Lv.10
+1125	Rainstorm Level 1
+1126	Rainstorm Level 2
+1127	Rainstorm Tier 3
+1128	Rainstorm Level 4
+1129	Rainstorm Lv. 5
+1130	Rainstorm Lv.6
+1131	Rainstorm Lv.7
+1132	Rainstorm Lv.8
+1133	Downpour Level 9
+1134	Rainstorm Level 10
+1135	Earth Level 1
+1136	Earth Lv.2
+1137	Earth Level 3
+1138	Earth Lv.4
+1139	Earth Level 5
+1140	Earth Lv.6
+1141	Earth Level 7
+1142	Earth Level 8
+1143	Earth Level 9
+1144	Earth Lv.10
+1145	Darkness Lv.1
+1146	Darkness Tier 2
+1147	Darkness Lv.3
+1148	Darkness Lv. 4
+1149	Darkness Level 5
+1150	Darkness Level 6
+1151	Darkness Lv.7
+1152	Darkness Lv. 8
+1153	Darkness Lv.9
+1154	Dark Level 10
+1155	Light Level 1
+1156	Light Lv.2
+1157	Light Lv.3
+1158	Light Lv.4
+1159	Light Tier 5
+1160	Light Level 6
+1161	Light Tier 7
+1162	Light Level 8
+1163	Radiance Level 9
+1164	Light Lv.10
+1165	Undead Level 1
+1166	Undead Tier 2
+1167	Undead Level 3
+1168	Undead Level 4
+1169	Undead Level 5
+1170	Undead Level 6
+1171	Undead Level 7
+1172	Undead Level 8
+1173	Undead Level 9
+1174	Undead Level 10
+1175	Divine Tier 1
+1176	Divine Level 2
+1177	Divine Level 3
+1178	Divine Tier 4
+1179	Divine Lv.5
+1180	Divine Lv.6
+1181	Holy Level 7
+1182	Divine Level 8
+1183	Divine Lv. 9
+1184	Divine Level 10
+1185	Legendary Lv.1
+1186	Legendary Lv.2
+1187	Legendary Level 3
+1188	Legendary Lv.4
+1189	Legendary Lv. 5
+1190	Legendary Lv.6
+1191	Legendary Level 7
+1192	Legendary Level 8
+1193	Legendary Level 9
+1194	Legendary Lv.10
+1195	Epic Level 1
+1196	Epic Level 2
+1197	Epic Lv.3
+1198	Epic Level 4
+1199	Epic Level 5
+1200	Epic Level 6
+1201	Epic Level 7
+1202	Epic Lv.8
+1203	Epic Level 9
+1204	Epic Level 10
+2707	Chuyun Lv.1
+2708	Chuyun Lv.2
+2709	Firstcloud Level 3
+2710	Chuyun Level 4
+2711	Chuyun Lv.5
+2712	First Cloud Lv. 6
+2713	Chuyun Lv.7
+2714	Early Cloud Lv.8
+2715	Chuyun Level 9
+2716	First Cloud Lv. 10
+2717	Grandeur Lv.1
+2718	Majestic Wind Level 2
+2719	Majestic Level 3
+2720	Majesty Level 4
+2721	Majesty Lv.5
+2722	Majestic Wind Level 6
+2723	Majestic Level 7
+2724	Majestic Wind Lv.8
+2725	Majesty Level 9
+2726	Majesty Lv.10
+2727	Divine Overlord Lv.1
+2728	Divine Overlord Lv.2
+2729	Divine Overlord Lv.3
+2730	Divine Overlord Level 4
+2731	Divine Overlord Level 5
+2732	Divine Overlord Level 6
+2733	Divine Tyranny Lv.7
+2734	Divine Overlord Level 8
+2735	Divine Overlord Level 9
+2736	Divine Overlord Level 10
+2737	Rosy Clouds Level 1
+2738	Rosy Clouds Level 2
+2739	Rosy Clouds Level 3
+2740	Rosy Clouds Lv.4
+2741	Rosy Clouds Level 5
+2742	Rosy Cloud Tier 6
+2743	Rosy Clouds Lv.7
+2744	Rosy Clouds Lv. 8
+2745	Rosy Cloud Level 9
+2746	Rosy Clouds Lv.10
+2747	Wutong Lv.1
+2748	Wutong Lv.2
+2749	Wutong Lv.3
+2750	Wutong Level 4
+2751	Wutong Perch Lv.5
+2752	Wutong Lv.6
+2753	Wutong Level 7
+2754	Qiwu Tier 8
+2755	Qiwu Level 9
+2756	Wutong Lv.10
+2757	Soaring Vastness Level 1
+2758	Soaring Level 2
+2759	Feihan Tier 3
+2760	Feihan Level 4
+2761	Soaring Vastness Lv.5
+2762	Feihan Lv.6
+2763	Soaring Level 7
+2764	Soaring Vastness Lv.8
+2765	Feihan Level 9
+2766	Feihan Lv.10
+2767	Raging Waves Tier 1
+2768	Surging Waves Lv. 2
+2769	Surging Waves Lv.3
+2770	Surging Waves Lv. 4
+2771	Raging Waves Lv.5
+2772	Raging Waves Level 6
+2773	Surging Wave Level 7
+2774	Raging Waves Lv.8
+2775	Raging Waves Tier 9
+2776	Surging Waves Level 10
+2777	Styx Lv.1
+2778	Styx Level 2
+2779	Styx Level 3
+2780	Styx Lv.4
+2781	Styx Level 5
+2782	Styx Lv. 6
+2783	Styx Level 7
+2784	Styx Level 8
+2785	Styx Level 9
+2786	Styx Lv.10
+2787	Yaoguang Level 1
+2788	Yaoguang Level 2
+2789	Yaoguang Lv.3
+2790	Yaoguang Lv.4
+2791	Yaoguang Level 5
+2792	Alkaid Lv. 6
+2793	Alkaid Lv. 7
+2794	Alkaid Lv. 8
+2795	Yaoguang Level 9
+2796	Yaoguang Level 10
+2797	Moon Chaser Lv.1
+2798	Moonchaser Level 2
+2799	Moon Chaser Lv.3
+2800	Moonchaser Level 4
+2801	Moon Chaser Lv.5
+2802	Moonchaser Level 6
+2803	Moonchaser Tier 7
+2804	Moonchaser Lv.8
+2805	Moonchaser Level 9
+2806	Moonchaser Level 10
+2807	Xuanting Level 1
+2808	Dark Thunder Level 2
+2809	Xuanting Lv.3
+2810	Mystic Thunder Level 4
+2811	Xuanting Tier 5
+2812	Xuanting Lv.6
+2813	Xuanting Lv.7
+2814	Xuanting Lv.8
+2815	Xuanting Lv. 9
+2816	Xuanting Level 10
+2817	Cuiwei Level 1
+2818	Emerald Peak Lv.2
+2819	Cuiwei Tier 3
+2820	Cuiwei Level 4
+2821	Emerald Level 5
+2822	Emerald Level 6
+2823	Emerald Level 7
+2824	Emerald Level 8
+2825	Cuiwei Tier 9
+2826	Cuiwei Lv.10
+2827	Dominion Level 1
+2828	Omnipresent Level 2
+2829	Dominion Lv.3
+2830	Dominion Level 4
+2831	Dominion Lv.5
+2832	Majestic Lv.6
+2833	Dominion Lv.7
+2834	Dominion Level 8
+2835	Omni Level 9
+2836	Omni Level 10
+2837	Divine Awl Lv.1
+2838	Divine Awl Level 2
+2839	Divine Awl Lv.3
+2840	Divine Spire Level 4
+2841	Divine Awl Level 5
+2842	Divine Awl Tier 6
+2843	Divine Awl Lv.7
+2844	Divine Awl Tier 8
+2845	Divine Awl Lv.9
+2846	Divine Awl Level 10
+2847	Crepe Myrtle Lv.1
+2848	Crape Myrtle Lv.2
+2849	Crape Myrtle Lv.3
+2850	Ziwei Level 4
+2851	Crape Myrtle Level 5
+2852	Crape Myrtle Level 6
+2853	Crape Myrtle Lv.7
+2854	Ziwei Level 8
+2855	Crape Myrtle Level 9
+2856	Crape Myrtle Lv.10
+2857	Army Breaker Level 1
+2858	Army Breaker Level 2
+2859	Army Breaker Lv.3
+2860	Army Breaker Lv.4
+2861	Army Breaker Lv.5
+2862	Pojun Level 6
+2863	Army Breaker Level 7
+2864	Army Breaker Level 8
+2865	Army Breaker Lv.9
+2866	Pojun Lv. 10
+2867	Seven Killings Level 1
+2868	Qisha Level 2
+2869	Seven Kills Tier 3
+2870	Seven Killings Level 4
+2871	Qisha Level 5
+2872	Seven Kills Level 6
+2873	Seven Kills Lv.7
+2874	Seven Killings Level 8
+2875	Qisha Level 9
+2876	Qisha Lv. 10
+2877	Rampant Lv. 1
+2878	Rampant Level 2
+2879	Rampant Lv.3
+2880	Rampant Lv. 4
+2881	Rampant Level 5
+2882	Rampant Level 6
+2883	Rampant Level 7
+2884	Rampant Level 8
+2885	Rampant Lv. 9
+2886	Rampant Lv.10
+2887	Dominant Level 1
+2888	Tyranny Level 2
+2889	Tyranny Lv.3
+2890	Overlord Lv.4
+2891	Dominator Lv.5
+2892	Overlord Lv.6
+2893	Tyranny Level 7
+2894	Overlord Tier 8
+2895	Tyrannical Level 9
+2896	Dominant Lv. 10
+2897	Reach-Heaven Lv.1
+2898	Tongtian Level 2
+2899	Reach Heaven Level 3
+2900	Sketotalling Level 4
+2901	Reach-Heaven Level 5
+2902	Tongtian Level 6
+2903	Reach Heaven Lv.7
+2904	Towering Sky Level 8
+2905	Tuantian Lv.9
+2906	Reach Heaven Lv.10
+1205	Basic
+1206	Pine Lv.1
+1207	Pine Lv. 2
+1208	Pine Tier 3
+1209	Pine Level 4
+1210	Pine Lv.5
+1211	Pine Lv.6
+1212	Pine Level 7
+1213	Pine Tier 8
+1214	Pine Level 9
+1215	Pine Level 10
+1216	Birch Lv.1
+1217	Birch Lv.2
+1218	Birch Level 3
+1219	Birch Lv.4
+1220	Birch Lv.5
+1221	Birch Lv.6
+1222	Birch Level 7
+1223	Birch Level 8
+1224	Birch Lv.9
+1225	Birch Level 10
+1226	Ironwood Level 1
+1227	Ironwood Tier 2
+1228	Ironwood Lv.3
+1229	Ironwood Level 4
+1230	Ironwood Level 5
+1231	Ironwood Level 6
+1232	Ironwood Level 7
+1233	Ironwood Level 8
+1234	Ironwood Level 9
+1235	Ironwood Tier 10
+1236	Black Iron Tier 1
+1237	Black Iron Level 2
+1238	Black Iron Level 3
+1239	Black Iron Level 4
+1240	Black Iron Level 5
+1241	Black Iron Lv.6
+1242	Black Iron Lv.7
+1243	Black Iron Lv.8
+1244	Black Iron Level 9
+1245	Black Iron Lv. 10
+1246	Dark Iron Level 1
+1247	Dark Iron Level 2
+1248	Dark Iron Level 3
+1249	Dark Iron Lv.4
+1250	Dark Iron Level 5
+1251	Dark Iron Lv.6
+1252	Dark Iron Lv.7
+1253	Dark Iron Level 8
+1254	Dark Iron Level 9
+1255	Dark Iron Level 10
+1256	Bronze Lv.1
+1257	Bronze Level 2
+1258	Bronze Level 3
+1259	Bronze Level 4
+1260	Bronze Lv.5
+1261	Bronze Level 6
+1262	Bronze Lv.7
+1263	Bronze Level 8
+1264	Bronze Level 9
+1265	Bronze Level 10
+1266	Red Copper Level 1
+1267	Bronze Level 2
+1268	Red Copper Lv.3
+1269	Red Copper Lv.4
+1270	Red Copper Level 5
+1271	Red Brass Lv.6
+1272	Bronze Level 7
+1273	Red Copper Lv.8
+1274	Copper Level 9
+1275	Copper Level 10
+1276	Silver Level 1
+1277	Silver Tier 2
+1278	Silver Lv.3
+1279	Silver Level 4
+1280	Silver Level 5
+1281	Silver Level 6
+1282	Silver Level 7
+1283	Silver Lv.8
+1284	Silver Level 9
+1285	Silver Tier 10
+1286	Mithril Level 1
+1287	Mithril Lv.2
+1288	Mithril Lv.3
+1289	Mithril Lv.4
+1290	Mithril Level 5
+1291	Mithril Lv.6
+1292	Mithril Level 7
+1293	Mithril Lv.8
+1294	Mithril Lv.9
+1295	Mithril Level 10
+1296	Gold Level 1
+1297	Gold Level 2
+1298	Gold Lv.3
+1299	Gold Lv.4
+1300	Gold Level 5
+1301	Gold Level 6
+1302	Gold Lv.7
+1303	Gold Level 8
+1304	Gold Tier 9
+1305	Gold Lv.10
+1306	Platinum Lv.1
+1307	Platinum Level 2
+1308	Platinum Lv.3
+1309	Platinum Lv.4
+1310	Platinum Level 5
+1311	Platinum Lv.6
+1312	Platinum Level 7
+1313	Platinum Lv.8
+1314	Platinum Lv. 9
+1315	Platinum Lv. 10
+1316	Adamantine Level 1
+1317	Adamantine Lv. 2
+1318	Adamantine Lv. 3
+1319	Adamantite Level 4
+1320	Adamantine Level 5
+1321	Adamantine Lv.6
+1322	Adamantine Level 7
+1323	Adamantine Tier 8
+1324	Adamantine Level 9
+1325	Adamantine Lv.10
+1326	Icejade Level 1
+1327	Icy Jade Lv.2
+1328	Ice Jade Lv.3
+1329	Ice Jade Lv.4
+1330	Ice Jade Lv.5
+1331	Ice Jade Tier 6
+1332	Ice Jade Tier 7
+1333	Ice Jade Level 8
+1334	Ice Jade Level 9
+1335	Ice Jade Lv.10
+1336	Jade Lv.1
+1337	Jasper Level 2
+1338	Jasper Level 3
+1339	Jasper Lv.4
+1340	Jasper Lv. 5
+1341	Jasper Lv. 6
+1342	Jasper Lv.7
+1343	Jasper Level 8
+1344	Jasper Level 9
+1345	Jasper Level 10
+1346	Jade Level 1
+1347	Jade Level 2
+1348	Emerald Level 3
+1349	Jade Level 4
+1350	Emerald Level 5
+1351	Jade Level 6
+1352	Emerald Lv. 7
+1353	Emerald Lv.8
+1354	Emerald Lv.9
+1355	Emerald Lv.10
+1356	Agate Lv.1
+1357	Agate Level 2
+1358	Agate Level 3
+1359	Agate Lv.4
+1360	Agate Lv.5
+1361	Onyx Level 6
+1362	Agate Level 7
+1363	Agate Lv.8
+1364	Agate Level 9
+1365	Onyx Level 10
+1366	Cat's Eye Lv.1
+1367	Cat's Eye Lv.2
+1368	Cat's Eye Tier 3
+1369	Cat's Eye Level 4
+1370	Cat Eye Level 5
+1371	Cat's Eye Lv.6
+1372	Cat's Eye Level 7
+1373	Cat's Eye Lv.8
+1374	Cat's Eye Lv.9
+1375	Cat's Eye Level 10
+1376	Diamond Lv.1
+1377	Diamond Level 2
+1378	Diamond Lv. 3
+1379	Diamond Level 4
+1380	Diamond Lv.5
+1381	Diamond Tier 6
+1382	Diamond Lv.7
+1383	Diamond Tier 8
+1384	Diamond Lv.9
+1385	Diamond Level 10
+1386	Luminescent Level 1
+1387	Luminescent Level 2
+1388	Luminescence Lv.3
+1389	Noctilucent Level 4
+1390	Noctilucent Lv.5
+1391	Noctilucent Lv. 6
+1392	Noctilucent Level 7
+1393	Noctilucent Level 8
+1394	Luminescence Lv.9
+1395	Noctilucent Level 10
+1396	Prismatic Level 1
+1397	Prismatic Level 2
+1398	Multicolored Level 3
+1399	Multicolored Level 4
+1400	Multicolor Tier 5
+1401	Multicolored Lv.6
+1402	Multicolored Lv.7
+1403	Multicolored Lv.8
+1404	Prismatic Lv.9
+1405	Multicolor Lv.10
+1406	Gale Level 1
+1407	Gale Level 2
+1408	Gale Level 3
+1409	Gale Lv. 4
+1410	Gale Lv.5
+1411	Gale Lv.6
+1412	Gale Level 7
+1413	Gale Level 8
+1414	Gale Lv.9
+1415	Gale Level 10
+1416	Blaze Level 1
+1417	Blazing Fire Level 2
+1418	Blaze Level 3
+1419	Blaze Level 4
+1420	Blazing Fire Level 5
+1421	Blazing Fire Level 6
+1422	Blazing Fire Level 7
+1423	Blazing Fire Lv. 8
+1424	Blaze Lv.9
+1425	Blaze Lv.10
+1426	Rainstorm Level 1
+1427	Rainstorm Level 2
+1428	Rainstorm Tier 3
+1429	Rainstorm Level 4
+1430	Rainstorm Lv. 5
+1431	Rainstorm Lv.6
+1432	Rainstorm Lv.7
+1433	Rainstorm Lv.8
+1434	Downpour Level 9
+1435	Rainstorm Level 10
+1436	Earth Level 1
+1437	Earth Lv.2
+1438	Earth Level 3
+1439	Earth Lv.4
+1440	Earth Level 5
+1441	Earth Lv.6
+1442	Earth Level 7
+1443	Earth Level 8
+1444	Earth Level 9
+1445	Earth Lv.10
+1446	Darkness Lv.1
+1447	Darkness Tier 2
+1448	Darkness Lv.3
+1449	Darkness Lv. 4
+1450	Darkness Level 5
+1451	Darkness Level 6
+1452	Darkness Lv.7
+1453	Darkness Lv. 8
+1454	Darkness Lv.9
+1455	Dark Level 10
+1456	Light Level 1
+1457	Light Lv.2
+1458	Light Lv.3
+1459	Light Lv.4
+1460	Light Tier 5
+1461	Light Level 6
+1462	Light Tier 7
+1463	Light Level 8
+1464	Radiance Level 9
+1465	Light Lv.10
+1466	Undead Level 1
+1467	Undead Tier 2
+1468	Undead Level 3
+1469	Undead Level 4
+1470	Undead Level 5
+1471	Undead Level 6
+1472	Undead Level 7
+1473	Undead Level 8
+1474	Undead Level 9
+1475	Undead Level 10
+1476	Divine Tier 1
+1477	Divine Level 2
+1478	Divine Level 3
+1479	Divine Tier 4
+1480	Divine Lv.5
+1481	Divine Lv.6
+1482	Holy Level 7
+1483	Divine Level 8
+1484	Divine Lv. 9
+1485	Divine Level 10
+1486	Legendary Lv.1
+1487	Legendary Lv.2
+1488	Legendary Level 3
+1489	Legendary Lv.4
+1490	Legendary Lv. 5
+1491	Legendary Lv.6
+1492	Legendary Level 7
+1493	Legendary Level 8
+1494	Legendary Level 9
+1495	Legendary Lv.10
+1496	Epic Level 1
+1497	Epic Level 2
+1498	Epic Lv.3
+1499	Epic Level 4
+1500	Epic Level 5
+1501	Epic Level 6
+1502	Epic Level 7
+1503	Epic Lv.8
+1504	Epic Level 9
+1505	Epic Level 10
+3007	Chuyun Lv.1
+3008	Chuyun Lv.2
+3009	Firstcloud Level 3
+3010	Chuyun Level 4
+3011	Chuyun Lv.5
+3012	First Cloud Lv. 6
+3013	Chuyun Lv.7
+3014	Early Cloud Lv.8
+3015	Chuyun Level 9
+3016	First Cloud Lv. 10
+3017	Grandeur Lv.1
+3018	Majestic Wind Level 2
+3019	Majestic Level 3
+3020	Majesty Level 4
+3021	Majesty Lv.5
+3022	Majestic Wind Level 6
+3023	Majestic Level 7
+3024	Majestic Wind Lv.8
+3025	Majesty Level 9
+3026	Majesty Lv.10
+3027	Divine Overlord Lv.1
+3028	Divine Overlord Lv.2
+3029	Divine Overlord Lv.3
+3030	Divine Overlord Level 4
+3031	Divine Overlord Level 5
+3032	Divine Overlord Level 6
+3033	Divine Tyranny Lv.7
+3034	Divine Overlord Level 8
+3035	Divine Overlord Level 9
+3036	Divine Overlord Level 10
+3037	Rosy Clouds Level 1
+3038	Rosy Clouds Level 2
+3039	Rosy Clouds Level 3
+3040	Rosy Clouds Lv.4
+3041	Rosy Clouds Level 5
+3042	Rosy Cloud Tier 6
+3043	Rosy Clouds Lv.7
+3044	Rosy Clouds Lv. 8
+3045	Rosy Cloud Level 9
+3046	Rosy Clouds Lv.10
+3047	Wutong Lv.1
+3048	Wutong Lv.2
+3049	Wutong Lv.3
+3050	Wutong Level 4
+3051	Wutong Perch Lv.5
+3052	Wutong Lv.6
+3053	Wutong Level 7
+3054	Qiwu Tier 8
+3055	Qiwu Level 9
+3056	Wutong Lv.10
+3057	Soaring Vastness Level 1
+3058	Soaring Level 2
+3059	Feihan Tier 3
+3060	Feihan Level 4
+3061	Soaring Vastness Lv.5
+3062	Feihan Lv.6
+3063	Soaring Level 7
+3064	Soaring Vastness Lv.8
+3065	Feihan Level 9
+3066	Feihan Lv.10
+3067	Raging Waves Tier 1
+3068	Surging Waves Lv. 2
+3069	Surging Waves Lv.3
+3070	Surging Waves Lv. 4
+3071	Raging Waves Lv.5
+3072	Raging Waves Level 6
+3073	Surging Wave Level 7
+3074	Raging Waves Lv.8
+3075	Raging Waves Tier 9
+3076	Surging Waves Level 10
+3077	Styx Lv.1
+3078	Styx Level 2
+3079	Styx Level 3
+3080	Styx Lv.4
+3081	Styx Level 5
+3082	Styx Lv. 6
+3083	Styx Level 7
+3084	Styx Level 8
+3085	Styx Level 9
+3086	Styx Lv.10
+3087	Yaoguang Level 1
+3088	Yaoguang Level 2
+3089	Yaoguang Lv.3
+3090	Yaoguang Lv.4
+3091	Yaoguang Level 5
+3092	Alkaid Lv. 6
+3093	Alkaid Lv. 7
+3094	Alkaid Lv. 8
+3095	Yaoguang Level 9
+3096	Yaoguang Level 10
+3097	Moon Chaser Lv.1
+3098	Moonchaser Level 2
+3099	Moon Chaser Lv.3
+3100	Moonchaser Level 4
+3101	Moon Chaser Lv.5
+3102	Moonchaser Level 6
+3103	Moonchaser Tier 7
+3104	Moonchaser Lv.8
+3105	Moonchaser Level 9
+3106	Moonchaser Level 10
+3107	Xuanting Level 1
+3108	Dark Thunder Level 2
+3109	Xuanting Lv.3
+3110	Mystic Thunder Level 4
+3111	Xuanting Tier 5
+3112	Xuanting Lv.6
+3113	Xuanting Lv.7
+3114	Xuanting Lv.8
+3115	Xuanting Lv. 9
+3116	Xuanting Level 10
+3117	Cuiwei Level 1
+3118	Emerald Peak Lv.2
+3119	Cuiwei Tier 3
+3120	Cuiwei Level 4
+3121	Emerald Level 5
+3122	Emerald Level 6
+3123	Emerald Level 7
+3124	Emerald Level 8
+3125	Cuiwei Tier 9
+3126	Cuiwei Lv.10
+3127	Dominion Level 1
+3128	Omnipresent Level 2
+3129	Dominion Lv.3
+3130	Dominion Level 4
+3131	Dominion Lv.5
+3132	Majestic Lv.6
+3133	Dominion Lv.7
+3134	Dominion Level 8
+3135	Omni Level 9
+3136	Omni Level 10
+3137	Divine Awl Lv.1
+3138	Divine Awl Level 2
+3139	Divine Awl Lv.3
+3140	Divine Spire Level 4
+3141	Divine Awl Level 5
+3142	Divine Awl Tier 6
+3143	Divine Awl Lv.7
+3144	Divine Awl Tier 8
+3145	Divine Awl Lv.9
+3146	Divine Awl Level 10
+3147	Crepe Myrtle Lv.1
+3148	Crape Myrtle Lv.2
+3149	Crape Myrtle Lv.3
+3150	Ziwei Level 4
+3151	Crape Myrtle Level 5
+3152	Crape Myrtle Level 6
+3153	Crape Myrtle Lv.7
+3154	Ziwei Level 8
+3155	Crape Myrtle Level 9
+3156	Crape Myrtle Lv.10
+3157	Army Breaker Level 1
+3158	Army Breaker Level 2
+3159	Army Breaker Lv.3
+3160	Army Breaker Lv.4
+3161	Army Breaker Lv.5
+3162	Pojun Level 6
+3163	Army Breaker Level 7
+3164	Army Breaker Level 8
+3165	Army Breaker Lv.9
+3166	Pojun Lv. 10
+3167	Seven Killings Level 1
+3168	Qisha Level 2
+3169	Seven Kills Tier 3
+3170	Seven Killings Level 4
+3171	Qisha Level 5
+3172	Seven Kills Level 6
+3173	Seven Kills Lv.7
+3174	Seven Killings Level 8
+3175	Qisha Level 9
+3176	Qisha Lv. 10
+3177	Rampant Lv. 1
+3178	Rampant Level 2
+3179	Rampant Lv.3
+3180	Rampant Lv. 4
+3181	Rampant Level 5
+3182	Rampant Level 6
+3183	Rampant Level 7
+3184	Rampant Level 8
+3185	Rampant Lv. 9
+3186	Rampant Lv.10
+3187	Dominant Level 1
+3188	Tyranny Level 2
+3189	Tyranny Lv.3
+3190	Overlord Lv.4
+3191	Dominator Lv.5
+3192	Overlord Lv.6
+3193	Tyranny Level 7
+3194	Overlord Tier 8
+3195	Tyrannical Level 9
+3196	Dominant Lv. 10
+3197	Reach-Heaven Lv.1
+3198	Tongtian Level 2
+3199	Reach Heaven Level 3
+3200	Sketotalling Level 4
+3201	Reach-Heaven Level 5
+3202	Tongtian Level 6
+3203	Reach Heaven Lv.7
+3204	Towering Sky Level 8
+3205	Tuantian Lv.9
+3206	Reach Heaven Lv.10
+1506	Basic
+1507	Pine Lv.1
+1508	Pine Lv. 2
+1509	Pine Tier 3
+1510	Pine Level 4
+1511	Pine Lv.5
+1512	Pine Lv.6
+1513	Pine Level 7
+1514	Pine Tier 8
+1515	Pine Level 9
+1516	Pine Level 10
+1517	Birch Lv.1
+1518	Birch Lv.2
+1519	Birch Level 3
+1520	Birch Lv.4
+1521	Birch Lv.5
+1522	Birch Lv.6
+1523	Birch Level 7
+1524	Birch Level 8
+1525	Birch Lv.9
+1526	Birch Level 10
+1527	Ironwood Level 1
+1528	Ironwood Tier 2
+1529	Ironwood Lv.3
+1530	Ironwood Level 4
+1531	Ironwood Level 5
+1532	Ironwood Level 6
+1533	Ironwood Level 7
+1534	Ironwood Level 8
+1535	Ironwood Level 9
+1536	Ironwood Tier 10
+1537	Black Iron Tier 1
+1538	Black Iron Level 2
+1539	Black Iron Level 3
+1540	Black Iron Level 4
+1541	Black Iron Level 5
+1542	Black Iron Lv.6
+1543	Black Iron Lv.7
+1544	Black Iron Lv.8
+1545	Black Iron Level 9
+1546	Black Iron Lv. 10
+1547	Dark Iron Level 1
+1548	Dark Iron Level 2
+1549	Dark Iron Level 3
+1550	Dark Iron Lv.4
+1551	Dark Iron Level 5
+1552	Dark Iron Lv.6
+1553	Dark Iron Lv.7
+1554	Dark Iron Level 8
+1555	Dark Iron Level 9
+1556	Dark Iron Level 10
+1557	Bronze Lv.1
+1558	Bronze Level 2
+1559	Bronze Level 3
+1560	Bronze Level 4
+1561	Bronze Lv.5
+1562	Bronze Level 6
+1563	Bronze Lv.7
+1564	Bronze Level 8
+1565	Bronze Level 9
+1566	Bronze Level 10
+1567	Red Copper Level 1
+1568	Bronze Level 2
+1569	Red Copper Lv.3
+1570	Red Copper Lv.4
+1571	Red Copper Level 5
+1572	Red Brass Lv.6
+1573	Bronze Level 7
+1574	Red Copper Lv.8
+1575	Copper Level 9
+1576	Copper Level 10
+1577	Silver Level 1
+1578	Silver Tier 2
+1579	Silver Lv.3
+1580	Silver Level 4
+1581	Silver Level 5
+1582	Silver Level 6
+1583	Silver Level 7
+1584	Silver Lv.8
+1585	Silver Level 9
+1586	Silver Tier 10
+1587	Mithril Level 1
+1588	Mithril Lv.2
+1589	Mithril Lv.3
+1590	Mithril Lv.4
+1591	Mithril Level 5
+1592	Mithril Lv.6
+1593	Mithril Level 7
+1594	Mithril Lv.8
+1595	Mithril Lv.9
+1596	Mithril Level 10
+1597	Gold Level 1
+1598	Gold Level 2
+1599	Gold Lv.3
+1600	Gold Lv.4
+1601	Gold Level 5
+1602	Gold Level 6
+1603	Gold Lv.7
+1604	Gold Level 8
+1605	Gold Tier 9
+1606	Gold Lv.10
+1607	Platinum Lv.1
+1608	Platinum Level 2
+1609	Platinum Lv.3
+1610	Platinum Lv.4
+1611	Platinum Level 5
+1612	Platinum Lv.6
+1613	Platinum Level 7
+1614	Platinum Lv.8
+1615	Platinum Lv. 9
+1616	Platinum Lv. 10
+1617	Adamantine Level 1
+1618	Adamantine Lv. 2
+1619	Adamantine Lv. 3
+1620	Adamantite Level 4
+1621	Adamantine Level 5
+1622	Adamantine Lv.6
+1623	Adamantine Level 7
+1624	Adamantine Tier 8
+1625	Adamantine Level 9
+1626	Adamantine Lv.10
+1627	Icejade Level 1
+1628	Icy Jade Lv.2
+1629	Ice Jade Lv.3
+1630	Ice Jade Lv.4
+1631	Ice Jade Lv.5
+1632	Ice Jade Tier 6
+1633	Ice Jade Tier 7
+1634	Ice Jade Level 8
+1635	Ice Jade Level 9
+1636	Ice Jade Lv.10
+1637	Jade Lv.1
+1638	Jasper Level 2
+1639	Jasper Level 3
+1640	Jasper Lv.4
+1641	Jasper Lv. 5
+1642	Jasper Lv. 6
+1643	Jasper Lv.7
+1644	Jasper Level 8
+1645	Jasper Level 9
+1646	Jasper Level 10
+1647	Jade Level 1
+1648	Jade Level 2
+1649	Emerald Level 3
+1650	Jade Level 4
+1651	Emerald Level 5
+1652	Jade Level 6
+1653	Emerald Lv. 7
+1654	Emerald Lv.8
+1655	Emerald Lv.9
+1656	Emerald Lv.10
+1657	Agate Lv.1
+1658	Agate Level 2
+1659	Agate Level 3
+1660	Agate Lv.4
+1661	Agate Lv.5
+1662	Onyx Level 6
+1663	Agate Level 7
+1664	Agate Lv.8
+1665	Agate Level 9
+1666	Onyx Level 10
+1667	Cat's Eye Lv.1
+1668	Cat's Eye Lv.2
+1669	Cat's Eye Tier 3
+1670	Cat's Eye Level 4
+1671	Cat Eye Level 5
+1672	Cat's Eye Lv.6
+1673	Cat's Eye Level 7
+1674	Cat's Eye Lv.8
+1675	Cat's Eye Lv.9
+1676	Cat's Eye Level 10
+1677	Diamond Lv.1
+1678	Diamond Level 2
+1679	Diamond Lv. 3
+1680	Diamond Level 4
+1681	Diamond Lv.5
+1682	Diamond Tier 6
+1683	Diamond Lv.7
+1684	Diamond Tier 8
+1685	Diamond Lv.9
+1686	Diamond Level 10
+1687	Luminescent Level 1
+1688	Luminescent Level 2
+1689	Luminescence Lv.3
+1690	Noctilucent Level 4
+1691	Noctilucent Lv.5
+1692	Noctilucent Lv. 6
+1693	Noctilucent Level 7
+1694	Noctilucent Level 8
+1695	Luminescence Lv.9
+1696	Noctilucent Level 10
+1697	Prismatic Level 1
+1698	Prismatic Level 2
+1699	Multicolored Level 3
+1700	Multicolored Level 4
+1701	Multicolor Tier 5
+1702	Multicolored Lv.6
+1703	Multicolored Lv.7
+1704	Multicolored Lv.8
+1705	Prismatic Lv.9
+1706	Multicolor Lv.10
+1707	Gale Level 1
+1708	Gale Level 2
+1709	Gale Level 3
+1710	Gale Lv. 4
+1711	Gale Lv.5
+1712	Gale Lv.6
+1713	Gale Level 7
+1714	Gale Level 8
+1715	Gale Lv.9
+1716	Gale Level 10
+1717	Blaze Level 1
+1718	Blazing Fire Level 2
+1719	Blaze Level 3
+1720	Blaze Level 4
+1721	Blazing Fire Level 5
+1722	Blazing Fire Level 6
+1723	Blazing Fire Level 7
+1724	Blazing Fire Lv. 8
+1725	Blaze Lv.9
+1726	Blaze Lv.10
+1727	Rainstorm Level 1
+1728	Rainstorm Level 2
+1729	Rainstorm Tier 3
+1730	Rainstorm Level 4
+1731	Rainstorm Lv. 5
+1732	Rainstorm Lv.6
+1733	Rainstorm Lv.7
+1734	Rainstorm Lv.8
+1735	Downpour Level 9
+1736	Rainstorm Level 10
+1737	Earth Level 1
+1738	Earth Lv.2
+1739	Earth Level 3
+1740	Earth Lv.4
+1741	Earth Level 5
+1742	Earth Lv.6
+1743	Earth Level 7
+1744	Earth Level 8
+1745	Earth Level 9
+1746	Earth Lv.10
+1747	Darkness Lv.1
+1748	Darkness Tier 2
+1749	Darkness Lv.3
+1750	Darkness Lv. 4
+1751	Darkness Level 5
+1752	Darkness Level 6
+1753	Darkness Lv.7
+1754	Darkness Lv. 8
+1755	Darkness Lv.9
+1756	Dark Level 10
+1757	Light Level 1
+1758	Light Lv.2
+1759	Light Lv.3
+1760	Light Lv.4
+1761	Light Tier 5
+1762	Light Level 6
+1763	Light Tier 7
+1764	Light Level 8
+1765	Radiance Level 9
+1766	Light Lv.10
+1767	Undead Level 1
+1768	Undead Tier 2
+1769	Undead Level 3
+1770	Undead Level 4
+1771	Undead Level 5
+1772	Undead Level 6
+1773	Undead Level 7
+1774	Undead Level 8
+1775	Undead Level 9
+1776	Undead Level 10
+1777	Divine Tier 1
+1778	Divine Level 2
+1779	Divine Level 3
+1780	Divine Tier 4
+1781	Divine Lv.5
+1782	Divine Lv.6
+1783	Holy Level 7
+1784	Divine Level 8
+1785	Divine Lv. 9
+1786	Divine Level 10
+1787	Legendary Lv.1
+1788	Legendary Lv.2
+1789	Legendary Level 3
+1790	Legendary Lv.4
+1791	Legendary Lv. 5
+1792	Legendary Lv.6
+1793	Legendary Level 7
+1794	Legendary Level 8
+1795	Legendary Level 9
+1796	Legendary Lv.10
+1797	Epic Level 1
+1798	Epic Level 2
+1799	Epic Lv.3
+1800	Epic Level 4
+1801	Epic Level 5
+1802	Epic Level 6
+1803	Epic Level 7
+1804	Epic Lv.8
+1805	Epic Level 9
+1806	Epic Level 10
+3307	Chuyun Lv.1
+3308	Chuyun Lv.2
+3309	Firstcloud Level 3
+3310	Chuyun Level 4
+3311	Chuyun Lv.5
+3312	First Cloud Lv. 6
+3313	Chuyun Lv.7
+3314	Early Cloud Lv.8
+3315	Chuyun Level 9
+3316	First Cloud Lv. 10
+3317	Grandeur Lv.1
+3318	Majestic Wind Level 2
+3319	Majestic Level 3
+3320	Majesty Level 4
+3321	Majesty Lv.5
+3322	Majestic Wind Level 6
+3323	Majestic Level 7
+3324	Majestic Wind Lv.8
+3325	Majesty Level 9
+3326	Majesty Lv.10
+3327	Divine Overlord Lv.1
+3328	Divine Overlord Lv.2
+3329	Divine Overlord Lv.3
+3330	Divine Overlord Level 4
+3331	Divine Overlord Level 5
+3332	Divine Overlord Level 6
+3333	Divine Tyranny Lv.7
+3334	Divine Overlord Level 8
+3335	Divine Overlord Level 9
+3336	Divine Overlord Level 10
+3337	Rosy Clouds Level 1
+3338	Rosy Clouds Level 2
+3339	Rosy Clouds Level 3
+3340	Rosy Clouds Lv.4
+3341	Rosy Clouds Level 5
+3342	Rosy Cloud Tier 6
+3343	Rosy Clouds Lv.7
+3344	Rosy Clouds Lv. 8
+3345	Rosy Cloud Level 9
+3346	Rosy Clouds Lv.10
+3347	Wutong Lv.1
+3348	Wutong Lv.2
+3349	Wutong Lv.3
+3350	Wutong Level 4
+3351	Wutong Perch Lv.5
+3352	Wutong Lv.6
+3353	Wutong Level 7
+3354	Qiwu Tier 8
+3355	Qiwu Level 9
+3356	Wutong Lv.10
+3357	Soaring Vastness Level 1
+3358	Soaring Level 2
+3359	Feihan Tier 3
+3360	Feihan Level 4
+3361	Soaring Vastness Lv.5
+3362	Feihan Lv.6
+3363	Soaring Level 7
+3364	Soaring Vastness Lv.8
+3365	Feihan Level 9
+3366	Feihan Lv.10
+3367	Raging Waves Tier 1
+3368	Surging Waves Lv. 2
+3369	Surging Waves Lv.3
+3370	Surging Waves Lv. 4
+3371	Raging Waves Lv.5
+3372	Raging Waves Level 6
+3373	Surging Wave Level 7
+3374	Raging Waves Lv.8
+3375	Raging Waves Tier 9
+3376	Surging Waves Level 10
+3377	Styx Lv.1
+3378	Styx Level 2
+3379	Styx Level 3
+3380	Styx Lv.4
+3381	Styx Level 5
+3382	Styx Lv. 6
+3383	Styx Level 7
+3384	Styx Level 8
+3385	Styx Level 9
+3386	Styx Lv.10
+3387	Yaoguang Level 1
+3388	Yaoguang Level 2
+3389	Yaoguang Lv.3
+3390	Yaoguang Lv.4
+3391	Yaoguang Level 5
+3392	Alkaid Lv. 6
+3393	Alkaid Lv. 7
+3394	Alkaid Lv. 8
+3395	Yaoguang Level 9
+3396	Yaoguang Level 10
+3397	Moon Chaser Lv.1
+3398	Moonchaser Level 2
+3399	Moon Chaser Lv.3
+3400	Moonchaser Level 4
+3401	Moon Chaser Lv.5
+3402	Moonchaser Level 6
+3403	Moonchaser Tier 7
+3404	Moonchaser Lv.8
+3405	Moonchaser Level 9
+3406	Moonchaser Level 10
+3407	Xuanting Level 1
+3408	Dark Thunder Level 2
+3409	Xuanting Lv.3
+3410	Mystic Thunder Level 4
+3411	Xuanting Tier 5
+3412	Xuanting Lv.6
+3413	Xuanting Lv.7
+3414	Xuanting Lv.8
+3415	Xuanting Lv. 9
+3416	Xuanting Level 10
+3417	Cuiwei Level 1
+3418	Emerald Peak Lv.2
+3419	Cuiwei Tier 3
+3420	Cuiwei Level 4
+3421	Emerald Level 5
+3422	Emerald Level 6
+3423	Emerald Level 7
+3424	Emerald Level 8
+3425	Cuiwei Tier 9
+3426	Cuiwei Lv.10
+3427	Dominion Level 1
+3428	Omnipresent Level 2
+3429	Dominion Lv.3
+3430	Dominion Level 4
+3431	Dominion Lv.5
+3432	Majestic Lv.6
+3433	Dominion Lv.7
+3434	Dominion Level 8
+3435	Omni Level 9
+3436	Omni Level 10
+3437	Divine Awl Lv.1
+3438	Divine Awl Level 2
+3439	Divine Awl Lv.3
+3440	Divine Spire Level 4
+3441	Divine Awl Level 5
+3442	Divine Awl Tier 6
+3443	Divine Awl Lv.7
+3444	Divine Awl Tier 8
+3445	Divine Awl Lv.9
+3446	Divine Awl Level 10
+3447	Crepe Myrtle Lv.1
+3448	Crape Myrtle Lv.2
+3449	Crape Myrtle Lv.3
+3450	Ziwei Level 4
+3451	Crape Myrtle Level 5
+3452	Crape Myrtle Level 6
+3453	Crape Myrtle Lv.7
+3454	Ziwei Level 8
+3455	Crape Myrtle Level 9
+3456	Crape Myrtle Lv.10
+3457	Army Breaker Level 1
+3458	Army Breaker Level 2
+3459	Army Breaker Lv.3
+3460	Army Breaker Lv.4
+3461	Army Breaker Lv.5
+3462	Pojun Level 6
+3463	Army Breaker Level 7
+3464	Army Breaker Level 8
+3465	Army Breaker Lv.9
+3466	Pojun Lv. 10
+3467	Seven Killings Level 1
+3468	Qisha Level 2
+3469	Seven Kills Tier 3
+3470	Seven Killings Level 4
+3471	Qisha Level 5
+3472	Seven Kills Level 6
+3473	Seven Kills Lv.7
+3474	Seven Killings Level 8
+3475	Qisha Level 9
+3476	Qisha Lv. 10
+3477	Rampant Lv. 1
+3478	Rampant Level 2
+3479	Rampant Lv.3
+3480	Rampant Lv. 4
+3481	Rampant Level 5
+3482	Rampant Level 6
+3483	Rampant Level 7
+3484	Rampant Level 8
+3485	Rampant Lv. 9
+3486	Rampant Lv.10
+3487	Dominant Level 1
+3488	Tyranny Level 2
+3489	Tyranny Lv.3
+3490	Overlord Lv.4
+3491	Dominator Lv.5
+3492	Overlord Lv.6
+3493	Tyranny Level 7
+3494	Overlord Tier 8
+3495	Tyrannical Level 9
+3496	Dominant Lv. 10
+3497	Reach-Heaven Lv.1
+3498	Tongtian Level 2
+3499	Reach Heaven Level 3
+3500	Sketotalling Level 4
+3501	Reach-Heaven Level 5
+3502	Tongtian Level 6
+3503	Reach Heaven Lv.7
+3504	Towering Sky Level 8
+3505	Tuantian Lv.9
+3506	Reach Heaven Lv.10

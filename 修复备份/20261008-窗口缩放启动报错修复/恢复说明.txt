@@ -1,0 +1,2 @@
+关闭游戏后，将‘原始可启动版本\webroot’中的Game_p.swf和fileVer.xml复制回游戏webroot，可恢复未启用缩放的可启动版本。
+本备份根目录webroot保存的是上一版报错补丁，用于诊断，请勿恢复它。

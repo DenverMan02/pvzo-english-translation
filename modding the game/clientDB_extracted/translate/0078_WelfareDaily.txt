@@ -1,0 +1,8 @@
+id	name	desc
+2	Daily Coins	Obtain Coin rewards based on Tower Defense progress
+3	Daily Energy (VIP)	VIP 2 Daily 10 points, VIP 3 Daily 50 points
+4	Daily Gems (VIP)	VIP 3 Daily 20 Gems
+5	Level-Up Rewards	Level-Up Rewards
+6	Castle Privileges	Obtain corresponding rewards based on activated castles
+7	VIP Weekly Pack	VIP Weekly Pack
+8	Point Card Pack	Purchase the 300 Gold Diamond Point Card Pack to claim an extra 100 Gems daily, up to 30 times

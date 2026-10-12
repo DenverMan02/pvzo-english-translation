@@ -1,0 +1,121 @@
+{
+  "note": "All 42 newly drawn icons/backgrounds withdrawn at user request. Plant research had already been withdrawn, including its original-star export. Only 9 source-derived assets remain: 8 same-plant base renders and 1 original-currency rescale. No custom-drawn artwork remains in the active repair.",
+  "assets": [
+    {
+      "path": "/swf/icons/card/10060_0.png",
+      "size": [
+        330,
+        240
+      ],
+      "meaning": "植物/傀儡图标 10060 的完整基础模型",
+      "method": "same_plant_base_render",
+      "source": "swf/icons/card/card_icon_10060.swf#sprite53",
+      "dimension_evidence": "同目录现存PNG均330x240；完整模型裁边留2px透明，基础外观不冒充原服饰图",
+      "sha256": "375263676c73645815955d034845e898a9efd7e4ab9beeead852572d429e44ad",
+      "geometry_note": "Original source pixels fit within 60x60 and centered in the proven 70x63 Flash card viewport."
+    },
+    {
+      "path": "/swf/icons/card/10070_0.png",
+      "size": [
+        330,
+        240
+      ],
+      "meaning": "植物/傀儡图标 10070 的完整基础模型",
+      "method": "same_plant_base_render",
+      "source": "swf/icons/card/card_icon_10070.swf#sprite41",
+      "dimension_evidence": "同目录现存PNG均330x240；完整模型裁边留2px透明，基础外观不冒充原服饰图",
+      "sha256": "1e7710427aa9e22928a454d4a33d048fefd1fd29bcc84f77a2b1be636ad3c1cd",
+      "geometry_note": "Original source pixels fit within 60x60 and centered in the proven 70x63 Flash card viewport."
+    },
+    {
+      "path": "/swf/icons/card/10040_0.png",
+      "size": [
+        330,
+        240
+      ],
+      "meaning": "植物/傀儡图标 10040 的完整基础模型",
+      "method": "same_plant_base_render",
+      "source": "swf/icons/card/card_icon_10040.swf#sprite44",
+      "dimension_evidence": "同目录现存PNG均330x240；完整模型裁边留2px透明，基础外观不冒充原服饰图",
+      "sha256": "51d5e36db61d438bb278b0612b51a148cbddd9de94e6bbb16bad02b813119f84",
+      "geometry_note": "Original source pixels fit within 60x60 and centered in the proven 70x63 Flash card viewport."
+    },
+    {
+      "path": "/swf/icons/card/470_4701.png",
+      "size": [
+        330,
+        240
+      ],
+      "meaning": "植物/傀儡图标 470 的完整基础模型",
+      "method": "same_plant_base_render",
+      "source": "swf/icons/card/card_icon_470.swf#sprite76",
+      "dimension_evidence": "同目录现存PNG均330x240；完整模型裁边留2px透明，基础外观不冒充原服饰图",
+      "sha256": "a7e5d4c3becc03cbc844e061d1e54a9f74760b33dd72942fd74e59ab268190d6",
+      "geometry_note": "Original source pixels fit within 60x60 and centered in the proven 70x63 Flash card viewport."
+    },
+    {
+      "path": "/swf/icons/card/smallIcon/125_1251.png",
+      "size": [
+        330,
+        240
+      ],
+      "meaning": "植物/傀儡图标 125 的完整基础模型",
+      "method": "same_plant_base_render",
+      "source": "swf/icons/card/card_icon_125.swf#sprite79",
+      "dimension_evidence": "同目录现存PNG均330x240；完整模型裁边留2px透明，基础外观不冒充原服饰图",
+      "sha256": "1c1c1a876ea0a5187eaeef2d7d0bb008912c76f79de2f609487286e5f23ea735",
+      "geometry_note": "Original source pixels fit within19x21 and centered in the proven21x23 SimpleCardItem viewport."
+    },
+    {
+      "path": "/swf/icons/card/750_7501.png",
+      "size": [
+        330,
+        240
+      ],
+      "meaning": "植物/傀儡图标 750 的完整基础模型",
+      "method": "same_plant_base_render",
+      "source": "swf/icons/card/card_icon_750.swf#sprite61",
+      "dimension_evidence": "同目录现存PNG均330x240；完整模型裁边留2px透明，基础外观不冒充原服饰图",
+      "sha256": "d07439495fe65e752a368cd27c46a6f117f98c4a5bd8ea2c63f79f030273772a",
+      "geometry_note": "Original source pixels fit within 60x60 and centered in the proven 70x63 Flash card viewport."
+    },
+    {
+      "path": "/swf/icons/card/113_1131.png",
+      "size": [
+        330,
+        240
+      ],
+      "meaning": "植物/傀儡图标 113 的完整基础模型",
+      "method": "same_plant_base_render",
+      "source": "swf/icons/card/card_icon_113.swf#sprite41",
+      "dimension_evidence": "同目录现存PNG均330x240；完整模型裁边留2px透明，基础外观不冒充原服饰图",
+      "sha256": "1d1aa6c1da4019c7d24fc5d81fab24210a3ae0c76cee22af654c2befb9882ae8",
+      "geometry_note": "Original source pixels fit within 60x60 and centered in the proven 70x63 Flash card viewport."
+    },
+    {
+      "path": "/swf/icons/card/920_9201.png",
+      "size": [
+        330,
+        240
+      ],
+      "meaning": "植物/傀儡图标 920 的完整基础模型",
+      "method": "same_plant_base_render",
+      "source": "swf/icons/card/card_icon_920.swf#sprite45",
+      "dimension_evidence": "同目录现存PNG均330x240；完整模型裁边留2px透明，基础外观不冒充原服饰图",
+      "sha256": "f8e9ecac3c9a8240e019180a3bf7b5054d0089e9e5a04dd71497afb65e917b09",
+      "geometry_note": "Original source pixels fit within 60x60 and centered in the proven 70x63 Flash card viewport."
+    },
+    {
+      "path": "/image/puzzle/ICON.png",
+      "size": [
+        24,
+        24
+      ],
+      "meaning": "拼图点（ItemInfo id2020）",
+      "method": "same_currency_rescale",
+      "source": "image/item/2020.png",
+      "dimension_evidence": "CardPuzzleGroupPanel/Icon 明确24x24",
+      "sha256": "ce5c9167bf2c50909dc4bf18e04dcf110e54f666de579333941eb2d27eb42a00"
+    }
+  ]
+}

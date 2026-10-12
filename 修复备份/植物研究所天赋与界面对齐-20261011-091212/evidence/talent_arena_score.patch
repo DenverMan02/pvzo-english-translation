@@ -1,0 +1,227 @@
+--- a/pvz_poc_server.py
++++ b/pvz_poc_server.py
+@@ -12383,8 +12383,8 @@
+ # linear chain (talentIndex 1..5, parentTalentId links them). Studying a talent boosts that
+ # plant in normal-mode TD. The greenhouse requests one STAGE at a time; the plant cards come
+ # from the client's own plantTalentInfo, the SC's talentList just flags each talent
+-# studied/available. We let talents be freely studiable (satisfyPower/satisfyCondition=true)
+-# but the client still enforces the parent-chain order; studied talents persist.
++# studied/available. Ownership, power, prerequisites and parent-chain order are
++# checked before studying; studied talents persist.
+ # CRASH NOTE: PlantTalentModel.setUnlockPlantList does getPlantTalentSetById(talentId).plantId
+ # with no null check -> every talentId we send MUST exist in plantTalentInfo.txt (they do).
+ _PLANT_TALENTS = None
+@@ -12489,7 +12489,11 @@
+             return int(player.get("tr_max") or 0) >= int(value)
+         if ctype == 18:
+             data = _load_json_state(player, "arena_data", {})
+-            return data.get("day") == time.strftime("%Y%m%d") and int(data.get("daily_score") or 0) >= int(value)
++            # ArenaMyInfoView's 今日积分 is Cmd_Arena_GetMyInfo_SC.curScore
++            # (arena_data.score), including the local initial 100 points.
++            # daily_score counts only points earned today, so comparing it here
++            # locked a displayed score of 137 behind the 130-point prerequisite.
++            return data.get("day") == time.strftime("%Y%m%d") and int(data.get("score") or 0) >= int(value)
+         if ctype == 19:
+             rank = next((r["rank"] for r in _rank_arena_board(player) if r["uin"] == uin), 0)
+             return 0 < rank <= int(value)
+@@ -12524,6 +12528,16 @@
+             _eval_talent_condition(player, info.get("cond", "")))
+ 
+ 
++def _talent_current_player(handler):
++    """Read gates and persist Study against one current player snapshot."""
++    @functools.wraps(handler)
++    def current(cmd_data, player):
++        with store.atomic_player(player):
++            return handler(cmd_data, player)
++    return current
++
++
++@_talent_current_player
+ def handle_talent_getlist(cmd_data, player):
+     """Cmd_Talent_GetList_CS{stageId} -> Cmd_Talent_GetList_SC{stageId(1),
+     unlockPlantList(3)=[Dto_PlantInfo], talentList(4)=[Dto_TalentInfo]}. satisfyPower/Condition
+@@ -12575,6 +12589,7 @@
+     return out
+ 
+ 
++@_talent_current_player
+ def handle_talent_study(cmd_data, player):
+     """Cmd_Talent_Study_CS{talentId} -> study it (persist) + Cmd_Talent_Study_SC{talentId}.
+     Enforces ownership, team power, prerequisites and the parent talent on every request."""
+--- a/tests/test_talent_gates.py
++++ b/tests/test_talent_gates.py
+@@ -8,7 +8,7 @@
+  def setUp(self):
+   self.tmp=tempfile.TemporaryDirectory();self.old=s.DB_PATH
+   s.set_db_path(str(Path(self.tmp.name)/'test.db'));s.init_db()
+-  self.p,_=s.get_or_create_player(989444);self.p['level']=10
++  self.p,_=s.get_or_create_player(989444);self.p['level']=10;s.save_player(self.p['uin'],level=10)
+   s.unlock_plant(self.p['uin'],1100)
+  def tearDown(self):s.set_db_path(self.old);self.tmp.cleanup()
+  def test_power_boundary(self):
+@@ -22,7 +22,7 @@
+   with patch.object(g,'plant_card_power',return_value=999999):
+    g.handle_talent_study(g.pb_varint_field(1,1101),self.p)
+    self.assertNotIn(1101,s.get_talents(self.p['uin']))
+-   s.unlock_plant(self.p['uin'],1100);self.p['level']=1
++   s.unlock_plant(self.p['uin'],1100);self.p['level']=1;s.save_player(self.p['uin'],level=1)
+    g.handle_talent_study(g.pb_varint_field(1,1101),self.p)
+    self.assertNotIn(1101,s.get_talents(self.p['uin']))
+  def test_parent_cannot_be_skipped(self):
+--- a/tests/test_display_rules_20261009.py
++++ b/tests/test_display_rules_20261009.py
+@@ -6,7 +6,7 @@
+ from pathlib import Path
+ from unittest.mock import patch
+ 
+-SERVER = Path(r'D:\pvzol本地最新最新ol\pvzol本地\PvZ-Server-PoC')
++SERVER = Path(__file__).resolve().parents[1]
+ sys.path.insert(0, str(SERVER))
+ import pvz_poc_server as g
+ import display_rules_repairs_20261009 as repairs
+@@ -77,7 +77,8 @@
+         for tid in (1101, 1102, 1103, 1104):
+             g.store.study_talent(self.player['uin'], tid)
+         for score, expected in ((30, False), (129, False), (130, True)):
+-            self.player['arena_data'] = json.dumps({'day': time.strftime('%Y%m%d'), 'daily_score': score})
++            self.player['arena_data'] = json.dumps({'day': time.strftime('%Y%m%d'), 'score': score,
++                                                   'daily_score': max(0, score - 100)})
+             g.store.save_player(self.player['uin'], arena_data=self.player['arena_data'])
+             with patch.object(g, 'plant_card_power', return_value=999999), patch.object(g, '_quest_observe_talent_progress', return_value=[]):
+                 g.REQUEST_HANDLERS['PVZ.Cmd.Cmd_Talent_Study_CS'](g.pb_varint_field(1, 1105), self.player)
+--- a/tests/test_talent_arena_score_20261011.py
++++ b/tests/test_talent_arena_score_20261011.py
+@@ -0,0 +1,132 @@
++"""Research compares the ordinary arena score displayed by the real client."""
++import atexit
++import copy
++from datetime import datetime, timedelta
++import json
++import logging
++from pathlib import Path
++import sys
++import tempfile
++import time
++import unittest
++from unittest.mock import patch
++
++SERVER = Path(__file__).resolve().parents[1]
++sys.path.insert(0, str(SERVER))
++import player_store as store
++
++# Keep both import-time initialization and test data away from a live save.
++BOOT = tempfile.TemporaryDirectory(prefix='pvz_talent_boot_')
++store.set_db_path(str(Path(BOOT.name) / 'players.db'))
++store.init_db()
++atexit.register(BOOT.cleanup)
++atexit.register(store.close_thread_db)
++with patch.object(logging, 'FileHandler', return_value=logging.NullHandler()), patch.object(logging, 'basicConfig'):
++    import pvz_poc_server as g
++
++
++class TalentArenaScoreTests(unittest.TestCase):
++    def setUp(self):
++        self.tmp = tempfile.TemporaryDirectory(prefix='pvz_talent_score_')
++        self.addCleanup(self.tmp.cleanup)
++        old = store.DB_PATH
++        self.addCleanup(lambda: store.set_db_path(old))
++        store.set_db_path(str(Path(self.tmp.name) / 'players.db'))
++        store.init_db()
++        self.addCleanup(store.close_thread_db)
++        self.player, _ = store.get_or_create_player(88011370)
++        store.unlock_plant(self.player['uin'], 1100)
++        for tid in (1101, 1102, 1103, 1104):
++            store.study_talent(self.player['uin'], tid)
++        self.info = g.load_plant_talents()['talent'][1105]
++        self.assertEqual(self.info['cond'], '18::130')
++        self.power = patch.object(g, 'plant_card_power', return_value=self.info['power'])
++        self.power.start()
++        self.addCleanup(self.power.stop)
++        self.quest = patch.object(g, '_quest_observe_talent_progress', return_value=[])
++        self.quest.start()
++        self.addCleanup(self.quest.stop)
++
++    def save_score(self, score, gains=None, day=None):
++        state = {'day': day or time.strftime('%Y%m%d'), 'score': score,
++                 'daily_score': max(0, score - 100) if gains is None else gains}
++        self.player['arena_data'] = json.dumps(state)
++        store.save_player(self.player['uin'], arena_data=self.player['arena_data'])
++
++    def get_talent(self, player=None):
++        body = g.REQUEST_HANDLERS['PVZ.Cmd.Cmd_Talent_GetList_CS'](
++            g.pb_varint_field(1, self.info['stage']), player or self.player)
++        talents = [g.parse_varint_fields(dto) for dto in g.parse_repeated_submessages(body, 4)]
++        return next(dto for dto in talents if dto[1] == 1105)
++
++    def study(self, player=None):
++        return g.REQUEST_HANDLERS['PVZ.Cmd.Cmd_Talent_Study_CS'](
++            g.pb_varint_field(1, 1105), player or self.player)
++
++    def test_visible_129_130_and_reported_137_share_getlist_and_study_gates(self):
++        for score, allowed in ((129, False), (130, True), (137, True)):
++            with self.subTest(score=score):
++                with store._db() as con:
++                    con.execute('DELETE FROM talents WHERE uin=? AND talent_id=1105', (self.player['uin'],))
++                self.save_score(score)
++                with patch.object(g, '_bot_roster_with_state', return_value=[]):
++                    messages = g.REQUEST_HANDLERS['PVZ.Cmd.Cmd_Arena_GetMyInfo_CS'](b'', self.player)
++                visible = next(body for name, body in messages if name == 'PVZ.Cmd.Cmd_Arena_GetMyInfo_SC')
++                self.assertEqual(g.parse_varint_fields(visible)[2], score)
++                dto = self.get_talent()
++                self.assertEqual(dto[3], 1)
++                self.assertEqual(dto[4], allowed)
++                messages = self.study()
++                self.assertEqual(store.has_talent(self.player['uin'], 1105), allowed)
++                self.assertEqual(any(name.endswith('Talent_Study_SC') for name, _ in messages), allowed)
++
++    def test_today_gain_counter_does_not_replace_displayed_score(self):
++        self.save_score(129, gains=200)
++        self.assertEqual(self.get_talent()[4], 0)
++        self.study()
++        self.assertFalse(store.has_talent(self.player['uin'], 1105))
++
++    def test_yesterdays_score_does_not_satisfy_today_condition(self):
++        yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y%m%d')
++        self.save_score(999, gains=999, day=yesterday)
++        self.assertEqual(self.get_talent()[4], 0)
++        self.study()
++        self.assertFalse(store.has_talent(self.player['uin'], 1105))
++
++    def test_old_socket_refreshes_committed_score_in_both_routes(self):
++        self.save_score(129)
++        stale = copy.deepcopy(self.player)
++        self.save_score(137)
++        self.assertEqual(self.get_talent(stale)[4], 1)
++        self.assertEqual(json.loads(stale['arena_data'])['score'], 137)
++        stale['arena_data'] = json.dumps({'day': time.strftime('%Y%m%d'), 'score': 129})
++        self.study(stale)
++        self.assertTrue(store.has_talent(self.player['uin'], 1105))
++
++    def test_stale_satisfied_snapshot_cannot_bypass_current_gate(self):
++        self.save_score(137)
++        stale = copy.deepcopy(self.player)
++        self.save_score(129)
++        self.assertEqual(self.get_talent(stale)[4], 0)
++        stale['arena_data'] = json.dumps({'day': time.strftime('%Y%m%d'), 'score': 137})
++        self.study(stale)
++        self.assertFalse(store.has_talent(self.player['uin'], 1105))
++
++    def test_score_does_not_bypass_power_ownership_or_parent(self):
++        self.save_score(137)
++        with patch.object(g, 'plant_card_power', return_value=self.info['power'] - 1):
++            self.assertEqual(self.get_talent()[3], 0)
++            self.study()
++        self.assertFalse(store.has_talent(self.player['uin'], 1105))
++        store.remove_plant(self.player['uin'], 1100)
++        self.study()
++        self.assertFalse(store.has_talent(self.player['uin'], 1105))
++        store.unlock_plant(self.player['uin'], 1100)
++        with store._db() as con:
++            con.execute('DELETE FROM talents WHERE uin=? AND talent_id=1104', (self.player['uin'],))
++        self.study()
++        self.assertFalse(store.has_talent(self.player['uin'], 1105))
++
++
++if __name__ == '__main__':
++    unittest.main()
