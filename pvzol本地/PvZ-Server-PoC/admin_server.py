@@ -67,9 +67,11 @@ class ValidationError(ValueError):
 
 def _client_name_map(table, id_field="id", name_field="name"):
     result = {}
-    for row in gm._clientdb_dicts(table):
+    for row in (gm._clientdb_dicts(table) or []):
+        if not row or not isinstance(row, dict):
+            continue
         try:
-            key = int(row.get(id_field, ""))
+            key = int(row.get(id_field) or 0)
         except (TypeError, ValueError):
             continue
         name = (row.get(name_field) or "").strip()
@@ -78,7 +80,7 @@ def _client_name_map(table, id_field="id", name_field="name"):
     return result
 
 
-ITEM_ROWS = gm._clientdb_dicts("ItemInfo.txt")
+ITEM_ROWS = [r for r in (gm._clientdb_dicts("ItemInfo.txt") or []) if r and isinstance(r, dict)]
 ITEM_NAMES = {}
 for _item_row in ITEM_ROWS:
     try:
@@ -91,16 +93,16 @@ PLANT_NAMES = _client_name_map("tdPlantTypeInfo.txt")
 CARD_NAMES = _client_name_map("battleCard.txt")
 CARD_BASE_NAMES = _client_name_map("battleCard.txt", id_field="tdId")
 LEVEL_ROWS = [
-    row for row in gm._clientdb_dicts("levelselectInfo.txt")
-    if (row.get("challengeLevelId", "0") or "0") in ("0", "")
+    row for row in (gm._clientdb_dicts("levelselectInfo.txt") or [])
+    if row and isinstance(row, dict) and (row.get("challengeLevelId", "0") or "0") in ("0", "")
 ]
 LEVEL_KEYS = {
     (int(row.get("stageId") or 0), int(row.get("levelId") or 0),
      int(row.get("subLevelId") or 0))
     for row in LEVEL_ROWS
-    if (row.get("stageId") or "0").isdigit()
-    and (row.get("levelId") or "0").isdigit()
-    and (row.get("subLevelId") or "0").isdigit()
+    if str(row.get("stageId") or "0").isdigit()
+    and str(row.get("levelId") or "0").isdigit()
+    and str(row.get("subLevelId") or "0").isdigit()
 }
 
 # ItemInfo 混合了真正背包物品、账号货币、卡牌展示物、装备实例、
@@ -138,8 +140,13 @@ ITEM_TYPE_LABELS = {
 
 
 def _row_int(row, key, default=0):
+    if not row or not isinstance(row, dict):
+        return default
     try:
-        return int(row.get(key) or default)
+        val = row.get(key)
+        if val is None or val == "":
+            return default
+        return int(val)
     except (TypeError, ValueError):
         return default
 
@@ -1077,19 +1084,25 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
             reagent_counts[base_id] = reagent_counts.get(base_id, 0) + 1
 
         def owned_count(item):
-            if item["kind"] == "currency":
-                return int(player.get(CURRENCY_GRANTS[item["id"]][0], 0) or 0)
-            if item["kind"] == "equipment":
-                return equipment_counts.get(item["id"], 0)
-            if item["kind"] == "reagent":
-                return reagent_counts.get(item["id"], 0)
-            if item["kind"] == "card":
+            if not item or not isinstance(item, dict):
+                return 0
+            if item.get("kind") == "currency":
+                c_info = CURRENCY_GRANTS.get(item.get("id"))
+                if not c_info:
+                    return 0
+                return int(player.get(c_info[0]) or 0)
+            if item.get("kind") == "equipment":
+                return equipment_counts.get(item.get("id"), 0)
+            if item.get("kind") == "reagent":
+                return reagent_counts.get(item.get("id"), 0)
+            if item.get("kind") == "card":
                 try:
-                    card_id = int(item["card_spec"].split(":", 1)[0])
-                except (TypeError, ValueError):
+                    card_spec = str(item.get("card_spec") or "")
+                    card_id = int(card_spec.split(":", 1)[0])
+                except (TypeError, ValueError, IndexError, AttributeError):
                     return 0
                 return card_counts.get(card_id, 0)
-            return sum(stack_counts.get(iid, 0) for iid in item["ids"])
+            return sum(stack_counts.get(iid, 0) for iid in item.get("ids", ()))
 
         rows = []
         for item in visible:
@@ -1189,12 +1202,12 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
         edit_inputs.append(
             '<div class="field"><label>VIP 等级</label><select name="vip_level">%s</select></div>' %
             "".join('<option value="%s"%s>%s</option>' %
-                    (v, " selected" if int(player.get("vip_level", 0)) == v else "", "关闭" if v == 0 else "VIP%d" % v)
+                    (v, " selected" if int(player.get("vip_level") or 0) == v else "", "关闭" if v == 0 else "VIP%d" % v)
                     for v in range(4)))
         edit_inputs.append(
             '<div class="field"><label>塔防特权</label><select name="td_privilege"><option value="0"%s>关闭</option><option value="1"%s>开启</option></select></div>' %
-            (" selected" if not int(player.get("td_privilege", 0)) else "",
-             " selected" if int(player.get("td_privilege", 0)) else ""))
+            (" selected" if not int(player.get("td_privilege") or 0) else "",
+             " selected" if int(player.get("td_privilege") or 0) else ""))
 
         bag_rows = "".join(
             '<tr><td class="mono">%s</td><td>%s</td><td class="num"><b>%s</b></td></tr>' %
@@ -1269,11 +1282,11 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
 <section class="card span7"><h2>好友与好友卡</h2><form method="post" action="/player/friend">%s<input type="hidden" name="uin" value="%s"><input type="hidden" name="operation" value="add"><div class="row"><div class="field"><label>好友角色 ID</label><input name="friend_role_id" type="number" min="1" required></div><div class="field"><label>好友名称</label><input name="friend_name" maxlength="24" required></div><div class="field"><label>好友卡植物 ID</label><input name="plant_id" type="number" min="1" list="friend-plant-ids" required><datalist id="friend-plant-ids">%s</datalist></div><div class="field small"><label>植物等级</label><input name="plant_level" type="number" min="1" max="999" value="1" required></div></div><div class="row" style="margin-top:8px"><div class="field small"><label>显示钻石卡</label><select name="diamond_flag"><option value="1">开启</option><option value="0">关闭</option></select></div><div class="field small"><label>蓝钻</label><input name="blue" type="number" min="0" max="99" value="0" required></div><div class="field small"><label>黄钻</label><input name="yellow" type="number" min="0" max="99" value="0" required></div><div class="field small"><label>心悦</label><input name="xinyue" type="number" min="0" max="99" value="0" required></div><button type="submit">添加 / 更新</button></div></form>
 <div class="scroll" style="margin-top:14px;max-height:300px"><table><thead><tr><th>角色 ID</th><th>名称</th><th>好友卡</th><th>蓝 / 黄 / 心悦</th><th></th></tr></thead><tbody>%s</tbody></table></div></section></div>""" % (
             _csrf_input() + _snapshot_input(player, ["diamond_flag", "diamond_blue_lvl", "diamond_yellow_lvl", "diamond_xinyue_lvl"]), uin,
-            " selected" if not int(player.get("diamond_flag", 0)) else "",
-            " selected" if int(player.get("diamond_flag", 0)) else "",
-            int(player.get("diamond_blue_lvl", 0) or 0),
-            int(player.get("diamond_yellow_lvl", 0) or 0),
-            int(player.get("diamond_xinyue_lvl", 0) or 0),
+            " selected" if not int(player.get("diamond_flag") or 0) else "",
+            " selected" if int(player.get("diamond_flag") or 0) else "",
+            int(player.get("diamond_blue_lvl") or 0),
+            int(player.get("diamond_yellow_lvl") or 0),
+            int(player.get("diamond_xinyue_lvl") or 0),
             _csrf_input(), uin, plant_options, friend_rows)
         self._send(200, _page("玩家 %s" % uin, content, message, kind))
 
