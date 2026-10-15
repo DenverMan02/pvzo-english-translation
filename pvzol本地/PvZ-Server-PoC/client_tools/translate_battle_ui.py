@@ -1,6 +1,6 @@
 """Translate hardcoded battle-card tooltip labels in the live SWF client.
 
-This intentionally patches the live battle-tooltip and Endless Fuben SWFs, not clientDB files.
+This patches live battle/formation tooltip and HUD modules plus Endless Fuben messages; it does not edit clientDB files.
 Only display-string constants are edited: strings used as ABC namespace or
 multiname identifiers are excluded to avoid renaming ActionScript properties.
 The launcher calls apply_translation() before the web server starts.
