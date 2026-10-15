@@ -30,7 +30,8 @@ TRANSLATION_TERMS = (
     "普通攻击", "营养室", "未领取", "已领取", "稀有度", "世界树",
     "实验室", "普攻", "健康", "生命", "战力", "先攻", "总和",
     "果实", "基因", "装备", "洗炼", "装甲", "装扮", "技能",
-    "部队总先攻", "上阵植物", "返回小镇", "查看星性",
+    "部队总先攻", "上阵植物", "返回小镇", "查看星性", "技力",
+    "攻击力", "防御力", "暴击", "闪避", "命中", "护盾",
 )
 
 
@@ -66,7 +67,11 @@ def scan(path: Path) -> tuple[int, list[tuple[str, int, str]]]:
     blocks = list(_iter_abc_tags(raw))
     matches: list[tuple[str, int, str]] = []
     for block_no, (start, end, _tag_start, _header_len, _tag_len) in enumerate(blocks, 1):
-        info = parse_abc(raw[start:end])
+        try:
+            info = parse_abc(raw[start:end])
+        except Exception as exc:
+            matches.append(("<could not parse ABC block: %s>" % exc, block_no, "UNPARSED"))
+            continue
         protected = _structural_indexes(info)
         for index, value in enumerate(info.strings):
             if not value or not CJK_RE.search(value):
@@ -86,7 +91,7 @@ def main() -> int:
     args = parser.parse_args()
 
     if args.all:
-        paths = sorted(WEBROOT.glob("Module*.swf"))
+        paths = [WEBROOT / "Game_n.swf", WEBROOT / "Game_p.swf"] + sorted(WEBROOT.glob("Module*.swf"))
     else:
         paths = [WEBROOT / name for name in MODULE_NAMES]
     existing = [path for path in paths if path.is_file()]
