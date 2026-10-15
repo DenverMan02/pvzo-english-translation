@@ -338,6 +338,15 @@ class Server(socketserver.ThreadingTCPServer):
 
 
 def main():
+    # Patch player-facing SWF strings before binding the HTTP port. This also
+    # covers users who start serve_client.py directly instead of using run_all.py.
+    try:
+        from client_tools.translate_battle_ui import apply_translation
+        apply_translation()
+    except Exception as exc:
+        # Keep the local game usable even if an asset is incompatible with the patcher.
+        print("[battle-ui-translation] Could not apply patch: %r" % exc)
+
     if not os.path.isdir(CLIENT_DIR):
         print("ERROR: client folder not found at:\n  %s" % CLIENT_DIR)
         sys.exit(1)
