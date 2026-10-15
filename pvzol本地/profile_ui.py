@@ -18,9 +18,9 @@ def profile_text(value, label, minimum, maximum):
     try:
         length = len(value.encode('utf-16-le')) // 2
     except UnicodeError:
-        raise ValueError('%s包含无效字符。' % label) from None
+        raise ValueError('%s contains invalid characters.' % label) from None
     if not minimum <= length <= maximum or any(ord(c) < 32 for c in value):
-        raise ValueError('%s需为 %d—%d 字，且不能包含换行或控制字符。' % (label,minimum,maximum))
+        raise ValueError('%s must be %d–%d characters long and cannot contain line breaks or control characters.' % (label,minimum,maximum))
     return value
 
 def save_profile_draft(run_gm, uin, request, baseline):
@@ -28,13 +28,13 @@ def save_profile_draft(run_gm, uin, request, baseline):
     payload={'fields':{},'expected':{},'profile':request,'profile_expected':dict(baseline)}
     ok,out=run_gm([str(uin),'editor',json.dumps(payload,ensure_ascii=False)])
     if not ok:
-        return False,out.strip() or '保存失败，请稍后重试。'
+        return False,out.strip() or 'Failed to save. Please try again.'
     try:
         result=json.loads(out)
         if not isinstance(result,dict) or any(key not in result for key in PROFILE_KEYS):
             raise ValueError('Missing profile fields')
     except (ValueError,TypeError):
-        return False,'资料保存结果无法确认，请重新打开编辑资料页面核对。'
+        return False,'Could not verify the save result. Reopen the profile editor to check.'
     return True,result
 
 class ProfileEditorPanel(tk.Frame):
@@ -54,10 +54,10 @@ class ProfileEditorPanel(tk.Frame):
         super().__init__(master,bg=theme['PANEL'])
         self.name_var=tk.StringVar(master=self,value=player.get('name') or '')
         self.signature_var=tk.StringVar(master=self,value=player.get('signature') or '')
-        self.avatar_var=tk.StringVar(master=self,value='保持当前头像')
+        self.avatar_var=tk.StringVar(master=self,value='Keep current avatar')
         self.avatar_path=tk.StringVar(master=self,value='')
         from profile_editor import avatar_choices
-        self.choices={'保持当前头像':'keep',**{label:face for face,label in avatar_choices(self.game_root)}}
+        self.choices={'Keep current avatar':'keep',**{label:face for face,label in avatar_choices(self.game_root)}}
         self._build()
         self.bind('<Destroy>',self._on_destroy,add='+')
         self.refresh_avatar()
@@ -73,14 +73,14 @@ class ProfileEditorPanel(tk.Frame):
 
     def _build(self):
         t=self.theme
-        for title,var in (('名称（2—7 字）',self.name_var),('签名（最多 30 字）',self.signature_var)):
+        for title,var in (('Name (2–7 characters)',self.name_var),('Signature (up to 30 characters)',self.signature_var)):
             tk.Label(self,text=title,bg=t['PANEL'],fg=t['MUTED'],font=('Segoe UI',9)).pack(anchor='w',padx=14,pady=(10,3))
             tk.Entry(self,textvariable=var,bg=t['LOGBG'],fg=t['FG'],insertbackground=t['FG'],
                 relief='flat',font=('Segoe UI',11)).pack(fill='x',padx=14,ipady=5)
         avatars=tk.Frame(self,bg=t['PANEL'])
         avatars.pack(fill='x',padx=14,pady=(16,8))
-        self.current_preview=self._preview_box(avatars,'当前头像')
-        self.selected_preview=self._preview_box(avatars,'保存后头像')
+        self.current_preview=self._preview_box(avatars,'Current Avatar')
+        self.selected_preview=self._preview_box(avatars,'Avatar After Saving')
         controls=tk.Frame(self,bg=t['PANEL'])
         controls.pack(fill='x',padx=14,pady=4)
         self.avatar_box=ttk.Combobox(controls,textvariable=self.avatar_var,values=list(self.choices),
@@ -89,17 +89,17 @@ class ProfileEditorPanel(tk.Frame):
         self.avatar_box.bind('<<ComboboxSelected>>',self.refresh_avatar)
         buttons=tk.Frame(controls,bg=t['PANEL'])
         buttons.pack(fill='x')
-        self.choose_button=self._button(buttons,'选择图片并裁切',self.choose_local)
+        self.choose_button=self._button(buttons,'Choose Image and Crop',self.choose_local)
         self.choose_button.pack(side='left',fill='x',expand=True,padx=(0,4))
-        self.crop_button=self._button(buttons,'调整裁切',self.recrop)
+        self.crop_button=self._button(buttons,'Adjust Crop',self.recrop)
         self.crop_button.pack(side='left',fill='x',expand=True,padx=(4,0))
-        self.avatar_note=tk.Label(self,text='PNG / JPG · 最多 5 MiB',bg=t['PANEL'],fg=t['MUTED'],
+        self.avatar_note=tk.Label(self,text='PNG / JPG · 5 MiB maximum',bg=t['PANEL'],fg=t['MUTED'],
             font=('Segoe UI',9),wraplength=440,justify='left')
         self.avatar_note.pack(anchor='w',padx=14,pady=(5,2))
         self.message=tk.Label(self,text='',bg=t['PANEL'],fg=t['MUTED'],font=('Segoe UI',9),
             wraplength=440,justify='left')
         self.message.pack(anchor='w',padx=14,pady=(0,3))
-        self.save_button=self._button(self,'保存个人资料',self.save,True)
+        self.save_button=self._button(self,'Save Profile',self.save,True)
         self.save_button.pack(fill='x',padx=14,pady=(8,14))
 
     def _preview_box(self,parent,title):
@@ -111,7 +111,7 @@ class ProfileEditorPanel(tk.Frame):
             highlightbackground=t['MUTED'])
         border.pack()
         border.pack_propagate(False)
-        label=tk.Label(border,bg=t['LOGBG'],fg=t['MUTED'],text='暂无头像')
+        label=tk.Label(border,bg=t['LOGBG'],fg=t['MUTED'],text='No avatar')
         label.pack(fill='both',expand=True)
         return label
 
@@ -123,8 +123,8 @@ class ProfileEditorPanel(tk.Frame):
                 label.image=photo
                 return
             except (OSError,ValueError,ImportError,RuntimeError,tk.TclError) as exc:
-                self._preview_error='头像预览失败：%s' % exc
-        label.configure(image='',text='暂无头像')
+                self._preview_error='Avatar preview failed: %s' % exc
+        label.configure(image='',text='No avatar')
         label.image=None
 
     def refresh_avatar(self,_event=None):
@@ -143,8 +143,8 @@ class ProfileEditorPanel(tk.Frame):
             selected=resolve_avatar_path({'face_id':mode,'qq_face_url':''},self.game_root)
         self._set_photo(self.selected_preview,selected)
         self.crop_button.configure(state='normal' if mode=='custom' and self._source_path else 'disabled')
-        self.avatar_note.configure(text=('已裁切：%s · 256 × 256' % self._custom_label if mode=='custom'
-            else 'PNG / JPG · 最多 5 MiB · 选择后可拖动、缩放和旋转裁切'))
+        self.avatar_note.configure(text=('Cropped: %s · 256 × 256' % self._custom_label if mode=='custom'
+            else 'PNG / JPG · 5 MiB max · drag, zoom, and rotate to crop after selecting'))
         if self._preview_error:
             self.message.configure(text=self._preview_error,fg=self.theme['STOP'])
 
@@ -164,7 +164,7 @@ class ProfileEditorPanel(tk.Frame):
             with open(path,'rb') as stream:
                 data=stream.read(5*1024*1024+1)
             if not 0 < len(data) <= 5*1024*1024:
-                raise ValueError('请选择不超过 5 MiB 的 PNG 或 JPG 图片。')
+                raise ValueError('Choose a PNG or JPG image no larger than 5 MiB.')
             with tempfile.NamedTemporaryFile(dir=self._temp_folder(),suffix=Path(path).suffix,delete=False) as stream:
                 pending=Path(stream.name)
                 stream.write(data)
@@ -192,15 +192,15 @@ class ProfileEditorPanel(tk.Frame):
         self._source_path=Path(source_path)
         self._custom_label=name
         self.avatar_path.set(str(target))
-        self.choices['自定义图片']='custom'
+        self.choices['Custom Image']='custom'
         self.avatar_box.configure(values=list(self.choices))
-        self.avatar_var.set('自定义图片')
+        self.avatar_var.set('Custom Image')
         if old and old!=self._source_path:
             try:
                 old.unlink(missing_ok=True)
             except OSError:
                 pass
-        self.message.configure(text='裁切已应用到预览，点击保存后生效。',fg=self.theme['MUTED'])
+        self.message.configure(text='Crop applied to preview. Click Save to apply it.',fg=self.theme['MUTED'])
         self.refresh_avatar()
 
     def recrop(self):
@@ -217,8 +217,8 @@ class ProfileEditorPanel(tk.Frame):
         name=self.name_var.get().strip()
         signature=self.signature_var.get()
         if name!=(self.baseline.get('name') or ''):
-            profile_text(name,'名称',2,7)
-        profile_text(signature,'签名',0,30)
+            profile_text(name,'Name',2,7)
+        profile_text(signature,'Signature',0,30)
         request={}
         for key,value in (('name',name),('signature',signature)):
             if not only_changed or value!=(self.baseline.get(key) or ''):
@@ -229,7 +229,7 @@ class ProfileEditorPanel(tk.Frame):
             if mode=='custom':
                 path=self.avatar_path.get()
                 if not path or not Path(path).is_file():
-                    raise ValueError('请先选择图片并完成裁切。')
+                    raise ValueError('Choose and crop an image first.')
                 request['image_path']=path
         return request
 
@@ -242,7 +242,7 @@ class ProfileEditorPanel(tk.Frame):
             self.message.configure(text=str(exc),fg=self.theme['STOP'])
             return False
         if not request:
-            self.message.configure(text='资料没有变更。',fg=self.theme['MUTED'])
+            self.message.configure(text='No profile changes.',fg=self.theme['MUTED'])
             return True
         self.save_button.configure(state='disabled')
         try:
@@ -252,10 +252,10 @@ class ProfileEditorPanel(tk.Frame):
         finally:
             self.save_button.configure(state='normal')
         if not ok:
-            self.message.configure(text='保存失败：%s' % result,fg=self.theme['STOP'])
+            self.message.configure(text='Save failed: %s' % result,fg=self.theme['STOP'])
             return False
         self.reset_from_player(result)
-        self.message.configure(text='个人资料已保存，下次进入游戏时生效。',fg=self.theme['ACCENT'])
+        self.message.configure(text='Profile saved. Changes take effect the next time you launch the game.',fg=self.theme['ACCENT'])
         return True
 
     def reset_from_player(self,player):
@@ -263,11 +263,11 @@ class ProfileEditorPanel(tk.Frame):
         self.baseline.update({key:player.get(key) for key in PROFILE_KEYS})
         self.name_var.set(player.get('name') or '')
         self.signature_var.set(player.get('signature') or '')
-        self.avatar_var.set('保持当前头像')
+        self.avatar_var.set('Keep current avatar')
         self.avatar_path.set('')
         self._source_path=None
         self._custom_label=''
-        self.choices.pop('自定义图片',None)
+        self.choices.pop('Custom Image',None)
         self.avatar_box.configure(values=list(self.choices))
         if self._temporary:
             self._temporary.cleanup()
@@ -284,14 +284,14 @@ class ProfileEditorPanel(tk.Frame):
 def open_profile_window(parent,player,game_root,theme,choose_file,center_window,on_save):
     win=tk.Toplevel(parent)
     win.withdraw()
-    win.title('编辑资料 — 账号 %s' % player['uin'])
+    win.title('Edit Profile — Account %s' % player['uin'])
     win._account_uin=int(player['uin'])
     win.configure(bg=theme['BG'])
     win.transient(parent)
     win.minsize(440,380)
-    tk.Label(win,text='编辑资料',bg=theme['BG'],fg=theme['FG'],font=('Segoe UI',15,'bold')).pack(anchor='w',padx=20,pady=(16,3))
-    tk.Label(win,text='保存名称、签名和头像，下次进入游戏时生效。',bg=theme['BG'],fg=theme['MUTED'],font=('Segoe UI',9)).pack(anchor='w',padx=20,pady=(0,12))
-    tk.Button(win,text='关闭',command=win.destroy,bg=theme['PANEL'],fg=theme['FG'],
+    tk.Label(win,text='Edit Profile',bg=theme['BG'],fg=theme['FG'],font=('Segoe UI',15,'bold')).pack(anchor='w',padx=20,pady=(16,3))
+    tk.Label(win,text='Save your name, signature, and avatar. Changes take effect the next time you launch the game.',bg=theme['BG'],fg=theme['MUTED'],font=('Segoe UI',9)).pack(anchor='w',padx=20,pady=(0,12))
+    tk.Button(win,text='Close',command=win.destroy,bg=theme['PANEL'],fg=theme['FG'],
         activebackground=theme['LOGBG'],relief='flat',cursor='hand2',font=('Segoe UI',9),padx=20,pady=7).pack(side='bottom',anchor='e',padx=20,pady=(0,16))
     viewport=tk.Frame(win,bg=theme['BG'])
     viewport.pack(fill='both',expand=True,padx=8,pady=(0,12))
