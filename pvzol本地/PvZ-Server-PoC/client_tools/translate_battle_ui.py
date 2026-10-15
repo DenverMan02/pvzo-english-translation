@@ -85,7 +85,7 @@ def _translate_display_string(value: str) -> str:
     return value
 
 
-def _patch_abc_strings(abc: bytes) -> tuple[bytes, int, int]:
+def _patch_abc_strings(abc: bytes) -> tuple[bytes, int, int, int]:
     """Patch eligible display strings while preserving the ABC pool structure."""
     info = parse_abc(abc)
     protected = set()
@@ -261,12 +261,6 @@ def apply_translation() -> bool:
         ]
         expected_alias = WEBROOT / (stem + "_" + md5 + ".swf")
         deployed = all(path.read_bytes() == patched for path in [source, *aliases] if path.exists())
-        version_current = version_out == before_version
-        expected_alias_ok = expected_alias.is_file() and expected_alias.read_bytes() == patched
-        if changed_strings == 0 and deployed and version_current and expected_alias_ok:
-            print("[battle-ui-translation] %s is already translated." % module_name)
-            continue
-
         prepared.append({
             "source": source,
             "patched": patched,
