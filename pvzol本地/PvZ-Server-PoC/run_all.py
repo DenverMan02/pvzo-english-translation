@@ -47,6 +47,15 @@ def main():
     print(">>> PvZ PoC launcher: starting web + admin + game servers in ONE window.")
     print(">>> Ctrl+C to stop all services.\n")
 
+    # Translate hardcoded battle-tooltip labels before the HTTP server starts,
+    # so Flash clients receive the updated SWF and its matching fileVer entry.
+    try:
+        from client_tools.translate_battle_ui import apply_translation
+        apply_translation()
+    except Exception as exc:
+        # Localization must never prevent the local game services from starting.
+        print("[battle-ui-translation] Could not apply patch: %r" % exc)
+
     web_thread = threading.Thread(target=run_web, name="webserver", daemon=True)
     web_thread.start()
     admin_thread = threading.Thread(target=run_admin, name="adminserver", daemon=True)
