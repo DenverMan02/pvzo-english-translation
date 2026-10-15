@@ -377,8 +377,14 @@ def apply_translation() -> bool:
             )
         )
     _atomic_write(version_file, version_out)
+    changed_entries = sum(item["changed_strings"] for item in prepared)
+    replacement_hits = sum(item["hits"] for item in prepared)
     print("[battle-ui-translation] Refreshed fileVer.xml.")
-    return any(item["changed_strings"] > 0 for item in prepared)
+    print(
+        "[battle-ui-translation] Complete: %d module(s) updated, %d string entries changed, %d label replacement(s)."
+        % (len(prepared), changed_entries, replacement_hits)
+    )
+    return changed_entries > 0
 
 if __name__ == "__main__":
     apply_translation()
