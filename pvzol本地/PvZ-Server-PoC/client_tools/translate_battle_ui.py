@@ -26,6 +26,18 @@ from patch_module_card_clickthrough import encode_u30, find_abc, parse_abc, s32,
 # Longest phrases first. These are player-facing terms visible in battle mode.
 TRANSLATIONS = {
     "基础战力": "Base Power",
+    "今日免费重置：": "Free resets today: ",
+    "剩余次数：": "Remaining resets: ",
+    "金钻消耗：": "Diamond cost: ",
+    "暂无新的战报！": "No new battle reports!",
+    "暂无奖励！": "No rewards available!",
+    "战场关闭中！": "Battlefield is closing!",
+    "挑战失败！当前成绩为第": "Challenge failed! Current best: stage ",
+    "关成功！": " cleared!",
+    "挑战第": "Challenge stage ",
+    "重新挑战": "Retry Challenge",
+    "重置次数已用完": "No resets remaining",
+    "每日0点恢复": "Resets daily at midnight",
     "总战力": "Total Power",
     "植物拼图": "Plant Puzzle",
     "威望进化": "Prestige Evolution",
@@ -56,8 +68,11 @@ TRANSLATIONS = {
     "技能": "Skill",
 }
 ORDERED_TRANSLATIONS = sorted(TRANSLATIONS.items(), key=lambda item: len(item[0]), reverse=True)
-ENGLISH_SENTINELS = ("Base Power", "Plant Puzzle", "World Tree", "Laboratory", "Initiative")
-MODULE_NAME = "ModuleBattleLineup.swf"
+ENGLISH_SENTINELS = (
+    "Base Power", "Plant Puzzle", "World Tree", "Laboratory", "Initiative",
+    "No rewards available", "No new battle reports", "Remaining resets", "Retry Challenge",
+)
+MODULE_NAMES = ("ModuleBattleLineup.swf", "ModuleEndlessFuben.swf")
 VERSION_NAME = "fileVer.xml"
 
 
@@ -155,59 +170,94 @@ def _atomic_write(path: Path, data: bytes) -> None:
 
 
 def apply_translation() -> bool:
-    """Patch and deploy the tooltip strings before serve_client begins."""
-    source = WEBROOT / MODULE_NAME
+    """Patch and deploy hardcoded labels from the live game modules."""
     version_file = WEBROOT / VERSION_NAME
-    if not source.is_file() or not version_file.is_file():
-        print("[battle-ui-translation] Skipped: SWF or fileVer.xml is missing.")
+    if not version_file.is_file():
+        print("[battle-ui-translation] Skipped: fileVer.xml is missing.")
         return False
 
-    original = source.read_bytes()
-    patched, changed_strings, hits, already_translated = _patch_swf(original)
-    if changed_strings == 0 and not already_translated:
-        print("[battle-ui-translation] No safe matching display strings found; no files changed.")
-        return False
+    version_out = version_file.read_bytes()
+    prepared = []
+    for module_name in MODULE_NAMES:
+        source = WEBROOT / module_name
+        if not source.is_file():
+            print("[battle-ui-translation] Skipped missing module: %s" % module_name)
+            continue
 
-    md5 = hashlib.md5(patched).hexdigest()
-    version_bytes = version_file.read_bytes()
-    pattern = rb'(<file\s+name="ModuleBattleLineup\.swf"\s+size=")[^"]*("\s+ver=")[^"]*("\s*/>)'
-    new_entry = lambda match: match.group(1) + str(len(patched)).encode("ascii") + match.group(2) + md5.encode("ascii") + match.group(3)
-    updated_version, count = re.subn(pattern, new_entry, version_bytes)
-    if count != 1:
-        raise ValueError("Expected exactly one ModuleBattleLineup.swf entry in fileVer.xml")
+        original = source.read_bytes()
+        patched, changed_strings, hits, already_translated = _patch_swf(original)
+        if changed_strings == 0 and not already_translated:
+            print("[battle-ui-translation] No safe display strings found in %s; no change." % module_name)
+            continue
 
-    aliases = [
-        path for path in WEBROOT.glob("ModuleBattleLineup_*.swf")
-        if re.fullmatch(r"ModuleBattleLineup_[0-9a-f]{32}\.swf", path.name)
-    ]
-    expected_alias = WEBROOT / f"ModuleBattleLineup_{md5}.swf"
-    deployed = all(path.read_bytes() == patched for path in [source, *aliases] if path.exists())
-    current_version = version_bytes == updated_version
-    expected_alias_ok = expected_alias.is_file() and expected_alias.read_bytes() == patched
-    if changed_strings == 0 and deployed and current_version and expected_alias_ok:
-        print("[battle-ui-translation] Battle tooltip labels are already translated.")
+        md5 = hashlib.md5(patched).hexdigest()
+        before_version = version_out
+        pattern = (
+            rb'(<file\s+name="'
+            + re.escape(module_name.encode("ascii"))
+            + rb'"\s+size=")[^"]*("\s+ver=")[^"]*("\s*/>)'
+        )
+        new_entry = lambda match: (
+            match.group(1) + str(len(patched)).encode("ascii")
+            + match.group(2) + md5.encode("ascii") + match.group(3)
+        )
+        version_out, count = re.subn(pattern, new_entry, version_out)
+        if count != 1:
+            raise ValueError("Expected exactly one %s entry in fileVer.xml" % module_name)
+
+        stem = module_name[:-4]
+        aliases = [
+            path for path in WEBROOT.glob(stem + "_*.swf")
+            if re.fullmatch(re.escape(stem) + r"_[0-9a-f]{32}\.swf", path.name)
+        ]
+        expected_alias = WEBROOT / (stem + "_" + md5 + ".swf")
+        deployed = all(path.read_bytes() == patched for path in [source, *aliases] if path.exists())
+        version_current = version_out == before_version
+        expected_alias_ok = expected_alias.is_file() and expected_alias.read_bytes() == patched
+        if changed_strings == 0 and deployed and version_current and expected_alias_ok:
+            print("[battle-ui-translation] %s is already translated." % module_name)
+            continue
+
+        prepared.append({
+            "source": source,
+            "patched": patched,
+            "aliases": aliases,
+            "expected_alias": expected_alias,
+            "module_name": module_name,
+            "changed_strings": changed_strings,
+            "hits": hits,
+        })
+
+    if not prepared:
         return False
 
     backup_dir = SERVER / "backups" / "battle-ui-english-20261015"
     backup_dir.mkdir(parents=True, exist_ok=True)
-    for path in [source, *aliases, version_file]:
-        backup = backup_dir / path.name
-        if path.is_file() and not backup.exists():
-            shutil.copy2(path, backup)
+    for item in prepared:
+        for path in [item["source"], *item["aliases"]]:
+            backup = backup_dir / path.name
+            if path.is_file() and not backup.exists():
+                shutil.copy2(path, backup)
+    backup_version = backup_dir / VERSION_NAME
+    if version_file.is_file() and not backup_version.exists():
+        shutil.copy2(version_file, backup_version)
 
-    _atomic_write(source, patched)
-    for alias in aliases:
-        _atomic_write(alias, patched)
-    _atomic_write(expected_alias, patched)
-    _atomic_write(version_file, updated_version)
-
-    print(
-        "[battle-ui-translation] Updated %d string entries (%d label replacements); "
-        "deployed %s (%d bytes) and refreshed fileVer.xml."
-        % (changed_strings, hits, expected_alias.name, len(patched))
-    )
-    return changed_strings > 0
-
+    for item in prepared:
+        _atomic_write(item["source"], item["patched"])
+        for alias in item["aliases"]:
+            _atomic_write(alias, item["patched"])
+        _atomic_write(item["expected_alias"], item["patched"])
+        print(
+            "[battle-ui-translation] Updated %s: %d string entries (%d label replacements); "
+            "deployed %s (%d bytes)."
+            % (
+                item["module_name"], item["changed_strings"], item["hits"],
+                item["expected_alias"].name, len(item["patched"]),
+            )
+        )
+    _atomic_write(version_file, version_out)
+    print("[battle-ui-translation] Refreshed fileVer.xml.")
+    return any(item["changed_strings"] > 0 for item in prepared)
 
 if __name__ == "__main__":
     apply_translation()
