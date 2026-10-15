@@ -285,7 +285,9 @@ def apply_translation() -> bool:
 
     version_out = version_file.read_bytes()
     prepared = []
+    print("[battle-ui-translation] Checking %d live SWF modules for untranslated labels." % len(MODULE_NAMES))
     for module_name in MODULE_NAMES:
+        print("[battle-ui-translation] Scanning %s..." % module_name)
         source = WEBROOT / module_name
         if not source.is_file():
             print("[battle-ui-translation] Skipped missing module: %s" % module_name)
