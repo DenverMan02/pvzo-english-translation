@@ -1,6 +1,6 @@
 """Translate hardcoded battle-card tooltip labels in the live SWF client.
 
-This intentionally works on webroot/ModuleBattleLineup.swf, not clientDB files.
+This intentionally patches the live battle-tooltip and Endless Fuben SWFs, not clientDB files.
 Only display-string constants are edited: strings used as ABC namespace or
 multiname identifiers are excluded to avoid renaming ActionScript properties.
 The launcher calls apply_translation() before the web server starts.
@@ -51,6 +51,7 @@ TRANSLATIONS = {
     "实验室": "Laboratory",
     "普攻": "Basic Attack",
     "健康：": "Health: ",
+    "生命值": "Health",
     "生命：": "Health: ",
     "健康:": "Health: ",
     "生命:": "Health: ",
