@@ -239,7 +239,8 @@ def apply_translation() -> bool:
     if not prepared:
         return False
 
-    backup_dir = SERVER / "backups" / "battle-ui-english-20261015"
+    # Keep generated binary backups outside the Git working tree so a sync/push cannot accidentally commit them.
+    backup_dir = Path.home() / ".pvzol-battle-ui-backups" / "battle-ui-english-20261015"
     backup_dir.mkdir(parents=True, exist_ok=True)
     for item in prepared:
         for path in [item["source"], *item["aliases"]]:
@@ -249,6 +250,7 @@ def apply_translation() -> bool:
     backup_version = backup_dir / VERSION_NAME
     if version_file.is_file() and not backup_version.exists():
         shutil.copy2(version_file, backup_version)
+    print("[battle-ui-translation] Original assets backed up to %s." % backup_dir)
 
     for item in prepared:
         _atomic_write(item["source"], item["patched"])
