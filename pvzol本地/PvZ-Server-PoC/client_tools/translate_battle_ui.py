@@ -271,7 +271,6 @@ def apply_translation() -> bool:
             continue
 
         md5 = hashlib.md5(patched).hexdigest()
-        before_version = version_out
         pattern = (
             rb'(<file\s+name="'
             + re.escape(module_name.encode("ascii"))
@@ -290,8 +289,16 @@ def apply_translation() -> bool:
             path for path in WEBROOT.glob(stem + "_*.swf")
             if re.fullmatch(re.escape(stem) + r"_[0-9a-f]{32}\.swf", path.name)
         ]
+        # The generic Game.swf and its older hash aliases are byte-identical
+        # to Game_n in this client pack. Keep those legacy entry points in sync.
+        if module_name == "Game_n.swf":
+            aliases.extend(
+                path for path in [WEBROOT / "Game.swf", *WEBROOT.glob("Game_*.swf")]
+                if path.is_file()
+                and re.fullmatch(r"Game_[0-9a-f]{32}\.swf", path.name) or path.name == "Game.swf"
+            )
+        aliases = list(dict.fromkeys(aliases))
         expected_alias = WEBROOT / (stem + "_" + md5 + ".swf")
-        deployed = all(path.read_bytes() == patched for path in [source, *aliases] if path.exists())
         prepared.append({
             "source": source,
             "patched": patched,
