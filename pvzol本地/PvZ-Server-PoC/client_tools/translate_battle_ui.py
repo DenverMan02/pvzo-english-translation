@@ -95,7 +95,15 @@ TRANSLATIONS = {
     "技能": "Skill",
 }
 ORDERED_TRANSLATIONS = sorted(TRANSLATIONS.items(), key=lambda item: len(item[0]), reverse=True)
-MODULE_NAMES = ("Game_n.swf", "Game_p.swf", "ModuleCard.swf", "ModuleCardBar.swf", "ModuleBattleLineup.swf", "ModuleBattle.swf", "ModuleEmbattle.swf", "ModuleEndlessFuben.swf")
+MODULE_NAMES = (
+    "Game_n.swf", "Game_p.swf", "ModuleCard.swf", "ModuleCardBar.swf",
+    "ModuleBattleLineup.swf", "ModuleBattle.swf", "ModuleEmbattle.swf", "ModuleEndlessFuben.swf",
+    "ModuleCardFruit.swf", "ModulePlantArmor.swf", "ModulePlantEvolution.swf",
+    "ModulePlantTalent.swf", "ModulePlantExplore.swf", "ModuleAwake.swf",
+    "ModuleNutrition.swf", "ModuleNutritionExchange.swf", "ModuleGarden.swf",
+    "ModuleWorldTree.swf", "ModuleLab.swf", "ModuleStrengthen.swf",
+    "ModuleTreasure.swf", "ModuleUnion.swf", "ModuleRoleInfo.swf",
+)
 VERSION_NAME = "fileVer.xml"
 
 
