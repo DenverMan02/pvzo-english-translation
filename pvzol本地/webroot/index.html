@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=11" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>植物大战僵尸 Online</title>
+<title>Plants vs. Zombies Online</title>
 
 <!-- ===== 网站图标 Favicon（ICO 格式） ===== -->
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -116,7 +116,7 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* ===== 登录页关服提醒 ===== */
+  /* ===== Log In页关服提醒 ===== */
   .shutdown-login-banner {
     display: none;
     background: linear-gradient(135deg, #c0392b, #e74c3c);
@@ -1002,40 +1002,40 @@
 
 <!-- ===== 关服提醒横幅 ===== -->
 <div class="shutdown-banner" id="shutdownBanner">
-  <span id="shutdownMessage">服务器即将关闭维护，请尽快保存进度！</span>
+  <span id="shutdownMessage">The server will shut down for maintenance soon. Please save your progress!</span>
   <span class="countdown" id="shutdownCountdown">--:--:--</span>
   <button class="close-btn" id="shutdownCloseBtn">×</button>
 </div>
 
-<!-- 登录/注册 -->
+<!-- Log In/Register -->
 <div id="authWrap"><div id="authCell">
   <div class="authCard">
-    <div class="cardTitle">植物大战僵尸 Online</div>
-    <div class="cardSub">私有服务器</div>
-    <!-- 关服提醒（登录页） -->
+    <div class="cardTitle">Plants vs. Zombies Online</div>
+    <div class="cardSub">Private Server</div>
+    <!-- 关服提醒（Log In页） -->
     <div class="shutdown-login-banner" id="shutdownLoginBanner">
-      ⚠️ <span id="shutdownLoginMessage">服务器即将关闭维护，请尽快保存进度！</span>
+      ⚠️ <span id="shutdownLoginMessage">The server will shut down for maintenance soon. Please save your progress!</span>
     </div>
     <div class="authTabs" id="authTabs">
       <div class="authIndicator" id="authIndicator"></div>
-      <div class="authTab active" id="tabLogin">登录</div>
-      <div class="authTab" id="tabReg">注册</div>
+      <div class="authTab active" id="tabLogin">Log In</div>
+      <div class="authTab" id="tabReg">Register</div>
     </div>
     <form id="loginForm" onsubmit="return false;">
-      <div class="field"><label>用户名</label><input type="text" id="loginUser" autocomplete="username" /></div>
-      <div class="field"><label>密码</label><input type="password" id="loginPass" autocomplete="current-password" /></div>
-      <button type="submit" class="liquid-btn primary" id="loginBtn">登录</button>
+      <div class="field"><label>Username</label><input type="text" id="loginUser" autocomplete="username" /></div>
+      <div class="field"><label>Password</label><input type="password" id="loginPass" autocomplete="current-password" /></div>
+      <button type="submit" class="liquid-btn primary" id="loginBtn">Log In</button>
       <div class="msg" id="loginMsg"></div>
     </form>
     <form id="regForm" onsubmit="return false;" style="display:none">
-      <div class="field"><label>用户名（2-32 字符）</label><input type="text" id="regUser" autocomplete="username" /></div>
-      <div class="field"><label>密码（4-64 字符）</label><input type="password" id="regPass" autocomplete="new-password" /></div>
-      <div class="field"><label>确认密码</label><input type="password" id="regPass2" autocomplete="new-password" /></div>
-      <button type="submit" class="liquid-btn primary" id="regBtn">注册</button>
+      <div class="field"><label>Username (2–32 characters)</label><input type="text" id="regUser" autocomplete="username" /></div>
+      <div class="field"><label>Password (4–64 characters)</label><input type="password" id="regPass" autocomplete="new-password" /></div>
+      <div class="field"><label>Confirm Password</label><input type="password" id="regPass2" autocomplete="new-password" /></div>
+      <button type="submit" class="liquid-btn primary" id="regBtn">Register</button>
       <div class="msg" id="regMsg"></div>
     </form>
     <div class="hint">
-      你的就是我的，我的还是我的<br />
+      What's yours is mine, and what's mine is mine.<br />
     </div>
   </div>
 </div></div>
@@ -1043,81 +1043,81 @@
 <!-- 主菜单 -->
 <div id="menu">
   <div id="menuTop">
-    <span class="brand">植物大战僵尸 Online</span>
+    <span class="brand">Plants vs. Zombies Online</span>
     <div class="rightLinks">
-      <a class="meLink" id="meLink">我的</a>
-      <a id="logoutLink">退出</a>
+      <a class="meLink" id="meLink">My Profile</a>
+      <a id="logoutLink">Log Out</a>
     </div>
   </div>
   <div id="menuCell"><div id="menuCellInner">
-    <button class="startBtn" id="startBtn">开始游戏</button>
+    <button class="startBtn" id="startBtn">Play Game</button>
   </div></div>
   <div class="noticeBox">
-    <div class="nbTitle">公告</div>
-    <div class="nbBody" id="noticeBody"><span class="empty">暂无公告</span></div>
+    <div class="nbTitle">Announcements</div>
+    <div class="nbBody" id="noticeBody"><span class="empty">No announcements yet</span></div>
   </div>
 </div>
 
-<!-- 顶部胶囊导航（登录后显示） -->
+<!-- 顶部胶囊导航（Log In后显示） -->
 <div id="topCapsule">
   <div class="cs-indicator" id="csIndicator"></div>
-  <div class="cs-tab active" id="csHome">主页</div>
+  <div class="cs-tab active" id="csHome">Home</div>
   <div class="cs-tab" id="csOnline">online</div>
-  <div class="cs-tab" id="csMe">我的</div>
+  <div class="cs-tab" id="csMe">My Profile</div>
 </div>
 
-<!-- 我的面板 -->
+<!-- My Profile面板 -->
 <div id="meMask">
-  <div class="meTop"><h2>我的</h2><button class="backBtn" id="meBackBtn">返回</button></div>
+  <div class="meTop"><h2>My Profile</h2><button class="backBtn" id="meBackBtn">Back</button></div>
   <div class="meBody">
-    <div class="meStat" id="meStat">加载中…</div>
+    <div class="meStat" id="meStat">Loading…</div>
 
     <div class="meSection">
-      <h3>设置</h3>
+      <h3>Settings</h3>
       <div class="settingRow" style="display:flex;align-items:center;justify-content:space-between;padding:8px 0;margin-top:4px;">
-        <span class="setLabel" style="font-size:13px;color:var(--text);">深色模式</span>
+        <span class="setLabel" style="font-size:13px;color:var(--text);">Dark Mode</span>
         <div class="lg-toggle" id="darkToggle" style="position:relative;width:64px;height:28px;cursor:pointer;flex-shrink:0;-webkit-tap-highlight-color:transparent;user-select:none;">
           <div class="track" style="position:absolute;inset:0;border-radius:14px;background:var(--toggle-off);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:background 0.3s ease,box-shadow 0.3s ease;"></div>
           <div class="knob" style="position:absolute;left:2px;top:2px;z-index:2;width:40px;height:24px;border-radius:12px;background:linear-gradient(160deg,#ffffff 0%,#f0f3f6 100%);box-shadow:0 2px 6px rgba(0,0,0,0.2),inset 0 -1px 1px rgba(0,0,0,0.06);transform:translateX(0);transition:transform 0.35s cubic-bezier(0.34,1.56,0.64,1);will-change:transform;"></div>
         </div>
       </div>
-      <button class="meBtn meLogoutBtn" id="meLogoutBtn" style="margin-top:12px;">退出登录</button>
+      <button class="meBtn meLogoutBtn" id="meLogoutBtn" style="margin-top:12px;">Log Out</button>
     </div>
 
     <div class="meSection">
-      <h3>修改角色名</h3>
-      <div class="meRow"><label>角色名</label><input type="text" id="meName" /></div>
-      <button class="meBtn" id="meNameBtn">保存角色名</button>
+      <h3>Change Character Name</h3>
+      <div class="meRow"><label>Character Name</label><input type="text" id="meName" /></div>
+      <button class="meBtn" id="meNameBtn">Save Character Name</button>
       <div class="meMsg" id="meNameMsg"></div>
     </div>
 
     <div class="meSection">
-      <h3>好友卡植物</h3>
-      <div class="meRow"><label>植物</label><select id="mePlant"><option value="0">未设置（默认使用向日葵）</option></select></div>
-      <button class="meBtn" id="mePlantBtn">保存好友卡</button>
+      <h3>Friend Card Plant</h3>
+      <div class="meRow"><label>Plant</label><select id="mePlant"><option value="0">Not set (Sunflower is used by default)</option></select></div>
+      <button class="meBtn" id="mePlantBtn">Save Friend Card</button>
       <div class="meMsg" id="mePlantMsg"></div>
-      <div class="hint" style="margin-top:8px;">其他玩家加你为好友时，会看到这张好友卡植物。未设置则默认使用向日葵</div>
+      <div class="hint" style="margin-top:8px;">Other players will see this friend-card plant. Sunflower is used by default if none is selected.</div>
     </div>
 
     <div class="meSection">
-      <h3>兑换码</h3>
-      <div class="meRow"><label>兑换码</label><input type="text" id="meCode" class="wide" /></div>
-      <button class="meBtn" id="meCodeBtn">兑换</button>
+      <h3>Redemption Code</h3>
+      <div class="meRow"><label>Redemption Code</label><input type="text" id="meCode" class="wide" /></div>
+      <button class="meBtn" id="meCodeBtn">Redeem</button>
       <div class="meMsg" id="meCodeMsg"></div>
     </div>
 
     <div class="meSection">
-      <h3>好友<span class="badge" id="meReqBadge" style="display:none;">0</span></h3>
-      <div style="margin-top:14px; font-size:12px; font-weight:bold;">好友请求</div>
+      <h3>Friends<span class="badge" id="meReqBadge" style="display:none;">0</span></h3>
+      <div style="margin-top:14px; font-size:12px; font-weight:bold;">Friend Requests</div>
       <div class="frList" id="meReqList"></div>
-      <div style="margin-top:14px; font-size:12px; font-weight:bold;">已发送的请求</div>
+      <div style="margin-top:14px; font-size:12px; font-weight:bold;">Sent Requests</div>
       <div class="frList" id="meSentList"></div>
-      <div class="meRow" style="margin-top:14px;"><label>搜索玩家名</label><input type="text" id="meSearch" class="wide" /></div>
-      <button class="meBtn" id="meSearchBtn">搜索</button>
+      <div class="meRow" style="margin-top:14px;"><label>Search Players</label><input type="text" id="meSearch" class="wide" /></div>
+      <button class="meBtn" id="meSearchBtn">Search</button>
       <div class="searchResult" id="meSearchResult"></div>
-      <div style="margin-top:14px; font-size:12px; font-weight:bold;">我的好友</div>
+      <div style="margin-top:14px; font-size:12px; font-weight:bold;">My Friends</div>
       <div class="frList" id="meFrList"></div>
-      <button class="meBtn" id="meFrRefreshBtn" style="margin-top:8px;">刷新</button>
+      <button class="meBtn" id="meFrRefreshBtn" style="margin-top:8px;">Refresh</button>
     </div>
   </div>
 </div>
@@ -1125,36 +1125,36 @@
 <!-- 模态框 -->
 <div id="friendModalLayer" class="modalLayer"></div>
 <div id="friendModal" class="glassDialog">
-  <h3 id="fmTitle">发送好友请求</h3>
+  <h3 id="fmTitle">Send Friend Request</h3>
   <div class="fmInfo" id="fmInfo"></div>
-  <label class="fmLabel" for="fmMsg">留言（可选）</label>
-  <textarea class="fmMsg" id="fmMsg" rows="3" placeholder="给对方留个言…"></textarea>
-  <div class="fmBtns"><button class="lgBtn ghost" id="fmCancelBtn">取消</button><button class="lgBtn accent" id="fmSendBtn">发送请求</button></div>
+  <label class="fmLabel" for="fmMsg">Message (optional)</label>
+  <textarea class="fmMsg" id="fmMsg" rows="3" placeholder="Leave a message…"></textarea>
+  <div class="fmBtns"><button class="lgBtn ghost" id="fmCancelBtn">Cancel</button><button class="lgBtn accent" id="fmSendBtn">Send Request</button></div>
   <div class="fmStatus" id="fmStatus"></div>
 </div>
 
 <div id="confirmModalLayer" class="modalLayer"></div>
 <div id="confirmModal" class="glassDialog">
-  <h3>删除好友</h3>
+  <h3>RemoveFriends</h3>
   <div class="cmMsg" id="cmMsg"></div>
-  <div class="cmWarn">删除后双方都会从对方的好友列表中移除，且不会通知对方。</div>
-  <div class="cmBtns"><button class="lgBtn ghost" id="cmCancelBtn">取消</button><button class="lgBtn accent danger" id="cmConfirmBtn">确认删除</button></div>
+  <div class="cmWarn">Removing this friend deletes each of you from the other's friends list without notifying them.</div>
+  <div class="cmBtns"><button class="lgBtn ghost" id="cmCancelBtn">Cancel</button><button class="lgBtn accent danger" id="cmConfirmBtn">Confirm Removal</button></div>
   <div class="cmStatus" id="cmStatus"></div>
 </div>
 
-<!-- 退出登录确认 -->
+<!-- Log Out确认 -->
 <div id="logoutModalLayer" class="modalLayer"></div>
 <div id="logoutModal" class="glassDialog">
-  <h3>退出登录</h3>
-  <div class="gdMsg">确定要退出当前账号吗？退出后需要重新登录才能继续游戏。</div>
-  <div class="gdBtns"><button class="lgBtn ghost" id="logoutCancelBtn">取消</button><button class="lgBtn accent danger" id="logoutConfirmBtn">退出登录</button></div>
+  <h3>Log Out</h3>
+  <div class="gdMsg">Are you sure you want to log out? You'll need to log in again to keep playing.</div>
+  <div class="gdBtns"><button class="lgBtn ghost" id="logoutCancelBtn">Cancel</button><button class="lgBtn accent danger" id="logoutConfirmBtn">Log Out</button></div>
   <div class="cmStatus" id="logoutStatus"></div>
 </div>
 
 <!-- 游戏容器 -->
 <div id="play">
   <div id="game"></div>
-  <div id="flashwarn"><p style="font-size:16px;font-weight:bold;">未检测到 Flash Player</p><p>请使用支持 Flash 的浏览器，或安装 Flash 控件后刷新。</p></div>
+  <div id="flashwarn"><p style="font-size:16px;font-weight:bold;">Flash Player Not Detected</p><p>Use a Flash-compatible browser, or install the Flash plugin and refresh.</p></div>
 </div>
 
 <script>
@@ -1168,7 +1168,7 @@ var _PLANTS = [];
 // ============ 关服状态管理 ============
 var shutdown = {
   enabled: false,
-  message: "服务器即将关闭维护，请尽快保存进度！",
+  message: "The server will shut down for maintenance soon. Please save your progress!",
   endTime: null,
   showOnLogin: false,
   timer: null,
@@ -1194,7 +1194,7 @@ var shutdown = {
       if (res && res.ok && res.data) {
         var data = res.data;
         if (data.enabled) {
-          self.enable(data.message || "服务器即将关闭维护，请尽快保存进度！", data.end_time);
+          self.enable(data.message || "The server will shut down for maintenance soon. Please save your progress!", data.end_time);
           if (data.show_on_login) {
             self.showOnLogin = true;
             self._updateLoginBanner();
@@ -1209,7 +1209,7 @@ var shutdown = {
 
   enable: function(msg, endTime) {
     this.enabled = true;
-    this.message = msg || "服务器即将关闭维护，请尽快保存进度！";
+    this.message = msg || "The server will shut down for maintenance soon. Please save your progress!";
     this.endTime = endTime || null;
     this._updateUI();
     if (this.timer) clearInterval(this.timer);
@@ -1243,9 +1243,9 @@ var shutdown = {
         String(minutes).padStart(2, '0') + ':' +
         String(seconds).padStart(2, '0');
       if (diff <= 0) {
-        this.countdownEl.textContent = '已关服';
-        if (this.messageEl) this.messageEl.textContent = '服务器已关闭';
-        if (this.loginMessageEl) this.loginMessageEl.textContent = '服务器已关闭';
+        this.countdownEl.textContent = 'Offline';
+        if (this.messageEl) this.messageEl.textContent = 'The server is offline';
+        if (this.loginMessageEl) this.loginMessageEl.textContent = 'The server is offline';
       }
     } else if (this.countdownEl) {
       this.countdownEl.textContent = '';
@@ -1407,7 +1407,7 @@ function setCapsuleTab(tab) {
   iframe.name = 'onlineFrame';
   iframe.scrolling = 'auto';
   iframe.allowTransparency = true;
-  iframe.src = '你还想翻文件？/pvz-game.yeyou.com/index.html';
+  iframe.src = '你还想翻文件?/pvz-game.yeyou.com/index.html';
   
   onlineView.appendChild(iframe);
   document.body.appendChild(onlineView);
@@ -1447,7 +1447,7 @@ addEvent(document.getElementById('csMe'), 'click', function() {
   loadFriendRequests();
 });
 
-// ===== 登录/注册 =====
+// ===== Log In/Register =====
 addEvent($("tabLogin"), "click", function () {
   setAuthTab('login');
   $("loginForm").style.display = "";
@@ -1464,14 +1464,14 @@ addEvent($("loginForm"), "submit", function (e) {
   var u = $("loginUser").value;
   var p = $("loginPass").value;
   var btn = $("loginBtn");
-  btn.disabled = true; setMsg("loginMsg", "登录中…", "");
+  btn.disabled = true; setMsg("loginMsg", "Logging in…", "");
   api("POST", "/api/login", { username: u, password: p }, function (res) {
     btn.disabled = false;
     if (res && res.ok) {
       currentUin = res.uin; currentUsername = res.username;
       enterMenu();
     } else {
-      setMsg("loginMsg", (res && res.error) || "登录失败", "err");
+      setMsg("loginMsg", (res && res.error) || "Login failed", "err");
     }
   });
 });
@@ -1481,16 +1481,16 @@ addEvent($("regForm"), "submit", function (e) {
   var u = $("regUser").value;
   var p = $("regPass").value;
   var p2 = $("regPass2").value;
-  if (p !== p2) { setMsg("regMsg", "两次输入的密码不一致", "err"); return; }
+  if (p !== p2) { setMsg("regMsg", "The passwords do not match.", "err"); return; }
   var btn = $("regBtn");
-  btn.disabled = true; setMsg("regMsg", "注册中…", "");
+  btn.disabled = true; setMsg("regMsg", "Registering…", "");
   api("POST", "/api/register", { username: u, password: p }, function (res) {
     btn.disabled = false;
     if (res && res.ok) {
       currentUin = res.uin; currentUsername = res.username;
       enterMenu();
     } else {
-      setMsg("regMsg", (res && res.error) || "注册失败", "err");
+      setMsg("regMsg", (res && res.error) || "Registration failed", "err");
     }
   });
 });
@@ -1518,13 +1518,13 @@ function loadNotice() {
     } else {
       var sp = document.createElement("span");
       sp.className = "empty";
-      sp.appendChild(document.createTextNode("暂无公告"));
+      sp.appendChild(document.createTextNode("No announcements yet"));
       body.appendChild(sp);
     }
   });
 }
 
-// ===== 退出登录 =====
+// ===== Log Out =====
 function showLogoutModal() {
   document.getElementById('logoutModalLayer').style.display = 'block';
   document.getElementById('logoutModal').style.display = 'block';
@@ -1542,7 +1542,7 @@ addEvent(document.getElementById('logoutConfirmBtn'), 'click', function() {
   var btn = this;
   btn.disabled = true;
   document.getElementById('logoutStatus').innerHTML = '';
-  document.getElementById('logoutStatus').appendChild(document.createTextNode('退出中…'));
+  document.getElementById('logoutStatus').appendChild(document.createTextNode('Logging out…'));
   api("POST", "/api/logout", {}, function (res) {
     currentUin = null; currentUsername = "";
     hideLogoutModal();
@@ -1556,7 +1556,7 @@ addEvent(document.getElementById('logoutConfirmBtn'), 'click', function() {
   });
 });
 
-// ===== 开始游戏 =====
+// ===== Play Game =====
 addEvent($("startBtn"), "click", function () {
   if (!currentUin) { return; }
   $("menu").style.display = "none";
@@ -1586,7 +1586,7 @@ function embedGame(uin) {
       params +
       '<object type="application/x-shockwave-flash" data="' + swfUrl + '" width="100%" height="100%">' +
         params +
-        '<p style="color:#fff;text-align:center;padding:40px;">未检测到 Flash Player，请使用支持 Flash 的浏览器或改用桌面启动器。</p>' +
+        '<p style="color:#fff;text-align:center;padding:40px;">Flash Player was not detected. Use a Flash-compatible browser or the desktop launcher.</p>' +
       '</object>' +
     '</object>';
   $("game").innerHTML = html;
@@ -1613,7 +1613,7 @@ function hasFlash() {
   return false;
 }
 
-// ===== 按 ESC 键退出游戏 =====
+// ===== 按 ESC 键Log Out游戏 =====
 addEvent(document, "keydown", function (e) {
   e = e || window.event;
   if (e.keyCode === 27) {
@@ -1629,7 +1629,7 @@ addEvent(document, "keydown", function (e) {
   }
 });
 
-// ===== 我的 =====
+// ===== My Profile =====
 addEvent($("meBackBtn"), "click", function () {
   setCapsuleTab('home');
   $("meMask").style.display = "none";
@@ -1655,20 +1655,20 @@ function loadMe() {
   api("GET", "/api/me", null, function (res) {
     if (!res || !res.ok) {
       $("meStat").innerHTML = "";
-      $("meStat").appendChild(document.createTextNode((res && res.error) || "加载失败"));
+      $("meStat").appendChild(document.createTextNode((res && res.error) || "Failed to load"));
       return;
     }
     var m = res.me || {};
     currentUin = m.uin;
-    var vipText = ["无", "VIP1 阳光", "VIP2 财富", "VIP3 金壶"][m.vip_level] || "无";
-    var tdText = m.td_privilege ? "已开通" : "未开通";
+    var vipText = ["None", "VIP 1 — Sunlight", "VIP 2 — Fortune", "VIP 3 — Golden Pot"][m.vip_level] || "None";
+    var tdText = m.td_privilege ? "Enabled" : "Not enabled";
     var stat = $("meStat");
     stat.innerHTML = "";
     var lines = [
-      "账号：" + (m.username || ""),
-      "角色名：" + (m.name || "") + "   等级：" + m.level,
-      "金币：" + m.coin + "   钻石：" + m.ticket,
-      "VIP：" + vipText + "   塔防特权：" + tdText
+      "Account: " + (m.username || ""),
+      "Character name: " + (m.name || "") + "   Level: " + m.level,
+      "Coins: " + m.coin + "   Diamonds: " + m.ticket,
+      "VIP: " + vipText + "   Tower Defense Perk: " + tdText
     ];
     for (var i = 0; i < lines.length; i++) {
       stat.appendChild(document.createTextNode(lines[i]));
@@ -1687,48 +1687,48 @@ function loadMe() {
 addEvent($("meNameBtn"), "click", function () {
   var name = trim($("meName").value);
   if (name.length < 2 || name.length > 32) {
-    setMeMsg("meNameMsg", "角色名长度需为 2-32 个字符", "err"); return;
+    setMeMsg("meNameMsg", "Character name must be 2–32 characters long.", "err"); return;
   }
   var btn = $("meNameBtn");
-  btn.disabled = true; setMeMsg("meNameMsg", "保存中…", "");
+  btn.disabled = true; setMeMsg("meNameMsg", "Saving…", "");
   api("POST", "/api/me/name", { name: name }, function (res) {
     btn.disabled = false;
-    if (res && res.ok) { setMeMsg("meNameMsg", "已保存", "ok"); loadMe(); }
-    else { setMeMsg("meNameMsg", (res && res.error) || "保存失败", "err"); }
+    if (res && res.ok) { setMeMsg("meNameMsg", "Saved", "ok"); loadMe(); }
+    else { setMeMsg("meNameMsg", (res && res.error) || "Failed to save", "err"); }
   });
 });
 
 addEvent($("mePlantBtn"), "click", function () {
   var pid = _plantIdFromOption($("mePlant").value);
   var btn = $("mePlantBtn");
-  btn.disabled = true; setMeMsg("mePlantMsg", "保存中…", "");
+  btn.disabled = true; setMeMsg("mePlantMsg", "Saving…", "");
   api("POST", "/api/me/friend_card", { plant_id: pid }, function (res) {
     btn.disabled = false;
-    if (res && res.ok) { setMeMsg("mePlantMsg", "已保存", "ok"); loadMe(); }
-    else { setMeMsg("mePlantMsg", (res && res.error) || "保存失败", "err"); }
+    if (res && res.ok) { setMeMsg("mePlantMsg", "Saved", "ok"); loadMe(); }
+    else { setMeMsg("mePlantMsg", (res && res.error) || "Failed to save", "err"); }
   });
 });
 
 addEvent($("meCodeBtn"), "click", function () {
   var code = trim($("meCode").value);
-  if (!code) { setMeMsg("meCodeMsg", "请输入兑换码", "err"); return; }
+  if (!code) { setMeMsg("meCodeMsg", "Enter a redemption code.", "err"); return; }
   var btn = $("meCodeBtn");
-  btn.disabled = true; setMeMsg("meCodeMsg", "兑换中…", "");
+  btn.disabled = true; setMeMsg("meCodeMsg", "Redeeming…", "");
   api("POST", "/api/redeem", { code: code }, function (res) {
     btn.disabled = false;
     if (res && res.ok) {
       var r = res.reward || {};
       var desc = r.reward_type + " x" + r.amount;
-      setMeMsg("meCodeMsg", "兑换成功：" + desc + "（下次进入游戏生效）", "ok");
+      setMeMsg("meCodeMsg", "Redemption successful: " + desc + "(takes effect the next time you enter the game)", "ok");
       $("meCode").value = "";
       loadMe();
     } else {
-      setMeMsg("meCodeMsg", (res && res.error) || "兑换失败", "err");
+      setMeMsg("meCodeMsg", (res && res.error) || "Redemption failed", "err");
     }
   });
 });
 
-// ===== 好友功能 =====
+// ===== Friends功能 =====
 addEvent($("meSearchBtn"), "click", function () { doFriendSearch(); });
 addEvent($("meSearch"), "keydown", function (e) {
   e = e || window.event;
@@ -1743,14 +1743,14 @@ function doFriendSearch() {
   api("GET", "/api/friends/search?q=" + encodeURIComponent(q), null, function (res) {
     box.innerHTML = "";
     if (!res || !res.ok) {
-      box.appendChild(document.createTextNode((res && res.error) || "搜索失败"));
+      box.appendChild(document.createTextNode((res && res.error) || "Search failed"));
       return;
     }
     var list = res.players || [];
     if (!list.length) {
       var sp = document.createElement("div");
       sp.style.color = "#555";
-      sp.appendChild(document.createTextNode("未找到该名字的玩家"));
+      sp.appendChild(document.createTextNode("No player found with that name."));
       box.appendChild(sp);
       return;
     }
@@ -1763,12 +1763,12 @@ function doFriendSearch() {
 function makeSearchRow(p) {
   var row = document.createElement("div");
   row.className = "srRow";
-  var plantLabel = p.friend_card_plant_name || "未设置";
+  var plantLabel = p.friend_card_plant_name || "Not set";
   row.appendChild(document.createTextNode(
-    p.name + " (Lv " + p.level + ", 好友卡: " + plantLabel + ")"));
+    p.name + " (Lv " + p.level + ", Friend Card: " + plantLabel + ")"));
   var btn = document.createElement("button");
   btn.className = "srAdd";
-  btn.appendChild(document.createTextNode("加好友"));
+  btn.appendChild(document.createTextNode("Add Friend"));
   addEvent(btn, "click", (function (player) {
     return function () { openFriendModal(player, btn); };
   })(p));
@@ -1796,19 +1796,19 @@ function openFriendModal(player, triggerBtn) {
   info.innerHTML = "";
   var name = document.createElement("span");
   name.className = "fmName";
-  name.appendChild(document.createTextNode(player.name || "未知玩家"));
+  name.appendChild(document.createTextNode(player.name || "Unknown Player"));
   info.appendChild(name);
   var meta = document.createElement("span");
   meta.className = "fmMeta";
-  var plantLabel = player.friend_card_plant_name || "未设置";
-  meta.appendChild(document.createTextNode("Lv " + (player.level || 1) + " · 好友卡: " + plantLabel));
+  var plantLabel = player.friend_card_plant_name || "Not set";
+  meta.appendChild(document.createTextNode("Lv " + (player.level || 1) + " · Friend Card: " + plantLabel));
   info.appendChild(meta);
   $("fmMsg").value = "";
   setFmStatus("", "");
   var sendBtn = $("fmSendBtn");
   sendBtn.disabled = false;
   sendBtn.innerHTML = "";
-  sendBtn.appendChild(document.createTextNode("发送请求"));
+  sendBtn.appendChild(document.createTextNode("Send Request"));
   $("friendModalLayer").style.display = "block";
   $("friendModal").style.display = "block";
   try { $("fmMsg").focus(); } catch (e) {}
@@ -1835,20 +1835,20 @@ function doSendFriendRequest() {
   var message = $("fmMsg").value;
   var sendBtn = $("fmSendBtn");
   sendBtn.disabled = true;
-  setFmStatus("发送中…", "");
+  setFmStatus("Sending…", "");
   api("POST", "/api/friends/add", { role_id: rid, message: message }, function (res) {
     if (res && res.ok) {
-      setFmStatus(res.message || "好友请求已发送，等待对方同意", "ok");
+      setFmStatus(res.message || "Friend request sent. Waiting for approval.", "ok");
       if (_fmTriggerBtn) {
         _fmTriggerBtn.disabled = true;
         _fmTriggerBtn.innerHTML = "";
-        _fmTriggerBtn.appendChild(document.createTextNode("已发送"));
+        _fmTriggerBtn.appendChild(document.createTextNode("Sent"));
       }
       loadFriendRequests();
       setTimeout(closeFriendModal, 1200);
     } else {
       sendBtn.disabled = false;
-      setFmStatus((res && res.error) || "发送失败", "err");
+      setFmStatus((res && res.error) || "Failed to send", "err");
     }
   });
 }
@@ -1862,7 +1862,7 @@ function loadFriends() {
     if (!list.length) {
       var empty = document.createElement("div");
       empty.className = "frEmpty";
-      empty.appendChild(document.createTextNode("暂无好友"));
+      empty.appendChild(document.createTextNode("No friends yet"));
       box.appendChild(empty);
       return;
     }
@@ -1890,7 +1890,7 @@ function loadIncomingRequests() {
     if (!list.length) {
       var empty = document.createElement("div");
       empty.className = "frEmpty";
-      empty.appendChild(document.createTextNode("暂无好友请求"));
+      empty.appendChild(document.createTextNode("No friend requests yet"));
       box.appendChild(empty);
       return;
     }
@@ -1909,7 +1909,7 @@ function loadSentRequests() {
     if (!list.length) {
       var empty = document.createElement("div");
       empty.className = "frEmpty";
-      empty.appendChild(document.createTextNode("没有等待中的请求"));
+      empty.appendChild(document.createTextNode("No pending requests"));
       box.appendChild(empty);
       return;
     }
@@ -1936,7 +1936,7 @@ function makeReqRow(r) {
   row.className = "frReqItem";
   var name = document.createElement("span");
   name.className = "frName";
-  name.appendChild(document.createTextNode(r.from_name || "未知玩家"));
+  name.appendChild(document.createTextNode(r.from_name || "Unknown Player"));
   row.appendChild(name);
   var meta = document.createElement("span");
   meta.className = "frMeta";
@@ -1945,19 +1945,19 @@ function makeReqRow(r) {
   if (r.message) {
     var msg = document.createElement("div");
     msg.className = "frMsg";
-    msg.appendChild(document.createTextNode("留言：" + r.message));
+    msg.appendChild(document.createTextNode("Message: " + r.message));
     row.appendChild(msg);
   }
   var acceptBtn = document.createElement("button");
   acceptBtn.className = "frAct accept";
-  acceptBtn.appendChild(document.createTextNode("同意"));
+  acceptBtn.appendChild(document.createTextNode("Accept"));
   addEvent(acceptBtn, "click", (function (id) {
     return function () { respondRequest(id, true, acceptBtn); };
   })(r.id));
   row.appendChild(acceptBtn);
   var rejectBtn = document.createElement("button");
   rejectBtn.className = "frAct reject";
-  rejectBtn.appendChild(document.createTextNode("拒绝"));
+  rejectBtn.appendChild(document.createTextNode("Decline"));
   addEvent(rejectBtn, "click", (function (id) {
     return function () { respondRequest(id, false, rejectBtn); };
   })(r.id));
@@ -1970,11 +1970,11 @@ function makeSentRow(r) {
   row.className = "frReqItem";
   var name = document.createElement("span");
   name.className = "frName";
-  name.appendChild(document.createTextNode(r.to_name || "未知玩家"));
+  name.appendChild(document.createTextNode(r.to_name || "Unknown Player"));
   row.appendChild(name);
   var meta = document.createElement("span");
   meta.className = "frMeta";
-  meta.appendChild(document.createTextNode("Lv " + (r.to_level || 1) + " · 等待同意 · " + fmtDate(r.created_at)));
+  meta.appendChild(document.createTextNode("Lv " + (r.to_level || 1) + " · Awaiting approval · " + fmtDate(r.created_at)));
   row.appendChild(meta);
   return row;
 }
@@ -1988,12 +1988,12 @@ function respondRequest(id, accept, btn) {
         loadFriendRequests();
         loadFriends();
       } else {
-        window.alert("已拒绝好友请求");
+        window.alert("Friend request declined.");
         loadFriendRequests();
       }
     } else {
       btn.disabled = false;
-      window.alert((res && res.error) || "操作失败");
+      window.alert((res && res.error) || "Action failed");
     }
   });
 }
@@ -2003,11 +2003,11 @@ function makeFrRow(f) {
   row.className = "frItem";
   var name = document.createElement("span");
   name.className = "frName";
-  name.appendChild(document.createTextNode(f.friend_name || "未知玩家"));
+  name.appendChild(document.createTextNode(f.friend_name || "Unknown Player"));
   row.appendChild(name);
   var btn = document.createElement("button");
   btn.className = "frDel";
-  btn.appendChild(document.createTextNode("删除"));
+  btn.appendChild(document.createTextNode("Remove"));
   addEvent(btn, "click", (function (fr) {
     return function () { openDeleteModal(fr); };
   })(f));
@@ -2032,17 +2032,17 @@ function openDeleteModal(fr) {
   _cmTarget = fr;
   var msg = $("cmMsg");
   msg.innerHTML = "";
-  msg.appendChild(document.createTextNode("确定删除好友 "));
+  msg.appendChild(document.createTextNode("Remove friend "));
   var nm = document.createElement("span");
   nm.className = "cmName";
-  nm.appendChild(document.createTextNode(fr.friend_name || "未知玩家"));
+  nm.appendChild(document.createTextNode(fr.friend_name || "Unknown Player"));
   msg.appendChild(nm);
-  msg.appendChild(document.createTextNode("？"));
+  msg.appendChild(document.createTextNode("?"));
   setCmStatus("", "");
   var confirmBtn = $("cmConfirmBtn");
   confirmBtn.disabled = false;
   confirmBtn.innerHTML = "";
-  confirmBtn.appendChild(document.createTextNode("确认删除"));
+  confirmBtn.appendChild(document.createTextNode("Confirm Removal"));
   $("confirmModalLayer").style.display = "block";
   $("confirmModal").style.display = "block";
 }
@@ -2066,15 +2066,15 @@ function doDeleteFriend() {
   var rid = _cmTarget.friend_role_id;
   var confirmBtn = $("cmConfirmBtn");
   confirmBtn.disabled = true;
-  setCmStatus("删除中…", "");
+  setCmStatus("Removing…", "");
   api("POST", "/api/friends/" + rid + "/delete", {}, function (res) {
     if (res && res.ok) {
-      setCmStatus("已删除", "ok");
+      setCmStatus("Removed", "ok");
       loadFriends();
       setTimeout(closeDeleteModal, 800);
     } else {
       confirmBtn.disabled = false;
-      setCmStatus((res && res.error) || "删除失败", "err");
+      setCmStatus((res && res.error) || "Failed to remove", "err");
     }
   });
 }
@@ -2105,7 +2105,7 @@ setAuthTab('login');
 // 初始化关服状态管理器
 shutdown.init();
 
-// 加载关服状态（先加载关服状态，再检查登录状态）
+// 加载关服状态（先加载关服状态，再检查Log In状态）
 shutdown.load(function() {
   // 关服状态加载完成后，检查会话恢复
   api("GET", "/api/session", null, function (res) {
@@ -2120,9 +2120,9 @@ shutdown.load(function() {
 // 暴露 shutdown 到控制台方便调试
 window.shutdown = shutdown;
 
-console.log('植物大战僵尸 Online 客户端已加载');
-console.log('关服状态管理: shutdown');
-console.log('可用命令: shutdown.enable("消息", "2026-01-20 18:00:00")');
+console.log('Plants vs. Zombies Online client loaded');
+console.log('Shutdown status manager: shutdown');
+console.log('Available command: shutdown.enable("Maintenance message", "2026-01-20 18:00:00")');
 </script>
 </body>
 </html>
