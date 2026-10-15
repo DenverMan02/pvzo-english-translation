@@ -98,9 +98,9 @@ def center_window(window, parent=None, size=None):
 def select_avatar_image(parent):
     # Use Tk's bundled native dialog directly; portable builds need no new
     # Python tkinter.filedialog module or runtime repackaging.
-    return str(parent.tk.call("tk_getOpenFile", "-parent", str(parent), "-title", "选择头像图片",
-                              "-filetypes", (("头像图片", ("*.png", "*.jpg", "*.jpeg")),
-                                             ("PNG 图片", "*.png"), ("JPG 图片", ("*.jpg", "*.jpeg")))))
+    return str(parent.tk.call("tk_getOpenFile", "-parent", str(parent), "-title", "Choose Avatar Image",
+                              "-filetypes", (("Avatar Image", ("*.png", "*.jpg", "*.jpeg")),
+                                             ("PNG Image", "*.png"), ("JPG Image", ("*.jpg", "*.jpeg")))))
 
 
 def valid_uin(value):
@@ -322,11 +322,11 @@ def themed_dialog(parent, title, message, detail="", confirm=False):
     buttons = tk.Frame(body, bg=BG)
     buttons.pack(fill="x", pady=(4, 0))
     if confirm:
-        cancel = tk.Button(buttons, text="取消", command=lambda: finish(False),
+        cancel = tk.Button(buttons, text="Cancel", command=lambda: finish(False),
                            bg=PANEL, fg=FG, activebackground="#33481f", activeforeground=FG,
                            font=ACCOUNT_FONT, relief="flat", cursor="hand2", bd=0, padx=18, pady=8)
         cancel.pack(side="left", fill="x", expand=True, padx=(0, 6))
-        accept = tk.Button(buttons, text="确定删除", command=lambda: finish(True),
+        accept = tk.Button(buttons, text="Confirm Deletion", command=lambda: finish(True),
                            bg=STOP, fg="#ffffff", activebackground="#d5643c", activeforeground="#ffffff",
                            font=ACCOUNT_FONT, relief="flat", cursor="hand2", bd=0, padx=18, pady=8)
         accept.pack(side="left", fill="x", expand=True, padx=(6, 0))
@@ -334,7 +334,7 @@ def themed_dialog(parent, title, message, detail="", confirm=False):
         accept.bind("<Return>", lambda event: finish(True))
         default_button = cancel
     else:
-        default_button = tk.Button(buttons, text="知道了", command=lambda: finish(True),
+        default_button = tk.Button(buttons, text="OK", command=lambda: finish(True),
                                    bg=ACCENT, fg="#12220a", activebackground=ACCENT_HOVER,
                                    activeforeground="#12220a", font=ACCOUNT_FONT,
                                    relief="flat", cursor="hand2", bd=0, padx=18, pady=8)
@@ -461,16 +461,16 @@ class Launcher:
     # ---------------- 界面 ----------------
     def _build_ui(self):
         r = self.root
-        r.title("植物大战僵尸OL — 启动器")
+        r.title("Plants vs. Zombies Online — Launcher")
         r.configure(bg=BG)
         r.geometry("580x520")
         r.minsize(520, 460)
 
         header = tk.Frame(r, bg=BG)
         header.pack(fill="x", padx=20, pady=(18, 6))
-        tk.Label(header, text="植物大战僵尸OL", bg=BG, fg=FG,
+        tk.Label(header, text="Plants vs. Zombies Online", bg=BG, fg=FG,
                  font=("Segoe UI", 17, "bold")).pack(anchor="w")
-        tk.Label(header, text="私人服务器启动器", bg=BG, fg=MUTED,
+        tk.Label(header, text="Private Server Launcher", bg=BG, fg=MUTED,
                  font=("Segoe UI", 10)).pack(anchor="w")
 
         status = tk.Frame(r, bg=PANEL, highlightthickness=0)
@@ -478,7 +478,7 @@ class Launcher:
         self.dot = tk.Canvas(status, width=16, height=16, bg=PANEL, highlightthickness=0)
         self.dot.pack(side="left", padx=(12, 8), pady=10)
         self._dot_id = self.dot.create_oval(2, 2, 14, 14, fill="#888", outline="")
-        self.status_lbl = tk.Label(status, text="已停止", bg=PANEL, fg=FG,
+        self.status_lbl = tk.Label(status, text="Stopped", bg=PANEL, fg=FG,
                                    font=("Segoe UI", 11, "bold"))
         self.status_lbl.pack(side="left", pady=10)
 
@@ -500,19 +500,19 @@ class Launcher:
         cfg = load_config()
         acct = tk.Frame(r, bg=BG)
         acct.pack(fill="x", padx=20, pady=(8, 2))
-        tk.Label(acct, text="账号", bg=BG, fg=MUTED, font=("Segoe UI", 9)).pack(anchor="w")
+        tk.Label(acct, text="Account", bg=BG, fg=MUTED, font=("Segoe UI", 9)).pack(anchor="w")
         self.uin_var = tk.StringVar(value=cfg.get("last_uin", DEFAULT_UIN))
         account_row = tk.Frame(acct, bg=BG)
         account_row.pack(fill="x", pady=(3, 0))
         self.uin_box = ttk.Combobox(account_row, textvariable=self.uin_var, values=cfg.get("recent", []),
                                     style="Dark.TCombobox", font=("Segoe UI", 11))
         self.uin_box.pack(side="left", fill="x", expand=True)
-        self.create_btn = tk.Button(account_row, text="新建账号", command=self.create_account,
+        self.create_btn = tk.Button(account_row, text="New Account", command=self.create_account,
                                     bg=ACCENT, fg="#12220a", activebackground=ACCENT_HOVER,
                                     relief="flat", cursor="hand2", font=ACCOUNT_FONT,
                                     padx=12, pady=6, bd=0)
         self.create_btn.pack(side="left", padx=(8, 0))
-        self.delete_btn = tk.Button(account_row, text="删除账号", command=self.delete_account,
+        self.delete_btn = tk.Button(account_row, text="Delete Account", command=self.delete_account,
                                     bg=STOP, fg="#ffffff", activebackground="#d5643c",
                                     relief="flat", cursor="hand2", font=ACCOUNT_FONT,
                                     padx=12, pady=6, bd=0)
@@ -520,12 +520,12 @@ class Launcher:
 
         btns = tk.Frame(r, bg=BG)
         btns.pack(fill="x", padx=20, pady=6)
-        self.play_btn = tk.Button(btns, text="开始", command=self.start,
+        self.play_btn = tk.Button(btns, text="Play", command=self.start,
                                   bg=ACCENT, fg="#12220a", activebackground=ACCENT_HOVER,
                                   activeforeground="#12220a", relief="flat", cursor="hand2",
                                   font=("Segoe UI", 13, "bold"), padx=18, pady=10, bd=0)
         self.play_btn.pack(side="left", expand=True, fill="x", padx=(0, 6))
-        self.stop_btn = tk.Button(btns, text="停止", command=self.stop,
+        self.stop_btn = tk.Button(btns, text="Stop", command=self.stop,
                                   bg=STOP, fg="#ffffff", activebackground="#d5643c",
                                   activeforeground="#ffffff", relief="flat", cursor="hand2",
                                   font=("Segoe UI", 13, "bold"), padx=18, pady=10, bd=0,
@@ -535,17 +535,17 @@ class Launcher:
         # 辅助功能：网页 GM 后台 + 旧版存档编辑器。
         tools = tk.Frame(r, bg=BG)
         tools.pack(fill="x", padx=20, pady=(0, 2))
-        self.admin_btn = tk.Button(tools, text="打开后台", command=self.open_admin,
+        self.admin_btn = tk.Button(tools, text="Open Admin Panel", command=self.open_admin,
                                    bg=PANEL, fg=FG, activebackground="#33481f", activeforeground=FG,
                                    relief="flat", cursor="hand2", font=("Segoe UI", 10, "bold"),
                                    padx=10, pady=6, bd=0)
         self.admin_btn.pack(side="left", expand=True, fill="x", padx=(0, 5))
-        self.profile_btn = tk.Button(tools, text="编辑资料", command=self.open_profile_editor,
+        self.profile_btn = tk.Button(tools, text="Edit Profile", command=self.open_profile_editor,
                                      bg=PANEL, fg=FG, activebackground="#33481f", activeforeground=FG,
                                      relief="flat", cursor="hand2", font=("Segoe UI", 10),
                                      padx=10, pady=6, bd=0)
         self.profile_btn.pack(side="left", expand=True, fill="x", padx=5)
-        self.edit_btn = tk.Button(tools, text="编辑存档", command=self.open_save_editor,
+        self.edit_btn = tk.Button(tools, text="Edit Save", command=self.open_save_editor,
                                   bg=PANEL, fg=FG, activebackground="#33481f", activeforeground=FG,
                                   relief="flat", cursor="hand2", font=("Segoe UI", 10),
                                   padx=10, pady=6, bd=0)
@@ -555,7 +555,7 @@ class Launcher:
         toggle = tk.Frame(r, bg=BG)
         toggle.pack(fill="x", padx=20, pady=(10, 0))
         self.log_shown = tk.BooleanVar(value=False)
-        self.toggle_btn = tk.Label(toggle, text="服务器日志", bg=BG, fg=MUTED,
+        self.toggle_btn = tk.Label(toggle, text="Server Log", bg=BG, fg=MUTED,
                                    font=("Segoe UI", 9), cursor="hand2")
         self.toggle_btn.pack(anchor="w")
         self.toggle_btn.bind("<Button-1>", lambda e: self._toggle_log())
@@ -569,7 +569,7 @@ class Launcher:
 
         foot = tk.Frame(r, bg=BG)
         foot.pack(side="bottom", fill="x", padx=20, pady=10)
-        tk.Label(foot, text="在本机运行   ·   网页 :%d   后台 :%d   游戏 :%d   策略 :%d"
+        tk.Label(foot, text="Running locally   ·   Web :%d   Admin :%d   Game :%d   Policy :%d"
                  % (WEB_PORT, ADMIN_PORT, GAME_PORT, POLICY_PORT),
                  bg=BG, fg=MUTED, font=("Segoe UI", 8)).pack(anchor="w")
         center_window(r, size=(580, 520))
@@ -578,9 +578,9 @@ class Launcher:
     def _create_account(self, raw_uin):
         uin = raw_uin.strip()
         if not valid_uin(uin):
-            raise ValueError("请输入有效的纯数字账号（1 到 4294967295）。")
+            raise ValueError("Enter a valid numeric account ID (1–4294967295).")
         if not valid_player_uin(uin):
-            raise ValueError("这个编号属于系统人机，请使用其他账号号码。")
+            raise ValueError("This ID is reserved for a system bot. Choose another account ID.")
         if SERVER_DIR not in sys.path:
             sys.path.insert(0, SERVER_DIR)
         import player_store as store
@@ -596,24 +596,24 @@ class Launcher:
             self._log("!! 新账号已创建，但无法保存最近账号，请检查目录写入权限。")
         self.uin_var.set(uin)
         self.uin_box.configure(values=recent[:8])
-        self._log("已创建账号 %s，点击开始即可进入新手流程。" % uin)
+        self._log("Account %s created. Click Play to start the tutorial." % uin)
         return uin
 
     def create_account(self):
         if self.running or port_open(GAME_PORT):
-            messagebox.showwarning("新建账号", "请先停止游戏服务，再创建和切换账号。")
+            messagebox.showwarning("New Account", "Stop the game services before creating or switching accounts.")
             return
         win = tk.Toplevel(self.root)
         win.withdraw()
-        win.title("新建账号")
+        win.title("New Account")
         win.configure(bg=BG)
         win.resizable(False, False)
         win.transient(self.root)
         body = tk.Frame(win, bg=BG)
         body.pack(padx=22, pady=18)
-        tk.Label(body, text="输入新的纯数字账号（1 到 4294967295）", bg=BG, fg=FG,
+        tk.Label(body, text="Enter a numeric account ID (1–4294967295)", bg=BG, fg=FG,
                  font=("Segoe UI", 10)).pack(anchor="w")
-        tk.Label(body, text="每个账号使用独立存档，已有号码不能重复创建。", bg=BG, fg=MUTED,
+        tk.Label(body, text="Each account has its own save; account IDs cannot be reused.", bg=BG, fg=MUTED,
                  font=("Segoe UI", 9)).pack(anchor="w", pady=(4, 10))
         entry = tk.Entry(body, bg=PANEL, fg=FG, insertbackground=FG,
                          relief="flat", font=("Segoe UI", 12), width=34)
@@ -629,9 +629,9 @@ class Launcher:
                 error.set(str(exc))
                 return
             win.destroy()
-            messagebox.showinfo("新建账号", "账号 %s 已创建并选中。\n点击“开始”进入游戏，设置角色名并完成新手引导。" % uin)
+            messagebox.showinfo("New Account", "账号 %s 已创建并选中。\n点击“开始”进入游戏，设置角色名并完成新手引导。" % uin)
 
-        tk.Button(body, text="创建并选中", command=submit, bg=ACCENT, fg="#12220a",
+        tk.Button(body, text="Create & Select", command=submit, bg=ACCENT, fg="#12220a",
                   activebackground=ACCENT_HOVER, relief="flat", cursor="hand2",
                   font=("Segoe UI", 10, "bold"), pady=7).pack(fill="x", pady=(4, 0))
         entry.bind("<Return>", submit)
@@ -644,10 +644,10 @@ class Launcher:
     # ---------------- 删除账号 ----------------
     def _delete_account(self, raw_uin):
         if self.running or port_open(GAME_PORT) or port_open(ADMIN_PORT):
-            raise ValueError("请先点击“停止”，关闭游戏服务和后台，再删除账号。")
+            raise ValueError("Click Stop first to close the game services and admin panel before deleting an account.")
         uin = raw_uin.strip()
         if not valid_uin(uin):
-            raise ValueError("请选择有效的纯数字账号（1 到 4294967295）。")
+            raise ValueError("Select a valid numeric account ID (1–4294967295).")
         if SERVER_DIR not in sys.path:
             sys.path.insert(0, SERVER_DIR)
         import account_management
@@ -664,16 +664,16 @@ class Launcher:
             self._log("!! 账号已删除，但最近账号列表保存失败，请检查目录写入权限。")
         self.uin_var.set(selected)
         self.uin_box.configure(values=recent)
-        self._log("已删除账号 %s。" % uin)
+        self._log("Account %s deleted." % uin)
         return result
 
     def delete_account(self):
         if self.running or port_open(GAME_PORT) or port_open(ADMIN_PORT):
-            themed_dialog(self.root, "删除账号", "请先点击“停止”，关闭游戏服务和后台，再删除账号。")
+            themed_dialog(self.root, "Delete Account", "Click Stop first to close the game services and admin panel before deleting an account.")
             return
         uin = self.uin_var.get().strip()
         if not valid_uin(uin):
-            themed_dialog(self.root, "删除账号", "请先选择要删除的有效账号。")
+            themed_dialog(self.root, "Delete Account", "请先选择要删除的有效账号。")
             return
         try:
             if SERVER_DIR not in sys.path:
@@ -681,13 +681,13 @@ class Launcher:
             import account_management
             player = account_management.get_account(uin)
             if not player:
-                themed_dialog(self.root, "删除账号", "账号 %s 尚无存档，无法删除。" % uin)
+                themed_dialog(self.root, "Delete Account", "账号 %s 尚无存档，无法删除。" % uin)
                 return
         except Exception as exc:
-            themed_dialog(self.root, "删除账号", "无法读取账号：\n%s" % exc)
+            themed_dialog(self.root, "Delete Account", "无法读取账号：\n%s" % exc)
             return
         confirmed = themed_dialog(
-            self.root, "确认删除账号", "账号：%s\n角色：%s" % (uin, player["name"]),
+            self.root, "Confirm Account Deletion", "账号：%s\n角色：%s" % (uin, player["name"]),
             detail="确定删除这个账号吗？\n将删除该账号的全部游戏进度、背包和植物卡等数据。\n删除后无法撤销。",
             confirm=True)
         if not confirmed:
@@ -695,12 +695,12 @@ class Launcher:
         try:
             result = self._delete_account(uin)
         except Exception as exc:
-            themed_dialog(self.root, "删除账号", "删除失败：\n%s" % exc)
+            themed_dialog(self.root, "Delete Account", "删除失败：\n%s" % exc)
             return
         notice = "账号 %s 已删除。" % uin
         if not result["config_saved"]:
             notice += "\n\n最近账号列表保存失败，下次打开前请检查目录写入权限。"
-        themed_dialog(self.root, "删除账号", notice)
+        themed_dialog(self.root, "Delete Account", notice)
 
     # ---------------- GM 网页后台 ----------------
     def open_admin(self):
@@ -717,11 +717,11 @@ class Launcher:
             self._begin_admin_wait(self.admin, self._session)
             return
         if port_open(ADMIN_PORT):
-            messagebox.showerror("无法打开后台", "端口 %d 已被其他程序占用，请关闭对应程序后重试。" % ADMIN_PORT)
+            messagebox.showerror("Unable to Open Admin Panel", "Port %d is already in use. Close the other process and try again." % ADMIN_PORT)
             return
         admin_script = os.path.join(SERVER_DIR, "admin_server.py")
         if not os.path.isfile(admin_script):
-            messagebox.showerror("无法打开后台", "缺少文件:\n%s" % admin_script)
+            messagebox.showerror("Unable to Open Admin Panel", "缺少文件:\n%s" % admin_script)
             return
         self._session += 1
         self._cancel.set()
@@ -733,7 +733,7 @@ class Launcher:
                 text=True, encoding="utf-8", errors="replace", bufsize=1,
                 env={**os.environ, "PYTHONIOENCODING": "utf-8", "PYTHONUNBUFFERED": "1"}, **HIDDEN_PROCESS)
         except Exception as exc:
-            messagebox.showerror("无法启动后台", repr(exc))
+            messagebox.showerror("Unable to Start Admin Panel", repr(exc))
             return
         self.admin = proc
         self.stop_btn.configure(state="normal")
@@ -793,7 +793,7 @@ class Launcher:
     def _run_gm(self, args):
         """运行 PvZ-Server-PoC/gm.py 并传入参数 (列表)，针对当前账号的存档操作；返回 (是否成功, 输出)。"""
         if self.running or port_open(GAME_PORT):
-            return False, "请先停止游戏服务，再修改存档。"
+            return False, "Stop the game services before editing the save."
         try:
             p = subprocess.run(python_command(os.path.join(SERVER_DIR, "gm.py"), *args),
                                cwd=SERVER_DIR, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=90,
@@ -805,14 +805,14 @@ class Launcher:
 
     def open_profile_editor(self):
         if self.running or port_open(GAME_PORT):
-            messagebox.showwarning("编辑资料", "请先停止游戏服务，再编辑个人资料。")
+            messagebox.showwarning("Edit Profile", "请先停止游戏服务，再编辑个人资料。")
             return
         uin = self.uin_var.get().strip()
         if not valid_uin(uin):
-            messagebox.showwarning("编辑资料", "请输入有效的纯数字账号（1 到 4294967295）。")
+            messagebox.showwarning("Edit Profile", "Enter a valid numeric account ID (1–4294967295).")
             return
         if not valid_player_uin(uin):
-            messagebox.showwarning("编辑资料", "这个编号属于系统人机，请选择玩家账号。")
+            messagebox.showwarning("Edit Profile", "这个编号属于系统人机，请选择玩家账号。")
             return
         try:
             if SERVER_DIR not in sys.path:
@@ -826,19 +826,19 @@ class Launcher:
             return open_profile_window(self.root, player, HERE, theme, select_avatar_image, center_window,
                 lambda request, baseline: save_profile_draft(self._run_gm, uin, request, baseline))
         except (ImportError, RuntimeError, OSError, ValueError, tk.TclError) as exc:
-            messagebox.showerror("编辑资料", "无法打开资料页面：\n%s" % exc)
+            messagebox.showerror("Edit Profile", "无法打开资料页面：\n%s" % exc)
             return
 
     def open_save_editor(self):
         if self.running or port_open(GAME_PORT):
-            messagebox.showwarning("存档编辑器", "请先停止游戏服务，再打开存档编辑器。")
+            messagebox.showwarning("Save Editor", "Stop the game services before opening the save editor.")
             return
         uin = self.uin_var.get().strip()
         if not valid_uin(uin):
-            messagebox.showwarning("存档编辑器", "请输入有效的纯数字账号（1 到 4294967295）。")
+            messagebox.showwarning("Save Editor", "Enter a valid numeric account ID (1–4294967295).")
             return
         if not valid_player_uin(uin):
-            messagebox.showwarning("存档编辑器", "这个编号属于系统人机，请选择玩家账号。")
+            messagebox.showwarning("Save Editor", "这个编号属于系统人机，请选择玩家账号。")
             return
         # 直接读取当前存档 (player_store 的数据库路径固定在 PvZ-Server-PoC/players.db)
         try:
@@ -848,12 +848,12 @@ class Launcher:
             store.init_db()   # 如果是全新安装，创建 players.db + 表结构
             player, _ = store.get_or_create_player(int(uin))
         except Exception as exc:
-            messagebox.showerror("存档编辑器", "无法打开存档:\n%r" % exc)
+            messagebox.showerror("Save Editor", "无法打开存档:\n%r" % exc)
             return
 
         win = tk.Toplevel(self.root)
         win.withdraw()
-        win.title("存档编辑器 — 账号 %s" % uin)
+        win.title("Save Editor — Account %s" % uin)
         win._account_uin = int(uin)
         win.configure(bg=BG)
         editor_size = (560, min(820, max(540, win.winfo_screenheight() - 140)))
@@ -872,10 +872,10 @@ class Launcher:
         canvas.bind("<Configure>", lambda e: canvas.itemconfigure(content, width=e.width))
         win.bind("<MouseWheel>", lambda e: canvas.yview_scroll(-int(e.delta / 120), "units"))
 
-        tk.Label(body, text="存档编辑器", bg=BG, fg=FG,
+        tk.Label(body, text="Save Editor", bg=BG, fg=FG,
                  font=("Segoe UI", 14, "bold")).pack(anchor="w", padx=16, pady=(14, 0))
-        note = ("游戏正在运行 — 请先停止，编辑后再点击开始以应用更改。"
-                if self.running else "账号 %s   ·   更改将在下次点击开始时生效。" % uin)
+        note = ("The game is running — stop it first, edit the save, then click Play to apply changes."
+                if self.running else "Account %s · Changes take effect the next time you click Play." % uin)
         tk.Label(body, text=note, bg=BG, fg=(STOP if self.running else MUTED),
                  font=("Segoe UI", 9)).pack(anchor="w", padx=16, pady=(2, 8))
 
@@ -885,7 +885,7 @@ class Launcher:
         def gm(args, ok_msg):
             ok, out = self._run_gm(args)
             status.configure(text=(ok_msg if ok else "失败 — " + out.strip().splitlines()[-1:][0]
-                                   if out.strip() else "失败"), fg=(ACCENT if ok else STOP))
+                                   if out.strip() else "Failed"), fg=(ACCENT if ok else STOP))
             if ok:
                 with store._db() as con:
                     latest = dict(con.execute("SELECT * FROM players WHERE uin=?", (int(uin),)).fetchone())
@@ -912,9 +912,9 @@ class Launcher:
         status.pack(anchor="w", padx=16, pady=(0, 4))
 
         # --- 货币 / 属性字段 -------------------------------------------------
-        FIELDS = [("等级", "level"), ("金币", "coin"), ("阳光", "sun"), ("蓝钻", "present_ticket"),
-                  ("金钻", "ticket"), ("声望", "fame"), ("体力", "energy"),
-                  ("好友点", "friend_point")]
+        FIELDS = [("Level", "level"), ("Coins", "coin"), ("Sun", "sun"), ("Blue Diamonds", "present_ticket"),
+                  ("Gold Diamonds", "ticket"), ("Fame", "fame"), ("Stamina", "energy"),
+                  ("Friend Points", "friend_point")]
         grid = tk.Frame(body, bg=PANEL)
         grid.pack(fill="x", padx=16, pady=4)
         ed_vars = {}
@@ -937,19 +937,19 @@ class Launcher:
         # --- VIP 等级 ---------------------------------------------------------------
         vipf = tk.Frame(body, bg=BG)
         vipf.pack(fill="x", padx=16, pady=(8, 2))
-        tk.Label(vipf, text="VIP 等级", bg=BG, fg=MUTED, font=("Segoe UI", 9)).pack(side="left")
-        VIP_OPTS = ["关闭", "VIP1", "VIP2", "VIP3"]
+        tk.Label(vipf, text="VIP Level", bg=BG, fg=MUTED, font=("Segoe UI", 9)).pack(side="left")
+        VIP_OPTS = ["Off", "VIP1", "VIP2", "VIP3"]
         cur_vip = shown_baseline["vip_level"]
-        vip_var = tk.StringVar(value=VIP_OPTS[cur_vip] if 0 <= cur_vip <= 3 else "关闭")
+        vip_var = tk.StringVar(value=VIP_OPTS[cur_vip] if 0 <= cur_vip <= 3 else "Off")
         vip_box = ttk.Combobox(vipf, textvariable=vip_var, values=VIP_OPTS, state="readonly",
                      style="Dark.TCombobox", width=8)
         vip_box.pack(side="left", padx=8)
         vip_box.bind("<<ComboboxSelected>>", lambda _event: privilege_dirty.add("vip_level"))
         # 塔防 特权 (塔防特权) — 同一行右侧
-        tk.Label(vipf, text="塔防 特权", bg=BG, fg=MUTED, font=("Segoe UI", 9)).pack(side="left", padx=(24, 0))
-        TD_OPTS = ["关闭", "开启"]
+        tk.Label(vipf, text="Tower Defense Perk", bg=BG, fg=MUTED, font=("Segoe UI", 9)).pack(side="left", padx=(24, 0))
+        TD_OPTS = ["Off", "On"]
         cur_td = shown_baseline["td_privilege"]
-        td_var = tk.StringVar(value=TD_OPTS[cur_td] if 0 <= cur_td <= 1 else "关闭")
+        td_var = tk.StringVar(value=TD_OPTS[cur_td] if 0 <= cur_td <= 1 else "Off")
         td_box = ttk.Combobox(vipf, textvariable=td_var, values=TD_OPTS, state="readonly",
                      style="Dark.TCombobox", width=6)
         td_box.pack(side="left", padx=8)
@@ -1042,7 +1042,7 @@ class Launcher:
             lv = vals[0]
             if lv.isdigit():
                 gm([uin, "cardlevel", lv], "已将所有植物卡设为 %s 级 (受账号等级上限限制)" % lv)
-        action_row("设置所有植物卡等级", [("等级", 5, "")], level_cards)
+        action_row("设置所有植物卡等级", [("Level", 5, "")], level_cards)
 
         # --- 钻石卡 (拥有钻石卡) -------------------------------------------
         # 玩家拥有的 Dto_DiamondInfo — 登录时通过 Cmd_Vip_SyncVipInfo_SC 推送，
@@ -1057,9 +1057,9 @@ class Launcher:
                 gm([uin, "diamond", f, b, y, x], "钻石卡已设置 — 重新启动以应用")
         action_row("拥有钻石卡",
                    [("标志", 4, str(player.get("diamond_flag", 1) or 0)),
-                    ("蓝钻", 4, str(player.get("diamond_blue_lvl", 0) or 0)),
+                    ("Blue Diamonds", 4, str(player.get("diamond_blue_lvl", 0) or 0)),
                     ("黄钻", 4, str(player.get("diamond_yellow_lvl", 0) or 0)),
-                    ("好友点", 4, str(player.get("diamond_xinyue_lvl", 0) or 0))],
+                    ("Friend Points", 4, str(player.get("diamond_xinyue_lvl", 0) or 0))],
                    apply_diamond)
 
         # --- 好友 (好友 + 好友卡) ---------------------------------------------
@@ -1186,7 +1186,7 @@ class Launcher:
         fr_row1.pack(fill="x", pady=(2, 1))
         fr_entry(fr_row1, "角色ID", fr_rid, 12)
         fr_entry(fr_row1, "名称", fr_name, 12)
-        fr_entry(fr_row1, "等级", fr_plv, 4)
+        fr_entry(fr_row1, "Level", fr_plv, 4)
 
         fr_row1b = tk.Frame(fr_box, bg=PANEL)
         fr_row1b.pack(fill="x", pady=(1, 1))
@@ -1198,9 +1198,9 @@ class Launcher:
         fr_row2 = tk.Frame(fr_box, bg=PANEL)
         fr_row2.pack(fill="x", pady=(1, 2))
         fr_entry(fr_row2, "标志", fr_df, 4)
-        fr_entry(fr_row2, "蓝钻", fr_db, 4)
+        fr_entry(fr_row2, "Blue Diamonds", fr_db, 4)
         fr_entry(fr_row2, "黄钻", fr_dy, 4)
-        fr_entry(fr_row2, "好友点", fr_dx, 4)
+        fr_entry(fr_row2, "Friend Points", fr_dx, 4)
 
         fr_list = tk.Listbox(body, bg=LOGBG, fg=FG, selectbackground=ACCENT,
                              selectforeground="#12220a", relief="flat", height=4,
@@ -1262,10 +1262,10 @@ class Launcher:
     def _toggle_log(self):
         if self.log_shown.get():
             self.log_frame.pack_forget()
-            self.toggle_btn.configure(text="服务器日志")
+            self.toggle_btn.configure(text="Server Log")
         else:
             self.log_frame.pack(fill="both", expand=True, padx=20, pady=(2, 0))
-            self.toggle_btn.configure(text="服务器日志")
+            self.toggle_btn.configure(text="Server Log")
         self.log_shown.set(not self.log_shown.get())
 
     def _set_status(self, text, colour):
@@ -1339,10 +1339,10 @@ class Launcher:
             return
         uin = self.uin_var.get().strip()
         if not valid_uin(uin):
-            messagebox.showwarning("账号", "请输入有效的纯数字账号（1 到 4294967295）。")
+            messagebox.showwarning("Account", "Enter a valid numeric account ID (1–4294967295).")
             return
         if not valid_player_uin(uin):
-            messagebox.showwarning("账号", "这个编号属于系统人机，请选择玩家账号。")
+            messagebox.showwarning("Account", "这个编号属于系统人机，请选择玩家账号。")
             return
         # Retire only the standalone admin process owned by this launcher.
         if self.admin and not self._terminate_owned(self.admin, "GM 后台"):
@@ -1372,7 +1372,7 @@ class Launcher:
         self.play_btn.configure(state="disabled")
         self.stop_btn.configure(state="normal")
         self.admin_btn.configure(state="normal")
-        self._set_status("正在初始化服务器…", "#e0b83a")
+        self._set_status("Initializing server…", "#e0b83a")
         self._log("--- 启动网页、后台、游戏和 Flash 策略服务；首次初始化可能需要数分钟 ---")
         self._session += 1
         self._cancel.set()
@@ -1482,7 +1482,7 @@ class Launcher:
             self.create_btn.configure(state="normal")
         if hasattr(self, "delete_btn"):
             self.delete_btn.configure(state="normal")
-        self._set_status("已停止", "#888")
+        self._set_status("Stopped", "#888")
 
 
     def _poll_log(self):
