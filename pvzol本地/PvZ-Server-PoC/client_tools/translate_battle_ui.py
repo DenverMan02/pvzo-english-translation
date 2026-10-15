@@ -136,6 +136,37 @@ def _patch_abc_strings(abc: bytes) -> tuple[bytes, int, int]:
     return patched, len(replacements), hits
 
 
+def _iter_abc_tags(raw: bytes):
+    """Yield (abc_start, abc_end, tag_start, header_len, tag_len) for every DoABC2 tag."""
+    nbits = raw[8] >> 3
+    rect_length = (5 + 4 * nbits + 7) // 8
+    pos = 8 + rect_length + 4  # RECT, frame rate, frame count
+    while pos + 2 <= len(raw):
+        header = struct.unpack_from("<H", raw, pos)[0]
+        tag_code, tag_len = header >> 6, header & 0x3F
+        header_len = 2
+        if tag_len == 0x3F:
+            if pos + 6 > len(raw):
+                raise ValueError("Truncated SWF tag header")
+            tag_len = struct.unpack_from("<I", raw, pos + 2)[0]
+            header_len = 6
+        payload = pos + header_len
+        tag_end = payload + tag_len
+        if tag_end > len(raw):
+            raise ValueError("SWF tag extends beyond file length")
+        if tag_code == 82:  # DoABC2: flags, NUL-terminated name, ABC
+            if header_len != 6:
+                raise ValueError("DoABC2 tag is not long-form; refusing unsafe rewrite")
+            name_start = payload + 4
+            name_end = raw.find(b"\\x00", name_start, tag_end)
+            if name_end < 0:
+                raise ValueError("DoABC2 tag has no terminating ABC name")
+            yield name_end + 1, tag_end, pos + 2, header_len, tag_len
+        if tag_code == 0:
+            break
+        pos = tag_end
+
+
 def _patch_swf(packed: bytes) -> tuple[bytes, int, int, bool]:
     if packed[:3] == b"CWS":
         raw = bytearray(packed[:8] + zlib.decompress(packed[8:]))
@@ -146,31 +177,43 @@ def _patch_swf(packed: bytes) -> tuple[bytes, int, int, bool]:
     if len(raw) != int.from_bytes(raw[4:8], "little"):
         raise ValueError("SWF file-length header does not match its contents")
 
-    abc_start, abc_end, tag_length_offset, tag_header_length, tag_length = find_abc(raw)
-    if tag_header_length != 6:
-        raise ValueError("The DoABC tag is not long-form; refusing an unsafe header rewrite")
-    abc = bytes(raw[abc_start:abc_end])
-    info = parse_abc(abc)
-    patched_abc, changed_strings, replacement_hits = _patch_abc_strings(abc)
-    already_translated = sum(any(sentinel in value for sentinel in ENGLISH_SENTINELS) for value in info.strings) >= 3
+    tags = list(_iter_abc_tags(raw))
+    if not tags:
+        raise ValueError("No DoABC2 bytecode blocks found in SWF")
+    changed_strings = replacement_hits = 0
+    already_translated = False
+    # Process tags from last to first so changing one ABC length cannot shift
+    # the offsets of ABC blocks that have not been processed yet.
+    for abc_start, abc_end, tag_length_offset, tag_header_length, tag_length in reversed(tags):
+        abc = bytes(raw[abc_start:abc_end])
+        info = parse_abc(abc)
+        patched_abc, changed, hits = _patch_abc_strings(abc)
+        already_translated = already_translated or sum(
+            any(sentinel in value for sentinel in ENGLISH_SENTINELS) for value in info.strings
+        ) >= 3
+        if changed == 0:
+            continue
+        changed_strings += changed
+        replacement_hits += hits
+        raw[abc_start:abc_end] = patched_abc
+        struct.pack_into("<I", raw, tag_length_offset, tag_length + len(patched_abc) - len(abc))
+
     if changed_strings == 0:
         return packed, 0, 0, already_translated
 
-    raw[abc_start:abc_end] = patched_abc
-    struct.pack_into("<I", raw, tag_length_offset, tag_length + len(patched_abc) - len(abc))
     struct.pack_into("<I", raw, 4, len(raw))
     raw[:3] = b"CWS"
     output = bytes(raw[:8]) + zlib.compress(bytes(raw[8:]), 9)
-    # Re-read the generated SWF and ABC before letting it be served to the game.
+    # Re-open and parse every DoABC2 block so malformed output never gets served.
     verified = bytearray(output[:8] + zlib.decompress(output[8:]))
     if len(verified) != int.from_bytes(verified[4:8], "little"):
         raise ValueError("Patched SWF failed its file-length check")
-    a, b, _t, _h, _l = find_abc(verified)
-    verify_info = parse_abc(bytes(verified[a:b]))
-    # parse_abc above validates that the new ABC constant pool remains readable.
+    verify_tags = list(_iter_abc_tags(verified))
+    if len(verify_tags) != len(tags):
+        raise ValueError("Patched SWF changed the number of DoABC2 blocks")
+    for a, b, _t, _h, _l in verify_tags:
+        parse_abc(bytes(verified[a:b]))
     return output, changed_strings, replacement_hits, True
-
-
 def _atomic_write(path: Path, data: bytes) -> None:
     temporary = path.with_name(path.name + ".translation-tmp")
     temporary.write_bytes(data)
