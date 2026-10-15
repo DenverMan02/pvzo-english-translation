@@ -110,7 +110,6 @@ def _patch_abc_strings(abc: bytes) -> tuple[bytes, int, int]:
         else:
             chunks.append(abc[start:p])
     patched = abc[:entries_start] + b"".join(chunks) + abc[p:]
-    english_present = any(sentinel in patched.decode("latin1", "ignore") for sentinel in ENGLISH_SENTINELS)
     return patched, len(replacements), hits
 
 
@@ -130,7 +129,7 @@ def _patch_swf(packed: bytes) -> tuple[bytes, int, int, bool]:
     abc = bytes(raw[abc_start:abc_end])
     info = parse_abc(abc)
     patched_abc, changed_strings, replacement_hits = _patch_abc_strings(abc)
-    already_translated = any(any(sentinel in value for sentinel in ENGLISH_SENTINELS) for value in info.strings)
+    already_translated = sum(any(sentinel in value for sentinel in ENGLISH_SENTINELS) for value in info.strings) >= 3
     if changed_strings == 0:
         return packed, 0, 0, already_translated
 
