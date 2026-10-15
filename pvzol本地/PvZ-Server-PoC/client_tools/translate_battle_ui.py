@@ -144,12 +144,7 @@ def _patch_swf(packed: bytes) -> tuple[bytes, int, int, bool]:
         raise ValueError("Patched SWF failed its file-length check")
     a, b, _t, _h, _l = find_abc(verified)
     verify_info = parse_abc(bytes(verified[a:b]))
-    translated = "\n".join(verify_info.strings)
-    for label in ("Base Power", "Plant Puzzle", "World Tree", "Laboratory", "Initiative"):
-        # Not every label exists in every build, but labels that were present
-        # in the original should not be lost during patching.
-        if label in TRANSLATIONS.values() and label not in translated:
-            continue
+    # parse_abc above validates that the new ABC constant pool remains readable.
     return output, changed_strings, replacement_hits, True
 
 
