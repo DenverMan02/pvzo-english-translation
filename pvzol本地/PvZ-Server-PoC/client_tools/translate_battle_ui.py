@@ -103,6 +103,8 @@ MODULE_NAMES = (
     "ModuleNutrition.swf", "ModuleNutritionExchange.swf", "ModuleGarden.swf",
     "ModuleWorldTree.swf", "ModuleLab.swf", "ModuleStrengthen.swf",
     "ModuleTreasure.swf", "ModuleUnion.swf", "ModuleRoleInfo.swf",
+    "ModuleCardDNA.swf", "ModuleVip.swf", "ModulePrivilege.swf",
+    "ModulePrivilegeBar.swf", "ModuleDailyTD.swf", "ModuleTD.swf", "ModuleTD_p.swf",
 )
 VERSION_NAME = "fileVer.xml"
 
