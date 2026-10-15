@@ -292,7 +292,11 @@ def apply_translation() -> bool:
             continue
 
         original = source.read_bytes()
-        patched, changed_strings, hits, blocked, block_count, skipped_blocks = _patch_swf(original)
+        try:
+            patched, changed_strings, hits, blocked, block_count, skipped_blocks = _patch_swf(original)
+        except Exception as exc:
+            print("[battle-ui-translation] Skipped %s: %s" % (module_name, exc))
+            continue
         if changed_strings == 0:
             if blocked:
                 print("[battle-ui-translation] %s: checked %d ABC block(s), skipped %d unsupported; %d label occurrences are structural identifiers, so they were left untouched." % (module_name, block_count, skipped_blocks, blocked))
@@ -310,9 +314,11 @@ def apply_translation() -> bool:
             match.group(1) + str(len(patched)).encode("ascii")
             + match.group(2) + md5.encode("ascii") + match.group(3)
         )
-        version_out, count = re.subn(pattern, new_entry, version_out)
+        candidate_version, count = re.subn(pattern, new_entry, version_out)
         if count != 1:
-            raise ValueError("Expected exactly one %s entry in fileVer.xml" % module_name)
+            print("[battle-ui-translation] Skipped %s: expected one fileVer entry, found %d." % (module_name, count))
+            continue
+        version_out = candidate_version
 
         stem = module_name[:-4]
         aliases = [
