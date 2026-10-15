@@ -295,7 +295,7 @@ def apply_translation() -> bool:
             aliases.extend(
                 path for path in [WEBROOT / "Game.swf", *WEBROOT.glob("Game_*.swf")]
                 if path.is_file()
-                and re.fullmatch(r"Game_[0-9a-f]{32}\.swf", path.name) or path.name == "Game.swf"
+                and (re.fullmatch(r"Game_[0-9a-f]{32}\.swf", path.name) or path.name == "Game.swf")
             )
         aliases = list(dict.fromkeys(aliases))
         expected_alias = WEBROOT / (stem + "_" + md5 + ".swf")
