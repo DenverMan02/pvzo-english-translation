@@ -26,6 +26,12 @@ from patch_module_card_clickthrough import encode_u30, find_abc, parse_abc, s32,
 # Longest phrases first. These are player-facing terms visible in battle mode.
 TRANSLATIONS = {
     "基础战力": "Base Power",
+    "部队总先攻": "Team Initiative",
+    "上阵植物": "Plants Deployed",
+    "返回小镇": "Return to Town",
+    "查看星性": "View Attributes",
+    "队伍总战力": "Total Team Power",
+    "战斗力": "Combat Power",
     "今日免费重置：": "Free resets today: ",
     "剩余次数：": "Remaining resets: ",
     "金钻消耗：": "Diamond cost: ",
@@ -71,9 +77,10 @@ TRANSLATIONS = {
 ORDERED_TRANSLATIONS = sorted(TRANSLATIONS.items(), key=lambda item: len(item[0]), reverse=True)
 ENGLISH_SENTINELS = (
     "Base Power", "Plant Puzzle", "World Tree", "Laboratory", "Initiative",
+    "Team Initiative", "Plants Deployed", "Return to Town", "View Attributes",
     "No rewards available", "No new battle reports", "Remaining resets", "Retry Challenge",
 )
-MODULE_NAMES = ("ModuleBattleLineup.swf", "ModuleEndlessFuben.swf")
+MODULE_NAMES = ("ModuleBattleLineup.swf", "ModuleBattle.swf", "ModuleEmbattle.swf", "ModuleEndlessFuben.swf")
 VERSION_NAME = "fileVer.xml"
 
 
