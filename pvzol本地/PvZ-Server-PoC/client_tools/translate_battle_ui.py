@@ -158,7 +158,7 @@ def _iter_abc_tags(raw: bytes):
             if header_len != 6:
                 raise ValueError("DoABC2 tag is not long-form; refusing unsafe rewrite")
             name_start = payload + 4
-            name_end = raw.find(b"\\x00", name_start, tag_end)
+            name_end = raw.find(b"\x00", name_start, tag_end)
             if name_end < 0:
                 raise ValueError("DoABC2 tag has no terminating ABC name")
             yield name_end + 1, tag_end, pos + 2, header_len, tag_len
