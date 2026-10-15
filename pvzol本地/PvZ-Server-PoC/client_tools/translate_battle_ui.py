@@ -99,9 +99,31 @@ MODULE_NAMES = ("Game_n.swf", "Game_p.swf", "ModuleCard.swf", "ModuleCardBar.swf
 VERSION_NAME = "fileVer.xml"
 
 
+# Short stat names should only be translated when they are standalone labels or
+# delimited stat tokens. This avoids turning ordinary Chinese sentences into a
+# Chinese/English mixture just because they mention health, attacks, or skills.
+CONTEXTUAL_TERMS = {
+    "攻击力", "防御力", "生命上限", "生命值", "健康", "生命",
+    "技能伤害", "暴击伤害", "暴击率", "总和", "战力", "先攻",
+    "果实", "基因", "装备", "洗炼", "装甲", "装扮", "技能",
+    "普攻", "技力", "攻击", "防御", "命中", "闪避", "韧性",
+    "暴击", "抗暴", "护盾", "减伤", "吸血", "速度", "强化", "星级",
+}
+TOKEN_BOUNDARY_RE = r"[\s\[\]【】()（）:：+/\-·,，]"
+
+
 def _translate_display_string(value: str) -> str:
+    # First translate explicit UI labels, multi-word labels, and whole phrases.
     for old, new in ORDERED_TRANSLATIONS:
-        value = value.replace(old, new)
+        if old not in CONTEXTUAL_TERMS:
+            value = value.replace(old, new)
+
+    # Then translate short stat terms only at clear label/token boundaries.
+    for old, new in ORDERED_TRANSLATIONS:
+        if old not in CONTEXTUAL_TERMS:
+            continue
+        pattern = r"(^|" + TOKEN_BOUNDARY_RE + r")" + re.escape(old) + r"(?=$|" + TOKEN_BOUNDARY_RE + r"|\d|[%％])"
+        value = re.sub(pattern, lambda match, replacement=new: match.group(1) + replacement, value)
     return value
 
 
