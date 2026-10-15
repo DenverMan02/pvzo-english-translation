@@ -75,11 +75,6 @@ TRANSLATIONS = {
     "技能": "Skill",
 }
 ORDERED_TRANSLATIONS = sorted(TRANSLATIONS.items(), key=lambda item: len(item[0]), reverse=True)
-ENGLISH_SENTINELS = (
-    "Base Power", "Plant Puzzle", "World Tree", "Laboratory", "Initiative",
-    "Team Initiative", "Plants Deployed", "Return to Town", "View Attributes",
-    "No rewards available", "No new battle reports", "Remaining resets", "Retry Challenge",
-)
 MODULE_NAMES = ("ModuleBattleLineup.swf", "ModuleBattle.swf", "ModuleEmbattle.swf", "ModuleEndlessFuben.swf")
 VERSION_NAME = "fileVer.xml"
 
@@ -109,6 +104,7 @@ def _patch_abc_strings(abc: bytes) -> tuple[bytes, int, int]:
 
     replacements = {}
     hits = 0
+    blocked = 0
     p = 4  # minor_version, major_version
     for _ in range(2):  # int and uint pools
         count, p = u30(abc, p)
@@ -124,7 +120,10 @@ def _patch_abc_strings(abc: bytes) -> tuple[bytes, int, int]:
         size, p = u30(abc, p)
         original = abc[p:p + size].decode("utf-8", "replace")
         p += size
-        translated = original if index in protected else _translate_display_string(original)
+        proposed = _translate_display_string(original)
+        translated = original if index in protected else proposed
+        if index in protected and proposed != original:
+            blocked += sum(original.count(old) for old, _new in ORDERED_TRANSLATIONS if old in original)
         if translated != original:
             replacements[index] = translated
             hits += sum(original.count(old) for old, _new in ORDERED_TRANSLATIONS if old in original)
@@ -133,7 +132,7 @@ def _patch_abc_strings(abc: bytes) -> tuple[bytes, int, int]:
         else:
             chunks.append(abc[start:p])
     patched = abc[:entries_start] + b"".join(chunks) + abc[p:]
-    return patched, len(replacements), hits
+    return patched, len(replacements), hits, blocked
 
 
 def _iter_abc_tags(raw: bytes):
@@ -167,7 +166,7 @@ def _iter_abc_tags(raw: bytes):
         pos = tag_end
 
 
-def _patch_swf(packed: bytes) -> tuple[bytes, int, int, bool]:
+def _patch_swf(packed: bytes) -> tuple[bytes, int, int, int, int]:
     if packed[:3] == b"CWS":
         raw = bytearray(packed[:8] + zlib.decompress(packed[8:]))
     elif packed[:3] == b"FWS":
@@ -180,17 +179,13 @@ def _patch_swf(packed: bytes) -> tuple[bytes, int, int, bool]:
     tags = list(_iter_abc_tags(raw))
     if not tags:
         raise ValueError("No DoABC2 bytecode blocks found in SWF")
-    changed_strings = replacement_hits = 0
-    already_translated = False
+    changed_strings = replacement_hits = blocked_strings = 0
     # Process tags from last to first so changing one ABC length cannot shift
     # the offsets of ABC blocks that have not been processed yet.
     for abc_start, abc_end, tag_length_offset, tag_header_length, tag_length in reversed(tags):
         abc = bytes(raw[abc_start:abc_end])
-        info = parse_abc(abc)
-        patched_abc, changed, hits = _patch_abc_strings(abc)
-        already_translated = already_translated or sum(
-            any(sentinel in value for sentinel in ENGLISH_SENTINELS) for value in info.strings
-        ) >= 3
+        patched_abc, changed, hits, blocked = _patch_abc_strings(abc)
+        blocked_strings += blocked
         if changed == 0:
             continue
         changed_strings += changed
@@ -199,7 +194,7 @@ def _patch_swf(packed: bytes) -> tuple[bytes, int, int, bool]:
         struct.pack_into("<I", raw, tag_length_offset, tag_length + len(patched_abc) - len(abc))
 
     if changed_strings == 0:
-        return packed, 0, 0, already_translated
+        return packed, 0, 0, blocked_strings, len(tags)
 
     struct.pack_into("<I", raw, 4, len(raw))
     raw[:3] = b"CWS"
@@ -213,7 +208,7 @@ def _patch_swf(packed: bytes) -> tuple[bytes, int, int, bool]:
         raise ValueError("Patched SWF changed the number of DoABC2 blocks")
     for a, b, _t, _h, _l in verify_tags:
         parse_abc(bytes(verified[a:b]))
-    return output, changed_strings, replacement_hits, True
+    return output, changed_strings, replacement_hits, blocked_strings, len(tags)
 def _atomic_write(path: Path, data: bytes) -> None:
     temporary = path.with_name(path.name + ".translation-tmp")
     temporary.write_bytes(data)
@@ -236,9 +231,12 @@ def apply_translation() -> bool:
             continue
 
         original = source.read_bytes()
-        patched, changed_strings, hits, already_translated = _patch_swf(original)
-        if changed_strings == 0 and not already_translated:
-            print("[battle-ui-translation] No safe display strings found in %s; no change." % module_name)
+        patched, changed_strings, hits, blocked, block_count = _patch_swf(original)
+        if changed_strings == 0:
+            if blocked:
+                print("[battle-ui-translation] %s: checked %d ABC block(s); %d label occurrences are structural identifiers, so they were left untouched." % (module_name, block_count, blocked))
+            else:
+                print("[battle-ui-translation] %s: checked %d ABC block(s); no untranslated matching display strings found." % (module_name, block_count))
             continue
 
         md5 = hashlib.md5(patched).hexdigest()
