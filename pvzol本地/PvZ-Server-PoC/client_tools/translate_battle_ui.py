@@ -186,7 +186,7 @@ def _iter_abc_tags(raw: bytes):
         pos = tag_end
 
 
-def _patch_swf(packed: bytes) -> tuple[bytes, int, int, int, int]:
+def _patch_swf(packed: bytes) -> tuple[bytes, int, int, int, int, int]:
     if packed[:3] == b"CWS":
         raw = bytearray(packed[:8] + zlib.decompress(packed[8:]))
     elif packed[:3] == b"FWS":
@@ -199,22 +199,32 @@ def _patch_swf(packed: bytes) -> tuple[bytes, int, int, int, int]:
     tags = list(_iter_abc_tags(raw))
     if not tags:
         raise ValueError("No DoABC2 bytecode blocks found in SWF")
-    changed_strings = replacement_hits = blocked_strings = 0
+    changed_strings = replacement_hits = blocked_strings = skipped_blocks = 0
+    patched_tag_indexes = set()
     # Process tags from last to first so changing one ABC length cannot shift
     # the offsets of ABC blocks that have not been processed yet.
-    for abc_start, abc_end, tag_length_offset, tag_header_length, tag_length in reversed(tags):
+    for tag_index in range(len(tags) - 1, -1, -1):
+        abc_start, abc_end, tag_length_offset, tag_header_length, tag_length = tags[tag_index]
         abc = bytes(raw[abc_start:abc_end])
-        patched_abc, changed, hits, blocked = _patch_abc_strings(abc)
+        try:
+            patched_abc, changed, hits, blocked = _patch_abc_strings(abc)
+        except Exception as exc:
+            # Some game SWFs use ASC bytecode variants unsupported by the small
+            # helper parser. Skip only that block, not every other block/module.
+            skipped_blocks += 1
+            print("[battle-ui-translation] Skipping unsupported ABC block %d: %s" % (tag_index + 1, exc))
+            continue
         blocked_strings += blocked
         if changed == 0:
             continue
         changed_strings += changed
         replacement_hits += hits
+        patched_tag_indexes.add(tag_index)
         raw[abc_start:abc_end] = patched_abc
         struct.pack_into("<I", raw, tag_length_offset, tag_length + len(patched_abc) - len(abc))
 
     if changed_strings == 0:
-        return packed, 0, 0, blocked_strings, len(tags)
+        return packed, 0, 0, blocked_strings, len(tags), skipped_blocks
 
     struct.pack_into("<I", raw, 4, len(raw))
     raw[:3] = b"CWS"
@@ -226,9 +236,10 @@ def _patch_swf(packed: bytes) -> tuple[bytes, int, int, int, int]:
     verify_tags = list(_iter_abc_tags(verified))
     if len(verify_tags) != len(tags):
         raise ValueError("Patched SWF changed the number of DoABC2 blocks")
-    for a, b, _t, _h, _l in verify_tags:
-        parse_abc(bytes(verified[a:b]))
-    return output, changed_strings, replacement_hits, blocked_strings, len(tags)
+    for index, (a, b, _t, _h, _l) in enumerate(verify_tags):
+        if index in patched_tag_indexes:
+            parse_abc(bytes(verified[a:b]))
+    return output, changed_strings, replacement_hits, blocked_strings, len(tags), skipped_blocks
 def _atomic_write(path: Path, data: bytes) -> None:
     temporary = path.with_name(path.name + ".translation-tmp")
     temporary.write_bytes(data)
@@ -251,12 +262,12 @@ def apply_translation() -> bool:
             continue
 
         original = source.read_bytes()
-        patched, changed_strings, hits, blocked, block_count = _patch_swf(original)
+        patched, changed_strings, hits, blocked, block_count, skipped_blocks = _patch_swf(original)
         if changed_strings == 0:
             if blocked:
-                print("[battle-ui-translation] %s: checked %d ABC block(s); %d label occurrences are structural identifiers, so they were left untouched." % (module_name, block_count, blocked))
+                print("[battle-ui-translation] %s: checked %d ABC block(s), skipped %d unsupported; %d label occurrences are structural identifiers, so they were left untouched." % (module_name, block_count, skipped_blocks, blocked))
             else:
-                print("[battle-ui-translation] %s: checked %d ABC block(s); no untranslated matching display strings found." % (module_name, block_count))
+                print("[battle-ui-translation] %s: checked %d ABC block(s), skipped %d unsupported; no untranslated matching display strings found." % (module_name, block_count, skipped_blocks))
             continue
 
         md5 = hashlib.md5(patched).hexdigest()
