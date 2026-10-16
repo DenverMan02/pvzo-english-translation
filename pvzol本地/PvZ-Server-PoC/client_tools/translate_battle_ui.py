@@ -1197,6 +1197,7 @@ CONTEXTUAL_ORDERED_TRANSLATIONS = sorted(
     reverse=True,
 )
 _CONTEXTUAL_REPLACEMENTS = dict(CONTEXTUAL_ORDERED_TRANSLATIONS)
+_CONTEXTUAL_START_CHARS = frozenset(term[0] for term, _translation in CONTEXTUAL_ORDERED_TRANSLATIONS if term)
 _CONTEXTUAL_TRANSLATION_RE = re.compile(
     r"(?P<prefix>^|" + TOKEN_BOUNDARY_RE + r")"
     r"(?P<term>"
@@ -1214,10 +1215,14 @@ def _translate_display_string(value: str) -> str:
 
     # One precompiled alternation replaces every standalone label in one pass.
     # Longest terms are listed first so a complete phrase wins over a shorter term.
-    value = _CONTEXTUAL_TRANSLATION_RE.sub(
-        lambda match: match.group("prefix") + _CONTEXTUAL_REPLACEMENTS[match.group("term")],
-        value,
-    )
+    # Most constants in the main game SWFs are English identifiers or resource
+    # names. Skip the large UI matcher unless the string contains a possible
+    # first character of a translated label.
+    if any(char in _CONTEXTUAL_START_CHARS for char in value):
+        value = _CONTEXTUAL_TRANSLATION_RE.sub(
+            lambda match: match.group("prefix") + _CONTEXTUAL_REPLACEMENTS[match.group("term")],
+            value,
+        )
 
     # In this one split ActionScript toast, the stage suffix is stored separately.
     if value.startswith(_ENDLESS_FAILURE_PREFIX) and value.endswith("关"):
