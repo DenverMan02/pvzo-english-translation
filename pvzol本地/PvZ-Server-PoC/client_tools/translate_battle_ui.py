@@ -177,6 +177,30 @@ MODULE_NAMES = (
     "ModulePrivilegeBar.swf", "ModuleDailyTD.swf", "ModuleTD.swf", "ModuleTD_p.swf",
 )
 VERSION_NAME = "fileVer.xml"
+EXCLUDED_MODULES = {"ModuleClientDBRes.swf", "ModuleFont.swf"}
+
+
+def _module_targets(manifest: bytes) -> list[str]:
+    """Return canonical UI SWF modules listed in the active asset manifest.
+
+    Hashed files are aliases of canonical modules and are updated alongside
+    their source. Client DB resources and fonts are deliberately excluded.
+    """
+    declared = []
+    pattern = rb'<file\s+name="([^"]+\.swf)"\s+size="[^"]+"\s+ver="[^"]+"\s*/>'
+    for match in re.finditer(pattern, manifest):
+        try:
+            name = match.group(1).decode("ascii")
+        except UnicodeDecodeError:
+            continue
+        if not name.startswith("Module") or not name.endswith(".swf"):
+            continue
+        if re.fullmatch(r"Module.*_[0-9a-f]{32}\.swf", name):
+            continue
+        if name not in EXCLUDED_MODULES:
+            declared.append(name)
+    ordered = list(dict.fromkeys([*MODULE_NAMES, *declared]))
+    return [name for name in ordered if name not in EXCLUDED_MODULES]
 
 
 # Short stat names should only be translated when they are standalone labels or
@@ -359,9 +383,10 @@ def apply_translation() -> bool:
         return False
 
     version_out = version_file.read_bytes()
+    target_modules = _module_targets(version_out)
     prepared = []
-    print("[battle-ui-translation] Checking %d live SWF modules for untranslated labels." % len(MODULE_NAMES))
-    for module_name in MODULE_NAMES:
+    print("[battle-ui-translation] Checking %d live SWF modules for untranslated labels." % len(target_modules))
+    for module_name in target_modules:
         print("[battle-ui-translation] Scanning %s..." % module_name)
         source = WEBROOT / module_name
         if not source.is_file():
