@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# macOS 双击入口：找一个同时带 tkinter 的 Python，再打开图形启动器。
-# 某些 Homebrew Python 默认不含 tkinter，所以不能只依赖 PATH 里的 python3。
+# macOS launcher: find a Python build with tkinter, then open the graphical launcher.
+# Some Homebrew Python builds omit tkinter, so do not rely only on python3 in PATH.
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR" || exit 1
@@ -25,8 +25,8 @@ do
     fi
 done
 
-MESSAGE="未找到支持 tkinter 的 Python 3。请安装 python.org 版 Python 3 后再试。"
-/usr/bin/osascript -e 'display dialog "未找到支持 tkinter 的 Python 3。请安装 python.org 版 Python 3 后再试。" buttons {"好"} default button 1 with icon stop' 2>/dev/null || true
+MESSAGE="Python 3 with tkinter was not found. Install Python 3 from python.org and try again."
+/usr/bin/osascript -e 'display dialog "Python 3 with tkinter was not found. Install Python 3 from python.org and try again." buttons {"OK"} default button 1 with icon stop' 2>/dev/null || true
 echo "$MESSAGE"
-read -r -p "按 Enter 键关闭…" _
+read -r -p "Press Enter to close…" _
 exit 1
