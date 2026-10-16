@@ -10,10 +10,12 @@ from pathlib import Path
 SERVER = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(SERVER / "client_tools"))
 
-from translate_battle_ui import _iter_edit_text_fields, _module_targets, _patch_abc_strings, _patch_swf, _read_constant_pools, _translate_display_string
+from translate_battle_ui import SUBSTRING_TRANSLATIONS, TRANSLATIONS, _iter_edit_text_fields, _module_targets, _patch_abc_strings, _patch_swf, _read_constant_pools, _translate_display_string
 
 
 class BattleUITranslationTests(unittest.TestCase):
+    def test_substring_translation_keys_all_exist(self):
+        self.assertEqual(set(SUBSTRING_TRANSLATIONS) - set(TRANSLATIONS), set())
     def test_bulk_label_translation_uses_one_pass_without_losing_neighbors(self):
         text = " | ".join(["生命+1500 技力+250", "阵容", "连续签到", "世界BOSS", "当前等级：120"] * 40)
         expected = " | ".join(["Health+1500 Skill Power+250", "Formation", "Consecutive Check-Ins", "World Boss", "Current Level: 120"] * 40)
