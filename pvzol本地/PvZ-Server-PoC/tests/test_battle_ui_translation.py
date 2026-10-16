@@ -109,7 +109,7 @@ class BattleUITranslationTests(unittest.TestCase):
 
     def test_constant_pool_translation_does_not_need_method_body_parser(self):
         # Minimal ABC header and constant pools only; there is no method/body tail.
-        abc = b"\\x00\\x00\\x2e\\x00\\x01\\x01\\x01\\x02\\x06" + "生命".encode("utf-8") + b"\\x01\\x01\\x01"
+        abc = bytes([0, 0, 46, 0, 1, 1, 1, 2, 6]) + "生命".encode("utf-8") + bytes([1, 1, 1])
         patched, changed, hits, blocked = _patch_abc_strings(abc)
         self.assertEqual(changed, 1)
         self.assertEqual(hits, 1)
