@@ -1,9 +1,10 @@
-"""Translate hardcoded battle-card tooltip labels in the live SWF client.
+"""Translate hardcoded player-facing strings in the live SWF modules.
 
-This patches live battle/formation tooltip and HUD modules plus Endless Fuben messages; it does not edit clientDB files.
-Only display-string constants are edited: strings used as ABC namespace or
-multiname identifiers are excluded to avoid renaming ActionScript properties.
-The launcher calls apply_translation() before the web server starts.
+Scans canonical UI modules from fileVer.xml and the main Game_n/Game_p builds.
+Client database resources and font assets are excluded. Only display strings
+are edited; ActionScript namespace/property identifiers are protected.
+The asset server runs this before serving the game, and updates version hashes
+and hashed SWF aliases when a module changes.
 """
 from __future__ import annotations
 
@@ -635,11 +636,14 @@ def apply_translation() -> bool:
     version_out = version_file.read_bytes()
     target_modules = _module_targets(version_out)
     prepared = []
+    scanned_count = skipped_count = unchanged_count = 0
     print("[battle-ui-translation] Checking %d live SWF modules for untranslated labels." % len(target_modules))
     for module_name in target_modules:
+        scanned_count += 1
         print("[battle-ui-translation] Scanning %s..." % module_name)
         source = WEBROOT / module_name
         if not source.is_file():
+            skipped_count += 1
             print("[battle-ui-translation] Skipped missing module: %s" % module_name)
             continue
 
@@ -647,9 +651,11 @@ def apply_translation() -> bool:
         try:
             patched, changed_strings, hits, blocked, block_count, skipped_blocks = _patch_swf(original)
         except Exception as exc:
+            skipped_count += 1
             print("[battle-ui-translation] Skipped %s: %s" % (module_name, exc))
             continue
         if changed_strings == 0:
+            unchanged_count += 1
             if blocked:
                 print("[battle-ui-translation] %s: checked %d ABC block(s), skipped %d unsupported; %d label occurrences are structural identifiers, so they were left untouched." % (module_name, block_count, skipped_blocks, blocked))
             else:
@@ -668,6 +674,7 @@ def apply_translation() -> bool:
         )
         candidate_version, count = re.subn(pattern, new_entry, version_out)
         if count != 1:
+            skipped_count += 1
             print("[battle-ui-translation] Skipped %s: expected one fileVer entry, found %d." % (module_name, count))
             continue
         version_out = candidate_version
@@ -698,6 +705,10 @@ def apply_translation() -> bool:
         })
 
     if not prepared:
+        print(
+            "[battle-ui-translation] Complete: scanned %d module(s), %d unchanged, %d skipped; no display strings were changed."
+            % (scanned_count, unchanged_count, skipped_count)
+        )
         return False
 
     # Keep generated binary backups outside the Git working tree so a sync/push cannot accidentally commit them.
@@ -731,8 +742,8 @@ def apply_translation() -> bool:
     replacement_hits = sum(item["hits"] for item in prepared)
     print("[battle-ui-translation] Refreshed fileVer.xml.")
     print(
-        "[battle-ui-translation] Complete: %d module(s) updated, %d string entries changed, %d label replacement(s)."
-        % (len(prepared), changed_entries, replacement_hits)
+        "[battle-ui-translation] Complete: scanned %d module(s), updated %d, unchanged %d, skipped %d; %d string entries changed, %d label replacement(s)."
+        % (scanned_count, len(prepared), unchanged_count, skipped_count, changed_entries, replacement_hits)
     )
     return changed_entries > 0
 
