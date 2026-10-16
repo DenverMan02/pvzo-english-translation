@@ -8,7 +8,7 @@ from pathlib import Path
 SERVER = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(SERVER / "client_tools"))
 
-from translate_battle_ui import _module_targets, _translate_display_string
+from translate_battle_ui import _module_targets, _patch_abc_strings, _read_constant_pools, _translate_display_string
 
 
 class BattleUITranslationTests(unittest.TestCase):
@@ -107,6 +107,14 @@ class BattleUITranslationTests(unittest.TestCase):
         self.assertEqual(_translate_display_string("无尽炼狱"), "Endless Purgatory")
         self.assertEqual(_translate_display_string("奖励预览"), "Reward Preview")
 
+    def test_constant_pool_translation_does_not_need_method_body_parser(self):
+        # Minimal ABC header and constant pools only; there is no method/body tail.
+        abc = b"\\x00\\x00\\x2e\\x00\\x01\\x01\\x01\\x02\\x06" + "生命".encode("utf-8") + b"\\x01\\x01\\x01"
+        patched, changed, hits, blocked = _patch_abc_strings(abc)
+        self.assertEqual(changed, 1)
+        self.assertEqual(hits, 1)
+        self.assertEqual(blocked, 0)
+        self.assertEqual(_read_constant_pools(patched)["strings"][1], "Health")
     def test_card_progression_and_item_requirements(self):
         self.assertEqual(_translate_display_string("基因槽"), "Gene Slot")
         self.assertEqual(_translate_display_string("确认购买"), "Confirm Purchase")
