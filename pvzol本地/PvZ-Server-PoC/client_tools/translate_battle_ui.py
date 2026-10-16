@@ -464,7 +464,7 @@ CONTEXTUAL_TERMS = {
     "生命", "攻击", "防御", "速度", "治疗", "伤害", "成功", "失败", "完成",
     "帮助", "规则", "预览", "排名", "名次", "第一名", "第二名", "第三名",
 }
-TOKEN_BOUNDARY_RE = r"[\s\[\]【】()（）:：+/\-·,，。！？!?…；;]"
+TOKEN_BOUNDARY_RE = r"[\s\[\]【】()（）:：+/\-·]"
 
 
 def _translate_display_string(value: str) -> str:
