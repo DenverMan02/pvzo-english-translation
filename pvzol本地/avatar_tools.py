@@ -306,7 +306,7 @@ def pick_cropped_avatar(parent, path, theme, center_window):
             dialog.destroy()
         footer = tk.Frame(body, bg=bg)
         footer.grid(row=3, column=0, columnspan=2, sticky="ew", pady=(16, 0))
-        tk.Button(footer, text="使用Crop Avatar", command=confirm, bg=accent, fg="#12220a",
+        tk.Button(footer, text="Use Cropped Avatar", command=confirm, bg=accent, fg="#12220a",
                   relief="flat", cursor="hand2", font=("Segoe UI", 10, "bold"),
                   padx=14, pady=7).pack(side="right")
         tk.Button(footer, text="Cancel", command=cancel, bg=panel, fg=fg, relief="flat",
