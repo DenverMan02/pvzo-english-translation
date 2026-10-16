@@ -169,7 +169,7 @@ class LauncherService:
                 if kind == 'server' and self._current(process, session):
                     return
                 if kind == 'server' and process is self.server and session == self.session and not self.closed:
-                    self.log('!! The game service exited. Cleaning up this session's game processes.')
+                    self.log("!! The game service exited. Cleaning up this session's game processes.")
                     self.stop()
                     self.error = 'The game service exited. Check the logs and restart.'
                     self.status = self.error
