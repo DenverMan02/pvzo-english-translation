@@ -24,7 +24,7 @@ from urllib.parse import parse_qs, urlsplit
 from launcher_dpi import initialize_dpi_awareness, safe_exception_detail
 
 
-TITLE = "PvZ OL"
+TITLE = "Plants vs. Zombies Online"
 LOCALIZATION = {
     "global.quitConfirmation": "Are you sure you want to exit the launcher? Exiting will close the game service launched this time.",
     "global.ok": "OK",
