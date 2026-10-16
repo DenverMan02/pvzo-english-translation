@@ -27,7 +27,7 @@ def read_swf_stage(path):
     with Path(path).open('rb') as stream:
         raw = stream.read(4096)
     if len(raw) < 12 or raw[:3] not in (b'FWS', b'CWS'):
-        raise ValueError('Could not read the game loader's window dimensions')
+        raise ValueError("Could not read the game loader's window dimensions")
     try:
         data = (zlib.decompressobj().decompress(raw[8:], 64)
                 if raw[:3] == b'CWS' else raw[8:72])
@@ -46,7 +46,7 @@ def read_swf_stage(path):
             raise ValueError('Invalid SWF stage size')
         return size
     except (ValueError, zlib.error) as exc:
-        raise ValueError('Could not read the game loader's window dimensions') from exc
+        raise ValueError("Could not read the game loader's window dimensions") from exc
 
 
 def centered_position(work_area, size):
@@ -237,7 +237,7 @@ def place_game_window(pid, *, owner_file=None, owner_pid=None, is_current=lambda
         return False
     if initially_hidden and (not isinstance(stage_size, tuple) or len(stage_size) != 2 or
                              not all(type(value) is int and 1 <= value <= 16384 for value in stage_size)):
-        raise ValueError('Hidden launch requires the loader's window dimensions')
+        raise ValueError("Hidden launch requires the loader's window dimensions")
     api = api or WindowsWindowApi()
     previous = api.physical_coordinates()
     last_size = None
