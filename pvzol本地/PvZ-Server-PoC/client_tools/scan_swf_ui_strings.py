@@ -22,7 +22,7 @@ if str(PATCH_HELPERS) not in sys.path:
     sys.path.insert(0, str(PATCH_HELPERS))
 
 from patch_module_card_clickthrough import parse_abc
-from translate_battle_ui import MODULE_NAMES, _iter_abc_tags
+from translate_battle_ui import EXCLUDED_MODULES, MODULE_NAMES, VERSION_NAME, _iter_abc_tags, _module_targets
 
 CJK_RE = re.compile(r"[\u3400-\u9fff]")
 TRANSLATION_TERMS = (
@@ -90,10 +90,18 @@ def main() -> int:
     parser.add_argument("--all", action="store_true", help="scan every top-level Module*.swf")
     args = parser.parse_args()
 
+    manifest_path = WEBROOT / VERSION_NAME
+    if not manifest_path.is_file():
+        print("Cannot scan SWFs: fileVer.xml is missing from %s" % WEBROOT)
+        return 1
+    manifest = manifest_path.read_bytes()
     if args.all:
-        paths = [WEBROOT / "Game_n.swf", WEBROOT / "Game_p.swf"] + sorted(WEBROOT.glob("Module*.swf"))
+        paths = [WEBROOT / "Game_n.swf", WEBROOT / "Game_p.swf"] + [
+            WEBROOT / name for name in _module_targets(manifest)
+        ]
     else:
-        paths = [WEBROOT / name for name in MODULE_NAMES]
+        paths = [WEBROOT / name for name in _module_targets(manifest)]
+    paths = list(dict.fromkeys(path for path in paths if path.name not in EXCLUDED_MODULES))
     existing = [path for path in paths if path.is_file()]
     if not existing:
         print("No target SWFs found in %s" % WEBROOT)
