@@ -1039,7 +1039,7 @@ TRANSLATIONS = {
     "待领取": "Ready to claim",
     "次\n每日0点恢复免费次数；用完后每次": " reset(s) left.\nFree resets replenish daily at midnight; after they run out, each reset costs ",
     "每日0点恢复免费次数；用完后每次": "Free resets replenish daily at midnight; after they run out, each reset costs ",
-    "钻购买重置": " diamonds to reset",
+    "钻购买重置": " diamonds.",
     "增加经验：": "XP Gained: ",
     "增加经验": "XP Gained",
     "经验增加：": "XP Increase: ",
