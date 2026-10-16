@@ -1179,38 +1179,51 @@ SUBSTRING_TRANSLATIONS = {
     "关成功！",
     "挑战失败！当前成绩为第",
 }
-# Only translate most phrases when they are a complete label or a delimited
-# token. This prevents a label such as "失败" from being inserted into the
-# middle of an otherwise-Chinese sentence.
 CONTEXTUAL_TERMS = set(TRANSLATIONS).difference(SUBSTRING_TRANSLATIONS)
 TOKEN_BOUNDARY_RE = r"[\s\[\]【】()（）:：+/\-·<>{}]"
 
+# Prepare translations once at import time. The old implementation compiled a
+# separate regular expression for every term for every ABC string. Main game
+# SWFs contain many thousands of strings, which could keep startup blocked for
+# minutes while it repeatedly scanned Game_n.swf.
+SUBSTRING_ORDERED_TRANSLATIONS = sorted(
+    ((term, TRANSLATIONS[term]) for term in SUBSTRING_TRANSLATIONS),
+    key=lambda item: len(item[0]),
+    reverse=True,
+)
+CONTEXTUAL_ORDERED_TRANSLATIONS = sorted(
+    ((term, TRANSLATIONS[term]) for term in CONTEXTUAL_TERMS),
+    key=lambda item: len(item[0]),
+    reverse=True,
+)
+_CONTEXTUAL_REPLACEMENTS = dict(CONTEXTUAL_ORDERED_TRANSLATIONS)
+_CONTEXTUAL_TRANSLATION_RE = re.compile(
+    r"(?P<prefix>^|" + TOKEN_BOUNDARY_RE + r")"
+    r"(?P<term>"
+    + "|".join(re.escape(term) for term, _translation in CONTEXTUAL_ORDERED_TRANSLATIONS)
+    + r")(?=$|" + TOKEN_BOUNDARY_RE + r"|\d|[%％])"
+)
+_ENDLESS_FAILURE_PREFIX = "Challenge failed! Current result: stage "
+
 
 def _translate_display_string(value: str) -> str:
-    # A few dynamic strings are assembled from separate ActionScript literals,
-    # so these fragments must be replaced even when they are not the whole value.
-    for old, new in ORDERED_TRANSLATIONS:
-        if old in SUBSTRING_TRANSLATIONS or value == old:
+    # Translate only the small set of deliberately embedded dynamic fragments.
+    for old, new in SUBSTRING_ORDERED_TRANSLATIONS:
+        if old in value:
             value = value.replace(old, new)
 
-    # Other labels are translated only when standalone or separated from
-    # surrounding text by UI punctuation, whitespace, numbers, or HTML markup.
-    for old, new in ORDERED_TRANSLATIONS:
-        if old not in CONTEXTUAL_TERMS:
-            continue
-        pattern = (
-            r"(^|" + TOKEN_BOUNDARY_RE + r")"
-            + re.escape(old)
-            + r"(?=$|" + TOKEN_BOUNDARY_RE + r"|\d|[%％])"
-        )
-        value = re.sub(
-            pattern,
-            lambda match, replacement=new: match.group(1) + replacement,
-            value,
-        )
-    # Endless Purgatory builds its failure toast from a prefix + stage number + suffix.
-    # Strip the trailing Chinese stage marker only for that translated toast.
-    value = re.sub(r"^(Challenge failed! Current result: stage \d+)关$", r"\1", value)
+    # One precompiled alternation replaces every standalone label in one pass.
+    # Longest terms are listed first so a complete phrase wins over a shorter term.
+    value = _CONTEXTUAL_TRANSLATION_RE.sub(
+        lambda match: match.group("prefix") + _CONTEXTUAL_REPLACEMENTS[match.group("term")],
+        value,
+    )
+
+    # In this one split ActionScript toast, the stage suffix is stored separately.
+    if value.startswith(_ENDLESS_FAILURE_PREFIX) and value.endswith("关"):
+        stage = value[len(_ENDLESS_FAILURE_PREFIX):-1]
+        if stage.isdigit():
+            value = value[:-1]
     return value
 
 def _read_constant_pools(abc: bytes) -> dict:
