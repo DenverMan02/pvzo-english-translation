@@ -45,6 +45,8 @@ class BattleUITranslationTests(unittest.TestCase):
     def test_does_not_translate_stat_words_inside_chinese_prose(self):
         self.assertEqual(_translate_display_string("敌方攻击当前目标"), "敌方攻击当前目标")
         self.assertEqual(_translate_display_string("该技能增加生命恢复效果"), "该技能增加生命恢复效果")
+        self.assertEqual(_translate_display_string("金币不足，请稍后重试"), "金币不足，请稍后重试")
+
     def test_standalone_buttons_and_reset_prompts(self):
         self.assertEqual(_translate_display_string("取消"), "Cancel")
         self.assertEqual(_translate_display_string("确定"), "Confirm")
@@ -60,6 +62,28 @@ class BattleUITranslationTests(unittest.TestCase):
     def test_short_ui_words_do_not_rewrite_chinese_sentences(self):
         phrase = "玩家正在战斗，等待好友领取奖励"
         self.assertEqual(_translate_display_string(phrase), phrase)
+    def test_rich_text_tooltip_labels(self):
+        self.assertEqual(
+            _translate_display_string("<font>(未领取)</font>"),
+            "<font>(Unclaimed)</font>",
+        )
+
+    def test_endless_reset_rich_tooltip(self):
+        tooltip = (
+            "今日免费重置：<font>{0}</font>/{1}<br>"
+            "每日0点恢复免费次数；用完后每次{2}钻购买重置"
+        )
+        self.assertEqual(
+            _translate_display_string(tooltip),
+            "Free resets today: <font>{0}</font>/{1}<br>"
+            "Free resets replenish daily at midnight; after they run out, each reset costs {2} diamonds.",
+        )
+
+    def test_common_resource_and_service_labels(self):
+        self.assertEqual(_translate_display_string("金币"), "Coins")
+        self.assertEqual(_translate_display_string("服务器繁忙"), "Server busy")
+        self.assertEqual(_translate_display_string("今日剩余次数： 3/3"), "Attempts Remaining Today: 3/3")
+
 
 
 if __name__ == "__main__":
