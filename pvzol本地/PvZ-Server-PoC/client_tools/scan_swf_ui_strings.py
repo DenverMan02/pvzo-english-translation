@@ -45,7 +45,7 @@ def _structural_indexes(info) -> set[int]:
             continue
         if item[0] in (0x07, 0x0D):
             protected.add(item[2])
-        elif item[0] in (0x09, 0x0E):
+        elif item[0] in (0x0F, 0x10, 0x09, 0x0E):
             protected.add(item[1])
     return protected
 
