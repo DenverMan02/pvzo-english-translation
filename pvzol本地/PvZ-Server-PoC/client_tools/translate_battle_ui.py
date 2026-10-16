@@ -22,7 +22,7 @@ PATCH_HELPERS = SERVER / "client_patches" / "card-exp-bean-repeat-20260926"
 if str(PATCH_HELPERS) not in sys.path:
     sys.path.insert(0, str(PATCH_HELPERS))
 
-from patch_module_card_clickthrough import encode_u30, find_abc, parse_abc, s32, u30
+from patch_module_card_clickthrough import encode_u30, s32, u30
 
 # Longest phrases first. These are player-facing terms visible in battle mode.
 TRANSLATIONS = {
@@ -1014,55 +1014,146 @@ def _translate_display_string(value: str) -> str:
         )
     return value
 
+def _read_constant_pools(abc: bytes) -> dict:
+    """Read the ABC constant pools without parsing method bodies or traits.
+
+    Some PvZ Online modules contain valid ABC whose method/body tail differs
+    from the small disassembler's assumptions. UI string replacement only needs
+    the constant pools, so do not reject a module because its later bytecode
+    sections are unfamiliar.
+    """
+    if len(abc) < 4:
+        raise ValueError("ABC header is truncated")
+    p = 4  # minor_version, major_version
+
+    # int and uint pools use variable-length values; only their boundaries matter.
+    for _ in range(2):
+        count, p = u30(abc, p)
+        for _ in range(max(0, count - 1)):
+            p = s32(abc, p)
+
+    double_count, p = u30(abc, p)
+    p += max(0, double_count - 1) * 8
+    if p > len(abc):
+        raise ValueError("ABC double pool is truncated")
+
+    string_count, p = u30(abc, p)
+    string_pool_start = p
+    strings = [""]
+    string_entries = []
+    for index in range(1, string_count):
+        entry_start = p
+        size, p = u30(abc, p)
+        entry_end = p + size
+        if entry_end > len(abc):
+            raise ValueError("ABC string pool is truncated")
+        value = abc[p:entry_end].decode("utf-8", "replace")
+        strings.append(value)
+        string_entries.append((index, entry_start, entry_end, value))
+        p = entry_end
+    string_pool_end = p
+
+    namespace_count, p = u30(abc, p)
+    namespaces = [None]
+    for _ in range(max(0, namespace_count - 1)):
+        if p >= len(abc):
+            raise ValueError("ABC namespace pool is truncated")
+        kind = abc[p]
+        p += 1
+        name_index, p = u30(abc, p)
+        namespaces.append((kind, name_index))
+
+    ns_set_count, p = u30(abc, p)
+    for _ in range(max(0, ns_set_count - 1)):
+        item_count, p = u30(abc, p)
+        for _ in range(item_count):
+            _, p = u30(abc, p)
+
+    multiname_count, p = u30(abc, p)
+    multinames = [None]
+    for _ in range(max(0, multiname_count - 1)):
+        if p >= len(abc):
+            raise ValueError("ABC multiname pool is truncated")
+        kind = abc[p]
+        p += 1
+        if kind in (0x07, 0x0D):  # QName / QNameA
+            ns_index, p = u30(abc, p)
+            name_index, p = u30(abc, p)
+            multinames.append((kind, ns_index, name_index))
+        elif kind in (0x0F, 0x10):  # RTQName / RTQNameA
+            name_index, p = u30(abc, p)
+            multinames.append((kind, name_index))
+        elif kind in (0x11, 0x12):  # RTQNameL / RTQNameLA
+            multinames.append((kind,))
+        elif kind in (0x1B, 0x1C):  # MultinameL / MultinameLA
+            ns_set_index, p = u30(abc, p)
+            multinames.append((kind, ns_set_index))
+        elif kind in (0x09, 0x0E):  # Multiname / MultinameA
+            name_index, p = u30(abc, p)
+            ns_set_index, p = u30(abc, p)
+            multinames.append((kind, name_index, ns_set_index))
+        elif kind == 0x1D:  # TypeName
+            base, p = u30(abc, p)
+            count, p = u30(abc, p)
+            params = []
+            for _ in range(count):
+                item, p = u30(abc, p)
+                params.append(item)
+            multinames.append((kind, base, tuple(params)))
+        else:
+            raise ValueError("Unsupported ABC multiname kind 0x%02x" % kind)
+
+    return {
+        "strings": strings,
+        "namespaces": namespaces,
+        "multinames": multinames,
+        "string_pool_start": string_pool_start,
+        "string_pool_end": string_pool_end,
+        "string_entries": string_entries,
+    }
+
+
 def _patch_abc_strings(abc: bytes) -> tuple[bytes, int, int, int]:
-    """Patch eligible display strings while preserving the ABC pool structure."""
-    info = parse_abc(abc)
+    """Patch display strings while preserving ABC structure and identifiers."""
+    info = _read_constant_pools(abc)
     protected = set()
-    # Namespace names are structural; never translate them.
-    for _kind, name_index in info.namespaces:
-        protected.add(name_index)
-    # A QName/Multiname's string is a property or class identifier, not UI text.
-    for item in info.multinames:
+
+    # Namespace names and multiname strings are structural identifiers.
+    for namespace in info["namespaces"]:
+        if namespace:
+            protected.add(namespace[1])
+    for item in info["multinames"]:
         if not item:
             continue
         kind = item[0]
         if kind in (0x07, 0x0D):
             protected.add(item[2])
-        elif kind in (0x09, 0x0E):
+        elif kind in (0x0F, 0x10, 0x09, 0x0E):
             protected.add(item[1])
 
-    replacements = {}
+    chunks = []
     hits = 0
     blocked = 0
-    p = 4  # minor_version, major_version
-    for _ in range(2):  # int and uint pools
-        count, p = u30(abc, p)
-        for _ in range(max(0, count - 1)):
-            p = s32(abc, p)
-    count, p = u30(abc, p)  # double pool
-    p += max(0, count - 1) * 8
-    string_count, p = u30(abc, p)
-    entries_start = p
-    chunks = []
-    for index in range(1, string_count):
-        start = p
-        size, p = u30(abc, p)
-        original = abc[p:p + size].decode("utf-8", "replace")
-        p += size
+    replacements = 0
+    for index, entry_start, entry_end, original in info["string_entries"]:
         proposed = _translate_display_string(original)
         translated = original if index in protected else proposed
         if index in protected and proposed != original:
             blocked += sum(original.count(old) for old, _new in ORDERED_TRANSLATIONS if old in original)
         if translated != original:
-            replacements[index] = translated
+            replacements += 1
             hits += sum(original.count(old) for old, _new in ORDERED_TRANSLATIONS if old in original)
             encoded = translated.encode("utf-8")
             chunks.append(encode_u30(len(encoded)) + encoded)
         else:
-            chunks.append(abc[start:p])
-    patched = abc[:entries_start] + b"".join(chunks) + abc[p:]
-    return patched, len(replacements), hits, blocked
+            chunks.append(abc[entry_start:entry_end])
 
+    patched = (
+        abc[:info["string_pool_start"]]
+        + b"".join(chunks)
+        + abc[info["string_pool_end"]:]
+    )
+    return patched, replacements, hits, blocked
 
 def _iter_abc_tags(raw: bytes):
     """Yield (abc_start, abc_end, tag_start, header_len, tag_len) for every DoABC2 tag."""
@@ -1147,7 +1238,7 @@ def _patch_swf(packed: bytes) -> tuple[bytes, int, int, int, int, int]:
         raise ValueError("Patched SWF changed the number of DoABC2 blocks")
     for index, (a, b, _t, _h, _l) in enumerate(verify_tags):
         if index in patched_tag_indexes:
-            parse_abc(bytes(verified[a:b]))
+            _read_constant_pools(bytes(verified[a:b]))
     return output, changed_strings, replacement_hits, blocked_strings, len(tags), skipped_blocks
 def _atomic_write(path: Path, data: bytes) -> None:
     temporary = path.with_name(path.name + ".translation-tmp")
