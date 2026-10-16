@@ -71,11 +71,11 @@ def scan(path: Path) -> tuple[int, int, list[tuple[str, int, str]]]:
         edit_text_fields = list(_iter_edit_text_fields(raw))
     except Exception as exc:
         edit_text_fields = []
-        matches.append((\"<could not parse editable text: %s>\" % exc, 0, \"UNPARSED_EDITTEXT\"))
+        matches.append(("<could not parse editable text: %s>" % exc, 0, "UNPARSED_EDITTEXT"))
     for field_no, field in enumerate(edit_text_fields, 1):
         value = field[-1]
         if value and CJK_RE.search(value):
-            matches.append((value, field_no, \"EDITTEXT\"))
+            matches.append((value, field_no, "EDITTEXT"))
     for block_no, (start, end, _tag_start, _header_len, _tag_len) in enumerate(blocks, 1):
         try:
             info = _read_constant_pools(raw[start:end])
@@ -134,7 +134,8 @@ def main() -> int:
             if key in seen:
                 continue
             seen.add(key)
-            print("  [%s; ABC %d] %s" % (kind, block_no, value.replace("\n", "\\n")))
+            source = ("EditText %d" % block_no) if kind == "EDITTEXT" else ("ABC %d" % block_no if kind in ("DISPLAY", "IDENTIFIER") else "scan")
+            print("  [%s; %s] %s" % (kind, source, value.replace("\\n", "\\\\n")))
             total += 1
     print("\nDistinct Chinese strings printed: %d" % total)
     return 0
