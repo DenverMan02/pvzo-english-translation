@@ -8,7 +8,7 @@ from pathlib import Path
 SERVER = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(SERVER / "client_tools"))
 
-from translate_battle_ui import _translate_display_string
+from translate_battle_ui import _module_targets, _translate_display_string
 
 
 class BattleUITranslationTests(unittest.TestCase):
@@ -83,6 +83,19 @@ class BattleUITranslationTests(unittest.TestCase):
         self.assertEqual(_translate_display_string("金币"), "Coins")
         self.assertEqual(_translate_display_string("服务器繁忙"), "Server busy")
         self.assertEqual(_translate_display_string("今日剩余次数： 3/3"), "Attempts Remaining Today: 3/3")
+    def test_module_targets_exclude_data_and_font_resources(self):
+        manifest = (
+            b'<file name="ModuleCard.swf" size="12" ver="abc" />'
+            b'<file name="ModuleCard_0123456789abcdef0123456789abcdef.swf" size="12" ver="abc" />'
+            b'<file name="ModuleClientDBRes.swf" size="99" ver="def" />'
+            b'<file name="ModuleFont.swf" size="99" ver="def" />'
+        )
+        targets = _module_targets(manifest)
+        self.assertIn("ModuleCard.swf", targets)
+        self.assertNotIn("ModuleCard_0123456789abcdef0123456789abcdef.swf", targets)
+        self.assertNotIn("ModuleClientDBRes.swf", targets)
+        self.assertNotIn("ModuleFont.swf", targets)
+        self.assertEqual(targets.count("ModuleCard.swf"), 1)
 
 
 
