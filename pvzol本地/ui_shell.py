@@ -637,7 +637,7 @@ def check_dependencies() -> dict[str, object]:
     }
     for name, location in dependencies.items():
         if not Path(location).is_file():
-            raise RuntimeError(f"缺少桌面运行组件：{name}")
+            raise RuntimeError(f"Missing desktop runtime component: {name}")
     if not forms.is_chromium:
         raise RuntimeError("Microsoft Edge WebView2 Runtime was not found. Install it and try again.")
     return {
