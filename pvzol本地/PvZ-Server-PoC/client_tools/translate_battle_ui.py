@@ -1044,7 +1044,7 @@ def _module_targets(manifest: bytes) -> list[str]:
 # delimited stat tokens. This avoids turning ordinary Chinese sentences into a
 # Chinese/English mixture just because they mention health, attacks, or skills.
 SUBSTRING_TRANSLATIONS = {
-    "次\\n每日0点恢复免费次数；用完后每次",
+    "次\n每日0点恢复免费次数；用完后每次",
     "钻购买重置",
     "今日免费重置：",
     # These are concatenated around dynamic stage numbers in ActionScript.
