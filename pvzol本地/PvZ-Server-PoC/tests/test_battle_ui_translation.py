@@ -159,6 +159,14 @@ class BattleUITranslationTests(unittest.TestCase):
             " reset(s) left.\nFree resets replenish daily at midnight; after they run out, each reset costs ",
         )
         self.assertEqual(_translate_display_string("钻购买重置"), " diamonds to reset")
+    def test_daily_activity_and_multiplayer_labels(self):
+        self.assertEqual(_translate_display_string("每日任务"), "Daily Quests")
+        self.assertEqual(_translate_display_string("连续签到"), "Consecutive Check-Ins")
+        self.assertEqual(_translate_display_string("兑换码"), "Redemption Code")
+        self.assertEqual(_translate_display_string("匹配成功"), "Match Found")
+        self.assertEqual(_translate_display_string("队伍已满"), "Team is Full")
+        self.assertEqual(_translate_display_string("时光之旅"), "Time Journey")
+        self.assertEqual(_translate_display_string("世界BOSS"), "World Boss")
     def test_power_source_breakdown_vocabulary(self):
         self.assertEqual(_translate_display_string("基础/强化"), "Base / Enhancement")
         self.assertEqual(_translate_display_string("强化战力"), "Enhancement Power")
