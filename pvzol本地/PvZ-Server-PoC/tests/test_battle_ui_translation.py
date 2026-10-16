@@ -45,6 +45,21 @@ class BattleUITranslationTests(unittest.TestCase):
     def test_does_not_translate_stat_words_inside_chinese_prose(self):
         self.assertEqual(_translate_display_string("敌方攻击当前目标"), "敌方攻击当前目标")
         self.assertEqual(_translate_display_string("该技能增加生命恢复效果"), "该技能增加生命恢复效果")
+    def test_standalone_buttons_and_reset_prompts(self):
+        self.assertEqual(_translate_display_string("取消"), "Cancel")
+        self.assertEqual(_translate_display_string("确定"), "Confirm")
+        self.assertEqual(_translate_display_string("免费重置进度"), "Reset Progress for Free")
+        self.assertEqual(_translate_display_string("购买重置进度"), "Purchase Progress Reset")
+
+    def test_endless_reset_tooltip(self):
+        self.assertEqual(
+            _translate_display_string("本难度历史最高成绩为第{0}关，可以使用一键扫荡到第{1}关"),
+            "Best result in this difficulty: stage {0}. Use Quick Sweep to clear up to stage {1}.",
+        )
+
+    def test_short_ui_words_do_not_rewrite_chinese_sentences(self):
+        phrase = "玩家正在战斗，等待好友领取奖励"
+        self.assertEqual(_translate_display_string(phrase), phrase)
 
 
 if __name__ == "__main__":
