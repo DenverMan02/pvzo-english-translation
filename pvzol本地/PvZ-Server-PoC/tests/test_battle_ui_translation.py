@@ -135,6 +135,17 @@ class BattleUITranslationTests(unittest.TestCase):
         self.assertEqual(_translate_display_string("当前不可用"), "Currently Unavailable")
         self.assertEqual(_translate_display_string("功能暂未开放"), "Feature Not Available Yet")
 
+    def test_endless_purgatory_floating_notices(self):
+        self.assertEqual(_translate_display_string("暂无新的战报！"), "No new battle reports!")
+        self.assertEqual(_translate_display_string("暂无奖励！"), "No rewards available!")
+
+    def test_split_free_reset_tooltip_fragments(self):
+        self.assertEqual(_translate_display_string("今日免费重置："), "Free resets today: ")
+        self.assertEqual(
+            _translate_display_string("次\\n每日0点恢复免费次数；用完后每次"),
+            " reset(s) left.\\nFree resets replenish daily at midnight; after they run out, each reset costs ",
+        )
+        self.assertEqual(_translate_display_string("钻购买重置"), " diamonds to reset")
     def test_power_source_breakdown_vocabulary(self):
         self.assertEqual(_translate_display_string("基础/强化"), "Base / Enhancement")
         self.assertEqual(_translate_display_string("强化战力"), "Enhancement Power")
