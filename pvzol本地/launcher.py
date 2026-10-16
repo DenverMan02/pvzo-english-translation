@@ -708,7 +708,7 @@ class Launcher:
             return
         if admin_ready():
             webbrowser.open(ADMIN_URL)
-            self._log("已打开 GM 后台: %s" % ADMIN_URL)
+            self._log("Opened GM admin panel: %s" % ADMIN_URL)
             return
         if self.running and self.server:
             self._begin_admin_wait(self.server, self._session)
@@ -752,7 +752,7 @@ class Launcher:
         self._admin_waiting = None
         self.admin_btn.configure(state="normal")
         webbrowser.open(ADMIN_URL)
-        self._log("已打开 GM 后台: %s" % ADMIN_URL)
+        self._log("Opened GM admin panel: %s" % ADMIN_URL)
 
     def _admin_failed(self, proc, session):
         if self._closed or session != self._session or proc not in (self.admin, self.server):
@@ -1084,97 +1084,97 @@ class Launcher:
 
         # 完整植物列表 (TD 植物 ID → 显示名称)
         _TD_PLANTS = [
-            (1200, "1200  单发豌豆"),
-            (1210, "1210  双发豌豆"),
-            (1300, "1300  矮坚果"),
-            (1100, "1100  向日葵"),
-            (1500, "1500  土豆地雷"),
-            (1600, "1600  回旋镖"),
-            (1400, "1400  卷心菜"),
-            (1110, "1110  双头向日"),
-            (1800, "1800  白菜战士"),
-            (1700, "1700  冰冻生菜"),
-            (1900, "1900  墓碑吞噬"),
-            (2000, "2000  魔藤"),
-            (3100, "3100  竹小龙"),
-            (3300, "3300  蒲公英"),
-            (3200, "3200  胡萝卜火"),
-            (3400, "3400  冬瓜先生"),
-            (3500, "3500  草垛"),
-            (3600, "3600  捕蝇草"),
-            (3700, "3700  倭瓜"),
-            (3800, "3800  保龄球"),
-            (3850, "3850  爆炸保龄"),
-            (3900, "3900  火龙草"),
-            (4000, "4000  小游戏胡"),
-            (4100, "4100  地刺"),
-            (4200, "4200  地刺王"),
-            (4300, "4300  玉米"),
-            (4400, "4400  弹簧豆"),
-            (4500, "4500  三发豌豆"),
-            (4600, "4600  椰子加农"),
-            (4700, "4700  石榴"),
-            (4800, "4800  水仙花"),
-            (4900, "4900  榴莲"),
-            (5000, "5000  菠萝投手"),
-            (5100, "5100  重置"),
-            (5200, "5200  填坑"),
-            (5300, "5300  寒冰射手"),
-            (5400, "5400  双头豌豆"),
-            (5500, "5500  豌豆荚"),
-            (5600, "5600  高坚果"),
-            (5700, "5700  樱桃炸弹"),
-            (5900, "5900  巴豆"),
-            (6000, "6000  火桩"),
-            (6100, "6100  电草"),
-            (6200, "6200  杨桃"),
-            (6300, "6300  激光豆子"),
-            (6400, "6400  充能柚子"),
-            (6500, "6500  全息坚果"),
-            (6600, "6600  棱镜草"),
-            (6700, "6700  辣椒"),
-            (6800, "6800  冰豆"),
-            (6900, "6900  冰冻西瓜"),
-            (7100, "7100  三叶草"),
-            (7200, "7200  脉冲黄桃"),
-            (7400, "7400  硝化菇"),
-            (7500, "7500  食人花"),
-            (7600, "7600  瓷砖萝卜"),
-            (7700, "7700  西瓜投手"),
-            (7800, "7800  香蒲"),
-            (7900, "7900  灵芝"),
-            (8000, "8000  芭蕉"),
-            (8100, "8100  氧气藻"),
-            (8200, "8200  大蒜"),
-            (8300, "8300  电海松"),
-            (8400, "8400  泡泡花"),
-            (8500, "8500  海星果"),
-            (8600, "8600  钻地荔枝"),
-            (8700, "8700  海葵花"),
-            (8800, "8800  水雷果"),
-            (8900, "8900  玫瑰剑客"),
-            (9000, "9000  君子兰"),
-            (9100, "9100  树脂发射"),
-            (9200, "9200  强酸柠檬"),
-            (9300, "9300  魔术菇"),
-            (9400, "9400  火焰射手"),
-            (9500, "9500  幽灵辣椒"),
-            (9600, "9600  鳄梨"),
-            (9700, "9700  飓风甘蓝"),
-            (9800, "9800  路灯花"),
-            (9900, "9900  橡木射手"),
-            (1120, "1120  刺头花"),
-            (1130, "1130  甜椒投手"),
-            (1140, "1140  南瓜小巫"),
-            (1150, "1150  功夫萝卜"),
-            (1160, "1160  金蟾菇"),
-            (1170, "1170  铃儿草"),
-            (1180, "1180  红针花"),
-            (1220, "1220  闪电蓝莓"),
-            (1190, "1190  阿开木"),
-            (1230, "1230  龙舌兰"),
-            (1240, "1240  月光花"),
-            (1250, "1250  芦笋战机"),
+            (1200, "1200  Peashooter"),
+            (1210, "1210  Repeater"),
+            (1300, "1300  Small Wall-nut"),
+            (1100, "1100  Sunflower"),
+            (1500, "1500  Potato Mine"),
+            (1600, "1600  Boomerang"),
+            (1400, "1400  Cabbage-pult"),
+            (1110, "1110  Twin Sunflower"),
+            (1800, "1800  Bok Choy"),
+            (1700, "1700  Iceberg Lettuce"),
+            (1900, "1900  Grave Buster"),
+            (2000, "2000  Magic Vine"),
+            (3100, "3100  Bamboo Dragon"),
+            (3300, "3300  Dandelion"),
+            (3200, "3200  Fire Carrot"),
+            (3400, "3400  Mr. Winter Melon"),
+            (3500, "3500  Haystack"),
+            (3600, "3600  Venus Flytrap"),
+            (3700, "3700  Squash"),
+            (3800, "3800  Bowling Nut"),
+            (3850, "3850  Exploding Bowling Nut"),
+            (3900, "3900  Snapdragon"),
+            (4000, "4000  Mini-game Carrot"),
+            (4100, "4100  Spikeweed"),
+            (4200, "4200  Spikerock"),
+            (4300, "4300  Corn"),
+            (4400, "4400  Spring Bean"),
+            (4500, "4500  Threepeater"),
+            (4600, "4600  Coconut Cannon"),
+            (4700, "4700  Pomegranate"),
+            (4800, "4800  Daffodil"),
+            (4900, "4900  Durian"),
+            (5000, "5000  Pineapple-pult"),
+            (5100, "5100  Reset"),
+            (5200, "5200  Pit Filler"),
+            (5300, "5300  Snow Pea"),
+            (5400, "5400  Twin Peashooter"),
+            (5500, "5500  Pea Pod"),
+            (5600, "5600  Tall-nut"),
+            (5700, "5700  Cherry Bomb"),
+            (5900, "5900  Chili Bean"),
+            (6000, "6000  Torchwood"),
+            (6100, "6100  Electric Grass"),
+            (6200, "6200  Starfruit"),
+            (6300, "6300  Laser Bean"),
+            (6400, "6400  Citron"),
+            (6500, "6500  Holo-nut"),
+            (6600, "6600  Prism Grass"),
+            (6700, "6700  Jalapeño"),
+            (6800, "6800  Ice Pea"),
+            (6900, "6900  Winter Melon"),
+            (7100, "7100  Blover"),
+            (7200, "7200  EMPeach"),
+            (7400, "7400  Nitrifying Mushroom"),
+            (7500, "7500  Chomper"),
+            (7600, "7600  Tile Turnip"),
+            (7700, "7700  Melon-pult"),
+            (7800, "7800  Cattail"),
+            (7900, "7900  Reishi Mushroom"),
+            (8000, "8000  Banana"),
+            (8100, "8100  Oxygen Algae"),
+            (8200, "8200  Garlic"),
+            (8300, "8300  Electric Pine"),
+            (8400, "8400  Bubble Flower"),
+            (8500, "8500  Sea Starfruit"),
+            (8600, "8600  Burrowing Lychee"),
+            (8700, "8700  Sea Anemone"),
+            (8800, "8800  Water Mine Fruit"),
+            (8900, "8900  Rose Swordsman"),
+            (9000, "9000  Clivia"),
+            (9100, "9100  Resin Shooter"),
+            (9200, "9200  Acid Lemon"),
+            (9300, "9300  Magic Mushroom"),
+            (9400, "9400  Fire Peashooter"),
+            (9500, "9500  Ghost Pepper"),
+            (9600, "9600  Avocado"),
+            (9700, "9700  Hurricane Kale"),
+            (9800, "9800  Lamp Flower"),
+            (9900, "9900  Oak Archer"),
+            (1120, "1120  Thorny Flower"),
+            (1130, "1130  Sweet Pepper-pult"),
+            (1140, "1140  Pumpkin Witch"),
+            (1150, "1150  Kung Fu Radish"),
+            (1160, "1160  Toadstool"),
+            (1170, "1170  Bellflower"),
+            (1180, "1180  Red Stinger"),
+            (1220, "1220  Electric Blueberry"),
+            (1190, "1190  Akee Tree"),
+            (1230, "1230  Agave"),
+            (1240, "1240  Moonflower"),
+            (1250, "1250  Asparagus Jet"),
         ]
         _PLANT_DISPLAY = [d for _pid, d in _TD_PLANTS]   # 显示名称列表
         _PLANT_BY_DISPLAY = {d: _pid for _pid, d in _TD_PLANTS}
@@ -1226,33 +1226,33 @@ class Launcher:
             df = fr_df.get().strip() or "1"; db = fr_db.get().strip() or "0"
             dy = fr_dy.get().strip() or "0"; dx = fr_dx.get().strip() or "0"
             if not (rid.isdigit() and pid.isdigit() and plv.isdigit() and name):
-                status.configure(text="需要角色ID、名称、植物、等级", fg=STOP); return
+                status.configure(text="Character ID, name, plant, and level are required", fg=STOP); return
             if not (df.isdigit() and db.isdigit() and dy.isdigit() and dx.isdigit()):
-                status.configure(text="钻石字段必须为数字", fg=STOP); return
+                status.configure(text="Membership fields must be numeric", fg=STOP); return
             if gm([uin, "addfriend", rid, name, pid, plv, df, db, dy, dx],
-                  "已添加好友 %s — 重新启动以应用" % name):
+                  "Friend %s added — restart to apply" % name):
                 refresh_friends()
 
         def del_friend():
             sel = fr_list.curselection()
             if not sel:
-                status.configure(text="请先选择一个好友", fg=STOP); return
+                status.configure(text="Select a friend first", fg=STOP); return
             rid = fr_list.get(sel[0]).split(" | ", 1)[0]
             if rid.isdigit() and gm([uin, "delfriend", rid],
-                                     "已移除好友 %s — 重新启动以应用" % rid):
+                                     "Friend %s removed — restart to apply" % rid):
                 refresh_friends()
 
-        tk.Button(fr_row3, text="添加 / 更新", command=add_friend, bg=ACCENT, fg="#12220a",
+        tk.Button(fr_row3, text="Add / Update", command=add_friend, bg=ACCENT, fg="#12220a",
                   activebackground=ACCENT_HOVER, activeforeground="#12220a", relief="flat",
                   cursor="hand2", font=("Segoe UI", 9, "bold"), padx=10, pady=4, bd=0).pack(side="left")
-        tk.Button(fr_row3, text="移除", command=del_friend, bg=PANEL, fg=FG,
+        tk.Button(fr_row3, text="Remove", command=del_friend, bg=PANEL, fg=FG,
                   activebackground="#33481f", activeforeground=FG, relief="flat", cursor="hand2",
                   font=("Segoe UI", 9), padx=10, pady=4, bd=0).pack(side="left", padx=6)
-        tk.Button(fr_row3, text="刷新", command=refresh_friends, bg=PANEL, fg=FG,
+        tk.Button(fr_row3, text="Refresh", command=refresh_friends, bg=PANEL, fg=FG,
                   activebackground="#33481f", activeforeground=FG, relief="flat", cursor="hand2",
                   font=("Segoe UI", 9), padx=10, pady=4, bd=0).pack(side="left")
 
-        tk.Label(body, text="提示：先提升等级 — 等级会限制植物卡等级上限并解锁城镇建筑。",
+        tk.Label(body, text="Tip: Level up first — account level caps plant card levels and unlocks town buildings.",
                  bg=BG, fg=MUTED, font=("Segoe UI", 8), wraplength=470, justify="left").pack(
             anchor="w", padx=16, pady=(8, 2))
 
@@ -1305,7 +1305,7 @@ class Launcher:
                 proc.wait(timeout=1.5)
             return True
         except (OSError, subprocess.SubprocessError) as exc:
-            self._log("!! 无法停止%s: %r" % (name, exc))
+            self._log("!! Could not stop %s: %r" % (name, exc))
             return proc.poll() is not None
 
     # ---------------- 生命周期 ----------------
@@ -1314,28 +1314,28 @@ class Launcher:
         missing = [p for p in (RUN_ALL, os.path.join(HERE, "webroot", loader))
                    if not os.path.exists(p)]
         if missing:
-            self._log("!! 缺少文件:\n   " + "\n   ".join(missing))
-            self._log("!! 请确保 launcher.py 仍在游戏根目录。")
+            self._log("!! Missing files:\n   " + "\n   ".join(missing))
+            self._log("!! Make sure launcher.py is still in the game root directory.")
             self._can_start = False
             self.play_btn.configure(state="disabled")
             return
         if not self.player_path:
             if self.player_kind == "ruffle":
-                self._log("!! 未找到 Ruffle。请将 Ruffle.app 放入 /Applications，")
-                self._log("   或在 launcher_config.json 中设置 ruffle_path。")
+                self._log("!! Ruffle was not found. Move Ruffle.app into /Applications,")
+                self._log("   or set ruffle_path in launcher_config.json.")
             else:
-                self._log("!! 缺少播放器: %s" % WINDOWS_PROJECTOR)
+                self._log("!! Missing player: %s" % WINDOWS_PROJECTOR)
             self._can_start = False
             self.play_btn.configure(state="disabled")
             return
         player_name = "Ruffle" if self.player_kind == "ruffle" else "Flash Projector"
-        self._log("已找到 %s: %s" % (player_name, self.player_path))
+        self._log("Found %s: %s" % (player_name, self.player_path))
 
     def start(self):
         if self.running or self._closed or not self._can_start:
             return
         if any(proc and proc.poll() is None for proc in (self.server, self.game)):
-            self._log("!! 上一次进程尚未停止，请先点击停止。")
+            self._log("!! The previous process has not stopped. Click Stop first.")
             return
         uin = self.uin_var.get().strip()
         if not valid_uin(uin):
@@ -1355,7 +1355,7 @@ class Launcher:
         self.stop_btn.configure(state="disabled")
         busy_ports = [p for p in (WEB_PORT, ADMIN_PORT, GAME_PORT, POLICY_PORT) if port_open(p)]
         if busy_ports:
-            messagebox.showerror("端口已被占用", "以下端口已被占用：%s。\n请关闭旧启动器或对应服务后重试。" % ", ".join(map(str, busy_ports)))
+            messagebox.showerror("Port Already in Use", "以下Port Already in Use：%s。\n请关闭旧启动器或对应服务后重试。" % ", ".join(map(str, busy_ports)))
             return
         loader = "loader_n.swf" if self.player_kind == "ruffle" else "loader_p.swf"
         self.game_url = game_url(uin, loader)
@@ -1363,7 +1363,7 @@ class Launcher:
         recent = [uin] + [u for u in cfg.get("recent", []) if u != uin]
         cfg.update({"last_uin": uin, "recent": recent[:8]})
         if not save_config(cfg):
-            self._log("!! 无法保存最近账号，请检查游戏目录的写入权限。")
+            self._log("!! Could not save recent accounts. Check write permissions for the game directory.")
         self.uin_box.configure(values=recent[:8], state="disabled")
         if hasattr(self, "create_btn"):
             self.create_btn.configure(state="disabled")
@@ -1373,7 +1373,7 @@ class Launcher:
         self.stop_btn.configure(state="normal")
         self.admin_btn.configure(state="normal")
         self._set_status("Initializing server…", "#e0b83a")
-        self._log("--- 启动网页、后台、游戏和 Flash 策略服务；首次初始化可能需要数分钟 ---")
+        self._log("--- Starting the web, admin, game, and Flash policy services; first-time setup may take several minutes ---")
         self._session += 1
         self._cancel.set()
         self._cancel = threading.Event()
@@ -1384,7 +1384,7 @@ class Launcher:
                 text=True, encoding="utf-8", errors="replace", bufsize=1,
                 env={**os.environ, "PYTHONIOENCODING": "utf-8", "PYTHONUNBUFFERED": "1"}, **HIDDEN_PROCESS)
         except Exception as exc:
-            self._log("!! 无法启动服务器: %r" % exc)
+            self._log("!! Could not start server: %r" % exc)
             self._reset_stopped()
             return
         self.server = proc
@@ -1423,16 +1423,16 @@ class Launcher:
     def _startup_failed(self, proc, session):
         if not self.running or not self._active(session, proc):
             return
-        self._log("!! 服务器初始化超时：网页、后台、9001 游戏或 843 策略服务未就绪。正在清理本次进程，可重新点击开始。")
+        self._log("!! Server startup timed out: the web, admin, game (9001), or policy (843) service did not become ready. Cleaning up processes; you can click Play again.")
         self.stop()
 
 
     def _launch_game(self):
         if not self.running:
             return
-        self._set_status("运行中 — 正在启动游戏…", ACCENT)
+        self._set_status("Running — starting the game…", ACCENT)
         player_name = "Ruffle" if self.player_kind == "ruffle" else "Flash Projector"
-        self._log("--- 服务器已就绪 · 正在用 %s 打开游戏 (账号 %s) ---"
+        self._log("--- Server ready · opening the game with %s (account %s) ---"
                   % (player_name, self.uin_var.get().strip()))
         try:
             command = game_player_command(
@@ -1440,18 +1440,18 @@ class Launcher:
             self.game = subprocess.Popen(
                 command, cwd=HERE, env=game_player_environment(self.player_kind),
                 **HIDDEN_PROCESS)
-            self._set_status("运行中 — 游戏已打开", ACCENT)
+            self._set_status("Running — game opened", ACCENT)
         except Exception as exc:
-            self._log("!! 无法打开 %s: %r" % (player_name, exc))
-            self._log("   请手动打开: %s" % self.game_url)
-            self._set_status("运行中 (请手动打开游戏)", ACCENT)
+            self._log("!! Could not open %s: %r" % (player_name, exc))
+            self._log("   Open manually: %s" % self.game_url)
+            self._set_status("Running (open the game manually)", ACCENT)
 
     def stop(self):
         self._session += 1
         self._cancel.set()
         self.running = False
         self._admin_waiting = None
-        self._set_status("正在停止…", "#e0b83a")
+        self._set_status("Stopping…", "#e0b83a")
         ok = True
         for field, name in (("game", "游戏"), ("server", "服务器"), ("admin", "GM 后台")):
             proc = getattr(self, field)
@@ -1461,13 +1461,13 @@ class Launcher:
                 ok = False
         if ok:
             self._reset_stopped()
-            self._log("--- 已停止 ---")
+            self._log("--- Stopped ---")
         else:
-            self._set_status("停止失败，请查看日志后重试", STOP)
+            self._set_status("Failed to stop. Check the logs and try again.", STOP)
             self.play_btn.configure(state="disabled")
             self.stop_btn.configure(state="normal")
             self.admin_btn.configure(state="normal")
-            self._log("!! 部分进程仍在运行，未释放启动状态。")
+            self._log("!! Some processes are still running; the launcher remains in the running state.")
         return ok
 
 
@@ -1500,10 +1500,10 @@ class Launcher:
                     try:
                         callback(*args)
                     except Exception as exc:
-                        self._log("!! 启动器操作失败: %r" % exc)
+                        self._log("!! Launcher operation failed: %r" % exc)
                 elif kind == "__SERVER_EXITED__":
                     if event[2] is self.server and self.running:
-                        self._log("!! 服务器意外退出，正在清理游戏进程。")
+                        self._log("!! The server exited unexpectedly. Cleaning up game processes.")
                         self.stop()
                 elif kind == "__ADMIN_EXITED__":
                     if event[2] is self.admin:
@@ -1517,7 +1517,7 @@ class Launcher:
 
 
     def on_close(self):
-        if self.running and not messagebox.askokcancel("退出", "确定要停止服务器并关闭游戏吗？"):
+        if self.running and not messagebox.askokcancel("Exit", "Stop the server and close the game?"):
             return
         if not self.stop():
             return
