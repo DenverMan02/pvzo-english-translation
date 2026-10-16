@@ -83,13 +83,13 @@ def _run_desktop_shell(command, service, environment, session_token):
         stderr = capture.finish() if capture is not None else ''
         if code:
             detail = safe_exception_detail(stderr, (session_token,)).strip()
-            service.log('!! 桌面启动器进程异常退出，返回码：%s。%s' %
-                        (code, '\n' + detail if detail else '\n请检查 launcher_cache/ui-shell.log。'))
+            service.log('!! Desktop launcher process exited unexpectedly with code %s.%s' %
+                        (code, '\n' + detail if detail else '\nCheck launcher_cache/ui-shell.log.'))
         return int(code or 0)
     except Exception as exc:
         if capture is not None:
             capture.finish()
-        service.log('!! 桌面启动器无法启动：%s' % safe_exception_detail(exc, (session_token,)))
+        service.log('!! Could not start the desktop launcher: %s' % safe_exception_detail(exc, (session_token,)))
         return 1
 
 
@@ -117,11 +117,11 @@ class LauncherHandler(http.server.BaseHTTPRequestHandler):
 
     def _host_allowed(self):
         if self.headers.get('Host', '') != '127.0.0.1:%d' % self.server.server_address[1]:
-            self._json(None, '访问来源无效。', 403)
+            self._json(None, 'Invalid request origin.', 403)
             return False
         origin = self.headers.get('Origin')
         if origin and origin != self.server.origin:
-            self._json(None, '访问来源无效。', 403)
+            self._json(None, 'Invalid request origin.', 403)
             return False
         return True
 
@@ -162,13 +162,13 @@ class LauncherHandler(http.server.BaseHTTPRequestHandler):
 
     def _body(self):
         if not self.headers.get('Content-Type', '').startswith('application/json'):
-            raise ValueError('请求格式必须为 JSON。')
+            raise ValueError('Request body must be valid JSON.')
         size = int(self.headers.get('Content-Length', '0'))
         if not 0 < size <= 8 * 1024 * 1024:
-            raise ValueError('请求内容过大或为空。')
+            raise ValueError('Request body is too large or empty.')
         value = json.loads(self.rfile.read(size).decode('utf-8'))
         if not isinstance(value, dict):
-            raise ValueError('请求内容格式不正确。')
+            raise ValueError('Invalid request body format.')
         return value
 
     def do_GET(self):
@@ -193,7 +193,7 @@ class LauncherHandler(http.server.BaseHTTPRequestHandler):
         try:
             if path.startswith('/api/'):
                 if not self._authorized():
-                    self._json(None, '会话已失效，请重新打开启动器。', 403)
+                    self._json(None, 'Session expired. Reopen the launcher.', 403)
                     return
                 data = self._body() if method != 'GET' else {}
                 parts = path.strip('/').split('/')
@@ -213,7 +213,7 @@ class LauncherHandler(http.server.BaseHTTPRequestHandler):
                     elif method == 'DELETE':
                         result = service.delete_account(parts[2], data.get('confirm_uin'))
                     else:
-                        raise ValueError('操作不支持。')
+                        raise ValueError('Unsupported operation.')
                 elif path == '/api/start' and method == 'POST':
                     result = service.start(data.get('account_id'))
                 elif path == '/api/stop' and method == 'POST':
@@ -239,7 +239,7 @@ class LauncherHandler(http.server.BaseHTTPRequestHandler):
                 elif path == '/api/settings' and method == 'PATCH':
                     result = service.save_settings(data)
                 else:
-                    self._json(None, '接口不存在。', 404)
+                    self._json(None, 'Endpoint not found.', 404)
                     return
                 self._json(result)
             elif method == 'GET':
@@ -255,11 +255,11 @@ class LauncherHandler(http.server.BaseHTTPRequestHandler):
                     directory = service.root / 'launcher_ui'
                     name = 'index.html' if path in ('', '/') else path.lstrip('/')
                     if name not in ('index.html', 'app.js', 'styles.css') and not name.startswith('assets/'):
-                        self._send('文件不存在。', 'text/plain; charset=utf-8', 404)
+                        self._send('File not found.', 'text/plain; charset=utf-8', 404)
                         return
                 target = (directory / name).resolve()
                 if not target.is_relative_to(directory.resolve()) or not target.is_file():
-                    self._send('文件不存在。', 'text/plain; charset=utf-8', 404)
+                    self._send('File not found.', 'text/plain; charset=utf-8', 404)
                     return
                 content_type = mimetypes.guess_type(str(target))[0] or 'application/octet-stream'
                 if content_type.startswith('text/') or content_type in ('application/javascript', 'application/json'):
@@ -270,12 +270,12 @@ class LauncherHandler(http.server.BaseHTTPRequestHandler):
                     headers['Set-Cookie'] = 'PVZLauncherToken=%s; Path=/; HttpOnly; SameSite=Strict' % self.server.token
                 self._send(target.read_bytes(), content_type, headers=headers)
             else:
-                self._json(None, '接口不存在。', 404)
+                self._json(None, 'Endpoint not found.', 404)
         except (ValueError, TypeError, KeyError) as exc:
             self._json(None, str(exc), 400)
         except Exception as exc:
-            service.log('!! 操作失败：%s' % exc)
-            self._json(None, '操作失败：%s' % exc, 500)
+            service.log('!! Operation failed: %s' % exc)
+            self._json(None, 'Operation failed: %s' % exc, 500)
         finally:
             try:
                 import player_store
@@ -316,7 +316,7 @@ def run(argv=None):
             if executable.is_file():
                 command = [str(executable), '--url', server.url, '--data-dir', str(ROOT / 'launcher_cache')]
             else:
-                raise RuntimeError('新启动器界面运行文件缺失，请检查“启动器界面”文件夹。可使用 --legacy-ui 打开旧界面。')
+                raise RuntimeError('New launcher UI runtime files are missing. Check the launcher UI folder (“启动器界面”), or use --legacy-ui to open the legacy interface.')
             return _run_desktop_shell(command, service,
                                      {**os.environ, ACTIVATION_ENV: instance.activation_event_name,
                                       'PVZ_LAUNCHER_WINDOW_FILE': str(service.window_info_path)},
