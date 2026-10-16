@@ -110,8 +110,8 @@ LEVEL_KEYS = {
 # 否则会把装备/卡牌伪造成客户端无法解释的普通堆栈。
 CURRENCY_GRANTS = {
     1: ("coin", "Coins"),
-    3: ("sun", "阳光"),
-    4: ("present_ticket", "钻石"),
+    3: ("sun", "Sun"),
+    4: ("present_ticket", "Blue Diamonds"),
     6: ("friend_point", "Friend Points"),
     7: ("fame", "Prestige"),
     9: ("energy", "Stamina"),
@@ -127,13 +127,13 @@ ITEM_KIND_LABELS = {
     "stack": "Inventory Items",
     "currency": "Account Currency",
     "card": "Plant Cards",
-    "equipment": "装备",
+    "equipment": "Equipment",
     "reagent": "Reagents",
 }
 
 ITEM_TYPE_LABELS = {
     1: "General", 2: "Materials / Consumables", 4: "Plant Cards", 5: "Plant Fragments",
-    6: "XP Bean", 7: "装备", 8: "Lab Materials", 9: "Chlorophyll",
+    6: "XP Bean", 7: "Equipment", 8: "Lab Materials", 9: "Chlorophyll",
     10: "Puzzle Pieces", 11: "Reagents", 12: "Energy Stone", 13: "Genes / Puppet Materials",
     14: "Cultivation Fluid", 15: "Puppet Display Entry", 16: "Expedition Resources",
 }
@@ -253,7 +253,7 @@ def _invalid_puzzle_details(item_id):
             allowed = "%s–%s" % (ids[0], ids[-1]) if len(ids) > 1 else str(ids[0])
         else:
             allowed = "、".join(map(str, ids))
-        color = "白色" if group == 610 else "绿色"
+        color = "White" if group == 610 else "Green"
         return ("Invalid puzzle ID (ID %s)" % item_id,
                 "%s puzzle · valid IDs for this tier: %s · original quantity preserved" % (color, allowed))
     base_id = group * 100 + 1
@@ -295,12 +295,12 @@ EDIT_FIELDS = (
     ("level", "Account Level", "number", 1, max(gm.player_level_values())),
     ("exp", "XP", "number", 0, 2_000_000_000),
     ("coin", "Coins", "number", 0, 2_000_000_000),
-    ("sun", "阳光", "number", 0, 2_000_000_000),
+    ("sun", "Sun", "number", 0, 2_000_000_000),
     ("energy", "Stamina", "number", 0, 2_000_000_000),
     ("present_ticket", "Blue Diamonds", "number", 0, 2_000_000_000),
     ("ticket", "Gold Diamonds", "number", 0, 2_000_000_000),
     ("fame", "Prestige", "number", 0, 2_000_000_000),
-    ("friend_point", "好友点", "number", 0, 2_000_000_000),
+    ("friend_point", "Friend Points", "number", 0, 2_000_000_000),
 )
 
 
@@ -461,7 +461,7 @@ def _repair_invalid_puzzles(uin):
         records = backup + ".json"
         with open(records, "x", encoding="utf-8") as stream:
             json.dump({"uin": uin, "backup": os.path.basename(backup),
-                       "reason": "旧逻辑按格子序号生成了客户端未定义的Puzzle Pieces编号",
+                       "reason": "Legacy logic generated a puzzle-piece ID from the slot index that the client does not define",
                        "items": rows}, stream, ensure_ascii=False, indent=2)
         _require_game_stopped()
         removed = con.executemany("DELETE FROM items WHERE uin=? AND item_id=? AND count=?",
@@ -992,7 +992,7 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
             destination = "/player?" + urlencode(dict(uin=player["uin"], **({"theme": theme} if theme in ("light", "dark") else {})))
             tags = ("Lv.%s" % player["level"], "VIP%s" % player["vip_level"],
                     "Coins %s" % player["coin"], "Blue Diamonds %s" % player["present_ticket"],
-                    "Gold Diamonds %s" % player["ticket"], "塔防 %s-%s-%s" % (player["td_stage"], player["td_level"], player["td_sub"]))
+                    "Gold Diamonds %s" % player["ticket"], "Tower Defense %s-%s-%s" % (player["td_stage"], player["td_level"], player["td_sub"]))
             return ('<article class="account-row" data-account-uin="%s"><span class="account-avatar" aria-hidden="true">%s</span>'
                     '<div class="account-body"><div class="account-title"><a class="account-name" href="%s">%s</a>'
                     '<span class="account-uin">UIN %s</span></div><div class="account-tags">%s</div>'
@@ -1452,7 +1452,7 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
         candidates = sorted(key[2] for key in LEVEL_KEYS if key[:2] == (stage, level))
         if not candidates:
             raise ValidationError("World %s, stage %s does not exist in the client." % (stage, level))
-        sub = max(candidates) if not raw_sub else _integer(form, "sub", 1, 999, "小关")
+        sub = max(candidates) if not raw_sub else _integer(form, "sub", 1, 999, "Substage")
         if (stage, level, sub) not in LEVEL_KEYS:
             raise ValidationError("Stage %s-%s-%s does not exist in the client." % (stage, level, sub))
         gm.passto(uin, stage, level, sub)
@@ -1464,7 +1464,7 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
         player = _require_player(uin)
         target = _integer(form, "level", 1, 999, "Card Level")
         raw_uid = (form.get("uid", [""])[0] or "").strip()
-        uid = _integer(form, "uid", 1, None, "卡牌 UID") if raw_uid else None
+        uid = _integer(form, "uid", 1, None, "Card UID") if raw_uid else None
         cards = [card for card in store.get_cards(uin) if uid is None or card[0] == uid]
         if not cards:
             raise ValidationError("No plant cards found to edit.")
