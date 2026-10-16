@@ -22,7 +22,7 @@ PATCH_HELPERS = SERVER / "client_patches" / "card-exp-bean-repeat-20260926"
 if str(PATCH_HELPERS) not in sys.path:
     sys.path.insert(0, str(PATCH_HELPERS))
 
-from translate_battle_ui import EXCLUDED_MODULES, MODULE_NAMES, VERSION_NAME, _iter_abc_tags, _module_targets, _read_constant_pools
+from translate_battle_ui import EXCLUDED_MODULES, MODULE_NAMES, VERSION_NAME, _iter_abc_tags, _iter_edit_text_fields, _module_targets, _read_constant_pools
 
 CJK_RE = re.compile(r"[\u3400-\u9fff]")
 TRANSLATION_TERMS = (
@@ -63,10 +63,19 @@ def _raw_swf(path: Path) -> bytes:
     return raw
 
 
-def scan(path: Path) -> tuple[int, list[tuple[str, int, str]]]:
+def scan(path: Path) -> tuple[int, int, list[tuple[str, int, str]]]:
     raw = _raw_swf(path)
     blocks = list(_iter_abc_tags(raw))
     matches: list[tuple[str, int, str]] = []
+    try:
+        edit_text_fields = list(_iter_edit_text_fields(raw))
+    except Exception as exc:
+        edit_text_fields = []
+        matches.append((\"<could not parse editable text: %s>\" % exc, 0, \"UNPARSED_EDITTEXT\"))
+    for field_no, field in enumerate(edit_text_fields, 1):
+        value = field[-1]
+        if value and CJK_RE.search(value):
+            matches.append((value, field_no, \"EDITTEXT\"))
     for block_no, (start, end, _tag_start, _header_len, _tag_len) in enumerate(blocks, 1):
         try:
             info = _read_constant_pools(raw[start:end])
@@ -83,7 +92,7 @@ def scan(path: Path) -> tuple[int, list[tuple[str, int, str]]]:
             # targeted modules; mark identifiers so they aren't blindly replaced.
             if relevant or not is_structural:
                 matches.append((value, block_no, "IDENTIFIER" if is_structural else "DISPLAY"))
-    return len(blocks), matches
+    return len(blocks), len(edit_text_fields), matches
 
 
 def main() -> int:
@@ -111,12 +120,12 @@ def main() -> int:
     total = 0
     for path in existing:
         try:
-            blocks, matches = scan(path)
+            blocks, edit_text_count, matches = scan(path)
         except Exception as exc:
             print("%s: ERROR: %s" % (path.name, exc))
             continue
         if not matches:
-            print("%s: %d ABC block(s), no Chinese strings matched for review" % (path.name, blocks))
+            print("%s: %d ABC block(s), %d editable text field(s), no Chinese strings found" % (path.name, blocks, edit_text_count))
             continue
         print("\n%s: %d ABC block(s), %d Chinese strings" % (path.name, blocks, len(matches)))
         seen: set[tuple[str, str]] = set()
