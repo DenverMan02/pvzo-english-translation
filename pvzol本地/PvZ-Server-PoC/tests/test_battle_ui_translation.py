@@ -142,8 +142,8 @@ class BattleUITranslationTests(unittest.TestCase):
     def test_split_free_reset_tooltip_fragments(self):
         self.assertEqual(_translate_display_string("今日免费重置："), "Free resets today: ")
         self.assertEqual(
-            _translate_display_string("次\\n每日0点恢复免费次数；用完后每次"),
-            " reset(s) left.\\nFree resets replenish daily at midnight; after they run out, each reset costs ",
+            _translate_display_string("次\n每日0点恢复免费次数；用完后每次"),
+            " reset(s) left.\nFree resets replenish daily at midnight; after they run out, each reset costs ",
         )
         self.assertEqual(_translate_display_string("钻购买重置"), " diamonds to reset")
     def test_power_source_breakdown_vocabulary(self):
