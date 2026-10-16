@@ -116,12 +116,12 @@ class LoopbackClient:
         self._socket = None
 
     def _safe_message(self, message):
-        return str(message).replace(self._token, '[已隐藏]')[:240]
+        return str(message).replace(self._token, '[hidden]')[:240]
 
     def request(self, method, path, data=None):
         if (method not in ('GET', 'POST') or path not in self.PATHS
                 or (method == 'GET') != (path in ('/api/state', '/api/accounts'))):
-            raise TrayError('不支持的启动器操作。')
+            raise TrayError('Unsupported launcher operation.')
         con = http.client.HTTPConnection(self._host, self._port, timeout=self._timeout)
         with self._lock:
             if self._closed.is_set():
@@ -152,12 +152,12 @@ class LoopbackClient:
             if not isinstance(payload, dict) or 'ok' not in payload:
                 raise TrayError('The launcher returned invalid data.')
             if response.status >= 400 or payload.get('ok') is not True:
-                raise TrayError(self._safe_message(payload.get('error') or '启动器操作失败。'))
+                raise TrayError(self._safe_message(payload.get('error') or 'Launcher operation failed.'))
             return payload.get('data')
         except TrayError:
             raise
         except (OSError, http.client.HTTPException, ValueError, UnicodeError):
-            raise TrayError('暂时无法连接启动器，请稍后重试。') from None
+            raise TrayError('Unable to connect to the launcher right now. Try again shortly.') from None
         finally:
             if response is not None:
                 response.close()
@@ -189,7 +189,7 @@ class TrayActions:
     def refresh(self):
         state = self.client.request('GET', '/api/state')
         if not isinstance(state, dict):
-            raise TrayError('启动器状态无效。')
+            raise TrayError('Invalid launcher status.')
         self.state = state
         return state
 
@@ -200,10 +200,10 @@ class TrayActions:
         selected = self.selected_account()
         accounts = self.client.request('GET', '/api/accounts')
         if not isinstance(accounts, list):
-            raise TrayError('角色列表无效。')
+            raise TrayError('Invalid character list.')
         account = select_start_account(state, accounts, selected)
         if account is None:
-            raise TrayError('请先在启动器创建一个角色。')
+            raise TrayError('Create a character in the launcher first.')
         self.client.request('POST', '/api/start', {'account_id': account})
         return self.refresh()
 
@@ -253,7 +253,7 @@ class TrayWorker:
                 error = str(exc)
             except Exception:
                 # Do not log raw request errors or URLs containing a session token.
-                error = '启动器操作失败，请稍后重试。'
+                error = 'Launcher operation failed. Try again shortly.'
             finally:
                 with self._lock:
                     self.pending = False
@@ -287,7 +287,7 @@ class ActivationWatcher:
         kernel.CloseHandle.restype = ctypes.c_int
         handle = kernel.OpenEventW(0x00100000, False, event_name)  # SYNCHRONIZE
         if not handle:
-            raise TrayError('启动器唤醒通道不可用，请重新打开启动器。')
+            raise TrayError('The launcher wake-up channel is unavailable. Reopen the launcher.')
         self._kernel, self._handle = kernel, handle
 
         def watch():
@@ -353,10 +353,10 @@ class NativeTray:
         form.Bounds = Rectangle(*bounds)
         self._publish_window()
         self.menu = ContextMenuStrip()
-        self.show_item = ToolStripMenuItem('显示启动器')
-        self.start_item = ToolStripMenuItem('启动游戏')
-        self.stop_item = ToolStripMenuItem('停止游戏')
-        self.exit_item = ToolStripMenuItem('退出')
+        self.show_item = ToolStripMenuItem('Show Launcher')
+        self.start_item = ToolStripMenuItem('Launch Game')
+        self.stop_item = ToolStripMenuItem('Stop Game')
+        self.exit_item = ToolStripMenuItem('Exit')
         for item in (self.show_item, self.start_item, self.stop_item, self.exit_item):
             self.menu.Items.Add(item)
         self.show_item.Click += self._show_event
@@ -415,7 +415,7 @@ class NativeTray:
     @staticmethod
     def _write_json(path, data):
         if not path.is_absolute():
-            raise TrayError('桌面窗口记录路径必须为绝对路径。')
+            raise TrayError('The desktop-window state path must be absolute.')
         path.parent.mkdir(parents=True, exist_ok=True)
         fd, temporary = tempfile.mkstemp(prefix=path.name + '.', suffix='.tmp', dir=path.parent)
         try:
@@ -468,7 +468,7 @@ class NativeTray:
         except Exception:
             # Native disposal can race a background result after the first check.
             if not self._closed.is_set():
-                logging.warning('桌面窗口暂时无法接收托盘更新。')
+                logging.warning('The desktop window cannot receive tray updates right now.')
 
     def _selected_account(self):
         result, done = [None], threading.Event()
@@ -639,7 +639,7 @@ def check_dependencies() -> dict[str, object]:
         if not Path(location).is_file():
             raise RuntimeError(f"缺少桌面运行组件：{name}")
     if not forms.is_chromium:
-        raise RuntimeError("未找到 Microsoft Edge WebView2 Runtime，请安装后重试。")
+        raise RuntimeError("Microsoft Edge WebView2 Runtime was not found. Install it and try again.")
     return {
         "ok": True,
         "renderer": "edgechromium",
@@ -659,12 +659,12 @@ def show_error(message: str) -> None:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="PVZ OL 桌面启动器窗口")
-    parser.add_argument("--url", help="控制器提供的本机 HTTP 页面地址")
-    parser.add_argument("--data-dir", type=Path, help="项目缓存目录的父目录")
-    parser.add_argument("--self-test", action="store_true", help="仅导入桌面组件，不打开窗口")
+    parser = argparse.ArgumentParser(description="PvZ OL desktop launcher window")
+    parser.add_argument("--url", help="Local HTTP page URL provided by the controller")
+    parser.add_argument("--data-dir", type=Path, help="Parent directory of the project cache directory")
+    parser.add_argument("--self-test", action="store_true", help="Import desktop components only; do not open a window")
     parser.add_argument("--native-self-test-report", type=Path,
-                        help="隔离 QA：记录原生位置和托盘状态，显示后自动关闭")
+                        help="Isolated QA: record native position and tray state, then close automatically after showing")
     args = parser.parse_args(argv)
 
     # Must precede check_dependencies: CLR/WinForms can cache display metrics
@@ -684,7 +684,7 @@ def main(argv: list[str] | None = None) -> int:
             return 2
 
     if not args.url or args.data_dir is None:
-        parser.error("请提供 --url 和 --data-dir。")
+        parser.error("Please provide --url and --data-dir.")
     tray = None
     try:
         url = validate_local_url(args.url)
@@ -739,8 +739,8 @@ def main(argv: list[str] | None = None) -> int:
             tokens = parse_qs(urlsplit(args.url).query, keep_blank_values=True).get('token', [])
         except ValueError:
             tokens = []
-        logging.error('桌面窗口启动失败：%s', safe_exception_detail(exc, tokens))
-        show_error('桌面窗口启动失败。\n\n请检查项目内的 ui-shell.log。')
+        logging.error('Desktop window startup failed: %s', safe_exception_detail(exc, tokens))
+        show_error('Desktop window startup failed.\n\nCheck ui-shell.log in the project directory.')
         return 1
     finally:
         if tray is not None:
