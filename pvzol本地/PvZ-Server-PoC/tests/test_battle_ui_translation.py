@@ -97,8 +97,6 @@ class BattleUITranslationTests(unittest.TestCase):
         self.assertNotIn("ModuleFont.swf", targets)
         self.assertEqual(targets.count("ModuleCard.swf"), 1)
 
-
-
     def test_common_pvz_terms(self):
         self.assertEqual(_translate_display_string("阵容"), "Formation")
         self.assertEqual(_translate_display_string("技能树"), "Skill Tree")
@@ -115,6 +113,7 @@ class BattleUITranslationTests(unittest.TestCase):
         self.assertEqual(hits, 1)
         self.assertEqual(blocked, 0)
         self.assertEqual(_read_constant_pools(patched)["strings"][1], "Health")
+
     def test_card_progression_and_item_requirements(self):
         self.assertEqual(_translate_display_string("基因槽"), "Gene Slot")
         self.assertEqual(_translate_display_string("确认购买"), "Confirm Purchase")
