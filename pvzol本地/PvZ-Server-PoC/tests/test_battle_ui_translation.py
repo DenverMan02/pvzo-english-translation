@@ -122,5 +122,12 @@ class BattleUITranslationTests(unittest.TestCase):
         self.assertEqual(_translate_display_string("当前不可用"), "Currently Unavailable")
         self.assertEqual(_translate_display_string("功能暂未开放"), "Feature Not Available Yet")
 
+    def test_power_source_breakdown_vocabulary(self):
+        self.assertEqual(_translate_display_string("基础/强化"), "Base / Enhancement")
+        self.assertEqual(_translate_display_string("强化战力"), "Enhancement Power")
+        self.assertEqual(_translate_display_string("装备战力"), "Equipment Power")
+        self.assertEqual(_translate_display_string("战力来源"), "Power Sources")
+        self.assertEqual(_translate_display_string("队伍战力"), "Team Power")
+
 if __name__ == "__main__":
     unittest.main()
