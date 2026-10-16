@@ -12,6 +12,10 @@ from translate_battle_ui import _module_targets, _patch_abc_strings, _read_const
 
 
 class BattleUITranslationTests(unittest.TestCase):
+    def test_bulk_label_translation_uses_one_pass_without_losing_neighbors(self):
+        text = " | ".join(["生命+1500 技力+250", "阵容", "连续签到", "世界BOSS", "当前等级：120"] * 40)
+        expected = " | ".join(["Health+1500 Skill Power+250", "Formation", "Consecutive Check-Ins", "World Boss", "Current Level: 120"] * 40)
+        self.assertEqual(_translate_display_string(text), expected)
     def test_stat_breakdown_labels(self):
         text = "总和 战力 2784 先攻 1600 基础战力 1919"
         self.assertEqual(
