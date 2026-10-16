@@ -81,7 +81,7 @@ class BattleUITranslationTests(unittest.TestCase):
 
     def test_common_resource_and_service_labels(self):
         self.assertEqual(_translate_display_string("金币"), "Coins")
-        self.assertEqual(_translate_display_string("服务器繁忙"), "Server Busy")
+        self.assertEqual(_translate_display_string("服务器繁忙"), "Server busy")
         self.assertEqual(_translate_display_string("今日剩余次数： 3/3"), "Attempts Remaining Today: 3/3")
 
 
