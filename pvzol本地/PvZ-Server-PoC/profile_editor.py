@@ -44,7 +44,7 @@ def validate_name(con, player, value):
         folded = name.casefold()
         if any(str(row['name'] or '').casefold() == folded for row in con.execute(
                 'SELECT name FROM players WHERE uin<>?', (int(player['uin']),))):
-            raise ValueError('该Name已被其他账号使用。')
+            raise ValueError('That name is already used by another account.')
     return name
 
 
