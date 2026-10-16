@@ -188,6 +188,11 @@ class BattleUITranslationTests(unittest.TestCase):
         self.assertEqual(_translate_display_string("队伍已满"), "Team is Full")
         self.assertEqual(_translate_display_string("时光之旅"), "Time Journey")
         self.assertEqual(_translate_display_string("世界BOSS"), "World Boss")
+    def test_dynamic_sweep_counters_and_reward_copy(self):
+        self.assertEqual(_translate_display_string("今日可挑战:5次"), "Challenges available today: 5 attempts")
+        self.assertEqual(_translate_display_string("免费次数：9999次（VIP增加次数）"), "Free attempts: 9999 attempts（VIP bonus attempts）")
+        self.assertEqual(_translate_display_string("首次通关可以获得500Coins"), "First clear rewards: 500 Coins")
+        self.assertEqual(_translate_display_string("每天可以领取1000Coins"), "Available daily: 1000 Coins")
     def test_screenshot_sweep_and_stage_reward_labels(self):
         self.assertEqual(_translate_display_string("扫荡奖励"), "Sweep Rewards")
         self.assertEqual(_translate_display_string("再扫荡一次"), "Sweep Again")
