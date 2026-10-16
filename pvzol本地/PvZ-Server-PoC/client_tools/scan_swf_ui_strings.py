@@ -88,7 +88,7 @@ def scan(path: Path) -> tuple[int, list[tuple[str, int, str]]]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--all", action="store_true", help="scan every top-level Module*.swf")
+    parser.add_argument("--all", action="store_true", help="also scan top-level hash aliases and Game*.swf files")
     args = parser.parse_args()
 
     manifest_path = WEBROOT / VERSION_NAME
