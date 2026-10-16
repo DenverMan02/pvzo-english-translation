@@ -1304,14 +1304,20 @@ def _patch_abc_strings(abc: bytes) -> tuple[bytes, int, int, int]:
     hits = 0
     blocked = 0
     replacements = 0
+    # The Endless Purgatory failure toast is assembled from separate ABC strings.
+    # Translate its final stage marker only in the ABC pool that contains that toast prefix.
+    has_endless_failure_fragment = "挑战失败！当前成绩为第" in info["strings"]
     for index, entry_start, entry_end, original in info["string_entries"]:
         proposed = _translate_display_string(original)
-        translated = original if index in protected else proposed
+        stage_suffix = has_endless_failure_fragment and original == "关" and index not in protected
+        translated = "" if stage_suffix else (original if index in protected else proposed)
         if index in protected and proposed != original:
             blocked += sum(original.count(old) for old, _new in ORDERED_TRANSLATIONS if old in original)
         if translated != original:
             replacements += 1
             hits += sum(original.count(old) for old, _new in ORDERED_TRANSLATIONS if old in original)
+            if stage_suffix:
+                hits += 1
             encoded = translated.encode("utf-8")
             chunks.append(encode_u30(len(encoded)) + encoded)
         else:
