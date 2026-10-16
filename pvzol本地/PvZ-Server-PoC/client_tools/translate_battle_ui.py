@@ -209,6 +209,7 @@ TRANSLATIONS = {
     "市场": "Market",
     "人气": "Popular",
     "免费次数：": "Free attempts: ",
+    "免费次数:": "Free attempts: ",
     "今日可挑战": "Challenges Available Today",
     "今日可挑战:": "Challenges available today: ",
     "今日可挑战：": "Challenges available today: ",
