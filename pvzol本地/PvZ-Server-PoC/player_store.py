@@ -644,7 +644,7 @@ def create_new_player(uin):
     """Create a fresh account, rejecting an existing UIN without changing it."""
     text = str(uin)
     if not 1 <= len(text) <= 19 or not text.isascii() or not text.isdigit() or not 1 <= int(text) <= 4294967295:
-        raise ValueError("账号必须是 1—4294967295 的纯数字。")
+        raise ValueError("Account ID must be a numeric value from 1 to 4294967295.")
     return get_or_create_player(int(text), create_only=True)[0]
 
 
@@ -659,7 +659,7 @@ def get_or_create_player(uin, *, create_only=False):
         row = con.execute("SELECT * FROM players WHERE uin=?", (uin,)).fetchone()
         if row is not None:
             if create_only:
-                raise ValueError("账号 %s 已存在，请选择其他账号号码。" % uin)
+                raise ValueError("Account %s already exists. Choose a different account ID." % uin)
             con.execute("UPDATE players SET last_login=? WHERE uin=?", (now, uin))
             vals = dict(row)
             has_td_progress = con.execute(
