@@ -447,40 +447,42 @@ def _module_targets(manifest: bytes) -> list[str]:
 # Short stat names should only be translated when they are standalone labels or
 # delimited stat tokens. This avoids turning ordinary Chinese sentences into a
 # Chinese/English mixture just because they mention health, attacks, or skills.
-CONTEXTUAL_TERMS = {
-    "攻击力", "防御力", "生命上限", "生命值", "健康", "生命",
-    "技能伤害", "暴击伤害", "暴击率", "总和", "战力", "先攻",
-    "果实", "基因", "装备", "洗炼", "装甲", "装扮", "技能",
-    "普攻", "技力", "攻击", "防御", "命中", "闪避", "韧性",
-    "暴击", "抗暴", "护盾", "减伤", "吸血", "速度", "强化", "星级",
-    "确定", "取消", "返回", "关闭", "开始", "升级", "更换", "重置", "刷新",
-    "挑战", "奖励", "排行榜", "好友", "商店", "设置", "背包", "邮件", "任务", "活动",
-    "关卡", "战斗", "角色", "领取", "进行中", "等待中",
-    "金币", "阳光", "蓝钻", "金钻", "钻石", "体力", "声望", "经验", "等级",
-    "今日剩余次数", "已解锁", "未解锁", "开启", "启用", "停用", "禁用",
-    "连接中", "连接成功", "加载成功", "登录中", "注册成功", "注册失败",
-    "数量", "名称", "描述", "消耗", "所需", "获得", "使用", "购买", "出售",
-    "兑换", "进阶", "合成", "分解", "装备", "卸下", "当前", "最大", "属性",
-    "生命", "攻击", "防御", "速度", "治疗", "伤害", "成功", "失败", "完成",
-    "帮助", "规则", "预览", "排名", "名次", "第一名", "第二名", "第三名",
+SUBSTRING_TRANSLATIONS = {
+    # These are concatenated around dynamic stage numbers in ActionScript.
+    "挑战第",
+    "关成功！",
+    "挑战失败！当前成绩为第",
 }
-TOKEN_BOUNDARY_RE = r"[\s\[\]【】()（）:：+/\-·]"
+# Only translate most phrases when they are a complete label or a delimited
+# token. This prevents a label such as "失败" from being inserted into the
+# middle of an otherwise-Chinese sentence.
+CONTEXTUAL_TERMS = set(TRANSLATIONS).difference(SUBSTRING_TRANSLATIONS)
+TOKEN_BOUNDARY_RE = r"[\s\[\]【】()（）:：+/\-·<>{}]"
 
 
 def _translate_display_string(value: str) -> str:
-    # First translate explicit UI labels, multi-word labels, and whole phrases.
+    # A few dynamic strings are assembled from separate ActionScript literals,
+    # so these fragments must be replaced even when they are not the whole value.
     for old, new in ORDERED_TRANSLATIONS:
-        if old not in CONTEXTUAL_TERMS:
+        if old in SUBSTRING_TRANSLATIONS or value == old:
             value = value.replace(old, new)
 
-    # Then translate short stat terms only at clear label/token boundaries.
+    # Other labels are translated only when standalone or separated from
+    # surrounding text by UI punctuation, whitespace, numbers, or HTML markup.
     for old, new in ORDERED_TRANSLATIONS:
         if old not in CONTEXTUAL_TERMS:
             continue
-        pattern = r"(^|" + TOKEN_BOUNDARY_RE + r")" + re.escape(old) + r"(?=$|" + TOKEN_BOUNDARY_RE + r"|\d|[%％])"
-        value = re.sub(pattern, lambda match, replacement=new: match.group(1) + replacement, value)
+        pattern = (
+            r"(^|" + TOKEN_BOUNDARY_RE + r")"
+            + re.escape(old)
+            + r"(?=$|" + TOKEN_BOUNDARY_RE + r"|\d|[%％])"
+        )
+        value = re.sub(
+            pattern,
+            lambda match, replacement=new: match.group(1) + replacement,
+            value,
+        )
     return value
-
 
 def _patch_abc_strings(abc: bytes) -> tuple[bytes, int, int, int]:
     """Patch eligible display strings while preserving the ABC pool structure."""
