@@ -857,7 +857,9 @@ def apply_translation() -> bool:
             continue
         if changed_strings == 0:
             unchanged_count += 1
-            if blocked:
+            if block_count and skipped_blocks >= block_count:
+                print("[battle-ui-translation] %s: all %d ABC blocks were unsupported; no strings could be checked." % (module_name, block_count))
+            elif blocked:
                 print("[battle-ui-translation] %s: checked %d ABC block(s), skipped %d unsupported; %d label occurrences are structural identifiers, so they were left untouched." % (module_name, block_count, skipped_blocks, blocked))
             else:
                 print("[battle-ui-translation] %s: checked %d ABC block(s), skipped %d unsupported; no untranslated matching display strings found." % (module_name, block_count, skipped_blocks))
