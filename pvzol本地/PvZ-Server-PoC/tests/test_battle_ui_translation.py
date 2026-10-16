@@ -145,7 +145,7 @@ class BattleUITranslationTests(unittest.TestCase):
     def test_dynamic_endless_failure_toast(self):
         self.assertEqual(
             _translate_display_string("挑战失败！当前成绩为第3关"),
-            "Challenge failed! Current record: stage 3",
+            "Challenge failed! Current result: stage 3",
         )
         self.assertEqual(_translate_display_string("挑战第3关成功！"), "Challenge stage 3 cleared!")
     def test_endless_purgatory_floating_notices(self):
