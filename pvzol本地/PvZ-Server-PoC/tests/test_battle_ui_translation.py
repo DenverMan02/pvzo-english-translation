@@ -170,6 +170,12 @@ class BattleUITranslationTests(unittest.TestCase):
             " reset(s) left.\nFree resets replenish daily at midnight; after they run out, each reset costs ",
         )
         self.assertEqual(_translate_display_string("钻购买重置"), " diamonds to reset")
+    def test_pvz_online_plant_and_zombie_names(self):
+        self.assertEqual(_translate_display_string("胡萝卜火箭"), "Carrot Rocket")
+        self.assertEqual(_translate_display_string("竹小龙"), "Bamboo Dragon")
+        self.assertEqual(_translate_display_string("冰冻生菜"), "Iceberg Lettuce")
+        self.assertEqual(_translate_display_string("秦尸皇"), "Qin Shi Huang Zombie")
+        self.assertEqual(_translate_display_string("尸身人面像"), "Mummy Sphinx")
     def test_daily_activity_and_multiplayer_labels(self):
         self.assertEqual(_translate_display_string("每日任务"), "Daily Quests")
         self.assertEqual(_translate_display_string("连续签到"), "Consecutive Check-Ins")
