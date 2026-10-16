@@ -1120,7 +1120,7 @@ def _translate_display_string(value: str) -> str:
         )
     # Endless Purgatory builds its failure toast from a prefix + stage number + suffix.
     # Strip the trailing Chinese stage marker only for that translated toast.
-    value = re.sub(r\"^(Challenge failed! Current record: stage \\d+)关$\", r\"\\1\", value)
+    value = re.sub(r"^(Challenge failed! Current record: stage \d+)关$", r"\1", value)
     return value
 
 def _read_constant_pools(abc: bytes) -> dict:
