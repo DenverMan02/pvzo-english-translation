@@ -99,5 +99,13 @@ class BattleUITranslationTests(unittest.TestCase):
 
 
 
+    def test_common_pvz_terms(self):
+        self.assertEqual(_translate_display_string("阵容"), "Formation")
+        self.assertEqual(_translate_display_string("技能树"), "Skill Tree")
+        self.assertEqual(_translate_display_string("火属性"), "Fire Element")
+        self.assertEqual(_translate_display_string("护盾上限"), "Max Shield")
+        self.assertEqual(_translate_display_string("无尽炼狱"), "Endless Purgatory")
+        self.assertEqual(_translate_display_string("奖励预览"), "Reward Preview")
+
 if __name__ == "__main__":
     unittest.main()
