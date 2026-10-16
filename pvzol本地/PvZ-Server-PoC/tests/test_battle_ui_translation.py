@@ -1,4 +1,4 @@
-"""Quick regression checks for battle stat and tooltip string translations."""
+"""Regression checks for in-game UI, tooltip, and SWF translation safety."""
 from __future__ import annotations
 
 import sys
