@@ -760,7 +760,7 @@ class Launcher:
         self._admin_waiting = None
         self.admin_btn.configure(state="normal")
         self._log("!! The admin panel did not become ready. Check the logs or port %d." % ADMIN_PORT)
-        if proc is self.admin and self._terminate_owned(proc, "GM 后台"):
+        if proc is self.admin and self._terminate_owned(proc, "GM Admin"):
             self.admin = None
             if not self.running:
                 self.stop_btn.configure(state="disabled")
@@ -1210,7 +1210,7 @@ class Launcher:
         def refresh_friends():
             fr_list.delete(0, "end")
             for f in store.get_friends(int(uin)):
-                fr_list.insert("end", "%d | %s | 植物 %d Lv%d | 钻石: 标志=%d 蓝=%d 黄=%d 心悦=%d" % (
+                fr_list.insert("end", "%d | %s | Plant %d Lv%d | Membership: flag=%d, blue=%d, gold=%d, heartfelt=%d" % (
                     f["friend_role_id"], f["friend_name"], f["help_plant_id"],
                     f["help_plant_level"], f["diamond_flag"], f["diamond_blue_lvl"],
                     f["diamond_yellow_lvl"], f["diamond_xinyue_lvl"]))
@@ -1345,7 +1345,7 @@ class Launcher:
             messagebox.showwarning("Account", "This ID belongs to a system bot. Select a player account.")
             return
         # Retire only the standalone admin process owned by this launcher.
-        if self.admin and not self._terminate_owned(self.admin, "GM 后台"):
+        if self.admin and not self._terminate_owned(self.admin, "GM Admin"):
             return
         self.admin = None
         self._admin_waiting = None
@@ -1453,7 +1453,7 @@ class Launcher:
         self._admin_waiting = None
         self._set_status("Stopping…", "#e0b83a")
         ok = True
-        for field, name in (("game", "游戏"), ("server", "服务器"), ("admin", "GM 后台")):
+        for field, name in (("game", "Game"), ("server", "Server"), ("admin", "GM Admin")):
             proc = getattr(self, field)
             if self._terminate_owned(proc, name):
                 setattr(self, field, None)
