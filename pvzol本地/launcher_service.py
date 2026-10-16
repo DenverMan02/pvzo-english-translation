@@ -315,14 +315,14 @@ class LauncherService:
                     return
                 code = game.poll()
                 if code is not None:
-                    self.log('The game window closed. Stopping this session's services.')
+                    self.log("The game window closed. Stopping this session's services.")
                     try:
                         self.stop()
                     except ValueError:
                         return
                     self.status = 'Game closed; services stopped'
                     if code:
-                        self.error = 'The game player exited (code %s); this session's services have stopped.' % code
+                        self.error = "The game player exited (code %s); this session's services have stopped." % code
                         self.log('!! ' + self.error)
                     return
             cancel.wait(.2)
@@ -368,7 +368,7 @@ class LauncherService:
             try:
                 self._publish_guard()
             except OSError as exc:
-                self.log('!! Could not update stop status; cleaning up this session's processes anyway: %s' % exc)
+                self.log("!! Could not update stop status; cleaning up this session's processes anyway: %s" % exc)
             ok = True
             for attr, name in (('game', 'Game Player'), ('server', 'Game Service'), ('admin', 'GM Admin Panel')):
                 process = getattr(self, attr)
