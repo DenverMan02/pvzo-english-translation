@@ -135,6 +135,13 @@ class BattleUITranslationTests(unittest.TestCase):
         self.assertEqual(_translate_display_string("当前不可用"), "Currently Unavailable")
         self.assertEqual(_translate_display_string("功能暂未开放"), "Feature Not Available Yet")
 
+    def test_tooltip_and_common_gameplay_messages(self):
+        self.assertEqual(_translate_display_string("增加经验："), "XP Gained: ")
+        self.assertEqual(_translate_display_string("当前等级："), "Current Level: ")
+        self.assertEqual(_translate_display_string("没有足够的经验"), "Not enough XP")
+        self.assertEqual(_translate_display_string("金币不足！"), "Not enough coins!")
+        self.assertEqual(_translate_display_string("请先选择植物！"), "Select a plant first!")
+        self.assertEqual(_translate_display_string("此操作无法撤销"), "This action cannot be undone")
     def test_endless_purgatory_floating_notices(self):
         self.assertEqual(_translate_display_string("暂无新的战报！"), "No new battle reports!")
         self.assertEqual(_translate_display_string("暂无奖励！"), "No rewards available!")
