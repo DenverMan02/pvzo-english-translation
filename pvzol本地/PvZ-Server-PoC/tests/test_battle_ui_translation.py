@@ -107,5 +107,13 @@ class BattleUITranslationTests(unittest.TestCase):
         self.assertEqual(_translate_display_string("无尽炼狱"), "Endless Purgatory")
         self.assertEqual(_translate_display_string("奖励预览"), "Reward Preview")
 
+    def test_card_progression_and_item_requirements(self):
+        self.assertEqual(_translate_display_string("基因槽"), "Gene Slot")
+        self.assertEqual(_translate_display_string("确认购买"), "Confirm Purchase")
+        self.assertEqual(_translate_display_string("道具已满"), "Item Limit Reached")
+        self.assertEqual(_translate_display_string("已达到最高等级"), "Maximum Level Reached")
+        self.assertEqual(_translate_display_string("当前不可用"), "Currently Unavailable")
+        self.assertEqual(_translate_display_string("功能暂未开放"), "Feature Not Available Yet")
+
 if __name__ == "__main__":
     unittest.main()
