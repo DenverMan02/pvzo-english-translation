@@ -130,7 +130,7 @@ TRANSLATIONS = {
     "暂无新的战报！": "No new battle reports!",
     "暂无奖励！": "No rewards available!",
     "战场关闭中！": "Battlefield is closing!",
-    "挑战失败！当前成绩为第": "Challenge failed! Current best: stage ",
+    "挑战失败！当前成绩为第": "Challenge failed! Current result: stage ",
     "关成功！": " cleared!",
     "挑战第": "Challenge stage ",
     "重新挑战": "Retry Challenge",
@@ -1120,7 +1120,7 @@ def _translate_display_string(value: str) -> str:
         )
     # Endless Purgatory builds its failure toast from a prefix + stage number + suffix.
     # Strip the trailing Chinese stage marker only for that translated toast.
-    value = re.sub(r"^(Challenge failed! Current record: stage \d+)关$", r"\1", value)
+    value = re.sub(r"^(Challenge failed! Current result: stage \d+)关$", r"\1", value)
     return value
 
 def _read_constant_pools(abc: bytes) -> dict:
