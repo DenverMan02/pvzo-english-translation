@@ -700,7 +700,7 @@ def main(argv: list[str] | None = None) -> int:
         diagnostic_logger = logging.getLogger('pvzol.ui')
         diagnostic_logger.setLevel(logging.INFO)
         diagnostic_logger.log(logging.INFO if dpi_state['ok'] else logging.WARNING,
-                              '启动器 DPI 初始化：%s', json.dumps(dpi_state, ensure_ascii=False))
+                              'Launcher DPI initialization: %s', json.dumps(dpi_state, ensure_ascii=False))
         check_dependencies()
         import webview
 
