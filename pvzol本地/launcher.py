@@ -1355,7 +1355,7 @@ class Launcher:
         self.stop_btn.configure(state="disabled")
         busy_ports = [p for p in (WEB_PORT, ADMIN_PORT, GAME_PORT, POLICY_PORT) if port_open(p)]
         if busy_ports:
-            messagebox.showerror("Port Already in Use", "以下Port Already in Use：%s。\n请关闭旧启动器或对应服务后重试。" % ", ".join(map(str, busy_ports)))
+            messagebox.showerror("Port Already in Use", "These ports are already in use: %s.\nClose the old launcher or the relevant service and try again." % ", ".join(map(str, busy_ports)))
             return
         loader = "loader_n.swf" if self.player_kind == "ruffle" else "loader_p.swf"
         self.game_url = game_url(uin, loader)
