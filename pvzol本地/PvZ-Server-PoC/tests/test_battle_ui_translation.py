@@ -1,14 +1,16 @@
 """Regression checks for in-game UI, tooltip, and SWF translation safety."""
 from __future__ import annotations
 
+import struct
 import sys
 import unittest
+import zlib
 from pathlib import Path
 
 SERVER = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(SERVER / "client_tools"))
 
-from translate_battle_ui import _module_targets, _patch_abc_strings, _read_constant_pools, _translate_display_string
+from translate_battle_ui import _iter_edit_text_fields, _module_targets, _patch_abc_strings, _patch_swf, _read_constant_pools, _translate_display_string
 
 
 class BattleUITranslationTests(unittest.TestCase):
@@ -209,6 +211,31 @@ class BattleUITranslationTests(unittest.TestCase):
         self.assertEqual(_translate_display_string("免费次数：9999次（VIP增加次数）"), "Free attempts: 9999 attempts（VIP bonus attempts）")
         self.assertEqual(_translate_display_string("首次通关可以获得500Coins"), "First clear rewards: 500 Coins")
         self.assertEqual(_translate_display_string("每天可以领取1000Coins"), "Available daily: 1000 Coins")
+    def test_swf_edit_text_title_is_translated_outside_abc(self):
+        rect = bytes([0x08, 0x00])  # RECT with Nbits=1
+        frame_header = bytes([0x00, 0x0C, 0x01, 0x00])
+        initial_text = "扫荡结算".encode("utf-8") + b"\\x00"
+        payload = (
+            struct.pack("<H", 1)
+            + rect
+            + struct.pack("<H", 0x8000)  # HasText
+            + b"label\\x00"
+            + initial_text
+        )
+        tag_header = struct.pack("<H", (37 << 6) | len(payload))  # DefineEditText
+        end_tag = bytes([0x00, 0x00])
+        body = rect + frame_header + tag_header + payload + end_tag
+        swf = b"FWS" + bytes([10]) + struct.pack("<I", 8 + len(body)) + body
+
+        patched, changed, hits, blocked, tag_count, skipped = _patch_swf(swf)
+        self.assertGreater(changed, 0)
+        self.assertEqual(tag_count, 0)  # This fixture uses editable text, not ABC.
+        self.assertEqual(skipped, 0)
+        self.assertEqual(patched[:3], b"CWS")
+        unpacked = patched[:8] + zlib.decompress(patched[8:])
+        fields = list(_iter_edit_text_fields(unpacked))
+        self.assertEqual(len(fields), 1)
+        self.assertEqual(fields[0][-1], "Sweep Summary")
     def test_screenshot_sweep_and_stage_reward_labels(self):
         self.assertEqual(_translate_display_string("扫荡奖励"), "Sweep Rewards")
         self.assertEqual(_translate_display_string("再扫荡一次"), "Sweep Again")
