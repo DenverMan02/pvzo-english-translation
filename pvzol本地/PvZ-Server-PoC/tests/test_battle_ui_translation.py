@@ -188,6 +188,16 @@ class BattleUITranslationTests(unittest.TestCase):
         self.assertEqual(_translate_display_string("队伍已满"), "Team is Full")
         self.assertEqual(_translate_display_string("时光之旅"), "Time Journey")
         self.assertEqual(_translate_display_string("世界BOSS"), "World Boss")
+    def test_screenshot_sweep_and_stage_reward_labels(self):
+        self.assertEqual(_translate_display_string("扫荡奖励"), "Sweep Rewards")
+        self.assertEqual(_translate_display_string("再扫荡一次"), "Sweep Again")
+        self.assertEqual(_translate_display_string("第1次扫荡"), "Sweep #1")
+        self.assertEqual(_translate_display_string("小镇繁荣度"), "Town Prosperity")
+        self.assertEqual(_translate_display_string("怪物等级"), "Enemy Level")
+        self.assertEqual(_translate_display_string("首次通关奖励"), "First-Clear Rewards")
+        self.assertEqual(_translate_display_string("三星奖励"), "Three-Star Rewards")
+        self.assertEqual(_translate_display_string("今日剩余扫荡次数: 3/5"), "Sweeps Remaining Today: 3/5")
+        self.assertEqual(_translate_display_string("金币不足，请稍后重试"), "金币不足，请稍后重试")
     def test_power_source_breakdown_vocabulary(self):
         self.assertEqual(_translate_display_string("基础/强化"), "Base / Enhancement")
         self.assertEqual(_translate_display_string("强化战力"), "Enhancement Power")
