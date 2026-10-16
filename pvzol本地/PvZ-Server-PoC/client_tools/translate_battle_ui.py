@@ -1589,8 +1589,10 @@ def _iter_edit_text_fields(raw: bytes):
                         raise ValueError("DefineEditText initial text is unterminated")
                     value = raw[cursor:text_end].decode("utf-8", "replace")
                     yield pos, header_len, payload, tag_end, tag_code, cursor, text_end, value
-            except (IndexError, struct.error) as exc:
-                raise ValueError("Malformed DefineEditText tag") from exc
+            except (IndexError, struct.error, ValueError):
+                # A malformed optional text field must not prevent ABC strings
+                # elsewhere in this SWF from being translated.
+                pass
         if tag_code == 0:  # End
             break
         pos = tag_end
