@@ -1248,6 +1248,12 @@ SUBSTRING_TRANSLATIONS = {
     "次\n每日0点恢复免费次数；用完后每次",
     "钻购买重置",
     "今日免费重置：",
+    "今日可挑战:",
+    "今日可挑战：",
+    "免费次数：",
+    "免费次数:",
+    "首次通关可以获得",
+    "每天可以领取",
     # These are concatenated around dynamic stage numbers in ActionScript.
     "挑战第",
     "关成功！",
@@ -1297,6 +1303,21 @@ def _translate_display_string(value: str) -> str:
             lambda match: match.group("prefix") + _CONTEXTUAL_REPLACEMENTS[match.group("term")],
             value,
         )
+
+    # Some counters append the Chinese unit after a dynamically generated number.
+    # Scope the cleanup to the known English prefixes rather than translating "次"
+    # globally, which could alter unrelated phrases.
+    for prefix in ("Challenges available today: ", "Free attempts: "):
+        if value.startswith(prefix):
+            value = re.sub(
+                r"^(" + re.escape(prefix) + r"(?:\d+|\{\d+\}))次",
+                r"\1 attempts",
+                value,
+            )
+    # Reward descriptions concatenate an amount directly with the English word Coins.
+    for prefix in ("First clear rewards: ", "Available daily: "):
+        if value.startswith(prefix):
+            value = re.sub(r"^(" + re.escape(prefix) + r"\d+)Coins", r"\1 Coins", value)
 
     # In this one split ActionScript toast, the stage suffix is stored separately.
     if value.startswith(_ENDLESS_FAILURE_PREFIX) and value.endswith("关"):
