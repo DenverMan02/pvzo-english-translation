@@ -21,8 +21,7 @@ PATCH_HELPERS = SERVER / "client_patches" / "card-exp-bean-repeat-20260926"
 if str(PATCH_HELPERS) not in sys.path:
     sys.path.insert(0, str(PATCH_HELPERS))
 
-from patch_module_card_clickthrough import parse_abc
-from translate_battle_ui import EXCLUDED_MODULES, MODULE_NAMES, VERSION_NAME, _iter_abc_tags, _module_targets
+from translate_battle_ui import EXCLUDED_MODULES, MODULE_NAMES, VERSION_NAME, _iter_abc_tags, _module_targets, _read_constant_pools
 
 CJK_RE = re.compile(r"[\u3400-\u9fff]")
 TRANSLATION_TERMS = (
@@ -37,9 +36,10 @@ TRANSLATION_TERMS = (
 
 def _structural_indexes(info) -> set[int]:
     protected: set[int] = set()
-    for _kind, name_index in info.namespaces:
-        protected.add(name_index)
-    for item in info.multinames:
+    for namespace in info["namespaces"]:
+        if namespace:
+            protected.add(namespace[1])
+    for item in info["multinames"]:
         if not item:
             continue
         if item[0] in (0x07, 0x0D):
@@ -68,12 +68,12 @@ def scan(path: Path) -> tuple[int, list[tuple[str, int, str]]]:
     matches: list[tuple[str, int, str]] = []
     for block_no, (start, end, _tag_start, _header_len, _tag_len) in enumerate(blocks, 1):
         try:
-            info = parse_abc(raw[start:end])
+            info = _read_constant_pools(raw[start:end])
         except Exception as exc:
             matches.append(("<could not parse ABC block: %s>" % exc, block_no, "UNPARSED"))
             continue
         protected = _structural_indexes(info)
-        for index, value in enumerate(info.strings):
+        for index, value in enumerate(info["strings"]):
             if not value or not CJK_RE.search(value):
                 continue
             relevant = any(term in value for term in TRANSLATION_TERMS)
