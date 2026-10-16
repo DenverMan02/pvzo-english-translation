@@ -142,6 +142,12 @@ class BattleUITranslationTests(unittest.TestCase):
         self.assertEqual(_translate_display_string("金币不足！"), "Not enough coins!")
         self.assertEqual(_translate_display_string("请先选择植物！"), "Select a plant first!")
         self.assertEqual(_translate_display_string("此操作无法撤销"), "This action cannot be undone")
+    def test_dynamic_endless_failure_toast(self):
+        self.assertEqual(
+            _translate_display_string("挑战失败！当前成绩为第3关"),
+            "Challenge failed! Current record: stage 3",
+        )
+        self.assertEqual(_translate_display_string("挑战第3关成功！"), "Challenge stage 3 cleared!")
     def test_endless_purgatory_floating_notices(self):
         self.assertEqual(_translate_display_string("暂无新的战报！"), "No new battle reports!")
         self.assertEqual(_translate_display_string("暂无奖励！"), "No rewards available!")
