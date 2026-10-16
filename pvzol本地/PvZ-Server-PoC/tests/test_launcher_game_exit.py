@@ -32,7 +32,7 @@ class OwnedGameExitTests(IsolatedLauncherTests):
         self.assertFalse(self.service.running)
         self.assertFalse(self.service.busy)
         self.assertFalse(self.service.closed)
-        self.assertEqual(self.service.status, '游戏已关闭，服务已停止')
+        self.assertEqual(self.service.status, 'Game closed; services stopped')
         self.assertFalse(guard_blocks_writes(self.service._environment()))
 
     def test_crashed_game_also_stops_services_and_retains_exit_reason(self):
