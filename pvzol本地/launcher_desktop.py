@@ -316,7 +316,7 @@ def run(argv=None):
             if executable.is_file():
                 command = [str(executable), '--url', server.url, '--data-dir', str(ROOT / 'launcher_cache')]
             else:
-                raise RuntimeError('New launcher UI runtime files are missing. Check the launcher UI folder (“启动器界面”), or use --legacy-ui to open the legacy interface.')
+                raise RuntimeError('New launcher UI runtime files are missing. Check the launcher UI folder in the game directory, or use --legacy-ui to open the legacy interface.')
             return _run_desktop_shell(command, service,
                                      {**os.environ, ACTIVATION_ENV: instance.activation_event_name,
                                       'PVZ_LAUNCHER_WINDOW_FILE': str(service.window_info_path)},
