@@ -63,7 +63,7 @@ TRANSLATIONS = {
     "继续挑战": "Continue Challenge",
     "已解锁": "Unlocked",
     "未解锁": "Locked",
-    "暂无奖励": "No Rewards Available",
+    "暂无奖励": "No rewards available",
     "暂无战报": "No Battle Reports",
     "暂无数据": "No Data Available",
     "加载失败": "Failed to Load",
@@ -192,7 +192,7 @@ CONTEXTUAL_TERMS = {
     "挑战", "奖励", "排行榜", "好友", "商店", "设置", "背包", "邮件", "任务", "活动",
     "关卡", "战斗", "角色", "领取", "进行中", "等待中",
 }
-TOKEN_BOUNDARY_RE = r"[\s\[\]【】()（）:：+/\-·,，]"
+TOKEN_BOUNDARY_RE = r"[\s\[\]【】()（）:：+/\-·,，。！？!?…；;]"
 
 
 def _translate_display_string(value: str) -> str:
