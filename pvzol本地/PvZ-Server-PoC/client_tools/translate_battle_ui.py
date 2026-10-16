@@ -850,6 +850,13 @@ TRANSLATIONS = {
     "已解锁": "Unlocked",
     "未解锁": "Locked",
     "待领取": "Ready to claim",
+    "暂无新的战报！": "No new battle reports!",
+    "暂无奖励！": "No rewards available!",
+    "今日免费重置：": "Free resets today: ",
+    "次\n每日0点恢复免费次数；用完后每次": " reset(s) left.\nFree resets replenish daily at midnight; after they run out, each reset costs ",
+    "钻购买重置": " diamonds to reset",
+    "剩余次数：": "Attempts remaining: ",
+    "金钻消耗：": "Gold Diamond Cost: ",
     "登录成功": "Login successful",
     "登录失败": "Login failed",
     "连接失败": "Connection failed",
@@ -1037,6 +1044,9 @@ def _module_targets(manifest: bytes) -> list[str]:
 # delimited stat tokens. This avoids turning ordinary Chinese sentences into a
 # Chinese/English mixture just because they mention health, attacks, or skills.
 SUBSTRING_TRANSLATIONS = {
+    "次\\n每日0点恢复免费次数；用完后每次",
+    "钻购买重置",
+    "今日免费重置：",
     # These are concatenated around dynamic stage numbers in ActionScript.
     "挑战第",
     "关成功！",
