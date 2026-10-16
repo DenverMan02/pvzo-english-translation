@@ -214,12 +214,12 @@ class BattleUITranslationTests(unittest.TestCase):
     def test_swf_edit_text_title_is_translated_outside_abc(self):
         rect = bytes([0x08, 0x00])  # RECT with Nbits=1
         frame_header = bytes([0x00, 0x0C, 0x01, 0x00])
-        initial_text = "扫荡结算".encode("utf-8") + b"\\x00"
+        initial_text = "扫荡结算".encode("utf-8") + b"\x00"
         payload = (
             struct.pack("<H", 1)
             + rect
             + struct.pack("<H", 0x8000)  # HasText
-            + b"label\\x00"
+            + b"label\x00"
             + initial_text
         )
         tag_header = struct.pack("<H", (37 << 6) | len(payload))  # DefineEditText
