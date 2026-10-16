@@ -4,8 +4,8 @@ Run from the PvZ-Server-PoC directory:
     python client_tools/scan_swf_ui_strings.py
     python client_tools/scan_swf_ui_strings.py --all
 
-The default scans all canonical UI SWFs listed in webroot/fileVer.xml, including
-the main Game_n/Game_p builds. --all adds duplicate top-level modules for review.
+The default scans canonical UI SWFs listed in webroot/fileVer.xml, including
+Game_n.swf and Game_p.swf. --all also scans hashed aliases for comparison.
 ClientDB resource modules and font assets are excluded; nothing is modified.
 """
 from __future__ import annotations
@@ -97,12 +97,12 @@ def main() -> int:
         return 1
     manifest = manifest_path.read_bytes()
     if args.all:
-        paths = [WEBROOT / "Game_n.swf", WEBROOT / "Game_p.swf"] + [
-            WEBROOT / name for name in _module_targets(manifest)
-        ]
+        paths = [WEBROOT / name for name in _module_targets(manifest)]
+        paths.extend(sorted(WEBROOT.glob("Module*.swf")))
+        paths.extend(sorted(WEBROOT.glob("Game*.swf")))
     else:
         paths = [WEBROOT / name for name in _module_targets(manifest)]
-    paths = list(dict.fromkeys(path for path in paths if path.name not in EXCLUDED_MODULES))
+    paths = list(dict.fromkeys(path for path in paths if path.is_file() and path.name not in EXCLUDED_MODULES))
     existing = [path for path in paths if path.is_file()]
     if not existing:
         print("No target SWFs found in %s" % WEBROOT)
