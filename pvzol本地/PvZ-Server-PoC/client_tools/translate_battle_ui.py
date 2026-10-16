@@ -1038,6 +1038,7 @@ TRANSLATIONS = {
     "注册失败": "Registration failed",
     "待领取": "Ready to claim",
     "次\n每日0点恢复免费次数；用完后每次": " reset(s) left.\nFree resets replenish daily at midnight; after they run out, each reset costs ",
+    "每日0点恢复免费次数；用完后每次": "Free resets replenish daily at midnight; after they run out, each reset costs ",
     "钻购买重置": " diamonds to reset",
     "增加经验：": "XP Gained: ",
     "增加经验": "XP Gained",
@@ -1271,6 +1272,7 @@ def _module_targets(manifest: bytes) -> list[str]:
 # Chinese/English mixture just because they mention health, attacks, or skills.
 SUBSTRING_TRANSLATIONS = {
     "次\n每日0点恢复免费次数；用完后每次",
+    "每日0点恢复免费次数；用完后每次",
     "钻购买重置",
     "今日免费重置：",
     "今日可挑战:",
