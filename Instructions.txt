@@ -1,6 +1,6 @@
 Plants vs. Zombies Online — One-Click Launch Guide
 
-1. Extract the entire archive to a writable folder, for example: D:\\Games\\Plants vs. Zombies Online.
+1. Extract the entire archive to a writable folder, for example: D:\Games\Plants vs. Zombies Online.
 2. Double-click the top-level “一键启动游戏.exe” (One-Click Game Launcher). It will start the local services and open the game.
 3. Keep the launcher window open while playing. To finish, close the launcher or click “Stop”.
 
@@ -11,9 +11,9 @@ To share the package, include both “一键启动游戏.exe” and the entire �
 Inside “pvzol本地”, “运行环境” contains the bundled runtime, “PvZ-Server-PoC” contains the server, and “webroot” contains game assets. Do not delete or separate these folders.
 The launcher reads the latest server source from the same directory, so later source fixes can take effect without rebuilding the launcher.
 
-Save location: pvzol本地\\PvZ-Server-PoC\\players.db.
+Save location: pvzol本地\PvZ-Server-PoC\players.db.
 Existing saves in this folder will continue to be used, and sharing the entire folder also shares those saves. Friends can enter a different numeric account ID in the launcher to create their own character.
 Stop the game services before backing up saves. If you need to preserve guild progress, also back up “guild_local.db” in the same directory.
 
 If a port is already in use, close any other launcher or old server and try again.
-If startup fails, check the launcher logs and either the top-level “启动错误.log” or “pvzol本地\\portable_launcher.log”.
+If startup fails, check the launcher logs and either the top-level “启动错误.log” or “pvzol本地\portable_launcher.log”.
