@@ -1528,6 +1528,98 @@ def _iter_abc_tags(raw: bytes):
         pos = tag_end
 
 
+def _iter_edit_text_fields(raw: bytes):
+    """Yield editable-text initial strings stored outside the ABC constant pool.
+
+    DefineEditText (tag 37) can contain visible UI labels as UTF-8 initial text.
+    Those strings are not part of ActionScript's ABC constant pool, so translating
+    ABC literals alone leaves this class of labels untouched.
+    """
+    nbits = raw[8] >> 3
+    rect_length = (5 + 4 * nbits + 7) // 8
+    pos = 8 + rect_length + 4
+    while pos + 2 <= len(raw):
+        header = struct.unpack_from("<H", raw, pos)[0]
+        tag_code, tag_len = header >> 6, header & 0x3F
+        header_len = 2
+        if tag_len == 0x3F:
+            if pos + 6 > len(raw):
+                raise ValueError("Truncated SWF tag header")
+            tag_len = struct.unpack_from("<I", raw, pos + 2)[0]
+            header_len = 6
+        payload = pos + header_len
+        tag_end = payload + tag_len
+        if tag_end > len(raw):
+            raise ValueError("SWF tag extends beyond file length")
+        if tag_code == 37:  # DefineEditText
+            try:
+                cursor = payload + 2  # CharacterID
+                rect_nbits = raw[cursor] >> 3
+                cursor += (5 + 4 * rect_nbits + 7) // 8
+                flags = struct.unpack_from("<H", raw, cursor)[0]
+                cursor += 2
+                has_text_color = bool(flags & 0x0400)
+                has_max_length = bool(flags & 0x0200)
+                has_font = bool(flags & 0x0100)
+                has_font_class = bool(flags & 0x0080)
+                has_layout = bool(flags & 0x0020)
+                has_text = bool(flags & 0x8000)
+                if has_font:
+                    cursor += 2
+                if has_font_class:
+                    class_end = raw.find(b"\x00", cursor, tag_end)
+                    if class_end < 0:
+                        raise ValueError("DefineEditText font class is unterminated")
+                    cursor = class_end + 1
+                if has_font or has_font_class:
+                    cursor += 2  # FontHeight
+                if has_text_color:
+                    cursor += 4  # RGBA
+                if has_max_length:
+                    cursor += 2
+                if has_layout:
+                    cursor += 9  # align, margins, indent, leading
+                variable_end = raw.find(b"\x00", cursor, tag_end)
+                if variable_end < 0:
+                    raise ValueError("DefineEditText variable name is unterminated")
+                cursor = variable_end + 1
+                if has_text and cursor < tag_end:
+                    text_end = raw.find(b"\x00", cursor, tag_end)
+                    if text_end < 0:
+                        raise ValueError("DefineEditText initial text is unterminated")
+                    value = raw[cursor:text_end].decode("utf-8", "replace")
+                    yield pos, header_len, payload, tag_end, tag_code, cursor, text_end, value
+            except (IndexError, struct.error) as exc:
+                raise ValueError("Malformed DefineEditText tag") from exc
+        if tag_code == 0:  # End
+            break
+        pos = tag_end
+
+
+def _patch_edit_text_fields(raw: bytearray) -> tuple[int, int]:
+    """Translate matching DefineEditText initial strings, preserving SWF framing."""
+    fields = list(_iter_edit_text_fields(raw))
+    changed = hits = 0
+    for tag_start, _header_len, payload_start, tag_end, tag_code, text_start, text_end, original in reversed(fields):
+        translated = _translate_display_string(original)
+        if translated == original:
+            continue
+        payload = bytes(raw[payload_start:tag_end])
+        relative_start = text_start - payload_start
+        relative_end = text_end - payload_start
+        new_payload = payload[:relative_start] + translated.encode("utf-8") + b"\x00" + payload[relative_end + 1:]
+        new_len = len(new_payload)
+        if new_len < 0x3F:
+            header = struct.pack("<H", (tag_code << 6) | new_len)
+        else:
+            header = struct.pack("<H", (tag_code << 6) | 0x3F) + struct.pack("<I", new_len)
+        raw[tag_start:tag_end] = header + new_payload
+        changed += 1
+        hits += sum(1 for old, _new in ORDERED_TRANSLATIONS if old in original)
+    struct.pack_into("<I", raw, 4, len(raw))
+    return changed, hits
+
+
 def _patch_swf(packed: bytes) -> tuple[bytes, int, int, int, int, int]:
     if packed[:3] == b"CWS":
         raw = bytearray(packed[:8] + zlib.decompress(packed[8:]))
@@ -1538,10 +1630,15 @@ def _patch_swf(packed: bytes) -> tuple[bytes, int, int, int, int, int]:
     if len(raw) != int.from_bytes(raw[4:8], "little"):
         raise ValueError("SWF file-length header does not match its contents")
 
+    # First handle the separate UTF-8 initial-text strings of editable SWF text
+    # fields. These visible labels never appear in an ABC constant pool.
+    edit_text_changed, edit_text_hits = _patch_edit_text_fields(raw)
     tags = list(_iter_abc_tags(raw))
-    if not tags:
-        raise ValueError("No DoABC2 bytecode blocks found in SWF")
-    changed_strings = replacement_hits = blocked_strings = skipped_blocks = 0
+    if not tags and edit_text_changed == 0:
+        raise ValueError("No translatable DefineEditText text or DoABC2 blocks found in SWF")
+    changed_strings = edit_text_changed
+    replacement_hits = edit_text_hits
+    blocked_strings = skipped_blocks = 0
     patched_tag_indexes = set()
     # Process tags from last to first so changing one ABC length cannot shift
     # the offsets of ABC blocks that have not been processed yet.
