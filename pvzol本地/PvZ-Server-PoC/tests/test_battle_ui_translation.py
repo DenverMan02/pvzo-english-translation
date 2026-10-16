@@ -114,6 +114,19 @@ class BattleUITranslationTests(unittest.TestCase):
         self.assertEqual(blocked, 0)
         self.assertEqual(_read_constant_pools(patched)["strings"][1], "Health")
 
+    def test_constant_pool_translation_preserves_namespace_and_property_names(self):
+        # The '生命' constant is referenced as both a package namespace and a QName.
+        abc = (
+            bytes([0, 0, 46, 0, 1, 1, 1, 2, 6])
+            + '生命'.encode('utf-8')
+            + bytes([2, 0x16, 1, 1, 2, 0x07, 1, 1])
+        )
+        patched, changed, hits, blocked = _patch_abc_strings(abc)
+        self.assertEqual(changed, 0)
+        self.assertEqual(hits, 0)
+        self.assertGreater(blocked, 0)
+        self.assertEqual(_read_constant_pools(patched)['strings'][1], '生命')
+
     def test_card_progression_and_item_requirements(self):
         self.assertEqual(_translate_display_string("基因槽"), "Gene Slot")
         self.assertEqual(_translate_display_string("确认购买"), "Confirm Purchase")
