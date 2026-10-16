@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""植物大战僵尸 OL 本地 GM 管理后台。
+"""Plants vs. Zombies Online Local Admin Panel。
 
-仅监听 127.0.0.1，直接复用 player_store.py / gm.py 中的存档与关卡逻辑。
-除 Python 标准库外不需要额外依赖。
+Listens only on 127.0.0.1 and reuses save and level logic from player_store.py / gm.py.
+No dependencies beyond the Python standard library.
 """
 
 import argparse
@@ -105,37 +105,37 @@ LEVEL_KEYS = {
     and str(row.get("subLevelId") or "0").isdigit()
 }
 
-# ItemInfo 混合了真正背包物品、账号货币、卡牌展示物、装备实例、
-# 试剂实例以及一批只用于埋点的“购买原因”。后台必须按真实模型分流，
+# ItemInfo 混合了真正Inventory、Account Currency、卡牌展示物、装备实例、
+# Reagents实例以及一批只用于埋点的“购买原因”。后台必须按真实模型分流，
 # 否则会把装备/卡牌伪造成客户端无法解释的普通堆栈。
 CURRENCY_GRANTS = {
-    1: ("coin", "金币"),
+    1: ("coin", "Coins"),
     3: ("sun", "阳光"),
     4: ("present_ticket", "钻石"),
-    6: ("friend_point", "友情点"),
-    7: ("fame", "声望"),
-    9: ("energy", "体力"),
-    37: ("ticket", "金钻"),
-    39: ("contrib_val", "个人贡献"),
-    40: ("light", "便携光源"),
-    41: ("puppet_skill_val", "傀儡技能点"),
-    42: ("puppet_energy", "傀儡能量"),
+    6: ("friend_point", "Friend Points"),
+    7: ("fame", "Prestige"),
+    9: ("energy", "Stamina"),
+    37: ("ticket", "Gold Diamonds"),
+    39: ("contrib_val", "Personal Contribution"),
+    40: ("light", "Portable Light Source"),
+    41: ("puppet_skill_val", "Puppet Skill Points"),
+    42: ("puppet_energy", "Puppet Energy"),
 }
 SPECIAL_STACK_IDS = {2, 38, 43}  # 繁荣度、洗炼幸运点、威望：服务器明确按 bag stack 消耗
 
 ITEM_KIND_LABELS = {
-    "stack": "背包道具",
-    "currency": "账号货币",
-    "card": "植物卡",
+    "stack": "Inventory Items",
+    "currency": "Account Currency",
+    "card": "Plant Cards",
     "equipment": "装备",
-    "reagent": "试剂",
+    "reagent": "Reagents",
 }
 
 ITEM_TYPE_LABELS = {
-    1: "通用", 2: "材料/消耗品", 4: "植物卡", 5: "植物碎片",
-    6: "经验豆", 7: "装备", 8: "实验室材料", 9: "叶绿素",
-    10: "拼图", 11: "试剂", 12: "能量石", 13: "基因/傀儡材料",
-    14: "培养液", 15: "傀儡展示项", 16: "远征资源",
+    1: "General", 2: "Materials / Consumables", 4: "Plant Cards", 5: "Plant Fragments",
+    6: "XP Bean", 7: "装备", 8: "Lab Materials", 9: "Chlorophyll",
+    10: "Puzzle Pieces", 11: "Reagents", 12: "Energy Stone", 13: "Genes / Puppet Materials",
+    14: "Cultivation Fluid", 15: "Puppet Display Entry", 16: "Expedition Resources",
 }
 
 
@@ -156,7 +156,7 @@ def _item_grant_kind(row):
     item_type = _row_int(row, "type")
     if item_id in CURRENCY_GRANTS:
         return "currency"
-    if item_id == 5:  # 植物经验在本服务器没有账号级数据模型
+    if item_id == 5:  # 植物XP在本服务器没有账号级数据模型
         return None
     if item_type == 4:
         card_spec = str(row.get("cardItemId") or "")
@@ -164,12 +164,12 @@ def _item_grant_kind(row):
     if item_type == 7:
         return "equipment"
     if item_type == 11:
-        # 60001 试剂残渣是“药粉”转换物，不是可装备的试剂实例。
+        # 60001 Reagents残渣是“药粉”转换物，不是可装备的Reagents实例。
         return "reagent" if item_id != 60001 else None
     if item_type == 15:  # ItemInfo id != dummyZombieInfo.baseId，不能直接建傀儡
         return None
     if item_type == 1:
-        # type=1 的低 ID 大部分是付费/操作埋点；只放行真正声明了堆叠上限的物品。
+        # type=1 的低 ID 大部分是付费/Action埋点；只放行真正声明了堆叠上限的物品。
         return "stack" if gm.is_stack_item(row) else None
     if item_type in (2, 5, 6, 8, 9, 10, 12, 13, 14, 16):
         return "stack" if gm.is_stack_item(row) else None
@@ -254,14 +254,14 @@ def _invalid_puzzle_details(item_id):
         else:
             allowed = "、".join(map(str, ids))
         color = "白色" if group == 610 else "绿色"
-        return ("无效拼图编号（ID %s）" % item_id,
-                "%s拼图 · 当前合法编号 %s · 保留原始数量" % (color, allowed))
+        return ("Invalid puzzle ID (ID %s)" % item_id,
+                "%s puzzle · valid IDs for this tier: %s · original quantity preserved" % (color, allowed))
     base_id = group * 100 + 1
     if 660 <= group <= 679 and 2 <= offset <= 25 and set(configured) == {base_id}:
         cells = PUZZLE_SHARED_MATERIALS.get(base_id)
         if cells:
-            return ("无效拼图编号（ID %s）" % item_id,
-                    "%s · 本阶 %s 格共用 ID %s · 保留原始数量" %
+            return ("Invalid puzzle ID (ID %s)" % item_id,
+                    "%s · %s slots in this tier share ID %s · original quantity preserved" %
                     (ITEM_NAMES[base_id], cells, base_id))
     return None
 
@@ -276,13 +276,13 @@ def _inventory_item_details(item_id):
     if item_id in ITEM_NAMES:
         return ITEM_NAMES[item_id], ""
     if item_id in PLANT_NAMES:
-        return PLANT_NAMES[item_id], "塔防植物编号 · 旧背包记录"
+        return PLANT_NAMES[item_id], "Tower Defense plant ID · legacy inventory entry"
     if item_id in CARD_BASE_NAMES:
-        return CARD_BASE_NAMES[item_id], "植物卡原型编号 · 旧背包记录"
+        return CARD_BASE_NAMES[item_id], "Plant card prototype ID · legacy inventory entry"
     puzzle_details = _invalid_puzzle_details(item_id)
     if puzzle_details:
         return puzzle_details
-    return "未收录物品（ID %s）" % item_id, "当前客户端未定义 · 保留原始数量"
+    return "Unknown item (ID %s)" % item_id, "Not defined by the current client · original quantity preserved"
 
 
 def _inventory_item_html(item_id):
@@ -291,15 +291,15 @@ def _inventory_item_html(item_id):
 
 
 EDIT_FIELDS = (
-    ("name", "角色名", "text", None, None),
-    ("level", "账号等级", "number", 1, max(gm.player_level_values())),
-    ("exp", "经验", "number", 0, 2_000_000_000),
-    ("coin", "金币", "number", 0, 2_000_000_000),
+    ("name", "Character Name", "text", None, None),
+    ("level", "Account Level", "number", 1, max(gm.player_level_values())),
+    ("exp", "XP", "number", 0, 2_000_000_000),
+    ("coin", "Coins", "number", 0, 2_000_000_000),
     ("sun", "阳光", "number", 0, 2_000_000_000),
-    ("energy", "体力", "number", 0, 2_000_000_000),
-    ("present_ticket", "蓝钻", "number", 0, 2_000_000_000),
-    ("ticket", "金钻", "number", 0, 2_000_000_000),
-    ("fame", "声望", "number", 0, 2_000_000_000),
+    ("energy", "Stamina", "number", 0, 2_000_000_000),
+    ("present_ticket", "Blue Diamonds", "number", 0, 2_000_000_000),
+    ("ticket", "Gold Diamonds", "number", 0, 2_000_000_000),
+    ("fame", "Prestige", "number", 0, 2_000_000_000),
     ("friend_point", "好友点", "number", 0, 2_000_000_000),
 )
 
@@ -316,7 +316,7 @@ def _connect():
 
 @contextlib.contextmanager
 def _connection():
-    """sqlite3.Connection 的 with 只提交事务，这里额外确保句柄被关闭。"""
+    """sqlite3.Connection 的 with 只提交事务，这里额外确保句柄被Off。"""
     con = _connect()
     try:
         yield con
@@ -333,7 +333,7 @@ def _player(uin):
 def _require_player(uin):
     player = _player(uin)
     if not player:
-        raise ValidationError("账号 %s 不存在，请先在首页创建。" % uin)
+        raise ValidationError("Account %s does not exist. Create it on the home page first." % uin)
     return player
 
 
@@ -351,32 +351,32 @@ def _baseline(form, uin):
     signature = (form.get("baseline_sig", [""])[0] or "")
     actual = hmac.new(CSRF_TOKEN.encode(), raw.encode(), hashlib.sha256).hexdigest()
     if not raw or not hmac.compare_digest(signature, actual):
-        raise ValidationError("编辑页面已过期，请刷新后重新保存。")
+        raise ValidationError("This edit page has expired. Refresh and save again.")
     try:
         baseline = json.loads(raw)
     except (ValueError, TypeError):
-        raise ValidationError("编辑快照无效，请刷新后重新保存。")
+        raise ValidationError("Invalid edit snapshot. Refresh and save again.")
     if not isinstance(baseline, dict) or baseline.get("uin") != uin:
-        raise ValidationError("编辑快照与账号不匹配，请刷新后重试。")
+        raise ValidationError("The edit snapshot does not match this account. Refresh and try again.")
     return baseline
 
 
 def _save_incremental(uin, values, baseline):
     """Check and update only fields changed by the user, in one write transaction."""
     if any(key not in baseline for key in values):
-        raise ValidationError("编辑快照缺少字段，请刷新后重试。")
+        raise ValidationError("The edit snapshot is missing fields. Refresh and try again.")
     changed = {key: value for key, value in values.items() if value != baseline[key]}
     player = _require_player(uin)
     with store.atomic_player(player) as con:
         for key in changed:
             if player.get(key) != baseline[key]:
-                raise ValidationError("%s 已被其他操作修改，请刷新页面后重新核对。" % key)
+                raise ValidationError("%s was changed by another operation. Refresh the page and review it again." % key)
         for key, dependencies in (("vip_level", ("vip_card_id", "vip_endtime")),
                                   ("td_privilege", ("td_privilege_endtime",))):
             if key in changed:
                 for dependency in dependencies:
                     if dependency not in baseline or player.get(dependency) != baseline[dependency]:
-                        raise ValidationError("会员有效期已被其他操作修改，请刷新页面后重新核对。")
+                        raise ValidationError("The membership expiration was changed by another operation. Refresh the page and review it again.")
         if "vip_level" in changed:
             changed.update(vip_card_id=0, vip_endtime=0)
         if "td_privilege" in changed:
@@ -406,11 +406,11 @@ def _integer(form, key, minimum=None, maximum=None, label=None):
     try:
         value = int(raw)
     except (TypeError, ValueError):
-        raise ValidationError("%s 必须是整数。" % title)
+        raise ValidationError("%s must be an integer." % title)
     if minimum is not None and value < minimum:
-        raise ValidationError("%s 不能小于 %s。" % (title, minimum))
+        raise ValidationError("%s must be at least %s." % (title, minimum))
     if maximum is not None and value > maximum:
-        raise ValidationError("%s 不能大于 %s。" % (title, maximum))
+        raise ValidationError("%s must be no greater than %s." % (title, maximum))
     return value
 
 
@@ -461,13 +461,13 @@ def _repair_invalid_puzzles(uin):
         records = backup + ".json"
         with open(records, "x", encoding="utf-8") as stream:
             json.dump({"uin": uin, "backup": os.path.basename(backup),
-                       "reason": "旧逻辑按格子序号生成了客户端未定义的拼图编号",
+                       "reason": "旧逻辑按格子序号生成了客户端未定义的Puzzle Pieces编号",
                        "items": rows}, stream, ensure_ascii=False, indent=2)
         _require_game_stopped()
         removed = con.executemany("DELETE FROM items WHERE uin=? AND item_id=? AND count=?",
                                  [(uin, row["item_id"], row["count"]) for row in rows])
         if removed.rowcount != len(rows):
-            raise ValidationError("背包记录已变化，请刷新后重新整理。")
+            raise ValidationError("The inventory changed. Refresh before repairing it.")
         con.commit()
         return {"count": len(rows), "backup": backup, "records": records}
     except BaseException:
@@ -515,7 +515,7 @@ def _port_open(port):
 
 def _require_game_stopped():
     if guard_blocks_writes() or _port_open(9001):
-        raise ValidationError("游戏正在运行。请先在启动器停止游戏，再修改存档；当前操作尚未写入。")
+        raise ValidationError("The game is running. Stop it in the launcher before editing saves; no changes were written.")
 
 
 EMBED_SECTIONS = frozenset(("attributes", "inventory", "plants", "cards", "progress", "vip", "friends", "reset"))
@@ -678,10 +678,10 @@ def _page(title, content, flash_message="", flash_kind="ok"):
         flash = '<div class="flash%s">%s</div>' % (
             " error" if flash_kind == "error" else "", esc(flash_message))
     return """<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>%s · PvZ OL 后台</title>
-<style>%s</style></head><body><header><div class="wrap head"><a class="brand" href="/">🌻 PvZ OL 后台</a>
-<span class="tag">仅限本机</span><nav><a href="/">账号</a><a class="optional" href="http://127.0.0.1:8080/" target="_blank" rel="noreferrer">游戏网页</a></nav></div></header>
-<main class="wrap main">%s%s</main><footer><div class="wrap">本地 GM 工具 · 所有操作直接写入 players.db · 重要操作会先备份</div></footer></body></html>""" % (
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>%s · PvZ OL Admin Panel</title>
+<style>%s</style></head><body><header><div class="wrap head"><a class="brand" href="/">🌻 PvZ OL Admin Panel</a>
+<span class="tag">Local Only</span><nav><a href="/">Accounts</a><a class="optional" href="http://127.0.0.1:8080/" target="_blank" rel="noreferrer">Game Website</a></nav></div></header>
+<main class="wrap main">%s%s</main><footer><div class="wrap">Local admin tool · changes write directly to players.db · important operations are backed up first</div></footer></body></html>""" % (
         esc(title), BASE_CSS, flash, content)
 
 
@@ -756,13 +756,13 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
                 classes.append('dark-theme')
             body = body.replace('<body>', '<body class="%s">' % ' '.join(classes), 1)
             if urlsplit(self.path).path == '/player':
-                tabs = [('attributes', '基础属性'), ('inventory', '背包道具'), ('plants', '塔防植物'),
-                        ('cards', '植物卡'), ('progress', '关卡进度'), ('vip', '钻石特权'), ('friends', '好友管理'), ('reset', '重置账号')]
+                tabs = [('attributes', 'Basic Attributes'), ('inventory', 'Inventory Items'), ('plants', 'Tower Defense Plants'),
+                        ('cards', 'Plant Cards'), ('progress', 'Level Progress'), ('vip', 'Diamond Membership'), ('friends', 'Friend Management'), ('reset', 'Reset Account')]
                 selected = query.get('section', ['attributes'])[0]
                 if selected not in dict(tabs):
                     selected = 'attributes'
-                labels = {'基础属性': 'attributes', '背包物品': 'inventory', '塔防植物': 'plants', '植物卡': 'cards',
-                          '快速通关': 'progress', '钻石卡': 'vip', '好友与好友卡': 'friends', '重置该账号': 'reset'}
+                labels = {'Basic Attributes': 'attributes', 'Inventory': 'inventory', 'Tower Defense Plants': 'plants', 'Plant Cards': 'cards',
+                          'Fast-Forward Progress': 'progress', 'Membership Card': 'vip', 'Friends & Friend Cards': 'friends', 'Reset This Account': 'reset'}
                 def panel(match):
                     tag, attrs, title = match.groups()
                     section = labels.get(title)
@@ -800,7 +800,7 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
                 # readable while the game is active, but cannot be submitted.
                 body = re.sub(r'(<form\b[^>]*method="post"[^>]*>)(.*?)</form>',
                               r'\1<fieldset disabled style="border:0;padding:0;margin:0">\2</fieldset></form>', body, flags=re.S)
-                body = body.replace('<main class="wrap main">', '<main class="wrap main"><div class="warning" style="margin-bottom:18px">游戏正在运行，GM 管理当前为只读。停止游戏后刷新即可编辑。</div>', 1)
+                body = body.replace('<main class="wrap main">', '<main class="wrap main"><div class="warning" style="margin-bottom:18px">The game is running, so the admin panel is read-only. Stop the game and refresh to edit.</div>', 1)
         data = body.encode("utf-8") if isinstance(body, str) else body
         self.send_response(status)
         self.send_header("Content-Type", content_type)
@@ -824,7 +824,7 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
         except ValueError:
             hostname = None
         if (hostname or "").lower() not in ("127.0.0.1", "localhost", "::1"):
-            self._send(421, "非法 Host", "text/plain; charset=utf-8")
+            self._send(421, "Invalid Host", "text/plain; charset=utf-8")
             return False
         return True
 
@@ -832,21 +832,21 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
         try:
             length = int(self.headers.get("Content-Length", "0"))
         except ValueError:
-            raise ValidationError("无效请求长度。")
+            raise ValidationError("Invalid request length.")
         if length <= 0 or length > MAX_POST_BYTES:
-            raise ValidationError("请求内容过大或为空。")
+            raise ValidationError("Request is too large or empty.")
         content_type = self.headers.get("Content-Type", "").split(";", 1)[0].strip().lower()
         if content_type != "application/x-www-form-urlencoded":
-            raise ValidationError("仅支持标准表单提交。")
+            raise ValidationError("Only standard form submissions are supported.")
         # Safari、WebView 等 macOS 内嵌浏览器可能把本地页面的 Origin 发送为
-        # ``null`` 或应用自定义来源。Origin 只能作为浏览器提示，不能作为这里
+        # ``null`` 或Apply自定义来源。Origin 只能作为浏览器提示，不能作为这里
         # 的安全边界；真正的写入保护由仅监听回环地址、Host 白名单和下面的
         # 随机 CSRF 令牌共同提供。
         raw = self.rfile.read(length).decode("utf-8", "strict")
         form = parse_qs(raw, keep_blank_values=True, max_num_fields=80)
         token = (form.get("csrf", [""])[0] or "")
         if not secrets.compare_digest(token, CSRF_TOKEN):
-            raise ValidationError("页面已过期，请刷新后重试。")
+            raise ValidationError("This page has expired. Refresh and try again.")
         return form
 
     def _message(self, query):
@@ -872,12 +872,12 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
                 uin = _integer(query, "uin", 1, 9_223_372_036_854_775_807, "UIN")
                 self._items_page(uin, query)
             else:
-                self._send(404, _page("未找到", '<div class="card"><h1>页面不存在</h1><a href="/">返回首页</a></div>'))
+                self._send(404, _page("Not Found", '<div class="card"><h1>Page not found</h1><a href="/">Return Home</a></div>'))
         except ValidationError as exc:
-            self._send(400, _page("输入错误", '<div class="card"><h1>输入错误</h1><p>%s</p><a href="/">返回首页</a></div>' % esc(exc)))
+            self._send(400, _page("Invalid Input", '<div class="card"><h1>Invalid Input</h1><p>%s</p><a href="/">Return Home</a></div>' % esc(exc)))
         except Exception:
             traceback.print_exc()
-            self._send(500, _page("后台错误", '<div class="card"><h1>后台出错</h1><p>请查看启动器日志。</p></div>'))
+            self._send(500, _page("Admin Error", '<div class="card"><h1>Admin Error</h1><p>Check the launcher logs.</p></div>'))
         finally:
             store.close_thread_db()
 
@@ -905,7 +905,7 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
             }
             handler = handlers.get(parsed.path)
             if not handler:
-                self._send(404, "未找到", "text/plain; charset=utf-8")
+                self._send(404, "Not Found", "text/plain; charset=utf-8")
                 return
             with WRITE_LOCK:
                 if parsed.path not in ("/player/create", "/backup"):
@@ -933,7 +933,7 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
             self._redirect(target, str(exc), "error")
         except Exception:
             traceback.print_exc()
-            self._send(500, _page("后台错误", '<div class="card"><h1>操作失败</h1><p>未写入不完整数据，请查看启动器日志。</p></div>'))
+            self._send(500, _page("Admin Error", '<div class="card"><h1>Operation Failed</h1><p>Incomplete data was not written. Check the launcher logs.</p></div>'))
         finally:
             store.close_thread_db()
 
@@ -988,29 +988,29 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
 
         def account_row(player):
             is_robot = 900000 <= int(player["uin"]) < 1000000
-            name = str(player["name"] or "未命名角色")
+            name = str(player["name"] or "Unnamed Character")
             destination = "/player?" + urlencode(dict(uin=player["uin"], **({"theme": theme} if theme in ("light", "dark") else {})))
             tags = ("Lv.%s" % player["level"], "VIP%s" % player["vip_level"],
-                    "金币 %s" % player["coin"], "蓝钻 %s" % player["present_ticket"],
-                    "金钻 %s" % player["ticket"], "塔防 %s-%s-%s" % (player["td_stage"], player["td_level"], player["td_sub"]))
+                    "Coins %s" % player["coin"], "Blue Diamonds %s" % player["present_ticket"],
+                    "Gold Diamonds %s" % player["ticket"], "塔防 %s-%s-%s" % (player["td_stage"], player["td_level"], player["td_sub"]))
             return ('<article class="account-row" data-account-uin="%s"><span class="account-avatar" aria-hidden="true">%s</span>'
                     '<div class="account-body"><div class="account-title"><a class="account-name" href="%s">%s</a>'
                     '<span class="account-uin">UIN %s</span></div><div class="account-tags">%s</div>'
-                    '<div class="account-login">最近登录 %s</div></div>'
-                    '<a class="btn secondary account-open" href="%s" aria-label="管理账号 %s">管理 →</a></article>') % (
+                    '<div class="account-login">Last login %s</div></div>'
+                    '<a class="btn secondary account-open" href="%s" aria-label="Manage account %s">Manage →</a></article>') % (
                         player["uin"], robot_icon if is_robot else esc(name[0]), esc(destination), esc(name), player["uin"],
                         "".join('<span class="account-tag">%s</span>' % esc(tag) for tag in tags),
                         esc(_format_time(player["last_login"])), esc(destination), esc(name))
 
         groups = []
-        for robots, label, group_total in ((False, "玩家账号", matching - matching_robots), (True, "机器人账号", matching_robots)):
+        for robots, label, group_total in ((False, "Player Accounts", matching - matching_robots), (True, "Bot Accounts", matching_robots)):
             group_players = [p for p in players if (900000 <= int(p["uin"]) < 1000000) == robots]
             if group_players:
                 groups.append('<details class="account-group" open><summary><span>%s<span class="account-group-count">%s 个</span></span></summary>%s</details>' % (
                     label, group_total, "".join(account_row(p) for p in group_players)))
         if not groups:
-            groups.append('<div class="account-empty">没有匹配的账号<p>可以更换角色名或 UIN 搜索%s。</p></div>' % (
-                "，或开启显示机器人账号" if not include_robots and robot_total else ""))
+            groups.append('<div class="account-empty">No matching accounts<p>Try searching again with a different character name or UIN%s.</p></div>' % (
+                " or enable bot accounts" if not include_robots and robot_total else ""))
 
         # These are successful GET controls: theme and robot visibility survive
         # search submissions even when the browser replaces the action query.
@@ -1020,35 +1020,35 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
             theme_field = '<input type="hidden" name="theme" value="%s">' % theme
             search_fields += theme_field
             switch_fields += theme_field
-        visibility_hint = "含 %s 个机器人账号" % robot_total if include_robots else "已隐藏 %s 个机器人账号" % robot_total
-        pager = '<div class="pager"><span>共 %s 个账号 · 第 %s / %s 页</span><div class="account-pager-links">' % (matching, page_number, total_pages)
+        visibility_hint = "Showing %s bot accounts" % robot_total if include_robots else "%s bot accounts hidden" % robot_total
+        pager = '<div class="pager"><span>%s accounts · page %s of %s</span><div class="account-pager-links">' % (matching, page_number, total_pages)
         if page_number > 1:
-            pager += '<a class="btn secondary smallbtn" href="%s">上一页</a>' % esc(list_url(page=page_number - 1))
+            pager += '<a class="btn secondary smallbtn" href="%s">Previous</a>' % esc(list_url(page=page_number - 1))
         if page_number < total_pages:
-            pager += '<a class="btn secondary smallbtn" href="%s">下一页</a>' % esc(list_url(page=page_number + 1))
+            pager += '<a class="btn secondary smallbtn" href="%s">Next</a>' % esc(list_url(page=page_number + 1))
         pager += '</div></div>'
         web_on, game_on = _port_open(8080), _port_open(9001)
         message, kind = self._message(query)
         content = """
-<h1>账号管理</h1>
+<h1>Account Management</h1>
 <div class="grid"><section class="card span12"><div class="metrics">
-<div class="metric"><b>%s</b><span>玩家账号数</span></div><div class="metric"><b>%s</b><span>植物卡</span></div>
-<div class="metric"><b>%s</b><span>背包物品总数</span></div><div class="metric"><b><span class="status"><i class="dot%s"></i>网页 :8080</span> <span class="status"><i class="dot%s"></i>游戏 :9001</span></b><span>服务状态</span></div>
+<div class="metric"><b>%s</b><span>Player Accounts</span></div><div class="metric"><b>%s</b><span>Plant Cards</span></div>
+<div class="metric"><b>%s</b><span>Total Inventory Items</span></div><div class="metric"><b><span class="status"><i class="dot%s"></i>网页 :8080</span> <span class="status"><i class="dot%s"></i>游戏 :9001</span></b><span>Service Status</span></div>
 </div></section>
-<section class="card span8 account-list-card"><div class="account-list-heading"><h2>玩家列表</h2><span class="account-count">%s 个玩家账号</span></div>
-<form method="get" action="/" class="account-search">%s<div class="account-search-field"><label class="sr-only" for="account-search">搜索 UIN 或角色名</label><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="account-search" name="q" value="%s" placeholder="搜索角色名或 UIN"></div><button type="submit">搜索</button><a class="btn secondary" href="%s">全部</a></form>
-<div class="account-filter-row"><p class="sub">%s</p><form method="get" action="/">%s<button type="submit" class="robot-switch" role="switch" aria-checked="%s" name="include_robots" value="%s"><span>显示机器人账号</span><span class="robot-switch-track" aria-hidden="true"></span></button></form></div>
+<section class="card span8 account-list-card"><div class="account-list-heading"><h2>Player List</h2><span class="account-count">%s player accounts</span></div>
+<form method="get" action="/" class="account-search">%s<div class="account-search-field"><label class="sr-only" for="account-search">Search UIN or character name</label><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="account-search" name="q" value="%s" placeholder="SearchCharacter Name或 UIN"></div><button type="submit">Search</button><a class="btn secondary" href="%s">全部</a></form>
+<div class="account-filter-row"><p class="sub">%s</p><form method="get" action="/">%s<button type="submit" class="robot-switch" role="switch" aria-checked="%s" name="include_robots" value="%s"><span>Show bot accounts</span><span class="robot-switch-track" aria-hidden="true"></span></button></form></div>
 %s%s</section>
-<aside class="card span4"><h2>打开已有账号</h2><p class="sub">输入启动器里使用的账号编号，打开已有存档。</p>
-<form method="post" action="/player/create">%s<div class="field"><label>账号编号（UIN）</label><input class="mono" name="uin" inputmode="numeric" pattern="[0-9]+" maxlength="19" required placeholder="700000200"></div><button class="secondary" style="margin-top:10px;width:100%%" type="submit">打开账号</button></form>
-<h3>新建账号</h3><p class="sub">输入未使用的纯数字编号，创建独立的新手存档。重复编号会提示错误，已有存档会保留。</p>
-<form method="post" action="/player/new">%s<div class="field"><label>新账号编号（UIN）</label><input class="mono" name="uin" inputmode="numeric" pattern="[0-9]+" maxlength="19" required placeholder="例如 700000205"></div><button style="margin-top:10px;width:100%%" type="submit">新建账号</button></form>
-<h3>数据库</h3><p class="sub mono">%s</p><form method="post" action="/backup">%s<button class="secondary" style="width:100%%" type="submit">立即备份 players.db</button></form></aside></div>""" % (
+<aside class="card span4"><h2>Open Existing Account</h2><p class="sub">Enter the account ID used in the launcher to open an existing save.</p>
+<form method="post" action="/player/create">%s<div class="field"><label>Account ID (UIN)</label><input class="mono" name="uin" inputmode="numeric" pattern="[0-9]+" maxlength="19" required placeholder="700000200"></div><button class="secondary" style="margin-top:10px;width:100%%" type="submit">Open Account</button></form>
+<h3>Create Account</h3><p class="sub">Enter an unused numeric ID to create a separate new-player save. Duplicate IDs will be rejected, and existing saves are preserved.</p>
+<form method="post" action="/player/new">%s<div class="field"><label>New Account ID (UIN)</label><input class="mono" name="uin" inputmode="numeric" pattern="[0-9]+" maxlength="19" required placeholder="e.g. 700000205"></div><button style="margin-top:10px;width:100%%" type="submit">Create Account</button></form>
+<h3>Database</h3><p class="sub mono">%s</p><form method="post" action="/backup">%s<button class="secondary" style="width:100%%" type="submit">Back Up players.db Now</button></form></aside></div>""" % (
             total, cards, items, " on" if web_on else "", " on" if game_on else "", total,
             search_fields, esc(search), esc(list_url(clear_search=True)), esc(visibility_hint), switch_fields,
             "true" if include_robots else "false", "0" if include_robots else "1", "".join(groups), pager,
             _csrf_input(), _csrf_input(), esc(os.path.basename(store.DB_PATH)), _csrf_input())
-        self._send(200, _page("账号管理", content, message, kind))
+        self._send(200, _page("Account Management", content, message, kind))
 
     def _items_page(self, uin, query):
         player = _require_player(uin)
@@ -1107,7 +1107,7 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
         rows = []
         for item in visible:
             kind_label = ITEM_KIND_LABELS[item["kind"]]
-            type_label = ITEM_TYPE_LABELS.get(item["type"], "类型 %s" % item["type"])
+            type_label = ITEM_TYPE_LABELS.get(item["type"], "Type %s" % item["type"])
             details = []
             if item["desc"]:
                 details.append(item["desc"])
@@ -1116,7 +1116,7 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
             if item["kind"] == "card":
                 details.append("将创建真实卡牌实例，不会生成假背包堆栈")
             elif item["kind"] in ("equipment", "reagent"):
-                details.append("每个数量都会创建独立实例")
+                details.append("每个Quantity都会创建独立实例")
             limit = 2_000_000_000 if item["kind"] == "currency" else (
                 50 if item["kind"] in ("card", "equipment", "reagent") else
                 (item["stack_num"] or 2_000_000_000))
@@ -1124,25 +1124,25 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
             owned_html = "<b>%s</b>" % owned_count(item)
             grant_id_input = '<input type="hidden" name="item_id" value="%s">' % item["id"]
             if len(item["ids"]) > 1:
-                id_html += '<div class="sub">同款 ID：%s</div>' % "、".join(
+                id_html += '<div class="sub">Matching IDs: %s</div>' % "、".join(
                     str(iid) for iid in item["ids"][1:])
                 owned_html += '<div class="sub">%s</div>' % " · ".join(
                     "%s：%s" % (iid, stack_counts.get(iid, 0)) for iid in item["ids"])
                 selected_id = int(search) if search in tuple(map(str, item["ids"])) else item["id"]
                 id_options = "".join('<option value="%s"%s>%s</option>' % (
                     iid, " selected" if iid == selected_id else "", iid) for iid in item["ids"])
-                grant_id_input = ('<div class="field small"><label>道具 ID</label>'
+                grant_id_input = ('<div class="field small"><label>Item ID</label>'
                                   '<select name="item_id">%s</select></div>') % id_options
             rows.append(f"""
 <tr><td class="mono nowrap">{id_html}</td><td><b>{esc(item['name'])}</b><div class="sub">{esc(' · '.join(details))}</div></td>
-<td><span class="pill">{esc(kind_label)}</span><div class="sub">{esc(type_label)} · 品质 {item['quality']} · 需 Lv.{item['min_level']}</div></td>
+<td><span class="pill">{esc(kind_label)}</span><div class="sub">{esc(type_label)} · Quality {item['quality']} · Min. Lv.{item['min_level']}</div></td>
 <td class="num">{owned_html}</td><td><form method="post" action="/player/grant-item" class="row">{_csrf_input()}
 <input type="hidden" name="uin" value="{uin}">{grant_id_input}
 <input type="hidden" name="catalog_q" value="{esc(search)}"><input type="hidden" name="catalog_kind" value="{esc(item_kind)}"><input type="hidden" name="catalog_page" value="{page_number}">
-<div class="field small"><label>数量</label><input name="quantity" type="number" min="1" max="{limit}" value="1" required></div><button type="submit">发放</button></form></td></tr>""")
-        rows_html = "".join(rows) or '<tr><td colspan="5" class="empty">没有找到可安全发放的道具</td></tr>'
+<div class="field small"><label>Quantity</label><input name="quantity" type="number" min="1" max="{limit}" value="1" required></div><button type="submit">Grant</button></form></td></tr>""")
+        rows_html = "".join(rows) or '<tr><td colspan="5" class="empty">No safely grantable items found</td></tr>'
 
-        options = ['<option value=""%s>全部可发放项</option>' %
+        options = ['<option value=""%s>All Grantable Items</option>' %
                    (" selected" if not item_kind else "")]
         options.extend('<option value="%s"%s>%s</option>' %
                        (key, " selected" if item_kind == key else "", esc(label))
@@ -1159,11 +1159,11 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
         previous = ""
         following = ""
         if page_number > 1:
-            previous = '<a class="btn secondary smallbtn" href="%s">← 上一页</a>' % esc(
+            previous = '<a class="btn secondary smallbtn" href="%s">← Previous</a>' % esc(
                 "/items?" + urlencode({"uin": uin, "q": search, "item_kind": item_kind,
                                         "page": page_number - 1}))
         if page_number < total_pages:
-            following = '<a class="btn secondary smallbtn" href="%s">下一页 →</a>' % esc(
+            following = '<a class="btn secondary smallbtn" href="%s">Next →</a>' % esc(
                 "/items?" + urlencode({"uin": uin, "q": search, "item_kind": item_kind,
                                         "page": page_number + 1}))
         pager = '<div class="row" style="justify-content:center;margin-top:16px">%s%s%s</div>' % (
@@ -1171,15 +1171,15 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
 
         message, flash_kind = self._message(query)
         content = f"""
-<p class="sub"><a href="/player?uin={uin}">← 返回 {esc(player['name'])}</a></p>
-<h1>具体道具发放 <span class="sub mono">UIN {uin}</span></h1>
-<div class="warning" style="margin-bottom:16px">此页从客户端 ItemInfo 读取真实名称和描述。普通道具、货币、植物卡、装备和试剂会分别写入正确的数据模型；无法安全建模的傀儡展示项和植物经验已自动排除。</div>
+<p class="sub"><a href="/player?uin={uin}">← Return to {esc(player['name'])}</a></p>
+<h1>Grant Specific Items <span class="sub mono">UIN {uin}</span></h1>
+<div class="warning" style="margin-bottom:16px">This page reads real names and descriptions from the client ItemInfo. Regular items, currencies, plant cards, equipment, and reagents are written to their correct data models; puppet display entries and plant XP that cannot be safely modeled are excluded.</div>
 <section class="card"><form method="get" action="/items" class="row"><input type="hidden" name="uin" value="{uin}">
-<div class="field"><label>按道具名、ID、描述或来源搜索</label><input name="q" value="{esc(search)}" placeholder="例如：塔防钥匙、4001、经验豆、试剂"></div>
-<div class="field small"><label>发放类型</label><select name="item_kind">{''.join(options)}</select></div><button type="submit">搜索</button><a class="btn secondary" href="/items?uin={uin}">清空</a></form>
-<p class="sub" style="margin-bottom:0">共 {len(matches)} 项·第 {page_number}/{total_pages} 页。发放后请重新进入游戏，或让对应功能刷新背包。</p></section>
-<section class="card" style="margin-top:16px"><div class="scroll"><table><thead><tr><th>ID</th><th>道具</th><th>类型</th><th>已有</th><th>发放数量</th></tr></thead><tbody>{rows_html}</tbody></table></div>{pager}</section>"""
-        self._send(200, _page("具体道具发放", content, message, flash_kind))
+<div class="field"><label>Search by item name, ID, description, or source</label><input name="q" value="{esc(search)}" placeholder="e.g. Tower Defense Key, 4001, XP Bean, reagent"></div>
+<div class="field small"><label>Grant Type</label><select name="item_kind">{''.join(options)}</select></div><button type="submit">Search</button><a class="btn secondary" href="/items?uin={uin}">Clear</a></form>
+<p class="sub" style="margin-bottom:0">{len(matches)} items · page {page_number}/{total_pages}. After granting items, re-enter the game or refresh the relevant inventory view.</p></section>
+<section class="card" style="margin-top:16px"><div class="scroll"><table><thead><tr><th>ID</th><th>Item</th><th>Type</th><th>Owned</th><th>Quantity to Grant</th></tr></thead><tbody>{rows_html}</tbody></table></div>{pager}</section>"""
+        self._send(200, _page("Grant Specific Items", content, message, flash_kind))
 
     def _player_page(self, uin, query):
         player = _require_player(uin)
@@ -1200,12 +1200,12 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
                 '<div class="field"><label>%s</label><input name="%s" type="%s" value="%s"%s required></div>' %
                 (esc(label), esc(key), kind, esc(player.get(key, "")), attrs))
         edit_inputs.append(
-            '<div class="field"><label>VIP 等级</label><select name="vip_level">%s</select></div>' %
+            '<div class="field"><label>VIP Level</label><select name="vip_level">%s</select></div>' %
             "".join('<option value="%s"%s>%s</option>' %
-                    (v, " selected" if int(player.get("vip_level") or 0) == v else "", "关闭" if v == 0 else "VIP%d" % v)
+                    (v, " selected" if int(player.get("vip_level") or 0) == v else "", "Off" if v == 0 else "VIP%d" % v)
                     for v in range(4)))
         edit_inputs.append(
-            '<div class="field"><label>塔防特权</label><select name="td_privilege"><option value="0"%s>关闭</option><option value="1"%s>开启</option></select></div>' %
+            '<div class="field"><label>Tower Defense Perk</label><select name="td_privilege"><option value="0"%s>Off</option><option value="1"%s>On</option></select></div>' %
             (" selected" if not int(player.get("td_privilege") or 0) else "",
              " selected" if int(player.get("td_privilege") or 0) else ""))
 
@@ -1215,54 +1215,54 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
             for iid, count in bag
         )
         bag_rows += "".join(
-            '<tr><td class="mono">%s</td><td>%s（装备 UID %s）</td><td class="num"><b>1</b></td></tr>' %
-            (equipment["item_id"], esc(ITEM_NAMES.get(equipment["item_id"], "未知装备")),
+            '<tr><td class="mono">%s</td><td>%s（Equipment UID %s）</td><td class="num"><b>1</b></td></tr>' %
+            (equipment["item_id"], esc(ITEM_NAMES.get(equipment["item_id"], "Unknown Equipment")),
              equipment["uid"])
             for equipment in store.get_equipments(uin)
         )
-        bag_rows = bag_rows or '<tr><td colspan="3" class="empty">背包为空</td></tr>'
+        bag_rows = bag_rows or '<tr><td colspan="3" class="empty">Inventory is empty</td></tr>'
         invalid_puzzles = sum(_invalid_puzzle_details(iid) is not None for iid, _ in bag)
         repair_note = (
             '<form method="post" action="/player/repair-puzzles" style="margin-top:14px">%s'
             '<input type="hidden" name="uin" value="%s">'
-            '<p class="sub">检测到 %s 种无效旧拼图编号。整理会先备份，仅移除这些无效记录。</p>'
-            '<button class="secondary" type="submit">备份并整理无效拼图</button></form>' %
+            '<p class="sub">Found %s invalid legacy puzzle IDs. A backup will be made first; only invalid entries will be removed.</p>'
+            '<button class="secondary" type="submit">Back Up and Repair Invalid Puzzles</button></form>' %
             (_csrf_input(), uin, invalid_puzzles)) if invalid_puzzles else ""
         plant_pills = "".join(
             '<span class="pill"><span class="mono">%s</span> %s</span>' %
-            (pid, esc(PLANT_NAMES.get(pid, "未知植物"))) for pid in plants
-        ) or '<span class="empty">暂无塔防植物</span>'
+            (pid, esc(PLANT_NAMES.get(pid, "Unknown Plant"))) for pid in plants
+        ) or '<span class="empty">No Tower Defense plants unlocked</span>'
         card_rows = "".join(
             '<tr><td class="mono">%s</td><td class="mono">%s</td><td>%s</td><td>Lv.%s</td><td>%s</td></tr>' %
-            (uid, cid, esc(CARD_NAMES.get(cid, "未知卡牌")), level, exp)
+            (uid, cid, esc(CARD_NAMES.get(cid, "Unknown Card")), level, exp)
             for uid, cid, level, exp in cards
-        ) or '<tr><td colspan="5" class="empty">该账号还没有植物卡</td></tr>'
+        ) or '<tr><td colspan="5" class="empty">This account has no plant cards yet</td></tr>'
         friend_rows = "".join(
             '<tr><td class="mono">%s</td><td>%s</td><td>%s %s · Lv.%s</td>'
             '<td>%s / %s / %s</td><td><form method="post" action="/player/friend">%s'
             '<input type="hidden" name="uin" value="%s"><input type="hidden" name="operation" value="remove">'
-            '<input type="hidden" name="friend_role_id" value="%s"><button class="danger smallbtn" type="submit">移除</button></form></td></tr>' %
+            '<input type="hidden" name="friend_role_id" value="%s"><button class="danger smallbtn" type="submit">Remove</button></form></td></tr>' %
             (f["friend_role_id"], esc(f["friend_name"]), f["help_plant_id"],
-             esc(PLANT_NAMES.get(f["help_plant_id"], "未知植物")), f["help_plant_level"],
+             esc(PLANT_NAMES.get(f["help_plant_id"], "Unknown Plant")), f["help_plant_level"],
              f["diamond_blue_lvl"], f["diamond_yellow_lvl"], f["diamond_xinyue_lvl"],
              _csrf_input(), uin, f["friend_role_id"])
             for f in friends
-        ) or '<tr><td colspan="5" class="empty">暂无好友</td></tr>'
+        ) or '<tr><td colspan="5" class="empty">No friends yet</td></tr>'
         message, kind = self._message(query)
         content = """
-<p class="sub"><a href="/">← 返回账号列表</a></p><h1>%s <span class="sub mono">UIN %s</span></h1>
+<p class="sub"><a href="/">← Back to Account List</a></p><h1>%s <span class="sub mono">UIN %s</span></h1>
 <div class="grid"><section class="card span12"><div class="metrics">
-<div class="metric"><b>Lv.%s</b><span>账号等级</span></div><div class="metric"><b>%s</b><span>金币</span></div>
-<div class="metric"><b>%s / %s</b><span>蓝钻 / 金钻</span></div><div class="metric"><b>%s 关 · %s 星</b><span>塔防进度</span></div></div></section>
-<section class="card span7"><h2>基础属性</h2><form method="post" action="/player/update">%s<input type="hidden" name="uin" value="%s"><div class="row">%s</div><button style="margin-top:14px" type="submit">保存基础属性</button></form><p class="sub">等级会限制植物卡等级，并决定城镇建筑和后续章节是否开放。重新进入游戏后生效。</p></section>
-<aside class="card span5"><h2>快速通关</h2><p class="sub">按客户端关卡表补齐之前的关卡、星级、门和奖励植物。</p>
-<form method="post" action="/player/progress">%s<input type="hidden" name="uin" value="%s"><div class="row"><div class="field small"><label>章节</label><input name="stage" type="number" min="1" value="%s" required></div><div class="field small"><label>关卡</label><input name="level" type="number" min="1" value="%s" required></div><div class="field small"><label>小关（留空=整关）</label><input name="sub" type="number" min="1"></div></div><button style="margin-top:10px" type="submit">通关至此</button></form>
-<h3>当前记录</h3><p><b>%s-%s-%s</b> · %s 关 · %s 星</p></aside>
-<section class="card span6"><h2>背包物品</h2><p><a class="btn" href="/items?uin=%s">🎁 打开具体道具库</a></p><p class="sub">道具库可按中文名称或 ID 搜索，并会正确区分普通道具、植物卡、装备和试剂。下方入口仅用于调整普通堆叠道具。</p><p class="sub">旧背包记录会按植物资料核对名称；未收录编号会保留原始数量。植物解锁和植物卡实例请查看对应区域。</p><form method="post" action="/player/item" class="row">%s<input type="hidden" name="uin" value="%s"><div class="field"><label>物品 ID</label><input name="item_id" type="number" min="1" required></div><div class="field"><label>增减数量（可为负）</label><input name="delta" type="number" value="1" required></div><button type="submit">应用</button></form>%s<div class="scroll" style="margin-top:14px;max-height:330px"><table><thead><tr><th>ID</th><th>名称</th><th>数量</th></tr></thead><tbody>%s</tbody></table></div></section>
-<section class="card span6"><h2>塔防植物</h2><form method="post" action="/player/plant" class="row">%s<input type="hidden" name="uin" value="%s"><div class="field"><label>植物 ID</label><input name="plant_id" type="number" min="1" list="plant-ids" required><datalist id="plant-ids">%s</datalist></div><div class="field small"><label>操作</label><select name="operation"><option value="add">解锁</option><option value="remove">移除</option></select></div><button type="submit">应用</button></form><div class="pills" style="margin-top:16px">%s</div></section>
-<section class="card span8"><h2>植物卡</h2><form method="post" action="/player/cards" class="row">%s<input type="hidden" name="uin" value="%s"><div class="field"><label>卡牌 UID（留空=全部）</label><input name="uid" type="number" min="1"></div><div class="field small"><label>目标等级</label><input name="level" type="number" min="1" max="999" required></div><button type="submit">设置等级</button></form><div class="scroll" style="margin-top:14px;max-height:330px"><table><thead><tr><th>UID</th><th>卡牌 ID</th><th>名称</th><th>等级</th><th>经验</th></tr></thead><tbody>%s</tbody></table></div></section>
-<aside class="card span4 dangerbox"><h2>重置该账号</h2><div class="warning">先停止游戏再重置。后台会自动备份整个数据库，然后删除该 UIN 在所有玩法表中的记录，并重建一份新手存档。</div>
-<form method="post" action="/player/reset" style="margin-top:13px">%s<input type="hidden" name="uin" value="%s"><div class="field"><label>输入 %s 确认</label><input name="confirm_uin" class="mono" autocomplete="off" required></div><label class="sub" style="display:block;margin:10px 0"><input name="ack" type="checkbox" value="yes" style="width:auto" required> 我知道该账号会回到初始状态</label><button class="danger" type="submit">备份并重置</button></form></aside></div>""" % (
+<div class="metric"><b>Lv.%s</b><span>Account Level</span></div><div class="metric"><b>%s</b><span>Coins</span></div>
+<div class="metric"><b>%s / %s</b><span>Blue / Gold Diamonds</span></div><div class="metric"><b>%s 关 · %s 星</b><span>Tower Defense Progress</span></div></div></section>
+<section class="card span7"><h2>Basic Attributes</h2><form method="post" action="/player/update">%s<input type="hidden" name="uin" value="%s"><div class="row">%s</div><button style="margin-top:14px" type="submit">Save Basic Attributes</button></form><p class="sub">Account level caps plant card levels and determines which town buildings and later worlds are unlocked. Changes take effect after re-entering the game.</p></section>
+<aside class="card span5"><h2>Fast-Forward Progress</h2><p class="sub">Completes earlier stages, stars, gates, and reward plants according to the client level table.</p>
+<form method="post" action="/player/progress">%s<input type="hidden" name="uin" value="%s"><div class="row"><div class="field small"><label>World</label><input name="stage" type="number" min="1" value="%s" required></div><div class="field small"><label>Stage</label><input name="level" type="number" min="1" value="%s" required></div><div class="field small"><label>Substage (leave blank for full stage)</label><input name="sub" type="number" min="1"></div></div><button style="margin-top:10px" type="submit">Clear Through Here</button></form>
+<h3>Current Progress</h3><p><b>%s-%s-%s</b> · %s 关 · %s 星</p></aside>
+<section class="card span6"><h2>Inventory</h2><p><a class="btn" href="/items?uin=%s">🎁 Open Item Catalog</a></p><p class="sub">The item catalog supports searching by name or ID and distinguishes regular items, plant cards, equipment, and reagents. The control below only adjusts stackable items.</p><p class="sub">Legacy inventory names are checked against plant data; unknown IDs retain their original quantities. Manage plant unlocks and plant card instances in their respective sections.</p><form method="post" action="/player/item" class="row">%s<input type="hidden" name="uin" value="%s"><div class="field"><label>Item ID</label><input name="item_id" type="number" min="1" required></div><div class="field"><label>Quantity Change (negative allowed)</label><input name="delta" type="number" value="1" required></div><button type="submit">Apply</button></form>%s<div class="scroll" style="margin-top:14px;max-height:330px"><table><thead><tr><th>ID</th><th>名称</th><th>Quantity</th></tr></thead><tbody>%s</tbody></table></div></section>
+<section class="card span6"><h2>Tower Defense Plants</h2><form method="post" action="/player/plant" class="row">%s<input type="hidden" name="uin" value="%s"><div class="field"><label>Plant ID</label><input name="plant_id" type="number" min="1" list="plant-ids" required><datalist id="plant-ids">%s</datalist></div><div class="field small"><label>Action</label><select name="operation"><option value="add">Unlock</option><option value="remove">Remove</option></select></div><button type="submit">Apply</button></form><div class="pills" style="margin-top:16px">%s</div></section>
+<section class="card span8"><h2>Plant Cards</h2><form method="post" action="/player/cards" class="row">%s<input type="hidden" name="uin" value="%s"><div class="field"><label>Card UID (leave blank for all)</label><input name="uid" type="number" min="1"></div><div class="field small"><label>Target Level</label><input name="level" type="number" min="1" max="999" required></div><button type="submit">设置Level</button></form><div class="scroll" style="margin-top:14px;max-height:330px"><table><thead><tr><th>UID</th><th>Card ID</th><th>名称</th><th>Level</th><th>XP</th></tr></thead><tbody>%s</tbody></table></div></section>
+<aside class="card span4 dangerbox"><h2>Reset This Account</h2><div class="warning">Stop the game before resetting. The admin panel backs up the entire database, removes this UIN's records from all gameplay tables, and creates a new-player save.</div>
+<form method="post" action="/player/reset" style="margin-top:13px">%s<input type="hidden" name="uin" value="%s"><div class="field"><label>Enter %s to confirm</label><input name="confirm_uin" class="mono" autocomplete="off" required></div><label class="sub" style="display:block;margin:10px 0"><input name="ack" type="checkbox" value="yes" style="width:auto" required> I understand this account will be reset to its initial state</label><button class="danger" type="submit">Back Up and Reset</button></form></aside></div>""" % (
             esc(player["name"]), uin, player["level"], player["coin"], player["present_ticket"],
             player["ticket"], td_count, td_stars,
             _csrf_input() + _snapshot_input(player, [field[0] for field in EDIT_FIELDS] +
@@ -1277,10 +1277,10 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
             '<option value="%s">%s %s</option>' % (pid, pid, esc(name))
             for pid, name in sorted(PLANT_NAMES.items()))
         content += """
-<div class="grid" style="margin-top:16px"><section class="card span5"><h2>钻石卡</h2><p class="sub">登录时通过会员信息同步给客户端。0 表示未开通对应类型。</p>
-<form method="post" action="/player/diamond">%s<input type="hidden" name="uin" value="%s"><div class="row"><div class="field small"><label>显示卡片</label><select name="flag"><option value="0"%s>关闭</option><option value="1"%s>开启</option></select></div><div class="field small"><label>蓝钻等级</label><input name="blue" type="number" min="0" max="99" value="%s" required></div><div class="field small"><label>黄钻等级</label><input name="yellow" type="number" min="0" max="99" value="%s" required></div><div class="field small"><label>心悦等级</label><input name="xinyue" type="number" min="0" max="99" value="%s" required></div></div><button style="margin-top:10px" type="submit">保存钻石卡</button></form></section>
-<section class="card span7"><h2>好友与好友卡</h2><form method="post" action="/player/friend">%s<input type="hidden" name="uin" value="%s"><input type="hidden" name="operation" value="add"><div class="row"><div class="field"><label>好友角色 ID</label><input name="friend_role_id" type="number" min="1" required></div><div class="field"><label>好友名称</label><input name="friend_name" maxlength="24" required></div><div class="field"><label>好友卡植物 ID</label><input name="plant_id" type="number" min="1" list="friend-plant-ids" required><datalist id="friend-plant-ids">%s</datalist></div><div class="field small"><label>植物等级</label><input name="plant_level" type="number" min="1" max="999" value="1" required></div></div><div class="row" style="margin-top:8px"><div class="field small"><label>显示钻石卡</label><select name="diamond_flag"><option value="1">开启</option><option value="0">关闭</option></select></div><div class="field small"><label>蓝钻</label><input name="blue" type="number" min="0" max="99" value="0" required></div><div class="field small"><label>黄钻</label><input name="yellow" type="number" min="0" max="99" value="0" required></div><div class="field small"><label>心悦</label><input name="xinyue" type="number" min="0" max="99" value="0" required></div><button type="submit">添加 / 更新</button></div></form>
-<div class="scroll" style="margin-top:14px;max-height:300px"><table><thead><tr><th>角色 ID</th><th>名称</th><th>好友卡</th><th>蓝 / 黄 / 心悦</th><th></th></tr></thead><tbody>%s</tbody></table></div></section></div>""" % (
+<div class="grid" style="margin-top:16px"><section class="card span5"><h2>Membership Card</h2><p class="sub">Membership information is synchronized to the client at login. 0 means that membership type is inactive.</p>
+<form method="post" action="/player/diamond">%s<input type="hidden" name="uin" value="%s"><div class="row"><div class="field small"><label>Show Card</label><select name="flag"><option value="0"%s>Off</option><option value="1"%s>On</option></select></div><div class="field small"><label>Blue Diamond Level</label><input name="blue" type="number" min="0" max="99" value="%s" required></div><div class="field small"><label>Gold Diamond Level</label><input name="yellow" type="number" min="0" max="99" value="%s" required></div><div class="field small"><label>Heartfelt Membership Level</label><input name="xinyue" type="number" min="0" max="99" value="%s" required></div></div><button style="margin-top:10px" type="submit">Save Membership</button></form></section>
+<section class="card span7"><h2>Friends & Friend Cards</h2><form method="post" action="/player/friend">%s<input type="hidden" name="uin" value="%s"><input type="hidden" name="operation" value="add"><div class="row"><div class="field"><label>Friend Character ID</label><input name="friend_role_id" type="number" min="1" required></div><div class="field"><label>Friend Name</label><input name="friend_name" maxlength="24" required></div><div class="field"><label>Friend Card Plant ID</label><input name="plant_id" type="number" min="1" list="friend-plant-ids" required><datalist id="friend-plant-ids">%s</datalist></div><div class="field small"><label>Plant Level</label><input name="plant_level" type="number" min="1" max="999" value="1" required></div></div><div class="row" style="margin-top:8px"><div class="field small"><label>Show Membership</label><select name="diamond_flag"><option value="1">On</option><option value="0">Off</option></select></div><div class="field small"><label>Blue Diamonds</label><input name="blue" type="number" min="0" max="99" value="0" required></div><div class="field small"><label>Gold Diamonds</label><input name="yellow" type="number" min="0" max="99" value="0" required></div><div class="field small"><label>Heartfelt Membership</label><input name="xinyue" type="number" min="0" max="99" value="0" required></div><button type="submit">Add / Update</button></div></form>
+<div class="scroll" style="margin-top:14px;max-height:300px"><table><thead><tr><th>Character ID</th><th>名称</th><th>好友卡</th><th>Blue / Gold / Heartfelt</th><th></th></tr></thead><tbody>%s</tbody></table></div></section></div>""" % (
             _csrf_input() + _snapshot_input(player, ["diamond_flag", "diamond_blue_lvl", "diamond_yellow_lvl", "diamond_xinyue_lvl"]), uin,
             " selected" if not int(player.get("diamond_flag") or 0) else "",
             " selected" if int(player.get("diamond_flag") or 0) else "",
@@ -1293,7 +1293,7 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
     def _create_player(self, form):
         uin = _integer(form, "uin", 1, 9_223_372_036_854_775_807, "UIN")
         _require_player(uin)
-        self._redirect("/player?uin=%s" % uin, "已打开现有存档。")
+        self._redirect("/player?uin=%s" % uin, "Opened existing save.")
 
     def _new_player(self, form):
         uin = _integer(form, "uin", 1, 9_223_372_036_854_775_807, "UIN")
@@ -1302,7 +1302,7 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
         except ValueError as exc:
             raise ValidationError(str(exc))
         self._redirect("/player?uin=%s" % uin,
-                       "已创建新账号 %s 和独立新手存档。启动器输入该编号即可进入游戏。" % uin)
+                       "Created new account %s with a separate new-player save. Enter this ID in the launcher to play." % uin)
 
     def _update_player(self, form):
         uin = _integer(form, "uin", 1, 9_223_372_036_854_775_807, "UIN")
@@ -1311,11 +1311,11 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
         values = {}
         name = (form.get("name", [""])[0] or "").strip()
         if not name or len(name) > 24 or any(ord(ch) < 32 for ch in name):
-            raise ValidationError("角色名需为 1–24 个可见字符。")
+            raise ValidationError("Character name must be 1–24 visible characters.")
         if name != baseline.get('name'):
             from profile_editor import _text, NAME_MIN, NAME_MAX
             try:
-                _text(name, '角色名', NAME_MAX, NAME_MIN)
+                _text(name, 'Character Name', NAME_MAX, NAME_MIN)
             except ValueError as exc:
                 raise ValidationError(str(exc))
         values["name"] = name
@@ -1326,60 +1326,60 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
             gm.validate_player_fields(values)
         except ValueError as exc:
             raise ValidationError(str(exc))
-        vip = _integer(form, "vip_level", 0, 3, "VIP 等级")
-        privilege = _integer(form, "td_privilege", 0, 1, "塔防特权")
+        vip = _integer(form, "vip_level", 0, 3, "VIP Level")
+        privilege = _integer(form, "td_privilege", 0, 1, "Tower Defense Perk")
         values.update(vip_level=vip, td_privilege=privilege)
         count = _save_incremental(uin, values, baseline)
         self._redirect("/player?uin=%s" % uin,
-                       "基础属性已保存，重新进入游戏后生效。" if count else "没有修改的属性，存档保持原样。")
+                       "Basic attributes saved. Changes take effect after re-entering the game." if count else "No attributes changed; the save is unchanged.")
 
     def _edit_item(self, form):
         uin = _integer(form, "uin", 1, None, "UIN")
         _require_player(uin)
-        item_id = _integer(form, "item_id", 1, 99_999_999, "物品 ID")
-        delta = _integer(form, "delta", -2_000_000_000, 2_000_000_000, "增减数量")
+        item_id = _integer(form, "item_id", 1, 99_999_999, "Item ID")
+        delta = _integer(form, "delta", -2_000_000_000, 2_000_000_000, "Quantity Change")
         current = store.get_item_count(uin, item_id)
         try:
             gm.validate_stack_delta(item_id, delta, current)
         except ValueError as exc:
             raise ValidationError(str(exc))
         new_count = store.add_item(uin, item_id, delta)
-        if item_id == 43:  # 威望同时在玩家列中缓存一份，保持两者一致。
+        if item_id == 43:  # Prestige is also cached in the player record to keep both values synchronized.
             store.save_player(uin, prestige=new_count)
         name, _detail = _inventory_item_details(item_id)
         self._redirect("/player?uin=%s" % uin,
-                       "%s（ID %s）当前数量：%s。" % (name, item_id, new_count))
+                       "%s (ID %s) current quantity: %s." % (name, item_id, new_count))
 
     def _repair_puzzles(self, form):
         uin = _integer(form, "uin", 1, None, "UIN")
         result = _repair_invalid_puzzles(uin)
-        message = ("已整理 %s 种无效旧拼图；合法碎片数量保持原样。备份：%s。" %
-                   (result["count"], os.path.basename(result["backup"]))) if result["count"] else "没有需要整理的无效旧拼图。"
+        message = ("Repaired %s invalid legacy puzzle IDs; valid fragment quantities were preserved. Backup: %s." %
+                   (result["count"], os.path.basename(result["backup"]))) if result["count"] else "No invalid legacy puzzle IDs to repair."
         self._redirect("/player?uin=%s" % uin, message)
 
     def _grant_item(self, form):
         uin = _integer(form, "uin", 1, None, "UIN")
         player = _require_player(uin)
-        item_id = _integer(form, "item_id", 1, 99_999_999, "道具 ID")
+        item_id = _integer(form, "item_id", 1, 99_999_999, "Item ID")
         item = ITEM_CATALOG_BY_ID.get(item_id)
         if not item:
-            raise ValidationError("道具 ID %s 不存在，或属于无法安全发放的客户端展示项。" % item_id)
+            raise ValidationError("Item ID %s does not exist or is a client display entry that cannot be safely granted." % item_id)
         hard_limit = 50 if item["kind"] in ("card", "equipment", "reagent") else 2_000_000_000
         if item["kind"] == "stack" and item["stack_num"]:
             hard_limit = item["stack_num"]
-        quantity = _integer(form, "quantity", 1, hard_limit, "发放数量")
+        quantity = _integer(form, "quantity", 1, hard_limit, "Quantity to Grant")
 
         if item["kind"] == "currency":
             field, label = CURRENCY_GRANTS[item_id]
             current = int(player.get(field, 0) or 0)
             if current + quantity > 2_000_000_000:
-                raise ValidationError("%s 发放后会超过后台安全上限。" % label)
+                raise ValidationError("Granting %s would exceed the admin safety limit." % label)
             new_count = current + quantity
             updates = {field: new_count}
             if field in ("puppet_skill_val", "puppet_energy"):
                 updates[field + "_ts"] = int(time.time())
             store.save_player(uin, **updates)
-            summary = "%s +%s，当前为 %s" % (label, quantity, new_count)
+            summary = "%s +%s, current total: %s" % (label, quantity, new_count)
         elif item["kind"] == "stack":
             current = store.get_item_count(uin, item_id)
             try:
@@ -1389,21 +1389,21 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
             new_count = store.add_item(uin, item_id, quantity)
             if item_id == 43:
                 store.save_player(uin, prestige=new_count)
-            summary = "%s +%s，背包当前为 %s" % (item["name"], quantity, new_count)
+            summary = "%s +%s, current inventory total: %s" % (item["name"], quantity, new_count)
         elif item["kind"] == "equipment":
             for _ in range(quantity):
                 uid = store.next_equipment_uid(uin)
                 store.add_equipment(uin, uid, item_id)
             total = sum(1 for equipment in store.get_equipments(uin)
                         if int(equipment["item_id"]) == item_id)
-            summary = "%s装备实例 +%s，当前为 %s 件" % (item["name"], quantity, total)
+            summary = "%s equipment instances +%s, current total: %s" % (item["name"], quantity, total)
         elif item["kind"] == "card":
             try:
                 card_id = int(item["card_spec"].split(":", 1)[0])
             except (TypeError, ValueError):
-                raise ValidationError("该卡牌道具没有有效的 battleCard 映射。")
+                raise ValidationError("This plant card item has no valid battleCard mapping.")
             if card_id not in CARD_NAMES:
-                raise ValidationError("卡牌 ID %s 不在客户端 battleCard 表中。" % card_id)
+                raise ValidationError("Card ID %s is not in the client's battleCard table." % card_id)
             taken = {int(uid) for uid, _cid, _level, _exp in store.get_cards(uin)}
             for _ in range(quantity):
                 uid = 10_000_000 + card_id
@@ -1413,90 +1413,90 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
                 store.add_card(uin, uid, card_id, 1)
             total = sum(1 for _uid, cid, _level, _exp in store.get_cards(uin)
                         if int(cid) == card_id)
-            summary = "%s卡牌实例 +%s，当前为 %s 张" % (item["name"], quantity, total)
+            summary = "%s plant card instances +%s, current total: %s" % (item["name"], quantity, total)
         elif item["kind"] == "reagent":
             for _ in range(quantity):
                 uid = store.next_reagent_uid(uin)
                 store.add_reagent(uin, uid, item_id, level=1, position=0, slot_id=0)
             total = sum(1 for reagent in store.get_reagents(uin)
                         if int(reagent["base_id"]) == item_id)
-            summary = "%s试剂实例 +%s，当前为 %s 个" % (item["name"], quantity, total)
+            summary = "%s reagent instances +%s, current total: %s" % (item["name"], quantity, total)
         else:
-            raise ValidationError("该道具类型尚不支持发放。")
+            raise ValidationError("Granting this item type is not supported yet.")
 
-        self._redirect(_catalog_url(uin, form), summary + "。重新进入游戏后可见。")
+        self._redirect(_catalog_url(uin, form), summary + ". Re-enter the game to see the changes.")
 
     def _edit_plant(self, form):
         uin = _integer(form, "uin", 1, None, "UIN")
         _require_player(uin)
-        plant_id = _integer(form, "plant_id", 1, 99_999_999, "植物 ID")
+        plant_id = _integer(form, "plant_id", 1, 99_999_999, "Plant ID")
         operation = (form.get("operation", [""])[0] or "").strip()
         if operation == "add":
             if plant_id not in PLANT_NAMES:
-                raise ValidationError("植物 ID %s 不在客户端塔防植物表中。" % plant_id)
+                raise ValidationError("Plant ID %s is not in the client's Tower Defense plant table." % plant_id)
             store.unlock_plant(uin, plant_id)
-            message = "已解锁 %s（%s）。" % (PLANT_NAMES[plant_id], plant_id)
+            message = "Unlocked %s (%s)." % (PLANT_NAMES[plant_id], plant_id)
         elif operation == "remove":
             store.remove_plant(uin, plant_id)
-            message = "已移除塔防植物 %s。" % plant_id
+            message = "Removed Tower Defense plant %s." % plant_id
         else:
-            raise ValidationError("无效的植物操作。")
+            raise ValidationError("Invalid plant action.")
         self._redirect("/player?uin=%s" % uin, message)
 
     def _edit_progress(self, form):
         uin = _integer(form, "uin", 1, None, "UIN")
         _require_player(uin)
-        stage = _integer(form, "stage", 1, 999, "章节")
-        level = _integer(form, "level", 1, 999, "关卡")
+        stage = _integer(form, "stage", 1, 999, "World")
+        level = _integer(form, "level", 1, 999, "Stage")
         raw_sub = (form.get("sub", [""])[0] or "").strip()
         candidates = sorted(key[2] for key in LEVEL_KEYS if key[:2] == (stage, level))
         if not candidates:
-            raise ValidationError("客户端中不存在章节 %s 的第 %s 关。" % (stage, level))
+            raise ValidationError("World %s, stage %s does not exist in the client." % (stage, level))
         sub = max(candidates) if not raw_sub else _integer(form, "sub", 1, 999, "小关")
         if (stage, level, sub) not in LEVEL_KEYS:
-            raise ValidationError("客户端中不存在关卡 %s-%s-%s。" % (stage, level, sub))
+            raise ValidationError("Stage %s-%s-%s does not exist in the client." % (stage, level, sub))
         gm.passto(uin, stage, level, sub)
         self._redirect("/player?uin=%s" % uin,
-                       "已按游戏逻辑通关至 %s-%s-%s，并补齐门和奖励植物。" % (stage, level, sub))
+                       "Cleared through %s-%s-%s using game logic, including gates and reward plants." % (stage, level, sub))
 
     def _edit_cards(self, form):
         uin = _integer(form, "uin", 1, None, "UIN")
         player = _require_player(uin)
-        target = _integer(form, "level", 1, 999, "卡牌等级")
+        target = _integer(form, "level", 1, 999, "Card Level")
         raw_uid = (form.get("uid", [""])[0] or "").strip()
         uid = _integer(form, "uid", 1, None, "卡牌 UID") if raw_uid else None
         cards = [card for card in store.get_cards(uin) if uid is None or card[0] == uid]
         if not cards:
-            raise ValidationError("没有找到可修改的植物卡。")
-        # 复用服务器的经验曲线和账号等级上限，避免写出客户端无法解释的等级。
+            raise ValidationError("No plant cards found to edit.")
+        # 复用服务器的XP曲线和Account Level上限，避免写出客户端无法解释的Level。
         import pvz_poc_server as game
         game.load_card_level_curve()
         exact = next((total for level, total, _next in game._CARD_LEVEL_CURVE if level == target), None)
         if exact is None:
-            raise ValidationError("经验表中不存在卡牌等级 %s。" % target)
+            raise ValidationError("Card level %s does not exist in the XP table." % target)
         changed = []
         for card_uid, card_id, _old_level, _old_exp in cards:
             new_level, kept_exp = game.card_level_from_exp(exact, card_id, int(player["level"]))
             store.set_card_level(uin, card_uid, new_level, kept_exp)
             changed.append(new_level)
         actual = min(changed) if changed else target
-        suffix = "（受账号等级上限限制，实际为 %s 级）" % actual if actual != target else ""
+        suffix = "(capped by account level; actual level is %s)" % actual if actual != target else ""
         self._redirect("/player?uin=%s" % uin,
-                       "已修改 %s 张植物卡的等级%s。" % (len(changed), suffix))
+                       "Updated the levels of %s plant cards%s." % (len(changed), suffix))
 
     def _edit_diamond(self, form):
         uin = _integer(form, "uin", 1, None, "UIN")
         _require_player(uin)
         baseline = _baseline(form, uin)
-        flag = _integer(form, "flag", 0, 1, "钻石卡开关")
-        blue = _integer(form, "blue", 0, 99, "蓝钻等级")
-        yellow = _integer(form, "yellow", 0, 99, "黄钻等级")
-        xinyue = _integer(form, "xinyue", 0, 99, "心悦等级")
+        flag = _integer(form, "flag", 0, 1, "Membership Card Toggle")
+        blue = _integer(form, "blue", 0, 99, "Blue Diamond Level")
+        yellow = _integer(form, "yellow", 0, 99, "Gold Diamond Level")
+        xinyue = _integer(form, "xinyue", 0, 99, "Heartfelt Membership Level")
         _save_incremental(uin, dict(diamond_flag=flag, diamond_blue_lvl=blue,
             diamond_yellow_lvl=yellow, diamond_xinyue_lvl=xinyue), baseline)
         self._redirect(
             "/player?uin=%s" % uin,
-            "钻石卡已保存：显示=%s，蓝钻=%s，黄钻=%s，心悦=%s。重新进入游戏后生效。" %
+            "Membership saved: display=%s, blue diamonds=%s, gold diamonds=%s, heartfelt=%s. Changes take effect after re-entering the game." %
             (flag, blue, yellow, xinyue))
 
     def _edit_friend(self, form):
@@ -1504,32 +1504,32 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
         _require_player(uin)
         operation = (form.get("operation", [""])[0] or "").strip()
         role_id = _integer(form, "friend_role_id", 1, 9_223_372_036_854_775_807,
-                           "好友角色 ID")
+                           "Friend Character ID")
         if operation == "remove":
             store.remove_friend(uin, role_id)
-            self._redirect("/player?uin=%s" % uin, "已移除好友 %s。" % role_id)
+            self._redirect("/player?uin=%s" % uin, "Removed friend %s." % role_id)
             return
         if operation != "add":
-            raise ValidationError("无效的好友操作。")
+            raise ValidationError("Invalid friend action.")
         if role_id == uin:
-            raise ValidationError("不能把自己添加为好友。")
+            raise ValidationError("You cannot add yourself as a friend.")
         name = (form.get("friend_name", [""])[0] or "").strip()
         if not name or len(name) > 24 or any(ord(ch) < 32 for ch in name):
-            raise ValidationError("好友名称需为 1–24 个可见字符。")
-        plant_id = _integer(form, "plant_id", 1, 99_999_999, "好友卡植物 ID")
+            raise ValidationError("Friend name must be 1–24 visible characters.")
+        plant_id = _integer(form, "plant_id", 1, 99_999_999, "Friend Card Plant ID")
         if plant_id not in PLANT_NAMES:
-            raise ValidationError("植物 ID %s 不在客户端塔防植物表中。" % plant_id)
-        plant_level = _integer(form, "plant_level", 1, 999, "好友卡等级")
-        diamond_flag = _integer(form, "diamond_flag", 0, 1, "好友钻石卡开关")
-        blue = _integer(form, "blue", 0, 99, "好友蓝钻")
-        yellow = _integer(form, "yellow", 0, 99, "好友黄钻")
-        xinyue = _integer(form, "xinyue", 0, 99, "好友心悦")
+            raise ValidationError("Plant ID %s is not in the client's Tower Defense plant table." % plant_id)
+        plant_level = _integer(form, "plant_level", 1, 999, "Friend Card Level")
+        diamond_flag = _integer(form, "diamond_flag", 0, 1, "Friend Membership Card Toggle")
+        blue = _integer(form, "blue", 0, 99, "Friend Blue Diamonds")
+        yellow = _integer(form, "yellow", 0, 99, "Friend Gold Diamonds")
+        xinyue = _integer(form, "xinyue", 0, 99, "Friend Heartfelt Membership")
         store.add_friend(
             uin, role_id, name, plant_id, plant_level,
             diamond_flag, blue, yellow, xinyue)
         self._redirect(
             "/player?uin=%s" % uin,
-            "已添加 / 更新好友 %s（%s），重新进入游戏后生效。" % (name, role_id))
+            "Added / updated friend %s (%s). Changes take effect after re-entering the game." % (name, role_id))
 
     def _reset_account(self, form):
         uin = _integer(form, "uin", 1, None, "UIN")
@@ -1537,16 +1537,16 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
         confirm = (form.get("confirm_uin", [""])[0] or "").strip()
         acknowledged = (form.get("ack", [""])[0] or "") == "yes"
         if confirm != str(uin) or not acknowledged:
-            raise ValidationError("确认 UIN 不匹配，重置已取消。")
+            raise ValidationError("UIN confirmation did not match; reset cancelled.")
         backup, affected = _reset_player(uin)
         count = sum(rows for _table, rows in affected)
         self._redirect("/player?uin=%s" % uin,
-                       "账号已重置为新手档，共清理 %s 条记录。备份：%s" %
+                       "Account reset to a new-player save. Removed %s records. Backup: %s" %
                        (count, os.path.basename(backup)))
 
     def _manual_backup(self, form):
         destination = _backup_database("manual")
-        self._redirect("/", "数据库已备份：%s" % os.path.basename(destination))
+        self._redirect("/", "Database backed up: %s" % os.path.basename(destination))
 
     def log_message(self, fmt, *args):
         sys.stdout.write("[admin] %s - %s\n" % (self.address_string(), fmt % args))
@@ -1555,7 +1555,7 @@ class AdminHandler(http.server.BaseHTTPRequestHandler):
 
 class AdminServer(http.server.ThreadingHTTPServer):
     daemon_threads = True
-    # macOS 在刚关闭浏览器连接后会短暂保留 TIME_WAIT，允许立即重启。
+    # macOS 在刚Off浏览器连接后会短暂保留 TIME_WAIT，允许立即重启。
     # Windows 的 SO_REUSEADDR 语义不同，保持严格模式以避免两个后台同时监听。
     allow_reuse_address = sys.platform != "win32"
 
@@ -1565,26 +1565,26 @@ def serve(port=ADMIN_PORT, db_path=None):
         store.set_db_path(os.path.abspath(db_path))
     store.init_db()
     httpd = AdminServer((ADMIN_HOST, int(port)), AdminHandler)
-    print("[admin] 本地 GM 后台: http://%s:%d" % (ADMIN_HOST, int(port)))
-    print("[admin] 数据库: %s" % store.DB_PATH)
+    print("[admin] Local admin panel: http://%s:%d" % (ADMIN_HOST, int(port)))
+    print("[admin] Database: %s" % store.DB_PATH)
     sys.stdout.flush()
     with httpd:
         httpd.serve_forever()
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="PvZ OL 本地 GM 管理后台")
-    parser.add_argument("--port", type=int, default=ADMIN_PORT, help="本机监听端口")
-    parser.add_argument("--db", help="players.db 路径（主要用于测试）")
+    parser = argparse.ArgumentParser(description="PvZ OL Local Admin Panel")
+    parser.add_argument("--port", type=int, default=ADMIN_PORT, help="Local listening port")
+    parser.add_argument("--db", help="Path to players.db (mainly for testing)")
     args = parser.parse_args(argv)
     if not 1 <= args.port <= 65535:
         parser.error("port must be in 1..65535")
     try:
         serve(args.port, args.db)
     except KeyboardInterrupt:
-        print("\n[admin] 已停止")
+        print("\n[admin] Stopped")
     except OSError as exc:
-        print("[admin] 无法监听 127.0.0.1:%s: %s" % (args.port, exc))
+        print("[admin] Could not listen on 127.0.0.1:%s: %s" % (args.port, exc))
         raise SystemExit(1)
 
 
