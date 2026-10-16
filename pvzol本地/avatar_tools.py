@@ -23,7 +23,7 @@ def _pillow():
     try:
         from PIL import Image, ImageOps
     except ImportError as exc:
-        raise RuntimeError("头像预览和裁切需要 Pillow 图片组件。") from exc
+        raise RuntimeError("Avatar preview and cropping require the Pillow image component.") from exc
     return Image, ImageOps
 
 
@@ -32,25 +32,25 @@ def load_image(path):
     Image, ImageOps = _pillow()
     source = Path(path).expanduser()
     if not source.is_file() or not 0 < source.stat().st_size <= MAX_IMAGE_BYTES:
-        raise ValueError("请选择不超过 5 MiB 的 PNG 或 JPG 图片。")
+        raise ValueError("Choose a PNG or JPG image no larger than 5 MiB.")
     data = source.read_bytes()
     if not 0 < len(data) <= MAX_IMAGE_BYTES:
-        raise ValueError("头像图片不能超过 5 MiB。")
+        raise ValueError("Avatar images must not exceed 5 MiB.")
     try:
         with warnings.catch_warnings():
             warnings.simplefilter("error", Image.DecompressionBombWarning)
             with Image.open(BytesIO(data)) as image:
                 if image.format not in ("PNG", "JPEG"):
-                    raise ValueError("请选择有效的 PNG 或 JPG 图片。")
+                    raise ValueError("Choose a valid PNG or JPG image.")
                 width, height = image.size
                 if min(width, height) <= 0 or width * height > MAX_IMAGE_PIXELS:
-                    raise ValueError("头像图片最多支持 2500 万像素。")
+                    raise ValueError("Avatar images can contain up to 25 megapixels.")
                 image.load()
                 return ImageOps.exif_transpose(image).convert("RGBA")
     except (Image.DecompressionBombError, Image.DecompressionBombWarning) as exc:
-        raise ValueError("头像图片最多支持 2500 万像素。") from exc
+        raise ValueError("Avatar images can contain up to 25 megapixels.") from exc
     except (OSError, SyntaxError) as exc:
-        raise ValueError("头像图片无法读取，请选择完整的 PNG 或 JPG 图片。") from exc
+        raise ValueError("Could not read the avatar image. Choose a complete PNG or JPG file.") from exc
 
 
 def resolve_avatar_path(player, root):
@@ -63,7 +63,7 @@ def resolve_avatar_path(player, root):
     root = Path(root).resolve()
     heads = (root / "webroot/image/head").resolve()
     if not heads.is_relative_to(root):
-        raise ValueError("头像目录超出游戏目录。")
+        raise ValueError("The avatar directory is outside the game directory.")
     url = str(player.get("qq_face_url") or "")
     if url:
         try:
@@ -78,7 +78,7 @@ def resolve_avatar_path(player, root):
             if decoded.startswith(prefix):
                 candidate = (heads / decoded[len(prefix):]).resolve()
                 if not candidate.is_relative_to(heads):
-                    raise ValueError("头像路径超出头像目录。")
+                    raise ValueError("The avatar path is outside the avatar directory.")
                 if candidate.is_file():
                     return candidate
     try:
@@ -101,11 +101,11 @@ class CropModel:
     """
     def __init__(self, image, viewport_size=320, max_zoom=5.0):
         if type(viewport_size) is not int or viewport_size < 1:
-            raise ValueError("裁切视口尺寸不正确。")
+            raise ValueError("Invalid crop viewport size.")
         if not math.isfinite(float(max_zoom)) or max_zoom < 1:
-            raise ValueError("最大缩放比例不正确。")
+            raise ValueError("Invalid maximum zoom ratio.")
         if min(image.size) < 1:
-            raise ValueError("图片尺寸不正确。")
+            raise ValueError("Invalid image dimensions.")
         self.original = image.convert("RGBA").copy()
         self.viewport_size = viewport_size
         self.max_zoom = float(max_zoom)
@@ -136,7 +136,7 @@ class CropModel:
     def set_zoom(self, value):
         value = float(value)
         if not math.isfinite(value):
-            raise ValueError("缩放比例不正确。")
+            raise ValueError("Invalid zoom ratio.")
         middle = self.viewport_size / 2
         focus_x = (middle - self.offset_x) / self.scale
         focus_y = (middle - self.offset_y) / self.scale
@@ -148,7 +148,7 @@ class CropModel:
     def drag(self, dx, dy):
         dx, dy = float(dx), float(dy)
         if not math.isfinite(dx) or not math.isfinite(dy):
-            raise ValueError("拖动位置不正确。")
+            raise ValueError("Invalid drag position.")
         self.offset_x += dx
         self.offset_y += dy
         self._clamp()
@@ -174,7 +174,7 @@ class CropModel:
 
     def render(self, size=AVATAR_SIZE):
         if type(size) is not int or size < 1:
-            raise ValueError("头像尺寸不正确。")
+            raise ValueError("Invalid avatar dimensions.")
         Image, _ = _pillow()
         return self.image.resize((size, size), Image.Resampling.LANCZOS, box=self.crop_box())
 
@@ -183,7 +183,7 @@ def preview_image(image, size=96, checkerboard=False):
     """Fit an image in a stable square preview; do not alter the saved crop."""
     Image, ImageOps = _pillow()
     if type(size) is not int or size < 1:
-        raise ValueError("预览尺寸不正确。")
+        raise ValueError("Invalid preview dimensions.")
     canvas = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     if checkerboard:
         from PIL import ImageDraw
@@ -205,7 +205,7 @@ def make_preview_photo(image, master, size=96, checkerboard=False):
         from PIL import ImageTk
         return ImageTk.PhotoImage(preview_image(image, size, checkerboard), master=master)
     except ImportError as exc:
-        raise RuntimeError("头像预览需要 Pillow 的 Tk 图片组件。") from exc
+        raise RuntimeError("Avatar preview requires Pillow's Tk image component.") from exc
 
 
 def crop_viewport_size(parent):
@@ -230,7 +230,7 @@ def pick_cropped_avatar(parent, path, theme, center_window):
     accent = color("ACCENT", "#99ca63")
     dialog = tk.Toplevel(parent)
     dialog.withdraw()
-    dialog.title("裁切头像")
+    dialog.title("Crop Avatar")
     dialog.transient(parent)
     dialog.configure(bg=bg)
     dialog.resizable(False, False)
@@ -239,9 +239,9 @@ def pick_cropped_avatar(parent, path, theme, center_window):
     try:
         body = tk.Frame(dialog, bg=bg)
         body.pack(padx=18, pady=16)
-        tk.Label(body, text="拖动图片调整位置", bg=bg, fg=fg,
+        tk.Label(body, text="Drag the image to adjust its position", bg=bg, fg=fg,
                  font=("Segoe UI", 12, "bold")).grid(row=0, column=0, columnspan=2, sticky="w", pady=(0, 3))
-        tk.Label(body, text="方框内的内容将保存为头像", bg=bg, fg=muted,
+        tk.Label(body, text="The area inside the frame will be saved as your avatar", bg=bg, fg=muted,
                  font=("Segoe UI", 9)).grid(row=1, column=0, columnspan=2, sticky="w", pady=(0, 12))
         canvas = tk.Canvas(body, width=model.viewport_size, height=model.viewport_size,
                            bg=panel, highlightbackground=accent, highlightthickness=1, cursor="fleur")
@@ -249,12 +249,12 @@ def pick_cropped_avatar(parent, path, theme, center_window):
         canvas_image = canvas.create_image(0, 0, anchor="nw")
         side = tk.Frame(body, bg=bg)
         side.grid(row=2, column=1, sticky="nw", padx=(16, 0))
-        tk.Label(side, text="头像预览", bg=bg, fg=muted, font=("Segoe UI", 9)).pack(pady=(0, 7))
+        tk.Label(side, text="Avatar Preview", bg=bg, fg=muted, font=("Segoe UI", 9)).pack(pady=(0, 7))
         preview = tk.Label(side, bg=panel)
         preview.pack()
         zoom_var = tk.DoubleVar(master=dialog, value=1.0)
         zoom_text = tk.StringVar(master=dialog, value="1.00×")
-        tk.Label(side, text="缩放", bg=bg, fg=muted, font=("Segoe UI", 9)).pack(anchor="w", pady=(18, 3))
+        tk.Label(side, text="Zoom", bg=bg, fg=muted, font=("Segoe UI", 9)).pack(anchor="w", pady=(18, 3))
         tk.Label(side, textvariable=zoom_text, bg=bg, fg=fg, font=("Segoe UI", 9)).pack(anchor="w")
 
         def redraw():
@@ -280,7 +280,7 @@ def pick_cropped_avatar(parent, path, theme, center_window):
             model.reset()
             zoom_var.set(model.zoom)
             redraw()
-        for text, command in (("旋转 90°", rotate), ("重置", reset)):
+        for text, command in (("Rotate 90°", rotate), ("Reset", reset)):
             tk.Button(side, text=text, command=command, bg=panel, fg=fg, relief="flat",
                       cursor="hand2", font=("Segoe UI", 9), padx=8, pady=5).pack(fill="x", pady=4)
 
@@ -306,10 +306,10 @@ def pick_cropped_avatar(parent, path, theme, center_window):
             dialog.destroy()
         footer = tk.Frame(body, bg=bg)
         footer.grid(row=3, column=0, columnspan=2, sticky="ew", pady=(16, 0))
-        tk.Button(footer, text="使用裁切头像", command=confirm, bg=accent, fg="#12220a",
+        tk.Button(footer, text="使用Crop Avatar", command=confirm, bg=accent, fg="#12220a",
                   relief="flat", cursor="hand2", font=("Segoe UI", 10, "bold"),
                   padx=14, pady=7).pack(side="right")
-        tk.Button(footer, text="取消", command=cancel, bg=panel, fg=fg, relief="flat",
+        tk.Button(footer, text="Cancel", command=cancel, bg=panel, fg=fg, relief="flat",
                   cursor="hand2", font=("Segoe UI", 10), padx=14, pady=7).pack(side="right", padx=(0, 9))
         dialog.protocol("WM_DELETE_WINDOW", cancel)
         dialog.bind("<Escape>", cancel)
