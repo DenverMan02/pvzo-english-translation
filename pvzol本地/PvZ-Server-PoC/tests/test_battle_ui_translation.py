@@ -188,6 +188,13 @@ class BattleUITranslationTests(unittest.TestCase):
         self.assertEqual(_translate_display_string("队伍已满"), "Team is Full")
         self.assertEqual(_translate_display_string("时光之旅"), "Time Journey")
         self.assertEqual(_translate_display_string("世界BOSS"), "World Boss")
+    def test_town_chat_and_activity_labels_from_collage(self):
+        self.assertEqual(_translate_display_string("VIP增加次数"), "VIP bonus attempts")
+        self.assertEqual(_translate_display_string("世界"), "World")
+        self.assertEqual(_translate_display_string("私聊"), "Private Chat")
+        self.assertEqual(_translate_display_string("登录送礼"), "Login Gifts")
+        self.assertEqual(_translate_display_string("系统公告"), "System Announcements")
+        self.assertEqual(_translate_display_string("任务提示"), "Quest Tips")
     def test_dynamic_sweep_counters_and_reward_copy(self):
         self.assertEqual(_translate_display_string("今日可挑战:5次"), "Challenges available today: 5 attempts")
         self.assertEqual(_translate_display_string("免费次数：9999次（VIP增加次数）"), "Free attempts: 9999 attempts（VIP bonus attempts）")
