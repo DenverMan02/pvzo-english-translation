@@ -157,7 +157,7 @@ class LauncherTests(unittest.TestCase):
   run.assert_not_called()
  def test_callback_failure_does_not_stop_main_thread_polling(self):
   a=app();a._post(0,Mock(side_effect=OSError('browser failed')));a._poll_log()
-  self.assertTrue(a.root.callbacks);self.assertIn('操作失败',a.logs[0])
+  self.assertTrue(a.root.callbacks);self.assertIn('Operation failed',a.logs[0])
 
 class NetworkTests(unittest.TestCase):
  def responder(self,response):
