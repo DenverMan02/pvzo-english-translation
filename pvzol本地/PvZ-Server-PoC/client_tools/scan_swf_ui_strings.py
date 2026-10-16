@@ -1,11 +1,12 @@
 """Scan live SWF modules for hardcoded Chinese UI strings.
 
-Run from any directory:
+Run from the PvZ-Server-PoC directory:
     python client_tools/scan_swf_ui_strings.py
     python client_tools/scan_swf_ui_strings.py --all
 
-The default scans the battle/tooltip modules targeted by translate_battle_ui.py.
---all scans top-level Module*.swf files. This does not read or modify clientDB.
+The default scans all canonical UI SWFs listed in webroot/fileVer.xml, including
+the main Game_n/Game_p builds. --all adds duplicate top-level modules for review.
+ClientDB resource modules and font assets are excluded; nothing is modified.
 """
 from __future__ import annotations
 
