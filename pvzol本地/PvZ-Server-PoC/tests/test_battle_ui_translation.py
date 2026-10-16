@@ -114,6 +114,17 @@ class BattleUITranslationTests(unittest.TestCase):
         self.assertEqual(blocked, 0)
         self.assertEqual(_read_constant_pools(patched)["strings"][1], "Health")
 
+    def test_endless_failure_stage_suffix_is_translated_in_its_pool(self):
+        prefix = "挑战失败！当前成绩为第".encode("utf-8")
+        suffix = "关".encode("utf-8")
+        abc = bytes([0, 0, 46, 0, 1, 1, 1, 3, len(prefix)]) + prefix + bytes([len(suffix)]) + suffix + bytes([1, 1, 1])
+        patched, changed, hits, blocked = _patch_abc_strings(abc)
+        strings = _read_constant_pools(patched)["strings"]
+        self.assertEqual(strings[1], "Challenge failed! Current result: stage ")
+        self.assertEqual(strings[2], "")
+        self.assertEqual(changed, 2)
+        self.assertGreaterEqual(hits, 2)
+        self.assertEqual(blocked, 0)
     def test_constant_pool_translation_preserves_namespace_and_property_names(self):
         # The '生命' constant is referenced as both a package namespace and a QName.
         abc = (
