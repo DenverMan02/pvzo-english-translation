@@ -11,6 +11,9 @@ on:
       - "clientdb_translate_sync.py"
       - "tests/test_clientdb_translate_sync.py"
       - "clientdb_tool.py"
+      - "pvzol本地/PvZ-Server-PoC/card_market_rules.py"
+      - "pvzol本地/PvZ-Server-PoC/tests/test_card_market_rewards.py"
+      - "pvzol本地/PvZ-Server-PoC/tests/test_card_market_integration.py"
       - "pvzol本地/PvZ-Server-PoC/serve_client.py"
       - "pvzol本地/PvZ-Server-PoC/run_all.py"
       - "pvzol本地/PvZ-Server-PoC/runtime_status.py"
@@ -33,6 +36,9 @@ on:
       - "clientdb_translate_sync.py"
       - "tests/test_clientdb_translate_sync.py"
       - "clientdb_tool.py"
+      - "pvzol本地/PvZ-Server-PoC/card_market_rules.py"
+      - "pvzol本地/PvZ-Server-PoC/tests/test_card_market_rewards.py"
+      - "pvzol本地/PvZ-Server-PoC/tests/test_card_market_integration.py"
       - "pvzol本地/PvZ-Server-PoC/serve_client.py"
       - "pvzol本地/PvZ-Server-PoC/run_all.py"
       - "pvzol本地/PvZ-Server-PoC/runtime_status.py"
@@ -77,6 +83,8 @@ jobs:
           python -m py_compile "pvzol本地/ui_shell.py"
       - name: Run translation regression tests
         run: |
+          python -m unittest discover -s "pvzol本地/PvZ-Server-PoC/tests" -p "test_card_market_rewards.py" -v
+          python -m unittest discover -s "pvzol本地/PvZ-Server-PoC/tests" -p "test_card_market_integration.py" -v
           python -m unittest discover -s "pvzol本地/PvZ-Server-PoC/tests" -p "test_battle_ui_translation.py" -v
           python -m unittest discover -s "tests" -p "test_gitslop.py" -v
           python -m unittest discover -s "tests" -p "test_clientdb_translate_sync.py" -v
