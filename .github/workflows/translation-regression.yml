@@ -8,6 +8,10 @@ on:
       - "pvzol本地/PvZ-Server-PoC/tests/test_battle_ui_translation.py"
       - "gitslop.py"
       - "tests/test_gitslop.py"
+      - "clientdb_translate_sync.py"
+      - "tests/test_clientdb_translate_sync.py"
+      - "clientdb_translate_sync.py"
+      - "tests/test_clientdb_translate_sync.py"
       - "pvzol本地/PvZ-Server-PoC/serve_client.py"
       - "pvzol本地/PvZ-Server-PoC/run_all.py"
       - "pvzol本地/PvZ-Server-PoC/runtime_status.py"
@@ -55,6 +59,8 @@ jobs:
           python -m py_compile "pvzol本地/PvZ-Server-PoC/tests/test_battle_ui_translation.py"
           python -m py_compile "gitslop.py"
           python -m py_compile "tests/test_gitslop.py"
+          python -m py_compile "clientdb_translate_sync.py"
+          python -m py_compile "tests/test_clientdb_translate_sync.py"
           python -m py_compile "pvzol本地/PvZ-Server-PoC/serve_client.py"
           python -m py_compile "pvzol本地/PvZ-Server-PoC/run_all.py"
           python -m py_compile "pvzol本地/PvZ-Server-PoC/runtime_status.py"
@@ -70,3 +76,4 @@ jobs:
         run: |
           python -m unittest discover -s "pvzol本地/PvZ-Server-PoC/tests" -p "test_battle_ui_translation.py" -v
           python -m unittest discover -s "tests" -p "test_gitslop.py" -v
+          python -m unittest discover -s "tests" -p "test_clientdb_translate_sync.py" -v
