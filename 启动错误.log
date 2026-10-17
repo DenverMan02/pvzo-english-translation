@@ -7,8 +7,11 @@ Traceback (most recent call last):
   File "C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\launcher.py", line 1553, in <module>
     main()
     ~~~~^^
-  File "C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\launcher.py", line 1549, in main
-    return run()
-  File "C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\launcher_desktop.py", line 319, in run
-    raise RuntimeError('新启动器界面运行文件缺失，请检查“启动器界面”文件夹。可使用 --legacy-ui 打开旧界面。')
-RuntimeError: 新启动器界面运行文件缺失，请检查“启动器界面”文件夹。可使用 --legacy-ui 打开旧界面。
+  File "C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\launcher.py", line 1548, in main
+    from launcher_desktop import run
+  File "C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\launcher_desktop.py", line 17, in <module>
+    from launcher_service import LauncherService
+  File "C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\launcher_service.py", line 172
+    self.log('!! The game service exited. Cleaning up this session's game processes.')
+                                                                                    ^
+SyntaxError: unterminated string literal (detected at line 172)

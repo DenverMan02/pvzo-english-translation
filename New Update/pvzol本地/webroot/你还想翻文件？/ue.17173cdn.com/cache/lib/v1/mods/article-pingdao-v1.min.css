@@ -1,0 +1,77 @@
+﻿.mod-article { width:100%; font-family:"Arial", "\5b8b\4f53"; font-size:14px; line-height:1.9 }
+.mod-article a { text-decoration:none; color:#006699 }
+.mod-article a:hover { text-decoration:underline }
+.mod-article .article { padding:0 8px; background:#fff }
+.mod-article .article h1 { font-size:24px; font-family:"\5fae\8f6f\96c5\9ed1"; font-weight:bold; color:#333; text-align:left; line-height:40px; padding:5px 0 15px 0; clear:both }
+.mod-article .info { height:30px; line-height:30px; position:relative; overflow:hidden; font-size:12px; color:#006699; border-bottom:1px solid #d6d6d6 }
+.mod-article .info .col-01 { position:absolute; left:10px; height:30px; color:#666 }
+.mod-article .info .col-03 { position:absolute; left:280px; height:30px; color:#666 }
+.mod-article .info .col-02 { position:absolute; right:10px }
+.mod-article .info .col-02 a { color:#006699 }
+.mod-article .info .col-02 a:hover { text-decoration:underline }
+.mod-article .summary { background-color:#dfecf6; min-height:56px; _height:56px; color:#000; margin-top:3px; padding:10px }
+.mod-article .summary .col-02 { padding:5px; float:left; min-height:56px; _height:56px }
+.mod-article .article-con { padding:10px 0; color:#2b2b2b; width:95%; margin:0 auto }
+.mod-article .panel { margin:10px auto; padding:10px 10px 15px 10px; }
+.mod-article .panel .row-1 { margin:0 auto 10px auto; border-bottom: 3px solid #96C1E1; padding:0 0 10px 0; overflow:hidden; zoom:1 }
+.mod-article .panel .functions { margin:0 0 0 50px; padding:0 0 0 20px; font-size:12px; color:#05a; line-height:22px }
+.mod-article .mood-list { padding:0 0 15px 5px }
+.mod-article .mood-list h2 { font-size:14px; color:#2b2b2b; font-weight:bold; padding:3px 0 5px 5px }
+.mod-article .mood-list h2 em { font-weight:bold; color:#05a; padding:0 2px }
+.mod-article .mood-list li { height:20px; font-size:14px; padding:1px 3px }
+.mod-article .mood-list li .index { margin-right:6px }
+.mod-article .mood-list li .votes { font-size:12px; margin-left:6px; color:#666 }
+.mod-article .mood-list li .date { font-size:12px; margin-left:6px; color:#909090 }
+.mod-article .mood-list li .votes em { color:red }
+.mod-article .related { border:1px solid #e2e2e2; margin-bottom:10px }
+.mod-article .related h2 { height:36px; line-height:36px; font-size:14px; color:#2b2b2b; font-weight:bold; margin:0; padding:0; border-bottom:1px solid #e2e2e2; background:#edf5fc; text-indent:10px }
+.mod-article .related h2 em { font-weight:bold; color:#05a; padding:0 2px }
+.mod-article .related ul { margin:7px auto }
+.mod-article .related li { height:20px; padding:2px 0 2px 18px; margin:0; background:url(../../../../images/mod/2011/list-bg.gif) 9px center no-repeat }
+.mod-article .related li, .mod-article .related li a { line-height:20px; font-size:14px; text-decoration:none }
+.mod-article .related li a:hover { text-decoration:underline }
+.mod-article .related li .date { font-size:12px; color:#909090; line-height:20px; padding-left:6px }
+.mod-article .comments { border:1px solid #e2e2e2; padding:10px; margin:10px 0 10px 0 }
+.mod-page-switcher-tip { text-align:center; color:#5c5c5c; font-size:12px; font-family:"\5b8b\4f53" }
+.mod-page-switcher { margin:10px 0 0 0; padding:5px 0 12px 0; font-size:14px; font-family:"Arial", "\5b8b\4f53"; line-height:14px; text-align:center; color:#5c5c5c }
+.mod-page-switcher a, .mod-page-switcher .page-current { padding:3px 6px; border:1px solid #bbb; text-decoration:none; margin:0 2px }
+.mod-page-switcher a:link, .mod-page-switcher a:visited { color:#5c5c5c }
+.mod-page-switcher a:hover, .mod-page-switcher a:active, .mod-page-switcher .page-current { color:#fff; background-color:#005499; border:1px solid #999 }
+.mod-page-allinone { font-size:12px; height:24px; line-height:24px; text-align:center }
+.mod-page-nav { font-size:12px; line-height:24px; margin:10px 0 0 0 }
+.mod-page-nav .page-title { font-size:14px; font-weight:bold; height:30px; line-height:30px; border-bottom:1px dotted #333; padding-left:10px }
+.mod-page-nav .page-current { color:red; text-overflow: ellipsis; white-space: nowrap; }
+.mod-page-nav .page-col { /*float:left; display:inline; margin:15px 0 15px 15px*/ }
+.mod-page-nav .page-col li { border-bottom: 1px dotted #333; width:308px; float: left; display: inline; height: 30px; line-height:30px; overflow: hidden; text-overflow: ellipsis; padding-left:5px }
+/*.mod-page-nav .page-col2 { width:45% }*/
+.mod-article .article-con p { margin:0; padding:0 0 15px }
+.mod-article .article-con .article-img { display:block; }
+.mod-article .article-con strong { font-weight:bold }
+.mod-article .row-1 { border-bottom:2px solid #96c1e1 }
+.fenxiang { clear: both; margin: auto; padding: 10px 0; border-bottom: 3px solid #96c1e1; margin-bottom: 10px; }
+
+.fenxiang-r { color: #0055AA; float: right; font-size: 12px;text-decoration: none; width: 100px; }
+#share_container{ float:left; height:23px; line-height:23px}
+.fenxiang-l { float: left; width: 510px; }
+.tblog_fx { vertical-align: middle; }
+.icon_sohu, .icon_sina, .icon_tx, .icon_kxw, .icon_rrw, .icon_bzd, .icon_bai { background: url("../../../../2011/news/fenxiang1.gif") no-repeat scroll 2px 0 transparent; display: inline-block; height: 20px; margin-right: 3px; vertical-align: middle; width: 20px; }
+.icon_yijiang { background: url("../../../../2011/news/fenxiang1.gif") no-repeat scroll 2px 0 transparent; display: inline-block; height: 21px; margin-right: 3px; vertical-align: middle; width: 95px; }
+.icon_sina { background-position: -23px 1px; }
+.icon_tx { background-position: -48px 1px; }
+.icon_kxw { background-position: -73px 1px; }
+.icon_rrw { background-position: -97px 1px; }
+.icon_bzd { background-position: -119px 1px; }
+.icon_bai { background-position: -141px 1px; }
+.icon_yijiang { background-position: -166px 1px; }
+.fenxiang-l .tblog_fx { display: inline; float: left; }
+.fenxiang-l a { display: inline; float: left; }
+
+.fabiao { color:#aaa; text-align:center; margin:10px 0;}
+
+
+.main, .side {margin-bottom:0;padding-bottom:0}
+#content{ margin-top:20px;}
+.crumbs-bar { height: 30px; margin:0px 0; overflow: hidden;background:#f1f1f1 }
+.crumbs-box { float: left; line-height: 30px; padding: 0 0 0 10px; font-size:12px; color:#333333}
+.crumbs-box a{color:#333333}
+

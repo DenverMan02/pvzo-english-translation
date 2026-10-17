@@ -1,207 +1,207 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<files>
-	<file name="Game_n.swf" size="2331888" ver="17c4cce34fab45fbb72ba75c4ea15053" />
+	<file name="Game_n.swf" size="2332862" ver="49a328a627d6d679c016592b5c14f0b4" />
 
-<file name="Game_p.swf" size="2403699" ver="ff6c4bac65e9900e16a61c1c932690b4" />
+<file name="Game_p.swf" size="2405019" ver="d04d9bbaa754911f380273b906a4af2a" />
 <file name="LoggingSetup.swf" size="71869" ver="342ee9c84b5d4a96539dd275af1c74db" />
 
-<file name="ModuleAct14days.swf" size="6583" ver="1f8693dfa7123ffd3ce549f2ee73e27c" />
+<file name="ModuleAct14days.swf" size="6577" ver="c5b15def26365359f018cb546cc60575" />
 
-<file name="ModuleAct3years.swf" size="113254" ver="250eddacb387b41c72d2dc59d60186d4" />
+<file name="ModuleAct3years.swf" size="113152" ver="db34bbf2959265429671b3833f99cd8e" />
 
-<file name="ModuleActDf51.swf" size="6328" ver="7a2530c73c4d433f47f293d522040bc1" />
+<file name="ModuleActDf51.swf" size="6325" ver="a08eafb9bf6137dc74a46c9aec9e7ae4" />
 
-<file name="ModuleActFlipcard.swf" size="12208" ver="030911958509201552bb5f5bc6c694bc" />
+<file name="ModuleActFlipcard.swf" size="12200" ver="408e56e14c3f73d60c307fd637c2b75f" />
 
-<file name="ModuleActFund.swf" size="15522" ver="98c8d3e990b087ff39c0707c43a9dcaf" />
+<file name="ModuleActFund.swf" size="15527" ver="be36c50990d04dd7227199e6a04eb567" />
 
-<file name="ModuleActHitJar.swf" size="117877" ver="d48309731f899a1dce37c85036d1b02c" />
+<file name="ModuleActHitJar.swf" size="117881" ver="c517b293eadf34fbebf8082263392237" />
 
-<file name="ModuleActNightclub.swf" size="5211" ver="caae2602442df78dbc36bc36522d8fef" />
+<file name="ModuleActNightclub.swf" size="5202" ver="cc85287ad49a1baa8bcd108420493ab0" />
 
-<file name="ModuleActPennyShop.swf" size="5583" ver="6903fb59abac4c33d3223e354040f47e" />
+<file name="ModuleActPennyShop.swf" size="5583" ver="0718d7ad37dc2298a7811f7ff64cf29d" />
 
-<file name="ModuleActPinball.swf" size="12397" ver="6479c961f0616e0416cc527df2205f61" />
+<file name="ModuleActPinball.swf" size="12395" ver="ebb5c227bae219f08fc3d1555a5728e5" />
 
-<file name="ModuleActPlantCarnival.swf" size="9378" ver="364edbba53b31abe7807817791e30dbc" />
+<file name="ModuleActPlantCarnival.swf" size="9393" ver="57ccc1dfa4162e74b065fcfdf797dfdf" />
 
-<file name="ModuleActQT.swf" size="7039" ver="7b2df7c5064ae253ae328f34585cbe05" />
+<file name="ModuleActQT.swf" size="7035" ver="f86df9834c1addeee9ac7800c3d8405a" />
 
-<file name="ModuleActRechargeRebate.swf" size="6775" ver="6b74b52b252c5b601d2b12b050b9c25c" />
+<file name="ModuleActRechargeRebate.swf" size="6772" ver="fac2dd7e7f70f8c6b5073a3de5384201" />
 
-<file name="ModuleActRed.swf" size="10637" ver="da599b96fa1976928ffe7805f3548299" />
+<file name="ModuleActRed.swf" size="10639" ver="f5293d7c0788f0f5b1f80c1d15649aca" />
 
-<file name="ModuleActWishing.swf" size="13020" ver="c7613f7787498e10ca04313a2e4ef240" />
+<file name="ModuleActWishing.swf" size="13020" ver="805fb61a06e9d6cb6063c40b94cb78ee" />
 
-<file name="ModuleActXY.swf" size="5525" ver="8a5188ed0c729f436ea107d3d895e0e1" />
+<file name="ModuleActXY.swf" size="5517" ver="262b1e62e659d5ce668ce3c1b6f28bc7" />
 
 <file name="ModuleActivityArenaDoubleBonus.swf" size="3871" ver="be35f0d4aace09ba15d2f6c1d660c795" />
 
-<file name="ModuleActivityChallengeLimitTime.swf" size="8611" ver="3c41440503113b9ac7c6a4d6b1a5dff0" />
+<file name="ModuleActivityChallengeLimitTime.swf" size="8598" ver="f58fe114e5494a7ecf229717a92b797a" />
 
-<file name="ModuleActivityForTimes.swf" size="8307" ver="0d2fbfac7b551ccc75ddadbf040e5c25" />
+<file name="ModuleActivityForTimes.swf" size="8305" ver="ab4a9c48d01404c0402f6579f61cec3e" />
 
-<file name="ModuleActqqgame.swf" size="10047" ver="45d6351245309c07b064089410a527a1" />
+<file name="ModuleActqqgame.swf" size="10040" ver="957e68ce5fedca7e94c658bd72291171" />
 
-<file name="ModuleArena.swf" size="14489" ver="21769b7ea9b4ba3fc358f072ce782239" />
+<file name="ModuleArena.swf" size="14496" ver="f4e6d815a7f5b33458f7e944b8a089d4" />
 
 <file name="ModuleArenaEntrance.swf" size="6484" ver="d7c078677db7fea561b2a9c5a5485eea" />
 
 <file name="ModuleAvatarConfig.swf" size="8635" ver="ceede5b498631ea2c8f56594a9bb8b49" />
 
-<file name="ModuleAwake.swf" size="29673" ver="646e3e42f496c2ea5c97b1c809d21a0c" />
+<file name="ModuleAwake.swf" size="29661" ver="77aad7f73b0a9010fefdb882e1ccba2e" />
 
-<file name="ModuleBag.swf" size="26934" ver="7fa3305508527661a70579e4999903f4" />
+<file name="ModuleBag.swf" size="26910" ver="0c7bec5751411f0f43a8c680da4de948" />
 
 <file name="ModuleBalance.swf" size="2493" ver="a8df1502c63ce335813a0aa76001eee1" />
 
 <file name="ModuleBank.swf" size="5281" ver="de2ef6797f151516af7fc789a941fb75" />
 
-<file name="ModuleBattle.swf" size="38838" ver="132d436cc48676c4b75a49f317b38fc0" />
+<file name="ModuleBattle.swf" size="38737" ver="6c64a3b5c18aae9d39877fc5ed1847b1" />
 
 <file name="ModuleBattleCardMarket.swf" size="15288" ver="21b9ede042fd511eae74dc5b9cbb5db2" />
 
-<file name="ModuleBattleLineup.swf" size="18762" ver="b323b34fcc7a7c99483373f9249ca8d7" />
+<file name="ModuleBattleLineup.swf" size="18756" ver="13adc44a9c41d476767b5d2dc7bd3013" />
 
 <file name="ModuleBetaReward.swf" size="4956" ver="b146d372b1018d6216833a25846d700a" />
 
 <file name="ModuleBlueDiamond.swf" size="6939" ver="af6300c7d64509bc27dec03be5ef6fef" />
 
-<file name="ModuleBrain.swf" size="18966" ver="4a79a0c1080ec5809bca7fe11f4a0000" />
+<file name="ModuleBrain.swf" size="18962" ver="8164d19fbc444528f05710d55ca146f3" />
 
 <file name="ModuleBuffActivity.swf" size="4570" ver="a77c10d828faadca4cea16597bbb0463" />
 
-<file name="ModuleBuy.swf" size="8751" ver="9347f947f6768beface2f45b07030cb7" />
+<file name="ModuleBuy.swf" size="8746" ver="cfb337469831668ac33604b02089f6a7" />
 
-<file name="ModuleCard.swf" size="117450" ver="f38421f4e0c7b1b2727597c20b8a1b32" />
+<file name="ModuleCard.swf" size="117196" ver="e50a58dc8bc2201e1eb03f490305af50" />
 
 <file name="ModuleCardBar.swf" size="11586" ver="e0d5765f2acf2e3fd6755e76fb1030f2" />
 
-<file name="ModuleCardDNA.swf" size="42462" ver="74064cf1489828e05b43e288fb76889f" />
+<file name="ModuleCardDNA.swf" size="42516" ver="fe490fbbfa4ec572f7911169fb4dc719" />
 
-<file name="ModuleCardFruit.swf" size="15229" ver="2538eca684482fb62b04e60e24092713" />
+<file name="ModuleCardFruit.swf" size="15237" ver="8dd046363caf587240a23201b9fe38ac" />
 
-<file name="ModuleCastle.swf" size="16561" ver="53ea0b7b8d44982687248509df8759f3" />
+<file name="ModuleCastle.swf" size="16564" ver="1baf5c1f4b9bc2e89944b97eb075cf3a" />
 
-<file name="ModuleChat.swf" size="107066" ver="a4c202dcdf4bfd9bbbf32575e7fa35eb" />
+<file name="ModuleChat.swf" size="106951" ver="6aec3de2be38581e30f68f1c33a03c1d" />
 
-<file name="ModuleCheatCheck.swf" size="377097" ver="b4b7c615cabc4fec617408a4cb8908fd" />
+<file name="ModuleCheatCheck.swf" size="377088" ver="91c43245d68f1d5e6eff65852c377d25" />
 
-<file name="ModuleChildrenDay.swf" size="11684" ver="9a280b54cf77923947214c2ab3df0b02" />
+<file name="ModuleChildrenDay.swf" size="11678" ver="0d8567316d9c669256b3ff50ffe4f572" />
 
-<file name="ModuleCity.swf" size="4016452" ver="6ae7f58df69b0219d32cace8e9ebce1a" />
+<file name="ModuleCity.swf" size="4002521" ver="c0cc53ce00c4690916304314dc43ad13" />
 
 <file name="ModuleClientDBRes.swf" size="664448" ver="b675eb8817a07cbc08631f36f04c3e67" />
 
-<file name="ModuleCollectWord.swf" size="10649" ver="90d45572b1e1e3bf31c3b9c1f43ebfbe" />
+<file name="ModuleCollectWord.swf" size="10637" ver="3f6f5b8728d8bb80476c7101456d877e" />
 
-<file name="ModuleCommEmbattle.swf" size="27816" ver="3942a0cc76fad4b002028b2ba7d32ba4" />
+<file name="ModuleCommEmbattle.swf" size="27818" ver="cef732c8aef8a2d231d3f9585c1c5a69" />
 
 <file name="ModuleCommIntr.swf" size="2920" ver="f27dd09b0948af98add56e4109438e1c" />
 
-<file name="ModuleDaily3366.swf" size="5346" ver="3937aabb5da9906cabb4c2b3912067d1" />
+<file name="ModuleDaily3366.swf" size="5347" ver="f17c225701937f3928662822512af9e7" />
 
-<file name="ModuleDailyActivity.swf" size="14398" ver="59bc8284b7fa6018630d00a8f2cde66e" />
+<file name="ModuleDailyActivity.swf" size="14397" ver="b8ea1b3d29405a7c7b8d488070f29bd7" />
 
-<file name="ModuleDailyTD.swf" size="20443" ver="7df1eee9f4c6053edf6ff10865c7b4e7" />
+<file name="ModuleDailyTD.swf" size="20448" ver="b85061f740c2b3fbbd7b11f76170b14d" />
 
 <file name="ModuleDailyVow.swf" size="9485" ver="7d8a2fbdf39e7e1ce9a95ab2ab6efdd1" />
 
-<file name="ModuleDailyWelfare.swf" size="3397" ver="8792fff8513323df743bb252124e1bf8" />
+<file name="ModuleDailyWelfare.swf" size="3389" ver="b80bf1f460a9d5147d2e312e79a216a4" />
 
-<file name="ModuleDebris.swf" size="12885" ver="e75f10988493897d69f9bb1c561894ed" />
+<file name="ModuleDebris.swf" size="12878" ver="ffc024824a21d536fd3fe2979ccfcab3" />
 
-<file name="ModuleDodgeAndCat.swf" size="12022" ver="84f4869a8856cbe38429e1a012fc6299" />
+<file name="ModuleDodgeAndCat.swf" size="12008" ver="8e7dcb7028705d619fecdde5c5603284" />
 
-<file name="ModuleDownloadShortcut.swf" size="3653" ver="3fb56f97ad756d4893a3d7f0a4e7c490" />
+<file name="ModuleDownloadShortcut.swf" size="3643" ver="9765da11feabdaf89a473015bfd8ad7b" />
 
-<file name="ModuleDragonBoat.swf" size="10009" ver="dd3fbea10b7db71a08369697546babb4" />
+<file name="ModuleDragonBoat.swf" size="10004" ver="94d954ed0169c66cad06e8a69cca0550" />
 
-<file name="ModuleDummy.swf" size="71010" ver="be5c019db8d1f00c3113e64af7787d8e" />
+<file name="ModuleDummy.swf" size="71032" ver="f6c036757d7dc22b51fc29278368151c" />
 
 <file name="ModuleEmbattle.swf" size="12318" ver="b6d756e73b063e4402dafc6cab66f75d" />
 
-<file name="ModuleEndlessFuben.swf" size="27934" ver="b553d6f1d4a81300389ff9e3103221d6" />
+<file name="ModuleEndlessFuben.swf" size="28041" ver="752cf73cc53dfa553fc170a33b9c26ed" />
 
-<file name="ModuleEndlessTD.swf" size="22998" ver="2f6256d5c2ceadf0442a8c6fe1de0578" />
+<file name="ModuleEndlessTD.swf" size="23002" ver="3b0999f24c8a44ac244da8bc55165da0" />
 
 <file name="ModuleEntryIcon.swf" size="13561" ver="cea4251d4d4d42928537cb66d5b17bc5" />
 
-<file name="ModuleEveryDayBuy.swf" size="11232" ver="43821583675462d10104cd3d4b12b29f" />
+<file name="ModuleEveryDayBuy.swf" size="11231" ver="280811fbec3dc5c304c47f8328cde209" />
 
-<file name="ModuleExchange.swf" size="8744" ver="ea57e26cc0d09a3f09bae464ec9f54ea" />
+<file name="ModuleExchange.swf" size="8740" ver="3da022f98685a2be0cd28f438eeba66c" />
 
-<file name="ModuleExped.swf" size="8381" ver="4846e7e7c82d92d9828cf389b901d120" />
+<file name="ModuleExped.swf" size="8368" ver="504f941b1994d29e705061e586ef6262" />
 
-<file name="ModuleExpedition.swf" size="166833" ver="e0e1637110e472169a7faeb2548ebd05" />
+<file name="ModuleExpedition.swf" size="166831" ver="960a317ce6acdd8c944e269b630a3ee9" />
 
 <file name="ModuleExtractCard.swf" size="1993" ver="22ef24210b428c023688be5dd1ba64be" />
 
-<file name="ModuleFirstRecharge.swf" size="12700" ver="6e6cf41a44284ac36ddfbda4f9986230" />
+<file name="ModuleFirstRecharge.swf" size="12680" ver="2fc815a8f41d91a458a3b68171709bd6" />
 
 <file name="ModuleFont.swf" size="872215" ver="3643d416703e6f2ef5af884db9645b19" />
 
-<file name="ModuleFriend.swf" size="22233" ver="d9537b842cb86a0512b574a0255bfacb" />
+<file name="ModuleFriend.swf" size="22243" ver="322c112011cf17f6cf832e9b9f96bba7" />
 
-<file name="ModuleFuben.swf" size="28322" ver="ac676a97251a87401260b11a29bbdabf" />
+<file name="ModuleFuben.swf" size="28299" ver="c35ffbcf486d0223cb909e79a2b395d7" />
 
-<file name="ModuleFuzion.swf" size="22249" ver="029b1d461291bb21ce00aeb7132008c3" />
+<file name="ModuleFuzion.swf" size="22260" ver="2ab083f43be7bbbe76ed9bfa72e3a92e" />
 
-<file name="ModuleGarden.swf" size="37192" ver="18eb32f44a0e69c46b03cb8136e06c81" />
+<file name="ModuleGarden.swf" size="37178" ver="8296fec08cbbd0070e94fa4ade50b751" />
 
-<file name="ModuleGoldExchange.swf" size="6090" ver="3e1417d71f408d3ed2eeea116e099158" />
+<file name="ModuleGoldExchange.swf" size="6084" ver="52125b817594d4187cbdc09824964f41" />
 
-<file name="ModuleGroupBuying.swf" size="8721" ver="892b8f36f73fbe9f15b074ff787bf87a" />
+<file name="ModuleGroupBuying.swf" size="8722" ver="d5d33235c5ce06bd2466fc0887c8b9e5" />
 
 <file name="ModuleGuide.swf" size="23715" ver="6c1fea95614b0ad8441b123c46fd9bf6" />
 
 <file name="ModuleHalloween.swf" size="14794" ver="000489f126a084a3fb00aed5b297776e" />
 
-<file name="ModuleHeFuActivity.swf" size="20507" ver="f5631abda204b39691940fdf72456e84" />
+<file name="ModuleHeFuActivity.swf" size="20517" ver="0350f047fe483ffa7b7b155f2d18e2ea" />
 
-<file name="ModuleHealthDegree.swf" size="5877" ver="6d2fce28078580efaa532c20ad36bfaa" />
+<file name="ModuleHealthDegree.swf" size="5880" ver="6fbee0032e73b6116cda5109f6c3ca51" />
 
-<file name="ModuleHole.swf" size="31048" ver="498e993b5f2202d8027420849aecd2e3" />
+<file name="ModuleHole.swf" size="31078" ver="d70b3b8a0a99cd5efb6ee0d5d0c48a39" />
 
-<file name="ModuleIWanPrivilege.swf" size="6902" ver="4a2654dabf37508c694394c220d96124" />
+<file name="ModuleIWanPrivilege.swf" size="6896" ver="676377f694fb3660cfc726f7b5241dd1" />
 
-<file name="ModuleLS.swf" size="56883" ver="365cae6ab92accb57c88e53f8ee81f96" />
+<file name="ModuleLS.swf" size="56917" ver="e64076376a61fddeda4764fe6444505d" />
 
-<file name="ModuleLab.swf" size="13124" ver="0a557d8de2ff165eb3d6a51369804608" />
+<file name="ModuleLab.swf" size="13125" ver="d2a47cdf4a6cf5c55d604c8a261e2867" />
 
-<file name="ModuleLevelup.swf" size="5989" ver="fd0e62e2d5eefb6b124d6a6e468dfbb1" />
+<file name="ModuleLevelup.swf" size="5985" ver="5e0887a5deb034fa9abe88459f7b06c3" />
 
-<file name="ModuleLoginActivity.swf" size="5457" ver="4cf0e6aac58bd53faeba9f087c0d8e5a" />
+<file name="ModuleLoginActivity.swf" size="5452" ver="0b547897883079466ce41773c933570c" />
 
 <file name="ModuleLoginReward.swf" size="5173" ver="36fccfd87251b87bcc478eaeae235a55" />
 
-<file name="ModuleLuckyStar.swf" size="6801" ver="f4c62b83a11f78ce43e00d68c92d6889" />
+<file name="ModuleLuckyStar.swf" size="6804" ver="5042290e8ac71f3ff00908c71e91562c" />
 
-<file name="ModuleMail.swf" size="18363" ver="edc4cd1adaa07e86e1f0db160e4d6a5b" />
+<file name="ModuleMail.swf" size="18374" ver="42b9f5d651404fe5e1ca1d4224ea51f2" />
 
 <file name="ModuleMap.swf" size="47433" ver="0a3b3b897717fd3b1ff829f1111e1994" />
 
-<file name="ModuleMarket.swf" size="12553" ver="36d87dcfd28b5f1630b999a3a6755662" />
+<file name="ModuleMarket.swf" size="12552" ver="22378ca8971453cda0c525913649973c" />
 
 <file name="ModuleMine.swf" size="11328" ver="c6429dc757b1087659b5a1f6afa797dc" />
 
-<file name="ModuleMiniClient.swf" size="6859" ver="f0f724571ddda770bc9eac07bc6975b6" />
+<file name="ModuleMiniClient.swf" size="6856" ver="0718452b59954010417604aed69617fe" />
 
-<file name="ModuleNotice.swf" size="8812" ver="dc3bf3ae7d1226d4a6447bbfef3761aa" />
+<file name="ModuleNotice.swf" size="8817" ver="cfe4dac8040c244e2310441f97d48472" />
 
-<file name="ModuleNutrition.swf" size="36373" ver="63fef2fd1bab6f5ad08caea8fe877749" />
+<file name="ModuleNutrition.swf" size="36375" ver="d9ac86ae781aa2aa321f60de151dec38" />
 
-<file name="ModuleNutritionExchange.swf" size="8011" ver="b161ccb3ac21ffb31ec5ac466726f0f3" />
+<file name="ModuleNutritionExchange.swf" size="8013" ver="d5d82ba60834a261f3b3385d1d6d4199" />
 
-<file name="ModuleOfflineReward.swf" size="11429" ver="863190f12738f85541846534d446fe60" />
+<file name="ModuleOfflineReward.swf" size="11433" ver="ab1e9130fcde6208e2c2ce10da19fd84" />
 
-<file name="ModuleOnlineReward.swf" size="12624" ver="d52c8614a6e8d109e24ed3740280a998" />
+<file name="ModuleOnlineReward.swf" size="12634" ver="8185ec349ec4d269a970ede4fd2cad6b" />
 
-<file name="ModulePcManager.swf" size="5101" ver="3a491d967803f0e27ec3724f2238da48" />
+<file name="ModulePcManager.swf" size="5093" ver="59aab2cc24f85d03d6df6a28bc9abd19" />
 
-<file name="ModulePlantArmor.swf" size="38263" ver="efca481a60cb8776d0463c5fbfc4483c" />
+<file name="ModulePlantArmor.swf" size="38279" ver="c837c6f0c315338b283577063cf63c98" />
 
-<file name="ModulePlantEvolution.swf" size="13257" ver="8acb21658744ebc688f1c22bd0ff848e" />
+<file name="ModulePlantEvolution.swf" size="13273" ver="0704d6ce309ca0c142039303f532c60f" />
 
 <file name="ModulePlantExplore.swf" size="11016" ver="49d0cddfcdecf4d3a65934f570a99b41" />
 
@@ -209,93 +209,93 @@
 
 <file name="ModulePreview.swf" size="10882" ver="e2e1d558dc8e1a91d421a666d79c7e74" />
 
-<file name="ModulePrivilege.swf" size="6547" ver="8ba6f96d73b66737a9dffb8b20400969" />
+<file name="ModulePrivilege.swf" size="6548" ver="6c4d37b14bb4a440a70d6be31deb8953" />
 
-<file name="ModulePrivilegeBar.swf" size="2882" ver="c8aacc7dbc926b095e564b59ee7ce899" />
+<file name="ModulePrivilegeBar.swf" size="2868" ver="6f156ae8889aefa4cb3413d6d0e2d0ba" />
 
-<file name="ModuleQQBrower.swf" size="5212" ver="6a84dad4fc1eaf5caf58dd620fc868e1" />
+<file name="ModuleQQBrower.swf" size="5214" ver="2ce28f7c7638d27241eaa2b10296bbe2" />
 
-<file name="ModuleQuest.swf" size="18349" ver="8cf13ef918706d8e94627576116af94c" />
+<file name="ModuleQuest.swf" size="18327" ver="3deb0a64dccbc6dc28ba05e35dd93048" />
 
-<file name="ModuleRank.swf" size="12709" ver="f7e7c24a38738fc72c54b01c26c5d7c8" />
+<file name="ModuleRank.swf" size="12699" ver="aa8d17575611d46c04f5415c2d3217ae" />
 
-<file name="ModuleRankArena.swf" size="15776" ver="8f55d5063a8ad07783ed31d34a5a40eb" />
+<file name="ModuleRankArena.swf" size="15846" ver="e6a01ca306274af8d5c85363776063cb" />
 
-<file name="ModuleRechargeRebate.swf" size="5175" ver="458d4d9b0be1fc723b16c07f6f0d1b90" />
+<file name="ModuleRechargeRebate.swf" size="5168" ver="37a2e1eb1929c99208363b942f29ea02" />
 
-<file name="ModuleRecruitCard.swf" size="24147" ver="63b6b2be74793889072a9ad5a0382e46" />
+<file name="ModuleRecruitCard.swf" size="24122" ver="631a93f177d634ccb5aaab515f6ae84c" />
 
-<file name="ModuleRename.swf" size="10651" ver="5d5ccae4d5ce9f542352302740cb5c84" />
+<file name="ModuleRename.swf" size="10651" ver="8d190f06e7dcc29ff71a49ede0139593" />
 
-<file name="ModuleRoleInfo.swf" size="27499" ver="6c20d310f9de72f424f071fe0c7d3add" />
+<file name="ModuleRoleInfo.swf" size="27446" ver="e45afd4ea2667739878dcdc42363a1f2" />
 
 <file name="ModuleRookieCeremony.swf" size="7638" ver="f3ddf586e5ac29f7c7b5642d9423b190" />
 
-<file name="ModuleScratch.swf" size="9392" ver="ad4bc0e82c166cdb248ece4470c0e726" />
+<file name="ModuleScratch.swf" size="9393" ver="b64c787f76ca63cfce278df837e1040f" />
 
-<file name="ModuleSecKill.swf" size="9070" ver="df9fdf620a44de66a0931a5c5d30d88d" />
+<file name="ModuleSecKill.swf" size="9067" ver="62073aeaf8adf4e0e12c13278395f74c" />
 
-<file name="ModuleSecondaryPassword.swf" size="15158" ver="1647ae7c2a1220dfe3170a6164c92fb8" />
+<file name="ModuleSecondaryPassword.swf" size="15159" ver="2f8ddad6d4d5369ad2aa5b070e7844d3" />
 
-<file name="ModuleServerActivity.swf" size="21072" ver="5f728da43c2b870bdbc771a440148889" />
+<file name="ModuleServerActivity.swf" size="21060" ver="56f4a0dd97fd4706498fb5d571b6bec8" />
 
-<file name="ModuleShelling.swf" size="12341" ver="b52ae3cb4f17e69cf532bb76d90700db" />
+<file name="ModuleShelling.swf" size="12341" ver="3cc601dc8f02eb15db81fa887e05a706" />
 
-<file name="ModuleShop.swf" size="17030" ver="05a5c6df046a6bd06b13c81901ed56e3" />
+<file name="ModuleShop.swf" size="17023" ver="2bcdf2f4b76ac6b24ddd55d2701a4f45" />
 
-<file name="ModuleSignIn.swf" size="9979" ver="c959b576cc6fad6a6ee8a6eda9e65c69" />
+<file name="ModuleSignIn.swf" size="9992" ver="fa33ccfeb27b1362bec2a1637540e98c" />
 
-<file name="ModuleSinglesDay.swf" size="7733" ver="87e3879e591d4603fac4055df9be697d" />
+<file name="ModuleSinglesDay.swf" size="7726" ver="8c19df2c53d57f6b989034d988e4d64a" />
 
-<file name="ModuleSlot.swf" size="12624" ver="3257c2bbee0251dbf6577724512044df" />
+<file name="ModuleSlot.swf" size="12625" ver="7de62f221542d3bc1257c6e8e3893147" />
 
 <file name="ModuleSound.swf" size="3720" ver="53f2087668722600f61190a7ef42fb88" />
 
-<file name="ModuleSpring.swf" size="7144" ver="89864db25dbb4f3f695c68cf81113be3" />
+<file name="ModuleSpring.swf" size="7132" ver="cd682e3480822a317e457d18d85f6617" />
 
 <file name="ModuleStrengthen.swf" size="15427" ver="57d4386c08a75fc4c8a868c930a85520" />
 
-<file name="ModuleSuperArena.swf" size="22864" ver="05de568807c8ff126a545ec6a4a0fc68" />
+<file name="ModuleSuperArena.swf" size="22879" ver="ed0f603a59e89483cf88cb24eb95be83" />
 
-<file name="ModuleTD.swf" size="498097" ver="bffbe7df4fb86cd3e48d8dc8393c528a" />
+<file name="ModuleTD.swf" size="498094" ver="50cf8cc073e7680f4c84a2ba04e3cf58" />
 
-<file name="ModuleTD_p.swf" size="504221" ver="331f0f8f1742e06c3c4824b3c6b47921" />
+<file name="ModuleTD_p.swf" size="502400" ver="fed0d9cce285eb73d50195d4ab0ef7d6" />
 
-<file name="ModuleTGP.swf" size="11769" ver="b84535f3b19a441310f8b29be31ad70b" />
+<file name="ModuleTGP.swf" size="11762" ver="cb8967a7e77b1209f3694674f24811be" />
 
-<file name="ModuleTemple.swf" size="19600" ver="fde25cb0751bbf1c6dd262058439b573" />
+<file name="ModuleTemple.swf" size="19594" ver="2ed0fbda8ec24762bd6134790df7ecf6" />
 
-<file name="ModuleThanksgiving.swf" size="9426" ver="09b41cd0675acee65e4c10f6093f37d9" />
+<file name="ModuleThanksgiving.swf" size="9414" ver="820c3d5b5cecc5afb380f7b1c5d446fd" />
 
-<file name="ModuleTopKing.swf" size="35065" ver="71923a41c7f953170b7e8e496a477338" />
+<file name="ModuleTopKing.swf" size="35064" ver="0ff6900f7a12345818d90130333fd22c" />
 
-<file name="ModuleTreasure.swf" size="18287" ver="42f38f0003e338da0a025378502b7423" />
+<file name="ModuleTreasure.swf" size="18272" ver="dfbd652afe66c806118563edcfdb3188" />
 
 <file name="ModuleTrialRoad.swf" size="16247" ver="d4103d38698730b27c82f7a8eaa143a8" />
 
-<file name="ModuleUnion.swf" size="62858" ver="36d83f770b8e5f247428e3064482f787" />
+<file name="ModuleUnion.swf" size="62649" ver="6a0e6b04636ba286cfad1f94ee21a918" />
 
-<file name="ModuleUnionCompetition.swf" size="52540" ver="8d321b11c853a553ac526b5520364a1d" />
+<file name="ModuleUnionCompetition.swf" size="52554" ver="b48dad63b86a2d6372896d658b71b69f" />
 
-<file name="ModuleUnionFuben.swf" size="26318" ver="079ff9888c2907947634c83fc8ed22ac" />
+<file name="ModuleUnionFuben.swf" size="26309" ver="56e4d677f2786bf9029cbd31e74fae26" />
 
-<file name="ModuleUrlJump.swf" size="3187" ver="d32c7f7a81b8cfb54b28bf4a33b67375" />
+<file name="ModuleUrlJump.swf" size="3180" ver="f191bd7ffea1f8920ed21345c8369c1d" />
 
 <file name="ModuleVideoActivity.swf" size="6874" ver="1779b32c3bdc74a1bfd45286a5b678f0" />
 
-<file name="ModuleVip.swf" size="11996" ver="58d27fe9547762655f9278a3779ff6ee" />
+<file name="ModuleVip.swf" size="11995" ver="2b8235f6fdfa47992e7a4431a9ccb8af" />
 
-<file name="ModuleWelfareHall.swf" size="42314" ver="a087401d4b3414aa911050e89685a336" />
+<file name="ModuleWelfareHall.swf" size="42346" ver="7cd73107276b1abc7070fe3adcbbc919" />
 
-<file name="ModuleWorldBoss.swf" size="21296" ver="1b4a45406260cc406581dbfcf3d608ea" />
+<file name="ModuleWorldBoss.swf" size="21304" ver="ed30e516399ee2bfebf1016139fca2b3" />
 
-<file name="ModuleWorldTree.swf" size="12321" ver="5806f46733ce2ecf76d3427f997de070" />
+<file name="ModuleWorldTree.swf" size="12314" ver="95f5575545e4bfa0ccdf977550e50f7b" />
 
 <file name="ModuleYellowDiamond.swf" size="7184" ver="f8eacc0ee7e5d034ec3b3a8a2874dc5b" />
 
 <file name="ModuleYetiTD.swf" size="11413" ver="b0419270f75c46231e33aca87863f06f" />
 
-<file name="ModuleZombieIsland.swf" size="25101" ver="eb420c0b5be89be35651467e1783be71" />
+<file name="ModuleZombieIsland.swf" size="25108" ver="be5aba45face29993eb4adb81385f517" />
 
 <file name="Msgcheck.swf" size="1106" ver="321d6c79802af718b4d60f0da39ba7e4" />
 

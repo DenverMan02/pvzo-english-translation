@@ -1,0 +1,37 @@
+﻿.focus{ width:320px;margin:0 auto 16px; height:445px; overflow:hidden}
+.focus-in{ *zoom:1; position:relative; width:320px; height:445px; background:#fbfbfb url(../img/loading.gif) no-repeat center;}
+.focus-con{ position:absolute; z-index:2}
+.focus-con-item{ overflow:hidden; position:absolute; top:0; left:0}
+.focus-con-item .img-box{ margin:0; padding:0;}
+.focus-con-item img{ width:320px; height:445px; border:0}
+.focus-con-item .txt-box{ overflow:hidden; position:absolute; z-index:30; left:0; bottom:70px; width:320px; /*height:138px; padding-top:42px;*/ font-family:"Microsoft Yahei","Simsun",Arial;}
+.focus-con-item .txt-bg { display:none; width:320px; height:180px; position:absolute; left:0; top:0; background:url(../../../../../../ue3.yeyoucdn.com/a/www/index/2014v2/img/bg-shadow2.png) no-repeat 0 0; z-index:10;}
+.focus-con-item a{ color:#fff; text-decoration:none}
+.focus-con-item a:hover{ color:#fff; text-decoration:underline}
+.focus-con-item .tit{ margin:0; padding:10px 20px 2px; font-size:22px; font-weight:normal; line-height:1.2; position:relative; z-index:31;}
+.focus-con-item .detail{ margin:0; padding:0 20px; font-size:16px; font-weight:normal; line-height:1.5; position:relative; z-index:31;}
+.focus-fun{ position:absolute; z-index:40; left:9px; bottom:7px; width:306px;}
+.focus-fun .bt{ overflow:hidden; float:left; width:10px; height:17px; background:url(../../../../../../ue2.yeyoucdn.com/a/www/index/2014v2/img/bg-icon0.png) no-repeat 0 -550px; margin-top:20px;}
+.focus-fun .bt-focus-prev{ background-position:0 -550px; margin-right:6px;}
+.focus-fun .bt-focus-next{ background-position:-20px -550px; margin-left:6px;}
+.focus-fun .bt-focus-prev:hover{ background-position:0 -570px;}
+.focus-fun .bt-focus-next:hover{ background-position:-20px -570px;}
+.focus-thumb{ overflow:hidden; position:relative; float:left; width:270px; height:56px;}
+.focus-thumb-in{ overflow:hidden; *zoom:1; width:100000px}
+.focus-thumb-box{ float:left}
+.focus p.focus-thumb-item{ display:inline; float:left; margin:0 14px 0 0; padding:0}
+.focus-thumb-item a{ display:block; width:76px; height:50px; border:2px solid #808080; background-color:#000}
+.focus-thumb-item img{ width:100%; height:100%; filter:alpha(opacity:50); opacity:.5}
+.focus-thumb-box .current img,.focus-thumb-item a:hover img{ filter:none; opacity:1}
+.ben-slide-clonebox{ display:none; overflow:hidden; position:absolute; z-index:20; top:0; left:0; width:100px}
+.ben-slide-clonebox img{ position:absolute}
+.focus-thumb-grid { position:absolute; top:0; z-index:40; left:0; width:76px; height:50px; border:2px solid #fdd000; cursor:pointer}
+.ico,.bt,.arrow{ display:inline-block; overflow:hidden; }
+.focus-con-loading{
+    width:48px;
+    height:48px;
+    position:absolute;
+    left: 284px;
+    top: 162px;
+    z-index: 1000;
+}

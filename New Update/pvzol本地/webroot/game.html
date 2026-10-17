@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- no cache headers -->
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="no-cache">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<!-- end no cache headers -->
+<title>PVZ ONLINE-腾讯游戏</title>
+<style type="text/css" media="screen">
+* {
+	margin: 0px 0px 0px 0px; padding: 0; 
+}
+body {
+	text-align: center;
+	margin: 0 auto;
+}
+html, body, #flashdiv{
+	margin: 0px;
+	overflow:hidden;
+	width:100%;
+	height:100%;
+	background:#000000
+}
+#flashdiv { display:none; }
+</style>
+<script type="text/javascript">
+	var isQa = false;
+	var isDebug = false;
+	function getLoaderName(){
+		if(!isStage3D()){
+			return flashStage3dUrl;
+		}
+		return flashClassicUrl;
+	}
+	
+	
+	var flashClassicUrl = "loader_n_813c2b83a3b8d6461495386a1b0cf06b.swf";
+	var flashStage3dUrl = "loader_p_2154549c5174a049a46ce7661a3bac0f.swf";
+</script>
+<script type="text/javascript" charset="utf-8" id="fusionjs"></script>
+<script type="text/javascript" charset="utf-8" id="externaljs"></script>
+<script type="text/javascript" charset="utf-8" id="cashierjs"></script>
+<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/swfobject.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8" src="http://imgcache.qq.com/bossweb/ipay/js/lib/main.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://imgcache.qq.com/bossweb/ipay/js/api/cashier.js"></script>
+<script src="js/external.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="gbk" src="http://commwebgame.game.qq.com/webgame_login/data/js/pvz_select.js?sGameKind=pvz"></script>
+<script src="js/sig.js" type="text/javascript"></script>
+<script src="js/hmac-sha1.js" type="text/javascript"></script>
+<script src="js/enc-base64-min.js"></script>
+</head>
+<body style="text-align:center">
+	<div id="webpage" style=" "></div>
+	<div id="bg1" style="display: none;height: 900px ;width: 1440px;margin: auto; top: 0; left: 0;  right: 0;  background-image: url(swf/loading/time_tunnel.jpg);">
+	</div>
+	<div id="flashdiv">
+		<p><font color="white">请更新当前浏览器的Flash Player插件至11.2或以上版本</font></p>
+  		<p><a href="http://www.adobe.com/go/getflashplayer"><font color="white">Flash Player安装地址</font></a></p>
+  		<p> <a href="http://www.adobe.com/go/getflashplayer"> <img src="image/get_flash_player.gif" alt="Get Adobe Flash player" /> </a> </p>
+	</div>
+	<div id="float" style="display: none; left: 446px; top: 121px; position: absolute; height: 380px ;width: 600px">
+		<IFRAME id="ifr" border=0  name=ifr marginWidth=0 marginHeight=0 src="" frameBorder=0 width=100% scrolling=no height='100%' ></IFRAME>
+	</div>
+</body>
+</html>

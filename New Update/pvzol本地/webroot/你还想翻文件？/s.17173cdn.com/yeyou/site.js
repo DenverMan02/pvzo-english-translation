@@ -1,0 +1,101 @@
+
+
+
+
+advConfigs.config({
+  type: 'AdYeyouRankRecom',
+  advid: 'adyeyourankrecom',
+  selector: '.main1',
+  version: 'v1.2.001',
+  resources:[{
+    games:[{
+      gameName:'\u3010\u7206\u6b3e\u3011\u5200\u5251\u7b11\u4e4b\u9738\u5200',
+      scope:'8.6',
+      testStatus:'\u516c\u6d4b',
+      gameType:'\u89d2\u8272\u626e\u6f14',
+      developer:'\u4e09\u4e03\u4e92\u5a31',
+      link:'//Cvda.17173.com/click?media_code=17173&ad_code=171737316&resource_code=11592&order_code=1032581',
+      pvCode:'//vda.17173.com/show?media_code=17173&ad_code=171737316&resource_code=11592&order_code=1032581'
+    },{
+      gameName:'000000\u6c2a\u8d85\u53d8',
+      scope:'8.9',
+      testStatus:'\u516c\u6d4b',
+      gameType:'\u89d2\u8272\u626e\u6f14',
+      developer:'\u4e09\u4e03\u4e92\u5a31',
+      link:'//Cvda.17173.com/click?media_code=17173&ad_code=171737316&resource_code=11682&order_code=1032582',
+      pvCode:'//vda.17173.com/show?media_code=17173&ad_code=171737316&resource_code=11682&order_code=1032582'
+    },{
+      gameName:'\u98de\u5347\uff1a\u5f02\u517d\u6d2a\u8352',
+      scope:'8.0',
+      testStatus:'\u8bd5\u73a9',
+      gameType:'\u89d2\u8272\u626e\u6f14',
+      developer:'\u4e09\u4e03\u4e92\u5a31',
+      link:'//Cvda.17173.com/click?media_code=17173&ad_code=171737316&resource_code=11683&order_code=1032581',
+      pvCode:'//vda.17173.com/show?media_code=17173&ad_code=171737316&resource_code=11683&order_code=1032581'
+    },{
+      gameName:'\u68a6\u5e7b\u897f\u6e38\u7f51\u9875\u7248',
+      scope:'9.5',
+      testStatus:'\u5468\u5e74\u5e86\u798f\u5229',
+      gameType:'\u89d2\u8272\u626e\u6f14',
+      developer:'\u7f51\u6613',
+      link:'//Cvda.17173.com/click?media_code=17173&ad_code=171737316&resource_code=11684&order_code=1032603',
+      pvCode:'//vda.17173.com/show?media_code=17173&ad_code=171737316&resource_code=11684&order_code=1032603'
+    },{
+      gameName:'\u65e0\u9650\u8d44\u6e90\u72ec\u4eab\u670d',
+      scope:'8.5',
+      testStatus:'\u516c\u6d4b',
+      gameType:'\u89d2\u8272\u626e\u6f14',
+      developer:'\u4e09\u4e03\u4e92\u5a31',
+      link:'//Cvda.17173.com/click?media_code=17173&ad_code=171737316&resource_code=11685&order_code=1032581',
+      pvCode:'//vda.17173.com/show?media_code=17173&ad_code=171737316&resource_code=11685&order_code=1032581'
+    },{
+      gameName:'\u9738\u8005\u5929\u4e0b',
+      scope:'8.5',
+      testStatus:'\u516c\u6d4b',
+      gameType:'\u8840\u6218PK',
+      developer:'\u4e0a\u6d77\u5bc5\u9177',
+      link:'//Cvda.17173.com/click?media_code=17173&ad_code=171737316&resource_code=12721&order_code=1032603',
+      pvCode:'//vda.17173.com/show?media_code=17173&ad_code=171737316&resource_code=12721&order_code=1032603'
+    },{
+      gameName:'\u6743\u529b\u7684\u6e38\u620f',
+      scope:'9.1',
+      testStatus:'\u516c\u6d4b',
+      gameType:'3D\u7b56\u7565\u6e38\u620f',
+      developer:'\u4e0a\u6d77\u6e38\u65cf',
+      link:'//Cvda.17173.com/click?media_code=17173&ad_code=171737316&resource_code=12722&order_code=1032603',
+      pvCode:'//vda.17173.com/show?media_code=17173&ad_code=171737316&resource_code=12722&order_code=1032603'
+    },{
+      gameName:'\u9b54\u5f71\u72c2\u5200',
+      scope:'8.2',
+      testStatus:'\u65b0\u670d\u51b2\u523a',
+      gameType:'\u4f20\u5947\u5bf9\u6218',
+      developer:'\u65b9\u5706\u7535\u5b50',
+      link:'//Cvda.17173.com/click?media_code=17173&ad_code=171737316&resource_code=12723&order_code=1032603',
+      pvCode:'//vda.17173.com/show?media_code=17173&ad_code=171737316&resource_code=12723&order_code=1032603'
+    },{
+      gameName:'\u7ef4\u4eac\u4f20\u5947',
+      scope:'8.8',
+      testStatus:'\u771f\u5145\u6389\u843d',
+      gameType:'\u5373\u65f6\u6218\u6597',
+      developer:'\u4e0a\u6d77\u6e38\u5b9d',
+      link:'//Cvda.17173.com/click?media_code=17173&ad_code=171737316&resource_code=12724&order_code=1032603',
+      pvCode:'//vda.17173.com/show?media_code=17173&ad_code=171737316&resource_code=12724&order_code=1032603'
+    },{
+      gameName:'\u51e1\u4eba\u4fee\u4ed9\u4f20:\u661f\u6d77\u98de\u9a70',
+      scope:'8.6',
+      testStatus:'\u4e03\u65e5\u8c6a\u793c',
+      gameType:'\u51e1\u4eba\u4fee\u4ed9',
+      developer:'\u6df1\u5733\u6d77\u62d3',
+      link:'//Cvda.17173.com/click?media_code=17173&ad_code=171737316&resource_code=12725&order_code=1032603',
+      pvCode:'//vda.17173.com/show?media_code=17173&ad_code=171737316&resource_code=12725&order_code=1032603'
+    },{
+      gameName:'\u5168\u6c11\u6295\u8d44\u4eba',
+      scope:'9.0',
+      testStatus:'\u6301\u7eed\u8fed\u4ee3',
+      gameType:'\u5546\u6218\u53ae\u6740',
+      developer:'\u53a6\u95e8\u661f\u6d41',
+      link:'//Cvda.17173.com/click?media_code=17173&ad_code=171737316&resource_code=12726&order_code=1032603',
+      pvCode:'//vda.17173.com/show?media_code=17173&ad_code=171737316&resource_code=12726&order_code=1032603'
+    }]
+  }]
+});
