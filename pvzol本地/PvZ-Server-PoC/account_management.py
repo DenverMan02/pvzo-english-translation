@@ -77,6 +77,9 @@ def _related_rows(con, schema, counts, uin, role_id):
         ("local_friend_energy", ("sender", "receiver"), (uin, uin)),
         ("local_guild_invites", ("inviter_uin", "invitee_uin"), (uin, uin)),
         ("local_guild_events", ("role_id",), (role_id,)),
+        # Wars store their owner in uin, but the opponent in target_uin and
+        # role_id. Include the role identity for legacy rows without target_uin.
+        ("local_worldmap_wars", ("target_uin", "role_id"), (uin, role_id)),
     ):
         available = [(column, value) for column, value in zip(columns, values)
                      if column in schema.get(table, set())]

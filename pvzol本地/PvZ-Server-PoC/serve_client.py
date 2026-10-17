@@ -119,6 +119,50 @@ def _load_card_icon_aliases():
     return _CARD_ICON_ALIASES
 
 
+_PUZZLE_ICON_IDS = None
+
+
+def _load_puzzle_icon_ids():
+    """Recognize authored puzzle materials before unrelated numeric fallback.
+
+    Missing numbered/quality art uses the unnumbered puzzle symbol. The real
+    item template still supplies its name, tooltip and card quality.
+    """
+    global _PUZZLE_ICON_IDS
+    if _PUZZLE_ICON_IDS is not None:
+        return _PUZZLE_ICON_IDS
+    _PUZZLE_ICON_IDS = set()
+    try:
+        with open(os.path.join(CLIENT_DIR, "clientDB.txt"), "rb") as archive:
+            data = archive.read()
+        pos = 0
+        while pos + 4 <= len(data):
+            name_len = int.from_bytes(data[pos:pos + 4], "big")
+            pos += 4
+            name = data[pos:pos + name_len].decode("utf-8", "replace")
+            pos += name_len
+            size = int.from_bytes(data[pos:pos + 4], "big")
+            pos += 4
+            chunk = data[pos:pos + size]
+            pos += size
+            if name != "ItemInfo.txt":
+                continue
+            rows = [line.split("\t") for line in chunk.decode("utf-8-sig").splitlines()
+                    if line.strip()]
+            if rows:
+                for values in rows[1:]:
+                    item = dict(zip(rows[0], values))
+                    if item.get("type") == "10" and item.get("subType") == "1001":
+                        try:
+                            _PUZZLE_ICON_IDS.add(int(item["icon"]))
+                        except (KeyError, ValueError):
+                            pass
+            break
+    except (OSError, ValueError):
+        pass
+    return _PUZZLE_ICON_IDS
+
+
 _FRAGMENT_ICON_ALIASES = None
 
 
@@ -257,6 +301,14 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                         sys.stdout.flush()
                     # A fragment without matching plant art must never show another
                     # plant's materials. The normal placeholder path handles it.
+                elif item_id in _load_puzzle_icon_ids():
+                    # No numbered puzzle art: never show another quality, number,
+                    # or an unrelated item just because its filename is nearby.
+                    target = "/image/item/2020.png"
+                    if os.path.isfile(self.translate_path(target)):
+                        self.path = target + (("?" + query) if query else "")
+                        sys.stdout.write("  PUZZLE ICON SYMBOL %s -> %s\n" % (requested_path, self.path))
+                        sys.stdout.flush()
                 else:
                     # Retain generic item fallback for non-plant-fragment assets.
                     item_dir = os.path.dirname(self.translate_path(self.path))
@@ -338,15 +390,6 @@ class Server(socketserver.ThreadingTCPServer):
 
 
 def main():
-    # Patch player-facing SWF strings before binding the HTTP port. This also
-    # covers users who start serve_client.py directly instead of using run_all.py.
-    try:
-        from client_tools.translate_battle_ui import apply_translation
-        apply_translation()
-    except Exception as exc:
-        # Keep the local game usable even if an asset is incompatible with the patcher.
-        print("[battle-ui-translation] Could not apply patch: %r" % exc)
-
     if not os.path.isdir(CLIENT_DIR):
         print("ERROR: client folder not found at:\n  %s" % CLIENT_DIR)
         sys.exit(1)

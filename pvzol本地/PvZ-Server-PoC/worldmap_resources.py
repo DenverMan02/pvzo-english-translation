@@ -4,7 +4,9 @@ DTOs are from Assets/src/PVZ/Cmd; temple coordinates/reward items and mine-cart
 limits are loaded from clientDB. LOCAL RULES, not the retired online economy:
 mine attacks persist a marching task and fight on arrival with the existing
 battle engine; temple combat still resolves immediately. Mining
-makes 10 coins/second, capped at 36,000 uncollected coins, with no offline multiplier.
+makes 10 coins/second, capped at 36,000 base uncollected coins, with no offline
+multiplier. Active VIP mine-harvest privilege 22 is applied only on payment;
+the bank client itself scales the base canCollectCoin field for display.
 The reference video's eight-hour harvest interval is supplied to both the Flash
 client and collect_ready by the server iMineCollectCDTime configuration;
 capturing a temple gives no immediate currency and its template chest is claimable
@@ -33,12 +35,29 @@ import worldmap_local as wm
 MINE_POSITIONS = ((20, 20), (26, 20), (20, 26), (14, 20))
 MINING_RATE = 10
 MINING_CAP = 36000
+MINE_HARVEST_PRIVILEGE = 22  # VipPrivilegeInfo: mine harvest +N percent.
 REPORT_BASE = 2_000_000_000
 # Action IDs are uint32 task identities, independent of battle-report IDs.
 MINE_ACTION_BASE = 3_000_000_000
 MINE_MISSION_BASE = 4_000_000_000
 GUARDING = 2  # Original E_TeamState_Guarding, distinct from Returning (5).
 RETRY_SECONDS = 60
+
+
+def owned_mine_count(store, uin, area):
+    """Read captured sites in one region without advancing or creating map state.
+
+    Ownership survives garrison recall/expiry and is independent of mining carts.
+    Use the store's shared connection so research checks and Study see the same
+    transaction, including a capture committed by another socket session.
+    """
+    with store._db() as con:
+        exists = con.execute("SELECT 1 FROM sqlite_master WHERE type='table' "
+                             "AND name='local_worldmap_mines'").fetchone()
+        if not exists:
+            return 0
+        return con.execute('SELECT COUNT(*) FROM local_worldmap_mines '
+                           'WHERE uin=? AND area=? AND held=1', (uin, area)).fetchone()[0]
 
 
 class ResourceGameplay:
@@ -660,6 +679,12 @@ class ResourceGameplay:
     def _collect(self, con, player, row, cancel=False):
         produced = self.produced(row)
         requested = max(0, produced-row['paid'])
+        # VipInfo privilege 22 and ModuleBank.onInfoInit define this bonus.
+        # The v5 payout ratio alone does not identify an active VIP privilege.
+        # Keep mining_info unscaled: the client applies the VIP multiplier
+        # when formatting canCollectCoin, not when awarding money.
+        bonus = max(0, int(self.api.vip_privileges(player).get(MINE_HARVEST_PRIVILEGE, 0)))
+        requested = requested * (100 + bonus) // 100
         coin = int(con.execute('SELECT coin FROM players WHERE uin=?', (player['uin'],)).fetchone()[0])
         paid = min(requested, max(0, 0xffffffff-coin))
         if paid:

@@ -53,6 +53,7 @@ import sqlite3
 import sys
 import struct
 import time
+import threading
 import functools
 from types import SimpleNamespace
 
@@ -178,6 +179,16 @@ def pb_float_field(field: int, value: float) -> bytes:
 
 def pb_varint_field(field: int, value: int) -> bytes:
     return pb_tag(field, 0) + uvarint(value)
+
+
+def pb_uint32_field(field: int, value: int) -> bytes:
+    """Saturate a client TYPE_UINT32 without changing its stored balance.
+
+    Flash's uint32 reader truncates values above 32 bits; six-byte varints
+    also consume the following field tag and can raise Invalid wire type.
+    Keep pb_varint_field unrestricted for the existing int64/UID callers.
+    """
+    return pb_varint_field(field, max(0, min(0xFFFFFFFF, int(value))))
 
 
 def pb_bool(field: int, value: bool) -> bytes:
@@ -320,7 +331,46 @@ def parse_cmdcommon(body: bytes):
 
 
 # ---- TWeb framing ---------------------------------------------------------
+# These messages contain one TYPE_UINT32, as declared by the Flash client.
+# Protect all handlers (including reward adapters) at their shared wire exit.
+CLIENT_UINT32_SYNC_FIELDS = {
+    "PVZ.Cmd.Cmd_Sync%s_SC" % name: (3 if name == "HallPlayerCount" else 1)
+    for name in (
+        "Coin", "ContribVal", "Durability", "Energy", "Exp", "Fame",
+        "FightPower", "FosterTicket", "FriendPoint", "HallPlayerCount",
+        "Level", "Light", "Lucky", "PresentTicket", "Prestige",
+        "PuppetEnergy", "PuppetSkillVal", "Sun", "Ticket",
+    )
+}
+
+
+def _client_uint32_sync_data(cmd_name: str, data: bytes) -> bytes:
+    field = CLIENT_UINT32_SYNC_FIELDS.get(cmd_name)
+    if field is None:
+        return data
+    pos, chunks = 0, []
+    while pos < len(data):
+        start = pos
+        tag, pos = read_uvarint(data, pos)
+        number, wire = tag >> 3, tag & 7
+        replacement = None
+        if wire == 0:
+            value, pos = read_uvarint(data, pos)
+            if number == field and value > 0xFFFFFFFF:
+                replacement = pb_uint32_field(number, value)
+        elif wire == 2:
+            size, pos = read_uvarint(data, pos)
+            pos += size
+        elif wire in (1, 5):
+            pos += 8 if wire == 1 else 4
+        else:
+            return data
+        chunks.append(data[start:pos] if replacement is None else replacement)
+    return b"".join(chunks)
+
+
 def build_cmdcommon(cmd_name: str, cmd_data: bytes, error_code: int = 0) -> bytes:
+    cmd_data = _client_uint32_sync_data(cmd_name, cmd_data)
     body = pb_string(1, cmd_name) + pb_bytes(2, cmd_data)
     if error_code:
         body += pb_varint_field(3, error_code)
@@ -341,6 +391,12 @@ def wrap_tweb_download(cmdcommon: bytes) -> bytes:
 
 
 def send_message(writer, cmd_name: str, cmd_data: bytes = b"", error_code: int = 0):
+    # LoginService's LogicError listener reads CmdCommon.errorCode, not pos.
+    # Keep the existing body for other listeners and preserve explicit errors.
+    if cmd_name == "PVZ.Cmd.Cmd_LogicError_SC" and error_code == 0:
+        pos = parse_varint_fields(cmd_data).get(1, 0)
+        if 0 < pos <= 0xFFFFFFFF:
+            error_code = pos
     pkt = wrap_tweb_download(build_cmdcommon(cmd_name, cmd_data, error_code))
     writer.write(pkt)
     log.info("  -> S2C  %-45s  (%d body bytes, %d total)",
@@ -597,12 +653,15 @@ def make_td_getstageinfo_sc():
     return pb_varint_field(1, 1)  # stageId = 1
 
 
-# Messages that crash the client when empty — send populated responses instead.
+# Explicit fallback bodies for messages with special client field contracts.
 # (Battle needs a non-empty team OR defaultTeamId!=0; the generic populator can't
 #  know an array gets indexed, so this one stays explicit.)
 SPECIAL_SC = {
     # Cmd_Battle_GetFormation is now a request handler (needs the player's real team/cards).
     # Cmd_TD_GetStageInfo_SC is now a request handler (needs the player's passed levels).
+    # Melee has no local reward settlement. Its client accepts an empty reward
+    # array; a fabricated Dto_IdNum(id=0, num=0) crashes the reward icon renderer.
+    "PVZ.Cmd.Cmd_Melee_ShowReward_SC": lambda: b"",
 }
 
 
@@ -1129,6 +1188,40 @@ def make_bag_info(player):
 
 
 def grant_items(player, changes):
+    """Observe fertilizer acquisition/consumption without inventing earlier stock."""
+    changes = list(changes)
+    fertilizer_items = ({int(row.get("itemID") or fid)
+                         for fid, row in load_garden_fertilizers().items()}
+                        if "_garden_advance_all" in globals() else set())
+    if not any(delta and int(item_id) in fertilizer_items for item_id, delta in changes):
+        return _grant_items_plain(player, changes)
+    previous = getattr(_GARDEN_AUTO_UPDATES, "items", None)
+    changed = set()
+    _GARDEN_AUTO_UPDATES.items = changed
+    try:
+        with store.atomic_player(player):
+            now = int(time.time())
+            _garden_advance_all(player, now)
+            _grant_items_plain(player, changes)
+            # Positive stock first exists at now. A due pot can resume now,
+            # never at a past deadline during an interval with no known stock.
+            _garden_advance_all(player, now)
+            automatic_changes = set(changed)
+            if automatic_changes:
+                # Encode inside this transaction. The socket dispatcher only
+                # appends this ready payload after success; it performs no new
+                # inventory changes or garden encoding after reward commit.
+                player["_garden_auto_sync_payload"] = _garden_sync(player, now)
+            changed.update(int(item_id) for item_id, delta in changes if delta)
+            message = _garden_auto_item_update(player, changed)
+        if previous is not None:
+            previous.update(automatic_changes)
+        return message
+    finally:
+        _GARDEN_AUTO_UPDATES.items = previous
+
+
+def _grant_items_plain(player, changes):
     """Apply [(item_id, delta)] to the bag; return a Cmd_Item_Update_SC (name, body) that
     syncs the NEW counts to the client, or None if nothing changed."""
     dtos = b""
@@ -1614,10 +1707,11 @@ def _equipment_set_energy(player, state, amount):
     return state
 
 
-def _equipment_upgrade_level(equipment, exp_gain):
+def _equipment_upgrade_level(equipment, exp_gain, max_level=None):
     item = _equipment_template(equipment["item_id"])
     equip_type = _equip_int(item, "equipType")
-    max_level = _equipment_max_level(equip_type)
+    if max_level is None:
+        max_level = _equipment_max_level(equip_type)
     level = int(equipment["level"])
     exp = int(equipment["exp"]) + int(exp_gain)
     while level < max_level:
@@ -1748,6 +1842,17 @@ def _equipment_card_sync(player, equipment):
 
 
 def _equipment_add_exp(player, equip_uid, all_available=False):
+    # One-key upgrading performs many small writes; commit the whole request
+    # together so disk sync does not block once per experience increment.
+    # This request only writes gear/energy/bead rows; keep session fields
+    # untouched when the transaction refreshes its player snapshot.
+    if all_available:
+        with store.atomic_player(dict(player)):
+            return _equipment_add_exp_steps(player, equip_uid, all_available)
+    return _equipment_add_exp_steps(player, equip_uid, all_available)
+
+
+def _equipment_add_exp_steps(player, equip_uid, all_available=False):
     equipment = store.get_equipment(player["uin"], equip_uid)
     if not equipment:
         return []
@@ -1756,13 +1861,17 @@ def _equipment_add_exp(player, equip_uid, all_available=False):
     state, _ = _equipment_pool_state(player)
     exp_messages = []
     auto_bead_update = None
+    total_exp = 0
+    max_level = None
     while True:
         item = _equipment_template(equipment["item_id"])
         if not item:
             break
         equip_type = _equip_int(item, "equipType")
         level = int(equipment["level"])
-        if level >= _equipment_max_level(equip_type):
+        if max_level is None:
+            max_level = _equipment_max_level(equip_type)
+        if level >= max_level:
             break
         level_template = _equip_row("EquipmentLevel.txt", type=equip_type, level=level)
         if not level_template or _equip_int(level_template, "needExp") <= 0:
@@ -1785,19 +1894,39 @@ def _equipment_add_exp(player, equip_uid, all_available=False):
         if state["current_energy"] < cost:
             break
         state = _equipment_set_energy(player, state, int(state["current_energy"]) - cost)
-        equipment = _equipment_upgrade_level(equipment, cost)
+        equipment = _equipment_upgrade_level(equipment, cost, max_level=max_level)
         info = pb_varint_field(1, cost) + pb_varint_field(2, 0)  # addExp, criticalTimes
         exp_messages.append(info)
+        total_exp += cost
         if not all_available:
             break
     if not exp_messages:
-        return []
+        if not all_available or not _equipment_template(equipment["item_id"]):
+            return []
+        # A valid no-op request (max level / insufficient energy) still needs its
+        # matching response. Include changeInfo so the shipped client uses the
+        # authoritative snapshot, and an empty addExp array schedules no tips.
+        info = _equipment_info_dto(equipment)
+        return [("PVZ.Cmd.Cmd_Equip_AddAllExp_SC",
+                 pb_int64_field(1, equip_uid)
+                 + pb_tag(3, 2) + uvarint(len(info)) + info)]
     store.update_equipment(player["uin"], equip_uid,
                            level=equipment["level"], exp=equipment["exp"])
     equipment = store.get_equipment(player["uin"], equip_uid)
     info = _equipment_info_dto(equipment)
     if all_available:
-        add_exp = b"".join(pb_tag(2, 2) + uvarint(len(entry)) + entry for entry in exp_messages)
+        # Every local increment above is non-critical. One summed feedback DTO
+        # retains the exact experience gain while avoiding hundreds of the
+        # client's 500ms timers for empty critical-hit tips. changeInfo still
+        # supplies the final level/experience; the single-step response is intact.
+        if total_exp <= 0xffffffff and all(
+                parse_varint_fields(entry).get(2, 0) == 0 for entry in exp_messages):
+            entry = pb_varint_field(1, total_exp) + pb_varint_field(2, 0)
+            add_exp = pb_tag(2, 2) + uvarint(len(entry)) + entry
+        else:
+            # Preserve the original entries if later templates/handlers introduce
+            # larger gains or critical-hit feedback.
+            add_exp = b"".join(pb_tag(2, 2) + uvarint(len(entry)) + entry for entry in exp_messages)
         main = ("PVZ.Cmd.Cmd_Equip_AddAllExp_SC",
                 pb_int64_field(1, equip_uid) + add_exp
                 + pb_tag(3, 2) + uvarint(len(info)) + info)
@@ -3370,47 +3499,12 @@ def card_exp_within_level(total_exp, level):
 
 
 # Exp items that add plant XP when fed to a card (小经验豆/经验豆/诱人经验豆, id 2002/2003/2004, ...).
-# ItemInfo type 6 + useEffect "1:<exp>" is the authority; flavor-text desc is only a fallback.
-# Translating 0041_ItemInfo names/descs must not empty this map or RPG bean feeding silently no-ops.
+# Parsed from ItemInfo.txt desc "增加植物<N>点经验" so ANY exp bean is covered automatically.
 _CARD_EXP_ITEMS = None
-_CARD_EXP_ITEM_TYPE = 6
-_CARD_EXP_USEEFFECT = re.compile(r"(?:^|;)\s*1:(\d+)(?:;|$)")
-_CARD_EXP_DESC_CN = re.compile(r"增加植物(\d+)点经验")
-_CARD_EXP_DESC_EN = re.compile(
-    r"(?:increases?|grants?)\s+(?:plant\s+)?exp\s+by\s+([\d,]+)|([\d,]+)\s+plant\s+exp",
-    re.I,
-)
-
-
-def _card_exp_from_item_fields(item_type, use_effect, desc):
-    """Return plant-XP gained by using one of this item, or None if it is not a bean.
-
-    Chests and armor mats also mention plant EXP in flavor text and reuse
-    useEffect ``1:N``, so only ItemInfo type 6 (the three RPG beans) counts
-    unless the original Chinese bean sentence is present.
-    """
-    text = str(desc or "")
-    try:
-        typed = int(item_type or 0) == _CARD_EXP_ITEM_TYPE
-    except (TypeError, ValueError):
-        typed = False
-    if typed:
-        match = _CARD_EXP_USEEFFECT.search(str(use_effect or ""))
-        if match:
-            return int(match.group(1))
-        match = _CARD_EXP_DESC_EN.search(text)
-        if match:
-            digits = (match.group(1) or match.group(2) or "").replace(",", "")
-            if digits:
-                return int(digits)
-    match = _CARD_EXP_DESC_CN.search(text)
-    if match:
-        return int(match.group(1))
-    return None
 
 
 def card_exp_items():
-    """{itemId: expValue} for every plant-EXP bean in ItemInfo.txt."""
+    """{itemId: expValue} for every 'adds N plant EXP' bean in ItemInfo.txt."""
     global _CARD_EXP_ITEMS
     if _CARD_EXP_ITEMS is None:
         _CARD_EXP_ITEMS = {}
@@ -3421,13 +3515,12 @@ def card_exp_items():
                 def col(k):
                     i = ci.get(k)
                     return r[i] if i is not None and i < len(r) else ""
-                try:
-                    item_id = int(col("id"))
-                except ValueError:
-                    continue
-                gain = _card_exp_from_item_fields(col("type"), col("useEffect"), col("desc"))
-                if gain:
-                    _CARD_EXP_ITEMS[item_id] = gain
+                m = re.search(r"增加植物(\d+)点经验", col("desc"))
+                if m:
+                    try:
+                        _CARD_EXP_ITEMS[int(col("id"))] = int(m.group(1))
+                    except ValueError:
+                        pass
         log.info("loaded %d card-exp items %s", len(_CARD_EXP_ITEMS), _CARD_EXP_ITEMS)
     return _CARD_EXP_ITEMS
 
@@ -3446,7 +3539,7 @@ def add_card_exp(player, uid, card_id, gain):
     return old_level, new_level, new_total, card_exp_within_level(new_total, new_level)
 
 
-def build_card_sync_sc(uin, uid, card_id, action_from):
+def build_card_sync_sc(uin, uid, card_id, action_from, _shared=None, _player=None):
     """Cmd_Card_SyncFullInfo_SC{changeCardList(1)=[Dto_CardFullInfo], actionFrom(4)} for ONE changed
     card at its current stored level/exp — the client updates the card + plays the level-up feedback."""
     card = next((c for c in store.get_cards(uin) if c[0] == uid), None)
@@ -3469,17 +3562,20 @@ def build_card_sync_sc(uin, uid, card_id, action_from):
     _apply_card_equipment_bonus(st, uin, uid)
     _apply_card_baptize_bonus(st, uin, uid)
     _apply_prestige_bonus(st, uin, uid, cid)
-    avatar_player = store.get_or_create_player(uin)[0]
+    avatar_player = (_player if _player is not None and int(_player.get("uin", 0)) == int(uin)
+                     else store.get_or_create_player(uin)[0])
     _apply_armor_bonus(st, uin, uid, cid, int(avatar_player.get("level", 1)))
-    _apply_card_avatar_bonus(st, avatar_player, uid, card)
+    shared = _avatar_shared_state(avatar_player, uid, _shared)
+    _apply_card_avatar_bonus(st, avatar_player, uid, card, _shared=shared)
     prestige_level = store.get_card_evolve_level(uin, uid)
     selected_armor = store.get_card_armor_type(uin, uid)
     selected_star = store.get_card_armors(uin, uid).get(selected_armor, {}).get("star", 0)
     info = build_card_full_info(
         uid, cid, level, st, card_exp_within_level(total_exp, level),
         forge_level, fill_quality, fill_evolve, prestige_level, selected_armor, selected_star,
-        _card_avatar_selected(avatar_player, uid, card), _card_gene_active_stage(uin, uid),
-        power_elements=_card_power_source_elements(avatar_player, uid, cid, level))
+        _card_avatar_selected(avatar_player, uid, card, _shared=shared), _card_gene_active_stage(uin, uid),
+        power_elements=_card_power_source_elements(avatar_player, uid, cid, level,
+                                                  _cards_by_uid={int(uid): card}, _shared=shared))
     body = pb_tag(1, 2) + uvarint(len(info)) + info + pb_varint_field(4, action_from)  # changeCardList, actionFrom
     return ("PVZ.Cmd.Cmd_Card_SyncFullInfo_SC", body)
 
@@ -3492,25 +3588,65 @@ def td_plant_to_card(plant_id):
 
 
 _VALID_TD_PLANTS = None
+_NORMAL_TD_PLANTS = None
 
 
 def valid_td_plants():
-    """The set of plantIds that are actually TOWER-DEFENSE plants (clientDB tdPlantInfo.txt) — i.e. can
-    be planted on the TD lawn. Adventure/card-only plants are NOT in here. Used to keep the TD roster
-    (player['plants']) clean: TD plants may be recruited as adventure cards, but drawing/recruiting an
-    adventure card must NOT add a plant to TD (and a non-TD plant in unlockPlantList crashes the TD
-    choose-card screen — TDBasicChooseCard.InitializeComponent #1009s with no valid plant template)."""
-    global _VALID_TD_PLANTS
+    """TD templates with real lawn animation, plus the nonvisual minigame skills.
+
+    tdPlantInfo also contains unfinished adventure-only entries such as Fire
+    Stump 6000. Their empty resName leaves the plant preview's bone.data null.
+    Validate the referenced base template and local asset before offering it;
+    this inventory never edits a player's earned plants or card collection.
+    """
+    global _VALID_TD_PLANTS, _NORMAL_TD_PLANTS
     if _VALID_TD_PLANTS is None:
         _VALID_TD_PLANTS = set()
+        _NORMAL_TD_PLANTS = set()
+        base_rows = _read_clientdb_table("tdPlantTypeInfo.txt")
+        bases = {int(row[0]): dict(zip(base_rows[0], row))
+                 for row in base_rows[1:] if row and row[0].isdigit()}
+        asset_root = os.path.join(os.path.dirname(_CLIENTDB_PATH), "swf", "td", "anmi", "plant")
         rows = _read_clientdb_table("tdPlantInfo.txt")
         if rows:
-            hdr = rows[0]; idc = hdr.index("id") if "id" in hdr else 0
+            hdr = rows[0]
+            idc = hdr.index("id") if "id" in hdr else 0
+            typec = hdr.index("type") if "type" in hdr else idc
             for r in rows[1:]:
-                if idc < len(r) and r[idc].isdigit():
-                    _VALID_TD_PLANTS.add(int(r[idc]))
+                try:
+                    pid, base_id = int(r[idc]), int(r[typec])
+                    base = bases.get(base_id, {})
+                    catalog = int(base.get("catalog") or 0)
+                    hp = int(base.get("hp") or 0)
+                    cooldown = int(base.get("cardRefreshDuration") or 0)
+                except (IndexError, TypeError, ValueError):
+                    continue
+                res_name = str(base.get("resName") or "").strip()
+                # An absent fileVer entry produces the real URL name_.bbone;
+                # seven shipped plants use that exact blank-version filename.
+                has_animation = bool(res_name) and any(
+                    os.path.isfile(os.path.join(asset_root, res_name + suffix))
+                    for suffix in (".bbone", "_.bbone"))
+                # Reset/Fill Hole (5100/5200) intentionally have no animation:
+                # their catalog and command parameters identify real skills.
+                # A shipped animation alone does not make an unfinished template playable.
+                # Ordinary plants need an AI, health and a real cooldown; zero sunlight
+                # cost and zero damage/duration remain valid for utility/defensive plants.
+                usable_lawn_plant = (catalog == 0 and has_animation
+                                     and bool(str(base.get("AIMode") or "").strip())
+                                     and hp > 0 and cooldown > 0)
+                if usable_lawn_plant or (catalog == 1 and base.get("params")):
+                    _VALID_TD_PLANTS.add(pid)
+                    if usable_lawn_plant:
+                        _NORMAL_TD_PLANTS.add(pid)
         log.info("loaded %d valid TD plants", len(_VALID_TD_PLANTS))
     return _VALID_TD_PLANTS
+
+
+def normal_td_plants():
+    """Renderable lawn plants suitable for an ordinary friend's helper slot."""
+    valid_td_plants()
+    return _NORMAL_TD_PLANTS
 
 
 def rebuild_td_roster(player):
@@ -5018,8 +5154,9 @@ def load_card_upgrade_recipes():
 
 
 def _logic_error(pos, param=None):
-    """PVZ.Cmd.Cmd_LogicError_SC{pos(1), param(2), seqid(3)} — the client looks `pos` up in
-    clientDB ErrorInfo.txt and shows the toast (handlerID=0 rows are safe standard toasts;
+    """PVZ.Cmd.Cmd_LogicError_SC{pos(1), param(2), seqid(3)} — send_message mirrors `pos`
+    into CmdCommon.errorCode for the client's ErrorInfo.txt lookup and toast.
+    (handlerID=0 rows are safe standard toasts;
     isForbidConnectAgain=0 keeps the connection). Used to REPLACE the old silent `[]`
     rejections so the player sees WHY nothing happened (e.g. 1015 该卡牌没有强化满)."""
     body = pb_varint_field(1, int(pos))
@@ -5413,7 +5550,7 @@ def handle_card_exchangepiece(cmd_data, player):
 _CARD_AVATARS = None  # {tdPlantId(int): [avatarId(int), ...] ascending}
 _CARD_AVATAR_TEMPLATES = None  # {avatarId: {plant_id, forge_type, unlock_items, order}}
 _CARD_AVATAR_FORGE = None  # {forge_type: {level: {cost_items}}}
-_CARD_AVATAR_ASSETS = None  # {avatarId: {pvp: bool, td: bool}}, from ModuleAvatarConfig.swf
+_CARD_AVATAR_ASSETS = None  # {avatarId: {pvp: bool, td: bool, td_named_part: bool, td_placeholder_only: bool}}, from ModuleAvatarConfig.swf
 
 
 def _card_avatar_plant_id(card):
@@ -5554,9 +5691,13 @@ def load_card_avatar_assets():
             except ValueError:
                 continue
             if avatar_id:
+                td_rules = [rule.split(":") for rule in attrs.get("bbTD", "").split(";") if rule]
+                td_holder = any(len(rule) > 1 and bool(rule[1]) for rule in td_rules)
                 _CARD_AVATAR_ASSETS[avatar_id] = {
                     "pvp": bool(attrs.get("bbPVP") or attrs.get("hbPVP") or attrs.get("hpCard")),
-                    "td": bool(attrs.get("bbTD") or attrs.get("hbTD")),
+                    "td": bool(td_holder or attrs.get("hbTD")),
+                    "td_named_part": any(len(rule) > 2 and bool(rule[2]) for rule in td_rules),
+                    "td_placeholder_only": bool(td_rules and not td_holder and not attrs.get("hbTD")),
                 }
         if _CARD_AVATAR_ASSETS:
             break
@@ -5573,17 +5714,27 @@ def _working_card_avatars(plant_id):
     return [aid for aid in avatars if not assets or assets.get(aid, {}).get("pvp")]
 
 
+def _avatar_shared_state(player, uid, _shared=None, include_fill=True):
+    """One request-local snapshot, never a cache of mutable player saves."""
+    shared = _shared if _shared is not None else {}
+    avatars = shared.setdefault("avatars", {})
+    if uid not in avatars:
+        avatars[uid] = store.get_card_avatars(player["uin"], uid)
+    if include_fill:
+        fill = shared.setdefault("fill", {})
+        if uid not in fill:
+            fill[uid] = store.get_card_fill_quality(player["uin"], uid)
+    return shared
+
+
 def _card_avatar_selected(player, uid, card=None, _shared=None):
     card = card or _owned_card(player, uid)
     avatars = _working_card_avatars(_card_avatar_plant_id(card)) if card else []
     if not avatars:
         return 0
-    for avatar_id in avatars:
-        status, _level = _avatar_default_status(player, uid, card, avatar_id, avatars,
-                                                _shared=_shared)
-        if status == 4:
-            return int(avatar_id)
-    return int(min(avatars))
+    rows = _avatar_shared_state(player, uid, _shared, include_fill=False)["avatars"][uid]
+    using = [aid for aid in avatars if int(rows.get(aid, {}).get("status", 0)) == 4]
+    return int(min(using) if using else min(avatars))
 
 
 def _card_avatar_total_level(player, uid, card=None, _shared=None):
@@ -5594,10 +5745,11 @@ def _card_avatar_total_level(player, uid, card=None, _shared=None):
     """
     card = card or _owned_card(player, uid)
     avatars = _working_card_avatars(_card_avatar_plant_id(card)) if card else []
+    shared = _avatar_shared_state(player, uid, _shared) if avatars else {}
     total = 0
     for avatar_id in avatars:
         status, level = _avatar_default_status(player, uid, card, avatar_id, avatars,
-                                               _shared=_shared)
+                                               _shared=shared)
         if status in (3, 4):
             total += max(0, int(level))
     return total
@@ -5640,8 +5792,13 @@ def _encode_avatar_all_attr(level=0):
 
 def _avatar_info_dto(avatar_id, status, forge_level=0):
     forge_level = max(0, int(forge_level))
-    curr_power = forge_level * 50
-    next_power = (forge_level + 1) * 50
+    # Match the client's aggregate wardrobe power formula; shield does not
+    # contribute, and each primary term keeps card_power's integer rounding.
+    def avatar_power(level):
+        return card_power({"atk": level * 10, "def_": level * 10,
+                           "hp": level * 100, "ability": level * 10})
+    curr_power = avatar_power(forge_level)
+    next_power = avatar_power(forge_level + 1)
     curr_attr = _encode_avatar_all_attr(forge_level)
     next_attr = _encode_avatar_all_attr(forge_level + 1)
     return (pb_varint_field(1, int(avatar_id))
@@ -5671,11 +5828,17 @@ def _avatar_default_status(player, uid, card, avatar_id, avatars, _shared=None):
     if avatars_map is None:
         avatars_map = store.get_card_avatars(player["uin"], uid)
     saved = avatars_map.get(int(avatar_id))
-    if saved:
-        return int(saved["status"]), int(saved["forge_level"])
     default_id = min(avatars) if avatars else 0
-    if int(avatar_id) == default_id:
-        return 4, 0  # E_AvatarStatus_Using
+    # Legacy rows may only persist the selected outfit.  Honor that selection
+    # before synthesizing the default, and expose exactly one Using status.
+    using_ids = [aid for aid in avatars
+                 if int(avatars_map.get(aid, {}).get("status", 0)) == 4]
+    selected_id = min(using_ids) if using_ids else default_id
+    saved_level = int(saved["forge_level"]) if saved else 0
+    if int(avatar_id) == selected_id:
+        return 4, saved_level  # E_AvatarStatus_Using
+    if saved and int(saved["status"]) in (3, 4):
+        return 3, saved_level
     template = _avatar_template_for(avatar_id, _card_avatar_plant_id(card))
     if template and not template.get("unlock_items"):
         # Quality avatars with an empty unlock cost become usable once the card's
@@ -5685,9 +5848,14 @@ def _avatar_default_status(player, uid, card, avatar_id, avatars, _shared=None):
             fill = shared.get("fill", {}).get(uid)
             quality = store.get_card_fill_quality(player["uin"], uid) if fill is None else fill
             if int(template.get("catalog") or 0) <= quality:
-                return 3, 0  # E_AvatarStatus_CanUse
+                return 3, saved_level  # E_AvatarStatus_CanUse
         except (TypeError, ValueError):
             pass
+        # The client expects an actual item template for CanBuy.  A zero-cost
+        # quality outfit must remain Locked until puzzle quality unlocks it.
+        return 1, saved_level  # E_AvatarStatus_Locked
+    if saved:
+        return int(saved["status"]), saved_level
     if template:
         # The special collection is redeemed for an owned material directly.
         # The ordinary quality outfits use the mall-assisted Buy path.
@@ -5713,12 +5881,13 @@ def handle_card_getavatarinfo(cmd_data, player):
     uin = player.get("uin")
     card = next((c for c in store.get_cards(uin) if int(c[0]) == int(uid)), None) if uin else None
     avatars = _working_card_avatars(_card_avatar_plant_id(card)) if card else []
+    shared = _avatar_shared_state(player, uid) if card else {}
     avatar_list = b""
     for aid in avatars:
-        status, forge_level = _avatar_default_status(player, uid, card, aid, avatars)
+        status, forge_level = _avatar_default_status(player, uid, card, aid, avatars, _shared=shared)
         dto = _avatar_info_dto(aid, status, forge_level)
         avatar_list += pb_tag(1, 2) + uvarint(len(dto)) + dto
-    attr = _encode_avatar_all_attr(_card_avatar_total_level(player, uid, card))
+    attr = _encode_avatar_all_attr(_card_avatar_total_level(player, uid, card, _shared=shared))
     body = avatar_list + pb_tag(2, 2) + uvarint(len(attr)) + attr
     log.info("    CARD AVATAR INFO: uid=%d card=%s -> %d avatars",
              uid, card[1] if card else None, len(avatars))
@@ -5751,8 +5920,10 @@ def grant_battle_card_exp(player, exp_each):
 
 # --- skill/rage bar --------------------------------------------------------------
 # The bar under each unit's HP is the SKILL (rage) bar: the client draws `maxRage` pips and fills
-# `rage` of them. Design (from the player): 3 pips, start filled 2/3, +1 each round; at full the unit
-# casts its special skill. The fill/reset is driven by per-round buffEffect changeRage ticks in the
+# `rage` of them. Default: 3 pips, start filled 2/3, +1 each round; at full the unit
+# casts its special skill. World Boss units may override the capacity and opening rage
+# (邪恶博士: 5 pips, initially empty).
+# The fill/reset is driven by per-round buffEffect changeRage ticks in the
 # replay (a Dto_FightDamage with changeHp=0 + a non-Dodge damageType -> CostarChangeHP animates only
 # the rage bar, no attack anim / no damage number).
 RAGE_MAX = 3
@@ -5856,9 +6027,8 @@ def _skill_effect(sid, desc):
     if 6901 <= sid <= 6905:
         effect.update(state=901, turns=1, side="enemies")
     elif 12361 <= sid <= 12365:
-        chance = re.search(r"(\d+)%几率", desc) or re.search(r"(\d+)%\s*chance", desc, re.I)
-        chance_val = int(chance[1]) if chance else (10 + (sid - 12360) * 2)
-        effect.update(state=901, turns=1, side="enemies", chance=chance_val)
+        chance = re.search(r"(\d+)%几率", desc)
+        effect.update(state=901, turns=1, side="enemies", chance=int(chance[1]))
     elif 9301 <= sid <= 9305:  # oxygen algae: 2-round regeneration
         effect.update(state=14800 + tier, turns=2, side="allies")
     elif 12451 <= sid <= 12455:  # moonflower basic heal grants reflect
@@ -5983,7 +6153,7 @@ def build_fight_card(pos, card_id, hp, level=1, is_leader=False, max_rage=RAGE_M
     maxRage(7),maxShield(8,U64),isLeader(9),level(11),cardPower(16,U64),isLive(17),
     powerEle(18)=[Dto_CardPower{ele(1)=total(0),value(2,I64)=power,speed(3,I64)=先攻}]}.
     maxRage(7) = the number of SEGMENTS the client draws in the skill bar (UnitProgressCtr.changeRageMax
-    divides the bar into maxRage pips) -> 3 pips; rage(4) = how many are filled at battle start -> 2/3.
+    divides the bar into maxRage pips); defaults are 3 pips and 2 filled at battle start.
     The replay's per-round changeRage ticks it +1 (see simulate_battle).
     CRITICAL: maxShield(8) and cardPower(16) are U64 OBJECTS. An UNSET U64 reads back as NULL on the
     client, and UnitFactory.updateUnit does `maxShield.toNumber()` (line ~115) -> #1009, plus the report
@@ -6809,10 +6979,10 @@ def _screwup_preview_units(player, scene):
     hard = scene == "newscrewup"
     cur = int(player.get("tr_hard_current" if hard else "tr_current") or 0)
     stage_id = cur + 1
-    lvl_data = load_trial_road().get(stage_id)
+    lvl_data = load_trial_road(hard).get(stage_id)
     if not lvl_data:
         return []
-    return _tr_enemy_squad(max(1, int(lvl_data["power"]) * (2 if hard else 1)), stage_id)
+    return _tr_enemy_squad(max(1, int(lvl_data["power"])), stage_id)
 
 
 def _gene_test_preview_units(player):
@@ -6978,7 +7148,8 @@ def simulate_battle(left_units, right_units, won, max_rounds=60, puppets=None,
     rng = _stage_rng("combat", *seed_parts)
     skill1 = {u["pos"]: (u.get("skill1") or 0) for u in left_units + right_units}
     skill2 = {u["pos"]: (u.get("skill2") or 0) for u in left_units + right_units}
-    rage = {u["pos"]: RAGE_START for u in left_units + right_units}
+    rage = {u["pos"]: u.get("initial_rage", RAGE_START) for u in left_units + right_units}
+    max_rage = {u["pos"]: u.get("max_rage", RAGE_MAX) for u in left_units + right_units}
     statuses = {u["pos"]: {} for u in left_units + right_units}
     status_versions = {p: {} for p in statuses}
     status_serial = 0
@@ -7263,7 +7434,7 @@ def simulate_battle(left_units, right_units, won, max_rounds=60, puppets=None,
         if any((state_param(pos, state_id) or ())[0:1] == (7,) for state_id in statuses[pos]):
             return None, False  # frozen this round
         silenced = any((state_param(pos, state_id) or ())[0:1] == (8,) for state_id in statuses[pos])
-        casting = rage[pos] >= RAGE_MAX and skill2[pos] != 0 and not silenced
+        casting = rage[pos] >= max_rage[pos] and skill2[pos] != 0 and not silenced
         sid, (kind, ntgt) = kind_of(pos, casting)
         desc = skill_descs.get(sid, "")
         damages = []
@@ -7323,7 +7494,7 @@ def simulate_battle(left_units, right_units, won, max_rounds=60, puppets=None,
                 targets = sorted(alive(allies), key=lambda t: (hp[t] / maxhp[t], t))[:ntgt or None]
             energy_grant = re.search(r"增加(\d+)点能量，成功率为(\d+)%", desc)
             if energy_grant and "随机友方" in desc:
-                eligible = [t for t in alive(allies) if rage[t] < RAGE_MAX]
+                eligible = [t for t in alive(allies) if rage[t] < max_rage[t]]
                 count = int(re.search(r"(\d+)个随机友方", desc)[1])
                 targets = rng.sample(eligible, min(count, len(eligible)))
             for t in targets:
@@ -7331,7 +7502,7 @@ def simulate_battle(left_units, right_units, won, max_rounds=60, puppets=None,
                 apply_configured_effect(sid, t, damage, False, rng,
                                         side="self" if configured(sid, "self") else "allies")
                 if energy_grant and rng.randrange(100) < int(energy_grant[2]):
-                    gain = min(RAGE_MAX - rage[t], int(energy_grant[1]))
+                    gain = min(max_rage[t] - rage[t], int(energy_grant[1]))
                     rage[t] += gain
                     damage["change_rage"] = gain
                 damages.append(damage)
@@ -7476,14 +7647,14 @@ def simulate_battle(left_units, right_units, won, max_rounds=60, puppets=None,
         # the actor's own changeRage (Dto_FightActor field 5) — no round-end buffEffect, so the bar
         # drains exactly when the skill fires instead of a round late.
         rage_delta = (0 if "发动技能不消耗能量" in desc else -rage[pos]) if casting \
-            else (1 if rage[pos] < RAGE_MAX else 0)
+            else (1 if rage[pos] < max_rage[pos] else 0)
         rage[pos] += rage_delta
         end_gain = re.search(r"回合结束时回复(\d+)点能量", desc)
         if end_gain:
             pending_rage.append((pos, int(end_gain[1])))
         full_gain = re.search(r"(\d+)%几率完全回复能量", desc)
         if full_gain and rng.randrange(100) < int(full_gain[1]):
-            pending_rage.append((pos, RAGE_MAX))
+            pending_rage.append((pos, max_rage[pos]))
         return {"actor": pos, "skill": sid, "cast": casting, "rage": rage_delta,
                 "damages": damages}, casting
 
@@ -7592,7 +7763,7 @@ def simulate_battle(left_units, right_units, won, max_rounds=60, puppets=None,
         for target, requested in pending_rage:
             if hp[target] <= 0:
                 continue
-            gained = min(RAGE_MAX - rage[target], requested)
+            gained = min(max_rage[target] - rage[target], requested)
             if gained > 0:
                 rage[target] += gained
                 round_buffs.append({"target": target, "dmg": 0, "dead": False,
@@ -7767,6 +7938,8 @@ def encode_before_card_list(units):
             for field in ("atk", "def_", "hp", "ability", "hit", "dodge", "critical", "tough")
         })
         card = build_fight_card(u["pos"], u["card_id"], u.get("initial_hp", u["hp"]), u["level"], u["is_leader"],
+                                max_rage=u.get("max_rage", RAGE_MAX),
+                                rage=u.get("initial_rage", RAGE_START),
                                 power=power, speed=u.get("speed", 0),
                               **{k: u.get(k, 0) for k in ("gene_id", "armor_type", "armor_star", "forge_level", "quality", "rank")},
                                 avatar_id=u.get("avatar_id", 0),
@@ -8238,11 +8411,9 @@ def _zi_next_level(player, mode):
 
 
 def _zi_boxes(player, mode):
-    """[(levelId, boxId, taken, unlocked)] for every chest of the ladder, in panel order. A chest is
-    unlocked once its island has been CLEARED (max = highest island ever cleared), so the chest of the
-    final island opens too — island 12 keeps `level` at 12 for a replay."""
+    """Every chest, unlocked only after clearing its island in the current climb."""
     taken = store.island_boxes(player["uin"], mode)
-    cleared = _zi_state(player, mode)["max"]
+    cleared = min(zi_island_count(), _zi_state(player, mode)["level"] - 1)
     out = []
     for lvl in sorted(load_zombie_island_template() or list(range(1, zi_island_count() + 1))):
         for box in range(1, _ZI_BOXES + 1):
@@ -8448,21 +8619,9 @@ def handle_battle_getfightinfo(cmd_data, player):
                               power=u.get("power", 0), speed=u["speed"])
         d += pb_tag(4, 2) + uvarint(len(ec)) + ec           # enemyCard (field 4, repeated)
     d += pb_varint_field(5, sum(u.get("power", 0) for u in right))   # enemyTotalPower (战力)
-    # puppetformation (field 6) is only part of the 傀儡战境 pre-fight contract.  In ordinary
-    # adventure/activity previews the client treats this field as the *opponent*'s puppet formation;
-    # echoing the player's lineup here makes zombies appear to have our puppets.  The actual battle
-    # report carries the player's lineup on leftSide.puppetList when the clientDB has the puppet card
-    # rows, so leave field 6 absent for every non-傀儡战境 target.
-    if ttype == _DUMMY_FUBEN_TARGET:
-        puppet_side = b""
-        owned_puppets = store.get_puppets(player["uin"])
-        for base_id in puppet_lineup(player):
-            row = owned_puppets.get(base_id)
-            if not row:
-                continue
-            dto = puppet_info_dto(base_id, row)
-            puppet_side += pb_tag(1, 2) + uvarint(len(dto)) + dto
-        d += pb_tag(6, 2) + uvarint(len(puppet_side)) + puppet_side
+    # BattleLineupWindowMediator sends puppetformation (field 6) to enemyDummyCard.
+    # None of these generated enemy squads has puppets; keep their preview empty,
+    # including 傀儡战境. Our deployed puppets belong to the report's leftSide.puppetList.
     return d
 
 
@@ -8624,15 +8783,15 @@ def _zi_restart(player, mode):
     """重新开始: back to island 1, consuming one of the daily restarts. Returns whether it happened.
 
     The whole point of a restart is to climb the ladder again, so the per-island chests must
-    become claimable again as well — otherwise every chest stays flagged as 已领取 and the
-    ladder is a dead end after the first clear. `max` is kept so the restart does not have to
-    re-clear the lower islands just to see their (now reset) chests.
+    become claimable again after re-clearing. `max` remains a historical record
+    for sweep eligibility; it does not unlock this climb's chests.
     """
     st = _zi_state(player, mode)
     if st["remain"] > 0:
         store.save_island_progress(player["uin"], mode, level=1,
                                    refresh_used=st["refresh_used"] + 1)
         cleared = store.clear_island_boxes(player["uin"], mode)
+        store.set_island_precards(player["uin"], mode, [])
         log.info("    zombie island%s restart: climb reset to island 1 (%d/%d used today), "
                  "%d chest(s) re-opened", " adv" if mode == _ZI_ADV else "",
                  st["refresh_used"] + 1, _ZI_DAILY_REFRESH, cleared)
@@ -8662,13 +8821,16 @@ def handle_zi_refreshchallenge(cmd_data, player, mode=_ZI_NORMAL):
     """
     ok = _zi_restart(player, mode)
     st = _zi_state(player, mode)
+    pre_name = ("PVZ.Cmd.Cmd_NewZombieIsland_GetPreCard_SC" if mode == _ZI_ADV
+                else "PVZ.Cmd.Cmd_ZombieIsland_GetPreCard_SC")
+    pre_update = [(pre_name, _zi_precard_body(player, mode))] if ok else []
     if mode == _ZI_ADV:
         return [("PVZ.Cmd.Cmd_NewZombieIsland_GetIslandInfo_SC",
-                 handle_zi_getinfo(cmd_data, player, _ZI_ADV))]
+                 handle_zi_getinfo(cmd_data, player, _ZI_ADV))] + pre_update
     log.info("    zombie island refresh challenge -> ok=%s refreshUsed=%d remain=%d",
              ok, st["refresh_used"], st["remain"])
     return [("PVZ.Cmd.Cmd_ZombieIsland_GetRefreshInfo_SC",
-             pb_varint_field(1, st["refresh_used"]) + pb_varint_field(2, st["remain"]))]
+             pb_varint_field(1, st["refresh_used"]) + pb_varint_field(2, st["remain"]))] + pre_update
 
 
 def _zi_idnum_body(rewards, field=1):
@@ -8684,13 +8846,42 @@ def _zi_idnum_body(rewards, field=1):
 def _zi_claim_box(player, mode, level, box_id):
     """Claim one chest: (RewardStatus, rewards). 1 = Succ, 2 = Already (claimed twice), 3 = NotQualified
     (the island isn't cleared yet / no such chest) — the client turns these into the matching tip."""
-    lvl = _zi_clamp_level(level)
+    lvl = int(level or 0)
     box = int(box_id or 1)
-    if not 1 <= box <= _ZI_BOXES or lvl > _zi_state(player, mode)["max"]:
+    if (not 1 <= lvl <= zi_island_count() or not 1 <= box <= _ZI_BOXES
+            or lvl >= _zi_state(player, mode)["level"]):
         return 3, []
     if not store.take_island_box(player["uin"], mode, lvl, box):
         return 2, []
     return 1, _zi_box_rewards(mode, lvl, box)
+
+
+def _zi_claim_box_group(player, mode, boxes):
+    """Claim selected boxes only when their combined rewards fit the final bag.
+
+    Call inside atomic_player: receipts and the eventual reward grant commit
+    together. Keep the per-box reward order; merge only for capacity checks.
+    """
+    import chest_reward_repairs as chests
+    available = {(level, box) for level, box, taken, unlocked in _zi_boxes(player, mode)
+                 if unlocked and not taken}
+    selected, rewards, totals = [], [], {}
+    for level, box in boxes:
+        if (level, box) not in available:
+            continue
+        available.remove((level, box))
+        selected.append((level, box))
+        for item_id, num in _zi_box_rewards(mode, level, box):
+            rewards.append((item_id, num))
+            totals[item_id] = totals.get(item_id, 0) + num
+    combined = list(totals.items())
+    if combined and (not chests._validate(_activity_server_api(), combined)
+                     or not chests._can_receive(_activity_server_api(), player, combined, 0, 0)):
+        return None
+    for level, box in selected:
+        if not store.take_island_box(player['uin'], mode, level, box):
+            raise RuntimeError('Island chest receipt changed inside its claim transaction')
+    return rewards
 
 
 def handle_zi_takereward(cmd_data, player, mode=_ZI_NORMAL):
@@ -8700,17 +8891,31 @@ def handle_zi_takereward(cmd_data, player, mode=_ZI_NORMAL):
     adv    -> {levelId(1), reward(2)=[Dto_IdNum]}"""
     f = parse_varint_fields(cmd_data)
     level, box = f.get(1, 0), f.get(2, 1)
+    if mode == _ZI_ADV:
+        # The shipped nightmare request carries only levelId. Its SC listener
+        # opens every box of that island, so pay all remaining boxes atomically.
+        with store.atomic_player(player):
+            claimed = _zi_claim_box_group(player, mode,
+                                          ((level, box_id) for box_id in range(1, _ZI_BOXES + 1)))
+            if claimed is None:
+                # The success listener marks every box as taken, even if its
+                # reward list is empty. Reject without emitting that callback.
+                return [_logic_error(6004), ("PVZ.Cmd.Cmd_NewZombieIsland_GetIslandInfo_SC",
+                                            handle_zi_getinfo(b"", player, mode))]
+            total = {}
+            for item_id, num in claimed:
+                total[item_id] = total.get(item_id, 0) + num
+            rewards = list(total.items())
+            messages = grant_fuben_reward(player, rewards) if rewards else []
+            reply = ("PVZ.Cmd.Cmd_NewZombieIsland_TakeReward_SC",
+                     pb_varint_field(1, _zi_clamp_level(level)) + _zi_idnum_body(rewards, field=2))
+            # An ineligible/duplicate response must not leave client-only opened
+            # flags behind; always finish with the persisted authoritative state.
+            return [reply] + messages + [("PVZ.Cmd.Cmd_NewZombieIsland_GetIslandInfo_SC",
+                                         handle_zi_getinfo(b"", player, mode))]
     status, rewards = _zi_claim_box(player, mode, level, box)
     ok = status == 1
     messages = grant_fuben_reward(player, rewards) if ok else []
-    if mode == _ZI_ADV:
-        list_b = b""
-        for item_id, num in rewards:
-            dto = pb_varint_field(1, int(item_id)) + pb_varint_field(2, int(num))
-            list_b += pb_tag(2, 2) + uvarint(len(dto)) + dto
-        log.info("    zombie island adv chest: level=%d -> %s", level, rewards if ok else "refused")
-        return [("PVZ.Cmd.Cmd_NewZombieIsland_TakeReward_SC",
-                 pb_varint_field(1, _zi_clamp_level(level)) + list_b)] + messages
     # normal: rewardStatus says whether it worked (1=Succ, 2=Again, 3=NotQualified).
     list_b = b""
     for item_id, num in rewards:
@@ -8726,17 +8931,18 @@ def handle_zi_takereward(cmd_data, player, mode=_ZI_NORMAL):
 def handle_newzi_takeallreward(cmd_data, player):
     """Cmd_NewZombieIsland_TakeAllReward_CS -> reward(1)=[Dto_IdNum]: open every unopened chest of a
     cleared island (the adv panel's 一键领取)."""
-    total, messages = [], []
-    for lvl, box, taken, unlocked in _zi_boxes(player, _ZI_ADV):
-        if taken or not unlocked:
-            continue
-        status, rewards = _zi_claim_box(player, _ZI_ADV, lvl, box)
-        if status == 1:
-            total += rewards
-    if total:
-        messages = grant_fuben_reward(player, total)
-    log.info("    zombie island adv take-all: %d stack(s) %s", len(total), total)
-    return [("PVZ.Cmd.Cmd_NewZombieIsland_TakeAllReward_SC", _zi_idnum_body(total))] + messages
+    with store.atomic_player(player):
+        total = _zi_claim_box_group(player, _ZI_ADV,
+                                    ((lvl, box) for lvl, box, _taken, _unlocked in _zi_boxes(player, _ZI_ADV)))
+        if total is None:
+            return [_logic_error(6004), ("PVZ.Cmd.Cmd_NewZombieIsland_GetIslandInfo_SC",
+                                        handle_zi_getinfo(b"", player, _ZI_ADV))]
+        messages = []
+        if total:
+            messages = grant_fuben_reward(player, total)
+        log.info("    zombie island adv take-all: %d stack(s) %s", len(total), total)
+        return [("PVZ.Cmd.Cmd_NewZombieIsland_TakeAllReward_SC", _zi_idnum_body(total))] + messages + [
+            ("PVZ.Cmd.Cmd_NewZombieIsland_GetIslandInfo_SC", handle_zi_getinfo(b"", player, _ZI_ADV))]
 
 
 def handle_zi_sweep(cmd_data, player):
@@ -9687,7 +9893,11 @@ def puppet_extract_group(player, group_id):
 
 
 def _puppet_extract_group_dto(group_id, has_free, free_cd, count):
-    """Dto_Puppet_ExtractGroupInfo{groupId(1),hasFree(2),freeCd(3),extractCount(4)}."""
+    """Dto_Puppet_ExtractGroupInfo; extractCount is progress within the pity cycle.
+
+    Game.swf renders maxExtractCount - extractCount. Lifetime captures are kept
+    separately in puppet_extract for the seeded reward stream, never sent here.
+    """
     return (pb_varint_field(1, int(group_id)) + pb_varint_field(2, 1 if has_free else 0)
             + pb_varint_field(3, int(free_cd)) + pb_varint_field(4, int(count)))
 
@@ -9698,8 +9908,8 @@ def handle_puppet_getextractinfo(cmd_data, player):
     groups = sorted(load_dummy_config()["call"])
     body = b""
     for group_id in groups:
-        has_free, free_cd, count, _pity = puppet_extract_group(player, group_id)
-        dto = _puppet_extract_group_dto(group_id, has_free, free_cd, count)
+        has_free, free_cd, _total, pity = puppet_extract_group(player, group_id)
+        dto = _puppet_extract_group_dto(group_id, has_free, free_cd, pity)
         body += pb_tag(2, 2) + uvarint(len(dto)) + dto
     log.info("    傀儡捕捉: %d group(s), free=%s", len(groups),
              [puppet_extract_group(player, g)[0] for g in groups])
@@ -9715,7 +9925,7 @@ def handle_puppet_extract(cmd_data, player):
     count = max(1, min(10, int(f.get(2, 0) or 1)))
     use_item = bool(f.get(3, 0))
     info = load_dummy_config()["call"].get(group_id)
-    has_free, _cd, done, _pity = puppet_extract_group(player, group_id)
+    has_free, free_cd, _total, pity = puppet_extract_group(player, group_id)
     if info is None:
         log.info("    傀儡捕捉: unknown group %d", group_id)
         return [("PVZ.Cmd.Cmd_Puppet_Extract_SC", b""), puppet_error(_PUPPET_ERR_NO_PUPPET)]
@@ -9724,7 +9934,7 @@ def handle_puppet_extract(cmd_data, player):
     paid_msgs = _puppet_pay(player, cost)
     if paid_msgs is None:
         log.info("    傀儡捕捉: group %d x%d refused, missing %s", group_id, count, cost)
-        dto = _puppet_extract_group_dto(group_id, has_free, 0, done)
+        dto = _puppet_extract_group_dto(group_id, has_free, free_cd, pity)
         return [("PVZ.Cmd.Cmd_Puppet_Extract_SC", pb_tag(1, 2) + uvarint(len(dto)) + dto),
                 puppet_error(_PUPPET_ERR_NO_ITEM if use_item else 208)]     # 208 = 钻石不足
     state = _puppet_extract_state(player)
@@ -9751,8 +9961,8 @@ def handle_puppet_extract(cmd_data, player):
         st[0] = int(time.time())
     _puppet_save_extract(player, state)
     item_upd = grant_items(player, sorted(gains.items()))
-    has_free, free_cd, done, _pity = puppet_extract_group(player, group_id)
-    dto = _puppet_extract_group_dto(group_id, has_free, free_cd, done)
+    has_free, free_cd, _total, pity = puppet_extract_group(player, group_id)
+    dto = _puppet_extract_group_dto(group_id, has_free, free_cd, pity)
     items = b""
     for iid, num in sorted(gains.items()):
         num_dto = pb_varint_field(1, iid) + pb_varint_field(2, num)
@@ -11375,10 +11585,11 @@ def handle_td_request_tdinfo(cmd_data, player):
     d = pb_varint_field(1, stage) + pb_varint_field(2, level) + pb_varint_field(3, sub)
     # Only real TD plants go in the lawn chooser — a non-TD (adventure-only) plant here #1009s
     # TDBasicChooseCard. player['plants'] is cleaned at login, but guard here too.
+    avatar_shared = _td_avatar_shared_state(player)
     for pid in player.get("plants", []):
         if pid not in valid_td_plants():
             continue
-        pl = pb_varint_field(1, pid) + pb_varint_field(2, 0)   # Dto_PlantInfo{plantId, isNew}
+        pl = _build_td_plant_info_dto(player, pid, _shared=avatar_shared)
         d += pb_tag(4, 2) + uvarint(len(pl)) + pl               # unlockPlantList (field 4)
     # field 6: talentIdList (repeated UINT32) — the player's studied Greenhouse talents.
     # TDLoadMediator copies this into TDGameInfo.talentList, then startBackToWarfield calls
@@ -11480,9 +11691,10 @@ def handle_td_report_result(cmd_data, player):
             store.unlock_plant(uin, plant)
             if plant not in player.setdefault("plants", []):
                 player["plants"].append(plant)
-            dto = pb_varint_field(1, plant) + pb_varint_field(2, 1)   # Dto_PlantInfo{plantId, isNew=1}
-            body = pb_tag(1, 2) + uvarint(len(dto)) + dto             # unlockPlant (field 1)
-            messages.append(("PVZ.Cmd.Cmd_SyncUnlockPlant_SC", body))
+            if plant in valid_td_plants():
+                dto = _build_td_plant_info_dto(player, plant, is_new=True)
+                body = pb_tag(1, 2) + uvarint(len(dto)) + dto             # unlockPlant (field 1)
+                messages.append(("PVZ.Cmd.Cmd_SyncUnlockPlant_SC", body))
 
         # Live HUD updates (the report handler doesn't apply coin/exp itself). On a level-up
         # push Cmd_SyncLevel_SC too (client updates actorLevel, shows the level-up, and
@@ -11641,6 +11853,26 @@ def handle_friend_getlist(cmd_data, player):
     raw_page_size = int(f.get(4) or 0)
     page_size = raw_page_size if 0 < raw_page_size <= FRIEND_WIDGET_MAX else FRIEND_WIDGET_MAX
     friends = list(store.get_friends(player["uin"]))
+    # 注入人机好友：让每位玩家的好友列表里都出现 AI 同伴（永远在线、可借卡）。
+    # 借出的卡就是该人机在用的最强植物（真实等级 + 它的养成投入），而不是固定的豌豆射手 Lv.1：
+    # 之前每个人机都塞 help_plant_id=1200/level=1，所以"冒险好友卡植物太弱且普通"。
+    try:
+        for _b in bots_local.bots():
+            _card_id, _card_level, _owner_uin = friend_best_card(_b["uin"]) or (0, 1, 0)
+            _td_id = int((_BATTLE_CARDS.get(_card_id) or {}).get("tdId") or 0) if _card_id else 0
+            friends.append({
+                "friend_role_id": _b["uin"],
+                "friend_name": _b["name"],
+                "help_plant_id": _td_id or 1200,      # 借用卡的 TD 植物（= 该人机最强卡）
+                "help_plant_level": max(1, int(_card_level or 1)),
+                "friend_level": int(_b.get("level") or 1),
+                "diamond_flag": 1,
+                "diamond_blue_lvl": 0,
+                "diamond_yellow_lvl": 0,
+                "diamond_xinyue_lvl": 0,
+            })
+    except Exception:
+        log.exception("injecting bot friends failed")
     friends = social_repairs.visible_friends(player["uin"], friends)
     total = len(friends)
     start = page * page_size
@@ -11872,6 +12104,38 @@ def _friend_help_card(fr, role_id=None):
     return uid, card_id, level, stats
 
 
+def friend_td_plant_info(fr, role_id, card_id):
+    """Choose a usable TD helper independently of the friend's adventure card.
+
+    Preserve existing usable helpers. If the adventure captain is unfinished
+    in TD, prefer another real owned card with lawn resources, then an earned
+    TD plant. A stale external friend row falls back to a supported starter.
+    All owner/skin lookups are reads; the adventure helpPlant is unchanged.
+    """
+    available = normal_td_plants()
+    preferred = int(fr.get("help_plant_id") or 0)
+    if not preferred:
+        preferred = int((_BATTLE_CARDS.get(card_id) or {}).get("tdId") or 0)
+    owner = store.get_player_by_role_id(role_id) if role_id else None
+    cards = list(store.get_cards(owner["uin"])) if owner else []
+    compatible = [card for card in cards
+                  if int((_BATTLE_CARDS.get(int(card[1])) or {}).get("tdId") or 0) in available]
+    chosen_card = None
+    if preferred in available:
+        plant_id = preferred
+        chosen_card = next((card for card in compatible
+                            if int(_BATTLE_CARDS[int(card[1])]["tdId"]) == plant_id), None)
+    elif compatible:
+        chosen_card = max(compatible, key=lambda card: (int(card[2]), -int(card[0])))
+        plant_id = int(_BATTLE_CARDS[int(chosen_card[1])]["tdId"])
+    else:
+        owned = [int(pid) for pid in (owner or {}).get("plants", []) if int(pid) in available]
+        starters = [int(pid) for pid in store.STARTER_PLANTS if int(pid) in available]
+        plant_id = next(iter(owned or starters or sorted(available)), 0)
+    avatar_id = _selected_td_avatar(owner, plant_id) if owner else 0
+    return _build_plant_info_dto(plant_id, avatar_id=avatar_id)
+
+
 def build_friend_info_dto(fr, index=1):
     """Dto_FriendInfo{type(1), roleId(2,I64), zoneId(3), name(4), faceId(5), rank(6),
     roleLevel(7), plantInfo(8), passTDNum(9), status(10), helpPlant(11)=Dto_CardFullInfo,
@@ -11883,33 +12147,13 @@ def build_friend_info_dto(fr, index=1):
     role_id = int(fr.get("friend_role_id") or fr.get("role_id") or 0)
     name = fr.get("friend_name") or ("Player%d" % (role_id % 100000))
     help_uid, cid, plant_level, st = _friend_help_card(fr, role_id)
-    # The friend's avatar plant = the card they lend, so the picker shows the real thing.
-    plant_id = int(fr.get("help_plant_id") or 0)
-    if not plant_id:
-        plant_id = int((_BATTLE_CARDS.get(cid) or {}).get("tdId") or 0) or 1200
     # roleLevel is cosmetic here; prefer the friend's account level when the row carries one.
-    role_level = int(fr.get("friend_level") or 0)
-    if not role_level and 'bots_local' in globals():
-        bot = next((b for b in bots_local.bots() if int(b["uin"]) == role_id), None)
-        if bot:
-            role_level = int(bot.get("level") or 0)
-    if not role_level:
-        target = store.get_player_by_role_id(role_id)
-        if target:
-            role_level = int(target.get("level") or 0)
-    if not role_level:
-        role_level = plant_level
+    role_level = int(fr.get("friend_level") or 0) or plant_level
     # The same help_uid is echoed by Cmd_Fuben_GetFormation_SC for a borrowed
     # position; BattleLineupModel indexes friends by helpPlant.base.uid.
     help_plant = build_card_full_info(help_uid, cid, plant_level, st)
     diamond = build_friend_diamond(fr)
-    avatar_id = ((index - 1) % 2) + 1
-    plant_info = (
-        pb_varint_field(1, plant_id)         # plantId
-        + pb_varint_field(2, 0)              # isNew = false
-        + pb_varint_field(3, avatar_id)      # avatarId ← 新增，客户端读这个
-        + pb_varint_field(4, 0)              # strengthLevel = 0
-    )   # Dto_PlantInfo{plantId, isNew}
+    plant_info = friend_td_plant_info(fr, role_id, cid)
     return (pb_varint_field(1, 1)                          # type = 1 (FRIEND_TYPE_SNS)
             + pb_int64_field(2, role_id)                  # roleId
             + pb_varint_field(3, 0)                       # zoneId
@@ -12446,20 +12690,10 @@ def load_plant_talents():
 
 
 def plant_card_power(player, plant_id):
-    """Research uses the player's team power; TD ownership is checked separately."""
-    load_battle_cards()
-    cards = {uid:(cid,level) for uid,cid,level,_exp in store.get_cards(player["uin"])}
-    placements = default_formation_placements(player)
-    bonus = deployed_stat_bonus(player)
-    seen = set()
-    total = 0
-    for pos,uid in placements.items():
-        if uid in seen or uid not in cards:
-            continue
-        seen.add(uid)
-        cid,level = cards[uid]
-        total += card_power(effective_card_stats(player,cid,level,bonus,uid=uid,position=pos))
-    return total
+    """Research uses total power of all owned cards; TD ownership is checked separately."""
+    # Use the existing collection total, including each owned UID's progression.
+    # Lineups and frozen marching/mining formations do not select or duplicate cards.
+    return _player_fight_power(player, empty_power=0)
 
 
 def _eval_talent_condition(player, advanced_cond):
@@ -12515,12 +12749,14 @@ def _eval_talent_condition(player, advanced_cond):
         if ctype == 16:
             return int(player.get("tr_max") or 0) >= int(value)
         if ctype == 18:
-            data = _load_json_state(player, "arena_data", {})
+            data = _arena_state(player, "arena_data")
             # ArenaMyInfoView's 今日积分 is Cmd_Arena_GetMyInfo_SC.curScore
             # (arena_data.score), including the local initial 100 points.
             # daily_score counts only points earned today, so comparing it here
             # locked a displayed score of 137 behind the 130-point prerequisite.
-            return data.get("day") == time.strftime("%Y%m%d") and int(data.get("score") or 0) >= int(value)
+            # Use the same rollover as GetMyInfo: score persists across days;
+            # daily counters reset even when research is opened before the arena.
+            return int(data.get("score") or 0) >= int(value)
         if ctype == 19:
             rank = next((r["rank"] for r in _rank_arena_board(player) if r["uin"] == uin), 0)
             return 0 < rank <= int(value)
@@ -12530,15 +12766,14 @@ def _eval_talent_condition(player, advanced_cond):
             with guild_local._db() as con:
                 return guild_local._guild_for_player(con, player) is not None
         if ctype == 23:
-            # The local world-map adapter has no persisted mine ownership yet.
-            # Do not invent ownership to satisfy a research prerequisite.
-            return False
+            # params is the map region; value is its required captured-site count.
+            return worldmap_resources.owned_mine_count(store, uin, int(params)) >= int(value)
         if ctype == 22:
             kind, quality, level = map(int, params.split(","))
             props = load_nutrition_property()
             return sum((not kind or props.get(r["base_id"], {}).get("type") == kind)
                        and props.get(r["base_id"], {}).get("quality", 0) >= quality
-                       and r["level"] >= level for r in store.get_reagents(uin)) >= int(value)
+                       and max(1, int(r["level"])) >= level for r in store.get_reagents(uin)) >= int(value)
     except (ValueError, IndexError, TypeError, KeyError):
         return False
     return False                           # unknown prerequisites must not grant a talent
@@ -12549,14 +12784,15 @@ def _talent_gates(player, info, power_cache):
     pid = int(info["plantId"])
     if pid not in set(store.get_player_plants(player["uin"])):
         return False, False
-    if pid not in power_cache:
-        power_cache[pid] = plant_card_power(player, pid)
-    return (power_cache[pid] >= int(info.get("power") or 0),
+    # Every plant uses the same collection total. Cache it only within this request.
+    if "total_power" not in power_cache:
+        power_cache["total_power"] = plant_card_power(player, pid)
+    return (power_cache["total_power"] >= int(info.get("power") or 0),
             _eval_talent_condition(player, info.get("cond", "")))
 
 
-def _talent_current_player(handler):
-    """Read gates and persist Study against one current player snapshot."""
+def _with_current_player(handler):
+    """Read current saved state and commit each request as one player transaction."""
     @functools.wraps(handler)
     def current(cmd_data, player):
         with store.atomic_player(player):
@@ -12564,7 +12800,7 @@ def _talent_current_player(handler):
     return current
 
 
-@_talent_current_player
+@_with_current_player
 def handle_talent_getlist(cmd_data, player):
     """Cmd_Talent_GetList_CS{stageId} -> Cmd_Talent_GetList_SC{stageId(1),
     unlockPlantList(3)=[Dto_PlantInfo], talentList(4)=[Dto_TalentInfo]}. satisfyPower/Condition
@@ -12587,12 +12823,13 @@ def handle_talent_getlist(cmd_data, player):
     # Only genuinely unlocked TD plants may be activated in the greenhouse.
     owned_plants = set(store.get_player_plants(player["uin"]))
     seen = set()
+    avatar_shared = _td_avatar_shared_state(player)
     for tid in stage_talents:
         pid = tal["talent"][tid]["plantId"]
         if pid in seen or pid not in owned_plants:
             continue
         seen.add(pid)
-        dto = pb_varint_field(1, pid) + pb_varint_field(2, 0)   # Dto_PlantInfo{plantId, isNew}
+        dto = _build_td_plant_info_dto(player, pid, _shared=avatar_shared)
         out += pb_tag(3, 2) + uvarint(len(dto)) + dto
     # talentList (field 4): use the same gates as the Study request.
     power_cache = {}
@@ -12616,7 +12853,7 @@ def handle_talent_getlist(cmd_data, player):
     return out
 
 
-@_talent_current_player
+@_with_current_player
 def handle_talent_study(cmd_data, player):
     """Cmd_Talent_Study_CS{talentId} -> study it (persist) + Cmd_Talent_Study_SC{talentId}.
     Enforces ownership, team power, prerequisites and the parent talent on every request."""
@@ -12703,16 +12940,17 @@ def _drop_guild_cache(*_args):
     _RANK_BOT_CACHE = (0.0, [])       # bot rows embed their guild name
 
 
-def _player_fight_power(player):
+def _player_fight_power(player, empty_power=100):
     """Collection power in the same card-local units as Cmd_Card_GetPackage_SC.
 
     Include each owned UID's progression; formation-position nutrition and the
     Lab/Tree/VIP deployment bonuses belong to team power, not this collection.
+    Existing consumers retain their empty-roster fallback; research requests zero.
     """
     load_battle_cards()
     total = sum(card_power(effective_card_stats(player, cid, lv, _ZERO_STAT_BONUS, uid=uid))
                 for uid, cid, lv, _e in store.get_cards(player["uin"]) if cid in _BATTLE_CARDS)
-    return total or 100
+    return total or empty_power
 
 
 def _rank_player_power(player):
@@ -13019,11 +13257,12 @@ _GARDEN_MAX_IDLE_CYCLES = 4320      # cap idle accrual at ~24h (24*3600/20) so i
 _GARDEN_BEAN_EXP = 10000            # exp per 小经验豆 (item 2002 use-effect) -> bean conversion
 _GARDEN_EXP_BEAN_ITEM = 2002
 _GARDEN_FERTILIZER_TIME = 4 * 3600
+_GARDEN_FREE_PET_WORK_TIME = 10 * 3600
 _GARDEN_DEFAULT_FERTILIZER = 1025   # 普通化肥; one-timeslot baseline for legacy pots
 _GARDEN_KETTLE_ITEM = 1009          # 金水壶 (ItemID.GOLDEN_WATERING_CANS)
 _GARDEN_KETTLE_SHOP_ID = 210        # MallItemTemplate.id; ShopCmd sends this, not itemID
 _GARDEN_KETTLE_MAX = 10
-_GARDEN_WATER_SECONDS = 3600
+_GARDEN_WATER_SECONDS = 4 * 3600
 
 
 def load_garden_upgrades():
@@ -13192,7 +13431,263 @@ def _encode_garden_pet(pid, owned=False, used=False, forever=False, expire=0, st
             + pb_varint_field(7, p["trial"]) + pb_varint_field(8, int(forever_price)))
 
 
+def _garden_raw_work_epoch(raw):
+    """Read an owned work interval before expiry cleanup can discard its history."""
+    try:
+        states = json.loads(raw or "{}")
+    except (TypeError, ValueError):
+        states = {}
+    if isinstance(states, dict):
+        for key, state in states.items():
+            try:
+                pid = int(key)
+                if pid not in _GARDEN_ALL_PET_IDS or not isinstance(state, dict):
+                    continue
+                if not (state.get("owned") and state.get("used")):
+                    continue
+                end = int(state.get("expire", 0) or 0)
+                # The base pet always sleeps on expiry, including legacy forever flags.
+                permanent = bool(state.get("forever")) and pid != 1
+                start = max(0, int(state.get("start", 0) or 0))
+                if not start and not permanent:
+                    start = max(0, end - 86400)
+                if permanent or end:
+                    return {"id": pid, "start": start, "end": 0 if permanent else end,
+                            "origin": start, "raw": raw or ""}
+            except (TypeError, ValueError):
+                continue
+    return {"id": 0, "start": 0, "end": 0, "origin": 0, "raw": raw or ""}
+
+
+def _garden_work_epoch(player):
+    raw = player.get("garden_pet_data") or ""
+    try:
+        epoch = json.loads(player.get("garden_work_epoch") or "{}")
+    except (TypeError, ValueError):
+        epoch = {}
+    if not isinstance(epoch, dict) or epoch.get("raw") != raw:
+        epoch = _garden_raw_work_epoch(raw)
+        encoded = json.dumps(epoch, separators=(",", ":"))
+        player["garden_work_epoch"] = encoded
+        store.save_player(player["uin"], garden_work_epoch=encoded)
+    return epoch
+
+
+def _garden_epoch_active(epoch, now):
+    return bool(epoch.get("id") and int(epoch.get("start", 0)) <= now
+                and (not epoch.get("end") or now < int(epoch["end"])))
+
+
+def _garden_cycle_exp(pet_id, fertilizer_id, pot_level):
+    per_cycle = _GARDEN_SUNFLOWER_EXP
+    upgrade = load_garden_upgrades().get(max(1, int(pot_level or 1)))
+    if upgrade:
+        per_cycle = (per_cycle * int(upgrade.get("expBonus") or 10000)) // 10000
+    fertilizer = load_garden_fertilizers().get(int(fertilizer_id), {})
+    per_cycle = (per_cycle * max(10000, int(fertilizer.get("expBuff") or 10000))) // 10000
+    pet = load_garden_pets().get(int(pet_id or 0))
+    if pet:
+        per_cycle = (per_cycle * max(100, int(pet.get("averagePercent") or 100))) // 100
+        per_cycle += max(0, int(pet.get("addExp") or 0))
+    return per_cycle
+
+
+def _garden_advance_pot(player, field_id, row, epoch, now, persist=True):
+    """Produce at most one waiting ball; only pet ticks release its occupied slot.
+
+    Already banked rewards never depend on the currently selected pet. Events are
+    calculated in memory and persisted once. Empty/expired/capped intervals skip
+    directly to their boundary instead of iterating over years of idle ticks.
+    """
+    seed_id, planted = row["seed_id"], row["plant_time"]
+    seed = load_garden_seeds().get(seed_id)
+    if not planted or not seed or seed["type"] != _GARDEN_SEED_TYPE_COLOR:
+        return row
+    fertilizer_id, last, _need = _garden_fertilizer_state(
+        seed_id, planted, now, row["fertilizer_id"], row["last_fertilizer_time"])
+    period = max(1, int(seed["time"]))
+    bank, cycles, held = row["pending_exp"], row["pending_cycles"], row["held_exp"]
+    if row["pet_accrual_version"]:
+        cursor, next_cycle = row["accrual_at"], row["next_cycle_time"]
+    else:
+        cursor = max(planted, last) if not row["accrual_version"] else planted
+        next_cycle = cursor + period
+    if now < cursor:
+        return row
+    deadline = last + _GARDEN_FERTILIZER_TIME if last else 0
+    start, end = int(epoch.get("start", 0)), int(epoch.get("end", 0))
+    work_start, work_end = max(cursor, start), min(now, end or now)
+    # Permanent legacy selected pets have no start evidence. Preserve their old
+    # selected-work interpretation from this pot's known clock, plus saved banks.
+    origin = int(epoch.get("origin", 0)) or (max(planted, last) if not row["accrual_version"] else planted)
+    phases = []
+    if epoch.get("id") and work_start <= work_end:
+        if cursor < work_start:
+            phases.append((cursor, work_start, 0))
+        phases.append((work_start, work_end, int(epoch["id"])))
+        if work_end < now:
+            phases.append((work_end, now, 0))
+    else:
+        phases.append((cursor, now, 0))
+    for begin, finish, pet_id in phases:
+        tick = origin + ((begin - origin) // period + 1) * period if pet_id else 0
+        while True:
+            production = (next_cycle if not held and next_cycle and next_cycle <= deadline
+                          and cycles < _GARDEN_MAX_IDLE_CYCLES else 0)
+            if pet_id:
+                # Do not visit an empty pickup tick unless a production event can follow.
+                pickup = (tick if (held or production)
+                          and (not end or tick < end) else 0)
+            else:
+                pickup = 0
+            event = min(t for t in (production, pickup) if t) if production or pickup else 0
+            if not event or event > finish:
+                break
+            if production == event:
+                held = _garden_cycle_exp(pet_id, fertilizer_id, row["level"])
+                cycles += 1
+                next_cycle = 0
+            if pickup == event:
+                if held:
+                    bank += held
+                    held = 0
+                    next_cycle = event + period
+                tick = event + period
+        # No production at the start boundary was replayed: the next timestamp
+        # stays ahead of the processed cursor, or the slot remains occupied.
+    new_state = (bank, cycles, held, next_cycle, int(now))
+    old_state = (row["pending_exp"], row["pending_cycles"], row["held_exp"],
+                 row["next_cycle_time"], row["accrual_at"])
+    if persist and (not row["pet_accrual_version"] or new_state != old_state):
+        store.update_garden_pot_accrual(player["uin"], field_id, *new_state)
+    result = dict(row)
+    result.update(zip(("pending_exp", "pending_cycles", "held_exp", "next_cycle_time", "accrual_at"),
+                      new_state))
+    result["pet_accrual_version"] = 1
+    return result
+
+
+_GARDEN_AUTO_UPDATES = threading.local()
+
+
+def _garden_auto_item_update(player, item_ids):
+    if not item_ids:
+        return None
+    body = b""
+    for item_id in sorted(item_ids):
+        dto = build_item_dto(item_id, store.get_item_count(player["uin"], item_id))
+        body += pb_tag(1, 2) + uvarint(len(dto)) + dto
+    return ("PVZ.Cmd.Cmd_Item_Update_SC", body)
+
+
+def _garden_advance_all(player, now):
+    """Apply due auto-fertilizer events using only inventory known at that time.
+
+    Existing stock can cover known offline deadlines. Newly observed external
+    stock or changed configuration becomes available only at this request's now.
+    Legacy saves have no acquisition/configuration evidence: first observe now.
+    """
+    now = int(now)
+    epoch = _garden_work_epoch(player)
+    initial = store.get_garden_pot_details(player["uin"])
+    rows = {field_id: dict(row) for field_id, row in initial.items()}
+    fertilizers = load_garden_fertilizers()
+    item_ids = {int(tpl.get("itemID") or fid) for fid, tpl in fertilizers.items()}
+    current_stock = {str(item_id): store.get_item_count(player["uin"], item_id)
+                     for item_id in item_ids}
+    try:
+        state = json.loads(player.get("garden_auto_state") or "{}")
+    except (TypeError, ValueError):
+        state = {}
+    valid = (isinstance(state, dict) and isinstance(state.get("stock"), dict)
+             and isinstance(state.get("at"), int))
+    if valid and now < state["at"]:
+        # A backwards clock cannot replay inventory history. A newly replaced
+        # legacy pot still needs its own independent production initialization.
+        for field_id, row in initial.items():
+            _garden_advance_pot(player, field_id, row, epoch, now)
+        return epoch
+    consumed = {}
+
+    def renew_between(begin, finish, enabled, fertilizer_id, stock):
+        template = fertilizers.get(int(fertilizer_id or 0))
+        if not enabled or not template:
+            return
+        item_id = int(template.get("itemID") or fertilizer_id)
+        key = str(item_id)
+        available = max(0, int(stock.get(key, 0) or 0))
+        while available:
+            due = []
+            for field_id, row in rows.items():
+                seed = load_garden_seeds().get(row["seed_id"])
+                if not row["plant_time"] or not seed or seed["type"] != _GARDEN_SEED_TYPE_COLOR:
+                    continue
+                _fid, last, _need = _garden_fertilizer_state(
+                    row["seed_id"], row["plant_time"], finish,
+                    row["fertilizer_id"], row["last_fertilizer_time"])
+                when = max(int(begin), last + _GARDEN_FERTILIZER_TIME)
+                if last and when <= finish:
+                    due.append((when, field_id))
+            if not due:
+                break
+            when, field_id = min(due)  # shared bag: deadline first, stable field order
+            row = _garden_advance_pot(player, field_id, rows[field_id], epoch, when, persist=False)
+            seed = load_garden_seeds()[row["seed_id"]]
+            row.update(plant_time=when, fertilizer_id=int(fertilizer_id),
+                       last_fertilizer_time=when, accrual_version=1,
+                       next_cycle_time=0 if row["held_exp"] else when + seed["time"],
+                       accrual_at=when, pet_accrual_version=1)
+            rows[field_id] = row
+            available -= 1
+            stock[key] = available
+            consumed[item_id] = consumed.get(item_id, 0) + 1
+
+    if valid:
+        known_stock = {key: min(max(0, int(state["stock"].get(key, 0) or 0)), count)
+                       for key, count in current_stock.items()}
+        renew_between(state["at"], now, state.get("auto"), state.get("selected"), known_stock)
+    # Freeze the old production before stock/config newly observed at now is used.
+    for field_id, row in list(rows.items()):
+        rows[field_id] = _garden_advance_pot(player, field_id, row, epoch, now, persist=False)
+    available_now = {key: count - consumed.get(int(key), 0) for key, count in current_stock.items()}
+    selected = int(player.get("garden_autofertilizer") or _GARDEN_DEFAULT_FERTILIZER)
+    enabled = bool(player.get("garden_autouse"))
+    renew_between(now, now, enabled, selected, available_now)
+
+    # Each pot is written only at the final state; events above are pure calculations.
+    for field_id, row in rows.items():
+        old = initial[field_id]
+        if row["plant_time"] != old["plant_time"]:
+            store.set_garden_pot(player["uin"], field_id, row["seed_id"],
+                                 row["plant_time"], reset_pending=False)
+        if (row["fertilizer_id"], row["last_fertilizer_time"]) != (old["fertilizer_id"], old["last_fertilizer_time"]):
+            store.update_garden_pot_meta(player["uin"], field_id,
+                                         row["fertilizer_id"], row["last_fertilizer_time"])
+        keys = ("pending_exp", "pending_cycles", "held_exp", "next_cycle_time", "accrual_at")
+        if row["pet_accrual_version"] != old["pet_accrual_version"] or any(row[k] != old[k] for k in keys):
+            store.update_garden_pot_accrual(player["uin"], field_id, *(row[k] for k in keys))
+    for item_id, amount in consumed.items():
+        store.add_item(player["uin"], item_id, -amount)
+    updates = getattr(_GARDEN_AUTO_UPDATES, "items", None)
+    if updates is not None:
+        updates.update(consumed)
+    final_stock = {key: count - consumed.get(int(key), 0) for key, count in current_stock.items()}
+    encoded = json.dumps({"at": now, "auto": int(enabled), "selected": selected,
+                          "stock": final_stock}, separators=(",", ":"), sort_keys=True)
+    if encoded != (player.get("garden_auto_state") or ""):
+        player["garden_auto_state"] = encoded
+        store.save_player(player["uin"], garden_auto_state=encoded)
+    return epoch
+
+
 def _garden_pet_states(player, now=None):
+    with store.atomic_player(player):
+        now = int(time.time()) if now is None else int(now)
+        _garden_advance_all(player, now)
+        return _garden_pet_states_after_advance(player, now)
+
+
+def _garden_pet_states_after_advance(player, now=None):
     """Load the persisted pet ownership map and discard expired one-day pets.
 
     The original client keeps these values in its GardenProxy model, while the PoC
@@ -13231,12 +13726,19 @@ def _garden_pet_states(player, now=None):
             if value != state:
                 changed = True
     if changed:
-        _save_garden_pet_states(player, states)
+        _save_garden_pet_states(player, states, now)
     return states
 
 
-def _save_garden_pet_states(player, states):
-    """Persist only the fields represented by Dto_Pet."""
+def _save_garden_pet_states(player, states, now=None):
+    with store.atomic_player(player):
+        now = int(time.time()) if now is None else int(now)
+        previous = _garden_advance_all(player, now)
+        return _save_garden_pet_states_after_advance(player, states, previous, now)
+
+
+def _save_garden_pet_states_after_advance(player, states, previous, now):
+    """Persist Dto_Pet state and the independent pickup timer phase."""
     clean = {}
     for pid, state in states.items():
         if pid not in _GARDEN_ALL_PET_IDS:
@@ -13250,7 +13752,13 @@ def _save_garden_pet_states(player, states):
         }
     encoded = json.dumps(clean, ensure_ascii=False, separators=(",", ":"))
     player["garden_pet_data"] = encoded
-    store.save_player(player["uin"], garden_pet_data=encoded)
+    epoch = _garden_raw_work_epoch(encoded)
+    if _garden_epoch_active(previous, now) and _garden_epoch_active(epoch, now):
+        # The client's existing interval survives a working-to-working switch.
+        epoch["origin"] = previous.get("origin", previous.get("start", 0))
+    epoch_encoded = json.dumps(epoch, separators=(",", ":"))
+    player["garden_work_epoch"] = epoch_encoded
+    store.save_player(player["uin"], garden_pet_data=encoded, garden_work_epoch=epoch_encoded)
 
 
 def _garden_active_pet_id(player, now=None):
@@ -13261,7 +13769,7 @@ def _garden_active_pet_id(player, now=None):
     for pid, state in states.items():
         if not (state.get("owned") and state.get("used")):
             continue
-        if state.get("forever") or int(state.get("expire", 0) or 0) > int(now):
+        if (pid != 1 and state.get("forever")) or int(state.get("expire", 0) or 0) > int(now):
             return int(pid)
     return 0
 
@@ -13386,43 +13894,45 @@ def _garden_fertilizer_state(seed_id, plant_time, now, fertilizer_id=0, last_fer
     return fid, last, need
 
 
-def _garden_pending_exp(seed, plant_time, now, pet_id=0, fertilizer_id=0,
-                        last_fertilizer_time=0, pot_level=1):
-    """Whole-cycle exp a sunflower pot has produced since plant_time (capped).
-
-    A selected pet automatically collects the experience balls.  The clientDB pet
-    template expresses its average critical multiplier and its fixed per-pickup
-    bonus; applying both here makes the pet useful beyond just changing the card art.
-    """
+def _garden_pending_cycles(seed, plant_time, now, fertilizer_id=0,
+                           last_fertilizer_time=0, pending_cycles=0, accrual_version=1):
+    """Completed cycles in this fertilizer window, within the existing idle cap."""
     if not plant_time:
         return 0
     seed_id = int(seed.get("id") or (1 if seed.get("type") == _GARDEN_SEED_TYPE_COLOR else 0))
-    fertilizer_id, last_fertilizer_time, need_fertilizer = _garden_fertilizer_state(
+    _fertilizer_id, last, _need = _garden_fertilizer_state(
         seed_id, plant_time, now, fertilizer_id, last_fertilizer_time)
-    if need_fertilizer:
+    if not last:
         return 0
-    period = max(1, seed["time"])
-    cycles = min((now - int(plant_time)) // period, _GARDEN_MAX_IDLE_CYCLES)
-    cycles = max(0, cycles)
-    per_cycle = _GARDEN_SUNFLOWER_EXP
-    upgrade = load_garden_upgrades().get(max(1, int(pot_level or 1)))
-    if upgrade:
-        per_cycle = (per_cycle * int(upgrade.get("expBonus") or 10000)) // 10000
-    fertilizer = load_garden_fertilizers().get(int(fertilizer_id), {})
-    # GardenUtils.getFertilizerPercent() divides expBuff by 100; the final
-    # getTotalExp() divides that percentage by 100 again.  Thus 10000 = 1x,
-    # 15000 = 1.5x, 25000 = 2.5x.
-    exp_buff = max(10000, int(fertilizer.get("expBuff") or 10000))
-    per_cycle = (per_cycle * exp_buff) // 10000
-    pet = load_garden_pets().get(int(pet_id or 0))
-    if pet:
-        per_cycle = (per_cycle * max(100, int(pet.get("averagePercent") or 100))) // 100
-        per_cycle += max(0, int(pet.get("addExp") or 0))
-    return cycles * per_cycle
+    if not accrual_version:
+        # Old manual fertilization overwrote only the fertilizer timestamp.
+        # Unknown prior windows cannot be reconstructed from that single row.
+        plant_time = max(int(plant_time), last)
+    production_end = min(int(now), last + _GARDEN_FERTILIZER_TIME)
+    cycles = max(0, (production_end - int(plant_time)) // max(1, seed["time"]))
+    return min(cycles, max(0, _GARDEN_MAX_IDLE_CYCLES - int(pending_cycles or 0)))
+
+
+def _garden_pending_exp(seed, plant_time, now, pet_id=0, fertilizer_id=0,
+                        last_fertilizer_time=0, pot_level=1, pending_exp=0,
+                        pending_cycles=0, accrual_version=1):
+    """Stateless compatibility estimate for multiplier tests, not pot settlement.
+
+    Actual garden handlers/DTOs use the persistent single-ball/pet-tick engine;
+    this legacy parameter-only helper has no work interval or pickup history.
+    """
+    seed_id = int(seed.get("id") or (1 if seed.get("type") == _GARDEN_SEED_TYPE_COLOR else 0))
+    fertilizer_id, last_fertilizer_time, _need = _garden_fertilizer_state(
+        seed_id, plant_time, now, fertilizer_id, last_fertilizer_time)
+    cycles = _garden_pending_cycles(seed, plant_time, now, fertilizer_id,
+                                    last_fertilizer_time, pending_cycles, accrual_version)
+    return max(0, int(pending_exp or 0)) + cycles * _garden_cycle_exp(
+        pet_id, fertilizer_id, pot_level)
 
 
 def _encode_garden_pot(seed_id, plant_time, now, pet_id=0, fertilizer_id=0,
-                       last_fertilizer_time=0, level=1):
+                       last_fertilizer_time=0, level=1, pending_exp=0,
+                       pending_cycles=0, accrual_version=1, held_exp=None, next_cycle_time=0):
     """Dto_Pot{level(1), issevencolor(2), seedid(3), planttime(4), nextharvesttime(5),
     lastfertilizetime(6), needfertilize(7), fertilizerid(8), exp(9), bigball(11)}.
     An empty pot (seed_id=0) is just level=1.
@@ -13440,7 +13950,14 @@ def _encode_garden_pot(seed_id, plant_time, now, pet_id=0, fertilizer_id=0,
     if is_sun:
         d += pb_varint_field(2, 1)                         # issevencolor
     d += pb_varint_field(3, seed_id) + pb_varint_field(4, int(plant_time))
-    d += pb_varint_field(5, int(plant_time) + seed["time"])   # nextharvesttime
+    next_harvest = int(plant_time) + seed["time"]
+    if is_sun and next_cycle_time:
+        next_harvest = int(next_cycle_time)
+    if is_sun and int(pending_exp or 0) + int(held_exp or 0) > 0:
+        # PotVO ignores exp(9); a previously generated ball is ready even when
+        # replacing fertilizer has just restarted the production clock.
+        next_harvest = min(next_harvest, int(now))
+    d += pb_varint_field(5, next_harvest)                    # nextharvesttime
     fert_id, fert_time, need = _garden_fertilizer_state(
         seed_id, plant_time, now, fertilizer_id, last_fertilizer_time)
     d += pb_varint_field(6, fert_time)                         # lastfertilizetime
@@ -13448,8 +13965,11 @@ def _encode_garden_pot(seed_id, plant_time, now, pet_id=0, fertilizer_id=0,
     if fert_id:
         d += pb_varint_field(8, fert_id)                       # fertilizerid
     if is_sun:
-        d += pb_varint_field(9, _garden_pending_exp(
-            dict(seed, id=seed_id), plant_time, now, pet_id, fert_id, fert_time, level))   # pending exp
+        total = (max(0, int(pending_exp)) + max(0, int(held_exp)) if held_exp is not None
+                 else _garden_pending_exp(dict(seed, id=seed_id), plant_time, now,
+                                          pet_id, fert_id, fert_time, level,
+                                          pending_exp, pending_cycles, accrual_version))
+        d += pb_varint_field(9, total)                        # pending exp
         d += pb_bool(11, False)                               # bigball (non-null for the client)
     return d
 
@@ -13463,7 +13983,9 @@ def _garden_fields_blob(player, now):
     for fid, row in sorted(details.items()):
         pot = _encode_garden_pot(row["seed_id"], row["plant_time"], now, pet_id,
                                  row.get("fertilizer_id", 0), row.get("last_fertilizer_time", 0),
-                                 row.get("level", 1))
+                                 row.get("level", 1), row.get("pending_exp", 0),
+                                 row.get("pending_cycles", 0), row.get("accrual_version", 0),
+                                 row.get("held_exp", 0), row.get("next_cycle_time", 0))
         field = pb_varint_field(1, fid) + pb_tag(2, 2) + uvarint(len(pot)) + pot   # Dto_Field{fieldid, pot}
         d += pb_tag(1, 2) + uvarint(len(field)) + field                            # fields (repeated)
     return d
@@ -13471,13 +13993,16 @@ def _garden_fields_blob(player, now):
 
 def _garden_field_dto(player, field_id, now):
     """Encode one Dto_Field for the garden action responses."""
+    pet_id = _garden_active_pet_id(player, now)
     row = store.get_garden_pot_details(player["uin"]).get(int(field_id))
     if row is None:
         return b""
     pot = _encode_garden_pot(row["seed_id"], row["plant_time"], now,
-                             _garden_active_pet_id(player, now),
+                             pet_id,
                              row.get("fertilizer_id", 0), row.get("last_fertilizer_time", 0),
-                             row.get("level", 1))
+                             row.get("level", 1), row.get("pending_exp", 0),
+                             row.get("pending_cycles", 0), row.get("accrual_version", 0),
+                                 row.get("held_exp", 0), row.get("next_cycle_time", 0))
     return pb_varint_field(1, int(field_id)) + pb_tag(2, 2) + uvarint(len(pot)) + pot
 
 
@@ -13533,6 +14058,39 @@ def _garden_sync(player, now):
     return ("PVZ.Cmd.Cmd_Sync_Garden_Info_SC", body)
 
 
+def _garden_current_player(handler):
+    """Keep each garden action, its production state and rewards in one transaction."""
+    @functools.wraps(handler)
+    def current(cmd_data, player):
+        previous = getattr(_GARDEN_AUTO_UPDATES, "items", None)
+        changed = set()
+        _GARDEN_AUTO_UPDATES.items = changed
+        player.pop("_garden_auto_sync_payload", None)
+        try:
+            with store.atomic_player(player):
+                now = int(time.time())
+                _garden_advance_all(player, now)
+                messages = handler(cmd_data, player)
+                pending = player.pop("_garden_auto_sync_payload", None)
+                has_garden = any(name in ("PVZ.Cmd.Cmd_Garden_GetInfo_SC",
+                                          "PVZ.Cmd.Cmd_Sync_Garden_Info_SC") for name, _body in messages)
+                if (changed or pending) and not has_garden:
+                    messages = list(messages) + [_garden_sync(player, now)]
+                update = _garden_auto_item_update(player, changed)
+                if update:
+                    messages = list(messages) + [update]
+            if previous is not None:
+                previous.update(changed)
+            return messages
+        except Exception:
+            log.exception("garden action rolled back: %s uin=%s", handler.__name__, player.get("uin"))
+            return [("PVZ.Cmd.Cmd_LogicError_SC", pb_varint_field(1, 3001))]
+        finally:
+            _GARDEN_AUTO_UPDATES.items = previous
+    return current
+
+
+@_garden_current_player
 def handle_garden_getinfo(cmd_data, player):
     """Cmd_Garden_GetInfo_CS -> the whole garden (unlocking new pots for the player's level, and
     handing out the one-time starter crop seeds so the seed picker has crops to plant)."""
@@ -13552,6 +14110,7 @@ def handle_garden_getinfo(cmd_data, player):
     return [("PVZ.Cmd.Cmd_Garden_GetInfo_SC", make_garden_getinfo(player, now))] + extra
 
 
+@_garden_current_player
 def handle_garden_plant(cmd_data, player):
     """Cmd_Garden_Plant_CS{fieldid(1), seedtype(2), itemid(3)} -> plant a seed. seedtype is a
     TYPE, not a seed id: 1=seven-color sunflower (the exp producer, from the always-present colour
@@ -13592,7 +14151,7 @@ def handle_garden_plant(cmd_data, player):
         store.update_garden_pot_meta(player["uin"], fid, planted_fertilizer, planted_fertilizer_time)
     pot_level = store.get_garden_pot_details(player["uin"]).get(fid, {}).get("level", 1)
     pot = _encode_garden_pot(seed_id, now, now, 0, planted_fertilizer,
-                             planted_fertilizer_time, pot_level)
+                             planted_fertilizer_time, pot_level, held_exp=0)
     field = pb_varint_field(1, fid) + pb_tag(2, 2) + uvarint(len(pot)) + pot
     plant_sc = pb_tag(3, 2) + uvarint(len(field)) + field    # Cmd_Garden_Plant_SC.field(3)
     log.info("    garden plant: field %d seed %d (seedtype %d itemid %d)", fid, seed_id, seedtype, itemid)
@@ -13606,6 +14165,7 @@ def handle_garden_plant(cmd_data, player):
     return msgs
 
 
+@_garden_current_player
 def handle_garden_harvest(cmd_data, player):
     """Harvest one or more pots.
 
@@ -13636,21 +14196,20 @@ def handle_garden_harvest(cmd_data, player):
         meta = details.get(fid, {})
         result = pb_varint_field(1, fid) + pb_varint_field(2, seed["type"])
         if seed["type"] == _GARDEN_SEED_TYPE_COLOR:
-            exp_gain = _garden_pending_exp(
-                dict(seed, id=seed_id), plant_time, now, pet_id,
-                meta.get("fertilizer_id", 0), meta.get("last_fertilizer_time", 0),
-                meta.get("level", 1))
+            fertilizer_id, fertilizer_time, _need = _garden_fertilizer_state(
+                seed_id, plant_time, now, meta.get("fertilizer_id", 0),
+                meta.get("last_fertilizer_time", 0))
+            exp_gain = int(meta.get("pending_exp", 0)) + int(meta.get("held_exp", 0))
             if exp_gain <= 0:
                 continue
             player["garden_exp"] = int(player.get("garden_exp") or 0) + exp_gain
             # 好感度 is NOT a harvest reward: rule 2 ("1钻石=1好感度") makes the diamond spend the
             # only source, credited by handle_garden_buypet. Harvesting only fills the exp pool.
-            # A sunflower keeps its fertilizer tier but starts a fresh 4-hour
-            # fertilizer window after each collection, matching the client timer.
+            # Collecting experience restarts only the production clock. Persist
+            # the original fertilizer window, including legacy planting defaults,
+            # before that fallback could otherwise be reinterpreted from now.
             store.set_garden_pot(uin, fid, seed_id, now)
-            store.update_garden_pot_meta(uin, fid,
-                                         meta.get("fertilizer_id") or _GARDEN_DEFAULT_FERTILIZER,
-                                         now)
+            store.update_garden_pot_meta(uin, fid, fertilizer_id, fertilizer_time)
             result += pb_varint_field(3, exp_gain) + pb_varint_field(4, 1)
             log.info("    garden harvest: field %d sunflower +%d exp (pool=%d, goodwill=%d)",
                      fid, exp_gain, player["garden_exp"], int(player.get("garden_goodwill") or 0))
@@ -13673,6 +14232,7 @@ def handle_garden_harvest(cmd_data, player):
     return [("PVZ.Cmd.Cmd_Garden_Harvest_SC", result_blob), _garden_sync(player, now)] + grant_msgs
 
 
+@_garden_current_player
 def handle_garden_takebean(cmd_data, player):
     """Cmd_Garden_TakeBean_CS -> move the whole beans sitting in the pool (pool // 10000) into the
     bag as 小经验豆 (item 2002); keep the remainder as the bar progress. Reply
@@ -13728,6 +14288,7 @@ def _garden_coin_sync(player):
     return ("PVZ.Cmd.Cmd_SyncCoin_SC", pb_varint_field(1, int(player.get("coin") or 0)))
 
 
+@_garden_current_player
 def handle_garden_buyfertilizer(cmd_data, player):
     """Buy stackable garden fertilizer from the clientDB price table."""
     f = parse_varint_fields(cmd_data)
@@ -13858,6 +14419,7 @@ def handle_shop_buyitem(cmd_data, player):
     return messages
 
 
+@_garden_current_player
 def handle_garden_fertilize(cmd_data, player):
     """Consume one fertilizer and apply its four-hour multiplier to a sunflower pot."""
     f = parse_varint_fields(cmd_data)
@@ -13872,7 +14434,15 @@ def handle_garden_fertilize(cmd_data, player):
     item_id = int(tpl.get("itemID") or fertilizer_id)
     if store.get_item_count(player["uin"], item_id) <= 0:
         return []
+    seed = load_garden_seeds()[seed_id]
+    pending_exp, pending_cycles = row["pending_exp"], row["pending_cycles"]
+    held_exp = row["held_exp"]
     consume = grant_items(player, [(item_id, -1)])
+    # Completed balls keep the old multiplier. An unfinished cycle has not
+    # produced a ball; replacing fertilizer starts its next full cycle now.
+    store.set_garden_pot(player["uin"], field_id, seed_id, now)
+    store.update_garden_pot_accrual(player["uin"], field_id, pending_exp, pending_cycles,
+                                    held_exp, 0 if held_exp else now + seed["time"], now)
     store.update_garden_pot_meta(player["uin"], field_id, fertilizer_id, now)
     field = _garden_field_dto(player, field_id, now)
     body = (pb_varint_field(1, field_id)
@@ -13885,6 +14455,7 @@ def handle_garden_fertilize(cmd_data, player):
     return msgs
 
 
+@_garden_current_player
 def handle_garden_autousefertilizer(cmd_data, player):
     """Persist the fertilizer selected by the auto-use checkbox."""
     f = parse_varint_fields(cmd_data)
@@ -13906,6 +14477,7 @@ def handle_garden_autousefertilizer(cmd_data, player):
     return [("PVZ.Cmd.Cmd_Garden_AutoUseFertilizer_SC", body), _garden_sync(player, int(time.time()))]
 
 
+@_garden_current_player
 def handle_garden_potuplevel(cmd_data, player):
     """Upgrade one garden pot using GardenUpgrade.txt's target-level row.
 
@@ -13954,8 +14526,9 @@ def handle_garden_potuplevel(cmd_data, player):
     return [("PVZ.Cmd.Cmd_Garden_PotUpLevel_SC", body), _garden_sync(player, now)] + money_msgs
 
 
+@_garden_current_player
 def handle_garden_water(cmd_data, player):
-    """Use one golden watering can and advance the selected plant by one hour."""
+    """Grant four hours of sunflower production, or shorten a crop's wait by four hours."""
     field_id = int(parse_varint_fields(cmd_data).get(1, 0) or 0)
     now = int(time.time())
     left = _garden_refresh_kettle(player)
@@ -13965,11 +14538,33 @@ def handle_garden_water(cmd_data, player):
     if store.get_item_count(player["uin"], _GARDEN_KETTLE_ITEM) <= 0:
         return []
     seed_id, plant_time = pots[field_id]
+    meta = store.get_garden_pot_details(player["uin"])[field_id]
+    seed = load_garden_seeds().get(seed_id, {})
+    if seed.get("type") == _GARDEN_SEED_TYPE_COLOR:
+        fert, _last, need = _garden_fertilizer_state(
+            seed_id, plant_time, now, meta["fertilizer_id"], meta["last_fertilizer_time"])
+        count = min(_GARDEN_WATER_SECONDS // max(1, seed["time"]),
+                    _GARDEN_MAX_IDLE_CYCLES - meta["pending_cycles"])
+        if need or fert not in load_garden_fertilizers() or count <= 0:
+            return []
+    elif seed.get("type") == _GARDEN_SEED_TYPE_ITEM:
+        if int(plant_time) + seed["time"] <= now:
+            return []
+    else:
+        return []
     consume = grant_items(player, [(_GARDEN_KETTLE_ITEM, -1)])
-    # The original UI describes the can as one hour of acceleration.  Moving
-    # plant_time backwards preserves all existing crop/sunflower timing logic.
-    store.set_garden_pot(player["uin"], field_id, seed_id,
-                         max(0, int(plant_time) - _GARDEN_WATER_SECONDS))
+    if seed["type"] == _GARDEN_SEED_TYPE_COLOR:
+        epoch = _garden_work_epoch(player)
+        pet_id = epoch["id"] if _garden_epoch_active(epoch, now) else 0
+        # This item grants virtual production even without a working pet. Keep
+        # the natural ball, pickup phase and real fertilizer deadline unchanged.
+        bank = meta["pending_exp"] + count * _garden_cycle_exp(pet_id, fert, meta["level"])
+        store.update_garden_pot_accrual(player["uin"], field_id, bank,
+                                        meta["pending_cycles"] + count, meta["held_exp"],
+                                        meta["next_cycle_time"], now)
+    else:
+        store.set_garden_pot(player["uin"], field_id, seed_id,
+                             max(0, int(plant_time) - _GARDEN_WATER_SECONDS), reset_pending=False)
     player["garden_kettlelimit"] = left - 1
     store.save_player(player["uin"], garden_kettlelimit=player["garden_kettlelimit"])
     field = _garden_field_dto(player, field_id, now)
@@ -13983,6 +14578,7 @@ def handle_garden_water(cmd_data, player):
     return msgs
 
 
+@_garden_current_player
 def handle_garden_speedup(cmd_data, player):
     """Cmd_Garden_TicketSpeedUp_CS{fieldid} -> spend diamonds to instantly mature a growing crop.
     We charge the same getSpeedPrice the client's confirm dialog showed (gift diamonds first, then
@@ -14010,6 +14606,7 @@ def handle_garden_speedup(cmd_data, player):
     return [("PVZ.Cmd.Cmd_Garden_TicketSpeedUp_SC", body), _garden_sync(player, now)] + diamond_msgs
 
 
+@_garden_current_player
 def handle_garden_dig(cmd_data, player):
     """Cmd_Garden_DigPlant_CS{fieldid} -> shovel up whatever's planted, leaving an empty (plantable)
     pot. Reply Cmd_Garden_DigPlant_SC{fieldid(1), field(2)=Dto_Field} + a Sync so the pot re-renders
@@ -14028,6 +14625,7 @@ def handle_garden_dig(cmd_data, player):
     return [("PVZ.Cmd.Cmd_Garden_DigPlant_SC", body), _garden_sync(player, now)]
 
 
+@_garden_current_player
 def handle_garden_buypet(cmd_data, player):
     """Buy a one-day or permanent garden pet with diamonds.
 
@@ -14092,6 +14690,7 @@ def handle_garden_buypet(cmd_data, player):
     return [_garden_sync(player, now)] + diamond_msgs + [("PVZ.Cmd.Cmd_Garden_BuyPet_SC", body)]
 
 
+@_garden_current_player
 def handle_garden_usepet(cmd_data, player):
     """Select one owned garden pet for automatic experience-ball collection.
 
@@ -14108,12 +14707,12 @@ def handle_garden_usepet(cmd_data, player):
         _save_garden_pet_states(player, states)
         result = True
     elif pid == 1:
-        # The base companion is free.  The scene wakes it for a 24-hour work
-        # period when it is clicked after sleeping/expiry.
+        # GARDEN_PET_FREE: clicking the sleeping base companion wakes it for
+        # ten hours. Existing saved expiry and paid one-day pets stay unchanged.
         for other in states.values():
             other["used"] = False
         states[1] = {"owned": True, "forever": False,
-                     "expire": now + 86400, "start": now, "used": True}
+                     "expire": now + _GARDEN_FREE_PET_WORK_TIME, "start": now, "used": True}
         _save_garden_pet_states(player, states)
         result = True
     elif pid in _GARDEN_PET_IDS:
@@ -14339,6 +14938,7 @@ def make_lab_getinfo(player):
     return d
 
 
+@_with_current_player
 def handle_lab_getlabinfo(cmd_data, player):
     """Cmd_Lab_GetLabInfo_CS{from} -> the whole shelf. On the FIRST open, also drop the one-time
     starter lab-material stash (item update sent BEFORE the shelf so isHaveAllItems is already true
@@ -14355,6 +14955,7 @@ def handle_lab_getlabinfo(cmd_data, player):
     return msgs
 
 
+@_with_current_player
 def handle_lab_produce(cmd_data, player):
     """Cmd_Lab_ProduceLab_CS{labId}: unlock a locked bottle by paying its base-level unlockCost."""
     lab_id = parse_varint_fields(cmd_data).get(1, 0)
@@ -14376,6 +14977,7 @@ def handle_lab_produce(cmd_data, player):
             + _quest_record_condition(player, 15, lab_id, 1))
 
 
+@_with_current_player
 def handle_lab_upgrade(cmd_data, player):
     """Cmd_Lab_UpgradeLab_CS{labId}: pay the current level's upgradeCost, bump labLevel by 1."""
     lab_id = parse_varint_fields(cmd_data).get(1, 0)
@@ -14527,6 +15129,7 @@ def _wt_apply_exp(player, add_exp):
     player["wt_level"], player["wt_exp"] = level, exp
 
 
+@_with_current_player
 def handle_wt_getinfo(cmd_data, player):
     """Cmd_WorldTree_GetInfo_CS -> the tree state. First open also drops the one-time fosterTicket stash."""
     _wt_daily_reset(player)
@@ -14541,6 +15144,7 @@ def handle_wt_getinfo(cmd_data, player):
     return msgs
 
 
+@_with_current_player
 def handle_wt_foster(cmd_data, player):
     """Cmd_WorldTree_Foster_CS{fosterType} -> charge the tier, add exp (with a crit roll), auto-level."""
     ftype = parse_varint_fields(cmd_data).get(1, _WT_FOSTERTYPE_NORMAL)
@@ -14589,6 +15193,7 @@ def handle_wt_foster(cmd_data, player):
         player, 55, 0, int(player.get("wt_level", 1)))
 
 
+@_with_current_player
 def handle_wt_upgrade(cmd_data, player):
     """Cmd_WorldTree_Upgrade_CS -> one-key: spend the level's oneKeyCost diamonds for +1 level
     (only levels with oneKeyCost>0, i.e. 200+, allow this; client greys the button otherwise)."""
@@ -14622,18 +15227,20 @@ def handle_wt_upgrade(cmd_data, player):
 # battle time, and grants firstReward. A re-clear (stage<=maxStage, after a Restart) grants sweepReward for
 # free. Restart resets currentStage to 0 to re-run the ladder. Chests at milestone stages give the big bundles.
 _TR_NORMAL = None
+_TR_HARD = None
 _TR_DAILY_BATTLES = 10        # NEW-stage climbs allowed per day (leftBattleTimes)
 _TR_DAILY_RESTARTS = 5        # free restarts per day (re-run the ladder for materials)
 _TR_HARD_DAILY_BATTLES = 10
 _TR_HARD_DAILY_RESTARTS = 5
 
 
-def load_trial_road():
-    """{stage: {power, first:[(id,n)], sweep:[(id,n)], chest:[(id,n)]}} from clientDB trialRoad.txt."""
-    global _TR_NORMAL
-    if _TR_NORMAL is None:
-        _TR_NORMAL = {}
-        rows = _read_clientdb_table("trialRoad.txt")
+def load_trial_road(hard=False):
+    """Read the mode's authored power and rewards from the shipped clientDB."""
+    global _TR_NORMAL, _TR_HARD
+    table = _TR_HARD if hard else _TR_NORMAL
+    if table is None:
+        table = {}
+        rows = _read_clientdb_table("trialRoadHard.txt" if hard else "trialRoad.txt")
         if rows:
             hdr = rows[0]; ci = {c: i for i, c in enumerate(hdr)}
 
@@ -14645,14 +15252,18 @@ def load_trial_road():
                     sid = int(col(r, "id"))
                 except ValueError:
                     continue
-                _TR_NORMAL[sid] = {
+                table[sid] = {
                     "power": int(float(col(r, "power") or 0)),
                     "first": _tr_parse_reward(col(r, "firstRewardStr")),
                     "sweep": _tr_parse_reward(col(r, "sweepReardStr")),
                     "chest": _tr_parse_reward(col(r, "chestItemsStr")),
                 }
-        log.info("loaded %d trial-road stages", len(_TR_NORMAL))
-    return _TR_NORMAL
+        if hard:
+            _TR_HARD = table
+        else:
+            _TR_NORMAL = table
+        log.info("loaded %d trial-road stages (hard=%s)", len(table), hard)
+    return table
 
 
 def _tr_parse_reward(spec):
@@ -14668,9 +15279,9 @@ def _tr_parse_reward(spec):
     return out
 
 
-def _tr_chest_stages():
+def _tr_chest_stages(hard=False):
     """Sorted stageIds that award a milestone chest (non-empty chestItemsStr)."""
-    return sorted(s for s, d in load_trial_road().items() if d["chest"])
+    return sorted(s for s, d in load_trial_road(hard).items() if d["chest"])
 
 
 def _tr_daily_reset(player):
@@ -14726,8 +15337,7 @@ def make_trialroad_getinfo(player):
 
 
 def make_newtrialroad_getinfo(player):
-    """Nightmare GetInfo_SC.  It intentionally reuses the normal stage table until a separate
-    nightmare table is available, but all progress/counters are independent."""
+    """Nightmare progress and milestone chests from its separate shipped table."""
     cur = int(player.get("tr_hard_current") or 0)
     mx = int(player.get("tr_hard_max") or 0)
     restarts_left = max(0, _TR_HARD_DAILY_RESTARTS - int(player.get("tr_hard_restarts_used") or 0))
@@ -14735,7 +15345,7 @@ def make_newtrialroad_getinfo(player):
     d = pb_varint_field(1, cur) + pb_varint_field(2, mx) + pb_varint_field(3, restarts_left)
     for s in _tr_hard_boxes_taken(player):
         d += pb_varint_field(4, s)
-    for s in _tr_chest_stages():
+    for s in _tr_chest_stages(True):
         if s <= mx:
             d += pb_varint_field(5, s)
     d += pb_varint_field(6, battles_left) + pb_varint_field(7, 0)
@@ -14951,7 +15561,7 @@ def handle_newscrewup_fight(cmd_data, player):
     f = parse_varint_fields(cmd_data)
     stage_id = f.get(1, 0)
     _tr_hard_daily_reset(player)
-    lvl_data = load_trial_road().get(stage_id)
+    lvl_data = load_trial_road(True).get(stage_id)
     if not lvl_data:
         return []
     uin = player["uin"]
@@ -14963,7 +15573,7 @@ def handle_newscrewup_fight(cmd_data, player):
                  stage_id, cur, mx, battles_left)
         return []
     left_units = build_player_units(player)
-    right_units = _tr_enemy_squad(max(1, int(lvl_data["power"] * 2)), stage_id)
+    right_units = _tr_enemy_squad(max(1, int(lvl_data["power"])), stage_id)
     # Nightmare shares the trial-road preview family, so the lineup window stays authoritative here too.
     right_units = apply_previewed_enemy_types(player, right_units, "screwup")
     won, lp, rp, rounds = run_battle(left_units, right_units, puppets=_auto_puppets(player))
@@ -14997,7 +15607,7 @@ def handle_newscrewup_fight(cmd_data, player):
 def handle_newscrewup_sweep(cmd_data, player):
     """Nightmare sweep of already-cleared stages."""
     _tr_hard_daily_reset(player)
-    tr = load_trial_road()
+    tr = load_trial_road(True)
     cur, mx = int(player.get("tr_hard_current") or 0), int(player.get("tr_hard_max") or 0)
     merged = {}
     for s in range(cur + 1, mx + 1):
@@ -15013,7 +15623,7 @@ def handle_newscrewup_sweep(cmd_data, player):
 
 def handle_newscrewup_takereward(cmd_data, player):
     stage_id = parse_varint_fields(cmd_data).get(1, 0)
-    lvl = load_trial_road().get(stage_id)
+    lvl = load_trial_road(True).get(stage_id)
     mx = int(player.get("tr_hard_max") or 0)
     taken = _tr_hard_boxes_taken(player)
     if not lvl or not lvl["chest"] or stage_id > mx or stage_id in taken:
@@ -15087,7 +15697,7 @@ def handle_newscrewup_fight(cmd_data, player):
     f = parse_varint_fields(cmd_data)
     stage_id = f.get(1, 0)
     _tr_hard_daily_reset(player)
-    lvl_data = load_trial_road().get(stage_id)
+    lvl_data = load_trial_road(True).get(stage_id)
     if not lvl_data:
         return []
     uin = player["uin"]
@@ -15099,7 +15709,7 @@ def handle_newscrewup_fight(cmd_data, player):
                  stage_id, cur, mx, battles_left)
         return []
     left_units = build_player_units(player)
-    right_units = _tr_enemy_squad(max(1, int(lvl_data["power"] * 2)), stage_id)
+    right_units = _tr_enemy_squad(max(1, int(lvl_data["power"])), stage_id)
     won, lp, rp, rounds = run_battle(left_units, right_units, puppets=_auto_puppets(player))
     replay_bytes = encode_fight_replay(rounds)
     reward_items = (lvl_data["first"] if is_new else lvl_data["sweep"]) if won else []
@@ -15131,7 +15741,7 @@ def handle_newscrewup_fight(cmd_data, player):
 def handle_newscrewup_sweep(cmd_data, player):
     """Nightmare sweep of already-cleared stages."""
     _tr_hard_daily_reset(player)
-    tr = load_trial_road()
+    tr = load_trial_road(True)
     cur, mx = int(player.get("tr_hard_current") or 0), int(player.get("tr_hard_max") or 0)
     merged = {}
     for s in range(cur + 1, mx + 1):
@@ -15147,7 +15757,7 @@ def handle_newscrewup_sweep(cmd_data, player):
 
 def handle_newscrewup_takereward(cmd_data, player):
     stage_id = parse_varint_fields(cmd_data).get(1, 0)
-    lvl = load_trial_road().get(stage_id)
+    lvl = load_trial_road(True).get(stage_id)
     mx = int(player.get("tr_hard_max") or 0)
     taken = _tr_hard_boxes_taken(player)
     if not lvl or not lvl["chest"] or stage_id > mx or stage_id in taken:
@@ -17042,10 +17652,23 @@ def _dailytd_state(player):
         legacy_token = max(0, int(old.get("token", 0))) if migrated else 0
         # This transfer is persisted with the schema marker, exactly once.
         _dailytd_commit(player, data, [(2010, legacy_token)] if legacy_token else [])
+    # Old saved runs may still contain a previously offered unfinished card.
+    # Sanitize only the in-memory view; earned plant rows are retained and this
+    # read does not add another persistence operation.
+    valid = valid_td_plants()
+    data["cards"] = [pid for pid in data.get("cards", []) if int(pid) in valid]
+    extract = data.get("extract")
+    if any(int(pid) not in valid for pid in data.get("offers", [])):
+        _dailytd_offer(player, data)
+        if extract and (extract[0] != 1 or int(extract[1]) in valid):
+            data["extract"] = extract
+    if data.get("extract") and data["extract"][0] == 1 and int(data["extract"][1]) not in valid:
+        data.pop("extract")
     return data
 
 
-def _dailytd_info_body(data):
+def _dailytd_info_body(data, player=None):
+    avatar_shared = _td_avatar_shared_state(player) if player is not None else None
     body = pb_varint_field(1, data["stage"]) + pb_varint_field(2, data["seq"]) + pb_varint_field(3, data["process"])
     for plant in data.get("offers", []):
         body += pb_varint_field(4, plant)
@@ -17054,7 +17677,11 @@ def _dailytd_info_body(data):
         dto = pb_varint_field(1, kind) + pb_varint_field(2, value) + pb_varint_field(3, number)
         body += pb_tag(5, 2) + uvarint(len(dto)) + dto
     for plant in data["cards"]:
-        dto = pb_varint_field(1, plant) + pb_bool(2, False) + pb_varint_field(4, 1)
+        dto = pb_varint_field(1, plant) + pb_bool(2, False)
+        avatar_id = _selected_td_avatar(player, plant, _shared=avatar_shared) if player is not None else 0
+        if avatar_id:
+            dto += pb_varint_field(3, avatar_id)
+        dto += pb_varint_field(4, 1)
         body += pb_tag(6, 2) + uvarint(len(dto)) + dto
     body += pb_varint_field(7, data["sun"]) + pb_varint_field(8, data["beans"])
     for cart in data["cars"]:
@@ -17064,7 +17691,7 @@ def _dailytd_info_body(data):
 
 def _dailytd_getinfo_messages(player):
     data = _dailytd_state(player)
-    info = _dailytd_info_body(data)
+    info = _dailytd_info_body(data, player)
     lottery = pb_varint_field(1, data["lottery_stage"]) + pb_varint_field(2, len(data["lottery"]))
     body = (pb_tag(1, 2) + uvarint(len(info)) + info +
             pb_tag(2, 2) + uvarint(len(lottery)) + lottery +
@@ -17543,13 +18170,14 @@ def handle_noendtd_getinfo(cmd_data, player):
     # TD-only filtering as Cmd_TD_RequestTDInfo_SC so an adventure/card-only
     # plant cannot produce an invalid chooser entry, but return every unlocked
     # TD plant in the player's saved roster, in its existing order.
+    avatar_shared = _td_avatar_shared_state(player)
     for plant_id in _noendtd_unlocked_plants(player):
         strength = int(data["plant_strength"].get(str(plant_id), 1))
         # TDStartParam.initEndlessTD forwards this DTO to TDStageInfo. The
         # current TDDamageCaculete applies the configured ratio on a kill:
         # int(zombieScore * (plant.endlessTDScoreRatio + strengthen.scoreRatio) / 10000).
-        plant = (pb_varint_field(1, plant_id) + pb_bool(2, False)
-                 + pb_varint_field(4, strength))
+        plant = _build_td_plant_info_dto(player, plant_id, strength_level=strength,
+                                        _shared=avatar_shared)
         body += pb_tag(3, 2) + uvarint(len(plant)) + plant
     body += pb_varint_field(4, int(data.get("strength_point") or 0))
     for item_id, amount in NOENDTD_WEEK_REWARDS:
@@ -18949,10 +19577,12 @@ def _snowman_state(player):
 def handle_snowman_getinfo(cmd_data, player):
     data = _snowman_state(player)
     body = pb_varint_field(2, max(0, 3 - int(data.get("challenge") or 0)))
-    for plant_id in player.get("plants", [])[:8]:
-        dto = _build_plant_info_dto(plant_id)
+    plants = [int(pid) for pid in player.get("plants", []) if int(pid) in normal_td_plants()][:8]
+    avatar_shared = _td_avatar_shared_state(player)
+    for plant_id in plants:
+        dto = _build_td_plant_info_dto(player, plant_id, _shared=avatar_shared)
         body += pb_tag(4, 2) + uvarint(len(dto)) + dto
-    map_info = pb_varint_field(1, 1) + b"".join(pb_varint_field(2, int(pid)) for pid in player.get("plants", [])[:8])
+    map_info = pb_varint_field(1, 1) + b"".join(pb_varint_field(2, int(pid)) for pid in plants)
     body += pb_tag(6, 2) + uvarint(len(map_info)) + map_info + pb_bool(7, bool(active_vip_level(player))) + pb_varint_field(8, 86400)
     return [("PVZ.Cmd.Cmd_SnowMan_GetInfo_SC", body)]
 
@@ -19007,13 +19637,35 @@ def handle_snowman_empty(cmd_data, player):
 
 
 # Plant avatar / face selection ---------------------------------------------
+def _normalize_td_avatar(plant_id, avatar_id):
+    """Keep one TD default for empty-part aliases and holderless placeholders.
+
+    The native default path already applies the first catalog template.  Its
+    empty-part holders are transparent, so the first ID and 0 are the same skin.
+    Named first variants such as the holographic nut's 6501 remain distinct.
+    Holderless TD placeholders have no costume in any of their catalog IDs.
+    Potato Mine's named first bulb is pixel-identical to its native TD default.
+    This does not change the UID-local battle-card catalog or saved wardrobe.
+    """
+    avatar_id = int(avatar_id)
+    asset = load_card_avatar_assets().get(avatar_id, {})
+    avatars = load_card_avatars().get(int(plant_id), [])
+    if avatar_id in avatars and asset.get("td_placeholder_only"):
+        return 0
+    if avatar_id and avatars and avatar_id == min(avatars):
+        if asset.get("td") and (not asset.get("td_named_part", True)
+                                or (int(plant_id) == 1500 and avatar_id == 1501)):
+            return 0
+    return avatar_id
+
+
 def _plant_avatar_ids(plant_id):
     assets = load_card_avatar_assets()
     ids = [avatar_id for avatar_id in _working_card_avatars(plant_id)
-           if not assets or assets.get(avatar_id, {}).get("td")]
-    # 0 is the built-in skin and is always available even when the clientDB has
-    # no optional costume rows for this plant.
-    return ids or [0]
+           if (not assets or assets.get(avatar_id, {}).get("td"))
+           and _normalize_td_avatar(plant_id, avatar_id) != 0]
+    # Always expose the original skin, including after choosing a costume.
+    return [0] + ids
 
 
 def _owned_card_for_plant(player, plant_id):
@@ -19023,16 +19675,104 @@ def _owned_card_for_plant(player, plant_id):
     return None
 
 
+def _td_avatar_shared_state(player, _shared=None):
+    """Snapshot once per roster without changing adventure's UID-local selection."""
+    shared = _shared if _shared is not None else {}
+    if "td_cards" not in shared:
+        by_plant = {}
+        for card in store.get_cards(player["uin"]):
+            by_plant.setdefault(_card_avatar_plant_id(card), []).append(card)
+        shared["td_cards"] = by_plant
+        shared["td_avatars"] = store.get_td_plant_avatars(player["uin"])
+        snapshot = store.get_all_card_avatars(player["uin"])
+        shared.setdefault("avatars", {}).update({uid: rows for uid, rows in snapshot.items()
+                                                if uid not in shared.get("avatars", {})})
+        for cards in by_plant.values():
+            for card in cards:
+                shared["avatars"].setdefault(int(card[0]), {})
+    return shared
+
+
+def _td_avatar_card(player, plant_id, _shared=None, avatar_id=None):
+    """Legacy TD fallback: prefer an explicitly dressed card over duplicate defaults."""
+    shared = _td_avatar_shared_state(player, _shared)
+    cards = shared["td_cards"].get(int(plant_id), [])
+    avatars = _working_card_avatars(plant_id)
+    default_id = min(avatars) if avatars else 0
+    if avatar_id is not None:
+        eligible = []
+        for card in cards:
+            _avatar_shared_state(player, int(card[0]), _shared=shared)
+            status, _level = _avatar_default_status(player, int(card[0]), card,
+                                                     int(avatar_id), avatars, _shared=shared)
+            if status in (3, 4):
+                eligible.append(card)
+        cards = eligible
+
+    def preference(card):
+        rows = shared["avatars"].get(int(card[0]), {})
+        using = [aid for aid in avatars if int(rows.get(aid, {}).get("status", 0)) == 4]
+        selected = min(using) if using else default_id
+        return (bool(using) and selected != default_id,
+                bool(using), int(card[2]), int(card[1]), -int(card[0]))
+
+    return max(cards, key=preference) if cards else None
+
+
+def _selected_td_avatar(player, plant_id, _shared=None):
+    """Respect the latest species selection, including explicit original appearance."""
+    shared = _td_avatar_shared_state(player, _shared)
+    plant_id = int(plant_id)
+    saved = shared["td_avatars"]
+    if plant_id in saved:
+        avatar_id = int(saved[plant_id])
+    else:
+        card = _td_avatar_card(player, plant_id, _shared=shared)
+        avatar_id = _card_avatar_selected(player, card[0], card, _shared=shared) if card else 0
+    avatar_id = _normalize_td_avatar(plant_id, avatar_id)
+    return avatar_id if avatar_id == 0 or avatar_id in _plant_avatar_ids(plant_id) else 0
+
+
+def _build_td_plant_info_dto(player, plant_id, strength_level=0, is_new=False, _shared=None):
+    return _build_plant_info_dto(plant_id,
+                               avatar_id=_selected_td_avatar(player, plant_id, _shared),
+                               strength_level=strength_level, is_new=is_new)
+
+
+def _persist_card_td_avatar(player, card, avatar_id):
+    """Called within the card selection transaction; validate the species and TD asset."""
+    plant_id = _card_avatar_plant_id(card)
+    if plant_id not in {int(pid) for pid in store.get_player_plants(player["uin"])}:
+        return
+    template = _avatar_template_for(avatar_id, plant_id)
+    if not template:
+        return
+    td_avatar = _normalize_td_avatar(plant_id, avatar_id)
+    if td_avatar not in _plant_avatar_ids(plant_id):
+        td_avatar = 0
+    store.set_td_plant_avatar(player["uin"], plant_id, td_avatar)
+    if int(player.get("avatar_plant_id") or 0) == plant_id:
+        player["avatar_skin_id"] = td_avatar
+        store.save_player(player["uin"], avatar_skin_id=td_avatar)
+
+
 def handle_plant_getavatarinfo(cmd_data, player):
     plant_id = parse_varint_fields(cmd_data).get(1, int(player.get("avatar_plant_id") or 1200))
-    card = _owned_card_for_plant(player, plant_id)
-    selected = _card_avatar_selected(player, card[0], card) if card else 0
+    shared = _td_avatar_shared_state(player)
+    card = _td_avatar_card(player, plant_id, _shared=shared)
+    selected = _selected_td_avatar(player, plant_id, _shared=shared)
     body = pb_varint_field(1, plant_id)
-    for avatar_id in _plant_avatar_ids(plant_id):
+    ids = _plant_avatar_ids(plant_id)
+    for avatar_id in ids:
         status = 1
         if card and avatar_id:
+            source = _td_avatar_card(player, plant_id, _shared=shared, avatar_id=avatar_id) or card
             status, _level = _avatar_default_status(
-                player, card[0], card, avatar_id, _working_card_avatars(plant_id))
+                player, source[0], source, avatar_id, _working_card_avatars(plant_id), _shared=shared)
+            if status == 4:
+                status = 3
+            if avatar_id == selected:
+                status = 4
         elif avatar_id == 0:
             status = 4 if selected == 0 else 3
         dto = pb_varint_field(1, int(avatar_id)) + pb_varint_field(2, status)
@@ -19042,36 +19782,46 @@ def handle_plant_getavatarinfo(cmd_data, player):
 
 def handle_plant_getavatarlist(cmd_data, player):
     body = b""
+    shared = _td_avatar_shared_state(player)
     for plant_id in player.get("plants", []):
-        card = _owned_card_for_plant(player, plant_id)
-        avatar_id = _card_avatar_selected(player, card[0], card) if card else 0
-        if avatar_id not in _plant_avatar_ids(plant_id):
-            avatar_id = 0
-        dto = _build_plant_info_dto(plant_id, avatar_id=avatar_id)
+        dto = _build_td_plant_info_dto(player, plant_id, _shared=shared)
         body += pb_tag(1, 2) + uvarint(len(dto)) + dto
     return [("PVZ.Cmd.Cmd_Plant_GetPlantAvatarList_SC", body)]
 
 
 def handle_plant_useavatar(cmd_data, player):
     fields = parse_varint_fields(cmd_data)
-    plant_id, avatar_id = fields.get(1, 0), fields.get(2, 0)
-    owned = {int(x) for x in player.get("plants", [])}
-    if int(plant_id) not in owned or int(avatar_id) not in _plant_avatar_ids(plant_id):
+    plant_id = fields.get(1, 0)
+    raw_avatar_id = fields.get(2, 0)
+    avatar_id = _normalize_td_avatar(plant_id, raw_avatar_id)
+    owned = {int(x) for x in store.get_player_plants(player["uin"])}
+    if (int(plant_id) not in owned or
+            (int(avatar_id) != 0 and int(avatar_id) not in _plant_avatar_ids(plant_id))):
         return [("PVZ.Cmd.Cmd_Plant_UseAvatar_SC", b"")]
-    card = _owned_card_for_plant(player, plant_id)
-    if card and avatar_id:
+    card = _td_avatar_card(player, plant_id, avatar_id=raw_avatar_id) if raw_avatar_id else None
+    changed, shared = None, None
+    if card and raw_avatar_id:
         avatars = _working_card_avatars(plant_id)
-        status, _level = _avatar_default_status(player, card[0], card, avatar_id, avatars)
-        if status not in (3, 4):
+        selected = _select_card_avatar(player, card, raw_avatar_id, avatars)
+        if selected is None:
             return [("PVZ.Cmd.Cmd_Plant_UseAvatar_SC", b"")]
-        for aid in avatars:
-            old_status, forge_level = _avatar_default_status(player, card[0], card, aid, avatars)
-            new_status = 4 if aid == avatar_id else (3 if old_status == 4 else old_status)
-            store.set_card_avatar(player["uin"], card[0], aid, new_status, forge_level)
-    if int(plant_id) == int(player.get("avatar_plant_id") or 0):
-        player["avatar_skin_id"] = int(avatar_id)
-        store.save_player(player["uin"], avatar_skin_id=int(avatar_id))
-    return [("PVZ.Cmd.Cmd_Plant_UseAvatar_SC", pb_varint_field(1, plant_id) + pb_varint_field(2, avatar_id))]
+        changed, shared = selected
+    elif int(raw_avatar_id) != 0:
+        return [("PVZ.Cmd.Cmd_Plant_UseAvatar_SC", b"")]
+    else:
+        with store.atomic_player(player):
+            if int(plant_id) not in {int(pid) for pid in store.get_player_plants(player["uin"])}:
+                return [("PVZ.Cmd.Cmd_Plant_UseAvatar_SC", b"")]
+            store.set_td_plant_avatar(player["uin"], plant_id, 0)
+            if int(plant_id) == int(player.get("avatar_plant_id") or 0):
+                player["avatar_skin_id"] = 0
+                store.save_player(player["uin"], avatar_skin_id=0)
+    messages = [("PVZ.Cmd.Cmd_Plant_UseAvatar_SC", pb_varint_field(1, plant_id) + pb_varint_field(2, avatar_id))]
+    if changed is not None:
+        sync = build_card_sync_sc(player["uin"], card[0], card[1], 0, _shared=shared, _player=player)
+        if sync:
+            messages.append(sync)
+    return messages
 
 
 def handle_setavatarplant(cmd_data, player):
@@ -19079,35 +19829,69 @@ def handle_setavatarplant(cmd_data, player):
     if int(plant_id) not in {int(x) for x in player.get("plants", [])}:
         return [("PVZ.Cmd.Cmd_SetAvatarPlant_SC", b"")]
     player["avatar_plant_id"] = int(plant_id)
-    player["avatar_skin_id"] = 0
-    store.save_player(player["uin"], avatar_plant_id=int(plant_id), avatar_skin_id=0)
-    dto = _build_plant_info_dto(plant_id)
+    player["avatar_skin_id"] = _selected_td_avatar(player, plant_id)
+    store.save_player(player["uin"], avatar_plant_id=int(plant_id), avatar_skin_id=player["avatar_skin_id"])
+    dto = _build_plant_info_dto(plant_id, avatar_id=player["avatar_skin_id"])
     return [("PVZ.Cmd.Cmd_SetAvatarPlant_SC", pb_tag(1, 2) + uvarint(len(dto)) + dto)]
+
+
+def _select_card_avatar(player, card, avatar_id, avatars=None):
+    """Snapshot, validate, then select atomically for both wardrobe entry points."""
+    uid = int(card[0])
+    avatars = avatars if avatars is not None else _working_card_avatars(_card_avatar_plant_id(card))
+    if int(avatar_id) not in avatars:
+        return None
+    with store.atomic_player(player):
+        shared = _avatar_shared_state(player, uid)
+        states = {aid: _avatar_default_status(player, uid, card, aid, avatars, _shared=shared)
+                  for aid in avatars}
+        status, level = states[int(avatar_id)]
+        if status not in (3, 4):
+            return None
+        if not store.select_card_avatar(player["uin"], uid, avatar_id, level):
+            return None
+        _persist_card_td_avatar(player, card, avatar_id)
+    changed = b""
+    for aid in avatars:
+        old_status, forge_level = states[aid]
+        new_status = 4 if aid == avatar_id else (3 if old_status == 4 else old_status)
+        if new_status != old_status or aid == avatar_id:
+            dto = _avatar_info_dto(aid, new_status, forge_level)
+            changed += pb_tag(1, 2) + uvarint(len(dto)) + dto
+    rows = shared["avatars"][uid]
+    for aid, row in rows.items():
+        if int(row["status"]) == 4 and aid != int(avatar_id):
+            row["status"] = 3
+    rows[int(avatar_id)] = {"status": 4, "forge_level": level}
+    return changed, shared
+
+
+def _card_avatar_plant_sync(player, card, _shared=None):
+    """Refresh the species shared by TD after any owned duplicate card is dressed."""
+    plant_id = _card_avatar_plant_id(card)
+    if plant_id not in {int(pid) for pid in store.get_player_plants(player["uin"])}:
+        return None
+    avatar_id = _normalize_td_avatar(plant_id, _card_avatar_selected(player, card[0], card, _shared=_shared))
+    if avatar_id not in _plant_avatar_ids(plant_id):
+        avatar_id = 0  # PVP-only outfits use the built-in TD skin, as GetPlantAvatarList does.
+    return ("PVZ.Cmd.Cmd_Plant_UseAvatar_SC",
+            pb_varint_field(1, plant_id) + pb_varint_field(2, avatar_id))
 
 
 def handle_card_useavatar(cmd_data, player):
     fields = parse_varint_fields(cmd_data)
     uid, avatar_id = int(fields.get(1, 0)), int(fields.get(2, 0))
     card = _owned_card(player, uid)
-    avatars = _working_card_avatars(_card_avatar_plant_id(card)) if card else []
-    if not card or avatar_id not in avatars:
+    if not card:
         return [("PVZ.Cmd.Cmd_Card_UseAvatar_SC", b"")]
-    state = store.get_card_avatars(player["uin"], uid)
-    status, level = _avatar_default_status(player, uid, card, avatar_id, avatars)
-    if status not in (3, 4):
+    selected = _select_card_avatar(player, card, avatar_id)
+    if selected is None:
         return [("PVZ.Cmd.Cmd_Card_UseAvatar_SC", b"")]
-    changed = b""
-    for aid in avatars:
-        saved = state.get(aid)
-        old_status = int(saved["status"]) if saved else _avatar_default_status(player, uid, card, aid, avatars)[0]
-        forge_level = int(saved["forge_level"]) if saved else _avatar_default_status(player, uid, card, aid, avatars)[1]
-        new_status = 4 if aid == avatar_id else (3 if old_status == 4 else old_status)
-        store.set_card_avatar(player["uin"], uid, aid, status=new_status, forge_level=forge_level)
-        if new_status != old_status or aid == avatar_id:
-            dto = _avatar_info_dto(aid, new_status, forge_level)
-            changed += pb_tag(1, 2) + uvarint(len(dto)) + dto
-    sync = build_card_sync_sc(player["uin"], uid, card[1], 0)
-    return [("PVZ.Cmd.Cmd_Card_UseAvatar_SC", changed)] + ([sync] if sync else [])
+    changed, shared = selected
+    sync = build_card_sync_sc(player["uin"], uid, card[1], 0, _shared=shared, _player=player)
+    plant_sync = _card_avatar_plant_sync(player, card, _shared=shared)
+    return ([("PVZ.Cmd.Cmd_Card_UseAvatar_SC", changed)]
+            + ([sync] if sync else []) + ([plant_sync] if plant_sync else []))
 
 
 def handle_card_buyavatar(cmd_data, player):
@@ -19118,25 +19902,34 @@ def handle_card_buyavatar(cmd_data, player):
     if not card or not template:
         return [("PVZ.Cmd.Cmd_Card_BuyAvatar_SC", pb_int64_field(1, uid))]
     avatars = _working_card_avatars(_card_avatar_plant_id(card))
-    status, forge_level = _avatar_default_status(player, uid, card, avatar_id, avatars)
+    shared = _avatar_shared_state(player, uid)
+    status, forge_level = _avatar_default_status(player, uid, card, avatar_id, avatars, _shared=shared)
     if avatar_id not in avatars or status not in (2, 5):
         info = _avatar_info_dto(avatar_id, status, forge_level)
-        attr = _encode_avatar_all_attr(_card_avatar_total_level(player, uid, card))
+        attr = _encode_avatar_all_attr(_card_avatar_total_level(player, uid, card, _shared=shared))
         return [("PVZ.Cmd.Cmd_Card_BuyAvatar_SC", _avatar_response_body(uid, info, attr))]
     costs = [(int(i), int(n)) for i, n in template.get("unlock_items", []) if int(n) > 0]
+    if not costs:
+        # Empty-cost quality outfits unlock at their quality threshold; a Buy
+        # request must not bypass that threshold or reset an enhancement row.
+        info = _avatar_info_dto(avatar_id, status, forge_level)
+        attr = _encode_avatar_all_attr(_card_avatar_total_level(player, uid, card, _shared=shared))
+        return [("PVZ.Cmd.Cmd_Card_BuyAvatar_SC", _avatar_response_body(uid, info, attr))]
     if any(store.get_item_count(player["uin"], iid) < amount for iid, amount in costs):
         # Keep the response structurally complete even when the bag lacks the
         # material.  The client can show its normal insufficient-material hint
         # instead of crashing on a null avatarInfo/avatarAllAttr.
         info = _avatar_info_dto(avatar_id, status, forge_level)
-        attr = _encode_avatar_all_attr(_card_avatar_total_level(player, uid, card))
+        attr = _encode_avatar_all_attr(_card_avatar_total_level(player, uid, card, _shared=shared))
         return [("PVZ.Cmd.Cmd_Card_BuyAvatar_SC", _avatar_response_body(uid, info, attr))]
-    updates = [grant_items(player, [(iid, -amount) for iid, amount in costs])] if costs else []
-    store.set_card_avatar(player["uin"], uid, avatar_id, status=3, forge_level=0)
+    with store.atomic_player(player):
+        updates = [grant_items(player, [(iid, -amount) for iid, amount in costs])] if costs else []
+        store.set_card_avatar(player["uin"], uid, avatar_id, status=3, forge_level=0)
+    shared["avatars"][uid][avatar_id] = {"status": 3, "forge_level": 0}
     info = _avatar_info_dto(avatar_id, 3, 0)
-    attr = _encode_avatar_all_attr(_card_avatar_total_level(player, uid, card))
+    attr = _encode_avatar_all_attr(_card_avatar_total_level(player, uid, card, _shared=shared))
     messages = [("PVZ.Cmd.Cmd_Card_BuyAvatar_SC", _avatar_response_body(uid, info, attr))]
-    sync = build_card_sync_sc(player["uin"], uid, card[1], 0)
+    sync = build_card_sync_sc(player["uin"], uid, card[1], 0, _shared=shared, _player=player)
     return [m for m in updates + messages + ([sync] if sync else []) if m]
 
 
@@ -19145,13 +19938,12 @@ def handle_card_forgeavatar(cmd_data, player):
     uid, avatar_id = int(fields.get(1, 0)), int(fields.get(2, 0))
     card = _owned_card(player, uid)
     template = _avatar_template_for(avatar_id, _card_avatar_plant_id(card))
-    if not card or not template:
+    avatars = _working_card_avatars(_card_avatar_plant_id(card)) if card else []
+    if not card or not template or avatar_id not in avatars:
         return [("PVZ.Cmd.Cmd_Card_ForgeAvatar_SC", pb_int64_field(1, uid))]
-    state = store.get_card_avatars(player["uin"], uid).get(avatar_id)
+    shared = _avatar_shared_state(player, uid)
     status, current = _avatar_default_status(player, uid, card, avatar_id,
-                                             _working_card_avatars(_card_avatar_plant_id(card)))
-    if state:
-        status, current = int(state["status"]), int(state["forge_level"])
+                                             avatars, _shared=shared)
     current = max(0, int(current))
     costs = load_card_avatar_forge().get(int(template.get("forge_type") or 0), {}).get(current + 1)
     if costs is None:
@@ -19160,22 +19952,22 @@ def handle_card_forgeavatar(cmd_data, player):
         info = _avatar_info_dto(avatar_id, status, current)
         return [("PVZ.Cmd.Cmd_Card_ForgeAvatar_SC",
                  _avatar_response_body(uid, info, _encode_avatar_all_attr(
-                     _card_avatar_total_level(player, uid, card))))]
+                     _card_avatar_total_level(player, uid, card, _shared=shared))))]
     if status not in (3, 4) or any(store.get_item_count(player["uin"], iid) < amount
                                    for iid, amount in costs):
         info = _avatar_info_dto(avatar_id, status, current)
         return [("PVZ.Cmd.Cmd_Card_ForgeAvatar_SC",
                  _avatar_response_body(uid, info, _encode_avatar_all_attr(
-                     _card_avatar_total_level(player, uid, card))))]
-    updates = [grant_items(player, [(iid, -amount) for iid, amount in costs])] if costs else []
-    current += 1
-    if status == 1:
-        status = 3
-    store.set_card_avatar(player["uin"], uid, avatar_id, status=status, forge_level=current)
+                     _card_avatar_total_level(player, uid, card, _shared=shared))))]
+    with store.atomic_player(player):
+        updates = [grant_items(player, [(iid, -amount) for iid, amount in costs])] if costs else []
+        current += 1
+        store.set_card_avatar(player["uin"], uid, avatar_id, status=status, forge_level=current)
+    shared["avatars"][uid][avatar_id] = {"status": status, "forge_level": current}
     info = _avatar_info_dto(avatar_id, status, current)
-    attr = _encode_avatar_all_attr(_card_avatar_total_level(player, uid, card))
+    attr = _encode_avatar_all_attr(_card_avatar_total_level(player, uid, card, _shared=shared))
     messages = [("PVZ.Cmd.Cmd_Card_ForgeAvatar_SC", _avatar_response_body(uid, info, attr))]
-    sync = build_card_sync_sc(player["uin"], uid, card[1], 82)
+    sync = build_card_sync_sc(player["uin"], uid, card[1], 82, _shared=shared, _player=player)
     result = [m for m in updates + messages + ([sync] if sync else []) if m]
     result += _quest_record_condition(player, 33, 0, 1)
     return result
@@ -19467,7 +20259,7 @@ def build_friend_info_dto_from_player(target):
             plants = store.get_player_plants(int(target["uin"]))
         plant_id = int(plants[0] if plants else 1200)
     help_plant = build_card_full_info(help_uid, card_id, card_level, card_stats)
-    plant_info = _build_plant_info_dto(plant_id)
+    plant_info = friend_td_plant_info({"help_plant_id": plant_id}, role_id, card_id)
 
     d = (pb_varint_field(1, 1)                         # type = 1 (FRIEND_TYPE_SNS)
          + pb_int64_field(2, role_id)                  # roleId (Int64)
@@ -19495,8 +20287,9 @@ def handle_farm_getmyinfo(cmd_data, player):
     blocks 留空。plantInfo 就是玩家已解锁的植物（Dto_PlantInfo）。"""
     d = b""
     # plantInfo (field 2, repeated Dto_PlantInfo)
+    avatar_shared = _td_avatar_shared_state(player)
     for pid in player.get("plants", []):
-        dto = _build_plant_info_dto(pid)
+        dto = _build_td_plant_info_dto(player, pid, _shared=avatar_shared)
         d += pb_tag(2, 2) + uvarint(len(dto)) + dto
     # blocks (field 1) 留空
     log.info("    farm myinfo: %d plants, 0 blocks", len(player.get("plants", [])))
@@ -21118,7 +21911,7 @@ def _apply_card_baptize_bonus(stats, uin, uid):
 # The panel's own dialog spells the deal out (拆解后将无法恢复): the player receives the plant's 碎片 —
 # battleCard.txt recycleItemString, the very number the dialog prints — plus 100% of what was invested
 # in that card:
-#   * 经验豆      the card's whole accumulated exp paid back as beans (ItemInfo type 6 useEffect 1:N);
+#   * 经验豆      the card's whole accumulated exp paid back as beans (ItemInfo “增加植物N点经验”);
 #   * 拼图碎片    every completed board's pieces (cardPuzzle.originalCostItem, one per cell — exactly
 #                 what Cmd_Card_Fill_CS consumed) plus the cells already placed on the current board;
 #   * 升星材料    CardUpgradeTemplate's 碎片 + 金币 for every star-up this cardId went through;
@@ -21602,13 +22395,55 @@ def handle_card_swapattributelost(cmd_data, player):
     return pb_bool(1, lost)
 
 
+def _ordinary_card_avatar_swap_plan(player, src, dst):
+    """Map five ordinary outfit tiers; rare outfits stay on their original UID."""
+    templates = load_card_avatar_templates()
+    snapshots = []
+    for card in (src, dst):
+        uid = int(card[0])
+        plant_id = _card_avatar_plant_id(card)
+        working = _working_card_avatars(plant_id)
+        tiers = {int(templates[aid]["catalog"]): aid
+                 for aid in load_card_avatars().get(plant_id, [])
+                 if 1 <= int(templates[aid]["catalog"]) <= 5}
+        # Do not transfer paid enhancements into an unavailable avatar tier.
+        if set(tiers) != {1, 2, 3, 4, 5} or any(aid not in working for aid in tiers.values()):
+            return None
+        rows = store.get_card_avatars(player["uin"], uid)
+        shared = {"avatars": {uid: rows},
+                  "fill": {uid: store.get_card_fill_quality(player["uin"], uid)}}
+        selected = _card_avatar_selected(player, uid, card, _shared=shared)
+        states = {}
+        for tier, aid in tiers.items():
+            status, level = _avatar_default_status(player, uid, card, aid, working,
+                                                    _shared=shared)
+            states[tier] = {"status": status, "forge_level": level}
+        snapshots.append((tiers, states, selected if selected not in tiers.values() else None))
+    result = []
+    for own, incoming in ((snapshots[0], snapshots[1]), (snapshots[1], snapshots[0])):
+        tiers, _old, rare_selected = own
+        _incoming_tiers, states, _incoming_rare = incoming
+        selected_tier = next((tier for tier, row in states.items() if row["status"] == 4), 1)
+        selected = rare_selected if rare_selected is not None else tiers[selected_tier]
+        rows = {}
+        for tier, aid in tiers.items():
+            row = dict(states[tier])
+            if row["status"] == 4:
+                row["status"] = 3
+            if aid == selected:
+                row["status"] = 4
+            rows[aid] = row
+        result.append((rows, selected))
+    return result
+
+
 def handle_card_swapattribute(cmd_data, player):
     """Cmd_Card_SwapAttribute_CS{srcCardUId(1), dstCardUId(2), bSwapAwaken(3), bSwapPlantSeed(4),
     bSwapRefine(5), bSwapGene(6)} -> Cmd_Card_SwapAttribute_SC (no fields) + a full sync per card.
 
     The dialog's 交换规则 always swaps three groups (they have no checkbox): 等级完全互换 (level+exp),
-    拼图完全互换 (the puzzle board) and 普通时装互换 — this server keeps no per-card 时装 state (the
-    wardrobe is derived from cardChestAvatar.txt), so the 时装 part is a no-op. The four checkboxes are
+    拼图完全互换 (the puzzle board) and 普通时装互换 (tiers 1..5, including their activation and
+    enhancement state). Rare outfits retain their original UID. The four checkboxes are
     the OPTIONAL groups and each adds its own 植物交换券 price:
       bSwapAwaken     觉醒 — a card's 觉醒 level lives in its battleCard row (awakeConfig ids are
                       <level><baseCardId>), so the exchange remaps both cardIds to the other's variant;
@@ -21630,6 +22465,10 @@ def handle_card_swapattribute(cmd_data, player):
         log.info("    swap rejected: uin=%s src=%d dst=%d are not two distinct owned cards",
                  player.get("uin"), src_uid, dst_uid)
         return []
+    avatar_plan = _ordinary_card_avatar_swap_plan(player, src, dst)
+    if avatar_plan is None:
+        log.info("    swap rejected: an ordinary outfit tier has no usable binding")
+        return [_logic_error(1208)]  # ErrorInfo: 该时装不能交换 (standard, non-disconnecting toast)
     load_battle_cards()
     src_info, dst_info = _BATTLE_CARDS.get(src[1], {}), _BATTLE_CARDS.get(dst[1], {})
     if "gene" in want and int(src_info.get("rarity", 1)) != int(dst_info.get("rarity", 1)):
@@ -21647,6 +22486,9 @@ def handle_card_swapattribute(cmd_data, player):
     # --- the three always-exchanged groups ------------------------------------------------
     levels = store.swap_card_level(uin, src_uid, dst_uid)
     stages = store.swap_card_fill(uin, src_uid, dst_uid)
+    (src_rows, src_selected), (dst_rows, dst_selected) = avatar_plan
+    store.swap_card_ordinary_avatars(uin, src_uid, src_rows, src_selected,
+                                    dst_uid, dst_rows, dst_selected)
     if levels:                                  # keep every card inside its own maxLv/account gate
         for uid in (src_uid, dst_uid):
             card = _owned_card(player, uid)
@@ -22064,7 +22906,9 @@ def _worldboss_enemy(boss_id, entry):
     return {"pos": 10, "card_id": boss_id, "hp": hp, "max_hp": _WORLD_BOSS_HP[boss_id], "atk": max(1000, power // 25),
             "def_": max(1, power // 100), "skill1": template["skill1"],
             "skill2": template["skill2"], "level": 1, "is_leader": False,
-            "power": power, "speed": card_level_speed(1), "name": template["name"]}
+            "power": power, "speed": card_level_speed(1), "name": template["name"],
+            "max_rage": 5 if boss_id == 999 else RAGE_MAX,
+            "initial_rage": 0 if boss_id == 999 else RAGE_START}
 
 
 def _worldboss_summons(boss_id):
@@ -22790,56 +23634,59 @@ def make_init_sc(player):
     now = int(time.time())
     d = b""
     d += pb_string(1, player["name"])                    # name
-    d += pb_varint_field(2, player["exp"])               # exp
-    d += pb_varint_field(3, player["level"])             # level
-    d += pb_varint_field(4, player["sun"])               # sun
-    d += pb_varint_field(5, player["coin"])              # coin
-    d += pb_varint_field(8, now)                         # now (server time)
-    d += pb_varint_field(9, player["role_id"])           # roleID (Int64 varint)
-    d += pb_varint_field(10, current_energy(player))     # energy (with offline regen folded in)
-    d += pb_varint_field(11, player["friend_point"])     # friendPoint
-    d += pb_varint_field(13, player["face_id"])          # faceId
+    d += pb_uint32_field(2, player["exp"])               # exp
+    d += pb_uint32_field(3, player["level"])             # level
+    d += pb_uint32_field(4, player["sun"])               # sun
+    d += pb_uint32_field(5, player["coin"])              # coin
+    d += pb_uint32_field(8, now)                         # now (server time)
+    d += pb_int64_field(9, player["role_id"])           # roleID (Int64 varint)
+    d += pb_uint32_field(10, current_energy(player))     # energy (with offline regen folded in)
+    d += pb_uint32_field(11, player["friend_point"])     # friendPoint
+    d += pb_uint32_field(13, player["face_id"])          # faceId
     d += pb_string(23, player_face_url(player))          # qqFaceURL (custom/local avatar)
-    d += pb_varint_field(15, player["ticket"])           # ticket (gold diamond)
-    d += pb_varint_field(16, player["fame"])             # fame
-    d += pb_varint_field(17, player["buy_energy_num"])   # buyEnergyNum
+    d += pb_uint32_field(15, player["ticket"])           # ticket (gold diamond)
+    d += pb_uint32_field(16, player["fame"])             # fame
+    d += pb_uint32_field(17, player["buy_energy_num"])   # buyEnergyNum
     d += pb_bool(18, False)                              # hasNewFormationPos
-    d += pb_varint_field(20, 100)                        # townDurability
-    d += pb_varint_field(21, 100)                        # townDurabilityMax
-    d += pb_varint_field(22, player["present_ticket"])   # presentTicket
-    d += pb_varint_field(24, player["zone_id"])          # zoneId
+    d += pb_uint32_field(20, 100)                        # townDurability
+    d += pb_uint32_field(21, 100)                        # townDurabilityMax
+    d += pb_uint32_field(22, player["present_ticket"])   # presentTicket
+    d += pb_uint32_field(24, player["zone_id"])          # zoneId
     d += pb_bool(25, False)                              # isMiniClient
-    d += pb_varint_field(26, 1)                          # seqId
+    d += pb_uint32_field(26, 1)                          # seqId
     d += pb_bool(27, False)                              # newOfflineReward
-    d += pb_varint_field(28, player["reg_time"])         # regTime
-    d += pb_varint_field(29, player["server_open_time"]) # serverOpenTime
-    d += pb_varint_field(30, player["reg_time"])         # regRoleSystemOpenTime
-    d += pb_varint_field(32, player["foster_ticket"])    # fosterTicket
+    d += pb_uint32_field(28, player["reg_time"])         # regTime
+    d += pb_uint32_field(29, player["server_open_time"]) # serverOpenTime
+    d += pb_uint32_field(30, player["reg_time"])         # regRoleSystemOpenTime
+    d += pb_uint32_field(32, player["foster_ticket"])    # fosterTicket
     d += pb_bool(33, True)                               # isEquipAttachEnabled
     d += pb_bool(34, False)                              # isPlayZoneTask
     d += pb_bool(35, False)                              # forbidCardAwaken
-    d += pb_varint_field(36, player["lucky"])            # lucky
-    d += pb_varint_field(37, player["contrib_val"])      # contribVal
-    d += pb_varint_field(38, player["light"])            # light
-    d += pb_varint_field(39, player["last_pay_time"])    # lastPayTime
-    d += pb_varint_field(40, puppet_skill_val(player))   # puppetSkillVal (傀儡技能点)
-    d += pb_varint_field(41, puppet_energy(player))      # puppetEnergy (傀儡战境 能量)
-    d += pb_varint_field(44, player["prestige"])         # prestige
+    d += pb_uint32_field(36, player["lucky"])            # lucky
+    d += pb_uint32_field(37, player["contrib_val"])      # contribVal
+    d += pb_uint32_field(38, player["light"])            # light
+    d += pb_uint32_field(39, player["last_pay_time"])    # lastPayTime
+    d += pb_uint32_field(40, puppet_skill_val(player))   # puppetSkillVal (傀儡技能点)
+    d += pb_uint32_field(41, puppet_energy(player))      # puppetEnergy (傀儡战境 能量)
+    d += pb_uint32_field(44, player["prestige"])         # prestige
     # field 7: latestTDLevel. New accounts must start at the dedicated tutorial
     # map (0-1-1); normal accounts retain their saved story position.
     td_stage = 0 if player.get("tutorial_active") else player["td_stage"]
     td_level = 1 if player.get("tutorial_active") else player["td_level"]
     td_sub = 1 if player.get("tutorial_active") else player["td_sub"]
-    td = (pb_varint_field(1, td_stage) + pb_varint_field(2, td_level)
-          + pb_varint_field(3, td_sub))
+    td = (pb_uint32_field(1, td_stage) + pb_uint32_field(2, td_level)
+          + pb_uint32_field(3, td_sub))
     d += pb_tag(7, 2) + uvarint(len(td)) + td
     # field 12: faceAvatar (Dto_PlantInfo) — player's avatar plant.
-    av = (pb_varint_field(1, player["avatar_plant_id"]) + pb_varint_field(2, 0)
-          + pb_varint_field(3, int(player.get("avatar_skin_id") or 0)) + pb_varint_field(4, 0))
+    av = (pb_uint32_field(1, player["avatar_plant_id"]) + pb_uint32_field(2, 0)
+          + pb_uint32_field(3, int(player.get("avatar_skin_id") or 0)) + pb_uint32_field(4, 0))
     d += pb_tag(12, 2) + uvarint(len(av)) + av
     # field 14: unlockPlantList (repeated Dto_PlantInfo) — the player's normal-mode plants.
+    avatar_shared = _td_avatar_shared_state(player)
     for pid in player.get("plants", []):
-        pl = pb_varint_field(1, pid) + pb_varint_field(2, 0)  # plantId, isNew=0
+        if int(pid) not in valid_td_plants():
+            continue
+        pl = _build_td_plant_info_dto(player, pid, _shared=avatar_shared)
         d += pb_tag(14, 2) + uvarint(len(pl)) + pl
     d += make_server_config_entries(player)   # field 19 (repeated) — config table (per-player: VIP plant)
     return d
@@ -23083,6 +23930,8 @@ async def handle_client(reader, writer):
                         if "Puppet" in name:      # 傀儡面板: 把客户端发来的原始请求也记下来
                             log.info("    <= %s data=%s", name.rsplit(".", 1)[-1], cmd_data.hex())
                         try:
+                            if player:
+                                player.pop("_garden_auto_sync_payload", None)
                             result = REQUEST_HANDLERS[name](cmd_data, player or {})
                             messages = result if isinstance(result, list) else [(sc, result)]
                         except Exception:
@@ -23098,6 +23947,12 @@ async def handle_client(reader, writer):
                     else:
                         # Generic: matching _SC with nested fields present (no null-crash).
                         messages = [(sc, response_for(sc))]
+                    if player:
+                        pending = player.pop("_garden_auto_sync_payload", None)
+                        if (pending and not any(msg_name in (
+                                "PVZ.Cmd.Cmd_Garden_GetInfo_SC", "PVZ.Cmd.Cmd_Sync_Garden_Info_SC",
+                                "PVZ.Cmd.Cmd_LogicError_SC") for msg_name, _body in messages)):
+                            messages = list(messages) + [pending]
                     for sc_name, body in messages:
                         log.info("    -> %s (%d body bytes)", sc_name, len(body))
                         send_message(writer, sc_name, body)
@@ -23233,6 +24088,8 @@ import arena_consistency_repairs_20261011
 arena_consistency_repairs_20261011.install(_reported_bug_api)
 import cross_arena_refresh_repairs_20261011
 cross_arena_refresh_repairs_20261011.install(_reported_bug_api)
+import arena_report_repairs_20261012
+arena_report_repairs_20261012.install(_reported_bug_api)
 if isinstance(_reported_bug_api, SimpleNamespace):
     globals().update(vars(_reported_bug_api))
 

@@ -334,8 +334,8 @@ def member_index():
 def power_board():
     """[{guild_id, name, level, member_num, member_limit, power}] — the 联盟战力榜, ordered by
     Σ member fight_power. Bot members keep their stored fight_power fresh on every boot
-    (bots_local._seed_guilds), so the sum is real; a human member's row is only refreshed by the
-    caller (pvz_poc_server swaps in the player's live 战力)."""
+    (bots_local._seed_guilds); human members use the server's live collection power."""
+    refresh_member_profiles()
     with _db() as con:
         rows = con.execute(
             "SELECT g.guild_id AS gid, g.name AS name, g.level AS level, "
@@ -398,8 +398,62 @@ def _quick_join_power(player):
     try:
         return max(0, int(getter(player)))
     except Exception as exc:
-        _log("guild quick-join power unavailable uin=%s: %s", player.get("uin"), exc)
+        _log("guild collection power unavailable uin=%s: %s", player.get("uin"), exc)
         return None
+
+
+def _live_member_profile(player):
+    """Read saved role fields and the existing collection-power calculation.
+
+    Run before a membership writer transaction: the power callback uses the
+    shared player store and must not commit a half-written guild operation.
+    """
+    with _db() as con:
+        has_players = con.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='players'").fetchone()
+        row = con.execute("SELECT * FROM players WHERE uin=?", (int(player.get("uin", 0)),)).fetchone() if has_players else None
+    live = dict(row) if row else dict(player)
+    return (int(live.get("level") or 1), int(live.get("face_id") or 0),
+            _quick_join_power(live), str(live.get("name") or "Player"))
+
+
+def _refresh_role_profiles(guild_id=None, applications=False):
+    """Refresh saved human member/application profiles in one guild, or all.
+
+    Bots keep their generated stats, and an orphaned old membership keeps its
+    cached values. Compute every power before writing so nested store reads do
+    not commit some of the cache updates early.
+    """
+    table = "local_guild_applications" if applications else "local_guild_members"
+    face_column = "0" if applications else "m.face_id"
+    with _db() as con:
+        if not con.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='players'").fetchone():
+            return
+        sql = ("SELECT p.*,m.guild_id AS profile_guild_id,m.name AS cached_name,m.level AS cached_level," + face_column + " AS cached_face_id,"
+               "m.fight_power AS cached_power FROM " + table + " m "
+               "JOIN players p ON p.uin=m.uin WHERE NOT (m.uin>=900000 AND m.uin<1000000)")
+        rows = con.execute(sql + (" AND m.guild_id=?" if guild_id is not None else ""),
+                           (int(guild_id),) if guild_id is not None else ()).fetchall()
+    updates = []
+    for row in rows:
+        live = dict(row)
+        level, face = int(live.get("level") or 1), int(live.get("face_id") or 0)
+        name = str(live.get("name") or "Player")
+        if applications:
+            face = 0
+        power = _quick_join_power(live)
+        if power is None:
+            power = int(row["cached_power"])
+        if (name, level, face, power) != (row["cached_name"], row["cached_level"], row["cached_face_id"], row["cached_power"]):
+            values = (name, level, power) if applications else (name, level, face, power)
+            updates.append(values + (int(row["uin"]), int(row["profile_guild_id"])))
+    if updates:
+        with _db() as con:
+            columns = "name=?,level=?,fight_power=?" if applications else "name=?,level=?,face_id=?,fight_power=?"
+            con.executemany("UPDATE " + table + " SET " + columns + " WHERE uin=? AND guild_id=?", updates)
+
+
+def refresh_member_profiles(guild_id=None):
+    _refresh_role_profiles(guild_id)
 
 
 def _joinable(con, player, guild, require_quick=False, quick_power=_QUICK_POWER_UNSET):
@@ -419,19 +473,22 @@ def _joinable(con, player, guild, require_quick=False, quick_power=_QUICK_POWER_
     return True
 
 
-def _add_member(con, guild, player, position=2):
+def _add_member(con, guild, player, position=2, profile=None):
     uin = int(player.get("uin", 0))
+    level, face, power, name = profile if profile is not None else (
+        int(player.get("level") or 1), int(player.get("face_id") or 0), 0,
+        str(player.get("name") or "Player"))
     _notify_changed()
     con.execute("DELETE FROM local_guild_applications WHERE guild_id=? AND uin=?", (guild["guild_id"], uin))
     con.execute("""INSERT INTO local_guild_members
         (guild_id,uin,role_id,name,position,level,face_id,fight_power,joined_at)
         VALUES(?,?,?,?,?,?,?,?,?)""",
         (guild["guild_id"], uin, int(player.get("role_id") or uin),
-         str(player.get("name") or "Player"), int(position), int(player.get("level") or 1),
-         int(player.get("face_id") or 0), 0, int(time.time())))
+         name, int(position), level,
+         face, int(power or 0), int(time.time())))
     con.execute("INSERT OR IGNORE INTO local_guild_players(uin) VALUES(?)", (uin,))
     con.execute("INSERT INTO local_guild_events(guild_id,event_type,role_id,role_name,event_time) VALUES(?,?,?,?,?)",
-                (guild["guild_id"], 1, int(player.get("role_id") or uin), str(player.get("name") or "Player"), int(time.time())))
+                (guild["guild_id"], 1, int(player.get("role_id") or uin), name, int(time.time())))
 
 
 def _skill_rules():
@@ -508,6 +565,7 @@ def register(api=None, db_path=None):
         flag = _fields(_submessage(cmd_data, 2))
         colors = [int(flag.get(i, [(0, 1)])[0][1]) if flag.get(i) and flag[i][0][0] == 0 else 1 for i in range(1, 5)]
         now = int(time.time())
+        profile = _live_member_profile(player)
         with _db() as con:
             if _member(con, uin):
                 return b""
@@ -522,7 +580,7 @@ def register(api=None, db_path=None):
             cur = con.execute("""INSERT INTO local_guilds(name,manifesto,color_id,color2_id,surface_id,sign_id,created_at)
                 VALUES(?,?,?,?,?,?,?)""", (name, name, *colors, now))
             guild = con.execute("SELECT * FROM local_guilds WHERE guild_id=?", (cur.lastrowid,)).fetchone()
-            _add_member(con, guild, player, position=1)
+            _add_member(con, guild, player, position=1, profile=profile)
         _log("local guild created: guildId=%d roleId=%d name=%s", guild["guild_id"], role_id, name)
         staff = _API.get("assign_bots")
         if staff:
@@ -537,12 +595,13 @@ def register(api=None, db_path=None):
     def handle_join_req(cmd_data, player):
         gid = _int(cmd_data, 1)
         uin = int(player.get("uin", 0))
+        profile = _live_member_profile(player)
         with _db() as con:
             guild = _guild(con, gid)
             if not _joinable(con, player, guild) or not uin:
                 return b""
-            con.execute("INSERT OR REPLACE INTO local_guild_applications(guild_id,uin,role_id,name,level,apply_time) VALUES(?,?,?,?,?,?)",
-                        (gid, uin, int(player.get("role_id") or uin), str(player.get("name") or "Player"), int(player.get("level") or 1), int(time.time())))
+            con.execute("INSERT OR REPLACE INTO local_guild_applications(guild_id,uin,role_id,name,level,fight_power,apply_time) VALUES(?,?,?,?,?,?,?)",
+                        (gid, uin, int(player.get("role_id") or uin), profile[3], profile[0], int(profile[2] or 0), int(time.time())))
             con.execute("INSERT OR IGNORE INTO local_guild_players(uin) VALUES(?)", (uin,))
         return b""
 
@@ -551,7 +610,8 @@ def register(api=None, db_path=None):
             return b""
         # Compute before taking the membership writer lock: the power helper
         # reads player/card tables through the shared store connection.
-        power = _quick_join_power(player)
+        profile = _live_member_profile(player)
+        power = profile[2]
         with _db() as con:
             store.begin_immediate(con)
             if _member(con, player["uin"]):
@@ -559,7 +619,7 @@ def register(api=None, db_path=None):
             guilds = con.execute("SELECT * FROM local_guilds WHERE allow_quick_join=1 ORDER BY level DESC, exp DESC, guild_id").fetchall()
             chosen = next((g for g in guilds if _joinable(con, player, g, True, power)), None)
             if chosen:
-                _add_member(con, chosen, player)
+                _add_member(con, chosen, player, profile=profile)
             else:
                 # These errors are in the shipped ErrorInfo table. Do not send
                 # an empty QuickJoin_SC that the client would treat as success.
@@ -584,6 +644,8 @@ def register(api=None, db_path=None):
             if not gid:
                 member = _member(con, player.get("uin", 0))
                 gid = member["guild_id"] if member else 0
+        refresh_member_profiles(gid)
+        with _db() as con:
             rows = con.execute("SELECT * FROM local_guild_members WHERE guild_id=? ORDER BY position,joined_at,role_id", (gid,)).fetchall() if gid else []
             out = b""
             for row in rows:
@@ -595,6 +657,9 @@ def register(api=None, db_path=None):
     def handle_join_list(cmd_data, player):
         with _db() as con:
             guild = _guild_for_player(con, player)
+        if guild:
+            _refresh_role_profiles(guild["guild_id"], applications=True)
+        with _db() as con:
             rows = con.execute("SELECT * FROM local_guild_applications WHERE guild_id=? ORDER BY apply_time", (guild["guild_id"],)).fetchall() if guild else []
             out = b""
             for row in rows:
@@ -604,6 +669,10 @@ def register(api=None, db_path=None):
 
     def handle_ack_join(cmd_data, player):
         role_id, agree = _int(cmd_data, 1), bool(_int(cmd_data, 2))
+        with _db() as con:
+            has_players = con.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='players'").fetchone()
+            joined_row = con.execute("SELECT * FROM players WHERE role_id=?", (role_id,)).fetchone() if agree and has_players else None
+        profile = _live_member_profile(dict(joined_row)) if joined_row else None
         with _db() as con:
             store.begin_immediate(con)
             owner = _member(con, player.get("uin", 0))
@@ -617,7 +686,7 @@ def register(api=None, db_path=None):
                         guild = _guild(con, owner["guild_id"])
                         if not _joinable(con, dict(joined_player), guild):
                             return _logic_error(5008)
-                        _add_member(con, guild, dict(joined_player))
+                        _add_member(con, guild, dict(joined_player), profile=profile)
                 con.execute("DELETE FROM local_guild_applications WHERE guild_id=? AND role_id=?", (owner["guild_id"], role_id))
         return b""
 
@@ -693,23 +762,35 @@ def register(api=None, db_path=None):
         uin, skill_id = int(player.get("uin", 0)), _int(cmd_data, 1)
         unlock, costs, limits = _skill_rules()
         with _db() as con:
+            # Reserve the writer before reading the skill or eligibility. Two
+            # sockets must each pay for their own next level, not both buy the
+            # same level from a pre-transaction snapshot.
+            store.begin_immediate(con)
+            saved = con.execute("SELECT level,contrib_val FROM players WHERE uin=?",
+                                (uin,)).fetchone()
+            player_level = int(saved["level"] or 0) if saved else 0
+            contribution = int(saved["contrib_val"] or 0) if saved else 0
             current = con.execute("SELECT level FROM local_guild_skills WHERE uin=? AND skill_id=?",
                                   (uin, skill_id)).fetchone()
             level = int(current["level"]) if current else 0
             next_level = level + 1
             cost = costs.get((skill_id, next_level))
-            if (_member(con, uin) and skill_id in unlock and cost is not None
-                    and int(player.get("level") or 0) >= unlock[skill_id]
-                    and next_level <= limits.get(int(player.get("level") or 0), 0)):
-                store.begin_immediate(con)
+            if (saved and _member(con, uin) and skill_id in unlock and cost is not None
+                    and cost >= 0 and player_level >= unlock[skill_id]
+                    and next_level <= limits.get(player_level, 0)):
                 result = con.execute("UPDATE players SET contrib_val=contrib_val-? "
                                      "WHERE uin=? AND contrib_val>=?", (cost, uin, cost))
                 if result.rowcount == 1:
                     con.execute("INSERT INTO local_guild_skills(uin,skill_id,level) VALUES(?,?,?) "
                                 "ON CONFLICT(uin,skill_id) DO UPDATE SET level=excluded.level",
                                 (uin, skill_id, next_level))
-                    player["contrib_val"] = int(player.get("contrib_val") or 0) - cost
+                    contribution -= cost
                     level = next_level
+        # Even rejected requests synchronize the saved balance. A stale socket
+        # must never subtract from its own cached contribution or report it.
+        player["contrib_val"] = contribution
+        if saved:
+            player["level"] = player_level
         # The client dereferences SC.info.id unconditionally, including when a
         # request is rejected; always provide a complete Dto_SkillInfo.
         reply = _m(1, _v(1, skill_id) + _v(2, level))
@@ -876,13 +957,14 @@ def register(api=None, db_path=None):
 
     def handle_invite_ack(cmd_data, player):
         guild_id, agree = _int(cmd_data, 1), bool(_int(cmd_data, 2))
+        profile = _live_member_profile(player) if agree else None
         with _db() as con:
             invite = con.execute("SELECT * FROM local_guild_invites WHERE guild_id=? AND invitee_uin=?",
                                  (guild_id, int(player.get("uin", 0)))).fetchone()
             guild = _guild(con, guild_id)
             if invite:
                 if agree and _joinable(con, player, guild):
-                    _add_member(con, guild, player)
+                    _add_member(con, guild, player, profile=profile)
                 con.execute("DELETE FROM local_guild_invites WHERE guild_id=? AND invitee_uin=?",
                             (guild_id, int(player.get("uin", 0))))
         return b""

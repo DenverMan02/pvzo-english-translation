@@ -122,11 +122,11 @@ def take_trial_chest(g, cmd_data, player, hard=False):
     key, max_key = ('tr_hard_boxes', 'tr_hard_max') if hard else ('tr_boxes', 'tr_max')
     prefix = 'NewScrewUp' if hard else 'ScrewUp'
     with g.store.atomic_player(player):
-        lvl = g.load_trial_road().get(stage_id)
+        lvl = g.load_trial_road(hard).get(stage_id)
         taken = {int(x) for x in str(player.get(key) or '').split(',') if x.strip().isdigit()}
         if not lvl or not lvl['chest'] or stage_id > int(player.get(max_key) or 0) or stage_id in taken:
             return []
-        rewards = _trial_boxes(g).get(stage_id, lvl['chest'])
+        rewards = lvl['chest'] if hard else _trial_boxes(g).get(stage_id, lvl['chest'])
         if not chests._validate(g, rewards) or not chests._can_receive(g, player, rewards, 0, 0):
             return [g._logic_error(902)]
         messages = g.grant_fuben_reward(player, rewards)

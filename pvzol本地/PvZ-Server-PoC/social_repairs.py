@@ -115,7 +115,8 @@ def install(g):
         return [('PVZ.Cmd.Cmd_Friend_GetRecommendList_SC',b''.join(m(1,apply_dto(dict(r))) for r in rows))]
     route('Cmd_Friend_GetRecommendList',recommend)
     def myplant(data,player):
-        body=b''.join(m(1,g._build_plant_info_dto(pid)) for pid in store.get_player_plants(player['uin']))
+        shared=g._td_avatar_shared_state(player)
+        body=b''.join(m(1,g._build_td_plant_info_dto(player,pid,_shared=shared)) for pid in store.get_player_plants(player['uin']))
         return [('PVZ.Cmd.Cmd_Friend_GetMyPlant_SC',body)]
     route('Cmd_Friend_GetMyPlant',myplant)
     # Logs are backed by actual recorded operations, never invented battles.

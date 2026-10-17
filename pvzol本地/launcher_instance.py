@@ -21,7 +21,7 @@ SYNCHRONIZE = 0x00100000
 
 def _kernel():
     if os.name != 'nt':
-        raise OSError('Single-instance protection for the desktop launcher requires Windows.')
+        raise OSError('当前桌面启动器的单实例保护需要 Windows。')
     kernel = ctypes.WinDLL('kernel32', use_last_error=True)
     handle = ctypes.c_void_p
     dword = ctypes.c_uint32
@@ -61,7 +61,7 @@ class LauncherInstance:
     def __init__(self, name=None):
         self.name = os.environ.get(INSTANCE_ENV, DEFAULT_NAME) if name is None else name
         if not isinstance(self.name, str) or re.fullmatch(r'[A-Za-z0-9_.-]{1,128}', self.name) is None:
-            raise ValueError('Launcher instance names must be 1–128 characters and may contain letters, digits, dots, hyphens, or underscores.')
+            raise ValueError('启动器实例名必须是 1–128 个字母、数字、点、横线或下划线。')
         self.mutex_name = 'Local\\' + self.name + '.Controller'
         self.activation_event_name = 'Local\\' + self.name + '.Activate'
         self._kernel = None
@@ -127,9 +127,9 @@ class LauncherInstance:
 def wait_for_activation(event_name, timeout_ms=1000):
     """Open an owner's auto-reset event and consume one activation signal."""
     if not isinstance(event_name, str) or not event_name.startswith('Local\\'):
-        raise ValueError('Activation events must be in the current Windows session.')
+        raise ValueError('激活事件必须在当前 Windows 会话中。')
     if type(timeout_ms) is not int or not 0 <= timeout_ms < 0xffffffff:
-        raise ValueError('Invalid activation timeout.')
+        raise ValueError('激活等待时间无效。')
     kernel = _kernel()
     handle = kernel.OpenEventW(SYNCHRONIZE, False, event_name)
     if not handle:

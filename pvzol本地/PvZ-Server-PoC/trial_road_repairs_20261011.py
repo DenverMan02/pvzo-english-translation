@@ -23,22 +23,31 @@ def install(g):
     original_preview = g.handle_battle_getfightinfo
     original_preview_route = g.REQUEST_HANDLERS.get(preview_request, original_preview)
 
+    def atomic(handler):
+        @wraps(handler)
+        def wrapped(data, player):
+            # Reload before the existing next-stage/first-clear checks. Retain
+            # legal re-clears after restarting, with their original rewards.
+            with g.store.atomic_player(player):
+                return handler(data, player)
+        return wrapped
+
     def trial_preview(data, player):
         targets = g.parse_repeated_submessages(data, 1)
         target = g.parse_varint_fields(targets[0]) if targets else {}
         trial = TRIAL_TARGETS.get(target.get(1))
         if not trial:
             return None
-        scene, progress, multiplier = trial
+        scene, progress, _multiplier = trial
         # Field 7 is authoritative. Zero is accepted for older local callers
         # that omitted it, but the mode still comes from the explicit type.
         stage = int(target.get(7) or (int(player.get(progress) or 0) + 1))
-        level = g.load_trial_road().get(stage)
+        level = g.load_trial_road(scene == "newscrewup").get(stage)
         if not level:
             return b""
         g.load_battle_cards()
         g.note_battle_scene(player, scene)
-        right = g._tr_enemy_squad(max(1, int(level["power"]) * multiplier), stage)
+        right = g._tr_enemy_squad(max(1, int(level["power"])), stage)
         g.remember_battle_preview(player, right, "screwup", trial_key(scene, stage),
                                  label="preview:" + trial_key(scene, stage))
         formation = g.build_formation_info(player, 1, g.default_formation_placements(player))
@@ -52,8 +61,12 @@ def install(g):
     def preview_wrapper(original):
         @wraps(original)
         def preview(data, player):
-            body = trial_preview(data, player)
-            return original(data, player) if body is None else body
+            targets = g.parse_repeated_submessages(data, 1)
+            target = g.parse_varint_fields(targets[0]) if targets else {}
+            if target.get(1) in TRIAL_TARGETS:
+                with g.store.atomic_player(player):
+                    return trial_preview(data, player)
+            return original(data, player)
         return preview
 
     def fight_wrapper(original, scene, current, prefix):
@@ -97,3 +110,19 @@ def install(g):
         "PVZ.Cmd.Cmd_ScrewUp_Fight_CS": g.handle_screwup_fight,
         "PVZ.Cmd.Cmd_NewScrewUp_Fight_CS": g.handle_newscrewup_fight,
     })
+
+    # Reads can perform daily rollover, and every mutation must join the same
+    # refreshed snapshot through reward delivery and response construction.
+    # Keep any existing route-only adapter instead of replacing its delegate.
+    for prefix, stem in (("ScrewUp", "screwup"), ("NewScrewUp", "newscrewup")):
+        for action, suffix in (("GetInfo", "getinfo"), ("GetFormation", "getformation"),
+                               ("SetFormation", "setformation"), ("Fight", "fight"),
+                               ("Sweep", "sweep"), ("TakeReward", "takereward"),
+                               ("Restart", "restart")):
+            helper = "handle_%s_%s" % (stem, suffix)
+            request = "PVZ.Cmd.Cmd_%s_%s_CS" % (prefix, action)
+            original = getattr(g, helper)
+            route = g.REQUEST_HANDLERS.get(request, original)
+            wrapped = atomic(original)
+            setattr(g, helper, wrapped)
+            g.REQUEST_HANDLERS[request] = wrapped if route is original else atomic(route)

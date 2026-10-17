@@ -93,6 +93,8 @@ DEFAULTS = {
     "garden_bean": 0,       # exp beans banked in the garden
     "garden_seeds_granted": 0,  # 1 once the one-time starter crop-seed stash has been given
     "garden_goodwill": 0,   # lifetime sunflower exp harvested -> pet-house 好感度 (unlocks pets)
+    "garden_auto_state": "",  # JSON: observed auto configuration/inventory boundary
+    "garden_work_epoch": "",  # JSON: durable pet work interval and pickup phase
     "garden_pet_data": "",  # JSON: owned/active garden pets and their temporary expiry times
     "garden_autofertilizer": 0,  # selected fertilizer template id for auto-use
     "garden_autouse": 0,          # automatically apply the selected fertilizer to new plants
@@ -313,24 +315,45 @@ def atomic_player(player):
         _THREAD_STATE.atomic_depth = depth + 1
         try:
             yield con
+            if getattr(_THREAD_STATE, "atomic_broken", False):
+                raise sqlite3.OperationalError("Player transaction aborted after rollback failed")
             con.execute("RELEASE SAVEPOINT " + marker)
             if not depth:
                 con.commit()
         except BaseException:
             try:
-                con.execute("ROLLBACK TO SAVEPOINT " + marker)
-                con.execute("RELEASE SAVEPOINT " + marker)
                 if not depth:
+                    # RELEASE has already removed the savepoint if commit fails.
+                    # The outer context owns the transaction and must roll back
+                    # that transaction directly, including its provisional rewards.
                     con.rollback()
+                else:
+                    con.execute("ROLLBACK TO SAVEPOINT " + marker)
+                    con.execute("RELEASE SAVEPOINT " + marker)
+            except sqlite3.Error:
+                # A failed cleanup must not replace the original failure or leave
+                # a cached connection that could commit provisional data later.
+                _THREAD_STATE.atomic_broken = True
+                if getattr(_THREAD_STATE, "con", None) is con:
+                    _THREAD_STATE.con = None
+                try:
+                    con.close()
+                except sqlite3.Error:
+                    pass
             finally:
                 player.clear()
                 player.update(snapshot)
             raise
         finally:
             _THREAD_STATE.atomic_depth = depth
+            if not depth:
+                _THREAD_STATE.atomic_broken = False
 
 
 def _thread_db():
+    if (getattr(_THREAD_STATE, "atomic_depth", 0)
+            and getattr(_THREAD_STATE, "atomic_broken", False)):
+        raise sqlite3.OperationalError("Player transaction aborted after rollback failed")
     con = getattr(_THREAD_STATE, "con", None)
     con_path = getattr(_THREAD_STATE, "path", None)
     if con is not None and con_path != DB_PATH:
@@ -473,6 +496,11 @@ def init_db():
                     "(uin INTEGER, uid INTEGER, avatar_id INTEGER, "
                     "status INTEGER DEFAULT 1, forge_level INTEGER DEFAULT 0, "
                     "PRIMARY KEY(uin, uid, avatar_id))")
+        # TD has one choice per plant species; adventure wardrobes remain UID-local.
+        # An explicit zero remembers a return to the original TD appearance.
+        con.execute("CREATE TABLE IF NOT EXISTS td_plant_avatar "
+                    "(uin INTEGER, plant_id INTEGER, avatar_id INTEGER NOT NULL DEFAULT 0, "
+                    "PRIMARY KEY(uin, plant_id))")
         # Plant armour is card-local.  Each plant owns three armour sets
         # (attack/defence/life); crystals are separately socketed into four holes.
         con.execute("CREATE TABLE IF NOT EXISTS card_armor "
@@ -576,6 +604,10 @@ def init_db():
                     "(uin INTEGER, field_id INTEGER, seed_id INTEGER DEFAULT 0, "
                     "plant_time INTEGER DEFAULT 0, fertilizer_id INTEGER DEFAULT 0, "
                     "last_fertilizer_time INTEGER DEFAULT 0, level INTEGER DEFAULT 1, "
+                    "pending_exp INTEGER DEFAULT 0, pending_cycles INTEGER DEFAULT 0, "
+                    "accrual_version INTEGER DEFAULT 0, held_exp INTEGER DEFAULT 0, "
+                    "next_cycle_time INTEGER DEFAULT 0, accrual_at INTEGER DEFAULT 0, "
+                    "pet_accrual_version INTEGER DEFAULT 0, "
                     "PRIMARY KEY(uin, field_id))")
         garden_cols = {r["name"] for r in con.execute("PRAGMA table_info(garden_pots)")}
         if "fertilizer_id" not in garden_cols:
@@ -584,6 +616,10 @@ def init_db():
             con.execute("ALTER TABLE garden_pots ADD COLUMN last_fertilizer_time INTEGER DEFAULT 0")
         if "level" not in garden_cols:
             con.execute("ALTER TABLE garden_pots ADD COLUMN level INTEGER DEFAULT 1")
+        for column in ("pending_exp", "pending_cycles", "accrual_version", "held_exp",
+                       "next_cycle_time", "accrual_at", "pet_accrual_version"):
+            if column not in garden_cols:
+                con.execute("ALTER TABLE garden_pots ADD COLUMN %s INTEGER DEFAULT 0" % column)
         # nutrition reagents (试剂): one row per OWNED reagent. base_id -> its buffType/quality
         # (nutritionProperty.txt); level scales the buff. position=0/slot_id=0 = unequipped (in the
         # bag); position in {3,7,9,11,13,15,17} + slot_id 1..8 = equipped onto that plant position.
@@ -644,7 +680,7 @@ def create_new_player(uin):
     """Create a fresh account, rejecting an existing UIN without changing it."""
     text = str(uin)
     if not 1 <= len(text) <= 19 or not text.isascii() or not text.isdigit() or not 1 <= int(text) <= 4294967295:
-        raise ValueError("Account ID must be a numeric value from 1 to 4294967295.")
+        raise ValueError("账号必须是 1—4294967295 的纯数字。")
     return get_or_create_player(int(text), create_only=True)[0]
 
 
@@ -659,7 +695,7 @@ def get_or_create_player(uin, *, create_only=False):
         row = con.execute("SELECT * FROM players WHERE uin=?", (uin,)).fetchone()
         if row is not None:
             if create_only:
-                raise ValueError("Account %s already exists. Choose a different account ID." % uin)
+                raise ValueError("账号 %s 已存在，请选择其他账号号码。" % uin)
             con.execute("UPDATE players SET last_login=? WHERE uin=?", (now, uin))
             vals = dict(row)
             has_td_progress = con.execute(
@@ -1268,6 +1304,31 @@ def set_card_forge_level(uin, uid, forge_level):
 
 
 # --- card wardrobe / avatar skins ---------------------------------------------
+
+def get_all_card_avatars(uin):
+    """One request-local wardrobe snapshot for a TD plant roster."""
+    result = {}
+    with _db() as con:
+        for row in con.execute("SELECT uid,avatar_id,status,forge_level FROM card_avatar WHERE uin=?", (uin,)):
+            result.setdefault(int(row["uid"]), {})[int(row["avatar_id"])] = {
+                "status": int(row["status"]), "forge_level": int(row["forge_level"])}
+    return result
+
+
+def get_td_plant_avatars(uin):
+    with _db() as con:
+        return {int(row["plant_id"]): int(row["avatar_id"]) for row in con.execute(
+            "SELECT plant_id,avatar_id FROM td_plant_avatar WHERE uin=?", (uin,))}
+
+
+def set_td_plant_avatar(uin, plant_id, avatar_id):
+    """Save the TD species selection inside its caller's wardrobe transaction."""
+    with _db() as con:
+        con.execute("INSERT INTO td_plant_avatar(uin,plant_id,avatar_id) VALUES(?,?,?) "
+                    "ON CONFLICT(uin,plant_id) DO UPDATE SET avatar_id=excluded.avatar_id",
+                    (uin, int(plant_id), int(avatar_id)))
+
+
 def get_card_avatars(uin, uid):
     """Return persisted wardrobe rows keyed by avatar id.
 
@@ -1309,6 +1370,45 @@ def delete_card_avatar(uin, uid, avatar_id):
     with _db() as con:
         con.execute("DELETE FROM card_avatar WHERE uin=? AND uid=? AND avatar_id=?",
                     (uin, int(uid), int(avatar_id)))
+
+
+def select_card_avatar(uin, uid, avatar_id, forge_level=0):
+    """Select one outfit in one commit; retain every owned outfit's enhancement."""
+    uid, avatar_id = int(uid), int(avatar_id)
+    with _db() as con:
+        begin_immediate(con)
+        if not con.execute("SELECT 1 FROM cards WHERE uin=? AND uid=?", (uin, uid)).fetchone():
+            return False
+        con.execute("UPDATE card_avatar SET status=3 WHERE uin=? AND uid=? "
+                    "AND status=4 AND avatar_id!=?", (uin, uid, avatar_id))
+        con.execute(
+            "INSERT INTO card_avatar (uin,uid,avatar_id,status,forge_level) VALUES (?,?,?,4,?) "
+            "ON CONFLICT(uin,uid,avatar_id) DO UPDATE SET status=4",
+            (uin, uid, avatar_id, int(forge_level)))
+    return True
+
+
+def swap_card_ordinary_avatars(uin, uid_a, rows_a, selected_a, uid_b, rows_b, selected_b):
+    """Persist remapped ordinary wardrobes together; retain rare ownership/levels."""
+    uid_a, uid_b = int(uid_a), int(uid_b)
+    if uid_a == uid_b:
+        return False
+    with _db() as con:
+        owned = {int(r["uid"]) for r in con.execute(
+            "SELECT uid FROM cards WHERE uin=? AND uid IN (?,?)", (uin, uid_a, uid_b))}
+        if owned != {uid_a, uid_b}:
+            return False
+        for uid, rows, selected in ((uid_a, rows_a, selected_a),
+                                    (uid_b, rows_b, selected_b)):
+            con.execute("UPDATE card_avatar SET status=3 WHERE uin=? AND uid=? "
+                        "AND status=4 AND avatar_id!=?", (uin, uid, int(selected)))
+            con.executemany(
+                "INSERT INTO card_avatar (uin,uid,avatar_id,status,forge_level) VALUES (?,?,?,?,?) "
+                "ON CONFLICT(uin,uid,avatar_id) DO UPDATE SET status=excluded.status, "
+                "forge_level=excluded.forge_level",
+                [(uin, uid, int(aid), int(row["status"]), int(row["forge_level"]))
+                 for aid, row in rows.items()])
+    return True
 
 
 # --- plant baptize / refine (植物洗炼) ---------------------------------------------
@@ -1525,17 +1625,26 @@ def unlock_garden_field(uin, field_id):
                     "VALUES (?,?,0,0)", (uin, int(field_id)))
 
 
-def set_garden_pot(uin, field_id, seed_id, plant_time):
+def set_garden_pot(uin, field_id, seed_id, plant_time, reset_pending=True):
     """Set a pot's planted seed + time (seed_id=0 clears it).
 
-    Fertilizer metadata is optional so old callers retain their behavior.  Garden
-    handlers that intentionally plant/clear/fertilize a pot pass it explicitly.
+    Starting a new planting/harvest clock clears previously generated experience.
+    Watering only shifts the current clock and explicitly preserves that bank.
+    Fertilizer metadata and the upgrade level remain unchanged.
     """
     with _db() as con:
         con.execute("INSERT INTO garden_pots (uin, field_id, seed_id, plant_time, fertilizer_id, "
-                    "last_fertilizer_time, level) VALUES (?,?,?,?,0,0,1) "
+                    "last_fertilizer_time, level, accrual_version) VALUES (?,?,?,?,0,0,1,1) "
                     "ON CONFLICT(uin, field_id) DO UPDATE SET seed_id=excluded.seed_id, "
-                    "plant_time=excluded.plant_time", (uin, int(field_id), int(seed_id), int(plant_time)))
+                    "plant_time=excluded.plant_time, accrual_version=1, "
+                    "pending_exp=CASE WHEN ? THEN 0 ELSE garden_pots.pending_exp END, "
+                    "pending_cycles=CASE WHEN ? THEN 0 ELSE garden_pots.pending_cycles END, "
+                    "held_exp=CASE WHEN ? THEN 0 ELSE garden_pots.held_exp END, "
+                    "next_cycle_time=CASE WHEN ? THEN 0 ELSE garden_pots.next_cycle_time END, "
+                    "accrual_at=CASE WHEN ? THEN 0 ELSE garden_pots.accrual_at END, "
+                    "pet_accrual_version=CASE WHEN ? THEN 0 ELSE garden_pots.pet_accrual_version END",
+                    (uin, int(field_id), int(seed_id), int(plant_time),
+                     *([bool(reset_pending) or not seed_id] * 6)))
 
 
 def get_garden_pot_details(uin):
@@ -1547,8 +1656,17 @@ def get_garden_pot_details(uin):
             "fertilizer_id": int(r["fertilizer_id"] or 0),
             "last_fertilizer_time": int(r["last_fertilizer_time"] or 0),
             "level": max(1, int(r["level"] or 1)),
+            "pending_exp": max(0, int(r["pending_exp"] or 0)),
+            "pending_cycles": max(0, int(r["pending_cycles"] or 0)),
+            "accrual_version": int(r["accrual_version"] or 0),
+            "held_exp": max(0, int(r["held_exp"] or 0)),
+            "next_cycle_time": max(0, int(r["next_cycle_time"] or 0)),
+            "accrual_at": max(0, int(r["accrual_at"] or 0)),
+            "pet_accrual_version": int(r["pet_accrual_version"] or 0),
         } for r in con.execute(
-            "SELECT field_id, seed_id, plant_time, fertilizer_id, last_fertilizer_time, level "
+            "SELECT field_id, seed_id, plant_time, fertilizer_id, last_fertilizer_time, level, "
+            "pending_exp, pending_cycles, accrual_version, held_exp, "
+            "next_cycle_time, accrual_at, pet_accrual_version "
             "FROM garden_pots WHERE uin=?", (uin,))}
 
 
@@ -1573,6 +1691,27 @@ def update_garden_pot_level(uin, field_id, level):
     with _db() as con:
         con.execute("UPDATE garden_pots SET level=? WHERE uin=? AND field_id=?",
                     (max(1, int(level)), int(uin), int(field_id)))
+
+
+def update_garden_pot_pending(uin, field_id, pending_exp, pending_cycles):
+    """Bank completed cycles before changing a sunflower's fertilizer window."""
+    with _db() as con:
+        con.execute("UPDATE garden_pots SET pending_exp=?, pending_cycles=? "
+                    "WHERE uin=? AND field_id=?",
+                    (max(0, int(pending_exp)), max(0, int(pending_cycles)),
+                     int(uin), int(field_id)))
+
+
+def update_garden_pot_accrual(uin, field_id, pending_exp, pending_cycles, held_exp,
+                              next_cycle_time, accrual_at):
+    """Persist the bank, single waiting ball and cursor together, once per advance."""
+    with _db() as con:
+        con.execute("UPDATE garden_pots SET pending_exp=?, pending_cycles=?, held_exp=?, "
+                    "next_cycle_time=?, accrual_at=?, pet_accrual_version=1 "
+                    "WHERE uin=? AND field_id=?",
+                    (max(0, int(pending_exp)), max(0, int(pending_cycles)),
+                     max(0, int(held_exp)), max(0, int(next_cycle_time)),
+                     max(0, int(accrual_at)), int(uin), int(field_id)))
 
 
 def get_talents(uin):
@@ -1880,10 +2019,6 @@ def save_puppet_stage(uin, mode, chapter_id, stage_id, **fields):
                         list(fields.values()) + [uin, int(mode), int(chapter_id), int(stage_id)])
 
 
-if __name__ == "__main__":
-    init_db()
-    p, new = get_or_create_player(700000123)
-    print("created" if new else "loaded", "player:", dict(p))
 
 
 def awaken_card_atomic(uin, uid, source_id, target_id, min_level, min_forge, cost):

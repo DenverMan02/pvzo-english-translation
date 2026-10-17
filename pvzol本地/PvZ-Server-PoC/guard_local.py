@@ -38,8 +38,10 @@ QBMovieUtil.updateAvatar 拿到 null 再 #1009），GetFightInfo(type=18) 再把
 member 的卡组当作敌方阵容返回，客户端就能正常预览 + 出战。
 """
 
+import copy
 import random
 import npc_lineups
+import threading
 import time
 
 _GUARD_TEAM_BASE = 1000
@@ -81,6 +83,7 @@ _ROB_MAX_RENEW_LIGHT = 1         # = 客户端 iGuardMaxRenewLight：灯火持�
 # 掠夺是“刷新 -> 预览 -> 打”的短流程，同一个进程里保存最近一次刷新的目标即可；
 # 服务端重启后玩家重新刷新一次就重建，不落库。
 _ROB_TARGETS = {}
+_ROB_LOCK = threading.RLock()
 
 
 def _cost_minutes(guard_type):
@@ -121,22 +124,46 @@ def _slot(index):
 # (BattleTargetType_Guard)、guardMemberIndex(14)=目标下标。服务器必须返回“自己的出征阵容 +
 # 该目标的卡组”，否则窗口里自己一侧是空的（cardNum=0，startFight 会直接拦住）或敌方卡组对不上。
 
-def _preview_placements(server, player):
-    """出征阵容（team 2000）；缺省时用家园阵容播种，保证和 FightRobTarget 用的是同一套。"""
-    store = server.store
-    saved = store.get_formation(player["uin"], _GUARD_ATTACK_TEAM) or {}
-    owned = {int(uid) for uid, _cid, _lvl, _exp in store.get_cards(player["uin"])}
-    placements = {}
-    entries = saved.items() if isinstance(saved, dict) else saved
+def _sanitize_placements(raw, owned, max_cards):
+    """Keep owned UIDs once, preserving Guard's distinct positive grid slots."""
+    placements, seen = {}, set()
+    entries = raw.items() if isinstance(raw, dict) else (raw or ())
     for pos, uid in entries:
         try:
             pos, uid = int(pos), int(uid)
         except (TypeError, ValueError):
             continue
-        if pos > 0 and uid in owned:
-            placements[pos] = uid
+        if pos <= 0 or uid not in owned or pos in placements or uid in seen:
+            continue
+        if len(placements) >= max_cards:
+            break
+        placements[pos] = uid
+        seen.add(uid)
+    return placements
+
+
+def _unique_guard_cards(cards):
+    """A positive plant UID identifies one unit; zero is an unspecified NPC UID."""
+    unique, seen = [], set()
+    for card in cards:
+        uid = int((card.get("unit") or {}).get("uid") or 0)
+        if uid > 0:
+            if uid in seen:
+                continue
+            seen.add(uid)
+        unique.append(card)
+    return unique
+
+
+def _preview_placements(server, player):
+    """出征阵容（team 2000）；缺省时用家园阵容播种，保证和 FightRobTarget 用的是同一套。"""
+    store = server.store
+    saved = store.get_formation(player["uin"], _GUARD_ATTACK_TEAM) or {}
+    owned = {int(uid) for uid, _cid, _lvl, _exp in store.get_cards(player["uin"])}
+    max_cards = int(getattr(server, "_FORMATION_MAX", 6) or 6)
+    placements = _sanitize_placements(saved, owned, max_cards)
     if not placements:
-        placements = server.default_formation_placements(player) or {}
+        placements = _sanitize_placements(server.default_formation_placements(player), owned, max_cards)
         if placements:
             store.set_formation(player["uin"], _GUARD_ATTACK_TEAM, placements)
             leader = store.get_formation_leader(player["uin"], 1)
@@ -157,7 +184,9 @@ def rob_fight_preview(server, player, index):
     缓存里第 index 个目标 member 的卡组（优先真人、否则按战力缩放出来的人机）；formation 是玩家
     自己的出征阵容。没有缓存（客户端没刷新就开打）时仍返回合法的空敌方列表，不抛异常。
     """
-    entry = _ROB_TARGETS.get(int(player["uin"]))
+    # Copy under the cache lock, then release it before formation/store work.
+    with _ROB_LOCK:
+        entry = copy.deepcopy(_ROB_TARGETS.get(int(player["uin"])))
     members = (entry or {}).get("members") or []
     member = None
     if members:
@@ -167,7 +196,7 @@ def rob_fight_preview(server, player, index):
     formation = server.build_formation_info(player, _GUARD_ATTACK_TEAM, placements)
     cards = []
     total_power = 0
-    for card in (member or {}).get("cards") or []:
+    for card in _unique_guard_cards((member or {}).get("cards") or []):
         unit = card.get("unit") or {}
         cid = int(unit.get("card_id") or 0)
         if cid <= 0 or cid not in server._BATTLE_CARDS:
@@ -226,26 +255,13 @@ def register(server):
         return {int(uid) for uid, _cid, _lvl, _exp in store.get_cards(player["uin"])}
 
     def _sanitize(player, raw):
-        """Keep at most ``max_cards`` owned cards on distinct positive positions.
+        """Keep at most ``max_cards`` distinct owned cards on positive positions.
 
         The Guard grid lives in its own slot namespace, so positions are kept
-        exactly as the client sent them (only non-positive / duplicate slots are
+        exactly as the client sent them (non-positive / duplicate slots or UIDs are
         dropped) instead of being forced onto the home team's _FORMATION_POS.
         """
-        owned = _owned(player)
-        placements = {}
-        entries = raw.items() if isinstance(raw, dict) else raw
-        for pos, uid in entries:
-            try:
-                pos, uid = int(pos), int(uid)
-            except (TypeError, ValueError):
-                continue
-            if pos <= 0 or uid not in owned or pos in placements:
-                continue
-            if len(placements) >= max_cards:
-                break
-            placements[pos] = uid
-        return placements
+        return _sanitize_placements(raw, _owned(player), max_cards)
 
     def _stored(player, team_id):
         return _sanitize(player, store.get_formation(player["uin"], team_id))
@@ -428,23 +444,19 @@ def register(server):
             "time INTEGER NOT NULL DEFAULT 0,"
             "rob_win INTEGER NOT NULL DEFAULT 0)")
 
-    def _append_rob_history(player, member, win, now):
+    def _append_rob_history(con, player, member, win, now):
         """每场掠夺结算后写一条记录（无论胜负）。"""
         member = member or {}
-        try:
-            with store._db() as con:
-                _ensure_rob_history_table(con)
-                con.execute(
-                    "INSERT INTO local_guard_rob_history"
-                    " (uin, name, zone_id, level, face_id, face_url, time, rob_win)"
-                    " VALUES (?,?,?,?,?,?,?,?)",
-                    (int(player["uin"]), str(member.get("name") or ""),
-                     int(_ROB_ZONE_ID), max(1, int(member.get("level") or 1)),
-                     max(0, int(member.get("face_id") or 0)),
-                     str(member.get("face_url") or ""),
-                     int(now), 1 if win else 0))
-        except Exception:
-            log("    guard ROB-HISTORY insert failed uin=%s", player.get("uin"))
+        _ensure_rob_history_table(con)
+        con.execute(
+            "INSERT INTO local_guard_rob_history"
+            " (uin, name, zone_id, level, face_id, face_url, time, rob_win)"
+            " VALUES (?,?,?,?,?,?,?,?)",
+            (int(player["uin"]), str(member.get("name") or ""),
+             int(_ROB_ZONE_ID), max(1, int(member.get("level") or 1)),
+             max(0, int(member.get("face_id") or 0)),
+             str(member.get("face_url") or ""),
+             int(now), 1 if win else 0))
 
     def _rob_history_bytes(player, limit=20):
         """把最近 limit 条掠夺记录编码成 Cmd_Guard_RobHistory_SC 的 repeated field 1。"""
@@ -473,6 +485,12 @@ def register(server):
         """Dto_Guard_Member：roleId/name/level/faceId/qqFaceURL/joinTime/inviteTime/
         power/speed + cardInfo(10)=[Dto_EnemyCardInfo]（avatarId 留空）。"""
         role_id = int(member.get("role_id") or 0) or 1
+        raw_cards = member.get("cards") or []
+        cards = _unique_guard_cards(raw_cards)
+        power, speed = member.get("power"), member.get("speed")
+        if len(cards) != len(raw_cards):
+            power = sum(int((card.get("unit") or {}).get("power") or 0) for card in cards)
+            speed = sum(int((card.get("unit") or {}).get("speed") or 0) for card in cards)
         body = (i64(1, role_id)
                 + sf(2, str(member.get("name") or "Player"))
                 + vf(3, max(1, int(member.get("level") or 1)))
@@ -480,9 +498,9 @@ def register(server):
                 + sf(5, str(member.get("face_url") or ""))
                 + vf(6, max(0, int(member.get("join_time") or 0)))
                 + vf(7, max(0, int(member.get("invite_time") or 0)))
-                + vf(8, max(0, int(member.get("power") or 0)))
-                + vf(9, max(0, int(member.get("speed") or 0))))
-        for card in (member.get("cards") or []):
+                + vf(8, max(0, int(power or 0)))
+                + vf(9, max(0, int(speed or 0))))
+        for card in cards:
             unit = card.get("unit") or {}
             card_id = int(unit.get("card_id") or 0)
             if card_id <= 0 or card_id not in server._BATTLE_CARDS:
@@ -605,7 +623,6 @@ def register(server):
                  + vf(6, _refresh_count(player)) + vf(7, _buylight_count(player)))
         messages = [("PVZ.Cmd.Cmd_Guard_Info_SC", body)]
         # 兜底：即使客户端缓存了旧的无自动刷新 SWF，重进时也把当前缓存目标补发一次。
-        entry = _ROB_TARGETS.get(int(player["uin"]))
         # 原版由 HoleFightWindowMediator 在打开掠夺页时主动发刷新请求，
         # GetInfo 不注入缓存目标，避免重复刷新或把上一轮旗帜提前清掉。
         log("    guard INFO -> %d guard(s)", len(tasks))
@@ -671,7 +688,7 @@ def register(server):
     def _attack_units(player):
         """玩家“出征阵容”（Guard attack team 2000，缺省时用家园阵容播种）。"""
         placements = _seed(player, _GUARD_ATTACK_TEAM)
-        return build_player_units(player, placements)
+        return build_player_units(player, placements, leader_team_id=_GUARD_ATTACK_TEAM)
 
     def _to_card(unit, pos):
         out = dict(unit)
@@ -691,7 +708,8 @@ def register(server):
 
     def _cards_from_units(units):
         cards = []
-        for idx, unit in enumerate(units):
+        for card in _unique_guard_cards({"unit": unit} for unit in units):
+            unit = card["unit"]
             if not int(unit.get("card_id") or 0):
                 continue
             pos = int(unit.get("pos") or 0)
@@ -728,8 +746,8 @@ def register(server):
             "face_url": str(player_face_url(cand) or ""),
             "join_time": int(now),
             "invite_time": 0,
-            "power": max(0, sum(int(u.get("power") or 0) for u in units)),
-            "speed": max(0, sum(int(u.get("speed") or 0) for u in units)),
+            "power": max(0, sum(int(c["unit"].get("power") or 0) for c in cards)),
+            "speed": max(0, sum(int(c["unit"].get("speed") or 0) for c in cards)),
             "cards": cards,
             "is_npc": False,
             "is_beat": False,
@@ -866,39 +884,51 @@ def register(server):
                 + vf(3, int(entry.get("refresh") or _refresh_count(player))))
 
     def _entry_for(player, now=None, rebuild=True):
+        """Stage a private target snapshot; the caller publishes after commit."""
         uin = int(player["uin"])
         entry = _ROB_TARGETS.get(uin)
         if entry is None and rebuild:
             entry = _make_entry(player, int(now or time.time()))
-            _ROB_TARGETS[uin] = entry
-        return entry
+            return entry
+        return copy.deepcopy(entry)
 
     def refresh_rob_target(data, player):
+        # Keep commit and target publication in request order: releasing the
+        # store transaction must not let an older request replace newer targets.
+        with _ROB_LOCK:
+            return _refresh_rob_target(data, player)
+
+    def _refresh_rob_target(data, player):
         """原版刷新目标：客户端每次请求都换一批，并按配置扣刷新金币。"""
         now = int(time.time())
         uin = int(player["uin"])
-        coin = max(0, int(player.get("coin") or 0))
-        if coin < _ROB_REFRESH_COST:
-            log("    guard REFRESH-ROB blocked uin=%s coin=%d < %d",
-                player["uin"], coin, _ROB_REFRESH_COST)
-            return [("PVZ.Cmd.Cmd_SyncCoin_SC", vf(1, coin))]
-
-        count = _refresh_count(player, bump=True)
-        entry = _make_entry(player, now)
-        entry["refresh"] = count
-        _ROB_TARGETS[uin] = entry
-        player["coin"] = coin - _ROB_REFRESH_COST
+        # The shared store reloads the latest wallet and commits its cost with
+        # the counter. Publish the generated targets only after that succeeds.
         try:
-            store.save_player(int(player["uin"]), coin=player["coin"])
-        except Exception:
-            log("    guard REFRESH-ROB coin persist failed uin=%s", player.get("uin"))
+            with store.atomic_player(player) as con:
+                coin = max(0, int(player.get("coin") or 0))
+                if coin < _ROB_REFRESH_COST:
+                    log("    guard REFRESH-ROB blocked uin=%s coin=%d < %d",
+                        player["uin"], coin, _ROB_REFRESH_COST)
+                    return [("PVZ.Cmd.Cmd_SyncCoin_SC", vf(1, coin))]
+
+                count = _refresh_count(player, bump=True)
+                entry = _make_entry(player, now)
+                entry["refresh"] = count
+                con.execute("UPDATE players SET coin=? WHERE uin=?", (coin - _ROB_REFRESH_COST, uin))
+                player["coin"] = coin - _ROB_REFRESH_COST
+                messages = [("PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC", _rob_target_resp(player, entry)),
+                            ("PVZ.Cmd.Cmd_SyncCoin_SC", vf(1, player["coin"]))]
+        except Exception as exc:
+            log("    guard REFRESH-ROB rolled back uin=%s: %s", uin, exc)
+            return [("PVZ.Cmd.Cmd_LogicError_SC", vf(1, 3001))]
+        _ROB_TARGETS[uin] = entry
         guard = entry["guard"]
         log("    guard REFRESH-ROB uin=%s type=%d members=%s refresh=%d coin=%d",
             player["uin"], guard["guard_type"],
             [(m["name"], m["power"], m["is_npc"]) for m in entry["members"]],
             count, player["coin"])
-        return [("PVZ.Cmd.Cmd_Guard_RefreshRobTarget_SC", _rob_target_resp(player, entry)),
-                ("PVZ.Cmd.Cmd_SyncCoin_SC", vf(1, player["coin"]))]
+        return messages
 
     def buy_light(data, player):
         """Cmd_Guard_BuyLight_CS（空包）-> 买灯火。
@@ -935,9 +965,10 @@ def register(server):
     def info_by_id(data, player):
         guard_id = int(parse(data).get(1, 0) or 0)
         guard = None
-        entry = _ROB_TARGETS.get(int(player["uin"]))
-        if entry and int(entry["guard"].get("guard_id") or 0) == guard_id:
-            guard = entry["guard"]
+        with _ROB_LOCK:
+            entry = _ROB_TARGETS.get(int(player["uin"]))
+            if entry and int(entry["guard"].get("guard_id") or 0) == guard_id:
+                guard = copy.deepcopy(entry["guard"])
         if guard is None:
             for task in _guards(player):
                 if int(task.get("guard_id") or 0) == guard_id:
@@ -951,113 +982,134 @@ def register(server):
 
     def cancel_rob(data, player):
         # 原版关闭掠夺窗口后不保留本轮目标；下次打开会重新请求刷新。
-        _ROB_TARGETS.pop(int(player["uin"]), None)
+        with _ROB_LOCK:
+            _ROB_TARGETS.pop(int(player["uin"]), None)
         log("    guard CANCEL-ROB uin=%s", player["uin"])
         return [("PVZ.Cmd.Cmd_Guard_CancelRob_SC", b"")]
 
     def fight_rob_target(data, player):
-        now = int(time.time())
-        index = int(parse(data).get(1, 0) or 0)
-        entry = _entry_for(player, now)
-        members = entry["members"]
-        if index < 0:
-            index = 0
-        if members:
-            member = members[index] if index < len(members) else members[0]
-        else:
-            member = None
+        # All target writers use cache -> store lock order. Retain the cache
+        # lock through commit and publication so cancel/refresh cannot overtake.
+        with _ROB_LOCK:
+            return _fight_rob_target(data, player)
 
-        # 每场掠夺消耗 1 盏便携光源。客户端下发 FightRobTarget_CS 之前已经确认
-        # holeLight >= iGuardRobCostLight，这里再兜底检查一次；万一真的没灯（老客户端
-        # 或被改包），不生成战斗结算，只回 SyncLight 让 UI 回到"可购买"状态。
-        cur_light = max(0, int(player.get("light") or 0))
-        if cur_light < _ROB_COST_LIGHT:
-            log("    guard FIGHT-ROB uin=%s blocked: light=%d < %d",
-                player["uin"], cur_light, _ROB_COST_LIGHT)
-            return [("PVZ.Cmd.Cmd_SyncLight_SC", vf(1, cur_light))]
-        new_light = cur_light - _ROB_COST_LIGHT
-        player["light"] = new_light
+    def _fight_rob_target(data, player):
+        latest_light = None
         try:
-            store.save_player(int(player["uin"]), light=new_light)
-        except Exception:
-            log("    guard FIGHT-ROB light persist failed uin=%s", player.get("uin"))
+            now = int(time.time())
+            index = max(0, int(parse(data).get(1, 0) or 0))
+            with store.atomic_player(player) as con:
+                latest_light = max(0, int(player.get("light") or 0))
+                # A missing/old client wallet cannot start a free battle or seed
+                # new targets. Keep the original insufficient-light response.
+                if latest_light < _ROB_COST_LIGHT:
+                    return [("PVZ.Cmd.Cmd_SyncLight_SC", vf(1, latest_light))]
+                entry = _entry_for(player, now)
+                members = entry["members"]
+                member = (members[index] if index < len(members) else members[0]) if members else None
+                if member is not None and member.get("is_beat"):
+                    return [("PVZ.Cmd.Cmd_LogicError_SC", vf(1, 11703)),
+                            ("PVZ.Cmd.Cmd_SyncLight_SC", vf(1, latest_light))]
 
-        left = _attack_units(player)
-        cards = (member or {}).get("cards") or []
-        right = [dict(c["unit"]) for c in cards if c.get("unit")]
-        # The cached cards already use valid enemy slots. Keep the preview's
-        # gaps and captain position unchanged when the actual fight starts.
-
-        if left and right:
-            win, left_power, right_power, rounds = server.run_battle(
-                left, right, puppets=server._auto_puppets(player))
-        else:
-            win, left_power, right_power, rounds = bool(left and not right), 0, 0, []
-        report = server.build_fight_report(player, 0, 0, 0, win, None, False, left, right,
-                                           server.encode_fight_replay(rounds),
-                                           fight_type=18)
-        if member is not None and win:
-            member["is_beat"] = True
-        _append_rob_history(player, member, win, now)
-        deadline = int(entry.get("deadline") or (now + _ROB_TIME_SECONDS))
-        finish = bool(members) and all(bool(m.get("is_beat")) for m in members)
-        if now >= deadline:
-            finish = True
-        if member is None:
-            finish = True
-        # 原版：三个目标全部击败后只把 finish 置真，三面胜旗保留原地；
-        # 不在这里自动生成下一批，也不补发 RefreshRobTarget_SC。
-        body = bf(1, report) + boolean(2, win) + boolean(3, finish) + vf(5, deadline)
-        for unit in left:
-            uid = int(unit.get("uid") or 0)
-            if uid:
-                body += bf(4, i64(1, uid) + i64(2, max(0, int(unit.get("final_hp", unit.get("hp")) or 0))))
+                new_light = latest_light - _ROB_COST_LIGHT
+                con.execute("UPDATE players SET light=? WHERE uin=?", (new_light, int(player["uin"])))
+                player["light"] = new_light
+                left = _attack_units(player)
+                cards = _unique_guard_cards((member or {}).get("cards") or [])
+                right = [dict(c["unit"]) for c in cards if c.get("unit")]
+                # Retain the preview's enemy gaps/captain and real puppet battle.
+                if left and right:
+                    win, left_power, right_power, rounds = server.run_battle(
+                        left, right, puppets=server._auto_puppets(player))
+                else:
+                    win, left_power, right_power, rounds = bool(left and not right), 0, 0, []
+                report = server.build_fight_report(player, 0, 0, 0, win, None, False, left, right,
+                                                   server.encode_fight_replay(rounds), fight_type=18)
+                if member is not None and win:
+                    member["is_beat"] = True
+                _append_rob_history(con, player, member, win, now)
+                deadline = int(entry.get("deadline") or (now + _ROB_TIME_SECONDS))
+                finish = bool(members) and all(bool(m.get("is_beat")) for m in members)
+                if now >= deadline or member is None:
+                    finish = True
+                # Successful flags remain until the client refreshes or cancels.
+                body = bf(1, report) + boolean(2, win) + boolean(3, finish) + vf(5, deadline)
+                for unit in left:
+                    uid = int(unit.get("uid") or 0)
+                    if uid:
+                        body += bf(4, i64(1, uid) + i64(2, max(0, int(unit.get("final_hp", unit.get("hp")) or 0))))
+                messages = [("PVZ.Cmd.Cmd_Guard_FightRobTarget_SC", body),
+                            ("PVZ.Cmd.Cmd_SyncLight_SC", vf(1, new_light))]
+        except Exception as exc:
+            log("    guard FIGHT-ROB rolled back uin=%s: %s", player.get("uin"), exc)
+            messages = [("PVZ.Cmd.Cmd_LogicError_SC", vf(1, 3001))]
+            if latest_light is not None:
+                messages.append(("PVZ.Cmd.Cmd_SyncLight_SC", vf(1, latest_light)))
+            return messages
+        # The cache has not been mutated by a provisional battle. Publish only
+        # after all SQL, packet encoding and the outer commit have succeeded.
+        _ROB_TARGETS[int(player["uin"])] = entry
         log("    guard FIGHT-ROB uin=%s index=%d vs=%s win=%s power=%d/%d finish=%s light=%d",
             player["uin"], index, (member or {}).get("name"), win,
             left_power, right_power, finish, new_light)
-        return [("PVZ.Cmd.Cmd_Guard_FightRobTarget_SC", body),
-                ("PVZ.Cmd.Cmd_SyncLight_SC", vf(1, new_light))]
+        return messages
+
+    def _claim_error(player, guard_id, code):
+        messages = [("PVZ.Cmd.Cmd_LogicError_SC", vf(1, code))]
+        try:
+            # The original claim has exited. Build a complete current snapshot
+            # separately so Info's normal maturity/seed/day updates either commit
+            # with its DTO or roll back if the snapshot cannot be encoded.
+            with store.atomic_player(player):
+                info = get_info(b"", player)
+            messages.extend(info)
+        except Exception as exc:
+            log("    guard TAKE-REWARD resync failed uin=%s guard=%s: %s",
+                player["uin"], guard_id, exc)
+        return messages
 
     def take_reward(data, player):
         """Cmd_Guard_TakeReward_CS{guardId} -> 发奖 + Cmd_Guard_TakeReward_SC。"""
         guard_id = int(parse(data).get(1, 0) or 0)
-        task = None
-        for item in _guards(player):
-            if int(item.get("guard_id") or 0) == guard_id:
-                task = item
-                break
-        if task is None:
-            log("    guard TAKE-REWARD invalid uin=%s guard=%s", player["uin"], guard_id)
-            return [("PVZ.Cmd.Cmd_Guard_TakeReward_SC", i64(1, guard_id))]
-        if (not int(task.get("finish") or 0)
-                and int(task.get("finish_time") or 0) <= int(time.time())):
-            task["finish"] = 1
-            _save_guard(player, task)
-        if not int(task.get("finish") or 0):
-            log("    guard TAKE-REWARD not finished uin=%s guard=%s", player["uin"], guard_id)
-            return [("PVZ.Cmd.Cmd_Guard_TakeReward_SC", i64(1, guard_id))]
-        idx = max(1, min(int(task.get("guard_type") or 1), _HOLE_TYPE_MAX))
-        power = max(0, int(task.get("power") or 0))
-        amount = _rob_reward_amount(idx, power)
-        item_id = _item_by_type.get(idx, 1)
+        error_code = 0
         try:
-            applied = server.grant_fuben_reward(player, [(item_id, amount)])
-        except Exception:
-            log("    guard TAKE-REWARD grant failed uin=%s guard=%s", player["uin"], guard_id)
-            return [("PVZ.Cmd.Cmd_Guard_TakeReward_SC", i64(1, guard_id))]
-        messages = [("PVZ.Cmd.Cmd_Guard_TakeReward_SC",
-                     i64(1, guard_id) + bf(2, vf(1, item_id) + vf(2, amount)))]
-        if applied:
-            messages.extend(applied)
-        try:
-            with store._db() as con:
-                _ensure_guard_table(con)
-                con.execute("DELETE FROM local_guard WHERE uin=? AND guard_id=?",
-                            (int(player["uin"]), guard_id))
-            store.set_formation(player["uin"], _GUARD_TEAM_BASE + int(task.get("slot") or 0), {})
-            store.set_formation_leader(player["uin"], _GUARD_TEAM_BASE + int(task.get("slot") or 0), 0)
-        except Exception:
-            log("    guard TAKE-REWARD delete failed uin=%s guard=%s", player["uin"], guard_id)
+            # All store helpers join this thread's transaction. Reload the wallet
+            # before checking the claim, and commit reward and task removal once.
+            with store.atomic_player(player) as con:
+                task = next((item for item in _guards(player)
+                             if int(item.get("guard_id") or 0) == guard_id), None)
+                if task is None:
+                    log("    guard TAKE-REWARD invalid uin=%s guard=%s", player["uin"], guard_id)
+                    error_code = 11703
+                else:
+                    if (not int(task.get("finish") or 0)
+                            and int(task.get("finish_time") or 0) <= int(time.time())):
+                        task["finish"] = 1
+                        _save_guard(player, task)
+                    if not int(task.get("finish") or 0):
+                        log("    guard TAKE-REWARD not finished uin=%s guard=%s", player["uin"], guard_id)
+                        error_code = 11712
+                    else:
+                        idx = max(1, min(int(task.get("guard_type") or 1), _HOLE_TYPE_MAX))
+                        power = max(0, int(task.get("power") or 0))
+                        amount = _rob_reward_amount(idx, power)
+                        item_id = _item_by_type.get(idx, 1)
+                        applied = server.grant_fuben_reward(player, [(item_id, amount)])
+                        # Encode every successful packet before commit too: a bad DTO
+                        # must leave the reward available for a complete retry.
+                        messages = [("PVZ.Cmd.Cmd_Guard_TakeReward_SC",
+                                     i64(1, guard_id) + bf(2, vf(1, item_id) + vf(2, amount)))]
+                        if applied:
+                            messages.extend(applied)
+                        con.execute("DELETE FROM local_guard WHERE uin=? AND guard_id=?",
+                                    (int(player["uin"]), guard_id))
+                        store.set_formation(player["uin"], _GUARD_TEAM_BASE + int(task.get("slot") or 0), {})
+                        store.set_formation_leader(player["uin"], _GUARD_TEAM_BASE + int(task.get("slot") or 0), 0)
+        except Exception as exc:
+            log("    guard TAKE-REWARD rolled back uin=%s guard=%s: %s", player["uin"], guard_id, exc)
+            return _claim_error(player, guard_id, 3001)
+        if error_code:
+            return _claim_error(player, guard_id, error_code)
         log("    guard TAKE-REWARD uin=%s guard=%s item=%d num=%d power=%d",
             player["uin"], guard_id, item_id, amount, power)
         return messages

@@ -231,8 +231,24 @@ def save_report(g, owner, uid, report):
         con.execute('CREATE TABLE IF NOT EXISTS local_rank_arena_reports'
                     '(report_id INTEGER, owner INTEGER, payload BLOB, PRIMARY KEY(report_id,owner))')
         con.execute('INSERT OR REPLACE INTO local_rank_arena_reports VALUES(?,?,?)', (uid, owner, report))
-        con.execute('DELETE FROM local_rank_arena_reports WHERE owner=? AND report_id NOT IN '
-                    '(SELECT report_id FROM local_rank_arena_reports WHERE owner=? ORDER BY report_id DESC LIMIT 40)', (owner, owner))
+        # Each of the three history windows can still reference 20 reports.
+        # A busy ordinary arena must not evict an older ladder/cross-arena
+        # report that remains visible. Retain those references as well as a
+        # small recent buffer (ordinary settlement saves its report first).
+        keep = {int(uid)}
+        row = con.execute('SELECT arena_data,rank_arena_data,allserver_rank_arena_data '
+                          'FROM players WHERE uin=?', (owner,)).fetchone()
+        if row:
+            for field in ('arena_data', 'rank_arena_data', 'allserver_rank_arena_data'):
+                records = g._load_json_state(dict(row), field, {}).get('records') or []
+                visible = records[:20] if field == 'allserver_rank_arena_data' else records[-20:]
+                keep.update(int(rec.get('report_uid') or 0) for rec in visible)
+        keep.update(int(row[0]) for row in con.execute(
+            'SELECT report_id FROM local_rank_arena_reports WHERE owner=? '
+            'ORDER BY report_id DESC LIMIT 40', (owner,)))
+        placeholders = ','.join('?' for _ in keep)
+        con.execute('DELETE FROM local_rank_arena_reports WHERE owner=? AND report_id NOT IN ('
+                    + placeholders + ')', (owner, *sorted(keep)))
 
 
 def install(g):
@@ -268,7 +284,10 @@ def install(g):
         return copy.deepcopy(saved[int(role_id)])
     g._npc_encounter = encounter
 
-    old_query = g.handle_battle_queryreport
+    # Preserve earlier adapters on the shared query route (notably the
+    # persistent world-map reports installed before the arena repairs).
+    old_query = g.REQUEST_HANDLERS.get(
+        'PVZ.Cmd.Cmd_Battle_QueryReport_CS', g.handle_battle_queryreport)
     def query(data, player):
         uid = int(g.parse_varint_fields(data).get(1) or 0)
         with g.store._db() as con:
@@ -352,6 +371,8 @@ def install(g):
         # Draw once at settlement. The stored report and wallet grant share the
         # same reward; viewing or replaying the report must never draw again.
         win_items = [random.choice(VICTORY_REWARDS)] if won else []
+        if won:
+            win_items.append((6, 2))
         report = g.build_fight_report(player, 0, 0, 0, won, win_items, False, left, right,
                                      g.encode_fight_replay(rounds), fight_type=g._RANK_ARENA_TARGET,
                                      puppet_bytes=puppets, side_types=(38, 20) if puppets else None)

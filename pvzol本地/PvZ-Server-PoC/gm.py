@@ -10,21 +10,21 @@ GM helper — inspect or edit a player's save (players.db).
   python gm.py <uin> passto 1 5               # clear stage 1 up through level 5 (all subs)
   python gm.py <uin> passto 1 3 1             # clear stage 1 up through exactly level 3-1
   python gm.py <uin> vip 3                     # set VIP tier (0=off, 1/2/3); relaunch to apply
-  python gm.py <uin> tdpriv 1                  # toggle Tower Defense privileges (0=off, 1=on); relaunch to apply
+  python gm.py <uin> tdpriv 1                  # toggle 塔防特权 (0=off, 1=on); relaunch to apply
   python gm.py <uin> addfriend 700000201 Dave 1200 10
                                               # add a friend whose TD friend-card is Peashooter@Lv10
   python gm.py <uin> addfriend 700000201 Dave 1200 10 1 0 0 0
                                               # ...with diamond card: flag=1, blue=0/yellow=0/xinyue=0
   python gm.py <uin> delfriend 700000201      # remove a friend by role id
-  python gm.py <uin> diamond 1 7 0 0          # set Diamond Membership: flag=1, blue=Lv7, yellow=0, xinyue=0
+  python gm.py <uin> diamond 1 7 0 0          # set own 钻石卡: flag=1, blue=Lv7, yellow=0, xinyue=0
   python gm.py <uin> listfriends              # show this save's friends
 
 Changes take effect on the player's next login (or next bag refresh). Bump `level` to
-unlock the town, grant item 4001 (Tower Defense Key / TD keys) to open the key-gated map gates, etc.
+unlock the town, grant item 4001 (塔防钥匙/TD keys) to open the key-gated map gates, etc.
 
 `passto <stage> <level> [sub]` marks every level up to that point cleared (full stars),
 unlocks the gates + reward-plants along the way, and sets it as your latest level. Args map
-to the in-game "stage <level>-<sub>" within chapter <stage>; omit sub to clear the whole level.
+to the in-game "关卡 <level>-<sub>" within chapter <stage>; omit sub to clear the whole level.
 Note: reaching a later CHAPTER also needs a role level (adventure ch.3 opens at lvl 8, ch.4
 at 12, ...), so pair with e.g. `gm.py <uin> level 12` to actually enter it.
 """
@@ -103,20 +103,20 @@ def validate_stack_delta(item_id, delta, current=0):
     limit and the shared 2e9 safety limit, including the existing balance.
     """
     if type(item_id) is not int or not 1 <= item_id <= 99_999_999:
-        raise ValueError("Item ID must be an integer from 1 to 99999999.")
+        raise ValueError("物品 ID 必须是 1—99999999 的整数。")
     if type(delta) is not int or not -STACK_SAFE_LIMIT <= delta <= STACK_SAFE_LIMIT or delta == 0:
-        raise ValueError("Quantity change must be a non-zero integer within ±2,000,000,000.")
+        raise ValueError("增减数量必须是非零整数，且不超过正负 2000000000。")
     if type(current) is not int or current < 0:
-        raise ValueError("Current inventory quantity must be a non-negative integer.")
+        raise ValueError("当前库存数量必须是非负整数。")
     row = _stack_item_rows().get(item_id)
     if delta < 0:
         return row
     if row is None or not is_stack_item(row):
-        raise ValueError("This ID is not a stackable item. Use the item catalog to grant it using the correct item type.")
+        raise ValueError("该 ID 不是普通堆叠道具，请使用具体道具库按正确类型发放。")
     client_limit = max(0, _i(row, "stackNum"))
     limit = min(client_limit, STACK_SAFE_LIMIT) if client_limit else STACK_SAFE_LIMIT
     if current + delta > limit:
-        raise ValueError("The stack limit for %s is %s; current amount is %s." %
+        raise ValueError("%s 的堆叠上限为 %s，当前已有 %s。" %
                          ((row.get("name") or str(item_id)).strip(), limit, current))
     return row
 
@@ -142,14 +142,14 @@ def apply_stack_delta(uin, item_id, delta):
     validate_stack_delta(item_id, delta)
     exists, current = _readonly_stack_state(uin, item_id)
     if delta < 0 and not exists:
-        raise ValueError("Account %s does not exist; removing an item will not create an account." % uin)
+        raise ValueError("账号 %s 不存在，移除物品不会创建新账号。" % uin)
     validate_stack_delta(item_id, delta, current)
     store.init_db()
     with store.atomic_player({"uin": uin}) as con:
         exists = con.execute("SELECT 1 FROM players WHERE uin=?", (uin,)).fetchone() is not None
         if not exists:
             if delta < 0:
-                raise ValueError("Account %s does not exist; the save was not changed." % uin)
+                raise ValueError("账号 %s 不存在，未修改存档。" % uin)
             store.get_or_create_player(uin)
         # A new account may contain starter items; concurrent writers may also
         # have changed an existing balance since the read-only preflight.
@@ -173,7 +173,7 @@ def player_level_values():
     levels = {_i(row, "id") for row in _clientdb_dicts("levelInfo.txt")}
     levels.discard(0)
     if not levels:
-        raise ValueError("Account level configuration is missing; the save was not changed.")
+        raise ValueError("账号等级配置缺失，未修改存档。")
     return levels
 
 
@@ -183,9 +183,9 @@ def validate_player_fields(fields):
         if key not in PLAYER_UINT32_FIELDS:
             continue
         if isinstance(value, bool) or not isinstance(value, int) or not 0 <= value <= 4294967295:
-            raise ValueError("%s must be an integer from 0 to 4294967295; the save was not changed." % key)
+            raise ValueError("%s 必须是 0—4294967295 的整数，未修改存档。" % key)
         if key == "level" and value not in player_level_values():
-            raise ValueError("Account level is not in the current level table; the save was not changed.")
+            raise ValueError("账号等级不在当前等级表中，未修改存档。")
     return fields
 
 
@@ -227,24 +227,24 @@ def apply_editor_patch(uin, request):
     fields = request.get("fields", {})
     expected = request.get("expected", {})
     if not isinstance(fields, dict) or not isinstance(expected, dict) or set(fields) - EDITOR_FIELDS:
-        raise ValueError("Invalid edit field.")
+        raise ValueError("编辑字段不正确。")
     validate_player_fields(fields)
     for key, maximum in (("vip_level", 3), ("td_privilege", 1)):
         if key in fields and (type(fields[key]) is not int or not 0 <= fields[key] <= maximum):
-            raise ValueError("Invalid setting for %s." % key)
+            raise ValueError("%s 设置不正确。" % key)
     player, _ = store.get_or_create_player(uin)
     profile = request.get("profile", {})
     profile_expected = request.get("profile_expected", {})
     if not isinstance(profile, dict) or not isinstance(profile_expected, dict):
-        raise ValueError("Invalid profile request.")
+        raise ValueError("个人资料请求不正确。")
     if set(profile) - {"name", "signature", "avatar", "image_path"}:
-        raise ValueError("Invalid profile field.")
+        raise ValueError("个人资料字段不正确。")
     created_paths = []
     try:
         with store.atomic_player(player) as con:
             for key in fields:
                 if key not in expected or player.get(key) != expected[key]:
-                    raise ValueError("%s was changed by another operation. Review it again before saving." % key)
+                    raise ValueError("%s 已被其他操作修改，请重新核对后保存。" % key)
             # UI expiry metadata is part of its optimistic snapshot: a card renewal
             # must not be overwritten just because the displayed level stayed equal.
             for key, dependencies in (("vip_level", ("vip_card_id", "vip_endtime")),
@@ -252,13 +252,13 @@ def apply_editor_patch(uin, request):
                 if key in fields:
                     for dependency in dependencies:
                         if dependency in expected and player.get(dependency) != expected[dependency]:
-                            raise ValueError("%s was changed by another operation. Review it again before saving." % dependency)
+                            raise ValueError("%s 已被其他操作修改，请重新核对后保存。" % dependency)
             profile_keys = [key for key in ("name", "signature") if key in profile]
             if profile.get("avatar", "keep") != "keep":
                 profile_keys.extend(("face_id", "qq_face_url"))
             for key in profile_keys:
                 if key not in profile_expected or player.get(key) != profile_expected[key]:
-                    raise ValueError("%s was changed by another operation. Review it again before saving." % key)
+                    raise ValueError("%s 已被其他操作修改，请重新核对后保存。" % key)
             if profile:
                 from profile_editor import prepare_profile, save_profile
                 prepare_profile(uin, profile)
@@ -284,7 +284,7 @@ def apply_editor_patch(uin, request):
 def validate_uin(raw):
     text = str(raw)
     if re.fullmatch(r"[0-9]{1,19}", text) is None or not 1 <= int(text) <= 4294967295:
-        raise ValueError("Account ID must be a numeric value from 1 to 4294967295.")
+        raise ValueError("账号必须是 1—4294967295 的纯数字。")
     return int(text)
 
 
@@ -301,7 +301,7 @@ def main():
     if args and args[0] == "item":
         try:
             if len(args) != 3:
-                raise ValueError("Invalid item arguments: item <item_id> <quantity_delta>.")
+                raise ValueError("物品参数不正确：item <物品ID> <增减数量>。")
             item_id, delta = int(args[1]), int(args[2])
             new = apply_stack_delta(uin, item_id, delta)
         except (ValueError, sqlite3.Error) as exc:
@@ -316,7 +316,7 @@ def main():
     if args and args[0] == "editor":
         try:
             if len(args) != 2:
-                raise ValueError("Invalid edit request parameters.")
+                raise ValueError("编辑请求参数不正确。")
             result = apply_editor_patch(uin, json.loads(args[1]))
         except (ValueError, TypeError) as exc:
             print(str(exc), file=sys.stderr)
@@ -327,7 +327,7 @@ def main():
         from profile_editor import save_profile
         try:
             if len(args) != 2:
-                raise ValueError("Invalid profile parameters.")
+                raise ValueError("个人资料参数不正确。")
             result = save_profile(uin, json.loads(args[1]))
         except (ValueError, OSError) as exc:
             print(str(exc), file=sys.stderr)
@@ -360,7 +360,7 @@ def main():
         print("  -> RELAUNCH the client (not just reconnect) so the VIP config + plant apply.")
         return
     if args and args[0] == "tdpriv":
-        # tdpriv <0|1>  -> toggle Tower Defense privileges (TD privilege). On=1 unlocks the privilege-plant list in
+        # tdpriv <0|1>  -> toggle 塔防特权 (TD privilege). On=1 unlocks the privilege-plant list in
         # TD levels (Cmd_TD_PrivilegeInfo_SC.hasPrivilege=true + Cmd_TD_OpenPrivilege_SC push at
         # login). Off=0 returns to the default no-privilege state.
         on = int(args[1]) if len(args) > 1 else 0
@@ -453,13 +453,13 @@ def main():
         import pvz_poc_server as srv
         try:
             if not 2 <= len(args) <= 3:
-                raise ValueError("Invalid plant level parameters.")
+                raise ValueError("植物等级参数不正确。")
             level = int(args[1])
             only_cid = int(args[2]) if len(args) > 2 else None
             srv.load_card_level_curve()
             curve = {lv: total for lv, total, _n in srv._CARD_LEVEL_CURVE}
             if level not in curve:
-                raise ValueError("Plant level is not in the current level table; the save was not changed.")
+                raise ValueError("植物等级不在当前等级表中，未修改存档。")
             total = curve[level]
         except ValueError as exc:
             print(str(exc), file=sys.stderr)

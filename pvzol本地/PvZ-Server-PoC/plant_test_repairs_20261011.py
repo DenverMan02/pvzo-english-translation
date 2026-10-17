@@ -7,6 +7,7 @@ slot; neither field is used to construct a battle card.
 import copy
 import json
 import random
+from functools import wraps
 
 
 def install(g):
@@ -16,7 +17,7 @@ def install(g):
     g.SERVER_CONFIG_OVERRIDES['iPlantTestDailyChallengeTimes'] = '3'
     original_state = g._plant_test_state
 
-    def state(player):
+    def load_state(player):
         previous = g._load_json_state(player, 'plant_test_data', {})
         data = original_state(player)
         changed = False
@@ -33,6 +34,19 @@ def install(g):
         if changed:
             g._save_json_state(player, 'plant_test_data', data)
         return data
+
+    def state(player):
+        # Even read/preview requests normalize and save this JSON. Refresh it
+        # under the same transaction used by fights, resets and formation edits.
+        with g.store.atomic_player(player):
+            return load_state(player)
+
+    def atomic(handler):
+        @wraps(handler)
+        def wrapped(cmd_data, player):
+            with g.store.atomic_player(player):
+                return handler(cmd_data, player)
+        return wrapped
 
     def copied_roster(player, bots):
         """Read saved, owned team-one cards without logging the source account in."""
@@ -67,18 +81,25 @@ def install(g):
     def prepare_stage(player, data, sid):
         saved = data.setdefault('opponents', {})
         key = str(sid)
-        if key in saved:
+        versions = data.setdefault('opponent_rules', {})
+        if key in saved and (versions.get(key) == 1
+                             or data['stages'][key].get('current', 0) > 0):
+            # Finish already-started climbs with their previewed snapshots.
             return saved[key]
-        # Human formations have priority. Existing generated bots supply the
-        # same saved progression/skills if no other human has a deployed team.
-        roster = copied_roster(player, False) or copied_roster(player, True)
+        # Prefer real players, but never reuse the same identity throughout one
+        # grade. Stored bots fill the remaining chapters before local generation.
+        roster = copied_roster(player, False) + copied_roster(player, True)
+        used_names = set()
         encounters = {}
         for row in g._plant_test_rows(sid):
             sub = int(row['chapterID'])
             desired = max(1, int(row['totalPower']))
-            if roster:
-                chosen = min(roster, key=lambda entry: (abs(entry['power'] - desired), entry['role_id']))
+            candidates = [entry for entry in roster if entry['name'] not in used_names]
+            if candidates:
+                chosen = min(candidates, key=lambda entry: (entry['source'] != 'player',
+                             abs(entry['power'] - desired), entry['role_id']))
                 encounter = copy.deepcopy(chosen)
+                roster = [entry for entry in roster if entry['role_id'] != chosen['role_id']]
             else:
                 # This also makes a newly-created, isolated local world playable
                 # before the usual arena bot seed has run.
@@ -87,19 +108,22 @@ def install(g):
                     g, desired, rng=random.Random(seed), positions=g._ENEMY_POS,
                     uid_base=70000000 + sid * 10000 + sub * 100, count=6)
                 encounter = {'source': 'generated_bot', 'role_id': 0,
-                             'name': '植物测验守关者', 'units': units,
+                             'name': '植物测验守关者·%s-%s' % (sid, sub), 'units': units,
                              'power': sum(int(unit['power']) for unit in units)}
+            used_names.add(encounter['name'])
             encounters[str(sub)] = encounter
         saved[key] = encounters
+        versions[key] = 1
         g._save_json_state(player, 'plant_test_data', data)
         return encounters
 
     def enemies(player, sid, sub):
         if sid * 1000 + sub not in g._plant_test_tables()['chapters']:
             return []
-        data = state(player)
-        entry = prepare_stage(player, data, sid).get(str(sub), {})
-        return copy.deepcopy(entry.get('units', []))
+        with g.store.atomic_player(player):
+            data = state(player)
+            entry = prepare_stage(player, data, sid).get(str(sub), {})
+            return copy.deepcopy(entry.get('units', []))
 
     def stage_info(cmd_data, player):
         sid = g.parse_varint_fields(cmd_data).get(1, 1)
@@ -203,13 +227,14 @@ def install(g):
     g._plant_test_daily_times = lambda: 3
     g._plant_test_enemies = enemies
     g._plant_test_commit = commit
-    g.handle_plant_test_getstageinfo = stage_info
-    g.handle_plant_test_restart = restart
-    g.handle_plant_test_fight = fight
-    g.handle_plant_test_sweep = sweep
-    g.REQUEST_HANDLERS.update({
-        'PVZ.Cmd.Cmd_PlantTest_GetStageInfo_CS': stage_info,
-        'PVZ.Cmd.Cmd_PlantTest_RestartStage_CS': restart,
-        'PVZ.Cmd.Cmd_PlantTest_Fight_CS': fight,
-        'PVZ.Cmd.Cmd_PlantTest_Sweep_CS': sweep,
-    })
+    for action, helper, handler in (
+            ('GetInfo', 'handle_plant_test_getinfo', g.handle_plant_test_getinfo),
+            ('GetStageInfo', 'handle_plant_test_getstageinfo', stage_info),
+            ('GetFormation', 'handle_plant_test_getformation', g.handle_plant_test_getformation),
+            ('SetFormation', 'handle_plant_test_setformation', g.handle_plant_test_setformation),
+            ('RestartStage', 'handle_plant_test_restart', restart),
+            ('Fight', 'handle_plant_test_fight', fight),
+            ('Sweep', 'handle_plant_test_sweep', sweep)):
+        wrapped = atomic(handler)
+        setattr(g, helper, wrapped)
+        g.REQUEST_HANDLERS['PVZ.Cmd.Cmd_PlantTest_' + action + '_CS'] = wrapped

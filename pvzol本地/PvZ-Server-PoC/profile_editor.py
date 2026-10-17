@@ -12,20 +12,20 @@ GAME_ROOT = Path(__file__).resolve().parent.parent
 
 def avatar_choices(root=None):
     heads = Path(root or GAME_ROOT) / 'webroot/image/head'
-    return [(0, 'Default Avatar')] + [(int(p.stem), 'Avatar %s' % p.stem)
+    return [(0, '默认头像')] + [(int(p.stem), '头像 %s' % p.stem)
                                 for p in sorted(heads.glob('*.png'), key=lambda p: int(p.stem) if p.stem.isascii() and p.stem.isdigit() else -1)
                                 if p.stem.isascii() and p.stem.isdigit() and int(p.stem) > 0]
 
 
 def _text(value, label, maximum, minimum=0):
     if not isinstance(value, str):
-        raise ValueError('%s must be text.' % label)
+        raise ValueError('%s必须是文字。' % label)
     try:
         length = len(value.encode('utf-16-le')) // 2
     except UnicodeError:
-        raise ValueError('%s contains invalid characters.' % label) from None
+        raise ValueError('%s包含无效字符。' % label) from None
     if not minimum <= length <= maximum or any(ord(c) < 32 for c in value):
-        raise ValueError('%s must be %d–%d characters long and cannot contain line breaks or control characters.' % (label, minimum, maximum))
+        raise ValueError('%s需为 %d—%d 个字符，且不能包含换行或控制字符。' % (label, minimum, maximum))
     return value
 
 
@@ -37,14 +37,14 @@ def validate_name(con, player, value):
     casefold for new names in every offline profile editor.
     """
     if not isinstance(value, str):
-        raise ValueError('Name must be text.')
+        raise ValueError('名称必须是文字。')
     name = value.strip()
     if name != player['name']:
-        _text(name, 'Name', NAME_MAX, NAME_MIN)
+        _text(name, '名称', NAME_MAX, NAME_MIN)
         folded = name.casefold()
         if any(str(row['name'] or '').casefold() == folded for row in con.execute(
                 'SELECT name FROM players WHERE uin<>?', (int(player['uin']),))):
-            raise ValueError('That name is already used by another account.')
+            raise ValueError('该名称已被其他账号使用。')
     return name
 
 
@@ -60,48 +60,48 @@ def sync_name(con, player, name):
 def _image(path):
     source = Path(path).expanduser()
     if not source.is_file() or not 0 < source.stat().st_size <= MAX_IMAGE_BYTES:
-        raise ValueError('Choose a PNG or JPG image no larger than 5 MiB.')
+        raise ValueError('请选择不超过 5 MiB 的 PNG 或 JPG 图片。')
     data = source.read_bytes()
     if len(data) > MAX_IMAGE_BYTES:
-        raise ValueError('Avatar images must not exceed 5 MiB.')
+        raise ValueError('头像图片不能超过 5 MiB。')
     if data.startswith(b'\x89PNG\r\n\x1a\n') and data.endswith(b'IEND\xaeB`\x82'):
         suffix = '.png'
     elif data.startswith(b'\xff\xd8\xff') and data.endswith(b'\xff\xd9'):
         suffix = '.jpg'
     else:
-        raise ValueError('The avatar file is not a valid PNG or JPG image.')
+        raise ValueError('头像文件不是有效的 PNG 或 JPG 图片。')
     return data, suffix
 
 
 def prepare_profile(uin, request, root=None):
     if not isinstance(request, dict):
-        raise ValueError('Invalid profile format.')
+        raise ValueError('个人资料格式不正确。')
     root = Path(root or GAME_ROOT).resolve()
     with store._db() as con:
         row = con.execute('SELECT * FROM players WHERE uin=?', (int(uin),)).fetchone()
         player = dict(row) if row else None
     if not player:
-        raise ValueError('Account does not exist.')
+        raise ValueError('账号不存在。')
     name = request.get('name', player['name'])
     if not isinstance(name, str):
-        raise ValueError('Name must be text.')
+        raise ValueError('名称必须是文字。')
     name = name.strip()
     # Legacy generated names can exceed seven characters. Preserve them when
     # editing only the avatar/signature; new names follow the original limit.
     if name != player['name']:
-        _text(name, 'Name', NAME_MAX, NAME_MIN)
-    signature = _text(request.get('signature', player.get('signature') or ''), 'Signature', SIGNATURE_MAX)
+        _text(name, '名称', NAME_MAX, NAME_MIN)
+    signature = _text(request.get('signature', player.get('signature') or ''), '签名', SIGNATURE_MAX)
     mode = request.get('avatar', 'keep')
     fields = {'name': name, 'signature': signature}
     data = suffix = None
     if mode == 'custom':
         source = request.get('image_path')
         if not isinstance(source, str) or not source:
-            raise ValueError('Select an avatar image first.')
+            raise ValueError('请先选择头像图片。')
         data, suffix = _image(source)
     elif mode != 'keep':
         if type(mode) is not int or mode not in dict(avatar_choices(root)):
-            raise ValueError('Select an existing avatar.')
+            raise ValueError('请选择现有的头像。')
         fields.update(face_id=mode, qq_face_url='')
     return player, root, fields, data, suffix
 

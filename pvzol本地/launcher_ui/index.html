@@ -1,14 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>PvZ OL · Localhost</title>
+  <title>植物大战僵尸 OL · 启动器</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="home">
   <svg class="icon-defs" aria-hidden="true"><defs>
     <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></symbol>
     <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></symbol>
@@ -16,7 +16,6 @@
     <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6.5h.01M7 17.5h.01M11 6.5h6M11 17.5h6"/></symbol>
     <symbol id="i-archive" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="5" rx="1"/><path d="M5 8v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8M9 12h6"/></symbol>
     <symbol id="i-settings" viewBox="0 0 24 24"><path d="m9.5 3-.7 2.1-2 .9-2.1-.4-2.5 4.3 1.4 1.6v2l-1.4 1.6 2.5 4.3 2.1-.4 2 .9.7 2.1h5l.7-2.1 2-.9 2.1.4 2.5-4.3-1.4-1.6v-2l1.4-1.6-2.5-4.3-2.1.4-2-.9-.7-2.1Z"/><circle cx="12" cy="12" r="3"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7Z"/></symbol>
     <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></symbol>
     <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
@@ -36,27 +35,43 @@
     <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 3 7v5c0 5 9 9 9 9s9-4 9-9V7Z"/><path d="m8 12 3 3 5-6"/></symbol>
     <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 3C10 1 2 7 4 15c2 8 17 5 16-12ZM4 21 15 10"/></symbol>
     <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.01"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 21h20Z"/><path d="M12 10v5m0 3v.01"/></symbol>
+    <symbol id="i-window" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2-6 4 12 2-6h6"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8S10.5 3 8 3a2.5 2.5 0 0 0 0 5M12 8s1.5-5 4-5a2.5 2.5 0 0 1 0 5"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></symbol>
+    <symbol id="i-keyboard" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
   </defs></svg>
   <div class="app-shell">
-    <aside class="sidebar">
-      <a class="brand" href="#home" aria-label="PvZ OL Homepage"><span class="launcher-mark"><svg><use href="#i-leaf"/></svg></span><span><strong>PVZ OL</strong><small>Plants vs. Zombies</small></span></a>
-      <nav class="navigation" aria-label="Main Navigation">
-        <a href="#home" data-page="home"><svg><use href="#i-home"/></svg><span>Home</span></a>
-        <a href="#accounts" data-page="accounts"><svg><use href="#i-user"/></svg><span>Accounts</span></a>
-        <a href="#gm" data-page="gm"><svg><use href="#i-grid"/></svg><span>Save Editor</span></a>
-        <a href="#services" data-page="services"><svg><use href="#i-server"/></svg><span>Services</span></a>
-        <a href="#backups" data-page="backups"><svg><use href="#i-archive"/></svg><span>Backups</span></a>
-        <a href="#settings" data-page="settings"><svg><use href="#i-settings"/></svg><span>Settings</span></a>
+    <aside class="sidebar" aria-label="侧边栏">
+      <a class="brand" href="#home" aria-label="植物大战僵尸 OL 启动器首页"><span class="brand-mark"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span><span class="brand-text"><strong>PVZ OL</strong><small>本地启动器</small></span></a>
+      <nav class="navigation" aria-label="主导航">
+        <a href="#home" data-page="home" title="首页（Alt+1）"><svg aria-hidden="true"><use href="#i-home"/></svg><span>首页</span></a>
+        <a href="#accounts" data-page="accounts" title="账号与资料（Alt+2）"><svg aria-hidden="true"><use href="#i-user"/></svg><span>账号与资料</span></a>
+        <a href="#gm" data-page="gm" title="GM 管理（Alt+3）"><svg aria-hidden="true"><use href="#i-grid"/></svg><span>GM 管理</span></a>
+        <a href="#services" data-page="services" title="服务与日志（Alt+4）"><svg aria-hidden="true"><use href="#i-server"/></svg><span>服务与日志</span></a>
+        <a href="#backups" data-page="backups" title="存档备份（Alt+5）"><svg aria-hidden="true"><use href="#i-archive"/></svg><span>存档备份</span></a>
+        <a href="#settings" data-page="settings" title="设置（Alt+6）"><svg aria-hidden="true"><use href="#i-settings"/></svg><span>设置</span></a>
       </nav>
-      <div class="sidebar-bottom"><span class="sidebar-version">PVZ OL GUI <span>2.0</span></span></div>
+      <div class="sidebar-foot"><span id="sidebarVersion">启动器 2.0</span><kbd title="按 Alt+数字键切换页面">Alt+1–6</kbd></div>
     </aside>
     <div class="workspace">
-      <header class="topbar"><h1 id="breadcrumbPage">Home</h1><div class="topbar-actions"><span id="demoBadge" class="demo-badge" hidden>Read-only Demo</span><span id="connectionBadge" class="connection-badge"><i></i>Connecting</span><button id="themeToggle" class="icon-button" title="Switch between Light and Dark themes" aria-label="Switch between light and dark themes"><svg><use href="#i-sun"/></svg></button></div></header>
+      <header class="topbar">
+        <h1 id="pageTitle">首页</h1>
+        <button type="button" id="statusPill" class="status-pill" data-action="go-services" title="查看服务与日志"><i></i><span>正在连接…</span></button>
+        <div class="topbar-actions">
+          <button type="button" id="topStop" class="button danger-outline sm" data-action="open-stop" hidden><svg aria-hidden="true"><use href="#i-stop"/></svg>停止服务…</button>
+          <button type="button" id="themeToggle" class="icon-button" data-action="toggle-theme" title="切换明暗主题" aria-label="切换明暗主题"><svg aria-hidden="true"><use href="#i-sun"/></svg></button>
+        </div>
+      </header>
+      <div id="globalBanner" class="global-banner" role="alert" hidden></div>
       <main id="main" tabindex="-1"></main>
     </div>
   </div>
   <div id="toastRegion" class="toast-region" role="status" aria-live="polite"></div>
-  <dialog id="appDialog" class="app-dialog"><div id="dialogBody"></div></dialog>
+  <dialog id="appDialog" class="app-dialog" aria-labelledby="dialogTitle"><div id="dialogBody"></div></dialog>
   <input id="avatarUpload" type="file" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
   <script src="app.js"></script>
 </body>

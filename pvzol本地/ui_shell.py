@@ -24,15 +24,15 @@ from urllib.parse import parse_qs, urlsplit
 from launcher_dpi import initialize_dpi_awareness, safe_exception_detail
 
 
-TITLE = "Plants vs. Zombies Online"
+TITLE = "植物大战僵尸 OL"
 LOCALIZATION = {
-    "global.quitConfirmation": "Are you sure you want to exit the launcher? Exiting will close the game service launched this time.",
-    "global.ok": "OK",
-    "global.quit": "Quit",
-    "global.cancel": "Cancel",
-    "global.saveFile": "Save File",
-    "windows.fileFilter.allFiles": "All Files",
-    "windows.fileFilter.otherFiles": "Other File Types",
+    "global.quitConfirmation": "确定退出启动器吗？退出后将关闭本次启动的游戏服务。",
+    "global.ok": "确定",
+    "global.quit": "退出",
+    "global.cancel": "取消",
+    "global.saveFile": "保存文件",
+    "windows.fileFilter.allFiles": "所有文件",
+    "windows.fileFilter.otherFiles": "其他文件类型",
 }
 
 
@@ -43,7 +43,7 @@ def validate_local_url(value: str) -> str:
         address = ipaddress.ip_address(parsed.hostname or "")
         port = parsed.port
     except (ValueError, TypeError) as exc:
-        raise ValueError("The launcher must have a local HTTP address") from exc
+        raise ValueError("启动器地址必须是本机 HTTP 地址。") from exc
     if (
         parsed.scheme.lower() != "http"
         or not address.is_loopback
@@ -53,7 +53,7 @@ def validate_local_url(value: str) -> str:
         or not 1 <= port <= 65535
         or any(char in value for char in "\r\n\t")
     ):
-        raise ValueError("The launcher can only open local HTTP addresses with the ports specified.")
+        raise ValueError("启动器只能打开带端口的本机 HTTP 地址。")
     return value
 
 
@@ -107,7 +107,7 @@ class LoopbackClient:
         parsed = urlsplit(validate_local_url(url))
         tokens = parse_qs(parsed.query, keep_blank_values=True).get('token', [])
         if len(tokens) != 1 or not tokens[0] or any(ch in tokens[0] for ch in '\r\n\0'):
-            raise TrayError('The launcher session is invalid. Please reopen the launcher.')
+            raise TrayError('启动器会话无效，请重新打开启动器。')
         self._host, self._port, self._token = parsed.hostname, parsed.port, tokens[0]
         self._timeout = timeout
         self._closed = threading.Event()
@@ -116,17 +116,17 @@ class LoopbackClient:
         self._socket = None
 
     def _safe_message(self, message):
-        return str(message).replace(self._token, '[hidden]')[:240]
+        return str(message).replace(self._token, '[已隐藏]')[:240]
 
     def request(self, method, path, data=None):
         if (method not in ('GET', 'POST') or path not in self.PATHS
                 or (method == 'GET') != (path in ('/api/state', '/api/accounts'))):
-            raise TrayError('Unsupported launcher operation.')
+            raise TrayError('不支持的启动器操作。')
         con = http.client.HTTPConnection(self._host, self._port, timeout=self._timeout)
         with self._lock:
             if self._closed.is_set():
                 con.close()
-                raise TrayError('The launcher is exiting.')
+                raise TrayError('启动器正在退出。')
             self._connection = con
         response = None
         try:
@@ -134,7 +134,7 @@ class LoopbackClient:
             with self._lock:
                 if self._closed.is_set():
                     con.close()
-                    raise TrayError('The launcher is exiting.')
+                    raise TrayError('启动器正在退出。')
                 self._socket = con.sock
             headers = {'X-PVZ-Token': self._token, 'Accept': 'application/json'}
             body = None
@@ -144,20 +144,20 @@ class LoopbackClient:
             con.request(method, path, body=body, headers=headers)
             response = con.getresponse()
             if 300 <= response.status < 400:
-                raise TrayError('The launcher connection has failed. Please reopen the launcher.')
+                raise TrayError('启动器连接已失效，请重新打开启动器。')
             raw = response.read(1024 * 1024 + 1)
             if len(raw) > 1024 * 1024:
-                raise TrayError('The launcher returned too much data.')
+                raise TrayError('启动器返回的数据过大。')
             payload = json.loads(raw.decode('utf-8'))
             if not isinstance(payload, dict) or 'ok' not in payload:
-                raise TrayError('The launcher returned invalid data.')
+                raise TrayError('启动器返回的数据无效。')
             if response.status >= 400 or payload.get('ok') is not True:
-                raise TrayError(self._safe_message(payload.get('error') or 'Launcher operation failed.'))
+                raise TrayError(self._safe_message(payload.get('error') or '启动器操作失败。'))
             return payload.get('data')
         except TrayError:
             raise
         except (OSError, http.client.HTTPException, ValueError, UnicodeError):
-            raise TrayError('Unable to connect to the launcher right now. Try again shortly.') from None
+            raise TrayError('暂时无法连接启动器，请稍后重试。') from None
         finally:
             if response is not None:
                 response.close()
@@ -189,7 +189,7 @@ class TrayActions:
     def refresh(self):
         state = self.client.request('GET', '/api/state')
         if not isinstance(state, dict):
-            raise TrayError('Invalid launcher status.')
+            raise TrayError('启动器状态无效。')
         self.state = state
         return state
 
@@ -200,10 +200,10 @@ class TrayActions:
         selected = self.selected_account()
         accounts = self.client.request('GET', '/api/accounts')
         if not isinstance(accounts, list):
-            raise TrayError('Invalid character list.')
+            raise TrayError('角色列表无效。')
         account = select_start_account(state, accounts, selected)
         if account is None:
-            raise TrayError('Create a character in the launcher first.')
+            raise TrayError('请先在启动器创建一个角色。')
         self.client.request('POST', '/api/start', {'account_id': account})
         return self.refresh()
 
@@ -253,7 +253,7 @@ class TrayWorker:
                 error = str(exc)
             except Exception:
                 # Do not log raw request errors or URLs containing a session token.
-                error = 'Launcher operation failed. Try again shortly.'
+                error = '启动器操作失败，请稍后重试。'
             finally:
                 with self._lock:
                     self.pending = False
@@ -287,7 +287,7 @@ class ActivationWatcher:
         kernel.CloseHandle.restype = ctypes.c_int
         handle = kernel.OpenEventW(0x00100000, False, event_name)  # SYNCHRONIZE
         if not handle:
-            raise TrayError('The launcher wake-up channel is unavailable. Reopen the launcher.')
+            raise TrayError('启动器唤醒通道不可用，请重新打开启动器。')
         self._kernel, self._handle = kernel, handle
 
         def watch():
@@ -353,10 +353,10 @@ class NativeTray:
         form.Bounds = Rectangle(*bounds)
         self._publish_window()
         self.menu = ContextMenuStrip()
-        self.show_item = ToolStripMenuItem('Show Launcher')
-        self.start_item = ToolStripMenuItem('Launch Game')
-        self.stop_item = ToolStripMenuItem('Stop Game')
-        self.exit_item = ToolStripMenuItem('Exit')
+        self.show_item = ToolStripMenuItem('显示启动器')
+        self.start_item = ToolStripMenuItem('启动游戏')
+        self.stop_item = ToolStripMenuItem('停止游戏')
+        self.exit_item = ToolStripMenuItem('退出')
         for item in (self.show_item, self.start_item, self.stop_item, self.exit_item):
             self.menu.Items.Add(item)
         self.show_item.Click += self._show_event
@@ -415,7 +415,7 @@ class NativeTray:
     @staticmethod
     def _write_json(path, data):
         if not path.is_absolute():
-            raise TrayError('The desktop-window state path must be absolute.')
+            raise TrayError('桌面窗口记录路径必须为绝对路径。')
         path.parent.mkdir(parents=True, exist_ok=True)
         fd, temporary = tempfile.mkstemp(prefix=path.name + '.', suffix='.tmp', dir=path.parent)
         try:
@@ -468,7 +468,7 @@ class NativeTray:
         except Exception:
             # Native disposal can race a background result after the first check.
             if not self._closed.is_set():
-                logging.warning('The desktop window cannot receive tray updates right now.')
+                logging.warning('桌面窗口暂时无法接收托盘更新。')
 
     def _selected_account(self):
         result, done = [None], threading.Event()
@@ -637,9 +637,9 @@ def check_dependencies() -> dict[str, object]:
     }
     for name, location in dependencies.items():
         if not Path(location).is_file():
-            raise RuntimeError(f"Missing desktop runtime component: {name}")
+            raise RuntimeError(f"缺少桌面运行组件：{name}")
     if not forms.is_chromium:
-        raise RuntimeError("Microsoft Edge WebView2 Runtime was not found. Install it and try again.")
+        raise RuntimeError("未找到 Microsoft Edge WebView2 Runtime，请安装后重试。")
     return {
         "ok": True,
         "renderer": "edgechromium",
@@ -659,12 +659,12 @@ def show_error(message: str) -> None:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="PvZ OL desktop launcher window")
-    parser.add_argument("--url", help="Local HTTP page URL provided by the controller")
-    parser.add_argument("--data-dir", type=Path, help="Parent directory of the project cache directory")
-    parser.add_argument("--self-test", action="store_true", help="Import desktop components only; do not open a window")
+    parser = argparse.ArgumentParser(description="PVZ OL 桌面启动器窗口")
+    parser.add_argument("--url", help="控制器提供的本机 HTTP 页面地址")
+    parser.add_argument("--data-dir", type=Path, help="项目缓存目录的父目录")
+    parser.add_argument("--self-test", action="store_true", help="仅导入桌面组件，不打开窗口")
     parser.add_argument("--native-self-test-report", type=Path,
-                        help="Isolated QA: record native position and tray state, then close automatically after showing")
+                        help="隔离 QA：记录原生位置和托盘状态，显示后自动关闭")
     args = parser.parse_args(argv)
 
     # Must precede check_dependencies: CLR/WinForms can cache display metrics
@@ -684,7 +684,7 @@ def main(argv: list[str] | None = None) -> int:
             return 2
 
     if not args.url or args.data_dir is None:
-        parser.error("Please provide --url and --data-dir.")
+        parser.error("请提供 --url 和 --data-dir。")
     tray = None
     try:
         url = validate_local_url(args.url)
@@ -700,7 +700,7 @@ def main(argv: list[str] | None = None) -> int:
         diagnostic_logger = logging.getLogger('pvzol.ui')
         diagnostic_logger.setLevel(logging.INFO)
         diagnostic_logger.log(logging.INFO if dpi_state['ok'] else logging.WARNING,
-                              'Launcher DPI initialization: %s', json.dumps(dpi_state, ensure_ascii=False))
+                              '启动器 DPI 初始化：%s', json.dumps(dpi_state, ensure_ascii=False))
         check_dependencies()
         import webview
 
@@ -739,8 +739,8 @@ def main(argv: list[str] | None = None) -> int:
             tokens = parse_qs(urlsplit(args.url).query, keep_blank_values=True).get('token', [])
         except ValueError:
             tokens = []
-        logging.error('Desktop window startup failed: %s', safe_exception_detail(exc, tokens))
-        show_error('Desktop window startup failed.\n\nCheck ui-shell.log in the project directory.')
+        logging.error('桌面窗口启动失败：%s', safe_exception_detail(exc, tokens))
+        show_error('桌面窗口启动失败。\n\n请检查项目内的 ui-shell.log。')
         return 1
     finally:
         if tray is not None:

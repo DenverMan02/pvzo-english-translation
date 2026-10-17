@@ -384,6 +384,7 @@ def register(api):
 
     def finalist(_data, _player):
         season, _ = _current_season()
+        guild.refresh_member_profiles()
         with guild._db() as con:
             rows = con.execute("SELECT * FROM local_guilds ORDER BY level DESC,honor DESC,guild_id LIMIT 100").fetchall()
             return b"".join(guild._m(1, _guild_fight_info(con, row, season)) for row in rows)
