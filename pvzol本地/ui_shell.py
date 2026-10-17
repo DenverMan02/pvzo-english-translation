@@ -24,7 +24,7 @@ from urllib.parse import parse_qs, urlsplit
 from launcher_dpi import initialize_dpi_awareness, safe_exception_detail
 
 
-TITLE = "植物大战僵尸 OL"
+TITLE = "Plants vs. Zombies Online"
 LOCALIZATION = {
     "global.quitConfirmation": "确定退出启动器吗？退出后将关闭本次启动的游戏服务。",
     "global.ok": "确定",
