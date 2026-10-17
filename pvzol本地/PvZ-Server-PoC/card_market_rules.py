@@ -4,7 +4,28 @@ BattleCardMarketSetting.txt supplies plant probabilities and pack guarantees.
 It does not ship server-only miscellaneous weights/amounts. Valid ItemInfo
 templates below use uniform local weights, one item each, or 10,000 coins.
 """
-import re
+# Stable plant-family IDs from the market's original rare 3-star list.
+# Both original and alternate card rows occur in battleCard.txt. Do not derive
+# these from display names or BattleCardMarketSetting.desc: both are translated.
+MARKET_RARE_THREE_STAR_TD_IDS = frozenset({
+    8300, 58300,    # Electric Sea Pine
+    7500, 57500,    # Chomper
+    7800, 57800,    # Cattail
+    8600, 58600,    # Drilling Lychee Fruit
+    4600, 54600,    # Coconut Cannon
+    6700, 56700,    # Jalapeno
+    7200, 57200,    # Impear
+    9200, 59200,    # Acid Lemon
+    9700, 59700,    # Hurrikale
+    9600, 59600,    # Guacodile
+    7400, 57400,    # Nitro-shroom
+})
+STARFRUIT_TD_IDS = frozenset({6200, 56200})
+TAVERN_GAIN_WAYS = frozenset({"酒吧", "tavern", "bar"})
+
+
+def _is_tavern_gain_way(value):
+    return str(value or "").strip().casefold() in TAVERN_GAIN_WAYS
 
 
 SMALL_WEIGHTS = ((4, 1), (3, 1), (2, 3), (1, 15), (None, 80))
@@ -33,24 +54,22 @@ def reward_data(g):
         raise RuntimeError('Missing ItemInfo market reward templates')
     ci = {name: index for index, name in enumerate(rows[0])}
     items = {int(row[ci['id']]): dict(zip(rows[0], row)) for row in rows[1:]}
-    settings = g._read_clientdb_table('BattleCardMarketSetting.txt')
-    rare_names = {name.strip() for row in settings[1:] for value in row
-                  for name in re.findall(r'>([^<>]+)\(3星\)', value)}
     plants = [(bid, cid) for bid, cid in g.card_market_pool()
               if 1 <= g._BATTLE_CARDS[cid]['rarity'] <= 4
               and 1 <= g._BATTLE_CARDS[cid]['star'] <= 3
               and (g._BATTLE_CARDS[cid]['rarity'] != 4
                    or g._BATTLE_CARDS[cid]['star'] != 3
-                   or g._BATTLE_CARDS[cid]['name'] in rare_names)]
+                   or int(g._BATTLE_CARDS[cid]['tdId']) in MARKET_RARE_THREE_STAR_TD_IDS)]
     fragments = [(iid, 1) for iid, row in items.items()
                  if int(row['type']) == 5 and int(row['subType']) == 501
                  and 1 <= int(row['quality']) <= 4]
     rare_fragments = [(iid, 1) for iid, row in items.items()
                       if int(row['type']) == 5 and int(row['subType']) == 501
-                      and int(row['quality']) == 4 and row['gainWay'] == '酒吧']
+                      and int(row['quality']) == 4 and _is_tavern_gain_way(row['gainWay'])]
     misc = [entry for entry in LOCAL_MISC_ITEMS if entry[0] in items] + rare_fragments
     first = [(bid, 1) for bid, cid in plants
-             if g._BATTLE_CARDS[cid]['name'] == '杨桃' and g._BATTLE_CARDS[cid]['star'] == 3]
+             if int(g._BATTLE_CARDS[cid]['tdId']) in STARFRUIT_TD_IDS
+             and g._BATTLE_CARDS[cid]['star'] == 3]
     if not all((plants, fragments, rare_fragments, misc, first)):
         raise RuntimeError('Incomplete original market reward templates')
     cached = dict(plants=plants, fragments=fragments, rare_fragments=rare_fragments,

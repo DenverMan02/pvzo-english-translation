@@ -89,10 +89,18 @@ class CardMarketRewardTests(unittest.TestCase):
         self.assert_valid_rewards(rewards, 1)
         self.assertNotIn(rewards[0][0], self.card_by_item)
 
+    def test_tavern_fragment_lookup_accepts_original_and_translated_values(self):
+        rules = server.card_market_rules
+        self.assertTrue(rules._is_tavern_gain_way("酒吧"))
+        self.assertTrue(rules._is_tavern_gain_way("Tavern"))
+        self.assertTrue(rules._is_tavern_gain_way("BAR"))
+        self.assertFalse(rules._is_tavern_gain_way("Magic Exchange"))
+
     def test_first_single_matches_original_yangtao_promise(self):
         rewards = server._card_market_roll_rewards(1, self.player(card_market_single_draws=0))
         self.assert_valid_rewards(rewards, 1)
-        self.assertEqual(self.card(rewards[0][0])["name"], "杨桃")
+        self.assertIn(int(self.card(rewards[0][0])["tdId"]),
+                      server.card_market_rules.STARFRUIT_TD_IDS)
         self.assertEqual(self.card(rewards[0][0])["star"], 3)
 
     def test_tenth_single_guarantees_three_star(self):
