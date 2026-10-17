@@ -9,6 +9,7 @@ templates below use uniform local weights, one item each, or 10,000 coins.
 # these from display names or BattleCardMarketSetting.desc: both are translated.
 MARKET_RARE_THREE_STAR_TD_IDS = frozenset({
     8300, 58300,    # Electric Sea Pine
+    8500, 58500,    # Sea Star Fruit
     7500, 57500,    # Chomper
     7800, 57800,    # Cattail
     8600, 58600,    # Drilling Lychee Fruit

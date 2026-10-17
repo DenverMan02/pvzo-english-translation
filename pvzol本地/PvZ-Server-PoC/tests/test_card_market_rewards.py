@@ -89,6 +89,17 @@ class CardMarketRewardTests(unittest.TestCase):
         self.assert_valid_rewards(rewards, 1)
         self.assertNotIn(rewards[0][0], self.card_by_item)
 
+    def test_market_rare_three_star_whitelist_matches_original_table(self):
+        expected = {
+            4600, 54600, 6700, 56700, 7200, 57200, 7400, 57400,
+            7500, 57500, 7800, 57800, 8300, 58300, 8500, 58500,
+            8600, 58600, 9200, 59200, 9600, 59600, 9700, 59700,
+        }
+        self.assertEqual(
+            server.card_market_rules.MARKET_RARE_THREE_STAR_TD_IDS,
+            frozenset(expected),
+        )
+
     def test_tavern_fragment_lookup_accepts_original_and_translated_values(self):
         rules = server.card_market_rules
         self.assertTrue(rules._is_tavern_gain_way("酒吧"))
