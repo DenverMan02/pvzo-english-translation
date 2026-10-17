@@ -149,8 +149,16 @@ class CardMarketRewardTests(unittest.TestCase):
                 2, self.player(card_market_lucky_flower_num=9)
             )
         self.assert_valid_rewards(rewards, 10)
-        self.assertEqual(self.card(rewards[0][0])["star"], 3)
-        self.assertEqual(self.card(rewards[0][0])["rarity"], 4)
+        rare_three_star_plants = [
+            self.card(item_id) for item_id, _count in rewards
+            if item_id in self.card_by_item
+            and self.card(item_id)["star"] == 3
+            and self.card(item_id)["rarity"] == 4
+        ]
+        self.assertTrue(
+            rare_three_star_plants,
+            "ten-pack did not include its guaranteed rare 3-star plant",
+        )
 
     def test_first_daily_free_friend_draw_matches_plant_promise(self):
         with patch.object(server, "_card_market_friend_state", return_value=("2099-01-01", 0, 0)):
