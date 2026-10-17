@@ -47,12 +47,14 @@ class ClientDBTranslateSyncTests(unittest.TestCase):
             self.assertEqual(report["new_rows_needing_translation"], 1)
             self.assertEqual(report["changed_cells"], 4)
             self.assertEqual(report["updated_files"], 1)
-            self.assertEqual(target.read_text(encoding="utf-8"), (
+            self.assertEqual(plan["changed"][0]["content"], (
                 "id\tname\tdesc\tnewField\n"
                 "2\tSunflower\tProduces sun\tkeep-2\n"
                 "3\t新植物\t新描述\tkeep-3\n"
                 "1\tPeashooter\tShoots peas\tkeep-1\n"
             ))
+            # A comparison is a dry run and must not alter the target files.
+            self.assertIn("2\t向日葵\t生产阳光", target.read_text(encoding="utf-8"))
             self.assertEqual(plan["changed"][0]["content"].splitlines()[2],
                              "3\t新植物\t新描述\tkeep-3")
 
