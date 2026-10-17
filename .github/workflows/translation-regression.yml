@@ -8,6 +8,17 @@ on:
       - "pvzol本地/PvZ-Server-PoC/tests/test_battle_ui_translation.py"
       - "gitslop.py"
       - "tests/test_gitslop.py"
+      - "pvzol本地/PvZ-Server-PoC/serve_client.py"
+      - "pvzol本地/PvZ-Server-PoC/run_all.py"
+      - "pvzol本地/PvZ-Server-PoC/runtime_status.py"
+      - "pvzol本地/PvZ-Server-PoC/pvz_poc_server.py"
+      - "pvzol本地/PvZ-Server-PoC/admin_server.py"
+      - "pvzol本地/PvZ-Server-PoC/player_store.py"
+      - "pvzol本地/launcher.py"
+      - "pvzol本地/launcher_service.py"
+      - "pvzol本地/launcher_game_window.py"
+      - "pvzol本地/launcher_desktop.py"
+      - "pvzol本地/ui_shell.py"
       - ".github/workflows/translation-regression.yml"
   pull_request:
     paths:
@@ -16,6 +27,17 @@ on:
       - "pvzol本地/PvZ-Server-PoC/tests/test_battle_ui_translation.py"
       - "gitslop.py"
       - "tests/test_gitslop.py"
+      - "pvzol本地/PvZ-Server-PoC/serve_client.py"
+      - "pvzol本地/PvZ-Server-PoC/run_all.py"
+      - "pvzol本地/PvZ-Server-PoC/runtime_status.py"
+      - "pvzol本地/PvZ-Server-PoC/pvz_poc_server.py"
+      - "pvzol本地/PvZ-Server-PoC/admin_server.py"
+      - "pvzol本地/PvZ-Server-PoC/player_store.py"
+      - "pvzol本地/launcher.py"
+      - "pvzol本地/launcher_service.py"
+      - "pvzol本地/launcher_game_window.py"
+      - "pvzol本地/launcher_desktop.py"
+      - "pvzol本地/ui_shell.py"
       - ".github/workflows/translation-regression.yml"
 
 jobs:
@@ -33,6 +55,17 @@ jobs:
           python -m py_compile "pvzol本地/PvZ-Server-PoC/tests/test_battle_ui_translation.py"
           python -m py_compile "gitslop.py"
           python -m py_compile "tests/test_gitslop.py"
+          python -m py_compile "pvzol本地/PvZ-Server-PoC/serve_client.py"
+          python -m py_compile "pvzol本地/PvZ-Server-PoC/run_all.py"
+          python -m py_compile "pvzol本地/PvZ-Server-PoC/runtime_status.py"
+          python -m py_compile "pvzol本地/PvZ-Server-PoC/pvz_poc_server.py"
+          python -m py_compile "pvzol本地/PvZ-Server-PoC/admin_server.py"
+          python -m py_compile "pvzol本地/PvZ-Server-PoC/player_store.py"
+          python -m py_compile "pvzol本地/launcher.py"
+          python -m py_compile "pvzol本地/launcher_service.py"
+          python -m py_compile "pvzol本地/launcher_game_window.py"
+          python -m py_compile "pvzol本地/launcher_desktop.py"
+          python -m py_compile "pvzol本地/ui_shell.py"
       - name: Run translation regression tests
         run: |
           python -m unittest discover -s "pvzol本地/PvZ-Server-PoC/tests" -p "test_battle_ui_translation.py" -v
