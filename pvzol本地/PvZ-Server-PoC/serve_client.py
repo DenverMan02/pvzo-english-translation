@@ -55,6 +55,15 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 _WEBROOT = os.path.abspath(os.path.join(HERE, "..", "webroot"))
 _RAW = os.path.abspath(os.path.join(HERE, "..", "PvZ Online Folder"))
 CLIENT_DIR = _WEBROOT if os.path.isdir(_WEBROOT) else _RAW
+
+
+# Apply the English SWF patch before the asset server begins serving files.
+# The translator is maintained alongside this server in client_tools/.
+try:
+    from client_tools.translate_battle_ui import apply_translation
+    apply_translation()
+except Exception as exc:
+    print("[battle-ui-translation] Could not apply patch: %r" % exc)
 PORT = 8080
 ASSET_ERROR_LOG = os.path.join(HERE, "client_asset_errors.log")
 _ASSET_ERROR_LOCK = threading.Lock()
