@@ -1,0 +1,16 @@
+id	name
+1	阳光VIP1
+2	财富VIP2
+3	金壶VIP3
+4	阳光VIP1
+5	财富VIP2
+6	金壶VIP3
+7	阳光VIP1
+8	财富VIP2
+9	金壶VIP3
+10	阳光VIP1
+11	财富VIP2
+12	金壶VIP3
+13	阳光VIP1
+14	财富VIP2
+15	金壶VIP3

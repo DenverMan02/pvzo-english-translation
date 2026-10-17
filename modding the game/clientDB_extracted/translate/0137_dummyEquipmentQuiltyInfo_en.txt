@@ -1,0 +1,6 @@
+id	name
+1	White
+2	Green
+3	Blue
+4	Purple
+5	Orange

@@ -1,75 +1,75 @@
 id	name
-3001	攻击加成加强
-3002	攻击加成减弱
-3003	攻击下降加强
-3004	攻击下降减弱
-3005	防御加成加强
-3006	防御加成减弱
-3007	防御下降加强
-3008	防御下降减弱
-3009	生命加成加强
-3010	生命加成减弱
-3011	生命下降加强
-3012	生命下降减弱
-3013	技力加成加强
-3014	技力加成减弱
-3015	技力下降加强
-3016	技力下降减弱
-3017	命中加成加强
-3018	命中加成减弱
-3019	命中下降加强
-3020	命中下降减弱
-3021	闪避加成加强
-3022	闪避加成减弱
-3023	闪避下降加强
-3024	闪避下降减弱
-3025	暴击加成加强
-3026	暴击加成减弱
-3027	暴击下降加强
-3028	暴击下降减弱
-3029	韧性加成加强
-3030	韧性加成减弱
-3031	韧性下降加强
-3032	韧性下降减弱
-3033	治疗加成加强
-3034	治疗加成减弱
-3035	治疗下降加强
-3036	治疗下降减弱
-3037	伤害加成加强
-3038	伤害加成减弱
-3039	伤害下降加强
-3040	伤害下降减弱
-3041	护盾加成加强
-3042	护盾加成减弱
-3043	护盾下降加强
-3044	护盾下降减弱
-3045	定身抗性加强
-3046	定身抗性减弱
-3047	沉默抗性加强
-3048	沉默抗性减弱
-3049	流放抗性加强
-3050	流放抗性减弱
-3051	怒气抗性加强
-3052	怒气抗性减弱
-3053	反伤抗性加强
-3054	反伤抗性减弱
-3055	吸血抗性加强
-3056	吸血抗性减弱
-3057	释放护盾命中加强
-3058	释放护盾命中减弱
-3059	治疗命中加强
-3060	治疗命中减弱
-3061	流血效果减弱
-3062	流血效果加强
-3071	流血抗性加强
-3072	流血抗性减弱
-3063	削弱效果减弱
-3064	削弱效果加强
-3073	削弱抗性加强
-3074	削弱抗性减弱
-3065	吸血效果减弱
-3066	吸血效果加强
-3067	反伤效果减弱
-3068	反伤效果加强
-3069	免伤效果减弱
-3070	免伤效果加强
+3001	Attack Bonus Increased
+3002	Attack Bonus Decreased
+3003	Attack Reduction Increased
+3004	Attack Reduction Decreased
+3005	Increased Defense Bonus
+3006	Defense Bonus Decreased
+3007	Defense Reduction Increased
+3008	Decreased Defense Reduction
+3009	Increased Health Bonus
+3010	Decreased Health Bonus
+3011	HP Reduction Increased
+3012	Decreased Health Loss
+3013	Energy Bonus Increased
+3014	Energy Bonus Decreased
+3015	Increased Energy Reduction
+3016	Energy Reduction Decreased
+3017	Hit Bonus Increased
+3018	Hit Bonus Decreased
+3019	Increased Accuracy Reduction
+3020	Hit Reduction Decreased
+3021	Dodge Bonus Increased
+3022	Decreased Evasion Bonus
+3023	Dodge Reduction Increased
+3024	Decreased Evasion Reduction
+3025	Increased Critical Bonus
+3026	Critical Bonus Decreased
+3027	Critical Reduction Increased
+3028	Critical Reduction Decreased
+3029	Toughness Bonus Increased
+3030	Decreased Toughness Bonus
+3031	Toughness Reduction Increased
+3032	Decreased Toughness Reduction
+3033	Healing Bonus Increased
+3034	Decreased Healing Bonus
+3035	Increased Healing Reduction
+3036	Decreased Healing Reduction
+3037	Damage Bonus Increased
+3038	Decreased Damage Bonus
+3039	Increased Damage Reduction
+3040	Damage Reduction Decreased
+3041	Shield Bonus Increased
+3042	Shield Bonus Decreased
+3043	Shield Reduction Increased
+3044	Decreased Shield Reduction
+3045	Increased Root Resistance
+3046	Decreased Root Resistance
+3047	Increased Silence Resistance
+3048	Silence Resistance Decreased
+3049	Increased Banishment Resistance
+3050	Decreased Exile Resistance
+3051	Increased Rage Resistance
+3052	Decreased Rage Resistance
+3053	Thorns Resistance Increased
+3054	Decreased Thorns Resistance
+3055	Increased Lifesteal Resistance
+3056	Lifesteal Resistance Decreased
+3057	Increased Shield Cast Accuracy
+3058	Decreased Shield Cast Accuracy
+3059	Increased Healing Accuracy
+3060	Healing Hit Decreased
+3061	Bleed Effect Decreased
+3062	Increased Bleed Effect
+3071	Bleed Resistance Increased
+3072	Decreased Bleed Resistance
+3063	Decreased Debuff Effect
+3064	Increased Debuff Effect
+3073	Debuff Resistance Increased
+3074	Decreased Debuff Resistance
+3065	Lifesteal Decreased
+3066	Increased Lifesteal Effect
+3067	Decreased Thorns Effect
+3068	Increased Thorns Effect
+3069	Decreased Damage Immunity Effect
+3070	Damage Mitigation Increased

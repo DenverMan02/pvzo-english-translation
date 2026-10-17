@@ -1,9 +1,9 @@
 id	name
-1	寻宝大作战
-2	植物大乱斗
-3	植物大作战
-4	友情奖励兑换
-5	段位竞技场
-6	天梯竞技场
-7	暴走雪人
-8	无尽挑战
+1	Treasure Hunt
+2	Plant Rumble
+3	Plant Battle
+4	Friendship Reward Exchange
+5	Ranked Arena
+6	Ladder Arena
+7	Yeti Rampage
+8	Endless Challenge

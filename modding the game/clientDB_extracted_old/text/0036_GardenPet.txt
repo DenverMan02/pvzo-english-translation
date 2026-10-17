@@ -1,6 +1,0 @@
-id	name	priceTrial	priceForever	unlockExp	effect	desc	addExp	averagePercent
-1	萌萌	0	0	0			0	100
-2	天天	10	1000	1000	10000:85;20000:15	勤劳 :<font color="#28FF28">每20秒自动捡取经验球</font><br>暴击1:捡取时概率暴击（最高2倍）,<font color="#FFD306">平均增加15%</font>	0	115
-3	圆圆	20	2000	2000	10000:8;30000:2	勤劳 :<font color="#28FF28">每20秒自动捡取经验球</font><br>暴击2:捡取时概率暴击（最高3倍）,<font color="#FFD306">平均增加40%</font><br>贪婪 :<font color="#FFD306">每次捡取增加8点经验</font>	8	140
-4	甜甜	100	10000	10000	10000:1000;20000:666;50000:333	勤劳 :<font color="#28FF28">每20秒自动捡取经验球</font><br>暴击3:捡取时概率暴击（最高5倍）,<font color="#FFD306">平均增加133%</font><br>贪婪 :<font color="#FFD306">每次捡取增加16点经验</font>	16	233
-5	壮壮	200	20000	20000	10000:1000;20000:750;50000:500;100000:250	勤劳 :<font color="#28FF28">每20秒自动捡取经验球</font><br>暴击4:捡取时概率暴击（最高10倍）,<font color="#FFD306">平均增加200%</font><br>贪婪 :<font color="#FFD306">每次捡取增加24点经验</font>	24	300

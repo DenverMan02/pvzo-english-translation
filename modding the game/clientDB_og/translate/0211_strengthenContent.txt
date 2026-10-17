@@ -1,54 +1,54 @@
 id	name	desc	tip	buttonName
-100	酒吧抽卡	可使用钻石或酒吧兑奖券抽取普通至稀有植物		
-101	神秘抽卡	可使用金钻或神秘抽奖券抽取稀有或以上植物		
-102	植物招募	可使用指定数量的植物碎片招募对应1-3星植物		详细
-103	精英冒险	扫荡精英冒险关卡可以收集植物碎片		
-104	兑换商店	可在神奇兑换等商店中兑换植物碎片		
-105	植物礼盒	可在植物礼盒等物品中开出植物碎片		
-106	精彩活动	积极参与各种游戏精彩活动，往往能获得惊喜哦		详细
-107	首充礼包	首次充值任意金额赠送传奇植物[铃儿草]大礼包		
-108	VIP礼包	首次激活VIP3赠送传奇植物[甜椒投手]大礼包	（VIP{0}）	
-109	免费植物	每天投资1Q币，可兑换稀有植物[鳄梨]等热门植物		
-200	首充双倍	首次充值金钻可额外获赠等量钻石（每个角色限购1次）		
-201	戴夫银行	小投资，大回报！欢迎使用戴夫银行		
-202	每日签到	登录游戏每天签到，丰富奖励领回家		
-203	超值点卡	购买点卡礼包，立刻获得300金钻并分30次获赠共3000钻石	(剩余{0}次)	
-300	购买体力	点击体力右侧的＋号可以购买体力		
-301	在线奖励	每天在线30分钟，即可领取100体力、10钻石等奖励		
-302	联盟施肥	加入一个联盟，在花园施肥可以同时获得体力和联盟贡献		
-400	冒险副本	扫荡冒险副本可以获得小镇繁荣度		
-401	每日任务	完成每日任务，奖励大量小镇繁荣度		
-402	塔防关卡	完成塔防关卡主线任务，奖励大量小镇繁荣度		
-500	塔防关卡	首次通关奖励大量金币，并且每天登录可以收获金币		
-501	冒险副本	扫荡冒险副本可以获得金币		
-502	捉小偷	参与活动副本“捉小偷”可获得大量值钱道具	（今日剩余{0}次）	
-503	开采矿区	在世界地图上开采矿区，可以获得持续金币产出	（已占领{0}/{1}）	
-504	金币兑换	点击金币右侧的＋号可以兑换金币		
-600	植物升星	植物升星可以提升技能效果和伤害能力		前往
-605	植物升级	植物升级可以增加各项属性，并解锁更多功能		详细
-606	冒险副本	参与冒险副本的植物可直接获得经验		
-607	经验豆	在“我的家”中使用经验豆可以对指定植物进行升级		
-608	护农田	参与活动副本“护农田”可以获得大量经验豆	（今日剩余{0}次）	
-609	僵尸岛	每天挑战僵尸岛可以获得大量经验豆		
-610	植物拼图	植物拼图可以提升植物品质和各项属性		详细
-611	冒险副本	扫荡冒险副本可以获得各种拼图碎片		
-612	试炼之路	扫荡试炼之路可以获得大量拼图点，用于兑换拼图碎片	（当前到达{0}关）	
-613	基础秘籍	做到这些，就能成为高手啦！		阅读
-614	植物装备	进阶和强化植物装备可以增加各项属性		
-615	植物时装	解锁和强化植物时装可以增加各项属性，并获得特殊外观		
-616	世界树	世界树将助力所有出战植物，提供大量属性加成		
-617	营养室	营养室中配置的试剂可以增加对应阵位植物的各项属性	（当前增加{0}战力）	
-618	进阶秘籍	做到这些，就能成为绝世高手啦！		阅读
-619	植物布阵	有技巧的布置植物阵型，可以让部队发挥更大的作用	（当前战力{0}）	
-620	植物觉醒	植物觉醒后可以大幅提高战力，并获得酷炫光效		
-621	植物基因	植物基因激活后可以大幅提高战力，并获得额外能力		
-622	僵尸傀儡	捕捉和培养僵尸傀儡将助力所有出战植物，提供大量属性加成		
-700	塔防关卡	丰富有趣的塔防关卡带你体会植物大战僵尸的迷人风情	当前进度第{0}章{1}-{2}	前往
-701	植物研究所	记得学习植物天赋，让植物在塔防关卡中大放异彩		前往
-702	时光之旅	享受每天的时光之旅，收集时光币，兑换好东西		前往
-703	暴走雪人	不要放过任何雪人僵尸，他们身上带着宝箱钥匙		前往
-704	无尽挑战	极高难度的塔防挑战，每周排名领取大量金币奖励	本周最高积分{0}	前往
-800	天梯竞斗场	挑战前面的对手，赢得更高的排名和奖励	当前排名{0}	前往
-801	段位竞技场	每天挑战同段位选手，赢取晋级积分	当前段位{0}	前往
-802	植物大作战	联盟协作抢占游乐场与马戏团，为所有盟友赢取福利		前往
-803	地图征战	讨伐并战胜其他小镇可以掠夺对方金库中的金币		前往
+100	Bar Draw	Use Diamonds or Bar Tickets to draw plants ranging from Common to Rare		
+101	Mystery Draw	Use Gems or Mystery Tickets to draw Rare or higher plants		
+102	Plant Recruitment	Use a specified number of plant puzzle pieces to recruit corresponding 1-3 star plants		Details
+103	Elite Adventure	Sweep Elite Adventure stages to collect Plant Puzzle Pieces		
+104	Exchange Shop	Plant Puzzle Pieces can be exchanged in shops like the Magic Exchange		
+105	Plant Gift Box	Plant Puzzle Pieces can be obtained from Plant Gift Boxes and other items		
+106	Special Events	Actively participating in various exciting events often yields pleasant surprises		Details
+107	First Top-Up Pack	Top up any amount for the first time to get the Legendary [Bell Grass] Bundle		
+108	VIP Pack	Activate VIP 3 for the first time to get the Legendary [Bell Pepper-pult] Bundle	（VIP{0}）	
+109	Free Plants	Invest 1 Q-Coin daily to exchange for popular plants like the rare [Avocado]		
+200	First Top-Up Double	First-time Gold Diamond top-ups grant an equal amount of bonus Diamonds (limited to 1 per character)		
+201	Dave's Bank	Small investment, big returns! Welcome to Dave's Bank		
+202	Daily Check-In	Log in and check in daily to take home amazing rewards		
+203	Value Card	Purchase a point card pack to instantly get 300 Gold Diamonds and a total of 3,000 Diamonds distributed over 30 installments	({0} remaining)	
+300	Purchase Energy	Tap the + button next to Stamina to purchase more		
+301	Online Rewards	Stay online for 30 minutes daily to claim 100 Stamina, 10 Diamonds, and other rewards		
+302	Alliance Fertilize	Join an alliance and fertilize in the garden to gain both Stamina and Alliance Contribution		
+400	Adventure Stage	Raid adventure stages to gain Town Prosperity		
+401	Daily Quests	Complete daily quests to earn massive Town Prosperity		
+402	Tower Defense Stage	Complete Tower Defense main quests to earn massive Town Prosperity		
+500	Tower Defense Stage	First-time clear rewards massive coins, and you can harvest coins by logging in daily		
+501	Adventure Stage	Sweeping Adventure stages grants coins		
+502	Catch Thief	Participate in the "Catch the Thief" event dungeon to obtain tons of valuable items	({0} attempts remaining today)	
+503	Mine the Quarry	Mine on the world map to generate a continuous supply of coins	(Captured {0}/{1})	
+504	Coin Exchange	Tap the '+' sign to the right of your coins to exchange for coins		
+600	Plant Star-Up	Upgrading plant star levels enhances skill effects and damage capabilities		Go to
+605	Plant Upgrade	Upgrading plants increases various stats and unlocks more features		Details
+606	Adventure Stage	Plants participating in adventure stages gain EXP directly		
+607	Experience Bean	Use EXP Beans in "My Home" to upgrade designated plants		
+608	Protect the Farm	Participate in the event stage "Defend the Farm" to earn massive EXP Beans	({0} attempts remaining today)	
+609	Zombie Island	Challenge Zombie Island daily to obtain massive EXP Beans		
+610	Plant Puzzle	Plant Puzzles can improve plant quality and various stats		Details
+611	Adventure Stage	Sweep Adventure dungeons to obtain various puzzle pieces		
+612	Path of Trials	Sweep the Trial of Wisdom to earn puzzle points for exchanging puzzle pieces	(Currently at stage {0})	
+613	Basic Guide	Do this, and you'll become a pro!		Read
+614	Plant Equipment	Advancing and strengthening plant equipment increases various stats		
+615	Plant Costumes	Unlock and enhance plant costumes to increase various stats and gain special appearances		
+616	World Tree	The World Tree will empower all deployed plants, providing massive stat bonuses		
+617	Nursery	Reagents placed in the Nutrition Lab increase the stats of plants in the corresponding slots	(Current Might increased by {0})	
+618	Upgrade Manual	Do this, and you'll become an absolute master!		Read
+619	Plant Formation	Skillfully arranging your plant formations allows your troops to unleash even greater power	(Current Might {0})	
+620	Plant Awakening	Plant Awakening significantly boosts combat power and grants cool visual effects		
+621	Plant Genes	Plant Gene Activation significantly boosts combat power and grants extra abilities		
+622	Zombie Puppet	Capture and cultivate Zombie Puppets to empower all deployed plants, providing massive stat bonuses		
+700	Tower Defense Stage	Rich and fun tower defense stages immerse you in the charming world of Plants vs. Zombies	Current Progress: Chapter {0} {1}-{2}	Go to
+701	Plant Research Lab	Remember to learn Plant Talents to help your plants shine in Tower Defense stages		Go to
+702	Time Travel	Enjoy daily Time Journeys, collect Time Coins, and exchange them for great goodies		Go to
+703	Yeti Rampage	Don't let any Yeti Zombies escape; they carry treasure chest keys		Go to
+704	Endless Challenge	Extremely difficult tower defense challenges; rank weekly to claim massive coin rewards	This week's highest score: {0}	Go to
+800	Ladder Arena	Challenge opponents ahead of you to win higher ranks and rewards	Current Rank: {0}	Go to
+801	Ranked Arena	Challenge players of the same tier daily to win promotion points	Current tier: {0}	Go to
+802	Plant Battle	Cooperate with your alliance to capture the Playground and Circus, winning rewards for all allies		Go to
+803	Map Campaign	Campaign against and defeat other towns to plunder the coins from their vaults		Go to

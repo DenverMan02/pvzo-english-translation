@@ -1,0 +1,2 @@
+modeId	name
+1	Survival: Day (Endless)

@@ -1,6 +1,6 @@
 id	name
-1	大胜
-2	小胜
-3	险胜
-4	惜败
-5	连胜
+1	Crushing Victory
+2	Minor Victory
+3	Narrow Victory
+4	Narrow Defeat
+5	Winning Streak

@@ -1,52 +1,52 @@
 id	name
-0	未激活
-1	人力发电器
-2	人力发电器
-3	人力发电器
-4	人力发电器
-5	人力发电器
-6	人力发电器
-7	人力发电器
-8	人力发电器
-9	人力发电器
-10	人力发电器
-11	热能收集器
-12	热能收集器
-13	热能收集器
-14	热能收集器
-15	热能收集器
-16	热能收集器
-17	热能收集器
-18	热能收集器
-19	热能收集器
-20	热能收集器
-21	有机分解器
-22	有机分解器
-23	有机分解器
-24	有机分解器
-25	有机分解器
-26	有机分解器
-27	有机分解器
-28	有机分解器
-29	有机分解器
-30	有机分解器
-31	能量聚合器
-32	能量聚合器
-33	能量聚合器
-34	能量聚合器
-35	能量聚合器
-36	能量聚合器
-37	能量聚合器
-38	能量聚合器
-39	能量聚合器
-40	能量聚合器
-41	万用充能器
-42	万用充能器
-43	万用充能器
-44	万用充能器
-45	万用充能器
-46	万用充能器
-47	万用充能器
-48	万用充能器
-49	万用充能器
-50	万用充能器
+0	Inactive
+1	Manual Generator
+2	Manual Generator
+3	Manual Generator
+4	Manual Generator
+5	Manual Generator
+6	Manual Generator
+7	Manual Generator
+8	Manual Generator
+9	Manual Generator
+10	Manual Generator
+11	Thermal Collector
+12	Thermal Collector
+13	Thermal Collector
+14	Thermal Collector
+15	Thermal Collector
+16	Thermal Collector
+17	Thermal Collector
+18	Thermal Collector
+19	Thermal Collector
+20	Thermal Collector
+21	Organic Decomposer
+22	Organic Decomposer
+23	Organic Decomposer
+24	Organic Decomposer
+25	Organic Decomposer
+26	Organic Decomposer
+27	Organic Decomposer
+28	Organic Decomposer
+29	Organic Decomposer
+30	Organic Decomposer
+31	Energy Synthesizer
+32	Energy Synthesizer
+33	Energy Synthesizer
+34	Energy Synthesizer
+35	Energy Synthesizer
+36	Energy Synthesizer
+37	Energy Synthesizer
+38	Energy Synthesizer
+39	Energy Synthesizer
+40	Energy Synthesizer
+41	Universal Charger
+42	Universal Charger
+43	Universal Charger
+44	Universal Charger
+45	Universal Charger
+46	Universal Charger
+47	Universal Charger
+48	Universal Charger
+49	Universal Charger
+50	Universal Charger

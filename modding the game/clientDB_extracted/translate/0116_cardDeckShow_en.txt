@@ -1,0 +1,114 @@
+id	name
+1	Magic Bean Combo
+2	Offensive and Defensive Partner
+3	Corn Spin
+4	Mirror Pod
+5	Sea of Radishes and Flowers
+6	Cherry Blossom Love
+7	Solid Ice Alliance
+8	The Wizard of Oz
+9	Emerald Orbit
+10	Spikerock Rush
+11	Strike a Balance
+12	Melon for Nut
+13	Ammo Strike
+14	Fruity Healing
+15	Holographic Field
+16	Wall-nut Protection
+17	Fire Barrier
+18	Ice Barrier
+19	Triple Rare Gathering
+20	Spear and Shield
+21	Invincible Assault
+23	Ocean Samurai
+24	Tragic Healing
+25	Efficient Synergy
+26	Frost Chant
+27	Artillery Barrier
+29	Battlefield Star
+30	Deep Sea Symphony
+31	Blade of Assault
+32	Unstoppable Force
+33	Fruit & Flower Platter
+34	Horizontal Slayer
+35	Peak Firepower
+36	Fruity Blast
+37	Armor-Piercing Impact
+38	All-Encompassing
+39	Freedom from Desire Breeds Fortitude
+40	Unbreakable
+41	Supreme Skill Needs No Cleverness
+42	Heavenly Creation
+43	Ghostly Destruction
+44	Balance of Hard and Soft
+45	Potential Activation
+46	Balanced Offense & Defense
+47	Offense and Defense
+48	Thunder and Fire
+49	Heavenly King and Earth Tiger
+50	Ice Barrier
+51	Sustain War Through War
+52	Perfect Match
+54	Flashes of Swords and Blades
+55	Trees of Jade and Orchids
+56	Bloodless Victory
+57	Royal Heritage
+58	Rock Solid
+60	Ice and Fire
+61	Flame Juggling
+62	Press the Advantage
+63	Unlimited Firepower
+64	Slightly Sour Academy
+65	Frontline Pursuit
+66	Forest Phantom
+67	Predator Master
+68	Floral Whispers
+69	Crowd Control Expert
+70	Duet of the Deep Valley
+71	Extra Spicy
+72	Spirit Arts
+73	Subduing the Enemy Without Fighting
+74	Strike across Mountains
+75	Hurricane Impact
+76	Whirlwind Squad
+77	Grafting Flowers onto Trees
+78	Complete Tonic
+79	The Net of Heaven is Vast
+80	Showing One's Edge
+81	Master of Trials
+83	Examining the Sword by Lamplight
+84	Versatile Tactician
+85	Daredevil
+86	Biting Cold Wind
+87	Fluid Maneuvering
+88	Rampant Tyranny
+89	Walls Have Ears
+90	Turning the Tables
+91	Nomadic Cavalry
+92	Golden Pavilion
+93	Golden Armor and Silver Spikes
+94	Play Hard to Get
+95	A Flash of Insight
+96	Sworn Alliance
+97	Vibrant Peaches
+98	King of the Flora
+99	Crimson Storm
+100	Iron Cavalry
+101	Salvation for All
+102	Pathfinder
+103	Every Bush a Enemy
+104	Veggie Salad
+105	Lightning and Thunder
+106	Myriad Lights of Households
+107	Chaste and Pure
+108	Dragon and Tiger Fight
+109	Sworn Brothers
+110	Call the Wind and Rain
+111	Blooming Flowers and Full Moon
+112	Prolonging Life
+113	Drinking Alone Under the Moon
+114	Rapid Storm
+115	Bigger Fish in the Pond
+116	Tit for Tat
+117	Brilliant Tactician
+118	Battle-Hardened

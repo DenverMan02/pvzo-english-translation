@@ -1,0 +1,27 @@
+id	desc
+1	Onward! Let's find more nutritious (and healthy) brains!
+2	Onward! Let's find more nutritious (and healthy) brains!
+3	Onward! Let's find more nutritious (and healthy) brains!
+4	Onward! Let's find more nutritious (and healthy) brains!
+5	Onward! Let's find more nutritious (and healthy) brains!
+6	Onward! Let's find more nutritious (and healthy) brains!
+7	Onward! Let's find more nutritious (and healthy) brains!
+8	Onward! Let's find more nutritious (and healthy) brains!
+9	Onward! Let's find more nutritious (and healthy) brains!
+10	Onward! Let's find more nutritious (and healthy) brains!
+11	Onward! Let's find more nutritious (and healthy) brains!
+12	Hmm~ Well, reading the Almanac carefully will be of great help to you.
+13	Hmm~ Well, reading the Almanac carefully will be of great help to you.
+14	Hmm~ Well, reading the Almanac carefully will be of great help to you.
+15	Hmm~ Well, reading the Almanac carefully will be of great help to you.
+16	Hmm~ Well, reading the Almanac carefully will be of great help to you.
+17	This brain looks positively nutri-(knowl)icious!
+18	This brain looks positively nutri-(knowl)icious!
+19	This brain looks positively nutri-(knowl)icious!
+20	This brain looks positively nutri-(knowl)icious!
+21	This brain looks positively nutri-(knowl)icious!
+22	Awooo, such a smart brain must be fresh and delicious!
+23	Awooo, such a smart brain must be fresh and delicious!
+24	Awooo, such a smart brain must be fresh and delicious!
+25	Awooo, such a smart brain must be fresh and delicious!
+26	Awooo, such a smart brain must be fresh and delicious!

@@ -1,0 +1,121 @@
+id	name
+1011	Underground Palace Edge
+1012	Underground Palace Guard 1
+1013	Underground Palace Guard 2
+1014	Underground Palace Guard 3
+1015	Underground Palace 4
+1016	Underground Palace Battle
+1021	Desert Edge
+1022	Desert Horde 1
+1023	Desert Horde 2
+1024	Desert Horde 3
+1025	Desert Zombie Horde 4
+1026	Desert Battle
+1031	Pirate Trail
+1032	Pirate Crew 1
+1033	Pirate Crew 2
+1034	Pirate Crew 3
+1035	Pirate Crew 4
+1036	Pirate Battle
+1041	Future Edge
+1042	Future Zombie 1
+1043	Future Zombie 2
+1044	Future Zombie 3
+1045	Future Zombie 4
+1046	Future Battle
+1051	Glacier Edge
+1052	Glacier Barbarian 1
+1053	Glacier Barbarian 2
+1054	Glacier Barbarian 3
+1055	Glacial Barbarian 4
+1056	Battle of the Glacier
+1061	Dragon Palace Edge
+1062	Dragon Palace Guard 1
+1063	Dragon Palace Guard 2
+1064	Dragon Palace Guard 3
+1065	Dragon Palace Guard 4
+1066	Dragon Palace Battle
+1071	Volcano Edge
+1072	Volcano Zombie Swarm 1
+1073	Volcano Zombie Horde 2
+1074	Volcano Zombie Horde 3
+1075	Volcano Zombie Horde 4
+1076	Volcano Battle
+1081	Mystic Edge
+1082	Mystic Zombie 1
+1083	Mystic Zombie 2
+1084	Mystic Realm Zombie 3
+1085	Mystic Realm Zombie 4
+1086	Mystic Battle
+1091	Abyss Frontier 1
+1092	Abyss Frontier 2
+1093	Abyss Frontier 3
+1094	Abyss Frontier 4
+1095	Abyss Frontier 5
+1096	Abyss Realm
+1101	Pitch-Dark Edge 1
+1102	Darkest Edge 2
+1103	Pitch-Dark Edge 3
+1104	Darkest Edge 4
+1105	Darkest Edge 5
+1106	Realm of Darkness
+2011	Underground Palace Edge
+2012	Underground Palace Guard 1
+2013	Underground Palace Guard 2
+2014	Underground Palace Guard 3
+2015	Underground Palace Guard 4
+2016	Underground Palace Battle
+2021	Desert Edge
+2022	Desert Horde 1
+2023	Desert Horde 2
+2024	Desert Horde 3
+2025	Desert Zombie Horde 4
+2026	Desert Battle
+2031	Pirate Trail
+2032	Pirate Crew 1
+2033	Pirate Crew 2
+2034	Pirate Crew 3
+2035	Pirate Crew 4
+2036	Pirate Battle
+2041	Future Edge
+2042	Future Zombie 1
+2043	Future Zombie 2
+2044	Future Zombie 3
+2045	Future Zombie 4
+2046	Future Battle
+2051	Glacier Edge
+2052	Glacier Barbarian 1
+2053	Glacier Barbarian 2
+2054	Glacier Barbarian 3
+2055	Glacial Barbarian 4
+2056	Battle of the Glacier
+2061	Dragon Palace Edge
+2062	Dragon Palace Guard 1
+2063	Dragon Palace Guard 2
+2064	Dragon Palace Guard 3
+2065	Dragon Palace Guard 4
+2066	Dragon Palace Battle
+2071	Volcano Edge
+2072	Volcano Zombie Swarm 1
+2073	Volcano Zombie Horde 2
+2074	Volcano Zombie Horde 3
+2075	Volcano Zombie Horde 4
+2076	Volcano Battle
+2081	Mystic Edge
+2082	Mystic Zombie 1
+2083	Mystic Zombie 2
+2084	Mystic Realm Zombie 3
+2085	Mystic Realm Zombie 4
+2086	Mystic Battle
+2091	Abyss Frontier 1
+2092	Abyss Frontier 2
+2093	Abyss Frontier 3
+2094	Abyss Frontier 4
+2095	Abyss Frontier 5
+2096	Abyss Realm
+2101	Pitch-Dark Edge 1
+2102	Darkest Edge 2
+2103	Pitch-Dark Edge 3
+2104	Darkest Edge 4
+2105	Darkest Edge 5
+2106	Realm of Darkness

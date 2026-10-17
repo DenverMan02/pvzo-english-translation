@@ -1,0 +1,32 @@
+id	name
+100	Heal Plant
+200	Confused
+300	Frozen
+400	Slowed
+500	Invincible
+600	Conveyor Belt
+700	Torch Effect
+800	Teleport Used
+900	Movement Speed Boost
+1000	Venus Flytrap Catch Stun
+1100	Movement Speed Boost
+1200	Iceberg Lettuce Plant Food Freeze
+1300	Blocked
+1400	Butter Stun
+1500	Spikeweed Plant Food Stun
+1600	Monkey Hugs Sunflower
+1700	Damp (Narcissus Bullet)
+1800	Attacked
+1900	Winter Melon Slow
+2000	Poisoned
+2100	Oxygen Depleted
+2200	Supplying Oxygen (Temporary)
+2300	Supplying Oxygen (Permanent)
+2400	Bubble Trapped
+2500	Plant Slow
+2600	Bubble Flower Plant Food Bubble Trap
+2700	Snow Pea Plant Food Slow
+2800	Snow Pea Attack Slow
+2900	Attack Speed Boost
+3000	Severe Poison
+3100	Frozen

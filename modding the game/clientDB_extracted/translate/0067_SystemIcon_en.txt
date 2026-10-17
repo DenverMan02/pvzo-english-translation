@@ -1,0 +1,19 @@
+id	desc
+10	Deploy Plants and Repel Zombies
+11	Alliance Event
+1001	World Boss
+1002	Time Travel
+1003	Treasure Hunt
+1004	Endless Tower Defense
+1005	Plant Rumble
+1007	Alliance Raid
+1008	Compete weekly for the Champion Alliance!
+1009	Daily Special
+1010	Plant Quiz
+1011	Tower Defense Challenge
+1012	Daily Trivia Showdown
+1015	Yeti Rampage
+1017	Who will become the Cross-Server King!
+1018	Frontier Border War
+1019	Endless Purgatory
+1020	Cross-Server Arena

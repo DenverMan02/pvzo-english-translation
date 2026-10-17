@@ -1,269 +1,269 @@
 id	name
-1102	向日葵
-1103	向日葵
-1104	向日葵
-1105	向日葵
-1113	双头向日葵
-1114	双头向日葵
-1115	双头向日葵
-1201	单发豌豆
-1202	单发豌豆
-1203	单发豌豆
-1204	单发豌豆
-1205	单发豌豆
-1212	双发豌豆
-1213	双发豌豆
-1214	双发豌豆
-1215	双发豌豆
-1301	矮坚果
-1302	矮坚果
-1303	矮坚果
-1304	矮坚果
-1305	矮坚果
-1401	卷心菜
-1402	卷心菜
-1403	卷心菜
-1404	卷心菜
-1405	卷心菜
-1501	土豆地雷
-1502	土豆地雷
-1503	土豆地雷
-1504	土豆地雷
-1505	土豆地雷
-1602	回旋镖
-1603	回旋镖
-1604	回旋镖
-1605	回旋镖
-1703	冰冻生菜
-1704	冰冻生菜
-1705	冰冻生菜
-1803	白菜战士
-1804	白菜战士
-1805	白菜战士
-1901	墓碑吞噬者
-1902	墓碑吞噬者
-1903	墓碑吞噬者
-1904	墓碑吞噬者
-1905	墓碑吞噬者
-2002	魔藤
-2003	魔藤
-2004	魔藤
-2005	魔藤
-3702	倭瓜
-3703	倭瓜
-3704	倭瓜
-3705	倭瓜
-3103	竹小龙
-3104	竹小龙
-3105	竹小龙
-3203	胡萝卜火箭
-3204	胡萝卜火箭
-3205	胡萝卜火箭
-3303	蒲公英
-3304	蒲公英
-3305	蒲公英
-3602	捕蝇草
-3603	捕蝇草
-3604	捕蝇草
-3605	捕蝇草
-4301	玉米
-4302	玉米
-4303	玉米
-4304	玉米
-4305	玉米
-3903	火龙草
-3904	火龙草
-3905	火龙草
-5303	寒冰射手
-5304	寒冰射手
-5305	寒冰射手
-5402	双头豌豆
-5403	双头豌豆
-5404	双头豌豆
-5405	双头豌豆
-4503	三发豌豆
-4504	三发豌豆
-4505	三发豌豆
-5503	豌豆荚
-5504	豌豆荚
-5505	豌豆荚
-4101	地刺
-4102	地刺
-4103	地刺
-4104	地刺
-4105	地刺
-4202	地刺王
-4203	地刺王
-4204	地刺王
-4205	地刺王
-5602	高坚果
-5603	高坚果
-5604	高坚果
-5605	高坚果
-5703	樱桃炸弹
-5704	樱桃炸弹
-5705	樱桃炸弹
-4401	弹簧豆
-4402	弹簧豆
-4403	弹簧豆
-4404	弹簧豆
-4405	弹簧豆
-4603	椰子大炮
-4604	椰子大炮
-4605	椰子大炮
-5901	巴豆
-5902	巴豆
-5903	巴豆
-5904	巴豆
-5905	巴豆
-6003	火桩
-6004	火桩
-6005	火桩
-6101	电草
-6102	电草
-6103	电草
-6104	电草
-6105	电草
-6203	杨桃
-6204	杨桃
-6205	杨桃
-6302	激光豆子
-6303	激光豆子
-6304	激光豆子
-6305	激光豆子
-6403	柚子
-6404	柚子
-6405	柚子
-6503	全息坚果
-6504	全息坚果
-6505	全息坚果
-6602	棱镜草
-6603	棱镜草
-6604	棱镜草
-6605	棱镜草
-6703	辣椒
-6704	辣椒
-6705	辣椒
-6904	冰冻西瓜
-6905	冰冻西瓜
-7503	食人花
-7504	食人花
-7505	食人花
-7603	瓷砖萝卜
-7604	瓷砖萝卜
-7605	瓷砖萝卜
-7703	西瓜投手
-7704	西瓜投手
-7705	西瓜投手
-7803	香蒲
-7804	香蒲
-7805	香蒲
-8503	海星果
-8504	海星果
-8505	海星果
-7403	硝化菇
-7404	硝化菇
-7405	硝化菇
-8603	钻地荔枝果
-8604	钻地荔枝果
-8605	钻地荔枝果
-8303	电海松
-8304	电海松
-8305	电海松
-8703	海葵花
-8704	海葵花
-8705	海葵花
-7903	灵芝
-7904	灵芝
-7905	灵芝
-8103	氧气藻
-8104	氧气藻
-8105	氧气藻
-8003	芭蕉
-8004	芭蕉
-8005	芭蕉
-4703	石榴
-4704	石榴
-4705	石榴
-4903	榴莲
-4904	榴莲
-4905	榴莲
-7203	脉冲黄桃
-7204	脉冲黄桃
-7205	脉冲黄桃
-8803	水雷果
-8804	水雷果
-8805	水雷果
-8903	玫瑰剑客
-8904	玫瑰剑客
-8905	玫瑰剑客
-9003	君子兰
-9004	君子兰
-9005	君子兰
-9103	树脂发射器
-9104	树脂发射器
-9105	树脂发射器
-9203	强酸柠檬
-9204	强酸柠檬
-9205	强酸柠檬
-9303	魔术菇
-9304	魔术菇
-9305	魔术菇
-9403	火焰射手
-9404	火焰射手
-9405	火焰射手
-9502	幽灵辣椒
-9503	幽灵辣椒
-9504	幽灵辣椒
-9505	幽灵辣椒
-9603	鳄梨
-9604	鳄梨
-9605	鳄梨
-9703	飓风甘蓝
-9704	飓风甘蓝
-9705	飓风甘蓝
-9803	路灯花
-9804	路灯花
-9805	路灯花
-9903	橡木射手
-9904	橡木射手
-9905	橡木射手
-1123	刺头花
-1124	刺头花
-1125	刺头花
-1132	甜椒投手
-1133	甜椒投手
-1134	甜椒投手
-1135	甜椒投手
-1153	功夫萝卜
-1154	功夫萝卜
-1155	功夫萝卜
-1163	金蟾菇
-1164	金蟾菇
-1165	金蟾菇
-1172	铃儿草
-1173	铃儿草
-1174	铃儿草
-1175	铃儿草
-1183	红针花
-1184	红针花
-1185	红针花
-1223	闪电蓝莓
-1224	闪电蓝莓
-1225	闪电蓝莓
-1192	阿开木
-1193	阿开木
-1194	阿开木
-1195	阿开木
-1233	龙舌兰
-1234	龙舌兰
-1235	龙舌兰
-1243	月光花
-1244	月光花
-1245	月光花
-1253	芦笋战机
-1254	芦笋战机
-1255	芦笋战机
-1143	南瓜小巫
-1144	南瓜小巫
-1145	南瓜小巫
+1102	Sunflower
+1103	Sunflower
+1104	Sunflower
+1105	Sunflower
+1113	Twin Sunflower
+1114	Twin Sunflower
+1115	Twin Sunflower
+1201	Peashooter
+1202	Peashooter
+1203	Peashooter
+1204	Peashooter
+1205	Peashooter
+1212	Repeater
+1213	Repeater
+1214	Repeater
+1215	Repeater
+1301	Wall-nut
+1302	Wall-nut
+1303	Wall-nut
+1304	Wall-nut
+1305	Wall-nut
+1401	Cabbage-pult
+1402	Cabbage-pult
+1403	Cabbage-pult
+1404	Cabbage-pult
+1405	Cabbage-pult
+1501	Potato Mine
+1502	Potato Mine
+1503	Potato Mine
+1504	Potato Mine
+1505	Potato Mine
+1602	Bloomerang
+1603	Bloomerang
+1604	Bloomerang
+1605	Bloomerang
+1703	Iceberg Lettuce
+1704	Iceberg Lettuce
+1705	Iceberg Lettuce
+1803	Bonk Choy
+1804	Bonk Choy
+1805	Bonk Choy
+1901	Grave Buster
+1902	Grave Buster
+1903	Grave Buster
+1904	Grave Buster
+1905	Grave Buster
+2002	Magic Beanstalk
+2003	Magic Beanstalk
+2004	Magic Beanstalk
+2005	Magic Beanstalk
+3702	Squash
+3703	Squash
+3704	Squash
+3705	Squash
+3103	Bruce Bamboo
+3104	Bruce Bamboo
+3105	Bruce Bamboo
+3203	Carrocket
+3204	Carrocket
+3205	Carrocket
+3303	Explodelion
+3304	Explodelion
+3305	Explodelion
+3602	Venus Flytrap
+3603	Venus Flytrap
+3604	Venus Flytrap
+3605	Venus Flytrap
+4301	Kernel-pult
+4302	Kernel-pult
+4303	Kernel-pult
+4304	Kernel-pult
+4305	Kernel-pult
+3903	Snapdragon
+3904	Snapdragon
+3905	Snapdragon
+5303	Snow Pea
+5304	Snow Pea
+5305	Snow Pea
+5402	Repeater
+5403	Repeater
+5404	Repeater
+5405	Repeater
+4503	Threepeater
+4504	Threepeater
+4505	Threepeater
+5503	Pea Pod
+5504	Pea Pod
+5505	Pea Pod
+4101	Spikeweed
+4102	Spikeweed
+4103	Spikeweed
+4104	Spikeweed
+4105	Spikeweed
+4202	Spikeweed
+4203	Spikeweed
+4204	Spikeweed
+4205	Spikeweed
+5602	Tall-nut
+5603	Tall-nut
+5604	Tall-nut
+5605	Tall-nut
+5703	Cherry Bomb
+5704	Cherry Bomb
+5705	Cherry Bomb
+4401	Spring Bean
+4402	Spring Bean
+4403	Spring Bean
+4404	Spring Bean
+4405	Spring Bean
+4603	Coconut Cannon
+4604	Coconut Cannon
+4605	Coconut Cannon
+5901	Stallia
+5902	Stallia
+5903	Stallia
+5904	Stallia
+5905	Stallia
+6003	Torchwood
+6004	Torchwood
+6005	Torchwood
+6101	Lightning Reed
+6102	Lightning Reed
+6103	Lightning Reed
+6104	Lightning Reed
+6105	Lightning Reed
+6203	Starfruit
+6204	Starfruit
+6205	Starfruit
+6302	Laser Bean
+6303	Laser Bean
+6304	Laser Bean
+6305	Laser Bean
+6403	Citron
+6404	Citron
+6405	Citron
+6503	Infi-nut
+6504	Infi-nut
+6505	Infi-nut
+6602	Magnifying Grass
+6603	Magnifying Grass
+6604	Magnifying Grass
+6605	Magnifying Grass
+6703	Jalapeno
+6704	Jalapeno
+6705	Jalapeno
+6904	Winter Melon
+6905	Winter Melon
+7503	Chomper
+7504	Chomper
+7505	Chomper
+7603	Tile Turnip
+7604	Tile Turnip
+7605	Tile Turnip
+7703	Melon-pult
+7704	Melon-pult
+7705	Melon-pult
+7803	Cattail
+7804	Cattail
+7805	Cattail
+8503	Starfruit
+8504	Starfruit
+8505	Starfruit
+7403	Nitro-shroom
+7404	Nitro-shroom
+7405	Nitro-shroom
+8603	Lychee Drill
+8604	Lychee Drill
+8605	Lychee Drill
+8303	Electric Sea-shroom
+8304	Electric Sea-shroom
+8305	Electric Sea-shroom
+8703	Sea Anemone
+8704	Sea Anemone
+8705	Sea Anemone
+7903	Ganoderma
+7904	Ganoderma
+7905	Ganoderma
+8103	Oxygen Algae
+8104	Oxygen Algae
+8105	Oxygen Algae
+8003	Banana Tree
+8004	Banana Tree
+8005	Banana Tree
+4703	Pomegranate-pult
+4704	Pomegranate-pult
+4705	Pomegranate-pult
+4903	Durian
+4904	Durian
+4905	Durian
+7203	Impear
+7204	Impear
+7205	Impear
+8803	Potato Mine
+8804	Potato Mine
+8805	Potato Mine
+8903	Rose Swordfighter
+8904	Rose Swordfighter
+8905	Rose Swordfighter
+9003	Clivia
+9004	Clivia
+9005	Clivia
+9103	Sap-fling
+9104	Sap-fling
+9105	Sap-fling
+9203	Acid Lemon
+9204	Acid Lemon
+9205	Acid Lemon
+9303	Magic-shroom
+9304	Magic-shroom
+9305	Magic-shroom
+9403	Fire Peashooter
+9404	Fire Peashooter
+9405	Fire Peashooter
+9502	Ghost Pepper
+9503	Ghost Pepper
+9504	Ghost Pepper
+9505	Ghost Pepper
+9603	Guacodile
+9604	Guacodile
+9605	Guacodile
+9703	Hurrikale
+9704	Hurrikale
+9705	Hurrikale
+9803	Plantern
+9804	Plantern
+9805	Plantern
+9903	Oak Archer
+9904	Oak Archer
+9905	Oak Archer
+1123	Spikeweed
+1124	Spikeweed
+1125	Spikeweed
+1132	Pepper-pult
+1133	Pepper-pult
+1134	Pepper-pult
+1135	Pepper-pult
+1153	Kung Fu Carrot
+1154	Kung Fu Carrot
+1155	Kung Fu Carrot
+1163	Toadstool
+1164	Toadstool
+1165	Toadstool
+1172	Bell Grass
+1173	Bell Grass
+1174	Bell Grass
+1175	Bell Grass
+1183	Red Stinger
+1184	Red Stinger
+1185	Red Stinger
+1223	Electric Blueberry
+1224	Electric Blueberry
+1225	Electric Blueberry
+1192	A.K.E.E.
+1193	A.K.E.E.
+1194	A.K.E.E.
+1195	A.K.E.E.
+1233	Agave
+1234	Agave
+1235	Agave
+1243	Moonflower
+1244	Moonflower
+1245	Moonflower
+1253	Aceparagus
+1254	Aceparagus
+1255	Aceparagus
+1143	Pumpkin Witch
+1144	Pumpkin Witch
+1145	Pumpkin Witch

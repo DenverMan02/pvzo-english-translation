@@ -1,274 +1,274 @@
 id	name
-101	戴夫的教学
-10101	秦始皇陵 1-1
-10102	秒杀僵尸 1-2
-10103	秒杀僵尸 1-3
-10104	秒杀僵尸 1-4
-10201	秦始皇陵 2-1
-10202	植物快递 2-2
-10203	植物快递 2-3
-10204	植物快递 2-4
-102041	收集阳光（1）
-10301	秦始皇陵 3-1
-10302	胡萝卜火箭 3-2
-10303	胡萝卜火箭 3-3
-10304	胡萝卜火箭 3-4
-10401	秦始皇陵 4-1
-10402	胡萝卜火箭 4-2
-10403	胡萝卜火箭 4-3
-10404	胡萝卜火箭 4-4
-104041	火箭（倭瓜）
-10501	秦始皇陵 5-1
-10502	植物新生 5-2
-10503	植物新生 5-3
-10504	植物新生 5-4
-10601	秦始皇陵 6-1
-10602	保护植物 6-2
-10603	保护植物 6-3
-10604	保护植物 6-4
-10701	秦始皇陵 7-1
-10702	农耕时代 7-2
-10703	农耕时代 7-3
-10704	农耕时代 7-4
-10801	秦始皇陵 8-1
-10802	珍惜植物 8-2
-10803	珍惜植物 8-3
-10804	珍惜植物 8-4
-108041	雪人来袭
-10901	秦始皇陵 9-1
-10902	兵马俑迷阵 9-2
-10903	兵马俑迷阵 9-3
-10904	兵马俑迷阵 9-4
-109041	僵尸迷阵（1）
-11001	秦始皇陵 10-1
-11002	绝处逢生 10-2
-11003	绝处逢生 10-3
-11004	绝处逢生 10-4
-110041	秦皇BOSS
-20101	埃及沙漠 1-1
-20201	埃及沙漠 2-1
-20301	埃及沙漠 3-1
-20401	埃及沙漠 4-1
-20402	植物快递 4-2
-20403	植物快递 4-3
-204031	坚果保龄球
-20501	埃及沙漠 5-1
-20502	灭火行动 5-2
-20503	灭火行动 5-3
-20504	灭火行动 5-4
-20601	埃及沙漠 6-1
-20602	动感白菜 6-2
-20603	动感白菜 6-3
-20604	动感白菜 6-4
-20701	埃及沙漠 7-1
-20702	夺回阳光 7-2
-20703	夺回阳光 7-3
-20704	夺回阳光 7-4
-207041	消除墓碑
-20801	埃及沙漠 8-1
-20802	僵尸回忆 8-2
-20803	僵尸回忆 8-3
-20804	僵尸回忆 8-4
-208041	僵尸回忆（1）
-20901	埃及沙漠 9-1
-20902	植物消除 9-2
-20903	植物消除 9-3
-20904	植物消除 9-4
-209041	植物消除
-21001	埃及沙漠 10-1
-210011	法老BOSS
-21002	守护向日葵 10-2
-21003	守护向日葵 10-3
-21004	守护向日葵 10-4
-30101	海盗湾 1-1
-30102	海盗沙滩 1-2
-30103	海盗沙滩 1-3
-30104	海盗沙滩 1-4
-30201	海盗湾 2-1
-30202	海盗码头 2-2
-30203	海盗码头 2-3
-30204	海盗码头 2-4
-302041	收集阳光（2）
-30301	海盗湾 3-1
-30302	海盗巢穴 3-2
-30303	海盗巢穴 3-3
-30304	海盗巢穴 3-4
-30401	海盗湾 4-1
-30402	海盗的宝藏 4-2
-30403	海盗的宝藏 4-3
-30404	海盗的宝藏 4-4
-30501	海盗湾 5-1
-30502	咸鱼翻身 5-2
-30503	咸鱼翻身 5-3
-30504	咸鱼翻身 5-4
-305041	火箭（冰豆）
-30601	海盗湾 6-1
-30602	黑帆起航 6-2
-30603	黑帆起航 6-3
-30604	黑帆起航 6-4
-30701	海盗湾 7-1
-30702	海带缠身 7-2
-30703	海带缠身 7-3
-30704	海带缠身 7-4
-307041	保护植物
-30801	海盗湾 8-1
-30802	血月航行 8-2
-30803	血月航行 8-3
-30804	血月航行 8-4
-30901	海盗湾 9-1
-30902	一网打尽 9-2
-30903	一网打尽 9-3
-30904	一网打尽 9-4
-31001	海盗湾 10-1
-31002	翻江倒海 10-2
-31003	翻江倒海 10-3
-31004	翻江倒海 10-4
-310041	僵尸迷阵（2）
-31101	海盗湾 11-1
-31102	海妖的低语 11-2
-31103	海妖的低语 11-3
-31104	海妖的低语 11-4
-31201	海盗湾 12-1
-31202	沉船之秘 12-2
-31203	沉船之秘 12-3
-31204	沉船之秘 12-4
-31301	海盗湾 13-1
-31302	黄金航线 13-2
-31303	黄金航线 13-3
-31304	黄金航线 13-4
-31401	海盗湾 14-1
-31402	最后的船票 14-2
-31403	最后的船票 14-3
-31404	最后的船票 14-4
-31501	海盗湾 15-1
-31502	加勒比之魂 15-2
-31503	加勒比之魂 15-3
-31504	加勒比之魂 15-4
-315041	海盗BOSS
-40101	未来世界 1-1
-40102	未来世界 1-2
-40103	未来世界 1-3
-40104	未来世界 1-4
-40201	未来世界 2-1
-40202	未来世界 2-2
-40203	未来世界 2-3
-40204	未来世界 2-4
-402041	迎击海鸥
-40301	未来世界 3-1
-40302	未来世界 3-2
-40303	未来世界 3-3
-40304	未来世界 3-4
-40401	未来世界 4-1
-40402	未来世界 4-2
-40403	未来世界 4-3
-40404	未来世界 4-4
-40501	未来世界 5-1
-40502	未来世界 5-2
-40503	未来世界 5-3
-40504	未来世界 5-4
-405041	僵尸回忆（2）
-40601	未来世界 6-1
-40602	未来世界 6-2
-40603	未来世界 6-3
-40604	未来世界 6-4
-40701	未来世界 7-1
-40702	未来世界 7-2
-40703	未来世界 7-3
-40704	未来世界 7-4
-407041	节奏大师
-40801	未来世界 8-1
-40802	未来世界 8-2
-40803	未来世界 8-3
-40804	未来世界 8-4
-40901	未来世界 9-1
-40902	未来世界 9-2
-40903	未来世界 9-3
-40904	未来世界 9-4
-41001	未来世界 10-1
-41002	未来世界 10-2
-41003	未来世界 10-3
-41004	未来世界 10-4
-41101	未来世界 11-1
-41102	未来世界 11-2
-41103	未来世界 11-3
-41104	未来世界 11-4
-41201	未来世界 12-1
-41202	未来世界 12-2
-41203	未来世界 12-3
-41204	未来世界 12-4
-41301	未来世界 13-1
-41302	未来世界 13-2
-41303	未来世界 13-3
-41304	未来世界 13-4
-41401	未来世界 14-1
-41402	未来世界 14-2
-41403	未来世界 14-3
-41404	未来世界 14-4
-41501	未来世界 15-1
-41502	未来世界 15-2
-41503	未来世界 15-3
-41504	未来世界 15-4
-415041	博士BOSS
-50101	东海龙宫 1-1
-50201	东海龙宫 2-1
-50202	东海龙宫 2-2
-50203	东海龙宫 2-3
-50204	东海龙宫 2-4
-50301	东海龙宫 3-1
-50401	东海龙宫 4-1
-50402	东海龙宫 4-2
-50403	东海龙宫 4-3
-50404	东海龙宫 4-4
-50501	东海龙宫 5-1
-50601	东海龙宫 6-1
-50602	龙宫寻遗 6-2
-50603	龙宫寻遗 6-3
-50604	龙宫寻遗 6-4
-50701	东海龙宫 7-1
-50801	东海龙宫 8-1
-50802	东海龙宫 8-2
-50803	东海龙宫 8-3
-50804	东海龙宫 8-4
-50901	东海龙宫 9-1
-51001	东海龙宫 10-1
-51002	东海龙宫 10-2
-51003	东海龙宫 10-3
-51004	东海龙宫 10-4
-51101	东海龙宫 11-1
-51201	东海龙宫 12-1
-51202	东海龙宫 12-2
-51203	东海龙宫 12-3
-51204	东海龙宫 12-4
-51301	东海龙宫 13-1
-51401	东海龙宫 14-1
-51402	东海龙宫 14-2
-51403	东海龙宫 14-3
-51404	东海龙宫 14-4
-51501	东海龙宫 15-1
-51601	东海龙宫 16-1
-51602	东海龙宫 16-2
-51603	东海龙宫 16-3
-51604	东海龙宫 16-4
-51701	东海龙宫 17-1
-51801	东海龙宫 18-1
-51802	东海龙宫 18-2
-51803	东海龙宫 18-3
-51804	东海龙宫 18-4
-51901	东海龙宫 19-1
-51902	东海龙宫 19-2
-51903	东海龙宫 19-3
-51904	东海龙宫 19-4
-52001	东海龙宫 20-1
-52002	东海龙宫 20-2
-52003	东海龙宫 20-3
-52004	东海龙宫 20-4
-52101	东海龙宫 21-1
-52102	东海龙宫 21-2
-52103	东海龙宫 21-3
-52104	东海龙宫 21-4
-52201	东海龙宫 22-1
-52202	东海龙宫 22-2
-52203	东海龙宫 22-3
-52204	东海龙宫 22-4
-52301	东海龙宫 23-1
-60101	重返埃及 1-1
+101	Tutorial
+10101	Underground Palace 1-1
+10102	Instant Kill Zombies 1-2
+10103	Insta-kill Zombies 1-3
+10104	Instant-Kill Zombies 1-4
+10201	Underground Palace 2-1
+10202	Plant Delivery 2-2
+10203	Plant Delivery 2-3
+10204	Plant Delivery 2-4
+102041	Sun Collection (1)
+10301	Underground Palace 3-1
+10302	Carrot Rocket 3-2
+10303	Carrot Rocket 3-3
+10304	Carrot Rocket 3-4
+10401	Underground Palace 4-1
+10402	Carrot Rocket 4-2
+10403	Carrot Rocket 4-3
+10404	Carrot Rocket 4-4
+104041	Rocket (Squash)
+10501	Underground Palace 5-1
+10502	Plant Rebirth 5-2
+10503	Plant Rebirth 5-3
+10504	Plant Rebirth 5-4
+10601	Underground Palace 6-1
+10602	Save the Seeds 6-2
+10603	Protect the Plants 6-3
+10604	Save the Plants 6-4
+10701	Underground Palace 7-1
+10702	Agricultural Era 7-2
+10703	Agricultural Era 7-3
+10704	Agricultural Era 7-4
+10801	Underground Palace 8-1
+10802	Cherish Plants 8-2
+10803	Save the Plants 8-3
+10804	Rare Plants 8-4
+108041	Yeti Strike
+10901	Underground Palace 9-1
+10902	Terracotta Labyrinth 9-2
+10903	Terracotta Labyrinth 9-3
+10904	Terracotta Maze 9-4
+109041	Zombie Maze (1)
+11001	Underground Palace 10-1
+11002	Do or Die 10-2
+11003	Do or Die 10-3
+11004	Desperate Struggle 10-4
+110041	Qin Emperor BOSS
+20101	Ancient Egypt 1-1
+20201	Ancient Egypt 2-1
+20301	Ancient Egypt 3-1
+20401	Ancient Egypt 4-1
+20402	Plant Delivery 4-2
+20403	Plant Delivery 4-3
+204031	Wall-nut Bowling
+20501	Ancient Egypt 5-1
+20502	Firefighting Operation 5-2
+20503	Firefighting Operation 5-3
+20504	Firefighting 5-4
+20601	Ancient Egypt 6-1
+20602	Bonk Choy 6-2
+20603	Groovy Bok Choy 6-3
+20604	Bonk Choy 6-4
+20701	Ancient Egypt 7-1
+20702	Retake Sun 7-2
+20703	Sun Recovery 7-3
+20704	Sun Recovery 7-4
+207041	Clear Gravestones
+20801	Ancient Egypt 8-1
+20802	Zombie Memories 8-2
+20803	Zombie Memories 8-3
+20804	Zombie Memories 8-4
+208041	Zombie Memories (1)
+20901	Ancient Egypt 9-1
+20902	Plant Match 9-2
+20903	Plant Match 9-3
+20904	Plant Match 9-4
+209041	Plant Removal
+21001	Ancient Egypt 10-1
+210011	Pharaoh BOSS
+21002	Defend the Sunflowers 10-2
+21003	Protect the Sunflower 10-3
+21004	Protect the Sunflower 10-4
+30101	Pirate Seas 1-1
+30102	Pirate Seas 1-2
+30103	Pirate Seas 1-3
+30104	Pirate Seas 1-4
+30201	Pirate Seas 2-1
+30202	Pirate Seas - Day 2-2
+30203	Pirate Seas - Day 2-3
+30204	Pirate Seas 2-4
+302041	Collect Sun (2)
+30301	Pirate Seas 3-1
+30302	Pirate Seas 3-2
+30303	Pirate Seas 3-3
+30304	Pirate Seas 3-4
+30401	Pirate Seas 4-1
+30402	Pirate's Treasure 4-2
+30403	Pirate's Treasure 4-3
+30404	Pirate's Treasure 4-4
+30501	Pirate Seas 5-1
+30502	Comeback 5-2
+30503	Comeback 5-3
+30504	Comeback 5-4
+305041	Rocket (Snow Pea)
+30601	Pirate Seas 6-1
+30602	Black Sails 6-2
+30603	Dark Sails 6-3
+30604	Black Sails Set Sail 6-4
+30701	Pirate Seas 7-1
+30702	Kelp Entanglement 7-2
+30703	Tangled Kelp 7-3
+30704	Kelp Entanglement 7-4
+307041	Protect the Plants
+30801	Pirate Seas 8-1
+30802	Blood Moon Voyage 8-2
+30803	Blood Moon Voyage 8-3
+30804	Blood Moon Voyage 8-4
+30901	Pirate Seas 9-1
+30902	Catch 'Em All 9-2
+30903	Catch 'Em All 9-3
+30904	Catch 'Em All 9-4
+31001	Pirate Seas 10-1
+31002	Rough Seas 10-2
+31003	Tidal Waves 10-3
+31004	Rolling Seas 10-4
+310041	Zombie Maze (2)
+31101	Pirate Seas 11-1
+31102	Siren's Whisper 11-2
+31103	Siren's Whisper 11-3
+31104	Siren's Whisper 11-4
+31201	Pirate Seas 12-1
+31202	Shipwreck Secret 12-2
+31203	Shipwreck Secret 12-3
+31204	Shipwreck Secret 12-4
+31301	Pirate Seas 13-1
+31302	Golden Route 13-2
+31303	Golden Route 13-3
+31304	Golden Route 13-4
+31401	Pirate Seas 14-1
+31402	Last Ticket 14-2
+31403	The Last Ferry Ticket 14-3
+31404	Last Ticket 14-4
+31501	Pirate Seas 15-1
+31502	Spirit of the Caribbean 15-2
+31503	Spirit of the Caribbean 15-3
+31504	Caribbean Spirit 15-4
+315041	Pirate BOSS
+40101	Future World 1-1
+40102	Far Future 1-2
+40103	Far Future 1-3
+40104	Far Future 1-4
+40201	Far Future 2-1
+40202	Far Future 2-2
+40203	Far Future - Day 2-3
+40204	Future World 2-4
+402041	Intercept Seagulls
+40301	Far Future - Day 3-1
+40302	Far Future 3-2
+40303	Far Future - Day 3-3
+40304	Far Future 3-4
+40401	Far Future 4-1
+40402	Future World 4-2
+40403	Future World 4-3
+40404	Far Future 4-4
+40501	Future World 5-1
+40502	Far Future - Day 5-2
+40503	Future World 5-3
+40504	Far Future 5-4
+405041	Zombie Memories (2)
+40601	Far Future 6-1
+40602	Far Future 6-2
+40603	Far Future 6-3
+40604	Future World 6-4
+40701	Future World 7-1
+40702	Future World 7-2
+40703	Far Future 7-3
+40704	Future World 7-4
+407041	Rhythm Master
+40801	Far Future 8-1
+40802	Future World 8-2
+40803	Future World 8-3
+40804	Far Future 8-4
+40901	Far Future 9-1
+40902	Far Future 9-2
+40903	Future World 9-3
+40904	Far Future 9-4
+41001	Future World 10-1
+41002	Far Future 10-2
+41003	Future World 10-3
+41004	Far Future 10-4
+41101	Far Future - Day 11-1
+41102	Far Future 11-2
+41103	Future World 11-3
+41104	Future World 11-4
+41201	Future World 12-1
+41202	Future World 12-2
+41203	Future World 12-3
+41204	Far Future 12-4
+41301	Future World 13-1
+41302	Far Future 13-2
+41303	Far Future 13-3
+41304	Far Future 13-4
+41401	Far Future - Day 14-1
+41402	Future World 14-2
+41403	Future World 14-3
+41404	Far Future 14-4
+41501	Future World 15-1
+41502	Future World 15-2
+41503	Far Future 15-3
+41504	Far Future 15-4
+415041	Dr. Zomboss
+50101	Dragon Palace 1-1
+50201	Dragon Palace 2-1
+50202	Dragon Palace 2-2
+50203	Dragon Palace 2-3
+50204	Dragon Palace 2-4
+50301	Dragon Palace 3-1
+50401	Dragon Palace 4-1
+50402	Dragon Palace 4-2
+50403	Dragon Palace 4-3
+50404	Dragon Palace 4-4
+50501	Dragon Palace 5-1
+50601	Dragon Palace 6-1
+50602	Dragon Palace 6-2
+50603	Dragon Palace Relics 6-3
+50604	Dragon Palace Relics 6-4
+50701	Dragon Palace 7-1
+50801	Dragon Palace 8-1
+50802	Dragon Palace 8-2
+50803	Dragon Palace 8-3
+50804	Dragon Palace 8-4
+50901	Dragon Palace 9-1
+51001	Dragon Palace 10-1
+51002	Dragon Palace 10-2
+51003	Dragon Palace 10-3
+51004	Dragon Palace 10-4
+51101	Dragon Palace 11-1
+51201	Dragon Palace 12-1
+51202	Dragon Palace 12-2
+51203	Dragon Palace 12-3
+51204	Dragon Palace 12-4
+51301	Dragon Palace 13-1
+51401	Dragon Palace 14-1
+51402	Dragon Palace 14-2
+51403	Dragon Palace 14-3
+51404	Dragon Palace 14-4
+51501	Dragon Palace 15-1
+51601	Dragon Palace 16-1
+51602	Dragon Palace 16-2
+51603	Dragon Palace 16-3
+51604	Dragon Palace 16-4
+51701	Dragon Palace 17-1
+51801	Dragon Palace 18-1
+51802	Dragon Palace 18-2
+51803	Dragon Palace 18-3
+51804	Dragon Palace 18-4
+51901	Dragon Palace 19-1
+51902	Dragon Palace 19-2
+51903	Dragon Palace 19-3
+51904	Dragon Palace 19-4
+52001	Dragon Palace 20-1
+52002	Dragon Palace 20-2
+52003	Dragon Palace 20-3
+52004	Dragon Palace 20-4
+52101	Dragon Palace 21-1
+52102	Dragon Palace 21-2
+52103	Dragon Palace 21-3
+52104	Dragon Palace 21-4
+52201	Dragon Palace 22-1
+52202	Dragon Palace 22-2
+52203	Dragon Palace 22-3
+52204	Dragon Palace 22-4
+52301	Dragon Palace 23-1
+60101	Return to Egypt 1-1

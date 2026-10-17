@@ -1,82 +1,82 @@
 id	desc
-10	特权活动
-11	热点活动
-12	开服大礼
-13	小投入 大回报
-10001	蓝钻贵族可以尊享以下特权：<br/>1.每日特权礼包<br/>2.蓝钻新手礼包<br/>3.蓝钻尊贵标识<br/>4.蓝钻升级奖励<br/>5.蓝钻年费礼包<br/>6.充值钻石八折
-10002	系统公告
-10003	每日签到
-10004	官网活动
-10005	下载微端领钻石
-10006	充值有礼
-10007	活跃度
-10008	登录有礼
-10009	限时好礼
-10010	每日在线 好礼不断
-10011	登录享受以下特权：<br/>1.新手注册礼包<br/>2.每日活跃礼包<br/>3.每周奢华礼包<br/>4.游戏成长礼包
-10012	黄钻贵族可以尊享以下特权：<br/>1.每日特权礼包<br/>2.黄钻新手礼包<br/>3.黄钻尊贵标识<br/>4.黄钻升级奖励<br/>5.黄钻年费礼包<br/>6.充值钻石八折
-10013	登录享受以下特权：<br/>1.新手注册礼包<br/>2.每日活跃礼包<br/>3.每周奢华礼包<br/>4.游戏成长礼包
-10014	3366礼包
-10015	爱玩礼包
-10017	微端每日福利
-10018	QQ会员礼包
-10019	浏览器礼包
-10020	TGP特权
-10021	电脑管家活动
-10022	QT特权
-10023	夜店之王活动
-10024	女神专场礼包
-10025	心悦特权
-10050	首充送好礼
-10051	超值团购
-10052	七日礼包
-10053	免费植物
-10054	双11植物狂欢礼
-10055	福利活动
-10056	欢迎你回来！
-10057	植物送礼
-10058	限时精彩活动
-10059	双12冬日暖心礼
-10060	开服七天乐
-10061	弹珠达人
-10062	参与有奖
-10063	元宵给力转
-10064	植物摇摇乐
-10065	刮刮乐
-10066	植物争霸赛
-10067	暖春登陆礼
-10068	福利大厅
-10069	来挑战自己吧！
-10070	热爱植物 热爱探险
-10071	精彩活动
-10072	戴夫劳动节
-10073	点亮史上最萌的豌豆图标<br/>免费点亮 永不熄灭
-10074	太空大战
-10075	新手好礼双重奏
-10076	植物龙舟赛
-10077	惊喜不断
-10078	皇陵探宝 限时开启
-10079	消费送好礼
-10080	夏日献礼
-10081	最强集字 畅游龙宫
-10082	超级翻牌
-10083	清凉夏日 植物陪伴
-10084	大风吹 许个愿吧~
-10085	椰子炮之战
-10086	合服狂欢周
-10087	中秋佳节 登录送礼
-10088	最新活动
-10089	大吉大利 新春快乐
-10090	一起砸南瓜
-10091	最强阵容 穿越时空
-10092	全服秒杀
-10093	感恩节快乐！
-10094	戴夫银行 帮你理财
-10095	开服大礼
-10096	一起抢红包
-10098	消费送好礼
-10099	登录有好礼
-10100	潘妮小店 限时营业
-10101	植物嘉年华
-10102	宝罐迷阵 一锤定音
-10103	埃及宝藏
+10	Privilege Events
+11	Hot Events
+12	Launch Celebration Gift
+13	Small Investment, Big Returns
+10001	Blue Diamond VIPs can enjoy the following privileges:<br/>1. Daily Privilege Pack<br/>2. Blue Diamond Novice Pack<br/>3. Blue Diamond VIP Badge<br/>4. Blue Diamond Level-Up Reward<br/>5. Blue Diamond Annual Pack<br/>6. 20% off Diamond Top-ups
+10002	System Announcement
+10003	Daily Check-In
+10004	Official Events
+10005	Download Mini-Client for Diamonds
+10006	Top-up Rewards
+10007	Activity
+10008	Login Rewards
+10009	Limited-Time Gifts
+10010	Daily Online Rewards
+10011	Log in to enjoy the following privileges:<br/>1. Novice Registration Pack<br/>2. Daily Activity Pack<br/>3. Weekly Luxury Pack<br/>4. Game Growth Pack
+10012	Yellow Diamond VIPs can enjoy the following privileges:<br/>1. Daily Privilege Pack<br/>2. Yellow Diamond Novice Pack<br/>3. Yellow Diamond VIP Badge<br/>4. Yellow Diamond Level-Up Reward<br/>5. Yellow Diamond Annual Pack<br/>6. 20% off Diamond Top-ups
+10013	Log in to enjoy the following privileges:<br/>1. Novice Registration Pack<br/>2. Daily Activity Pack<br/>3. Weekly Luxury Pack<br/>4. Game Growth Pack
+10014	3366 Gift Pack
+10015	iPlay Pack
+10017	Mini-Client Daily Benefits
+10018	QQ VIP Pack
+10019	Browser Gift Pack
+10020	TGP Privileges
+10021	Tencent PC Manager Event
+10022	QT Privileges
+10023	King of the Night Club Event
+10024	Goddess Special Gift Pack
+10025	Xinyue Privileges
+10050	First Top-Up Bonus
+10051	Super Value Group Buy
+10052	7-Day Gift Pack
+10053	Free Plants
+10054	11.11 Plant Carnival Gift
+10055	Special Benefits
+10056	Welcome back!
+10057	Plant Gift
+10058	Limited-Time Special Events
+10059	12.12 Winter Warmth Gift
+10060	7-Day Launch Celebration
+10061	Pinball Master
+10062	Participation Rewards
+10063	Lantern Festival Lucky Spin
+10064	Slot Plant
+10065	Scratch Card
+10066	Plant Tournament
+10067	Spring Login Gift
+10068	Benefits Hall
+10069	Come and Challenge Yourself!
+10070	Love Plants, Love Adventure
+10071	Special Events
+10072	Dave's Labor Day
+10073	Light up the cutest Peashooter icon ever<br/>Free to light, never goes out
+10074	Space War
+10075	Double Novice Gifts
+10076	Plant Dragon Boat Race
+10077	Endless Surprises
+10078	Imperial Tomb Treasure Hunt Limited-Time Event
+10079	Spending Rewards
+10080	Summer Special Gift
+10081	Word Collection: Dragon Palace Tour
+10082	Super Card Flip
+10083	Cool Summer, Plants Accompany You
+10084	The wind is blowing, make a wish~
+10085	Battle of the Coconut Cannon
+10086	Server Merge Carnival Week
+10087	Mid-Autumn Festival Login Gifts
+10088	Latest Events
+10089	Wishing You Good Fortune and a Happy Spring Festival
+10090	Pumpkin Smash
+10091	Ultimate Lineup: Time Travel
+10092	Server-Wide Flash Sale
+10093	Happy Thanksgiving!
+10094	Dave's Bank: Financial Helper
+10095	Launch Celebration Gift
+10096	Red Envelope Grab
+10098	Spending Rewards
+10099	Login for Rewards
+10100	Penny's Bargain Shop - Open for a Limited Time
+10101	Plant Carnival
+10102	Vasebreaker Final Decision
+10103	Egyptian Treasure

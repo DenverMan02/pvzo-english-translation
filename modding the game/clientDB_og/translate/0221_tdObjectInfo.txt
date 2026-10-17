@@ -1,138 +1,138 @@
 id	name
-100	阳光
-200	植物生产阳光
-300	豌豆子弹爆炸1
-600	冰西瓜爆炸
-700	西瓜子弹爆炸2
-800	西瓜子弹爆炸3
-900	僵尸灰烬效果
-1000	土豆爆炸特效
-1100	樱桃爆炸特效
-1200	关卡结束钱包
-1300	火竹子弹击中
-1400	埃及除草机
-1500	溅土动画1
-1600	溅土动画2
-1700	溅土动画3
-1800	僵尸头掉落
-1900	僵尸手掉落
-2000	僵尸物件掉落
-2100	竹炮发射效果
-2200	地鼠
-2300	戴夫
-2400	气球僵尸爆炸
-2500	僵尸博士
-2600	银币
-2700	金币
-2800	僵死物件被吸走
-2900	僵尸变身路标
-3000	回旋镖击中特效
-3100	火炬僵尸点燃植物特效
-3200	墓碑
-3300	丢出的骨头
-3400	墓碑土基特效
-3500	墓碑破粹特效
-3600	植物燃料
-3700	植物大招特效
-3800	闪电击中效果
-3900	土地召唤物件
-4000	旋风吹带物件
-4100	弹出僵尸物件
-4200	节奏大师传送带
-4300	节奏大师打击器
-4400	传送带滑动僵尸效果
-4500	普通关除草机
-4600	节奏大师传送带
-4700	戴夫的小花
-4800	戴夫的霉菌地
-4910	滚动草皮1背景
-4920	滚动草皮2背景
-4930	滚动草皮3背景
-4940	滚动草皮4背景
-4950	滚动草皮5背景
-4960	引导关背景
-4970	草皮滚动动画
-5000	翻牌动画
-5100	火箭火焰动画
-5200	竹小龙击中僵尸效果
-5300	第一关boss技能地面提示
-5400	魔藤大招击中效果
-5500	植物生产阳光
-5600	胡萝卜火箭爆炸特效
-5700	射箭靶子效果
-5800	胡萝卜火箭大招子弹爆炸特效
-5900	掉落卡牌
-6000	秦始皇陵除草机
-4210	流沙
-1001	土豆大招子弹
-6100	宝石迷阵植物坑
-6200	宝石消失特效
-6300	戴夫的安全地块
-6400	桅杆下倒
-6410	桅杆上倒
-6500	桅杆阻挡空气墙
-6600	火龙草喷火
-6700	火龙草大招喷火
-6800	火龙草地面火焰
-6900	海盗关除草机
-7000	海盗关水花
-7010	海盗关浪花1
-7020	海盗关浪花2
-7100	射击小游戏打击器
-7200	海鸥
-7300	滚桶
-7400	地刺大招刺
-7500	地刺王大招刺
-7600	椰子加农炮子弹爆炸
-7700	扔出的火把
-7800	地面火焰
-7900	椰子炮控制器
-8000	辣椒火焰
-8100	长流沙
-8200	冰西瓜爆炸
-8300	冰西瓜大招爆炸
-8400	传送门传送僵尸效果
-8500	电磁盾僵尸护盾
-8600	能量块1
-8700	能量块2
-8800	能量块3
-8900	能量块4
-9000	能量块5
-9100	充能柚子普通子弹爆炸
-9200	充能柚子大招子弹爆炸
-9300	脉冲黄桃爆炸效果
-9400	未来关除草机
-9500	脉冲黄桃击中特效
-9600	太阳炸弹
-9700	太阳炸弹轨道
-9800	雪人掉落钥匙
-9900	飞行毒液
-10000	灵芝子弹爆炸
-10100	灵芝除毒效果
-10200	芭蕉子弹爆炸
-10300	机甲巨人僵尸激光轨迹
-10400	机甲巨人僵尸激光爆炸
-10500	全息坚果墙
-10600	棱镜草普通子弹爆炸
-10700	棱镜草大招子弹爆炸
-10800	棱镜草大招连接线
-10900	棱镜草大招打击线
-11000	未来破译者导弹落地爆炸
-11100	未来破译者导弹
-11200	未来破译者导弹靶心
-11300	水泡拖尾效果
-11400	普通泡泡爆炸效果
-11500	电泡泡爆炸效果
-11600	蚌仙弹开子弹效果
-11700	海夜叉龙卷风
-11800	氧气藻供养范围效果
-11900	氧气藻供养效果
-12000	东海龙宫除草机
-12100	电海松普通子弹爆炸
-12200	电海松大招子弹爆炸
-12300	冰豌豆子弹爆炸
-12400	假小推车
-12500	冰豌豆冰冻路径效果
-12600	西瓜大招爆炸
-12700	刺头花普通子弹爆炸
-12800	刺头花大招子弹爆炸
+100	Sun
+200	Plant produces sun
+300	Pea projectile explosion 1
+600	Winter Melon explosion
+700	Melon Projectile Explosion 2
+800	Melon Projectile Explosion 3
+900	Zombie ash effect
+1000	Potato explosion effect
+1100	Cherry Bomb explosion effect
+1200	Level complete wallet
+1300	Fire Bamboo projectile hit
+1400	Ancient Egypt Lawn Mower
+1500	Dirt Splash Animation 1
+1600	Dirt splash animation 2
+1700	Dirt splash animation 3
+1800	Zombie Head Drop
+1900	Zombie Arm Drop
+2000	Zombie loot drop
+2100	Bamboo Shoot launch effect
+2200	Whack-a-Zombie
+2300	Dave
+2400	Balloon Zombie explosion
+2500	Dr. Zomboss
+2600	Silver Coin
+2700	Coin
+2800	Zombie object being sucked away
+2900	Zombie Conehead Transformation
+3000	Boomerang hit effect
+3100	Torchlight Zombie plant ignition effect
+3200	Tombstone
+3300	Thrown bone
+3400	Gravestone Dirt Base Effect
+3500	Tombstone destruction effect
+3600	Plant Fuel
+3700	Plant Food effect
+3800	Lightning strike effect
+3900	Summoned land object
+4000	Whirlwind blowing objects
+4100	Popup zombie item
+4200	Beat Generation Conveyor Belt
+4300	Rhythm Master striker
+4400	Conveyor Belt Zombie Slide Effect
+4500	Standard Stage Lawn Mower
+4600	Beat Generation Conveyor Belt
+4700	Dave's little flower
+4800	Dave's Mold Colony
+4910	Rolling turf background 1
+4920	Scrolling turf 2 background
+4930	Rolling turf 3 background
+4940	Rolling turf background 4
+4950	Rolling turf 5 background
+4960	Tutorial level background
+4970	Turf rolling animation
+5000	Card flip animation
+5100	Rocket fire animation
+5200	Dragon Fruit hit zombie effect
+5300	Stage 1 Boss Skill Ground Indicator
+5400	Dusk Lobber Ultimate Hit Effect
+5500	Plant produces sun
+5600	Carrot Rocket explosion effect
+5700	Archery target effect
+5800	Carrot Missile Launcher Plant Food explosion effect
+5900	Dropped Seed Packet
+6000	First Emperor's Mausoleum Lawn Mower
+4210	Quicksand
+1001	Potato Mine Plant Food projectile
+6100	Bejeweled plant crater
+6200	Gem Disappear Effect
+6300	Dave's safe tile
+6400	Mast falling down
+6410	Mast falling over
+6500	Mast blocking invisible wall
+6600	Snapdragon fire breath
+6700	Snapdragon Plant Food fire breath
+6800	Snapdragon ground flame
+6900	Pirate Seas Lawn Mower
+7000	Pirate Seas splash
+7010	Pirate Seas wave 1
+7020	Pirate Seas Wave 2
+7100	Shooting minigame striker
+7200	Seagull
+7300	Rolling barrel
+7400	Spikeweed Ultimate Spike
+7500	Spikerock Plant Food spike
+7600	Coconut Cannon projectile explosion
+7700	Thrown torch
+7800	Ground fire
+7900	Coconut Cannon controller
+8000	Jalapeno flame
+8100	Quicksand
+8200	Winter Melon explosion
+8300	Winter Melon Plant Food explosion
+8400	Portal Zombie Teleport Effect
+8500	Shield Zombie Shield
+8600	Power Tile 1
+8700	Power tile 2
+8800	Power tile 3
+8900	Power Tile 4
+9000	Power Tile 5
+9100	Citron normal projectile explosion
+9200	Citron Plant Food projectile explosion
+9300	Impear explosion effect
+9400	Future Stage Lawn Mower
+9500	Impear Hit Effect
+9600	Sun bomb
+9700	Sun bomb trajectory
+9800	Yeti dropping key
+9900	Flying venom
+10000	Lingzhi bullet explosion
+10100	Gloom-shroom Detox Effect
+10200	Plantain bullet explosion
+10300	Mecha Gargantuar laser trajectory
+10400	Mecha-Gargantuar Laser Explosion
+10500	Hologram Wall-nut
+10600	Prism Grass standard projectile explosion
+10700	Prismatae Plant Ultimate Bullet Explosion
+10800	Prism Grass Plant Food beam connection
+10900	Prism Grass Plant Food strike line
+11000	Future Decorer missile impact explosion
+11100	Future Decorer missile
+11200	Future Decorer missile bullseye
+11300	Bubble Trail Effect
+11400	Normal bubble explosion effect
+11500	Electric bubble explosion effect
+11600	Clam Fairy bullet deflection effect
+11700	Sea Yaksha tornado
+11800	Oxygen Algae Supply Radius Effect
+11900	Oxygen Algae supply effect
+12000	East China Sea Dragon Palace Lawn Mower
+12100	Electric Pinecone standard projectile explosion
+12200	Electric Sea-conch Plant Food bullet explosion
+12300	Snow Pea projectile explosion
+12400	Fake pushcart
+12500	Snow Pea frozen path effect
+12600	Melon-pult Ultimate Explosion
+12700	Stallia Normal Projectile Explosion
+12800	Spikeweed Plant Food projectile explosion

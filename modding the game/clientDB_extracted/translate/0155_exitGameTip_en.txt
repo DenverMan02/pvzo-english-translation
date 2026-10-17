@@ -1,0 +1,14 @@
+id	evtName	desc
+1	Daily Check-In	Check in daily to get rewards
+2	Send Stamina to Friends	Send Stamina to Friends
+3	Friendly Duel	Friendly Duel
+4	Time Travel	Participate in Time Travel to get Time Coins
+5	Catch Thief	Participate in Catch the Thief to get a large amount of coins
+6	Protect the Farm	Participate in Protect the Farm to get a large amount of Exp Beans
+7	Alliance Garden Fertilization	Alliance Garden Fertilization
+8	Arena	Challenge the Arena to rank up
+9	World Boss	Attack the World Boss to get Legendary Chests
+10	Harvest Coins from Marigold Bank	Harvest a large amount of coins from the Treasury
+11	Zombie Island	Brave the Zombie Island to get a large amount of Exp Beans
+12	Search for treasure in Raiders of the Lost Ark	Treasure Hunt Search
+13	Hunt for treasure in Raiders of the Lost Ark	Treasure Hunt Raid

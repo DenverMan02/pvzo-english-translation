@@ -6,8 +6,8 @@
   },
   "source": {
     "name": "clientDB_og.txt",
-    "size": 3757222,
-    "sha256": "4422d938e5e8e157a68f6011c682caaa3fd1533cf176bfbcf008a5299d896c7c"
+    "size": 3758317,
+    "sha256": "71d2eeb06465d1188d949d7b0355e6a3cad80e1c2e8097bf9477a84284b71bd1"
   },
   "chunk_limit_bytes": 900000,
   "entry_count": 235,
@@ -745,7 +745,7 @@
       "index": 46,
       "name": "Lab.txt",
       "name_hex": "4c61622e747874",
-      "original_length": 300829,
+      "original_length": 301849,
       "text": true,
       "tsv": true,
       "translation_columns": [
@@ -3081,7 +3081,7 @@
       "index": 195,
       "name": "plantTalentInfo.txt",
       "name_hex": "706c616e7454616c656e74496e666f2e747874",
-      "original_length": 16213,
+      "original_length": 16215,
       "text": true,
       "tsv": true,
       "translation_columns": [
@@ -3494,7 +3494,7 @@
       "index": 221,
       "name": "tdObjectInfo.txt",
       "name_hex": "74644f626a656374496e666f2e747874",
-      "original_length": 13836,
+      "original_length": 13828,
       "text": true,
       "tsv": true,
       "translation_columns": [
@@ -3525,7 +3525,7 @@
       "index": 223,
       "name": "tdPlantTypeInfo.txt",
       "name_hex": "7464506c616e7454797065496e666f2e747874",
-      "original_length": 26645,
+      "original_length": 26726,
       "text": true,
       "tsv": true,
       "translation_columns": [

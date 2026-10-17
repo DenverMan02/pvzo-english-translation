@@ -1,0 +1,8 @@
+id	name	desc
+1	Plant Battle	Alliances can fight for the Circus at Level 4 and the Playground at Level 5. Once occupied, all alliance members can claim rewards.
+2	Alliance Championship	Held weekly with generous rewards, becoming the champion of the Alliance Tournament is the goal of every alliance.
+3	Alliance Raid	Initiated by the Alliance Leader or Co-Leader. Defeat zombies for rewards, and clear chapters to earn ranking rewards.
+4	Alliance Support	Alliance members can support each other's towns and fend off zombies together.
+5	Mine Bonus	Alliance members mining the same mine will receive a bonus (+5% coin production per additional member).
+6	Alliance Skills	Join an alliance to activate and upgrade alliance skills. They become inactive upon leaving the alliance.
+7	Alliance Garden	Alliance members can fertilize in the Alliance Garden every day to increase Alliance EXP and earn personal contribution and stamina.

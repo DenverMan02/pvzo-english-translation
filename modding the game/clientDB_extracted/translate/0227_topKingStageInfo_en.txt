@@ -1,0 +1,10 @@
+id	desc	name	finalScore
+100	Peak Championship participant list is set! The top {0} players from this server's Arena have qualified!	Peak Championship Begins	Eliminated in Top 256
+200	Top 128 Qualifiers in Progress!	Top 128 Qualifiers	Eliminated in Top 128
+300	Top 64 Qualifiers in Progress!	Top 64 Qualifiers	Eliminated in Top 64
+400	Top 32 Qualifiers in Progress!	Top 32 Qualifiers	Eliminated in Top 32
+500	Top 16 Qualifiers in Progress!	Top 16 Qualifiers	Eliminated in Top 16
+600	Top 8 Qualifiers in Progress!	Top 8 Qualifiers	Eliminated in Top 8
+700	Semifinals in Progress!	Semifinals	Eliminated in Top 4
+800	Finals in Progress!	Finals	Eliminated in Runner-up
+900	Championship Battle in Progress!	Peak Championship	Apex King

@@ -1,6 +1,6 @@
 id	openDesc	errorTip
-1	拥有1个5星植物	尚未拥有5星植物
-2	通关一年级<br>拥有1个觉醒1级植物	需要拥有1个或以上的觉醒1级植物
-3	通关二年级<br>拥有2个觉醒2级植物	需要拥有2个或以上的觉醒2级植物
-4	通关三年级<br>拥有2个觉醒3级植物	需要拥有2个或以上的觉醒3级植物
-5	通关四年级<br>拥有2个觉醒4级植物	需要拥有2个或以上的觉醒4级植物
+1	Own 1 5-star plant	Do not yet own a 5-star plant
+2	Complete Grade 1<br>Own 1 Level 1 Awakened plant	Requires 1 or more Level 1 Awakened plants
+3	Complete Grade 2<br>Own 2 Level 2 Awakened plants	Requires 2 or more Level 2 Awakened plants
+4	Complete Grade 3<br>Own 2 Level 3 Awakened plants	Requires 2 or more Level 3 Awakened plants
+5	Complete Grade 4<br>Own 2 Level 4 Awakened plants	Requires 2 or more Level 4 Awakened plants

@@ -1,0 +1,13 @@
+id	name	desc
+1	Attack Bonus	Attack stats receive a bonus (up to +74666), increases plant Might.
+2	Defense Bonus	Defense stats receive a bonus (up to +37083), increases plant Might.
+3	Health Bonus	Health stats receive a bonus (up to +222499), increases plant Might.
+5	Energy Bonus	Energy stats receive a bonus (up to +37083), increases plant Might.
+6	Hit Bonus	Hit stats receive a bonus (up to +9166), increases plant Might.
+7	Dodge Bonus	Dodge stats receive a bonus (up to +9166), increases plant Might.
+8	Critical Bonus	Critical stats receive a bonus (up to +9166), increases plant Might.
+9	Toughness Bonus	Toughness stats receive a bonus (up to +9166), increases plant Might.
+17	Basic Attack Damage Bonus	Increases plant basic attack damage in battle (up to +179816), does not increase Might.
+18	Basic Attack Damage Reduction Bonus	Increases plant basic attack damage reduction in battle (up to +179816), does not increase Might.
+19	Skill Damage Bonus	Increases plant skill damage in battle (up to +311366), does not increase Might.
+20	Skill Damage Reduction Bonus	Increases plant skill damage reduction in battle (up to +311366), does not increase Might.

@@ -1,15 +1,15 @@
 id	desc
-1	向日葵，每20秒产出12点基础经验
-2	向日葵，每20秒产出12点基础经验
-3	向日葵，每20秒产出12点基础经验
-4	向日葵，每20秒产出12点基础经验
-5	向日葵，每20秒产出12点基础经验
-6	向日葵，每20秒产出12点基础经验
-7	向日葵，每20秒产出12点基础经验
-8	神奇的坚果，成熟后可收获100点土壤，并随机获得钻石或土壤
-9	双头向日葵，成熟后可收获10点土壤
-10	玉米，成熟后可收获20点土壤
-11	双发豌豆，成熟后可收获30点土壤
-12	胡萝卜，成熟后可收获100000金币
-13	蒲公英，成熟后可收获200000金币
-14	竹小龙，成熟后可收获10个合金元素
+1	Sunflower, produces 12 base EXP every 20 seconds.
+2	Sunflower, produces 12 base EXP every 20 seconds.
+3	Sunflower, produces 12 base EXP every 20 seconds.
+4	Sunflower, produces 12 base EXP every 20 seconds.
+5	Sunflower, produces 12 base EXP every 20 seconds.
+6	Sunflower, produces 12 base EXP every 20 seconds.
+7	Sunflower, produces 12 base EXP every 20 seconds.
+8	Wall-nut, yields 100 soil and a random chance of diamonds or soil upon harvest.
+9	Twin Sunflower, yields 10 soil upon harvest.
+10	Kernel-pult, yields 20 soil upon harvest.
+11	Repeater, yields 30 soil upon harvest.
+12	Carrocket, yields 100,000 coins upon harvest.
+13	Explodelion, yields 200,000 coins upon harvest.
+14	Bruce Bamboo, yields 10 alloy elements upon harvest.

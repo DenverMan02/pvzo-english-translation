@@ -1,9 +1,9 @@
 id	skillName	skillTip
-1	生命	增加上阵植物的生命和先攻
-2	攻击	增加上阵植物的攻击和先攻
-3	防御	增加上阵植物的防御和先攻
-4	闪避	增加上阵植物的闪避和先攻
-5	命中	增加上阵植物的命中和先攻
-6	韧性	增加上阵植物的韧性和先攻
-7	暴击	增加上阵植物的暴击和先攻
-8	技力	增加上阵植物的技力和先攻
+1	Health	Increases deployed plants' health and initiative.
+2	Attack	Increases deployed plants' attack and initiative.
+3	Defense	Increases deployed plants' defense and initiative.
+4	Dodge	Increases deployed plants' dodge and initiative.
+5	Hit	Increases deployed plants' hit rate and initiative.
+6	Toughness	Increases deployed plants' toughness and initiative.
+7	Critical	Increases deployed plants' critical strike and initiative.
+8	Energy	Increases deployed plants' skill power and initiative.

@@ -1,33 +1,33 @@
 id	name	desc
-1	尸身人像	
-2	恐怖金塔	
-3	尼罗之战	
-4	埃及市场	
-5	皇陵之侧	
-6	皇陵再临	
-7	长城之战	
-8	棋盘迷局	
-9	嘉班海岸	
-10	金银宝岛	
-11	藏宝洞穴	
-12	海上争雄	
-13	科技学院	
-14	摩登庄园	
-15	机甲工厂	
-16	太空大战	
-17	浅滩遭遇	
-18	海底探险	
-19	东海龙宫	
-20	大闹宝殿	
-21	人像再现	
-22	梦回金塔	
-23	二渡尼罗	
-24	再战埃及	
-25	冰川寻踪	
-26	雪山上行	
-27	云关踏雪	
-28	雪峰塔影	
-29	灼热遗迹	
-30	熔岩墓碑	
-31	火海魅影	
-32	灰烬之路	
+1	Egypt	
+2	Pyramid of Doom	
+3	Nile Battle	
+4	Egypt Market	
+5	Imperial Tomb	
+6	Return of the Imperial Tomb	
+7	Battle of the Great Wall	
+8	Checkerboard Labyrinth	
+9	Cabana Coast	
+10	Treasure Isle of Gold and Silver	
+11	Treasure Cave	
+12	Clash on the Sea	
+13	Institute of Technology	
+14	Modern Day	
+15	Mecha Factory	
+16	Space War	
+17	Shallows Encounter	
+18	Deep Sea Adventure	
+19	Dragon Palace of the East Sea	
+20	Ruckus in the Treasure Hall	
+21	Portrait Professional	
+22	Dream Return to the Golden Pagoda	
+23	Crossing the Nile Again	
+24	Return to Egypt	
+25	Glacial Traces	
+26	Ascent of the Snowy Mountain	
+27	Treading Snow at the Cloud Pass	
+28	Shadows of the Snowy Pagoda	
+29	Scorching Ruins	
+30	Lava Tombstone	
+31	Phantoms of the Sea of Fire	
+32	Path of Ashes	

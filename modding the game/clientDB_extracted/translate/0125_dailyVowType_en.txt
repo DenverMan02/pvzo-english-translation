@@ -1,0 +1,7 @@
+id	showName
+1	Puzzle Points
+2	Energy Orb
+3	Experience Bean
+4	Advanced Refinement
+5	Equipment Fragment
+6	Coin

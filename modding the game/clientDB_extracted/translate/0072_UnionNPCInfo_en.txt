@@ -1,0 +1,7 @@
+id	name	words
+2	Garden Keeper	Someone come fertilize~;What's for dinner tonight?;I love sunshine;Have you ever planted a Sunflower?;I never lie.
+3	Reward Keeper	The guy next to me has such a huge face - -;I've decided to go on a diet!;Quick! Unleash the Squash!;Come claim your rewards from me!;Today is a good day.
+4	Shopkeeper	Got any Alliance Badges?;I've got good stuff right here~;Great quality at fair prices, no one gets cheated~;Remember to come to me for gear exchange;Rare axes, on sale cheap!
+5	Treasure Keeper	Someone come fertilize~;What's for dinner tonight?;I love sunshine;Have you ever planted a Sunflower?;I never lie.
+6	Alliance Raid	Any new Alliance events?;I heard there's treasure in the Alliance instances.;Higher-level instances yield better drops!;Ally together to seize the Alliance treasure!;Rank rewards are distributed upon clearing an entire chapter.
+7	Skill Master	Are Alliance skills awesome or what?;Come contribute some Alliance EXP!;Daily Alliance fertilization grants personal contribution;Donating coins grants personal contribution;If I don't level up every day, I feel restless.

@@ -1,19 +1,19 @@
 id	desc
-10	排兵布阵 击退僵尸
-11	联盟活动
-1001	世界BOSS
-1002	时光之旅
-1003	寻宝大作战
-1004	无尽塔防
-1005	植物大乱斗
-1007	联盟副本
-1008	每周竞争冠军联盟！
-1009	每日优惠
-1010	植物测验
-1011	塔防挑战
-1012	每日答题 一站到底
-1015	暴走雪人
-1017	谁将成为跨服王者！
-1018	边境争夺战
-1019	无尽炼狱
-1020	跨服竞技场
+10	Deploy Plants and Repel Zombies
+11	Alliance Event
+1001	World Boss
+1002	Time Travel
+1003	Treasure Hunt
+1004	Endless Tower Defense
+1005	Plant Rumble
+1007	Alliance Raid
+1008	Compete weekly for the Champion Alliance!
+1009	Daily Special
+1010	Plant Quiz
+1011	Tower Defense Challenge
+1012	Daily Trivia Showdown
+1015	Yeti Rampage
+1017	Who will become the Cross-Server King!
+1018	Frontier Border War
+1019	Endless Purgatory
+1020	Cross-Server Arena

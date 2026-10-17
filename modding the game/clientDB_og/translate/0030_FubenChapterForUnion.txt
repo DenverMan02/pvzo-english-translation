@@ -1,29 +1,29 @@
 id	chapterTip
-5	客户端tips显示在副本列表章节图标
-6	客户端tips显示在副本列表章节图标
-7	客户端tips显示在副本列表章节图标
-8	客户端tips显示在副本列表章节图标
-9	客户端tips显示在副本列表章节图标
-10	客户端tips显示在副本列表章节图标
-11	客户端tips显示在副本列表章节图标
-12	客户端tips显示在副本列表章节图标
-13	客户端tips显示在副本列表章节图标
-14	客户端tips显示在副本列表章节图标
-15	客户端tips显示在副本列表章节图标
-16	客户端tips显示在副本列表章节图标
-17	客户端tips显示在副本列表章节图标
-18	客户端tips显示在副本列表章节图标
-19	客户端tips显示在副本列表章节图标
-20	客户端tips显示在副本列表章节图标
-21	客户端tips显示在副本列表章节图标
-22	客户端tips显示在副本列表章节图标
-23	客户端tips显示在副本列表章节图标
-24	客户端tips显示在副本列表章节图标
-25	客户端tips显示在副本列表章节图标
-26	客户端tips显示在副本列表章节图标
-27	客户端tips显示在副本列表章节图标
-28	客户端tips显示在副本列表章节图标
-29	客户端tips显示在副本列表章节图标
-30	客户端tips显示在副本列表章节图标
-31	客户端tips显示在副本列表章节图标
-32	客户端tips显示在副本列表章节图标
+5	Client-side tips displayed on stage list chapter icons
+6	Client-side tips displayed on stage list chapter icons
+7	Client-side tips displayed on stage list chapter icons
+8	Client-side tips displayed on stage list chapter icons
+9	Client-side tips displayed on stage list chapter icons
+10	Client-side tips displayed on stage list chapter icons
+11	Client-side tips displayed on stage list chapter icons
+12	Client-side tips displayed on stage list chapter icons
+13	Client-side tips displayed on stage list chapter icons
+14	Client-side tips displayed on stage list chapter icons
+15	Client-side tips displayed on stage list chapter icons
+16	Client-side tips displayed on stage list chapter icons
+17	Client-side tips displayed on stage list chapter icons
+18	Client-side tips displayed on stage list chapter icons
+19	Client-side tips displayed on stage list chapter icons
+20	Client-side tips displayed on stage list chapter icons
+21	Client-side tips displayed on stage list chapter icons
+22	Client-side tips displayed on stage list chapter icons
+23	Client-side tips displayed on stage list chapter icons
+24	Client-side tips displayed on stage list chapter icons
+25	Client-side tips displayed on stage list chapter icons
+26	Client-side tips displayed on stage list chapter icons
+27	Client-side tips displayed on stage list chapter icons
+28	Client-side tips displayed on stage list chapter icons
+29	Client-side tips displayed on stage list chapter icons
+30	Client-side tips displayed on stage list chapter icons
+31	Client-side tips displayed on stage list chapter icons
+32	Client-side tips displayed on stage list chapter icons

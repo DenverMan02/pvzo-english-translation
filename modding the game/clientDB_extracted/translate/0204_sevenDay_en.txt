@@ -1,0 +1,8 @@
+id	dec	dayDec	dayCardDec	cardTip
+1	Log in to the game<font color="#FFFFFF"></font> on the first day to claim rewards:	Day 1	Magnifying Grass (2-Star)	Complete the 7-Day Gift to get 150 Magnifying Grass Shards to promote<font color="#FF0000">Magnifying Grass (2-Star) to 3-Star</a></font>.
+2	Check in<font color="#FFFFFF">1</font> time to claim rewards:	Day 2	Energy Potion	
+3	Purchase stamina<font color="#FFFFFF">1</font> time to claim rewards:	Day 3	Crucifix	
+4	Send stamina to friends<font color="#FFFFFF">3</font> times to claim rewards:	Day 4	2-Star Chlorophyll	Use 2-Star Chlorophyll in Your House<font color="#FF0000">to enhance Magnifying Grass (2-Star)</a></font>, 100% success rate!
+5	Complete Adventure Mode (Normal)<font color="#FFFFFF">3</font> times to claim rewards:	Day 5	Costume Crystal	
+6	Complete Adventure Mode (Elite)<font color="#FFFFFF">3</font> times to claim rewards:	Day 6	Advanced Relocation Token	
+7	Apply fertilizer in the Alliance Garden<font color="#FFFFFF">1</font> time to claim rewards:	Day 7	Magnifying Grass (3-Star)	Use Magnifying Grass (2-Star) and Magnifying Grass Shards in Your House<font color="#FF0000">to upgrade the star rating</a></font> to get Magnifying Grass (3-Star).

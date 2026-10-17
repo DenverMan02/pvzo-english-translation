@@ -1,151 +1,151 @@
 id	rewardTip
-1001	金币<br>1级星魂
-1002	金币<br>1级星魂
-1003	金币<br>1级星魂
-1004	金币<br>1级星魂
-1005	金币<br>1级星魂
-1006	金币<br>1级星魂
-1007	金币<br>1级星魂
-1008	金币<br>1级星魂
-1009	金币<br>1级星魂
-1010	金币<br>1级星魂
-1011	金币<br>1级星魂
-1012	金币<br>1级星魂
-1013	金币<br>1级星魂
-1014	金币<br>1级星魂
-1015	金币<br>1级星魂
-1016	金币<br>1级星魂
-1017	金币<br>1级星魂
-1018	金币<br>1级星魂
-1019	金币<br>1级星魂
-1020	金币<br>1级星魂
-1021	金币<br>1级星魂
-1022	金币<br>1级星魂
-1023	金币<br>1级星魂
-1024	金币<br>1级星魂
-1025	金币<br>1级星魂
-1026	金币<br>1级星魂
-1027	金币<br>1级星魂
-1028	金币<br>1级星魂
-1029	金币<br>1级星魂
-1030	金币<br>1级星魂
-2001	金币<br>2级星魂
-2002	金币<br>2级星魂
-2003	金币<br>2级星魂
-2004	金币<br>2级星魂
-2005	金币<br>2级星魂
-2006	金币<br>2级星魂
-2007	金币<br>2级星魂
-2008	金币<br>2级星魂
-2009	金币<br>2级星魂
-2010	金币<br>2级星魂
-2011	金币<br>2级星魂
-2012	金币<br>2级星魂
-2013	金币<br>2级星魂
-2014	金币<br>2级星魂
-2015	金币<br>2级星魂
-2016	金币<br>2级星魂
-2017	金币<br>2级星魂
-2018	金币<br>2级星魂
-2019	金币<br>2级星魂
-2020	金币<br>2级星魂
-2021	金币<br>2级星魂
-2022	金币<br>2级星魂
-2023	金币<br>2级星魂
-2024	金币<br>2级星魂
-2025	金币<br>2级星魂
-2026	金币<br>2级星魂
-2027	金币<br>2级星魂
-2028	金币<br>2级星魂
-2029	金币<br>2级星魂
-2030	金币<br>2级星魂
-3001	金币<br>3级星魂
-3002	金币<br>3级星魂
-3003	金币<br>3级星魂
-3004	金币<br>3级星魂
-3005	金币<br>3级星魂
-3006	金币<br>3级星魂
-3007	金币<br>3级星魂
-3008	金币<br>3级星魂
-3009	金币<br>3级星魂
-3010	金币<br>3级星魂
-3011	金币<br>3级星魂
-3012	金币<br>3级星魂
-3013	金币<br>3级星魂
-3014	金币<br>3级星魂
-3015	金币<br>3级星魂
-3016	金币<br>3级星魂
-3017	金币<br>3级星魂
-3018	金币<br>3级星魂
-3019	金币<br>3级星魂
-3020	金币<br>3级星魂
-3021	金币<br>3级星魂
-3022	金币<br>3级星魂
-3023	金币<br>3级星魂
-3024	金币<br>3级星魂
-3025	金币<br>3级星魂
-3026	金币<br>3级星魂
-3027	金币<br>3级星魂
-3028	金币<br>3级星魂
-3029	金币<br>3级星魂
-3030	金币<br>3级星魂
-4001	金币<br>4级星魂
-4002	金币<br>4级星魂
-4003	金币<br>4级星魂
-4004	金币<br>4级星魂
-4005	金币<br>4级星魂
-4006	金币<br>4级星魂
-4007	金币<br>4级星魂
-4008	金币<br>4级星魂
-4009	金币<br>4级星魂
-4010	金币<br>4级星魂
-4011	金币<br>4级星魂
-4012	金币<br>4级星魂
-4013	金币<br>4级星魂
-4014	金币<br>4级星魂
-4015	金币<br>4级星魂
-4016	金币<br>4级星魂
-4017	金币<br>4级星魂
-4018	金币<br>4级星魂
-4019	金币<br>4级星魂
-4020	金币<br>4级星魂
-4021	金币<br>4级星魂
-4022	金币<br>4级星魂
-4023	金币<br>4级星魂
-4024	金币<br>4级星魂
-4025	金币<br>4级星魂
-4026	金币<br>4级星魂
-4027	金币<br>4级星魂
-4028	金币<br>4级星魂
-4029	金币<br>4级星魂
-4030	金币<br>4级星魂
-5001	金币<br>5级星魂
-5002	金币<br>5级星魂
-5003	金币<br>5级星魂
-5004	金币<br>5级星魂
-5005	金币<br>5级星魂
-5006	金币<br>5级星魂
-5007	金币<br>5级星魂
-5008	金币<br>5级星魂
-5009	金币<br>5级星魂
-5010	金币<br>5级星魂
-5011	金币<br>5级星魂
-5012	金币<br>5级星魂
-5013	金币<br>5级星魂
-5014	金币<br>5级星魂
-5015	金币<br>5级星魂
-5016	金币<br>5级星魂
-5017	金币<br>5级星魂
-5018	金币<br>5级星魂
-5019	金币<br>5级星魂
-5020	金币<br>5级星魂
-5021	金币<br>5级星魂
-5022	金币<br>5级星魂
-5023	金币<br>5级星魂
-5024	金币<br>5级星魂
-5025	金币<br>5级星魂
-5026	金币<br>5级星魂
-5027	金币<br>5级星魂
-5028	金币<br>5级星魂
-5029	金币<br>5级星魂
-5030	金币<br>5级星魂
+1001	Coins<br>Level 1 Star Soul
+1002	Coins<br>Level 1 Star Soul
+1003	Coins<br>Level 1 Star Soul
+1004	Coins<br>Level 1 Star Soul
+1005	Coins<br>Level 1 Star Soul
+1006	Coins<br>Level 1 Star Soul
+1007	Coins<br>Level 1 Star Soul
+1008	Coins<br>Level 1 Star Soul
+1009	Coins<br>Level 1 Star Soul
+1010	Coins<br>Level 1 Star Soul
+1011	Coins<br>Level 1 Star Soul
+1012	Coins<br>Level 1 Star Soul
+1013	Coins<br>Level 1 Star Soul
+1014	Coins<br>Level 1 Star Soul
+1015	Coins<br>Level 1 Star Soul
+1016	Coins<br>Level 1 Star Soul
+1017	Coins<br>Level 1 Star Soul
+1018	Coins<br>Level 1 Star Soul
+1019	Coins<br>Level 1 Star Soul
+1020	Coins<br>Level 1 Star Soul
+1021	Coins<br>Level 1 Star Soul
+1022	Coins<br>Level 1 Star Soul
+1023	Coins<br>Level 1 Star Soul
+1024	Coins<br>Level 1 Star Soul
+1025	Coins<br>Level 1 Star Soul
+1026	Coins<br>Level 1 Star Soul
+1027	Coins<br>Level 1 Star Soul
+1028	Coins<br>Level 1 Star Soul
+1029	Coins<br>Level 1 Star Soul
+1030	Coins<br>Level 1 Star Soul
+2001	Coins<br>Level 2 Star Soul
+2002	Coins<br>Level 2 Star Soul
+2003	Coins<br>Level 2 Star Soul
+2004	Coins<br>Level 2 Star Soul
+2005	Coins<br>Level 2 Star Soul
+2006	Coins<br>Level 2 Star Soul
+2007	Coins<br>Level 2 Star Soul
+2008	Coins<br>Level 2 Star Soul
+2009	Coins<br>Level 2 Star Soul
+2010	Coins<br>Level 2 Star Soul
+2011	Coins<br>Level 2 Star Soul
+2012	Coins<br>Level 2 Star Soul
+2013	Coins<br>Level 2 Star Soul
+2014	Coins<br>Level 2 Star Soul
+2015	Coins<br>Level 2 Star Soul
+2016	Coins<br>Level 2 Star Soul
+2017	Coins<br>Level 2 Star Soul
+2018	Coins<br>Level 2 Star Soul
+2019	Coins<br>Level 2 Star Soul
+2020	Coins<br>Level 2 Star Soul
+2021	Coins<br>Level 2 Star Soul
+2022	Coins<br>Level 2 Star Soul
+2023	Coins<br>Level 2 Star Soul
+2024	Coins<br>Level 2 Star Soul
+2025	Coins<br>Level 2 Star Soul
+2026	Coins<br>Level 2 Star Soul
+2027	Coins<br>Level 2 Star Soul
+2028	Coins<br>Level 2 Star Soul
+2029	Coins<br>Level 2 Star Soul
+2030	Coins<br>Level 2 Star Soul
+3001	Coins<br>Level 3 Star Soul
+3002	Coins<br>Level 3 Star Soul
+3003	Coins<br>Level 3 Star Soul
+3004	Coins<br>Level 3 Star Soul
+3005	Coins<br>Level 3 Star Soul
+3006	Coins<br>Level 3 Star Soul
+3007	Coins<br>Level 3 Star Soul
+3008	Coins<br>Level 3 Star Soul
+3009	Coins<br>Level 3 Star Soul
+3010	Coins<br>Level 3 Star Soul
+3011	Coins<br>Level 3 Star Soul
+3012	Coins<br>Level 3 Star Soul
+3013	Coins<br>Level 3 Star Soul
+3014	Coins<br>Level 3 Star Soul
+3015	Coins<br>Level 3 Star Soul
+3016	Coins<br>Level 3 Star Soul
+3017	Coins<br>Level 3 Star Soul
+3018	Coins<br>Level 3 Star Soul
+3019	Coins<br>Level 3 Star Soul
+3020	Coins<br>Level 3 Star Soul
+3021	Coins<br>Level 3 Star Soul
+3022	Coins<br>Level 3 Star Soul
+3023	Coins<br>Level 3 Star Soul
+3024	Coins<br>Level 3 Star Soul
+3025	Coins<br>Level 3 Star Soul
+3026	Coins<br>Level 3 Star Soul
+3027	Coins<br>Level 3 Star Soul
+3028	Coins<br>Level 3 Star Soul
+3029	Coins<br>Level 3 Star Soul
+3030	Coins<br>Level 3 Star Soul
+4001	Coins<br>Level 4 Star Soul
+4002	Coins<br>Level 4 Star Soul
+4003	Coins<br>Level 4 Star Soul
+4004	Coins<br>Level 4 Star Soul
+4005	Coins<br>Level 4 Star Soul
+4006	Coins<br>Level 4 Star Soul
+4007	Coins<br>Level 4 Star Soul
+4008	Coins<br>Level 4 Star Soul
+4009	Coins<br>Level 4 Star Soul
+4010	Coins<br>Level 4 Star Soul
+4011	Coins<br>Level 4 Star Soul
+4012	Coins<br>Level 4 Star Soul
+4013	Coins<br>Level 4 Star Soul
+4014	Coins<br>Level 4 Star Soul
+4015	Coins<br>Level 4 Star Soul
+4016	Coins<br>Level 4 Star Soul
+4017	Coins<br>Level 4 Star Soul
+4018	Coins<br>Level 4 Star Soul
+4019	Coins<br>Level 4 Star Soul
+4020	Coins<br>Level 4 Star Soul
+4021	Coins<br>Level 4 Star Soul
+4022	Coins<br>Level 4 Star Soul
+4023	Coins<br>Level 4 Star Soul
+4024	Coins<br>Level 4 Star Soul
+4025	Coins<br>Level 4 Star Soul
+4026	Coins<br>Level 4 Star Soul
+4027	Coins<br>Level 4 Star Soul
+4028	Coins<br>Level 4 Star Soul
+4029	Coins<br>Level 4 Star Soul
+4030	Coins<br>Level 4 Star Soul
+5001	Coins<br>Level 5 Star Soul
+5002	Coins<br>Level 5 Star Soul
+5003	Coins<br>Level 5 Star Soul
+5004	Coins<br>Level 5 Star Soul
+5005	Coins<br>Level 5 Star Soul
+5006	Coins<br>Level 5 Star Soul
+5007	Coins<br>Level 5 Star Soul
+5008	Coins<br>Level 5 Star Soul
+5009	Coins<br>Level 5 Star Soul
+5010	Coins<br>Level 5 Star Soul
+5011	Coins<br>Level 5 Star Soul
+5012	Coins<br>Level 5 Star Soul
+5013	Coins<br>Level 5 Star Soul
+5014	Coins<br>Level 5 Star Soul
+5015	Coins<br>Level 5 Star Soul
+5016	Coins<br>Level 5 Star Soul
+5017	Coins<br>Level 5 Star Soul
+5018	Coins<br>Level 5 Star Soul
+5019	Coins<br>Level 5 Star Soul
+5020	Coins<br>Level 5 Star Soul
+5021	Coins<br>Level 5 Star Soul
+5022	Coins<br>Level 5 Star Soul
+5023	Coins<br>Level 5 Star Soul
+5024	Coins<br>Level 5 Star Soul
+5025	Coins<br>Level 5 Star Soul
+5026	Coins<br>Level 5 Star Soul
+5027	Coins<br>Level 5 Star Soul
+5028	Coins<br>Level 5 Star Soul
+5029	Coins<br>Level 5 Star Soul
+5030	Coins<br>Level 5 Star Soul

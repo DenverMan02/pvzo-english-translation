@@ -1,20 +1,20 @@
 id	name	desc
-1	300金钻月卡礼包	另赠100钻石/天，持续25天
-2	1880金钻(限购1次)	另赠1880钻石
-3	20金钻	充值
-4	100金钻	充值
-5	1000金钻	充值
-6	5000金钻	充值
-7	VIP1	购买阳光VIP
-8	VIP2	购买财富VIP
-9	VIP3	购买金壶VIP
-10	1元	免费植物1元礼包
-11	10元	免费植物10元礼包
-12	50元	免费植物50元礼包
-13	团购	超值团购
-14	塔防特权	购买塔防特权
-15	20金钻(限购1次)	额外赠送20钻石
-16	100金钻(限购1次)	额外赠送100钻石
-17	1000金钻(限购1次)	额外赠送1000钻石
-18	300金钻(点卡礼包)	额外赠送100钻石/天，可领取30次
-19	5000金钻(限购1次)	额外赠送5000钻石
+1	300 Gold Diamond Monthly Card	100 diamonds per day, for 25 days
+2	1880 Gold Diamonds (One-Time Purchase)	Also includes 1880 Diamonds
+3	20 Gold Diamonds	Top Up
+4	100 Gold Diamonds	Top Up
+5	1000 Gold Diamonds	Top Up
+6	5000 Gold Diamonds	Top Up
+7	VIP1	Purchase Sunshine VIP
+8	VIP2	Purchase Wealth VIP
+9	VIP3	Purchase Golden Pot VIP
+10	1¥	Plant gift pack for 1¥
+11	10¥	Plant gift pack for 10¥
+12	50¥	Plant gift pack for 50¥
+13	Group Purchase	Great Value Group Purchase
+14	Tower Defense Privileges	Purchase Tower Defense Privileges
+15	20 Gold Diamonds (One-Time Purchase)	Also includes 20 Diamonds
+16	100 Gold Diamonds (One-Time Purchase)	Also includes 100 Diamonds
+17	1000 Gold Diamonds (One-Time Purchase)	Also includes 1000 Diamonds
+18	300 Gold Diamonds (One-Time Purchase)	100 diamonds a day, for 30 days
+19	5000 Gold Diamonds (One-Time Purchase)	Also includes 5000 Diamonds

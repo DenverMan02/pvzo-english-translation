@@ -46,10 +46,10 @@ id	name	resName	frameRate	AIMode	actionList	params	isSort	isBlit	isBlock	hp	beAt
 4700	戴夫的小花	star_objective_flower	30		ObjectAchieveActionIdle		0	0	0	0	0	0	0	0	|||			0	0
 4800	戴夫的霉菌地	star_objective_mold	30		ObjectAchieveActionIdle		0	0	0	0	0	0	0	0	|||			0	0
 4910	滚动草皮1背景	guideGrass1	30				0	0	0	0	0	0	0	0	|||		zhezhao|caopiguntong*|cappiguntong_tong*	0	0
-4920	滚动草皮2背景	guideGrass2	30		GrassScrollActionRun				0	0	0	0	0	0	0	0	|||		zhezhao|caopiguntong*|cappiguntong_tong*	0	0
-4930	滚动草皮3背景	guideGrass3	30		GrassScrollActionRun				0	0	0	0	0	0	0	0	|||		zhezhao|caopiguntong*|cappiguntong_tong*	0	0
-4940	滚动草皮4背景	guideGrass4	30		GrassScrollActionRun				0	0	0	0	0	0	0	0	|||		zhezhao|caopiguntong*|cappiguntong_tong*	0	0
-4950	滚动草皮5背景	guideGrass5	30		GrassScrollActionRun				0	0	0	0	0	0	0	0	|||		zhezhao|caopiguntong*|cappiguntong_tong*	0	0
+4920	滚动草皮2背景	guideGrass2	30		GrassScrollActionRun		0	0	0	0	0	0	0	0	|||		zhezhao|caopiguntong*|cappiguntong_tong*	0	0
+4930	滚动草皮3背景	guideGrass3	30		GrassScrollActionRun		0	0	0	0	0	0	0	0	|||		zhezhao|caopiguntong*|cappiguntong_tong*	0	0
+4940	滚动草皮4背景	guideGrass4	30		GrassScrollActionRun		0	0	0	0	0	0	0	0	|||		zhezhao|caopiguntong*|cappiguntong_tong*	0	0
+4950	滚动草皮5背景	guideGrass5	30		GrassScrollActionRun		0	0	0	0	0	0	0	0	|||		zhezhao|caopiguntong*|cappiguntong_tong*	0	0
 4960	引导关背景	guideGrassItem	30				1	0	0	0	0	0	0	0	|||			0	0
 4970	草皮滚动动画		0		GrassScrollActionRun		0	0	0	0	0	0	0	0	|||			0	0
 5000	翻牌动画	flipCard	24				0	0	0	0	0	0	0	0	|||			0	0

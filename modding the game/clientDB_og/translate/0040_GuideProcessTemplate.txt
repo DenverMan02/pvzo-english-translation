@@ -1,35 +1,35 @@
 id	name
-1	从关卡进入战斗引导
-30	指引玩家打塔防2-1
-2	领取奖励
-3	学习天赋1
-26	学习天赋2
-25	关卡指引1
-4	农场
-27	市场交易
-34	市场交易2
-31	指引玩家打过塔防4-1
-5	解锁支线门
-29	指引玩家打过塔防6-1
-6	解锁主线+开启冒险第一章
-7	发现钥匙
-8	抽卡并布阵
-32	指向冒险
-9	拼图引导
-28	拼图引导2
-10	时装引导
-11	装备
-12	解锁主线2
-13	强化
-14	实验室
-15	联盟
-16	抓小偷
-17	竞技场
-18	地图
-19	僵尸岛
-20	金库+VIP
-21	兑换植物
-22	营养室
-33	营养室2
-23	哨塔
-24	农场好友种植
+1	Stage-to-Battle Tutorial
+30	Guide player to play Tower Defense 2-1
+2	Claim Reward
+3	Learn Talent 1
+26	Learn Talent 2
+25	Stage Tutorial 1
+4	Farm
+27	Market Trade
+34	Market Trade 2
+31	Guide player to beat Tower Defense 4-1
+5	Unlock Side Door
+29	Guide player to beat Tower Defense 6-1
+6	Unlock Main Story + Start Adventure Chapter 1
+7	Discover Key
+8	Draw Cards & Deploy
+32	Point to Adventure
+9	Puzzle Tutorial
+28	Puzzle Tutorial 2
+10	Costume Tutorial
+11	Equipment
+12	Unlock Main Story 2
+13	Upgrade
+14	Laboratory
+15	Alliance
+16	Catch the Thief
+17	Arena
+18	Map
+19	Zombie Island
+20	Vault + VIP
+21	Redeem Plants
+22	Nursery
+33	Nursery 2
+23	Sentry Tower
+24	Farm Friend Planting

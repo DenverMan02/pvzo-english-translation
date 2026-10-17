@@ -1,8 +1,8 @@
 id	name	desc
-2	每日金币	根据塔防进度，获得金币奖励
-3	每日体力（VIP）	V2每日10点，V3每日50点
-4	每日钻石（VIP）	V3每日20钻
-5	升级奖励	升级奖励
-6	城堡特权	根据激活城堡，获得对应奖励
-7	VIP每周礼包	VIP每周礼包
-8	点卡礼包	购买300金钻点卡礼包，每天额外领取100钻石，可领取30次
+2	Daily Coins	Obtain Coin rewards based on Tower Defense progress
+3	Daily Energy (VIP)	VIP 2 Daily 10 points, VIP 3 Daily 50 points
+4	Daily Gems (VIP)	VIP 3 Daily 20 Gems
+5	Level-Up Rewards	Level-Up Rewards
+6	Castle Privileges	Obtain corresponding rewards based on activated castles
+7	VIP Weekly Pack	VIP Weekly Pack
+8	Point Card Pack	Purchase the 300 Gold Diamond Point Card Pack to claim an extra 100 Gems daily, up to 30 times

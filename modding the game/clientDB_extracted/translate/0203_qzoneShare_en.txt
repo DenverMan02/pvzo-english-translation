@@ -1,0 +1,29 @@
+id	title	summary	desc	winTitle	rightDesc
+1001	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Bamboo Shoot. Have you seen it?	Stage	Unlock New Plant
+1005	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Dandelion. I've never seen it before!	Stage	Unlock New Plant
+1006	Stage	Unlock New Plant	I got a new plant, Venus Flytrap, in Plants vs. Zombies. Let's see what this can be used for!	Stage	Unlock New Plant
+1007	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, Mr. Winter Melon, looking all proud and snooty~	Stage	Unlock New Plant
+1008	Stage	Cool Mini-Game	This is the first time I've played a tower defense game with such great rhythm. It's awesome!	Stage	Game Share
+1010	Stage	Cool Mini-Game	Test result: my brain memory is S-tier. Come test yours!	Stage	Game Share
+1011	Stage	Cool Mini-Game	Can you tell the real zombies from the fake ones? Dare to test your eyes against mine?	Stage	Game Share
+1012	Stage	Smooth Victory	Just took down the big boss in Plants vs. Zombies Online! Awesome! Come try it yourself!	Stage	Clear Tower Defense
+1013	Stage	Smooth Victory	Just defeated the new map boss, First Emperor of Qin, in Plants vs. Zombies Online! So satisfying! Come try it out too!	Stage	Clear Tower Defense
+1014	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Snapdragon. Do you know what he looks like?	Stage	Unlock New Plant
+1015	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Spikeweed, covered in spikes. What can he do?	Stage	Unlock New Plant
+1016	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Spring Bean. Hahaha, watch out or he'll bounce you away!	Stage	Unlock New Plant
+1017	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Kernel-pult. Right in the face!	Stage	Unlock New Plant
+1018	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Coconut Cannon. Super powerful, you should try it too!	Stage	Unlock New Plant
+1019	Stage	Unlock New Plant	I got a new plant, Daffodil, in Plants vs. Zombies. It looks pretty special.	Stage	Unlock New Plant
+1020	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Durian. It's pretty good, come try it out!	Stage	Unlock New Plant
+1021	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Spikerock! It seems even stronger than Spikeweed. Do you have it?!	Stage	Unlock New Plant
+1022	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Pineapple Pult. Why does it look so cool?!	Stage	Unlock New Plant
+1023	Stage	Unlock New Plant	I unlocked a new plant in Plants vs. Zombies, the Threepeater. Turns out peas can come with three heads!	Stage	Unlock New Plant
+2001		Not in use	What the heck! Zombies actually carry this kind of stuff? Enter if you want to know what it is!		Not in use
+3001	Friendly Duel	Won a friend duel	I am unstoppable in Plants vs. Zombies Online, having defeated {0}. Come challenge me!	Friendly Duel	Won a friend duel
+4001	Talent	Sunflower Talent	To this day, the fact that my Sunflower is so overpowered is entirely the result of my careful nurturing, nobody else's, wahahaha!	Talent	Sunflower Talent
+5001	Get 3-Star Card	First time getting a 3-star card in the Tavern	I got a plant from the stars, and it's even 3-star! Absolutely awesome!	Get 3-Star Card	First time getting a 3-star card in the Tavern
+5002	Obtained a 4-star card	First 4-Star Card from Tavern	I got a rare plant in Plants vs. Zombies, come check it out!	Obtained a 4-star card	First 4-Star Card from Tavern
+5003			My plant has been upgraded in stars, making its combat power even stronger. I dare you to challenge me!		Not in use
+6001	Test Tube	Craft Flask	I was tinkering with a new invention in the lab, and after feeding it to a Sunflower, an unexpected thing happened...	Test Tube	Craft Flask
+7001	Check-in	Daily Check-In	Title: Plants vs. Zombies Online is trending! Content: I found a super fun game called Plants vs. Zombies Online. It's different from the classic Plants vs. Zombies. Lots of friends are playing it, come join us!	Check-in	Daily Check-In
+8001	Endless Challenge	Endless Mode Victory	Come give me a like! I scored {0} points in Endless Survival! Who else can beat that?	Endless Challenge	Endless Mode Victory

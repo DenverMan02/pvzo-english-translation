@@ -1,27 +1,27 @@
 id	desc
-1	加速前进！我们去寻找更有营(zhi)养(shi)的大脑！
-2	加速前进！我们去寻找更有营(zhi)养(shi)的大脑！
-3	加速前进！我们去寻找更有营(zhi)养(shi)的大脑！
-4	加速前进！我们去寻找更有营(zhi)养(shi)的大脑！
-5	加速前进！我们去寻找更有营(zhi)养(shi)的大脑！
-6	加速前进！我们去寻找更有营(zhi)养(shi)的大脑！
-7	加速前进！我们去寻找更有营(zhi)养(shi)的大脑！
-8	加速前进！我们去寻找更有营(zhi)养(shi)的大脑！
-9	加速前进！我们去寻找更有营(zhi)养(shi)的大脑！
-10	加速前进！我们去寻找更有营(zhi)养(shi)的大脑！
-11	加速前进！我们去寻找更有营(zhi)养(shi)的大脑！
-12	嗯~那么，好好读一读百科全书会对你帮助很大
-13	嗯~那么，好好读一读百科全书会对你帮助很大
-14	嗯~那么，好好读一读百科全书会对你帮助很大
-15	嗯~那么，好好读一读百科全书会对你帮助很大
-16	嗯~那么，好好读一读百科全书会对你帮助很大
-17	这个脑子看起来很有营(zhi)养(shi)的样子！
-18	这个脑子看起来很有营(zhi)养(shi)的样子！
-19	这个脑子看起来很有营(zhi)养(shi)的样子！
-20	这个脑子看起来很有营(zhi)养(shi)的样子！
-21	这个脑子看起来很有营(zhi)养(shi)的样子！
-22	嗷呜，这么聪明的脑子一定鲜美可口！
-23	嗷呜，这么聪明的脑子一定鲜美可口！
-24	嗷呜，这么聪明的脑子一定鲜美可口！
-25	嗷呜，这么聪明的脑子一定鲜美可口！
-26	嗷呜，这么聪明的脑子一定鲜美可口！
+1	Onward! Let's find more nutritious (and healthy) brains!
+2	Onward! Let's find more nutritious (and healthy) brains!
+3	Onward! Let's find more nutritious (and healthy) brains!
+4	Onward! Let's find more nutritious (and healthy) brains!
+5	Onward! Let's find more nutritious (and healthy) brains!
+6	Onward! Let's find more nutritious (and healthy) brains!
+7	Onward! Let's find more nutritious (and healthy) brains!
+8	Onward! Let's find more nutritious (and healthy) brains!
+9	Onward! Let's find more nutritious (and healthy) brains!
+10	Onward! Let's find more nutritious (and healthy) brains!
+11	Onward! Let's find more nutritious (and healthy) brains!
+12	Hmm~ Well, reading the Almanac carefully will be of great help to you.
+13	Hmm~ Well, reading the Almanac carefully will be of great help to you.
+14	Hmm~ Well, reading the Almanac carefully will be of great help to you.
+15	Hmm~ Well, reading the Almanac carefully will be of great help to you.
+16	Hmm~ Well, reading the Almanac carefully will be of great help to you.
+17	This brain looks positively nutri-(knowl)icious!
+18	This brain looks positively nutri-(knowl)icious!
+19	This brain looks positively nutri-(knowl)icious!
+20	This brain looks positively nutri-(knowl)icious!
+21	This brain looks positively nutri-(knowl)icious!
+22	Awooo, such a smart brain must be fresh and delicious!
+23	Awooo, such a smart brain must be fresh and delicious!
+24	Awooo, such a smart brain must be fresh and delicious!
+25	Awooo, such a smart brain must be fresh and delicious!
+26	Awooo, such a smart brain must be fresh and delicious!

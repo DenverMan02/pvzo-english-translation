@@ -1,0 +1,24 @@
+id	name	desc
+10	Plant Level Lab	Plant Level Lab
+20	Farm	Farm
+30	Tavern	Tavern
+60	Sentry Tower	Sentry Tower
+70	Intel Phone Booth	Intel Phone Booth
+80	My Home	My Home
+110	Laboratory	Laboratory
+120	Treasury	Treasury
+130	Alliance	Alliance
+140	Arena	Arena
+150	Zombie Farm	Zombie Farm
+160	Zombie Island	Zombie Island
+170	Nursery	Nursery
+190	Leaderboard	Leaderboard
+200	Path of Trials	Path of Trials
+210	Yeti Rampage	Yeti Rampage
+220	Tree House	Tree House
+230	Zen Garden	Zen Garden
+240	Daily Events	Daily Events
+250	Mystery Cards	Mystery Cards
+260	Magic Exchange	Magic Exchange
+270	Secret Treasure Guardian	Secret Treasure Guardian
+280	Apex King	Apex King

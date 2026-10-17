@@ -1,4 +1,4 @@
 id	name
-1	刺头会
-2	蘑菇帮
-3	幽灵党
+1	Troublemakers
+2	Mushroom Gang
+3	Spectre

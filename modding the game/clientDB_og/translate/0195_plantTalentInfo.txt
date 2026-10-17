@@ -1,113 +1,113 @@
 id	name	desc	condName	condDesc
-1101	赢在起点	种植第一棵向日葵的价格减少为25阳光	小镇达到2级	点击跳转到相关功能
-1102	买三送一	每种植3棵向日葵，将立刻掉落25阳光	小镇达到4级	点击跳转到相关功能
-1103	塞翁失马	向日葵损失后会返还25阳光	冒险过恐怖金字塔第5关	点击跳转到相关功能
-1104	超值回馈	产出阳光时有概率产出大号阳光！	拥有1个绿色+1品质植物	点击跳转到相关功能
-1105	同胞兄弟	可以在向日葵上再次放置向日葵，升级成双头向日葵	今日段位竞技场积分到30分	点击跳转到相关功能
-1201	好的开始	种植第一棵单发豌豆的价格减少为50阳光	小镇达到5级	点击跳转到相关功能
-1202	成吨子弹	单发豌豆的首次攻击会吐出大号子弹	2个植物升到15级	点击跳转到相关功能
-1203	好事成双	可以在单发豌豆上再次放置单发豌豆，升级成双发豌豆	4个植物升到25级	点击跳转到相关功能
-1204	以战养战	杀死僵尸时有概率掉落25阳光	小镇达到13级	点击跳转到相关功能
-1301	生命接力	有坚果牺牲时会立刻减少坚果卡牌15秒冷却时间	小镇达到6级	点击跳转到相关功能
-1302	强健体魄	血量增加20%	冒险过尸身人面像第10关	点击跳转到相关功能
-1501	快速武装	土豆地雷放下后的准备时间减少5秒	小镇达到8级	点击跳转到相关功能
-1502	无本经营	炸死僵尸后掉落25阳光	小镇达到12级	点击跳转到相关功能
-2101	强健体魄	血量增加10%	小镇达到14级	点击跳转到相关功能
-2102	精神抖擞	攻击速度增加3%	拥有1个蓝色+1品质植物	点击跳转到相关功能
-2103	粗枝大叶	攻击力增加3%	4个植物升到30级	点击跳转到相关功能
-2104	生龙活虎	种植时有概率发动大招	试炼之路通过第10关	点击跳转到相关功能
-2201	强健体魄	血量增加10%	在静谧林地有3个矿区	点击跳转到相关功能
-2202	精神抖擞	攻击速度增加4%	任一植物强化+3	点击跳转到相关功能
-2203	粗枝大叶	攻击力增加3%	实验室[初级]生命到20级	点击跳转到相关功能
-2204	双发导弹	攻击时有概率连续发射2枚导弹	加入一个联盟	点击跳转到相关功能
-2001	人品爆发	石榴的首次攻击有概率直接打落僵尸的头盔	拥有2个蓝色+2品质植物	点击跳转到相关功能
-2002	减速魔法	被击中的僵尸减速1秒	僵尸岛通过第4关	点击跳转到相关功能
-2003	跳楼降价	种植价格减少为150阳光	拥有1个蓝色钢铁试剂	点击跳转到相关功能
-2301	强健体魄	血量增加10%	冒险过尼罗河之战精英第1关	点击跳转到相关功能
-2302	精神抖擞	攻击速度增加4%	拥有1件蓝色装备	点击跳转到相关功能
-2303	粗枝大叶	攻击力增加3%	实验室[初级]防御到20级	点击跳转到相关功能
-2304	生龙活虎	种植的时候有概率放大招	世界树升到10级	点击跳转到相关功能
-2401	提高防御	血量增加15%	拥有6个花盆	点击跳转到相关功能
-2402	锋利尖牙	咬住僵尸后有一定伤害效果	今日段位竞技场积分到42分	点击跳转到相关功能
-2403	刀锋利齿	伤害效果显著提高	实验室[初级]攻击到20级	点击跳转到相关功能
-2501	快速生长	刷新时间缩短10秒	在战歌平原拥有4个矿区	点击跳转到相关功能
-2502	冬瓜爆炸	消失时发生爆炸，对本排场外单位造成伤害	僵尸岛通过第5关	点击跳转到相关功能
-2601	强健体魄	血量增加10%	4个植物升到40级	点击跳转到相关功能
-2602	春草又生	死亡后有概率重生一次	世界树升到15级	点击跳转到相关功能
-1601	骆驼杀手	对骆驼僵尸造成150%伤害	6个花盆升到2级	点击跳转到相关功能
-1801	左右开弓	白菜战士可以攻击背后的僵尸	实验室[中级]攻击到15级	点击跳转到相关功能
-1802	愤怒打击	血量增加100%	试炼之路通过第13关	点击跳转到相关功能
-1803	敏锐天性	攻击时有概率造成三倍伤害！	天梯竞技场进入前2000名	点击跳转到相关功能
-1901	变废为宝	每吞噬2个墓碑会掉落25阳光	小镇达到20级	点击跳转到相关功能
-1701	范围冰冻	有概率会冰冻住一定范围内的僵尸	7个花盆升到2级	点击跳转到相关功能
-1702	冰火不容	使用冰冻生菜熄灭火炬僵尸的火把后，冷却立刻重置	拥有1个蓝色品质植物	点击跳转到相关功能
-1401	墓碑杀手	对墓碑造成150%的伤害	拥有3个蓝色任意营养试剂	点击跳转到相关功能
-3101	强健体魄	血量增加15%	冒险过嘉班海岸精英第8关	点击跳转到相关功能
-3102	精神抖擞	攻击速度增加10%	小镇达到36级	点击跳转到相关功能
-3103	粗枝大叶	攻击力增加3%	试炼之路通过25关	点击跳转到相关功能
-3104	生龙活虎	种植时有概率发动大招	7个花盆升到3级	点击跳转到相关功能
-3201	强健体魄	血量增加10%	冒险过嘉班海岸精英第15关	点击跳转到相关功能
-3202	精神抖擞	攻击速度增加3%	拥有3个紫色生命试剂	点击跳转到相关功能
-3203	粗枝大叶	攻击力增加4%	世界树升到30级	点击跳转到相关功能
-3204	战功显赫	杀死4个僵尸后变身地刺王	8个植物强化+5	点击跳转到相关功能
-3401	强健体魄	血量增加20%	实验室[中级]生命到20级	点击跳转到相关功能
-3402	超级弹簧	有概率将敌人击飞出屏幕	9个花盆升到3级	点击跳转到相关功能
-3403	生龙活虎	种植时有概率发动大招	冒险过金银岛精英第8关	点击跳转到相关功能
-3501	强健体魄	血量增加20%	僵尸岛通过第8关	点击跳转到相关功能
-3502	精神抖擞	攻击速度增加6%	小镇达到40级	点击跳转到相关功能
-3503	粗枝大叶	攻击力增加5%	试炼之路通过30关	点击跳转到相关功能
-3504	好多黄油	掷出黄油的概率提高12%	拥有2个紫色品质植物	点击跳转到相关功能
-3601	快速上膛	苏醒时间加快1秒	实验室[高级]生命到20级	点击跳转到相关功能
-3602	速射椰炮	苏醒时间加快1.5秒	冒险过金银岛精英第15关	点击跳转到相关功能
-3603	生龙活虎	种植时有概率发动大招	拥有1个四星植物	点击跳转到相关功能
-3701	强健体魄	血量增加20%	今日段位竞技场积分到30分	点击跳转到相关功能
-3702	精神抖擞	攻击速度增加20%	小镇达到45级	点击跳转到相关功能
-3703	粗枝大叶	攻击力增加5%	实验室[高级]生命到30级	点击跳转到相关功能
-3704	一串泡泡	攻击时有概率吐出一串3个水泡	8个花盆升到4级	点击跳转到相关功能
-3801	强健体魄	血量增加5%	冒险过藏宝洞穴精英第8关	点击跳转到相关功能
-3802	精神抖擞	攻击速度增加6%	6个植物升到80级	点击跳转到相关功能
-3803	粗枝大叶	攻击力增加6%	实验室[高级]技力到30级	点击跳转到相关功能
-3804	爆炸幸存	放出大招后不会死亡，只减少一半血量	试炼之路通过35关	点击跳转到相关功能
-3301	强健体魄	种植价格减少为200阳光	冒险过藏宝洞穴精英第15关	点击跳转到相关功能
-3302	精神抖擞	攻击速度增加5%	小镇达到50级	点击跳转到相关功能
-3303	粗枝大叶	攻击力增加5%	世界树升到40级	点击跳转到相关功能
-3304	倒刺尖钩	攻击时有概率定住敌人一段时间	拥有2个6级橙色智慧试剂	点击跳转到相关功能
-3901	强健体魄	种植价格减少为150阳光	冒险过海上争雄精英第8关	点击跳转到相关功能
-3902	精神抖擞	攻击速度增加3%	天梯竞技场进入前1200名	点击跳转到相关功能
-3903	粗枝大叶	攻击力增加3%	小镇达到52级	点击跳转到相关功能
-3904	大号子弹	菠萝的首次攻击会发射攻击力超强的子弹	世界树升到45级	点击跳转到相关功能
-4001	强健体魄	血量增加20%	拥有3件蓝色装备	点击跳转到相关功能
-4002	精神抖擞	种植价格减少为275阳光	冒险过海上争雄精英第15关	点击跳转到相关功能
-4003	粗枝大叶	攻击速度增加3%	试炼之路通过40关	点击跳转到相关功能
-4004	双排子弹	攻击时有概率发射双重子弹	3个植物时装强化到6星	点击跳转到相关功能
-4101	强健体魄	血量增加10%	小镇达到58级	点击跳转到相关功能
-4102	精神抖擞	攻击速度增加4%	实验室[高级]暴击到40级	点击跳转到相关功能
-4103	粗枝大叶	种植价格减少为175阳光	世界树升到50级	点击跳转到相关功能
-4104	速射激光	攻击时有概率进入速射状态，持续2秒	任一植物觉醒到2阶	点击跳转到相关功能
-4201	半价处理	种植价格减少为25阳光	冒险过太空大战精英第8关	点击跳转到相关功能
-4301	强健体魄	种植价格减少为300阳光	10个植物强化+5	点击跳转到相关功能
-4302	精神抖擞	攻击速度增加4%	试炼之路通过45关	点击跳转到相关功能
-4303	超级亢奋	攻击速度变为增加6%	拥有4件紫色装备	点击跳转到相关功能
-4401	早熟水果	刷新时间缩短1秒	拥有4个3级橙色狂暴试剂	点击跳转到相关功能
-4402	催熟水果	刷新时间缩短2.5秒	冒险过摩登庄园精英第15关	点击跳转到相关功能
-4501	高效种植	下次使用价格减少10%	8个花盆升到6级	点击跳转到相关功能
-4502	批发萝卜	下次使用价格减少20%	任一植物时装强化到10星	点击跳转到相关功能
-4601	强健体魄	血量增加10%	4个植物升到100级	点击跳转到相关功能
-4602	精神抖擞	攻击速度增加5%	实验室[专家]攻击到30级	点击跳转到相关功能
-4603	粗枝大叶	攻击力增加5%	僵尸岛通过11关	点击跳转到相关功能
-4604	就针对你	对毒液僵尸造成150%的伤害	拥有5个橙色品质植物	点击跳转到相关功能
-4701	强健体魄	血量增加15%	实验室[专家]防御到30级	点击跳转到相关功能
-4702	精神抖擞	攻击速度增加3%	拥有1件橙色装备	点击跳转到相关功能
-4703	粗枝大叶	种植价格减少为125阳光	冒险过太空大战精英第8关	点击跳转到相关功能
-4704	生龙活虎	种植时有概率发动大招	4个植物时装强化到10星	点击跳转到相关功能
-4801	强健体魄	血量增加10%	拥有4个3级橙色精准试剂	点击跳转到相关功能
-4802	精神抖擞	攻击速度增加3%	6个植物升到102级	点击跳转到相关功能
-4803	粗枝大叶	攻击力增加5%	小镇达到60级	点击跳转到相关功能
-4804	三株蘑菇	攻击时有概率放出一串3个小蘑菇	拥有3件橙色装备	点击跳转到相关功能
-4901	强健体魄	血量（全息坚果）增加10%	冒险过太空大战精英第15关	点击跳转到相关功能
-4902	自愈基因	被啃食后恢复的时间缩短	世界树升到60级	点击跳转到相关功能
-4903	厚全息墙	大招血量提高5%	拥有5个3级橙色钢铁试剂	点击跳转到相关功能
-4904	生龙活虎	种植时有概率发动大招	拥有5个五星植物	点击跳转到相关功能
-5001	强健体魄	血量增加10%	6个植物升到105级	点击跳转到相关功能
-5002	节能子弹	每次攻击消耗减少为25阳光	试炼之路通过50关	点击跳转到相关功能
-5003	生龙活虎	种植时有概率发动大招	小镇达到70级	点击跳转到相关功能
+1101	Quick Start	First Sunflower cost reduced to 25 sun	Reach Town Level 2	Tap to jump to related feature
+1102	Buy 3, Get Sun	Drop 25 sun immediately after planting every 3 Sunflowers	Reach Town Level 4	Tap to jump to related feature
+1103	Sun Refund	Refund 25 sun when a Sunflower is lost	Complete PoD-5	Tap to jump to related feature
+1104	Value Reward	Chance to produce large sun when producing sun!	Own 1 Green +1 quality plant	Tap to jump to related feature
+1105	Blood Brothers	Can place another Sunflower on top of a Sunflower to upgrade into Twin Sunflower	Reach 30 points in the Ranked Arena today	Tap to jump to related feature
+1201	A Good Start	First Peashooter cost reduced to 50 sun	Reach Town Level 5	Tap to jump to related feature
+1202	Tons of Bullets	The first attack of a single Peashooter fires a large bullet	Upgrade 2 plants to level 15	Tap to jump to related feature
+1203	Blessings in Disguise	Can be planted on top of a Peashooter to upgrade it into a Repeater	Upgrade 4 plants to Level 25	Tap to jump to related feature
+1204	Sustain War Through War	Defeating a zombie has a chance to drop 25 sun	Reach Town Level 13	Tap to jump to related feature
+1301	Life Relay	When a Wall-nut is defeated, instantly reduce Wall-nut card cooldown by 15 seconds	Reach Town Level 6	Tap to jump to related feature
+1302	Sturdy Physique	Increase health by 20%	Clear Sphinx Stage 10 in Adventure Mode	Tap to jump to related feature
+1501	Quick Armament	Potato Mine arming time reduced by 5 seconds	Reach Town Level 8	Tap to jump to related feature
+1502	Risk-Free Business	Drop 25 sun upon blowing up zombies	Reach Town Level 12	Tap to jump to related feature
+2101	Sturdy Physique	Health increased by 10%	Reach Town Level 14	Tap to jump to related feature
+2102	Energetic	Attack speed increased by 3%	Own 1 Blue+1 rarity plant	Tap to jump to related feature
+2103	Careless	Increase attack power by 3%	Upgrade 4 plants to level 30	Tap to jump to related feature
+2104	Vigorous	Chance to trigger Plant Food ability when planting	Pass Stage 10 of Trial of Wisdom	Tap to jump to related feature
+2201	Sturdy Physique	Health increased by 10%	Own 3 mines in Serene Woods	Tap to jump to related feature
+2202	Energetic	Increase attack speed by 4%	Enhance any plant to +3	Tap to jump to related feature
+2203	Careless	Increase attack power by 3%	Upgrade Lab [Junior] Health to level 20	Tap to jump to related feature
+2204	Dual Missiles	Chance to fire 2 missiles consecutively when attacking	Join an Alliance	Tap to jump to related feature
+2001	Lucky Break	Pomegranate's first attack has a chance to knock off a zombie's helmet directly	Own 2 Blue +2 quality plants	Tap to jump to related feature
+2002	Slowing Magic	Slows hit zombies for 1 second	Clear Stage 4 in Zombie Island	Tap to jump to related feature
+2003	Liquidation Sale	Plant cost reduced to 150 sun	Own 1 Blue Steel Reagent	Tap to jump to related feature
+2301	Sturdy Physique	Health increased by 10%	Complete Battle of the Nile Elite Stage 1 in Adventure	Tap to jump to related feature
+2302	Energetic	Increase attack speed by 4%	Own 1 Blue equipment	Tap to jump to related feature
+2303	Careless	Increase attack power by 3%	Upgrade [Basic] Lab Defense to Level 20	Tap to jump to related feature
+2304	Vigorous	Chance to trigger Plant Food ability upon planting	Upgrade the Tree of Wisdom to level 10	Tap to jump to related feature
+2401	Increase Defense	Health increased by 15%	Own 6 flower pots	Tap to jump to related feature
+2402	Sharp Fangs	Deal certain damage after biting zombies	Reach 42 points in today's Ranked Arena	Tap to jump to related feature
+2403	Sharp Blades and Teeth	Significantly increase damage effect	Upgrade Lab [Junior] Attack to level 20	Tap to jump to related feature
+2501	Rapid Growth	Cooldown reduced by 10 seconds	Own 4 mines in War Song Plains	Tap to jump to related feature
+2502	Melon-pult Explosion	Explodes upon disappearing, dealing damage to units outside the lane	Clear Stage 5 in Zombie Island	Tap to jump to related feature
+2601	Sturdy Physique	Health increased by 10%	Upgrade 4 plants to Level 40	Tap to jump to related feature
+2602	Spring Grass Grows Anew	Chance to revive once upon death	Upgrade Tree of Wisdom to level 15	Tap to jump to related feature
+1601	Camel Killer	Deal 150% damage to Camel Zombies	Upgrade 6 Flower Pots to Level 2	Tap to jump to related feature
+1801	Ambidextrous	Bonk Choy can attack zombies behind him	Upgrade Laboratory [Intermediate] Attack to level 15	Tap to jump to related feature
+1802	Angry Strike	Increase HP by 100%	Clear stage 13 in the Trial Path	Tap to jump to related feature
+1803	Keen Instincts	Attacks have a chance to deal triple damage!	Rank in the top 2000 in the Arena	Tap to jump to related feature
+1901	Turn Waste into Treasure	Drop 25 sun for every 2 gravestones devoured	Reach Town Level 20	Tap to jump to related feature
+1701	Area Freeze	Has a chance to freeze zombies in a certain area	Upgrade 7 Flower Pots to level 2	Tap to jump to related feature
+1702	Ice and Fire Do Not Mix	Instantly reset cooldown when Iceberg Lettuce extinguishes a Conehead Zombie's torch	Own 1 Blue rarity plant	Tap to jump to related feature
+1401	Tombstone Killer	Deal 150% damage to gravestones	Own 3 Blue nutrient reagents of any kind	Tap to jump to related feature
+3101	Sturdy Physique	Health increased by 15%	Clear Gabant Coast Elite Stage 8 in Adventure Mode	Tap to jump to related feature
+3102	Energetic	Attack speed increased by 10%	Reach Town Level 36	Tap to jump to related feature
+3103	Careless	Increase attack power by 3%	Clear stage 25 in the Trial Path	Tap to jump to related feature
+3104	Vigorous	Chance to trigger Plant Food ability when planting	Upgrade 7 Flower Pots to Level 3	Tap to jump to related feature
+3201	Sturdy Physique	Health increased by 10%	Clear Cabin Coast Elite Stage 15 in Adventure	Tap to jump to related feature
+3202	Energetic	Attack speed increased by 3%	Own 3 purple Life Reagents	Tap to jump to related feature
+3203	Careless	Attack power increased by 4%	Upgrade World Tree to Level 30	Tap to jump to related feature
+3204	Distinguished Military Service	Transform into Spikerock after defeating 4 zombies	Enhance 8 plants to +5	Tap to jump to related feature
+3401	Sturdy Physique	Increase health by 20%	Upgrade Lab [Intermediate] Health to level 20	Tap to jump to related feature
+3402	Super Spring	Chance to knock enemies off the screen	Upgrade 9 flower pots to level 3	Tap to jump to related feature
+3403	Vigorous	Chance to trigger Plant Food ability when planting	Complete Treasure Island Elite Stage 8 in Adventure Mode	Tap to jump to related feature
+3501	Sturdy Physique	Increase health by 20%	Pass Stage 8 of Zombie Island	Tap to jump to related feature
+3502	Energetic	Increase attack speed by 6%	Reach Town Level 40	Tap to jump to related feature
+3503	Careless	Attack power increased by 5%	Clear stage 30 in Journey to the West	Tap to jump to related feature
+3504	Lots of Butter	Butter throwing chance increased by 12%	Own 2 purple-tier plants	Tap to jump to related feature
+3601	Rapid Reload	Wake-up time accelerated by 1 second	Upgrade [Advanced] Laboratory HP to Level 20	Tap to jump to related feature
+3602	Rapid-Fire Coconut Cannon	Wake-up time accelerated by 1.5 seconds	Complete Elite Stage 15 of Treasure Island Adventure	Tap to jump to related feature
+3603	Vigorous	Chance to trigger Plant Food ability when planting	Own 1 four-star plant	Tap to jump to related feature
+3701	Sturdy Physique	Increase health by 20%	Reach 30 points in the Ranked Arena today	Tap to jump to related feature
+3702	Energetic	Increase attack speed by 20%	Reach Town Level 45	Tap to jump to related feature
+3703	Careless	Attack power increased by 5%	Upgrade Laboratory [Advanced] Health to level 30	Tap to jump to related feature
+3704	A String of Bubbles	Chance to spit a string of 3 water bubbles upon attacking	Upgrade 8 Flower Pots to Level 4	Tap to jump to related feature
+3801	Sturdy Physique	Increase health by 5%	Clear Treasure Cave Elite Stage 8 in Adventure	Tap to jump to related feature
+3802	Energetic	Increase attack speed by 6%	Upgrade 6 plants to level 80	Tap to jump to related feature
+3803	Careless	Attack damage increased by 6%	Reach level 30 in [Advanced] Lab Energy	Tap to jump to related feature
+3804	Explosion Survival	Does not die after unleashing Plant Food ability, only loses half HP	Clear stage 35 in the Trial Path	Tap to jump to related feature
+3301	Sturdy Physique	Reduce planting cost to 200 sun	Complete Elite Stage 15 of Treasure Cave Adventure	Tap to jump to related feature
+3302	Energetic	Increase attack speed by 5%	Reach Town Level 50	Tap to jump to related feature
+3303	Careless	Attack power increased by 5%	Upgrade Tree of Wisdom to level 40	Tap to jump to related feature
+3304	Barbed Hook	Attacks have a chance to freeze enemies for a duration	Own 2 Level 6 Orange Wisdom Serums	Tap to jump to related feature
+3901	Sturdy Physique	Plant cost reduced to 150 sun	Clear Elite Stage 8 of Naval Supremacy in Adventure	Tap to jump to related feature
+3902	Energetic	Attack speed increased by 3%	Reach the top 1,200 in the Ladder Arena	Tap to jump to related feature
+3903	Careless	Increase attack power by 3%	Reach Town Level 52	Tap to jump to related feature
+3904	Large Bullet	Pineapple's first attack fires an ultra-high damage projectile	Upgrade the Tree of Wisdom to Level 45	Tap to jump to related feature
+4001	Sturdy Physique	Increase health by 20%	Own 3 blue-tier equipment pieces	Tap to jump to related feature
+4002	Energetic	Plant cost reduced to 275 sun	Clear Naval Warfare Elite Stage 15 in Adventure Mode	Tap to jump to related feature
+4003	Careless	Attack speed increased by 3%	Clear 40 stages in the Trail of Trials	Tap to jump to related feature
+4004	Double-Row Bullets	Chance to fire double projectiles upon attacking	Upgrade 3 plant costumes to 6 stars	Tap to jump to related feature
+4101	Sturdy Physique	Health increased by 10%	Reach Town Level 58	Tap to jump to related feature
+4102	Energetic	Increase attack speed by 4%	Upgrade Laboratory [Advanced] Critical to level 40	Tap to jump to related feature
+4103	Careless	Reduce planting cost to 175 sun	Upgrade Tree of Wisdom to level 50	Tap to jump to related feature
+4104	Rapid-Fire Laser	Attacks have a chance to trigger rapid-fire mode for 2 seconds	Awaken any plant to Tier 2	Tap to jump to related feature
+4201	Half Price Clearance	Reduce planting cost to 25 sun	Clear Space War Elite Stage 8 in Adventure	Tap to jump to related feature
+4301	Sturdy Physique	Plant cost reduced to 300 sun	Enhance 10 plants to +5	Tap to jump to related feature
+4302	Energetic	Increase attack speed by 4%	Clear Stage 45 in Trial of Wisdom	Tap to jump to related feature
+4303	Super Frenzy	Attack speed increased by 6%	Own 4 purple equipments	Tap to jump to related feature
+4401	Premature Fruit	Refresh time reduced by 1 second	Own 4 level-3 orange Frenzy Reagents	Tap to jump to related feature
+4402	Ripen Fruit	Reduce cooldown by 2.5 seconds	Complete Elite Stage 15 of Modern Manor Adventure	Tap to jump to related feature
+4501	Efficient Planting	Reduce next use cost by 10%	Upgrade 8 Flower Pots to Level 6	Tap to jump to related feature
+4502	Radish Wholesale	Next use cost reduced by 20%	Upgrade any plant costume to 10 stars	Tap to jump to related feature
+4601	Sturdy Physique	Health increased by 10%	Upgrade 4 plants to level 100	Tap to jump to related feature
+4602	Energetic	Increase attack speed by 5%	Upgrade Laboratory [Expert] Attack to level 30	Tap to jump to related feature
+4603	Careless	Attack power increased by 5%	Clear Stage 11 in Zombie Island	Tap to jump to related feature
+4604	Just Targeting You	Deal 150% damage to Toxic Zombies	Own 5 orange-tier plants	Tap to jump to related feature
+4701	Sturdy Physique	Health increased by 15%	Upgrade Lab [Expert] Defense to level 30	Tap to jump to related feature
+4702	Energetic	Attack speed increased by 3%	Own 1 Orange equipment	Tap to jump to related feature
+4703	Careless	Reduce planting cost to 125 sun	Clear Space War Elite Stage 8 in Adventure	Tap to jump to related feature
+4704	Vigorous	Chance to trigger Plant Food ability when planting	Upgrade 4 plant costumes to 10 stars	Tap to jump to related feature
+4801	Sturdy Physique	Health increased by 10%	Own 4 Level 3 Orange Precision Reagents	Tap to jump to related feature
+4802	Energetic	Attack speed increased by 3%	Upgrade 6 plants to level 102	Tap to jump to related feature
+4803	Careless	Attack power increased by 5%	Reach Town Level 60	Tap to jump to related feature
+4804	Three Mushrooms	Chance to release a string of 3 small mushrooms upon attacking	Own 3 Orange pieces of equipment	Tap to jump to related feature
+4901	Sturdy Physique	Holowall-nut health increased by 10%	Complete Elite Stage 15 of Space War Adventure	Tap to jump to related feature
+4902	Self-Healing Gene	Shorten recovery time after being eaten	Upgrade World Tree to Level 60	Tap to jump to related feature
+4903	Thick Hologram-nut	Plant Food HP increased by 5%	Own 5 Level 3 Orange Steel Reagents	Tap to jump to related feature
+4904	Vigorous	Chance to trigger Plant Food ability when planting	Own 5 five-star plants	Tap to jump to related feature
+5001	Sturdy Physique	Health increased by 10%	Upgrade 6 plants to level 105	Tap to jump to related feature
+5002	Energy-Saving Bullets	Sun cost per attack reduced to 25	Clear 50 stages in the Trial Path	Tap to jump to related feature
+5003	Vigorous	Chance to trigger Plant Food ability when planting	Reach town Level 70	Tap to jump to related feature

@@ -112,3 +112,4 @@ TrayError: 启动器唤醒通道不可用，请重新打开启动器。
 2026-10-16 19:15:05,739 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
 2026-10-16 19:31:30,090 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
 2026-10-16 19:55:35,453 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}
+2026-10-16 21:26:51,055 INFO 启动器 DPI 初始化：{"ok": true, "mode": "per_monitor_v2", "source": "existing", "attempts": [{"api": "set_context", "mode": "per_monitor_v2", "status": "failed", "error": 5}]}

@@ -1,4 +1,4 @@
-id	stageId	levelId	subLevelId	challengeLevelId	needRoleLevel	needPower	bonusCoin		bonusExpfirstCoin	bonusPlant	bonusItems	achievementInfo	name	soundSceneID	preloadSoundIDList	movie	achievementIntro	standard	lower1	hp1	armor1	lower2	hp2	armor2	higher1	hp3	armor3	higher2	hp4	armor4
+id	stageId	levelId	subLevelId	challengeLevelId	needRoleLevel	needPower	bonusCoin	bonusExp	firstCoin	bonusPlant	bonusItems	achievementInfo	name	soundSceneID	preloadSoundIDList	movie	achievementIntro	standard	lower1	hp1	armor1	lower2	hp2	armor2	higher1	hp3	armor3	higher2	hp4	armor4
 101	0	1	1	0	1	10	0	0	0	0			戴夫的教学	8	304			0	0	0	0	0	0	0	0	0	0	0	0	0
 10101	1	1	1	0	1	10	1000	50	10000	0	51200:5	10	秦始皇陵 1-1	8				0	0	0	0	0	0	0	0	0	0	0	0	0
 10102	1	1	2	0	1	10	1000	0	6000	0	51200:5	10|9:30:5|6:0	秒杀僵尸 1-2	8				0	0	0	0	0	0	0	0	0	0	0	0	0

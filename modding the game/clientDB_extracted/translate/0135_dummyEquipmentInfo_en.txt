@@ -1,0 +1,31 @@
+type	name
+1	Bulletproof Helmet
+1	Bulletproof Helmet
+1	Bulletproof Helmet
+1	Bulletproof Helmet
+1	Bulletproof Helmet
+2	Protective Jacket
+2	Protective Jacket
+2	Protective Jacket
+2	Protective Jacket
+2	Protective Jacket
+3	Power Battleaxe
+3	Power Battleaxe
+3	Power Battleaxe
+3	Power Battleaxe
+3	Power Battleaxe
+4	Sturdy Leather Boots
+4	Sturdy Leather Boots
+4	Sturdy Leather Boots
+4	Sturdy Leather Boots
+4	Sturdy Leather Boots
+5	Nimble Gloves
+5	Nimble Gloves
+5	Nimble Gloves
+5	Nimble Gloves
+5	Nimble Gloves
+6	Lucky Shorts
+6	Lucky Shorts
+6	Lucky Shorts
+6	Lucky Shorts
+6	Lucky Shorts

@@ -1,9 +1,9 @@
 id	name
-1	我要植物
-2	我要钻石
-3	我要体力
-4	我要升级
-5	我要金币
-6	我要变强
-7	我爱玩塔防
-8	我爱玩战斗
+1	I want plants
+2	I want diamonds
+3	I want energy
+4	I want to upgrade
+5	I want coins
+6	I want to get stronger
+7	I love playing tower defense
+8	I love combat

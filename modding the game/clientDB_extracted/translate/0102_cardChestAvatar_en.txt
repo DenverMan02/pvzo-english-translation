@@ -1,0 +1,618 @@
+id	unLockDec
+1107	Costume Crystal 150
+1108	Costume Essence 20
+1109	Costume Essence 40
+11010	Costume Essence 10
+11011	Costume Crystal 75
+1116	Costume Crystal 150
+1117	Costume Essence 60
+1118	Costume Essence 20
+1119	Costume Crystal 200
+11110	Costume Essence 10
+11111	Costume Essence 15
+1126	Costume Essence 20
+1127	Costume Essence 40
+1128	Costume Essence 60
+1129	Costume Essence 50
+1136	Costume Essence 20
+1137	Costume Essence 40
+1138	Costume Essence 60
+1146	Costume Essence 20
+1147	Costume Essence 40
+1148	Costume Essence 60
+1156	Costume Essence 20
+1157	Costume Essence 40
+1158	Costume Essence 60
+1166	Costume Essence 40
+1167	Costume Essence 60
+1168	Costume Essence 20
+1176	Costume Essence 40
+1177	Costume Essence 60
+1178	Costume Essence 50
+1186	Costume Essence 20
+1187	Costume Essence 40
+1188	Costume Essence 60
+1189	Costume Essence 50
+1196	Costume Essence 20
+1197	Costume Essence 40
+1198	Costume Essence 60
+1226	Costume Essence 20
+1227	Costume Essence 40
+1228	Costume Essence 60
+1229	Costume Essence 50
+1236	Costume Essence 20
+1237	Costume Essence 40
+1238	Costume Essence 60
+1239	Costume Essence 50
+1246	Costume Essence 20
+1247	Costume Essence 40
+1248	Costume Essence 60
+1249	Costume Essence 50
+1256	Costume Essence 20
+1257	Costume Essence 40
+1258	Costume Essence 60
+1259	Costume Essence 50
+1304	Costume Crystal 100
+1706	Costume Crystal 150
+1707	Costume Essence 60
+1708	Costume Essence 20
+1709	Free plants available for redemption
+17010	Costume Essence 10
+17011	Costume Essence 50
+17012	Costume Essence 15
+3608	Costume Crystal 200
+3609	Costume Essence 20
+3907	Costume Crystal 150
+3908	Costume Essence 20
+3909	Costume Crystal 200
+39010	Costume Essence 10
+4509	Costume Essence 10
+4608	Costume Essence 20
+4609	Costume Essence 40
+46010	Costume Essence 10
+46011	Costume Essence 30
+4706	Costume Essence 20
+4707	Costume Essence 30
+4708	Costume Essence 40
+4709	Costume Crystal 250
+47010	Costume Essence 10
+47011	Costume Crystal 300
+4908	Costume Essence 20
+4909	Costume Essence 40
+49010	Costume Essence 60
+49011	Costume Essence 30
+5509	Costume Crystal 200
+5606	Costume Crystal 150
+5607	Costume Crystal 300
+5608	Costume Essence 20
+5609	Costume Essence 40
+56010	Costume Essence 10
+56011	Costume Crystal 250
+5706	Costume Crystal 150
+5707	Costume Essence 60
+5708	Costume Essence 20
+5709	Costume Essence 40
+6206	Free plants available for redemption
+6207	Costume Essence 60
+6208	Costume Essence 20
+6209	Costume Essence 40
+62010	Costume Essence 10
+62011	Costume Crystal 250
+6409	Costume Essence 40
+6507	Costume Essence 60
+6508	Costume Essence 20
+6509	Costume Essence 40
+65010	Costume Crystal 150
+65011	Costume Essence 10
+65012	Costume Crystal 250
+6707	Costume Crystal 300
+6708	Costume Essence 20
+6709	Costume Essence 40
+6907	Costume Crystal 150
+6908	Costume Essence 20
+6909	Free plants available for redemption
+69010	Costume Essence 60
+69011	Costume Essence 10
+7209	Costume Essence 40
+72010	Costume Essence 10
+72011	Costume Essence 20
+72012	Costume Essence 30
+72013	Costume Crystal 300
+7407	Costume Crystal 150
+7408	Costume Essence 20
+7409	Costume Essence 40
+74010	Costume Essence 10
+74011	Costume Essence 60
+7508	Costume Essence 20
+7509	Costume Essence 40
+75010	Costume Essence 10
+7606	Costume Essence 20
+7607	Costume Crystal 200
+7608	Costume Crystal 150
+7609	Costume Essence 10
+7706	Costume Essence 20
+7707	Costume Crystal 200
+7807	Costume Essence 60
+7808	Costume Essence 20
+7809	Costume Essence 40
+78010	Costume Essence 30
+78011	Costume Essence 10
+7906	Costume Essence 20
+7907	Costume Essence 40
+7908	Costume Essence 60
+8008	Costume Essence 60
+8009	Costume Essence 40
+80010	Costume Essence 10
+80011	Costume Essence 20
+80012	Costume Essence 30
+8108	Costume Essence 20
+8109	Costume Essence 40
+81010	Costume Essence 30
+81011	Costume Essence 10
+81012	Costume Essence 60
+8307	Costume Essence 60
+8308	Costume Essence 20
+8309	Costume Essence 40
+83010	Costume Essence 10
+8506	Costume Essence 30
+8507	Costume Essence 20
+8508	Costume Essence 60
+8509	Costume Essence 40
+8607	Costume Essence 60
+8608	Costume Essence 20
+8609	Costume Essence 40
+8707	Costume Essence 60
+8708	Costume Essence 20
+8709	Costume Essence 40
+8806	Costume Essence 40
+8807	Costume Essence 10
+8808	Costume Essence 20
+8809	Costume Essence 30
+8906	Costume Essence 40
+8907	Costume Essence 60
+8908	Costume Essence 20
+8909	Costume Essence 10
+89010	Costume Essence 30
+89011	Costume Essence 50
+89012	Costume Essence 60
+9006	Costume Essence 10
+9007	Costume Essence 20
+9008	Costume Essence 30
+90010	Costume Essence 40
+9106	Costume Essence 20
+9107	Costume Essence 40
+9206	Costume Essence 10
+9207	Costume Essence 20
+9208	Costume Essence 30
+9209	Costume Essence 40
+9306	Costume Essence 40
+9307	Costume Essence 60
+9308	Costume Essence 10
+9309	Costume Essence 20
+93010	Costume Essence 30
+9406	Costume Essence 10
+9407	Costume Essence 20
+9408	Costume Crystal 200
+9409	Costume Essence 30
+9506	Costume Essence 20
+9507	Costume Essence 40
+9508	Costume Essence 60
+9509	Costume Essence 50
+9510	Costume Essence 30
+9606	Costume Essence 20
+9607	Costume Essence 40
+9608	Costume Essence 60
+9706	Costume Essence 10
+9707	Costume Essence 20
+9708	Costume Essence 30
+9806	Costume Essence 20
+9807	Costume Essence 40
+9808	Costume Essence 60
+9809	Costume Essence 50
+9810	Costume Essence 30
+98011	Costume Essence 10
+9906	Costume Essence 20
+9907	Costume Essence 40
+9908	Costume Essence 60
+9909	Costume Essence 50
+99010	Costume Essence 30
+1101	
+1102	Upgrade plant to Green quality
+1103	Upgrade plant to Blue quality
+1104	Upgrade plant to Purple quality
+1105	Upgrade plant to Orange quality
+1111	
+1112	Upgrade plant to Green quality
+1113	Upgrade plant to Blue quality
+1114	Upgrade plant to Purple quality
+1115	Upgrade plant to Orange quality
+1121	
+1122	Upgrade plant to Green quality
+1123	Upgrade plant to Blue quality
+1124	Upgrade plant to Purple quality
+1125	Upgrade plant to Orange quality
+1131	
+1132	Upgrade plant to Green quality
+1133	Upgrade plant to Blue quality
+1134	Upgrade plant to Purple quality
+1135	Upgrade plant to Orange quality
+1141	
+1142	Upgrade plant to Green quality
+1143	Upgrade plant to Blue quality
+1144	Upgrade plant to Purple quality
+1145	Upgrade plant to Orange quality
+1151	
+1152	Upgrade plant to Green quality
+1153	Upgrade plant to Blue quality
+1154	Upgrade plant to Purple quality
+1155	Upgrade plant to Orange quality
+1161	
+1162	Upgrade plant to Green quality
+1163	Upgrade plant to Blue quality
+1164	Upgrade plant to Purple quality
+1165	Upgrade plant to Orange quality
+1171	
+1172	Upgrade plant to Green quality
+1173	Upgrade plant to Blue quality
+1174	Upgrade plant to Purple quality
+1175	Upgrade plant to Orange quality
+1181	
+1182	Upgrade plant to Green quality
+1183	Upgrade plant to Blue quality
+1184	Upgrade plant to Purple quality
+1185	Upgrade plant to Orange quality
+1191	
+1192	Upgrade plant to Green quality
+1193	Upgrade plant to Blue quality
+1194	Upgrade plant to Purple quality
+1195	Upgrade plant to Orange quality
+1201	
+1202	Upgrade plant to Green quality
+1203	Upgrade plant to Blue quality
+1204	Upgrade plant to Purple quality
+1205	Upgrade plant to Orange quality
+1211	
+1212	Upgrade plant to Green quality
+1213	Upgrade plant to Blue quality
+1214	Upgrade plant to Purple quality
+1215	Upgrade plant to Orange quality
+1221	
+1222	Upgrade plant to Green quality
+1223	Upgrade plant to Blue quality
+1224	Upgrade plant to Purple quality
+1225	Upgrade plant to Orange quality
+1231	
+1232	Upgrade plant to Green quality
+1233	Upgrade plant to Blue quality
+1234	Upgrade plant to Purple quality
+1235	Upgrade plant to Orange quality
+1241	
+1242	Upgrade plant to Green quality
+1243	Upgrade plant to Blue quality
+1244	Upgrade plant to Purple quality
+1245	Upgrade plant to Orange quality
+1251	
+1252	Upgrade plant to Green quality
+1253	Upgrade plant to Blue quality
+1254	Upgrade plant to Purple quality
+1255	Upgrade plant to Orange quality
+1301	
+1302	Upgrade plant to Green quality
+1303	Upgrade plant to Blue quality
+1305	Upgrade plant to Purple quality
+1306	Upgrade plant to Orange quality
+1401	
+1402	Upgrade plant to Green quality
+1403	Upgrade plant to Blue quality
+1404	Upgrade plant to Purple quality
+1405	Upgrade plant to Orange quality
+1501	
+1502	Upgrade plant to Green quality
+1503	Upgrade plant to Blue quality
+1504	Upgrade plant to Purple quality
+1505	Upgrade plant to Orange quality
+1601	
+1602	Upgrade plant to Green quality
+1603	Upgrade plant to Blue quality
+1604	Upgrade plant to Purple quality
+1605	Upgrade plant to Orange quality
+1701	
+1702	Upgrade plant to Green quality
+1703	Upgrade plant to Blue quality
+1704	Upgrade plant to Purple quality
+1705	Upgrade plant to Orange quality
+1801	
+1802	Upgrade plant to Green quality
+1803	Upgrade plant to Blue quality
+1804	Upgrade plant to Purple quality
+1805	Upgrade plant to Orange quality
+1901	
+1902	Upgrade plant to Green quality
+1903	Upgrade plant to Blue quality
+1904	Upgrade plant to Purple quality
+1905	Upgrade plant to Orange quality
+2001	
+2002	Upgrade plant to Green quality
+2003	Upgrade plant to Blue quality
+2004	Upgrade plant to Purple quality
+2005	Upgrade plant to Orange quality
+3101	
+3102	Upgrade plant to Green quality
+3103	Upgrade plant to Blue quality
+3104	Upgrade plant to Purple quality
+3105	Upgrade plant to Orange quality
+3201	
+3202	Upgrade plant to Green quality
+3203	Upgrade plant to Blue quality
+3204	Upgrade plant to Purple quality
+3205	Upgrade plant to Orange quality
+3301	
+3302	Upgrade plant to Green quality
+3303	Upgrade plant to Blue quality
+3304	Upgrade plant to Purple quality
+3305	Upgrade plant to Orange quality
+3601	
+3602	Upgrade plant to Green quality
+3603	Upgrade plant to Blue quality
+3604	Upgrade plant to Purple quality
+3605	Upgrade plant to Orange quality
+3701	
+3702	Upgrade plant to Green quality
+3703	Upgrade plant to Blue quality
+3704	Upgrade plant to Purple quality
+3705	Upgrade plant to Orange quality
+3901	
+3902	Upgrade plant to Green quality
+3903	Upgrade plant to Blue quality
+3904	Upgrade plant to Purple quality
+3905	Upgrade plant to Orange quality
+4101	
+4102	Upgrade plant to Green quality
+4103	Upgrade plant to Blue quality
+4104	Upgrade plant to Purple quality
+4105	Upgrade plant to Orange quality
+4201	
+4202	Upgrade plant to Green quality
+4203	Upgrade plant to Blue quality
+4204	Upgrade plant to Purple quality
+4205	Upgrade plant to Orange quality
+4301	
+4302	Upgrade plant to Green quality
+4303	Upgrade plant to Blue quality
+4304	Upgrade plant to Purple quality
+4305	Upgrade plant to Orange quality
+4401	
+4402	Upgrade plant to Green quality
+4403	Upgrade plant to Blue quality
+4404	Upgrade plant to Purple quality
+4405	Upgrade plant to Orange quality
+4501	
+4502	Upgrade plant to Green quality
+4503	Upgrade plant to Blue quality
+4504	Upgrade plant to Purple quality
+4505	Upgrade plant to Orange quality
+4601	
+4602	Upgrade plant to Green quality
+4603	Upgrade plant to Blue quality
+4604	Upgrade plant to Purple quality
+4605	Upgrade plant to Orange quality
+4701	
+4702	Upgrade plant to Green quality
+4703	Upgrade plant to Blue quality
+4704	Upgrade plant to Purple quality
+4705	Upgrade plant to Orange quality
+5301	
+5302	Upgrade plant to Green quality
+5303	Upgrade plant to Blue quality
+5304	Upgrade plant to Purple quality
+5305	Upgrade plant to Orange quality
+5401	
+5402	Upgrade plant to Green quality
+5403	Upgrade plant to Blue quality
+5404	Upgrade plant to Purple quality
+5405	Upgrade plant to Orange quality
+5501	
+5502	Upgrade plant to Green quality
+5503	Upgrade plant to Blue quality
+5504	Upgrade plant to Purple quality
+5505	Upgrade plant to Orange quality
+5601	
+5602	Upgrade plant to Green quality
+5603	Upgrade plant to Blue quality
+5604	Upgrade plant to Purple quality
+5605	Upgrade plant to Orange quality
+5701	
+5702	Upgrade plant to Green quality
+5703	Upgrade plant to Blue quality
+5704	Upgrade plant to Purple quality
+5705	Upgrade plant to Orange quality
+5901	
+5902	Upgrade plant to Green quality
+5903	Upgrade plant to Blue quality
+5904	Upgrade plant to Purple quality
+5905	Upgrade plant to Orange quality
+6001	
+6002	Upgrade plant to Green quality
+6003	Upgrade plant to Blue quality
+6004	Upgrade plant to Purple quality
+6005	Upgrade plant to Orange quality
+6101	
+6102	Upgrade plant to Green quality
+6103	Upgrade plant to Blue quality
+6104	Upgrade plant to Purple quality
+6105	Upgrade plant to Orange quality
+6201	
+6202	Upgrade plant to Green quality
+6203	Upgrade plant to Blue quality
+6204	Upgrade plant to Purple quality
+6205	Upgrade plant to Orange quality
+6301	
+6302	Upgrade plant to Green quality
+6303	Upgrade plant to Blue quality
+6304	Upgrade plant to Purple quality
+6305	Upgrade plant to Orange quality
+6401	
+6402	Upgrade plant to Green quality
+6403	Upgrade plant to Blue quality
+6404	Upgrade plant to Purple quality
+6405	Upgrade plant to Orange quality
+6501	
+6502	Upgrade plant to Green quality
+6503	Upgrade plant to Blue quality
+6504	Upgrade plant to Purple quality
+6505	Upgrade plant to Orange quality
+6601	
+6602	Upgrade plant to Green quality
+6603	Upgrade plant to Blue quality
+6604	Upgrade plant to Purple quality
+6605	Upgrade plant to Orange quality
+6701	
+6702	Upgrade plant to Green quality
+6703	Upgrade plant to Blue quality
+6704	Upgrade plant to Purple quality
+6705	Upgrade plant to Orange quality
+6901	
+6902	Upgrade plant to Green quality
+6903	Upgrade plant to Blue quality
+6904	Upgrade plant to Purple quality
+6905	Upgrade plant to Orange quality
+7201	
+7202	Upgrade plant to Green quality
+7203	Upgrade plant to Blue quality
+7204	Upgrade plant to Purple quality
+7205	Upgrade plant to Orange quality
+7401	
+7402	Upgrade plant to Green quality
+7403	Upgrade plant to Blue quality
+7404	Upgrade plant to Purple quality
+7405	Upgrade plant to Orange quality
+7501	
+7502	Upgrade plant to Green quality
+7503	Upgrade plant to Blue quality
+7504	Upgrade plant to Purple quality
+7505	Upgrade plant to Orange quality
+7601	
+7602	Upgrade plant to Green quality
+7603	Upgrade plant to Blue quality
+7604	Upgrade plant to Purple quality
+7605	Upgrade plant to Orange quality
+7701	
+7702	Upgrade plant to Green quality
+7703	Upgrade plant to Blue quality
+7704	Upgrade plant to Purple quality
+7705	Upgrade plant to Orange quality
+7801	
+7802	Upgrade plant to Green quality
+7803	Upgrade plant to Blue quality
+7804	Upgrade plant to Purple quality
+7805	Upgrade plant to Orange quality
+7901	
+7902	Upgrade plant to Green quality
+7903	Upgrade plant to Blue quality
+7904	Upgrade plant to Purple quality
+7905	Upgrade plant to Orange quality
+8001	
+8002	Upgrade plant to Green quality
+8003	Upgrade plant to Blue quality
+8004	Upgrade plant to Purple quality
+8005	Upgrade plant to Orange quality
+8101	
+8102	Upgrade plant to Green quality
+8103	Upgrade plant to Blue quality
+8104	Upgrade plant to Purple quality
+8105	Upgrade plant to Orange quality
+8201	
+8202	Upgrade plant to Green quality
+8203	Upgrade plant to Blue quality
+8204	Upgrade plant to Purple quality
+8205	Upgrade plant to Orange quality
+8301	
+8302	Upgrade plant to Green quality
+8303	Upgrade plant to Blue quality
+8304	Upgrade plant to Purple quality
+8305	Upgrade plant to Orange quality
+8401	
+8402	Upgrade plant to Green quality
+8403	Upgrade plant to Blue quality
+8404	Upgrade plant to Purple quality
+8405	Upgrade plant to Orange quality
+8501	
+8502	Upgrade plant to Green quality
+8503	Upgrade plant to Blue quality
+8504	Upgrade plant to Purple quality
+8505	Upgrade plant to Orange quality
+8601	
+8602	Upgrade plant to Green quality
+8603	Upgrade plant to Blue quality
+8604	Upgrade plant to Purple quality
+8605	Upgrade plant to Orange quality
+8701	
+8702	Upgrade plant to Green quality
+8703	Upgrade plant to Blue quality
+8704	Upgrade plant to Purple quality
+8705	Upgrade plant to Orange quality
+4901	
+4902	Upgrade plant to Green quality
+4903	Upgrade plant to Blue quality
+4904	Upgrade plant to Purple quality
+4905	Upgrade plant to Orange quality
+8801	
+8802	Upgrade plant to Green quality
+8803	Upgrade plant to Blue quality
+8804	Upgrade plant to Purple quality
+8805	Upgrade plant to Orange quality
+8901	
+8902	Upgrade plant to Green quality
+8903	Upgrade plant to Blue quality
+8904	Upgrade plant to Purple quality
+8905	Upgrade plant to Orange quality
+9001	
+9002	Upgrade plant to Green quality
+9003	Upgrade plant to Blue quality
+9004	Upgrade plant to Purple quality
+9005	Upgrade plant to Orange quality
+9101	
+9102	Upgrade plant to Green quality
+9103	Upgrade plant to Blue quality
+9104	Upgrade plant to Purple quality
+9105	Upgrade plant to Orange quality
+9201	
+9202	Upgrade plant to Green quality
+9203	Upgrade plant to Blue quality
+9204	Upgrade plant to Purple quality
+9205	Upgrade plant to Orange quality
+9301	
+9302	Upgrade plant to Green quality
+9303	Upgrade plant to Blue quality
+9304	Upgrade plant to Purple quality
+9305	Upgrade plant to Orange quality
+9401	
+9402	Upgrade plant to Green quality
+9403	Upgrade plant to Blue quality
+9404	Upgrade plant to Purple quality
+9405	Upgrade plant to Orange quality
+9501	
+9502	Upgrade plant to Green quality
+9503	Upgrade plant to Blue quality
+9504	Upgrade plant to Purple quality
+9505	Upgrade plant to Orange quality
+9601	
+9602	Upgrade plant to Green quality
+9603	Upgrade plant to Blue quality
+9604	Upgrade plant to Purple quality
+9605	Upgrade plant to Orange quality
+9701	
+9702	Upgrade plant to Green quality
+9703	Upgrade plant to Blue quality
+9704	Upgrade plant to Purple quality
+9705	Upgrade plant to Orange quality
+9801	
+9802	Upgrade plant to Green quality
+9803	Upgrade plant to Blue quality
+9804	Upgrade plant to Purple quality
+9805	Upgrade plant to Orange quality
+9901	
+9902	Upgrade plant to Green quality
+9903	Upgrade plant to Blue quality
+9904	Upgrade plant to Purple quality
+9905	Upgrade plant to Orange quality

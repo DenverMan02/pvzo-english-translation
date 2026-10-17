@@ -1,49 +1,49 @@
 id	name
-1	普通肥料
-2	优质肥料
-3	高级肥料
-4	特级肥料
-5	普通肥料
-6	优质肥料
-7	高级肥料
-8	特级肥料
-9	普通肥料
-10	优质肥料
-11	高级肥料
-12	特级肥料
-13	普通肥料
-14	优质肥料
-15	高级肥料
-16	特级肥料
-17	普通肥料
-18	优质肥料
-19	高级肥料
-20	特级肥料
-21	普通肥料
-22	优质肥料
-23	高级肥料
-24	特级肥料
-25	普通肥料
-26	优质肥料
-27	高级肥料
-28	特级肥料
-29	普通肥料
-30	优质肥料
-31	高级肥料
-32	特级肥料
-33	普通肥料
-34	优质肥料
-35	高级肥料
-36	特级肥料
-37	普通肥料
-38	优质肥料
-39	高级肥料
-40	特级肥料
-41	普通肥料
-42	优质肥料
-43	高级肥料
-44	特级肥料
-45	普通肥料
-46	优质肥料
-47	高级肥料
-48	特级肥料
+1	Basic Fertilizer
+2	Standard Fertilizer
+3	Quality Fertilizer
+4	Super Fertilizer
+5	Basic Fertilizer
+6	Standard Fertilizer
+7	Quality Fertilizer
+8	Super Fertilizer
+9	Basic Fertilizer
+10	Standard Fertilizer
+11	Quality Fertilizer
+12	Super Fertilizer
+13	Basic Fertilizer
+14	Standard Fertilizer
+15	Quality Fertilizer
+16	Super Fertilizer
+17	Basic Fertilizer
+18	Standard Fertilizer
+19	Quality Fertilizer
+20	Super Fertilizer
+21	Basic Fertilizer
+22	Standard Fertilizer
+23	Quality Fertilizer
+24	Super Fertilizer
+25	Basic Fertilizer
+26	Standard Fertilizer
+27	Quality Fertilizer
+28	Super Fertilizer
+29	Basic Fertilizer
+30	Standard Fertilizer
+31	Quality Fertilizer
+32	Super Fertilizer
+33	Basic Fertilizer
+34	Standard Fertilizer
+35	Quality Fertilizer
+36	Super Fertilizer
+37	Basic Fertilizer
+38	Standard Fertilizer
+39	Quality Fertilizer
+40	Super Fertilizer
+41	Basic Fertilizer
+42	Standard Fertilizer
+43	Quality Fertilizer
+44	Super Fertilizer
+45	Basic Fertilizer
+46	Standard Fertilizer
+47	Quality Fertilizer
+48	Super Fertilizer

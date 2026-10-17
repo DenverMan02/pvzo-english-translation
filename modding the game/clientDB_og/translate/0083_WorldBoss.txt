@@ -1,4 +1,4 @@
 id	bossName	desc
-999	邪恶博士	<font color="#ff0000">邪恶博士</font>擅长利用科技发明，制造炸弹对敌人造成巨大伤害<br>  活动时间：每天00:00-23:00
-998	秦始皇	<font color="#ff0000">秦始皇</font>陛下不需要亲自动手，召唤兵俑僵尸冲锋陷阵<br>  活动时间：每天00:00-23:00
-1000	霸刀将王	<font color="#ff0000">霸刀将王</font>攻击力惊人，大招往往一击毙命<br>  活动时间：每天00:00-23:00
+999	Dr. Zomboss	<font color="#ff0000">Dr. Zomboss</font> excels at using technological inventions to create bombs that deal massive damage to enemies.<br>  Event Time: Daily 00:00-23:00
+998	Emperor Qin	<font color="#ff0000">Emperor Qin Shi Huang</font> doesn't need to fight personally—he summons Terracotta Zombie Warriors to charge into battle.<br>  Event Time: Daily 00:00-23:00
+1000	Overlord Blade King	<font color="#ff0000">Blade Lord</font> has astonishing attack power, and his ultimate skill is often a one-hit KO.<br>  Event Time: Daily 00:00-23:00

@@ -1,0 +1,21 @@
+id	name
+1	Buy 10 EXP Beans at the bar
+2	Buy 1 EXP Bean at the bar
+16	Mystery Card Pack
+20	Store Purchase
+3	Coin Exchange
+5	Stamina Purchase
+19	Tower Defense Spending
+15	Adventure Borrow Plant
+18	Purchase Plant Food
+6	Purchase Make-up Sign-in Card
+9	Costume Upgrade
+7	Nursery Summon
+8	Purchase Loudspeaker
+14	Purchase Energy Orb
+21	Daily Special Purchase
+12	Plant Rumble Inspire
+11	Purchase Arena Challenge Attempts
+17	Buy Dice in Imperial Tomb Labyrinth
+4	Purchase Advanced Town Relocation Card
+22	Purchase March Speed-Up

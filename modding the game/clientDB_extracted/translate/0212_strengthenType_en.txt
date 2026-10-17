@@ -1,0 +1,9 @@
+id	name
+1	I want plants
+2	I want diamonds
+3	I want energy
+4	I want to upgrade
+5	I want coins
+6	I want to get stronger
+7	I love playing tower defense
+8	I love combat

@@ -1,15 +1,15 @@
 id	name
-1	1级城市
-2	2级城市
-3	3级城市
-4	特殊城市外观1
-10	矿点
-11	马戏团
-12	游乐场
-21	建城点样式
-2201	绿野仙踪
-2202	冰雪奇缘
-2213	恭贺新春
-2216	世界之树
-2217	指环王城
-2218	机械迷城
+1	Level 1 City
+2	Level 2 City
+3	Level 3 City
+4	Special City Skin 1
+10	Mine Site
+11	Circus
+12	Playground
+21	City Site Style
+2201	The Wizard of Oz
+2202	Frozen
+2213	Happy Lunar New Year
+2216	World Tree
+2217	Lord of the Rings City
+2218	Machinarium

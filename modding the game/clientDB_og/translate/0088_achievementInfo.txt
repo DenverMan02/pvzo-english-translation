@@ -1,20 +1,20 @@
 id	desc	name
-1	至少生产{1}阳光	生产阳光
-2	最多使用{1}阳光	节省阳光
-3	场上植物不能超过{1}个	少种植物
-4	损失植物不能超过{1}个	少损植物
-5	僵尸不能碰到小花	护花使者
-6	不能损失小推车	保留推车
-7	保护安全区植物	保护植物
-8	{1}秒内不能消耗阳光	不用阳光
-9	{1}秒内消灭{2}个僵尸	僵尸杀手
-10	消灭所有僵尸	顺利通关
-11	不能在戴夫的霉菌地上种植植物	土地紧缺
-12	MISS数不能超过{1}个	极少失误
-13	分数达到{1}	挑战高分
-14	翻牌次数不能超过{1}次	记忆达人
-15	使用{plantName}不能超过{2}个	节约植物
-16	宝石迷阵{1}秒内消除{2}次	宝石迷阵
-17	宝石迷阵失误不能超过{1}次	宝石神手
-18	椰子炮分数达到{1}	挑战高分
-19	椰子炮分数达到{1}	挑战更高分
+1	Produce at least {1} sun	Sun Produced
+2	Spend no more than {1} sun	Sun Used
+3	Never have more than {1} plants	Simultaneous Plants
+4	Don't lose more than {1} plants	Plants Lost
+5	Don't let the zombies trample the flowers	Flower Bed
+6	Survive without any lawn mowers	Retain Mowers
+7	Survive and protect the endangered plants	Save Our Seeds
+8	Don't spend any sun for {1} seconds	Sun Holdout
+9	Defeat {2} zombies in {1} seconds	Zombie Slayer
+10	Defeat every zombie	Complete the Level
+11	Survive without planting on Dave's mold colonies	Mold Colonies
+12	Miss no more than {1} matches	Few Mistakes
+13	Score to beat: {1}	Target Score
+14	Flip cards no more than {1} times	Memory Master
+15	Use no more than {2} {plantName}s	Plant Conservation
+16	Make {2} matches in Beghouled within {1} seconds	Beghouled
+17	Make no more than {1} mistakes in Beghouled	Beghouled Master
+18	Reach a score of {1} with Coconut Cannon	High Score Challenge
+19	Reach a score of {1} with Coconut Cannon	Challenge for a Higher Score

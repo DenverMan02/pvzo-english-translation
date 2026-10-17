@@ -1,13 +1,13 @@
 id	name
-1	关卡1
-2	关卡2
-3	关卡3
-4	关卡4
-5	关卡5
-6	关卡6
-7	关卡7
-8	关卡8
-9	关卡9
-10	关卡10
-11	关卡11
-12	关卡12
+1	Level 1
+2	Level 2
+3	Level 3
+4	Level 4
+5	Level 5
+6	Level 6
+7	Level 7
+8	Level 8
+9	Level 9
+10	Level 10
+11	Level 11
+12	Level 12

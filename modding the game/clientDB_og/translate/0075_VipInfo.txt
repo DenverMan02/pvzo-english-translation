@@ -1,16 +1,16 @@
 id	name
-1	阳光VIP1
-2	财富VIP2
-3	金壶VIP3
-4	阳光VIP1
-5	财富VIP2
-6	金壶VIP3
-7	阳光VIP1
-8	财富VIP2
-9	金壶VIP3
-10	阳光VIP1
-11	财富VIP2
-12	金壶VIP3
-13	阳光VIP1
-14	财富VIP2
-15	金壶VIP3
+1	Sun VIP 1
+2	Fortune VIP 2
+3	Golden Pot VIP 3
+4	Sun VIP 1
+5	Fortune VIP 2
+6	Golden Pot VIP 3
+7	Sun VIP 1
+8	Fortune VIP 2
+9	Golden Pot VIP 3
+10	Sun VIP 1
+11	Fortune VIP 2
+12	Golden Pot VIP 3
+13	Sun VIP 1
+14	Fortune VIP 2
+15	Golden Pot VIP 3

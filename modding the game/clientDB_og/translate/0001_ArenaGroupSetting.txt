@@ -1,9 +1,9 @@
 id	name	des	rankDes
-1	业余级	全体上阵植物增加生命1%	前1000名晋级
-2	雏量级	全体上阵植物增加生命2%	前500名晋级，5501名到6500名降级
-3	羽量级	全体上阵植物增加生命3%	前250名晋级，2501名到3000名降级
-4	轻量级	全体上阵植物增加生命4%	前120名晋级，1121名到1370名降级
-5	中量级	全体上阵植物增加生命5%	前60名晋级，561名到680名降级
-6	超中量级	全体上阵植物增加生命6%	前25名晋级，201名到260名降级
-7	次重量级	全体上阵植物增加生命7%	前5名晋级，51名到75名降级
-8	重量级	全体上阵植物增加生命8%	11名到15名降级
+1	Amateur	All deployed plants +1% HP	Top 1000 advance
+2	Bantamweight	All deployed plants +2% HP	Top 500 advance, ranks 5501-6500 demoted
+3	Featherweight	All deployed plants +3% HP	Top 250 advance, ranks 2501-3000 demoted
+4	Lightweight	All deployed plants +4% HP	Top 120 advance, ranks 1121-1370 demoted
+5	Middleweight	All deployed plants +5% HP	Top 60 advance, ranks 561-680 demoted
+6	Super Middleweight	All deployed plants +6% HP	Top 25 advance, ranks 201-260 demoted
+7	Cruiserweight	All deployed plants +7% HP	Top 5 advance, ranks 51-75 demoted
+8	Heavyweight	All deployed plants +8% HP	Ranks 11-15 demoted

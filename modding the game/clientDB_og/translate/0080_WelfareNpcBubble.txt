@@ -1,2 +1,2 @@
 id	words
-1	我是每日福利的使者;知道今天有什么福利吗？;吃饭、睡觉、打僵僵！
+1	I am the messenger of daily rewards; do you know what the reward is today?;Eat, sleep, bash zombies!

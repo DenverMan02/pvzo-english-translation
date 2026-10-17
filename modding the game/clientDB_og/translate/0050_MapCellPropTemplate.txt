@@ -1,6 +1,6 @@
 id	name
-1	城市
-2	矿点
-3	马戏团
-4	游乐场
-11	城市（未建造）
+1	City
+2	Mine Site
+3	Circus
+4	Playground
+11	City (Unbuilt)

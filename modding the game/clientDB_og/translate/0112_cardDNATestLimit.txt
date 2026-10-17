@@ -1,6 +1,6 @@
 id	openLimitTip
-1	拥有1个5星植物
-2	通关上一关<br>拥有1个激活二阶基因植物
-3	通关上一关<br>拥有2个激活四阶基因植物
-4	通关上一关<br>拥有2个激活六阶基因植物
-5	通关上一关<br>拥有2个激活八阶基因植物
+1	Own 1 5-star plant
+2	Clear the previous stage<br>Own 1 activated Tier 2 Gene Plant
+3	Clear the previous stage<br>Own 2 activated Tier 4 Gene Plants
+4	Clear the previous stage<br>Own 2 activated Tier 6 Gene Plants
+5	Clear the previous stage<br>Own 2 activated Tier 8 Gene Plants

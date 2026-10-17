@@ -1,0 +1,6 @@
+id	name	desc
+1	萌萌	
+2	天天	勤劳 :<font color="#28FF28">每20秒自动捡取经验球</font><br>暴击1:捡取时概率暴击（最高2倍）,<font color="#FFD306">平均增加15%</font>
+3	圆圆	勤劳 :<font color="#28FF28">每20秒自动捡取经验球</font><br>暴击2:捡取时概率暴击（最高3倍）,<font color="#FFD306">平均增加40%</font><br>贪婪 :<font color="#FFD306">每次捡取增加8点经验</font>
+4	甜甜	勤劳 :<font color="#28FF28">每20秒自动捡取经验球</font><br>暴击3:捡取时概率暴击（最高5倍）,<font color="#FFD306">平均增加133%</font><br>贪婪 :<font color="#FFD306">每次捡取增加16点经验</font>
+5	壮壮	勤劳 :<font color="#28FF28">每20秒自动捡取经验球</font><br>暴击4:捡取时概率暴击（最高10倍）,<font color="#FFD306">平均增加200%</font><br>贪婪 :<font color="#FFD306">每次捡取增加24点经验</font>

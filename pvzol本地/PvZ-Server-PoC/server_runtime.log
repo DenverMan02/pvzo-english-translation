@@ -467098,3 +467098,326 @@ RuntimeError: Mystery pack has no valid clientDB feature/fragment mappings
 19:57:54  INFO   === client connected on PORT 9001 from ('127.0.0.1', 55354) ===
 19:57:54  INFO   === client disconnected: ('127.0.0.1', 55354) ===
 19:57:54  INFO   [policy] served policy to ('127.0.0.1', 55355) (req=b'')
+21:27:29  INFO   local guild adapter ready (30 core routes)
+21:27:29  DEBUG  Using selector: SelectSelector
+21:27:29  INFO   player store: C:\Documen2s\PvZOL Local Server v26.10.11.9\pvzol本地\PvZ-Server-PoC\players.db
+21:27:29  INFO   loaded 2099 battle cards (213 TD-plant mappings)
+21:27:29  INFO   loaded 40 lab bottles
+21:27:29  INFO   loaded 999 world-tree levels
+21:27:29  INFO   loaded 3 VIP tiers
+21:27:29  INFO   loaded 傀儡 config: 50 puppets, 120 stages, 225 skill levels
+21:27:29  INFO   loaded 44 card puzzle stages
+21:27:29  INFO   loaded 1960 card-fruit templates
+21:27:29  INFO   loaded gene templates: 60 plant-stage choices, 5000 attribute levels, 600 factor levels, 500 trial levels
+21:27:29  INFO   loaded prestige evolution: 200 levels, 7 plant types
+21:27:29  INFO   loaded plant armour: 300 levels, 396 stars, 40 crystals
+21:27:29  INFO   loaded 617 avatar asset bindings (517 with TD bindings)
+21:27:29  INFO   loaded 617 card avatar templates
+21:27:29  INFO   loaded 1975 card forge templates
+21:27:33  INFO   bots: 50 slots, 0 opponents generated
+21:27:33  INFO   bot autonomy loop started (interval=120s)
+21:27:33  INFO   loaded 254 TD level reward templates from clientDB
+21:27:33  INFO   loaded 25 usable TD laboratory material ids: (40001, 40003, 40004, 40005, 40006, 40007, 40009, 40010, 40011, 40012, 40013, 40015, 40016, 40017, 40018, 40019, 40021, 40022, 40023, 40024, 40025, 40027, 40028, 40029, 40030)
+21:27:33  INFO   loaded 200 role-level exp thresholds
+21:27:33  INFO   loaded 2023 item sell templates
+21:27:33  INFO   loaded 23 town buildings
+21:27:33  INFO   loaded 32 fuben chapters
+21:27:33  INFO   loaded fuben stages for 92 chapter/mode combos
+21:27:33  INFO   loaded 10 energy-buy tiers
+21:27:33  INFO   loaded energyMax for 200 role levels
+21:27:33  INFO   loaded 35 card forge chance entries
+21:27:33  INFO   loaded 78 card recruit recipes
+21:27:33  INFO   loaded 12 card avatar forge types
+21:27:33  INFO   loaded 112 plant talents across 4 stages
+21:27:33  INFO   loaded 41 nutrition reagent bases
+21:27:33  INFO   loaded 3 baptize action costs + 10 baptize cap rows
+21:27:33  INFO   loaded 200 zombie-island levels
+21:27:33  INFO   loaded 12 zombie-island stages
+21:27:33  INFO   loaded 22 activity-fuben templates
+21:27:33  INFO   loaded 390 awake transition rules
+21:27:33  INFO   loaded 390 awake config rows
+21:27:33  INFO   template warm-up done (32 tables preloaded)
+21:27:33  INFO   game server listening on 0.0.0.0:9001
+21:27:33  INFO   game server listening on 0.0.0.0:8001
+21:27:33  INFO   game server listening on 0.0.0.0:443
+21:27:33  WARNING  could not bind game port 80 ([Errno 13] error while attempting to bind on address ('0.0.0.0', 80): [winerror 10013] an attempt was made to access a socket in a way forbidden by its access permissions) - skipping (another program may own it; not fatal)
+21:27:33  INFO   socket-policy server listening on 0.0.0.0:843
+21:27:33  INFO   [policy] served policy to ('127.0.0.1', 63711) (req=b'<policy-file-request/>\x00')
+21:27:37  INFO   [policy] served policy to ('127.0.0.1', 52128) (req=b'<policy-file-request/>\x00')
+21:27:38  INFO   === client connected on PORT 9001 from ('127.0.0.1', 52129) ===
+21:27:38  INFO     (stripped TGW preamble: 'tgw_l7_forward\r\nHost: 127.0.0.1:9001')
+21:27:39  INFO       loaded existing player uin=700000204 name='Denver' level=14 coin=1087749 plants=[1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 3100, 3200, 3300, 3400, 3500, 3600, 4700]
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_CheckOldUser_CS
+21:27:39  INFO       step 1 -> Cmd_CheckOldUser_SC (new=False, name='Denver')
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_CheckOldUser_SC                    (10 body bytes, 53 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=69 cmdName=PVZ.Cmd.Cmd_Init_CS
+21:27:39  INFO       step 2 -> Cmd_Init_SC (from save)
+21:27:39  INFO   loaded 66 valid TD plants
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Init_SC                            (5459 body bytes, 5495 total)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Mail_NewMessage_SC                 (4 body bytes, 50 total)
+21:27:39  INFO       -> PVZ.Cmd.Cmd_PVZPrivilege_SC (12 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_PVZPrivilege_SC                    (12 body bytes, 55 total)
+21:27:39  INFO       -> PVZ.Cmd.Cmd_VipInfo_SC (6 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_VipInfo_SC                         (6 body bytes, 44 total)
+21:27:39  INFO       -> PVZ.Cmd.Cmd_Vip_SyncVipInfo_SC (4 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Vip_SyncVipInfo_SC                 (4 body bytes, 50 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Card_GetPackage_CS
+21:27:39  INFO       card package: 11 card(s) in collection [(1202, '单发豌豆'), (1602, '回旋镖'), (3103, '竹小龙'), (3903, '火龙草'), (5303, '寒冰射手'), (5602, '高坚果'), (5703, '樱桃炸弹'), (6203, '杨桃'), (6903, '冰冻西瓜'), (7703, '西瓜投手'), (9102, '树脂发射器')]
+21:27:39  INFO       -> PVZ.Cmd.Cmd_Card_GetPackage_SC (1202 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Card_GetPackage_SC                 (1202 body bytes, 1249 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (742 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (742 body bytes, 793 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=28 cmdName=PVZ.Cmd.Cmd_VipInfo_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_VipInfo_SC (6 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_VipInfo_SC                         (6 body bytes, 44 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Arena_GetMyInfo_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_Arena_GetMyInfo_SC (14 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Arena_GetMyInfo_SC                 (14 body bytes, 60 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Item_GetBagInfo_CS
+21:27:39  INFO       bag info: 109 item stack(s), 0 equipment object(s)
+21:27:39  INFO       -> PVZ.Cmd.Cmd_Item_GetBagInfo_SC (1262 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Item_GetBagInfo_SC                 (1262 body bytes, 1309 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_Quest_GetList_CS
+21:27:39  INFO       main quests: uin=700000204 listed=263
+21:27:39  INFO       -> PVZ.Cmd.Cmd_Quest_GetList_SC (2459 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Quest_GetList_SC                   (2459 body bytes, 2504 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_DailyQuest_GetInfo_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_DailyQuest_GetInfo_SC (24 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_DailyQuest_GetInfo_SC              (24 body bytes, 73 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_DailyActivity_GetInfo_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_DailyActivity_GetInfo_SC (128 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_DailyActivity_GetInfo_SC           (128 body bytes, 181 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_City_GetBuildingInfo_CS
+21:27:39  INFO       town buildings: level=14 -> 14 unlocked [10, 20, 30, 80, 110, 130, 140, 150, 190, 220, 230, 240, 250, 280]
+21:27:39  INFO       -> PVZ.Cmd.Cmd_City_GetBuildingInfo_SC (65 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetBuildingInfo_SC            (65 body bytes, 116 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Flag_GetList_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_Flag_GetList_SC (0 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Flag_GetList_SC                    (0 body bytes, 43 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=37 cmdName=PVZ.Cmd.Cmd_Lab_GetLabInfo_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_Lab_GetLabInfo_SC (322 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Lab_GetLabInfo_SC                  (322 body bytes, 368 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_RoleGuildInfo_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_RoleGuildInfo_SC (35 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_RoleGuildInfo_SC                   (35 body bytes, 79 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=30 cmdName=PVZ.Cmd.Cmd_City_Init_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_City_Init_SC (12 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_City_Init_SC                       (12 body bytes, 52 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_War_GetDeclareWarStat_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_War_GetDeclareWarStat_SC (4 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_War_GetDeclareWarStat_SC           (4 body bytes, 56 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=44 cmdName=PVZ.Cmd.Cmd_Setout_GetSetoutTimes_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_Setout_GetSetoutTimes_SC (10 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Setout_GetSetoutTimes_SC           (10 body bytes, 62 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_Chat_GetHistory_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_Chat_GetHistory_SC (3 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Chat_GetHistory_SC                 (3 body bytes, 49 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=40 cmdName=PVZ.Cmd.Cmd_Friend_GetBlackList_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_Friend_GetBlackList_SC (25 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Friend_GetBlackList_SC             (25 body bytes, 75 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=53 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC (624 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC  (624 body bytes, 688 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_OnlineReward_GetInfo_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_OnlineReward_GetInfo_SC (157 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_OnlineReward_GetInfo_SC            (157 body bytes, 209 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=40 cmdName=PVZ.Cmd.Cmd_PayShop_GetFlagList_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_PayShop_GetFlagList_SC (0 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetFlagList_SC             (0 body bytes, 50 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_PVZPrivilege_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_PVZPrivilege_SC (12 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_PVZPrivilege_SC                    (12 body bytes, 55 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_Fuben_GetChapterInfo_CS
+21:27:39  INFO       fuben chapters: level=14 -> 3 unlocked (progress-gated)
+21:27:39  INFO       -> PVZ.Cmd.Cmd_Fuben_GetChapterInfo_SC (30 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Fuben_GetChapterInfo_SC            (30 body bytes, 81 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_GetLevelRewardInfo_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_GetLevelRewardInfo_SC (2 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_GetLevelRewardInfo_SC              (2 body bytes, 51 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_City_MergeServerFlag_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_City_MergeServerFlag_SC (0 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_City_MergeServerFlag_SC            (0 body bytes, 51 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=37 cmdName=PVZ.Cmd.Cmd_Talent_GetList_CS
+21:27:39  INFO       talent list stage 1: 35 talents, 11 plants, 13 studied, 2 studiable-now
+21:27:39  INFO       -> PVZ.Cmd.Cmd_Talent_GetList_SC (442 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Talent_GetList_SC                  (442 body bytes, 488 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_Puppet_GetInfo_CS
+21:27:39  INFO       <= Cmd_Puppet_GetInfo_CS data=
+21:27:39  INFO       傀儡: 0 owned, answering (none)
+21:27:39  INFO       -> PVZ.Cmd.Cmd_Puppet_GetInfo_SC (0 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Puppet_GetInfo_SC                  (0 body bytes, 45 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=40 cmdName=PVZ.Cmd.Cmd_Puppet_GetFormation_CS
+21:27:39  INFO       <= Cmd_Puppet_GetFormation_CS data=
+21:27:39  INFO       傀儡上阵: (empty)
+21:27:39  INFO       -> PVZ.Cmd.Cmd_Puppet_GetFormation_SC (12 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Puppet_GetFormation_SC             (12 body bytes, 62 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=45 cmdName=PVZ.Cmd.Cmd_PayShop_GetDayTicketList_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_PayShop_GetDayTicketList_SC (2 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetDayTicketList_SC        (2 body bytes, 57 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=46 cmdName=PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_SC (2 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_GetGiftTicketList_SC       (2 body bytes, 58 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=53 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC (624 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_FlexibleActivity_GetActivityList_SC  (624 body bytes, 688 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_SignIn_GetInfo_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_SignIn_GetInfo_SC (12 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_SignIn_GetInfo_SC                  (12 body bytes, 57 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_OfflineReward_GetInfo_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_OfflineReward_GetInfo_SC (4 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_OfflineReward_GetInfo_SC           (4 body bytes, 56 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_Guide_GetKeys_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_Guide_GetKeys_SC (0 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_Guide_GetKeys_SC                   (0 body bytes, 44 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=35 cmdName=PVZ.Cmd.Cmd_SecondPwd_Info_CS
+21:27:39  INFO       -> PVZ.Cmd.Cmd_SecondPwd_Info_SC (0 body bytes)
+21:27:39  INFO     -> S2C  PVZ.Cmd.Cmd_SecondPwd_Info_SC                  (0 body bytes, 45 total)
+21:27:39  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+21:27:40  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (742 body bytes)
+21:27:40  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (742 body bytes, 793 total)
+21:27:47  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=39 cmdName=PVZ.Cmd.Cmd_Notice_GetRollList_CS
+21:27:47  INFO       -> PVZ.Cmd.Cmd_Notice_GetRollList_SC (79 body bytes)
+21:27:47  INFO     -> S2C  PVZ.Cmd.Cmd_Notice_GetRollList_SC              (79 body bytes, 128 total)
+21:27:47  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=38 cmdName=PVZ.Cmd.Cmd_Notice_GetSysList_CS
+21:27:47  INFO       -> PVZ.Cmd.Cmd_Notice_GetSysList_SC (139 body bytes)
+21:27:47  INFO     -> S2C  PVZ.Cmd.Cmd_Notice_GetSysList_SC               (139 body bytes, 188 total)
+21:27:47  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=57 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+21:27:47  INFO       -> PVZ.Cmd.FlexibleActivity_1001 (111 body bytes)
+21:27:47  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1001                  (111 body bytes, 156 total)
+21:27:47  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=57 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+21:27:47  INFO       -> PVZ.Cmd.FlexibleActivity_1001 (111 body bytes)
+21:27:47  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_1001                  (111 body bytes, 156 total)
+21:27:47  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+21:27:47  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+21:27:47  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+21:27:47  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+21:27:47  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+21:27:47  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+21:27:47  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+21:27:47  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+21:27:47  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+21:27:47  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+21:27:47  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+21:27:47  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+21:27:47  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_GetClientData_CS
+21:27:47  INFO       -> PVZ.Cmd.Cmd_GetClientData_SC (4 body bytes)
+21:27:47  INFO     -> S2C  PVZ.Cmd.Cmd_GetClientData_SC                   (4 body bytes, 48 total)
+21:27:47  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_City_GetTownDurability_CS
+21:27:47  INFO       -> PVZ.Cmd.Cmd_City_GetTownDurability_SC (6 body bytes)
+21:27:47  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetTownDurability_SC          (6 body bytes, 59 total)
+21:27:47  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=38 cmdName=PVZ.Cmd.Cmd_TD_GetStageInfo_CS
+21:27:47  INFO       TD stage info: stage=2 passed=[(1, 1, 1, [10]), (2, 1, 1, [10]), (3, 1, 1, [10]), (4, 1, 1, [10]), (5, 1, 1, [10]), (6, 1, 1, [10])] gates=[4, 5, 6] totalStars=6
+21:27:47  INFO       -> PVZ.Cmd.Cmd_TD_GetStageInfo_SC (58 body bytes)
+21:27:47  INFO     -> S2C  PVZ.Cmd.Cmd_TD_GetStageInfo_SC                 (58 body bytes, 104 total)
+21:27:47  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=41 cmdName=PVZ.Cmd.Cmd_War_GetSimpleHistory_CS
+21:27:47  INFO       -> PVZ.Cmd.Cmd_War_GetSimpleHistory_SC (0 body bytes)
+21:27:47  INFO     -> S2C  PVZ.Cmd.Cmd_War_GetSimpleHistory_SC            (0 body bytes, 51 total)
+21:27:48  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Welfare_DailyActivity_CS
+21:27:48  INFO       -> PVZ.Cmd.Cmd_Welfare_DailyActivity_SC (4605 body bytes)
+21:27:48  INFO     -> S2C  PVZ.Cmd.Cmd_Welfare_DailyActivity_SC           (4605 body bytes, 4658 total)
+21:27:48  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_TopFight_TopN_CS
+21:27:48  INFO       -> PVZ.Cmd.Cmd_TopFight_TopN_SC (4 body bytes)
+21:27:48  INFO     -> S2C  PVZ.Cmd.Cmd_TopFight_TopN_SC                   (4 body bytes, 48 total)
+21:27:50  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+21:27:50  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (742 body bytes)
+21:27:50  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (742 body bytes, 793 total)
+21:27:50  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+21:27:50  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+21:27:50  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+21:27:50  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_City_GetBuildingEvent_CS
+21:27:51  INFO       -> PVZ.Cmd.Cmd_City_GetBuildingEvent_SC (0 body bytes)
+21:27:51  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetBuildingEvent_SC           (0 body bytes, 52 total)
+21:27:54  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+21:27:54  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+21:27:54  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+21:27:57  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+21:27:57  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+21:27:57  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+21:28:00  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+21:28:00  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+21:28:00  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+21:28:03  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+21:28:03  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (742 body bytes)
+21:28:03  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (742 body bytes, 793 total)
+21:28:04  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+21:28:04  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+21:28:04  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+21:28:04  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+21:28:04  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+21:28:04  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+21:28:04  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=56 cmdName=PVZ.Cmd.Cmd_FlexibleActivity_GetActivityStat_CS
+21:28:04  INFO       -> PVZ.Cmd.FlexibleActivity_24 (114 body bytes)
+21:28:04  INFO     -> S2C  PVZ.Cmd.FlexibleActivity_24                    (114 body bytes, 157 total)
+21:28:04  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=43 cmdName=PVZ.Cmd.Cmd_City_GetTownDurability_CS
+21:28:04  INFO       -> PVZ.Cmd.Cmd_City_GetTownDurability_SC (6 body bytes)
+21:28:04  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetTownDurability_SC          (6 body bytes, 59 total)
+21:28:04  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=38 cmdName=PVZ.Cmd.Cmd_TD_GetStageInfo_CS
+21:28:04  INFO       TD stage info: stage=2 passed=[(1, 1, 1, [10]), (2, 1, 1, [10]), (3, 1, 1, [10]), (4, 1, 1, [10]), (5, 1, 1, [10]), (6, 1, 1, [10])] gates=[4, 5, 6] totalStars=6
+21:28:04  INFO       -> PVZ.Cmd.Cmd_TD_GetStageInfo_SC (58 body bytes)
+21:28:04  INFO     -> S2C  PVZ.Cmd.Cmd_TD_GetStageInfo_SC                 (58 body bytes, 104 total)
+21:28:04  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Welfare_DailyActivity_CS
+21:28:04  INFO       -> PVZ.Cmd.Cmd_Welfare_DailyActivity_SC (4605 body bytes)
+21:28:04  INFO     -> S2C  PVZ.Cmd.Cmd_Welfare_DailyActivity_SC           (4605 body bytes, 4658 total)
+21:28:04  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=36 cmdName=PVZ.Cmd.Cmd_GetClientData_CS
+21:28:04  INFO       -> PVZ.Cmd.Cmd_GetClientData_SC (4 body bytes)
+21:28:04  INFO     -> S2C  PVZ.Cmd.Cmd_GetClientData_SC                   (4 body bytes, 48 total)
+21:28:04  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=34 cmdName=PVZ.Cmd.Cmd_TopFight_TopN_CS
+21:28:04  INFO       -> PVZ.Cmd.Cmd_TopFight_TopN_SC (4 body bytes)
+21:28:04  INFO     -> S2C  PVZ.Cmd.Cmd_TopFight_TopN_SC                   (4 body bytes, 48 total)
+21:28:05  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_Battle_GetFormation_CS
+21:28:05  INFO       -> PVZ.Cmd.Cmd_Battle_GetFormation_SC (742 body bytes)
+21:28:05  INFO     -> S2C  PVZ.Cmd.Cmd_Battle_GetFormation_SC             (742 body bytes, 793 total)
+21:28:07  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=42 cmdName=PVZ.Cmd.Cmd_City_GetBuildingEvent_CS
+21:28:07  INFO       -> PVZ.Cmd.Cmd_City_GetBuildingEvent_SC (0 body bytes)
+21:28:07  INFO     -> S2C  PVZ.Cmd.Cmd_City_GetBuildingEvent_SC           (0 body bytes, 52 total)
+21:28:07  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+21:28:07  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+21:28:07  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+21:28:10  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=45 cmdName=PVZ.Cmd.Cmd_TD_PrivilegeInfo_CS
+21:28:10  INFO       TD privilege info: stage=1-1-1 hasPrivilege=False plants=9
+21:28:10  INFO       -> PVZ.Cmd.Cmd_TD_PrivilegeInfo_SC (39 body bytes)
+21:28:10  INFO     -> S2C  PVZ.Cmd.Cmd_TD_PrivilegeInfo_SC                (39 body bytes, 86 total)
+21:28:10  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+21:28:10  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+21:28:10  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+21:28:10  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=38 cmdName=PVZ.Cmd.Cmd_TD_GetStageInfo_CS
+21:28:10  INFO       TD stage info: stage=2 passed=[(1, 1, 1, [10]), (2, 1, 1, [10]), (3, 1, 1, [10]), (4, 1, 1, [10]), (5, 1, 1, [10]), (6, 1, 1, [10])] gates=[4, 5, 6] totalStars=6
+21:28:10  INFO       -> PVZ.Cmd.Cmd_TD_GetStageInfo_SC (58 body bytes)
+21:28:10  INFO     -> S2C  PVZ.Cmd.Cmd_TD_GetStageInfo_SC                 (58 body bytes, 104 total)
+21:28:10  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=45 cmdName=PVZ.Cmd.Cmd_TD_GetChallengeLevelInfo_CS
+21:28:10  INFO   loaded 19 TD challenge level variants
+21:28:10  INFO       TD challenge level info: 19 entries (free=3)
+21:28:10  INFO       -> PVZ.Cmd.Cmd_TD_GetChallengeLevelInfo_SC (304 body bytes)
+21:28:10  INFO     -> S2C  PVZ.Cmd.Cmd_TD_GetChallengeLevelInfo_SC        (304 body bytes, 360 total)
+21:28:14  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+21:28:14  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+21:28:14  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+21:28:17  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+21:28:17  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+21:28:17  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+21:28:17  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=45 cmdName=PVZ.Cmd.Cmd_TD_RequestTDInfo_CS
+21:28:17  INFO       TD enter: stage=2 level=6 sub=1 plants=[1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 3100, 3200, 3300, 3400, 3500, 3600, 4700]
+21:28:17  INFO       TD talents applied: [1101, 1102, 1103, 1104, 1201, 1202, 1203, 1204, 1301, 1302, 1501, 1502, 2101]
+21:28:17  INFO       -> PVZ.Cmd.Cmd_TD_RequestTDInfo_SC (127 body bytes)
+21:28:17  INFO     -> S2C  PVZ.Cmd.Cmd_TD_RequestTDInfo_SC                (127 body bytes, 174 total)
+21:28:17  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=45 cmdName=PVZ.Cmd.Cmd_TD_PrivilegeInfo_CS
+21:28:17  INFO       TD privilege info: stage=2-6-1 hasPrivilege=False plants=9
+21:28:17  INFO       -> PVZ.Cmd.Cmd_TD_PrivilegeInfo_SC (39 body bytes)
+21:28:17  INFO     -> S2C  PVZ.Cmd.Cmd_TD_PrivilegeInfo_SC                (39 body bytes, 86 total)
+21:28:20  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+21:28:20  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+21:28:20  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+21:28:22  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=37 cmdName=PVZ.Cmd.Cmd_PayShop_SaveFlag_CS
+21:28:22  INFO       -> PVZ.Cmd.Cmd_PayShop_SaveFlag_SC (0 body bytes)
+21:28:22  INFO     -> S2C  PVZ.Cmd.Cmd_PayShop_SaveFlag_SC                (0 body bytes, 47 total)
+21:28:23  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+21:28:23  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+21:28:23  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+21:28:26  INFO   <- C2S  uin=700000204 cmd=2 bodyLen=33 cmdName=PVZ.Cmd.Cmd_Buff_GetList_CS
+21:28:26  INFO       -> PVZ.Cmd.Cmd_Buff_GetList_SC (2 body bytes)
+21:28:26  INFO     -> S2C  PVZ.Cmd.Cmd_Buff_GetList_SC                    (2 body bytes, 45 total)
+21:28:27  INFO   === client disconnected: ('127.0.0.1', 52129) ===

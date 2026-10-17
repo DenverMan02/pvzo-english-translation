@@ -1,5 +1,5 @@
 id	desc
-1025	初级化肥
-1026	中级化肥
-1008	高级化肥
-1028	顶级化肥
+1025	Regular Fertilizer
+1026	Intermediate Fertilizer
+1008	Advanced Fertilizer
+1028	Presidential Fertilizer

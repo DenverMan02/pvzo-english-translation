@@ -1,7 +1,7 @@
 id	name
-1	冠军
-2	亚军
-3	四强
-4	八强
-5	十六强
-6	海选24强
+1	Champion
+2	Runner-up
+3	Semifinals
+4	Top 8
+5	Top 16
+6	Top 24 Preliminaries

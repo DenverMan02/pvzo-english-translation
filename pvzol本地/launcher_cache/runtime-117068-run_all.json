@@ -1,0 +1,1 @@
+{"role":"server","pid":110872,"started":1792200449.4818084,"updated":1792200508.2241883,"components":{"web":{"active":0,"total":317,"last":1792200505.8917117,"ports":[]},"admin":{"active":0,"total":0,"last":0.0,"ports":[]},"game":{"active":0,"total":1,"last":1792200507.9592261,"ports":[9001,8001,443]},"policy":{"active":0,"total":2,"last":1792200457.9789367,"ports":[843]}}}

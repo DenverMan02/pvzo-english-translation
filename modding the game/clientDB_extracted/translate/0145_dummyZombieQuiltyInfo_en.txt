@@ -1,0 +1,21 @@
+id	name
+100	White
+101	White +1
+200	Green
+201	Green +1
+202	Green +2
+300	Blue
+301	Blue +1
+302	Blue +2
+303	Blue +3
+400	Purple
+401	Purple +1
+402	Purple +2
+403	Purple +3
+404	Purple +4
+500	Orange
+501	Orange +1
+502	Orange +2
+503	Orange +3
+504	Orange +4
+505	Orange +5

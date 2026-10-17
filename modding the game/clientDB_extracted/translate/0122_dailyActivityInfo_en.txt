@@ -1,0 +1,26 @@
+id	content	showType
+1	Daily Check-In	Check-in
+2	Send Stamina to Friends	Friends
+3	Friendly Duel	Friends
+4	Purchase Energy	Purchase
+7	Play Adventure Normal Stages	Adventure
+8	Play Adventure Elite Stages	Adventure
+9	Exchange Friendship Point Plant Pack	Tavern
+10	Time Travel	Go to
+11	Catch Thief / Protect Farm	Go to
+12	Alliance Garden Fertilization	Alliance
+13	Ranked Arena	Arena
+14	World Boss	Go to
+15	Harvest Coins from Marigold Bank	Treasury
+16	Brave Zombie Island	Zombie Island
+17	Treasure Hunt Search	Go to
+18	Treasure Hunt Raid	Go to
+19	Daily Login	
+22	Path of Trials	Trials
+23	Yeti Rampage	Go to
+24	Ladder Arena	Arena
+25	Plant Rumble	Go to
+26	Sunroom Fertilization	Go to
+27	Nurture Tree of Wisdom	World Tree
+20	Free Plant Top-up	Go to
+28	Upgrade Equipment with Power Orb	Equipment

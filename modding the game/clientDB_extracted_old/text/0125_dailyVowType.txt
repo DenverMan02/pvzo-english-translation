@@ -1,7 +1,0 @@
-id	needLevel	needVIP	freeCount	dailyLimit	showName
-1	10	0	2	50	拼图点
-2	20	0	2	50	能量珠
-3	30	0	2	50	经验豆
-4	40	0	2	50	高级洗炼
-5	55	0	2	50	装备碎片
-6	40	0	2	50	金币

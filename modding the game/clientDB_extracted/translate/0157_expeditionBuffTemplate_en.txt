@@ -1,0 +1,4 @@
+id	desc
+1	Increases resources plundered by {0} each time, lasting for {1} seconds
+2	Reduces resources plundered by {0} each time, lasting for {1} seconds
+3	Increases battle damage by {0} each time, lasting for {1} seconds

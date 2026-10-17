@@ -1,8 +1,0 @@
-id	attackWeight	defenceWeight	hpWeight	skillWeight	criticalWeight	dodgeWeight	hitWeight	toughWeight
-1	320	80	120	280	60	40	60	40
-2	280	80	120	320	60	40	60	40
-3	176	224	224	176	40	60	40	60
-4	176	184	264	176	40	60	40	60
-5	280	120	120	280	60	40	60	40
-6	320	80	80	320	40	60	40	60
-7	200	200	200	200	50	50	50	50

@@ -1,170 +1,170 @@
 id	name	desc	simpleDesc
-101	低级攻击	攻击	攻击
-102	初级攻击	攻击	攻击
-103	中级攻击	攻击	攻击
-104	高级攻击	攻击	攻击
-105	超级攻击	攻击	攻击
-201	低级防御	防御	防御
-202	初级防御	防御	防御
-203	中级防御	防御	防御
-204	高级防御	防御	防御
-205	超级防御	防御	防御
-301	低级体力	生命	生命
-302	初级体力	生命	生命
-303	中级体力	生命	生命
-304	高级体力	生命	生命
-305	超级体力	生命	生命
-401	低级护盾	护盾	护盾
-402	初级护盾	护盾	护盾
-403	中级护盾	护盾	护盾
-404	高级护盾	护盾	护盾
-405	超级护盾	护盾	护盾
-501	低级技力	技力	技力
-502	初级技力	技力	技力
-503	中级技力	技力	技力
-504	高级技力	技力	技力
-505	超级技力	技力	技力
-601	低级命中	命中值	命中
-602	初级命中	命中值	命中
-603	中级命中	命中值	命中
-604	高级命中	命中值	命中
-605	超级命中	命中值	命中
-701	低级闪避	闪避值	闪避
-702	初级闪避	闪避值	闪避
-703	中级闪避	闪避值	闪避
-704	高级闪避	闪避值	闪避
-705	超级闪避	闪避值	闪避
-801	低级暴击	暴击值	暴击
-802	初级暴击	暴击值	暴击
-803	中级暴击	暴击值	暴击
-804	高级暴击	暴击值	暴击
-805	超级暴击	暴击值	暴击
-901	低级韧性	韧性值	韧性
-902	初级韧性	韧性值	韧性
-903	中级韧性	韧性值	韧性
-904	高级韧性	韧性值	韧性
-905	超级韧性	韧性值	韧性
-1001	低级免疫	免疫值	免疫
-1002	初级免疫	免疫值	免疫
-1003	中级免疫	免疫值	免疫
-1004	高级免疫	免疫值	免疫
-1005	超级免疫	免疫值	免疫
-1101	低级猛力	%攻击	攻击
-1102	初级猛力	%攻击	攻击
-1103	中级猛力	%攻击	攻击
-1104	高级猛力	%攻击	攻击
-1105	超级猛力	%攻击	攻击
-1201	低级壁垒	%防御	防御
-1202	初级壁垒	%防御	防御
-1203	中级壁垒	%防御	防御
-1204	高级壁垒	%防御	防御
-1205	超级壁垒	%防御	防御
-1301	低级忍耐	%生命	生命
-1302	初级忍耐	%生命	生命
-1303	中级忍耐	%生命	生命
-1304	高级忍耐	%生命	生命
-1305	超级忍耐	%生命	生命
-1401	低级坚壳	%护盾	护盾
-1402	初级坚壳	%护盾	护盾
-1403	中级坚壳	%护盾	护盾
-1404	高级坚壳	%护盾	护盾
-1405	超级坚壳	%护盾	护盾
-1501	低级技力	%技力	技力
-1502	初级技力	%技力	技力
-1503	中级技力	%技力	技力
-1504	高级技力	%技力	技力
-1505	超级技力	%技力	技力
-1601	低级识破	%命中	命中
-1602	初级识破	%命中	命中
-1603	中级识破	%命中	命中
-1604	高级识破	%命中	命中
-1605	超级识破	%命中	命中
-1701	低级分身	%闪避	闪避
-1702	初级分身	%闪避	闪避
-1703	中级分身	%闪避	闪避
-1704	高级分身	%闪避	闪避
-1705	超级分身	%闪避	闪避
-1801	低级愤怒	%暴击	暴击
-1802	初级愤怒	%暴击	暴击
-1803	中级愤怒	%暴击	暴击
-1804	高级愤怒	%暴击	暴击
-1805	超级愤怒	%暴击	暴击
-1901	低级坚韧	%韧性	韧性
-1902	初级坚韧	%韧性	韧性
-1903	中级坚韧	%韧性	韧性
-1904	高级坚韧	%韧性	韧性
-1905	超级坚韧	%韧性	韧性
-2001	低级祈福	%免疫	免疫
-2002	初级祈福	%免疫	免疫
-2003	中级祈福	%免疫	免疫
-2004	高级祈福	%免疫	免疫
-2005	超级祈福	%免疫	免疫
-2101	低级战意	初始能量	初始能量
-2102	初级战意	初始能量	初始能量
-2103	中级战意	初始能量	初始能量
-2104	高级战意	初始能量	初始能量
-2105	超级战意	初始能量	初始能量
-2201	低级能量上限	能量上限	能量上限
-2202	初级能量上限	能量上限	能量上限
-2203	中级能量上限	能量上限	能量上限
-2204	高级能量上限	能量上限	能量上限
-2205	超级能量上限	能量上限	能量上限
-2301	低级攻击上升	%造成的普攻伤害	普攻伤害
-2302	初级攻击上升	%造成的普攻伤害	普攻伤害
-2303	中级攻击上升	%造成的普攻伤害	普攻伤害
-2304	高级攻击上升	%造成的普攻伤害	普攻伤害
-2305	超级攻击上升	%造成的普攻伤害	普攻伤害
-2401	低级普攻防御	%受到的普攻伤害	受普攻伤害
-2402	初级普攻防御	%受到的普攻伤害	受普攻伤害
-2403	中级普攻防御	%受到的普攻伤害	受普攻伤害
-2404	高级普攻防御	%受到的普攻伤害	受普攻伤害
-2405	超级普攻防御	%受到的普攻伤害	受普攻伤害
-2501	低级技能上升	%造成的技能伤害	技能伤害
-2502	初级技能上升	%造成的技能伤害	技能伤害
-2503	中级技能上升	%造成的技能伤害	技能伤害
-2504	高级技能上升	%造成的技能伤害	技能伤害
-2505	超级技能上升	%造成的技能伤害	技能伤害
-2601	低级技能防御	%受到的技能伤害	受技能伤害
-2602	初级技能防御	%受到的技能伤害	受技能伤害
-2603	中级技能防御	%受到的技能伤害	受技能伤害
-2604	高级技能防御	%受到的技能伤害	受技能伤害
-2605	超级技能防御	%受到的技能伤害	受技能伤害
-2701	业余级	%生命	生命
-2702	雏量级	%生命	生命
-2703	羽量级	%生命	生命
-2704	轻量级	%生命	生命
-2705	中量级	%生命	生命
-2706	超中量级	%生命	生命
-2707	次重量级	%生命	生命
-2708	重量级	%生命	生命
-2801	VIP专属攻击+100		
-2802	VIP专属防御+50		
-2803	VIP专属体力+300		
-2804	VIP专属技力+50		
-2805	VIP专属暴击+100		
-2806	VIP专属闪避+100		
-2807	VIP专属命中+100		
-2808	VIP专属韧性+100		
-2901	光明骑士	联盟争霸赛冠军奖励：全体上阵植物生命上限+7%	
-2902	暴风骑士	联盟争霸赛亚军奖励：全体上阵植物生命上限+5%	
-2903	黑暗骑士	联盟争霸赛四强奖励：全体上阵植物生命上限+3%	
-3001	低级普攻上升	%造成的普攻伤害	普攻伤害
-3002	初级普攻上升	%造成的普攻伤害	普攻伤害
-3003	中级普攻上升	%造成的普攻伤害	普攻伤害
-3004	高级普攻上升	%造成的普攻伤害	普攻伤害
-3005	超级普攻上升	%造成的普攻伤害	普攻伤害
-3101	低级普攻防御	%受到的普攻伤害	受普攻伤害
-3102	初级普攻防御	%受到的普攻伤害	受普攻伤害
-3103	中级普攻防御	%受到的普攻伤害	受普攻伤害
-3104	高级普攻防御	%受到的普攻伤害	受普攻伤害
-3105	超级普攻防御	%受到的普攻伤害	受普攻伤害
-3201	低级技能上升	%造成的技能伤害	技能伤害
-3202	初级技能上升	%造成的技能伤害	技能伤害
-3203	中级技能上升	%造成的技能伤害	技能伤害
-3204	高级技能上升	%造成的技能伤害	技能伤害
-3205	超级技能上升	%造成的技能伤害	技能伤害
-3301	低级技能防御	%受到的技能伤害	受技能伤害
-3302	初级技能防御	%受到的技能伤害	受技能伤害
-3303	中级技能防御	%受到的技能伤害	受技能伤害
-3304	高级技能防御	%受到的技能伤害	受技能伤害
-3305	超级技能防御	%受到的技能伤害	受技能伤害
+101	Minor Attack	Attack	Attack
+102	Basic Attack	Attack	Attack
+103	Intermediate Attack	Attack	Attack
+104	Advanced Attack	Attack	Attack
+105	Super Attack	Attack	Attack
+201	Minor Defense	Defense	Defense
+202	Minor Defense	Defense	Defense
+203	Intermediate Defense	Defense	Defense
+204	Advanced Defense	Defense	Defense
+205	Super Defense	Defense	Defense
+301	Basic Stamina	Health	Health
+302	Basic Stamina	Health	Health
+303	Intermediate Stamina	Health	Health
+304	Advanced Stamina	Health	Health
+305	Super Stamina	Health	Health
+401	Basic Shield	Shield	Shield
+402	Basic Shield	Shield	Shield
+403	Intermediate Shield	Shield	Shield
+404	Advanced Shield	Shield	Shield
+405	Super Shield	Shield	Shield
+501	Minor Energy	Energy	Energy
+502	Minor Skill Power	Energy	Energy
+503	Intermediate Energy	Energy	Energy
+504	Major Energy	Energy	Energy
+505	Super Energy	Energy	Energy
+601	Low-level Accuracy	Accuracy	Hit
+602	Basic Accuracy	Accuracy	Hit
+603	Intermediate Accuracy	Accuracy	Hit
+604	Advanced Accuracy	Accuracy	Hit
+605	Super Accuracy	Accuracy	Hit
+701	Minor Dodge	Dodge Value	Dodge
+702	Basic Dodge	Dodge Value	Dodge
+703	Intermediate Evasion	Dodge Value	Dodge
+704	Major Dodge	Dodge Value	Dodge
+705	Super Dodge	Dodge Value	Dodge
+801	Minor Critical	Critical Value	Critical
+802	Basic Critical	Critical Value	Critical
+803	Intermediate Critical	Critical Value	Critical
+804	Advanced Critical	Critical Value	Critical
+805	Super Critical	Critical Value	Critical
+901	Low-level Toughness	Tenacity	Toughness
+902	Basic Tenacity	Tenacity	Toughness
+903	Intermediate Tenacity	Tenacity	Toughness
+904	Advanced Tenacity	Tenacity	Toughness
+905	Super Resilience	Tenacity	Toughness
+1001	Minor Immunity	Immunity Value	Immunity
+1002	Minor Immunity	Immunity Value	Immunity
+1003	Intermediate Immunity	Immunity Value	Immunity
+1004	Advanced Immunity	Immunity Value	Immunity
+1005	Super Immunity	Immunity Value	Immunity
+1101	Minor Might	% Attack	Attack
+1102	Minor Might	% Attack	Attack
+1103	Intermediate Might	% Attack	Attack
+1104	Advanced Might	% Attack	Attack
+1105	Super Might	% Attack	Attack
+1201	Minor Barrier	% Defense	Defense
+1202	Basic Barrier	% Defense	Defense
+1203	Intermediate Rampart	% Defense	Defense
+1204	Advanced Rampart	% Defense	Defense
+1205	Super Barrier	% Defense	Defense
+1301	Minor Endurance	% Health	Health
+1302	Basic Endurance	% Health	Health
+1303	Intermediate Endurance	% Health	Health
+1304	Major Endurance	% Health	Health
+1305	Super Endurance	% Health	Health
+1401	Basic Hard Shell	% Shield	Shield
+1402	Basic Hard Shell	% Shield	Shield
+1403	Intermediate Hard Shell	% Shield	Shield
+1404	Major Hard Shell	% Shield	Shield
+1405	Super Shell	% Shield	Shield
+1501	Minor Energy	% Skill Power	Energy
+1502	Minor Skill Power	% Skill Power	Energy
+1503	Intermediate Energy	% Skill Power	Energy
+1504	Major Energy	% Skill Power	Energy
+1505	Super Energy	% Skill Power	Energy
+1601	Minor Insight	% Accuracy	Hit
+1602	Basic Insight	% Accuracy	Hit
+1603	Intermediate Insight	% Accuracy	Hit
+1604	Advanced Insight	% Accuracy	Hit
+1605	Super Insight	% Accuracy	Hit
+1701	Minor Illusion	% Evasion	Dodge
+1702	Basic Clone	% Evasion	Dodge
+1703	Intermediate Duplicate	% Evasion	Dodge
+1704	Advanced Clone	% Evasion	Dodge
+1705	Super Duplicate	% Evasion	Dodge
+1801	Minor Rage	% Crit	Critical
+1802	Basic Rage	% Crit	Critical
+1803	Intermediate Anger	% Crit	Critical
+1804	Advanced Rage	% Crit	Critical
+1805	Super Rage	% Crit	Critical
+1901	Basic Toughness	% Resilience	Toughness
+1902	Minor Toughness	% Resilience	Toughness
+1903	Intermediate Toughness	% Resilience	Toughness
+1904	Advanced Toughness	% Resilience	Toughness
+1905	Super Resilience	% Resilience	Toughness
+2001	Basic Blessing	% Immunity	Immunity
+2002	Minor Blessing	% Immunity	Immunity
+2003	Intermediate Blessing	% Immunity	Immunity
+2004	Advanced Blessing	% Immunity	Immunity
+2005	Super Blessing	% Immunity	Immunity
+2101	Minor Battle Spirit	Initial Energy	Initial Energy
+2102	Basic Battle Spirit	Initial Energy	Initial Energy
+2103	Intermediate Battle Spirit	Initial Energy	Initial Energy
+2104	Advanced Battle Spirit	Initial Energy	Initial Energy
+2105	Super Battle Spirit	Initial Energy	Initial Energy
+2201	Low-level Max Energy	Max Energy	Max Energy
+2202	Basic Max Energy	Max Energy	Max Energy
+2203	Intermediate Energy Cap	Max Energy	Max Energy
+2204	Advanced Max Energy	Max Energy	Max Energy
+2205	Super Max Energy	Max Energy	Max Energy
+2301	Minor Attack Up	% Normal Attack Damage Dealt	Basic Attack Damage
+2302	Basic Attack Boost	% Normal Attack Damage Dealt	Basic Attack Damage
+2303	Intermediate Attack Boost	% Normal Attack Damage Dealt	Basic Attack Damage
+2304	Advanced Attack Up	% Normal Attack Damage Dealt	Basic Attack Damage
+2305	Super Attack Up	% Normal Attack Damage Dealt	Basic Attack Damage
+2401	Minor Basic Defense	% Basic Attack Damage Taken	Basic Attack Damage Taken
+2402	Basic Normal Defense	% Basic Attack Damage Taken	Basic Attack Damage Taken
+2403	Intermediate Basic Defense	% Basic Attack Damage Taken	Basic Attack Damage Taken
+2404	Major Normal Defense	% Basic Attack Damage Taken	Basic Attack Damage Taken
+2405	Super Basic Attack Defense	% Basic Attack Damage Taken	Basic Attack Damage Taken
+2501	Low-level Skill Boost	% Skill Damage Dealt	Skill Damage
+2502	Basic Skill Up	% Skill Damage Dealt	Skill Damage
+2503	Intermediate Skill Boost	% Skill Damage Dealt	Skill Damage
+2504	Advanced Skill Boost	% Skill Damage Dealt	Skill Damage
+2505	Super Skill Boost	% Skill Damage Dealt	Skill Damage
+2601	Minor Skill Defense	% Skill Damage Taken	Skill Damage Taken
+2602	Junior Skill Defense	% Skill Damage Taken	Skill Damage Taken
+2603	Intermediate Skill Defense	% Skill Damage Taken	Skill Damage Taken
+2604	Advanced Skill Defense	% Skill Damage Taken	Skill Damage Taken
+2605	Super Skill Defense	% Skill Damage Taken	Skill Damage Taken
+2701	Amateur	% Health	Health
+2702	Bantamweight	% Health	Health
+2703	Featherweight	% Health	Health
+2704	Lightweight	% Health	Health
+2705	Middleweight	% Health	Health
+2706	Super Middleweight	% Health	Health
+2707	Cruiserweight	% Health	Health
+2708	Heavyweight	% Health	Health
+2801	VIP Exclusive Attack +100		
+2802	VIP Exclusive Defense +50		
+2803	VIP Exclusive Stamina +300		
+2804	VIP Exclusive Energy +50		
+2805	VIP Exclusive Crit +100		
+2806	VIP Exclusive Dodge +100		
+2807	VIP Exclusive Accuracy +100		
+2808	VIP Exclusive Tenacity +100		
+2901	Paladin	League Tournament Champion Reward: All Deployed Plants Max Health +7%	
+2902	Storm Knight	Alliance Tournament Runner-up Reward: Max HP of all deployed plants +5%	
+2903	Dark Knight	League Tournament Top 4 Reward: Max Health of all deployed plants +3%	
+3001	Basic Normal Attack Up	% Normal Attack Damage Dealt	Basic Attack Damage
+3002	Basic Attack Up	% Normal Attack Damage Dealt	Basic Attack Damage
+3003	Intermediate Attack Up	% Normal Attack Damage Dealt	Basic Attack Damage
+3004	Advanced Basic Attack Boost	% Normal Attack Damage Dealt	Basic Attack Damage
+3005	Super Basic Attack Boost	% Normal Attack Damage Dealt	Basic Attack Damage
+3101	Minor Basic Defense	% Basic Attack Damage Taken	Basic Attack Damage Taken
+3102	Basic Normal Defense	% Basic Attack Damage Taken	Basic Attack Damage Taken
+3103	Intermediate Basic Defense	% Basic Attack Damage Taken	Basic Attack Damage Taken
+3104	Major Normal Defense	% Basic Attack Damage Taken	Basic Attack Damage Taken
+3105	Super Basic Attack Defense	% Basic Attack Damage Taken	Basic Attack Damage Taken
+3201	Low-level Skill Boost	% Skill Damage Dealt	Skill Damage
+3202	Basic Skill Up	% Skill Damage Dealt	Skill Damage
+3203	Intermediate Skill Boost	% Skill Damage Dealt	Skill Damage
+3204	Advanced Skill Boost	% Skill Damage Dealt	Skill Damage
+3205	Super Skill Boost	% Skill Damage Dealt	Skill Damage
+3301	Minor Skill Defense	% Skill Damage Taken	Skill Damage Taken
+3302	Junior Skill Defense	% Skill Damage Taken	Skill Damage Taken
+3303	Intermediate Skill Defense	% Skill Damage Taken	Skill Damage Taken
+3304	Advanced Skill Defense	% Skill Damage Taken	Skill Damage Taken
+3305	Super Skill Defense	% Skill Damage Taken	Skill Damage Taken

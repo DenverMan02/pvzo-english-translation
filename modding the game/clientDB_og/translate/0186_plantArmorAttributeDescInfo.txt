@@ -1,4 +1,4 @@
 id	desc
-1	每次攻击增加{1}伤害
-2	每次受击减免{1}伤害
-3	每次行动回复{0}生命
+1	Increases damage by {1} per attack
+2	Reduces damage taken by {1} per hit
+3	Restores {0} health per action

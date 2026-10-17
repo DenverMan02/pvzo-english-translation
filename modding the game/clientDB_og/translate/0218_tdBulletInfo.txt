@@ -1,48 +1,48 @@
 id	name
-100	豌豆子弹
-200	西瓜子弹
-300	竹炮子弹
-400	小魔藤子弹
-500	回旋镖
-600	包心菜
-700	双发豌豆大招子弹
-800	狮身人面像火球
-900	大包心菜
-1000	大豌豆子弹
-1100	箭
-1200	火箭
-1300	魔藤大招子弹
-1400	胡萝卜火箭
-1500	胡萝卜火箭大招子弹
-1600	胡萝卜小游戏子弹
-1700	玉米子弹
-1800	玉米子弹2
-1900	三发豌豆子弹
-2000	三发豌豆大招子弹
-2100	椰子加农炮普通子弹
-2200	椰子加农炮大招子弹
-2300	石榴普通子弹
-2400	石榴大招子弹
-2500	水仙花普通子弹
-2600	菠萝子弹
-2700	菠萝大招子弹
-2800	火枪僵尸子弹
-2900	冰西瓜子弹
-3000	冰西瓜大招子弹
-3100	充能柚子子弹
-3200	充能柚子大招子弹
-3300	灵芝子弹
-3400	芭蕉子弹
-3500	芭蕉大招子弹
-3600	机甲巨人僵尸激光
-3700	硝化菇子弹
-3800	棱镜草普通子弹
-3900	电海松普通子弹
-4000	电海松大招子弹
-4100	泡泡花普通子弹
-4200	冰豌豆子弹
-4300	西瓜大招子弹
-4400	刺头花普通子弹
-4500	刺头花大招子弹
-4600	魔术菇普攻子弹
-4700	魔术菇大招子弹
+100	Pea projectile
+200	Melon projectile
+300	Bamboo Shoot projectile
+400	Little Magic Vine bullet
+500	Bloomerang
+600	Cabbage
+700	Repeater Plant Food projectile
+800	Sphinx fireball
+900	Large Cabbage
+1000	Large Pea projectile
+1100	Arrow
+1200	Rocket
+1300	Magic Vine Plant Food projectile
+1400	Carrocket
+1500	Carrot Rocket Plant Food bullet
+1600	Carrot minigame projectile
+1700	Corn projectile
+1800	Corn projectile 2
+1900	Threepeater bullet
+2000	Threepeater Plant Food projectile
+2100	Coconut Cannon normal projectile
+2200	Coconut Cannon Plant Food bullet
+2300	Pomegranate normal projectile
+2400	Pomegranate Plant Food projectile
+2500	Daffodil normal projectile
+2600	Pineapple projectile
+2700	Pineapple Plant Food bullet
+2800	Musket Zombie projectile
+2900	Winter Melon projectile
+3000	Winter Melon Plant Food bullet
+3100	Laser Bean projectile
+3200	Laser Bean Plant Food projectile
+3300	Ganoderma projectile
+3400	Banana projectile
+3500	Banana Plant Food projectile
+3600	Mecha-Gargantuar laser
+3700	Nitating Shroom projectile
+3800	Prism Grass normal projectile
+3900	Electric Sea-Pine normal bullet
+4000	Electric Sea-shroom Plant Food projectile
+4100	Bubble Flower normal projectile
+4200	Snow Pea bullet
+4300	Melon-pult Plant Food projectile
+4400	Spikeweed normal projectile
+4500	Spikeweed Plant Food projectile
+4600	Magic Shroom normal projectile
+4700	Magic Shroom Plant Food projectile

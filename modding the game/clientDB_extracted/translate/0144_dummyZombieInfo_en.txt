@@ -1,0 +1,51 @@
+id	name
+1000001	Monk Zombie
+1000002	Bomb Zombie
+2000001	Drunken Master Zombie
+2000002	Flag Zombie
+3000001	Sledgehammer Zombie
+3000002	Broadsword Zombie
+4000001	Qi Gong Puppet
+4000002	Explorer Zombie
+5000001	Drunk Zombie
+5000002	Jetpack Zombie
+2000005	Soldier Zombie
+1000005	Gong Zombie
+3000005	Staff Copper Zombie
+4000005	Giga-Gargantuar
+4000006	Overlord Blade King
+3000006	Caveman
+2000006	Frost Flag Bearer
+4000007	Frost Barbarian
+2000007	Glacier Hunter
+3000007	Raven Knight
+1000003	Monk Zombie
+1000004	Bomb Zombie
+2000003	Drunken Master Zombie
+2000004	Flag Zombie
+3000003	Sledgehammer Zombie
+3000004	Broadsword Zombie
+4000003	Qi Gong Puppet
+4000004	Explorer Zombie
+5000003	Drunk Zombie
+5000004	Jetpack Zombie
+1000006	Monk Zombie
+1000007	Bomb Zombie
+1000008	Drunken Master Zombie
+1000009	Flag Zombie
+1000010	Sledgehammer Zombie
+1000011	Broadsword Zombie
+1000012	Qi Gong Puppet
+1000013	Explorer Zombie
+1000014	Drunk Zombie
+1000015	Jetpack Zombie
+1000016	Soldier Zombie
+1000017	Gong Zombie
+1000018	Staff Copper Zombie
+1000019	Giga-Gargantuar
+1000020	Overlord Blade King
+1000021	Caveman
+1000022	Frost Flag Bearer
+1000023	Frost Barbarian
+1000024	Glacier Hunter
+1000025	Raven Knight

@@ -1,0 +1,13 @@
+id	name	tips
+1	Magic Plant Coin x10	10 Magic Plant Coins
+2	Advanced Refinement Potion x10	10 Advanced Refinement Potions
+3	Level 2 Life Crystal x1	1 Level 2 Life Crystal
+4	Diamond x100	100 Diamonds
+5	Advanced Refinement Potion x30	30 Advanced Refinement Potions
+6	Level 3 Defense Crystal x1	1 Level 3 Defense Crystal
+7	Magic Plant Coin x30	30 Magic Plant Coins
+8	Diamond x50	50 Diamonds
+9	Level 4 Attack Crystal x1	1 Level 4 Attack Crystal
+10	Puppet Raw Stone x1	1 Puppet Raw Stone
+11	Diamond x10	10 Diamonds
+12	Mystery Lottery Ticket x1	1 Mystery Lottery Ticket
