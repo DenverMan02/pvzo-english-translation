@@ -130,7 +130,7 @@ function invite(args)
 	}
 	else if(getPlatform() == "3366")
 	{
-		args.title = "邀请好友";
+		args.title = "Invite Friends";
 		args.onSuccess = function(ret){flash().onInviteSuccess(ret);};
 		args.onCancel = onClose;
 		args.onClose = onClose;
@@ -158,7 +158,7 @@ function sendStory(args)
 {
 	if(getPlatform() == "qplus")
 	{
-		args.shareBtnText = "分享";
+		args.shareBtnText = "Share";
 		args.pic = args.img;
 		args.shareTo = ["buddy","qzone","wblog"];
 		qplus.app.share(args,
@@ -380,7 +380,7 @@ function queryServerName(id)
 		}
 	});
 	if(serverName==""){
-		serverName="测试服务器"+id;
+		serverName="Test Server "+id;
 	}
 	return serverName;
 }
@@ -456,7 +456,7 @@ function buy(args)
 	else if(getPlatform() == "3366")
 	{
 		//Open3366API.Pay.show (appid, url, sandbox, title, close_cb, buy_cb, disturb, isNew); sandbox是否沙箱环境(1:是，0:否)
-		Open3366API.Pay.show(APP_ID,args.param,0,"购买道具",function(){onClose();},function(){flash().onBuySuccess({context:args.context});},0,true);
+		Open3366API.Pay.show(APP_ID,args.param,0,"Purchase Item",function(){onClose();},function(){flash().onBuySuccess({context:args.context});},0,true);
 	}
 	else
 	{
@@ -482,7 +482,7 @@ function onResize()
 
 $(document).ready(function(){
 	var title = queryServerName(getParamOrCookie('sServerID'));
-	document.title=title+"-植物大战僵尸ONLINE";
+	document.title=title+"-Plants vs. Zombies Online";
 	$(window).resize(function(){
 		onResize();
 	});
