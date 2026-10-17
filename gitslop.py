@@ -12,18 +12,36 @@ import subprocess
 import datetime
 
 
+def _decode_git_output(value):
+    """Decode captured Git output safely on Windows and other platforms."""
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        return value.strip()
+    return value.decode("utf-8", errors="replace").strip()
+
+
 def run_git_cmd(args):
-    """Run a git command and return (success, stdout, stderr)."""
+    """Run a git command and return (success, stdout, stderr).
+
+    Capture bytes rather than letting subprocess decode pipes with the machine's
+    default code page (e.g. cp932). Git output may contain UTF-8 paths/messages,
+    and a decode error in subprocess' reader thread can leave stderr as None.
+    """
     try:
         res = subprocess.run(
             ['git'] + args,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
-            text=True
+            text=False,
         )
-        return res.returncode == 0, res.stdout.strip(), res.stderr.strip()
+        stdout = _decode_git_output(getattr(res, 'stdout', None))
+        stderr = _decode_git_output(getattr(res, 'stderr', None))
+        return res.returncode == 0, stdout, stderr
     except FileNotFoundError:
         return False, "", "Git is not installed or not found in system PATH."
+    except (OSError, subprocess.SubprocessError) as exc:
+        return False, "", "Could not run Git: %s" % exc
 
 
 def check_status():

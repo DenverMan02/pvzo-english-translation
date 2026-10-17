@@ -6,12 +6,16 @@ on:
       - "pvzol本地/PvZ-Server-PoC/client_tools/translate_battle_ui.py"
       - "pvzol本地/PvZ-Server-PoC/client_tools/scan_swf_ui_strings.py"
       - "pvzol本地/PvZ-Server-PoC/tests/test_battle_ui_translation.py"
+      - "gitslop.py"
+      - "tests/test_gitslop.py"
       - ".github/workflows/translation-regression.yml"
   pull_request:
     paths:
       - "pvzol本地/PvZ-Server-PoC/client_tools/translate_battle_ui.py"
       - "pvzol本地/PvZ-Server-PoC/client_tools/scan_swf_ui_strings.py"
       - "pvzol本地/PvZ-Server-PoC/tests/test_battle_ui_translation.py"
+      - "gitslop.py"
+      - "tests/test_gitslop.py"
       - ".github/workflows/translation-regression.yml"
 
 jobs:
@@ -27,5 +31,9 @@ jobs:
           python -m py_compile "pvzol本地/PvZ-Server-PoC/client_tools/translate_battle_ui.py"
           python -m py_compile "pvzol本地/PvZ-Server-PoC/client_tools/scan_swf_ui_strings.py"
           python -m py_compile "pvzol本地/PvZ-Server-PoC/tests/test_battle_ui_translation.py"
+          python -m py_compile "gitslop.py"
+          python -m py_compile "tests/test_gitslop.py"
       - name: Run translation regression tests
-        run: python -m unittest discover -s "pvzol本地/PvZ-Server-PoC/tests" -p "test_battle_ui_translation.py" -v
+        run: |
+          python -m unittest discover -s "pvzol本地/PvZ-Server-PoC/tests" -p "test_battle_ui_translation.py" -v
+          python -m unittest discover -s "tests" -p "test_gitslop.py" -v
